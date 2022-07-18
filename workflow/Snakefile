@@ -1,0 +1,20 @@
+## Global variables
+PFAM = '../data/pfam_hmm_lib/Pfam-A.hmm'
+ORTHOGROUP_SEQS = '../data/Orthogroup_Sequences_test'
+ORTHOGROUPS = glob_wildcards("../data/Orthogroup_Sequences_test/{og}.fa")[0]
+HMMSCAN_OUTPUTS = [f"../results/hmmscan/{og}" for og in ORTHOGROUPS]
+
+# TODOS:
+# - read into environment yamls, and make sure we can install hmmer via that
+# - create new rule generating folder of hmmscan commands in resources
+# - modify run_hmmscan to run all the commands from that folder in parallel
+# - set up slurm files for running on graham
+
+
+rule all:
+    input: HMMSCAN_OUTPUTS
+
+rule run_hmmscan:
+    input: '../data/Orthogroup_Sequences_test/{og}.fa'
+    output: '../results/hmmscan/{og}'
+    shell: 'hmmscan -o {output} --cut_ga {PFAM} {input}'
