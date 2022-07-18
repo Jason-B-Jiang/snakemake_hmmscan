@@ -1,20 +1,33 @@
+localrules: generate_hmmscan_commands
+
 ## Global variables
 PFAM = '../data/pfam_hmm_lib/Pfam-A.hmm'
-ORTHOGROUP_SEQS = '../data/Orthogroup_Sequences_test'
-ORTHOGROUPS = glob_wildcards("../data/Orthogroup_Sequences_test/{og}.fa")[0]
-HMMSCAN_OUTPUTS = [f"../results/hmmscan/{og}" for og in ORTHOGROUPS]
+ORTHOGROUP_SEQUENCES = '../data/Orthogroup_Sequences_test'
+HMMSCAN_COMMANDS = '../resources/hmmscan_commands'
+HMMSCAN_OUTPUTS = \
+    expand("../results/hmmscan/{og}",
+           og=glob_wildcards("../data/Orthogroup_Sequences_test/{og}.fa")[0])
 
-# TODOS:
-# - read into environment yamls, and make sure we can install hmmer via that
-# - create new rule generating folder of hmmscan commands in resources
-# - modify run_hmmscan to run all the commands from that folder in parallel
-# - set up slurm files for running on graham
-
+################################################################################
 
 rule all:
     input: HMMSCAN_OUTPUTS
 
+rule clean:
+    shell: "rm -r {HMMSCAN_COMMANDS} {HMMSCAN_OUTPUTS}"
+
+rule generate_hmmscan_commands:
+    """Produces text file of hmmscan commands to run, to generate hmmscan
+    Pfam domain assignments for all orthogroups.
+    
+    Writing text file of hmmscan commands allows us to run all these commands
+    in parallel to speed things up.
+    """
+    input: ORTHOGROUP_SEQUENCES
+    output: HMMSCAN_COMMANDS
+    shell: "python scripts/generate_hmmscan_commands.py {input} {output} {PFAM}"
+
 rule run_hmmscan:
-    input: '../data/Orthogroup_Sequences_test/{og}.fa'
-    output: '../results/hmmscan/{og}'
-    shell: 'hmmscan -o {output} --cut_ga {PFAM} {input}'
+    input: HMMSCAN_COMMANDS
+    output: HMMSCAN_OUTPUTS
+    shell: "mkdir -p ../results/hmmscan && parallel < {input}"
