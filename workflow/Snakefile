@@ -2,11 +2,11 @@ localrules: generate_hmmscan_commands
 
 ## Global variables
 PFAM = '../data/pfam_hmm_lib/Pfam-A.hmm'
-ORTHOGROUP_SEQUENCES = '../data/Orthogroup_Sequences_test'
+ORTHOGROUP_SEQUENCES = '../data/Orthogroup_Sequences'
 HMMSCAN_COMMANDS = '../resources/hmmscan_commands'
 HMMSCAN_OUTPUTS = \
     expand("../results/hmmscan/{og}",
-           og=glob_wildcards("../data/Orthogroup_Sequences_test/{og}.fa")[0])
+           og=glob_wildcards("../data/Orthogroup_Sequences/{og}.fa")[0])
 
 ################################################################################
 
@@ -30,4 +30,5 @@ rule generate_hmmscan_commands:
 rule run_hmmscan:
     input: HMMSCAN_COMMANDS
     output: HMMSCAN_OUTPUTS
+    conda: 'envs/orthogroup_hmmscan.yml'
     shell: "mkdir -p ../results/hmmscan && parallel < {input}"

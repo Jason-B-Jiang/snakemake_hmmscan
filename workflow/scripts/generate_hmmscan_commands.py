@@ -28,7 +28,7 @@ def main() -> None:
     """
     og_seqs, hmmscan_cmds, pfam_lib = sys.argv[1:]
 
-    commands = make_hmmscan_command_list(og_seqs, hmmscan_cmds, pfam_lib)
+    commands = make_hmmscan_command_list(og_seqs, pfam_lib)
 
     with open(hmmscan_cmds, 'w') as f:
         f.writelines(commands)
