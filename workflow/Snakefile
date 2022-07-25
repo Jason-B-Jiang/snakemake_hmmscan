@@ -4,14 +4,20 @@ localrules: generate_hmmscan_commands
 PFAM = '../data/pfam_hmm_lib/Pfam-A.hmm'
 ORTHOGROUP_SEQUENCES = '../data/Orthogroup_Sequences'
 HMMSCAN_COMMANDS = '../resources/hmmscan_commands'
-HMMSCAN_OUTPUTS = \
-    expand("../results/hmmscan/{og}",
-           og=glob_wildcards("../data/Orthogroup_Sequences/{og}.fa")[0])
+
+# HMMSCAN_OUTPUTS = \
+#     expand("../results/hmmscan/{og}",
+#            og=glob_wildcards("../data/Orthogroup_Sequences/{og}.fa")[0])
+
+# temporary variable for testing purposes
+HMMSCAN_OUTPUTS = ['../results/hmmscan/OG0000025',
+                   '../results/hmmscan/OG0000036']
+CATH_RESOLVE_HITS = '../bin/cath-resolve-hits.ubuntu-20.04'
 
 ################################################################################
 
 rule all:
-    input: HMMSCAN_OUTPUTS
+    input: '../results/resolved_domain_architectures'
 
 rule clean:
     shell: "rm -r {HMMSCAN_COMMANDS} {HMMSCAN_OUTPUTS}"
@@ -32,3 +38,8 @@ rule run_hmmscan:
     output: HMMSCAN_OUTPUTS
     conda: 'envs/orthogroup_hmmscan.yml'
     shell: "mkdir -p ../results/hmmscan && parallel < {input}"
+
+rule resolve_domain_architectures:
+    input: HMMSCAN_OUTPUTS
+    output: directory('../results/resolved_domain_architectures')
+    shell: 'scripts/resolve_hmmscan_hits.sh {input} {CATH_RESOLVE_HITS}'
