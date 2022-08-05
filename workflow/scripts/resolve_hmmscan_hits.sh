@@ -10,20 +10,16 @@
 ################################################################################
 
 args=( "$@" )
-crh=${args[-1]}
-results_dir=$(dirname $(dirname ${args[0]}))
+hmmscan_output_dir=${args[0]}
+crh=${args[1]}
+results_dir=$(dirname $args)
 
-# make directory for cath-resolve-hits outputs
+# # make directory for cath-resolve-hits outputs
 mkdir ${results_dir}/resolved_domain_architectures
 
-# iterate up until last argument, which is the crh executable
-length=$(expr ${#args[@]} - 1)
-echo $length
-
-for (( i=0; i<${length}; i++ ));
+for hmmscan_file in $hmmscan_output_dir/*;
 do
-    orthogroup=$(basename ${args[$i]})
-
+    orthogroup=$(basename ${hmmscan_file})
     ${crh} --input-format hmmscan_out --worst-permissible-bitscore 0.1 \
-    ${args[$i]} > ${results_dir}/resolved_domain_architectures/${orthogroup}
+    ${hmmscan_file} > ${results_dir}/resolved_domain_architectures/${orthogroup}
 done
