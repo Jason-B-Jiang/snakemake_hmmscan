@@ -3,7 +3,7 @@
 # Align ortholog domain architectures
 #
 # Jason Jiang - Created: 2022/07/29
-#               Last edited: 2022/08/04
+#               Last edited: 2022/08/05
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -15,7 +15,7 @@
 #
 # ------------------------------------------------------------------------------
 
-library(tidyverse)
+require(tidyverse)
 
 ################################################################################
 
@@ -25,7 +25,6 @@ library(tidyverse)
 CRH_HEADER = c('query_id', 'match_id', 'score', 'boundaries',
                'resolved', 'cond_evalue', 'indp_evalue')
 
-
 ################################################################################
 
 main <- function() {
@@ -33,7 +32,9 @@ main <- function() {
   # Command line arguments:
   #   $1 = directory with cath-resolve-hits output files
   #   $2 = filepath to dataframe of all pairwise single-copy orthologs
-  #   $3 = filepath to save dataframe of aligned domain architectures to
+  #   $3 = filepath to tsv of Pfam families and their clans (from Pfam ftp
+  #        site)
+  #   $4 = filepath to save dataframe of aligned domain architectures to
   # ---------------------------------------------------------------------------
   args <- commandArgs(trailingOnly = T)
   
@@ -45,144 +46,182 @@ main <- function() {
   # single copy microsporidia ortholog, from Orthofinder
   orthogroups_df <- read_csv(args[2], show_col_types = F)
   
-  # create hashtable mapping each orthogroup in orthogroups_df to the domain
-  # architectures of orthologs in each orthogroups
-  orthogroup_domain_archs <- make_orthogroup_domain_archs_hash(
-    unique(orthogroups_df$orthogroup), domain_arch_dir
-    )
+  # make hashtable mapping Pfam domain families back to their clans
+  fam_to_clan <- make_pfam_clan_hashtables(args[3])
   
-  # add in columns for domain architectures + domain architecture alignments
-  # for each ortholog with yeast
-  orthogroups_df <- orthogroups_df %>%
-    rowwise() %>%
-    mutate(species_domain_arch = get_ortholog_domain_arch(orthogroup,
-                                                          species_ortholog,
-                                                          orthogroup_domain_archs),
-           yeast_domain_arch = get_ortholog_domain_arch(orthogroup,
-                                                        yeast_ortholog,
-                                                        orthogroup_domain_archs)) %>%
-    filter(!is.na(species_domain_arch), !is.na(yeast_domain_arch)) %>%
-    ungroup() %>%
-    mutate(aligned_domain_archs = align_ortholog_domain_archs(species_ortholog,
-                                                              yeast_ortholog))
+  # get hashtable of orthogroups and their ortholog domain architectures
+  orthogroup_domain_archs <- get_orthogroup_domain_arch_hash(domain_arch_dir,
+                                                             fam_to_clan)
   
-  # write the resulting dataframe of domain architectures + alignments for
-  # each orthogroups as a csv
-  write_csv(
-    orthogroup_df,
-    '../../results/resolved_domain_architectures/orthogroup_domain_archs.csv')
+  # assign domain architectures to ortholog pairs in orthogroups_df, and
+  # align all pairs of single-copy orthologs with Needleman-Wunsch alignment
+  orthogroups_df <- assign_and_align_domain_archs(orthogroups_df,
+                                                  orthogroup_domain_archs)
+  
+  # write modified orthogroups_df dataframe to specified filepath
+  write_csv(orthogroups_df, args[4])
 }
 
 ################################################################################
 
 ## Helper functions
 
-make_orthogroup_domain_archs_hash <- function(orthogroups, domain_arch_dir) {
+make_pfam_clan_hashtables <- function(pfam_clans) {
   # ---------------------------------------------------------------------------
-  # Create a hashtable mapping orthogroups to hashtables of their orthologs
-  # and domain architectures + domain boundaries
-  #
-  # Ex: {orthogroup: {ortholog_1: c(domain architecture, domain bounds), ...}}
-  #
-  # Args:
-  #   orthogroups_df:
-  #
-  #   domain_arch_dir:
-  #
   # ---------------------------------------------------------------------------
-  orthogroup_domain_archs <- new.env()
+  file_name = pfam_clans
+  pfam_clans <- read_tsv(pfam_clans, show_col_types = F)
   
-  for (og in orthogroups) {
-    og_domain_arch_df <- parse_crh_output(og, domain_arch_dir)
-    
-    # there are domain assignments for at least one ortholog in this orthogroup
-    if (!is.na(og_domain_arch_df)) {
-      orthogroup_domain_archs[[og]] <-
-        get_orthogroup_domain_archs(og_domain_arch_df)
-    }
-  }
+  # create hashtables mapping both pfam families back to their clans
+  fam_to_clan <- new.env()
+  Map(function(fam, clan) {fam_to_clan[[fam]] <- ifelse(is.na(clan), fam, clan)},
+      pfam_clans$Family_ID, pfam_clans$Clan_name)
   
-  return(orthogroup_domain_archs)
+  # write hashtable to resources folder
+  saveRDS(fam_to_clan, str_c(dirname(dirname(file_name)),
+                             '/resources/pfam_fam_to_clan.rds'))
+  
+  return(fam_to_clan)
 }
 
 
-parse_crh_output <- function(og, domain_arch_dir) {
+get_orthogroup_domain_arch_hash <- function(domain_arch_dir, fam_to_clan) {
   # ---------------------------------------------------------------------------
-  # Read in cath-resolve-hits output file for an orthogroup's (og) ortholog
-  # domain architectures + domain boundaries
-  #
-  # Args:
-  #   og:
-  #
-  #   domain_arch_dir:
-  #
   # ---------------------------------------------------------------------------
-  og_domain_arch_df <- read_delim(str_c(domain_arch_dir, og, sep = '/'),
-                       delim = ' ', comment = '#')
+  # only consider cath-resolve-hits files that are non-empty
+  files = list.files(domain_arch_dir, full.names = T)[
+    file.size(list.files(domain_arch_dir, full.names = T)) > 0
+  ]
   
-  # if no domain assignments at all for this orthogroup, just return NA
-  if (nrow(og_domain_arch_df) < 1) {
-    return(NA)
-  }
-  
-  colnames(og_domain_arch_df) <- CRH_HEADER
-  
-  og_domain_arch_df <- og_domain_arch_df %>%
-    select(query_id, match_id, resolved) %>%
-    group_by(query_id) %>%
-    mutate(match_id = str_c(match_id, collapse = '|'),
-           resolved = str_c(resolved, collapse = '|')) %>%
-    distinct(.keep_all = )
-  
-  return(og_domain_arch_df)
-}
+  orthogroups = unname(sapply(files, function(x) {basename(x)}))
 
-
-get_orthogroup_domain_archs <- function(og_domain_arch_df) {
-  # ---------------------------------------------------------------------------
-  # Docstring goes here
-  # ---------------------------------------------------------------------------
-  # turn this dataframe into a hashtable, with keys as ortholog names and
-  # values as vectors of domain architecture strings and domain boundaries
   domain_arch_hash <- new.env()
-  
-  for (i in 1 : nrow(og_domain_arch_df)) {
-    domain_arch_hash[[og_domain_arch_df$query_id[i]]] <-
-      c(og_domain_arch_df$match_id[i], og_domain_arch_df$resolved[i])
-  }
+  Map(function(og, resolved_hits) {
+      domain_arch_hash[[og]] <- get_og_domain_archs(resolved_hits, fam_to_clan)
+      },
+    orthogroups[1:500],
+    files[1:500])
   
   return(domain_arch_hash)
 }
 
 
-get_ortholog_domain_arch <- function(orthogroup, ortholog,
-                                     orthogroup_domain_archs) {
+get_og_domain_archs <- function(resolved_hits, fam_to_clan) {
   # ---------------------------------------------------------------------------
-  # Docstring goes here
   # ---------------------------------------------------------------------------
-  domain_archs <- orthogroup_domain_archs[[orthogroup]][[ortholog]]
-  if (is.null(domain_lengths)) {
+  # get dataframe of resolved domain architectures from cath-resolve-hits
+  # using try-catch block to see cases where we get a warning, just doing
+  # as a sanity check for myself
+  tryCatch(
+    expr = {crh_df <- parse_crh_output(resolved_hits, fam_to_clan)},
+    warning = function(w) {
+      message(resolved_hits)
+    })
+  
+  # create hashtable mapping each ortholog in the orthogroup to a named list of
+  # its domain architecture and domain boundaries
+  og_domain_archs <- new.env()
+  sapply(1 : nrow(crh_df),
+         function(i) {
+           og_domain_archs[[crh_df$query_id[i]]] <- list(
+             'domain_arch' = crh_df$match_id[i],
+             'domain_arch_clan' = crh_df$match_clans[i],
+             'domain_bounds' = crh_df$resolved[i]
+           )
+         })
+  
+  return(og_domain_archs)
+}
+
+
+parse_crh_output <- function(resolved_hits, fam_to_clan) {
+  # ---------------------------------------------------------------------------
+  # Read in cath-resolve-hits output file for an orthogroup's ortholog domain
+  # architectures + domain boundaries
+  #
+  # Args:
+  #   resolved_hits: filepath to cath-resolve-hits output file
+  #
+  # ---------------------------------------------------------------------------
+  return(
+    read_delim(resolved_hits, delim = ' ', comment = '#',
+                       col_names = CRH_HEADER, show_col_types = F) %>%
+    select(query_id, match_id, resolved) %>%
+    group_by(query_id) %>%
+    mutate(match_id = str_c(match_id, collapse = '; '),
+           resolved = str_c(resolved, collapse = '; ')) %>%
+    ungroup() %>%
+    rowwise() %>%
+    mutate(match_clans = get_domain_clans(match_id, fam_to_clan)) %>%
+    ungroup() %>%
+    group_by(query_id) %>%
+    distinct(.keep_all = T)
+  )
+}
+
+
+get_domain_clans <- function(domains, fam_to_clan) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  domains <- str_split(domains, '; ')[[1]]
+  
+  return(str_c(
+    # if domain isn't in fam_to_clan hashtable, just keep the domain as is
+    sapply(domains, function(x) {ifelse(!is.null(fam_to_clan[[x]]),
+                                        fam_to_clan[[x]],
+                                        x)}),
+    collapse = '; '))
+}
+
+
+assign_and_align_domain_archs <- function(orthogroups_df,
+                                          orthogroup_domain_archs) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  return(
+    tmp = orthogroups_df %>%
+      select(-median_diff, -species_p_val, -species_p_val_adj) %>%
+      rowwise() %>%
+      mutate(yeast_domain_archs = get_ortholog_domain_arch(orthogroup,
+                                                           yeast_ortholog,
+                                                           orthogroup_domain_archs),
+             species_domain_archs = get_ortholog_domain_arch(orthogroup,
+                                                             species_ortholog,
+                                                             orthogroup_domain_archs)) %>%
+      ungroup() %>%
+      separate(yeast_domain_archs, c('yeast_domain_arch', 'yeast_domain_arch_clan',
+                                     'yeast_domain_bounds'), sep = ' ::: ') %>%
+      separate(species_domain_archs, c('species_domain_arch', 'species_domain_arch_clan',
+                                       'species_domain_bounds'), sep = ' ::: ') %>%
+      mutate(aligned_ortholog_domain_archs = align_domain_archs(species_domain_arch_clan,
+                                                                yeast_domain_arch_clan))
+  )
+}
+
+
+get_ortholog_domain_arch <- function(orthogroup, ortholog, orthogroup_domain_archs) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  if (is_null(orthogroup_domain_archs[[orthogroup]]) | 
+      is_null(orthogroup_domain_archs[[orthogroup]][[ortholog]])) {
     return(NA)
   }
   
-  return(domain_archs[1])
+  return(str_c(
+    orthogroup_domain_archs[[orthogroup]][[ortholog]]$domain_arch,
+    orthogroup_domain_archs[[orthogroup]][[ortholog]]$domain_arch_clan,
+    orthogroup_domain_archs[[orthogroup]][[ortholog]]$domain_bounds,
+    sep = ' ::: '
+  ))
 }
 
 
-get_ortholog_domain_lengths <- function(orthogroup, ortholog,
-                                        orthogroup_domain_archs) {
+align_domain_archs <- function(species_domain_arch_clan,
+                               yeast_domain_arch_clan) {
   # ---------------------------------------------------------------------------
-  # Docstring goes here
   # ---------------------------------------------------------------------------
-  domain_lengths <- orthogroup_domain_archs[[orthogroup]][[ortholog]]
-  if (is.null(domain_lengths)) {
-    return(NA)
-  }
-  
-  return(domain_lengths[2])
 }
 
+################################################################################
 
-align_ortholog_domain_archs <- function(species_ortholog, yeast_ortholog) {
-  
-}
+main()
