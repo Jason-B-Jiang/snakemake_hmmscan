@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050137.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050137
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9HGN8|SVF2_SCHPO  [L=353]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-23   82.1   0.0    6.7e-23   81.4   0.0    1.3  1  Svf1_C    Svf1-like C-terminal lipocalin-like domain
+    1.2e-13   51.6   0.2    1.7e-13   51.0   0.2    1.2  1  Svf1      Svf1-like N-terminal lipocalin domain
+
+
+Domain annotation for each model (and alignments):
+>> Svf1_C  Svf1-like C-terminal lipocalin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.4   0.0     7e-27   6.7e-23       2     163 ..     187     347 ..     186     348 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 81.4 bits;  conditional E-value: 7e-27
+                Svf1_C   2 kpnhaAksW.nflnFqskkvsavlmeFttpksygntkvsigiivkddkilsvtvdnkvkhleaklDeetgwsvPksiklelkgkssdsk 89 
+                           k+++++++W n + F+++k+s++   +  p++ ++   s+++++ d+k+++v  dn+++ + a + + +++  P++i+  l+g++ d+k
+  sp|Q9HGN8|SVF2_SCHPO 187 KFTNLGHTWqNSILFDKSKKSILTCLHYFPRDPSQPFRSQASLTLDGKLIAVLLDNEYSTKGAAQVDGIRYLLPEQIHRILSGQTFDGK 275
+                           6678899**9*****99988876666666777899999*********************999988555******************888 PP
+
+                Svf1_C  90 deevaakleadleelvervDvlaeiPqfvkkivsgvagtkPYiYqylnkkelklkvedee.lkekGllfaEatfi 163
+                              v+++l+a+leel   +Dvl+ +P++ k+ivs +ag  P+++ +l++ ++++ +++e+ ++ +G+ + E+t++
+  sp|Q9HGN8|SVF2_SCHPO 276 --PVRVELSAELEELDSITDVLKIFPKWAKDIVSIWAGL-PFVFVWLQHITAEVFIDNEHvATLSGCYYLEQTCV 347
+                           ..9999********************************9.******************997899*********98 PP
+
+>> Svf1  Svf1-like N-terminal lipocalin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.0   0.2   1.8e-17   1.7e-13       2     162 ..      32     182 ..      31     183 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 51.0 bits;  conditional E-value: 1.8e-17
+                  Svf1   2 EtqtfYftdleggivgfvQiiySnviG.lyktaqftfkif.dskekkek.nlWkstklenfeidkanfyadnlsiel...neegkqyhi 84 
+                           ++++fY++ ++g ++g++Qi y n+ G l k + + + ++ +++ek+ +  + +st l        ++  d++s+++     + ++ + 
+  sp|Q9HGN8|SVF2_SCHPO  32 QYKSFYMCFDDG-SFGYLQIAYGNL-GlLVKVTPLGWTYYpAKTEKNVEpIVNSSTYLYRSM----KISKDRYSVDVqkhFMHFNSSTR 114
+                           6789*******9.************.779***********5554444445444555554422....34446666666222123446677 PP
+
+                  Svf1  85 kssvnkelkvdltvtrlapGfklgedgttyfgddieepwgsmrHvfwPrnkveGtivlkkedkeieftgelslfihAl 162
+                           ++++ +e  +dl+++  ++Gf l +     fg++  +++  m+H+++P n+veGt++++  ++e ++tg+ ++++ Al
+  sp|Q9HGN8|SVF2_SCHPO 115 EWHIVIEGVYDLKIKTEDSGFSLVD-----FGQN--DSSSRMEHKIFPINTVEGTVTAH--GREKKLTGV-AVYVGAL 182
+                           889999999***************9.....5553..78999*****************9..999*****6.****997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (353 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       403  (0.0210126); expected 383.6 (0.02)
+Passed bias filter:                      350  (0.0182491); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.24s 00:00:00.63 Elapsed: 00:00:00.76
+# Mc/sec: 1507.76
+//
+[ok]

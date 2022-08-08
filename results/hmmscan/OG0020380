@@ -1,0 +1,139 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0020380.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0020380
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IFW4|A0A0R4IFW4_DANRE  [L=485]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      6e-10   38.9   5.9    1.1e-09   38.1   4.6    2.2  1  F-box-like   F-box-like
+      2e-05   24.4   3.3    5.7e-05   23.0   3.3    1.8  1  F-box        F-box domain
+     0.0005   19.9   0.0      0.003   17.4   0.0    2.2  1  PI31_Prot_N  PI31 proteasome regulator N-terminal
+
+
+Domain annotation for each model (and alignments):
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.1   4.6   1.7e-13   1.1e-09       2      46 ..     326     369 ..     325     371 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 38.1 bits;  conditional E-value: 1.7e-13
+                      F-box-like   2 srLPdEiLlqIFsyLppsdLlrlalVCrrWrrvaldtplLWrrlv 46 
+                                     + LP+E+Ll+ ++ L+ ++L++l++VCr+ +++++d  +LWr+l 
+  tr|A0A0R4IFW4|A0A0R4IFW4_DANRE 326 PVLPPELLLRLLRLLDVRSLVSLSAVCRHLNTATHDA-SLWRHLL 369
+                                     67********************************998.****985 PP
+
+>> F-box  F-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.0   3.3   8.9e-09   5.7e-05       4      42 ..     328     366 ..     325     367 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 23.0 bits;  conditional E-value: 8.9e-09
+                                     SHHHHHHHHHTTS-HHHHHHHTTT-HHHHHHHTSHHHHH CS
+                           F-box   4 LPsevlrhILerLpfsdllalrrVSkgwrilidddrlwc 42 
+                                     LP+e+l+  L+ L+ ++l++l+ V+++++ ++ d +lw+
+  tr|A0A0R4IFW4|A0A0R4IFW4_DANRE 328 LPPELLLRLLRLLDVRSLVSLSAVCRHLNTATHDASLWR 366
+                                     9*********************************99997 PP
+
+>> PI31_Prot_N  PI31 proteasome regulator N-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   0.0   4.7e-07     0.003       2     158 ..     181     311 ..     180     315 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 4.7e-07
+                     PI31_Prot_N   2 ssdLsssydalallvHacmtalgFrlvglgedkkieesdsksecqslaprLpaeWnassdsysFrYaheqssmt.fllk 79 
+                                     ss+ +s++d+l+l++H +++++gF   g   +               ++++p +W a  + ++ +Y h   ++  + + 
+  tr|A0A0R4IFW4|A0A0R4IFW4_DANRE 181 SSTCRSPSDCLMLALHLLLLETGFIPQGGAVS---------------SGEMPIGWQAAGGVFRIQYVHPLLENSlVSVV 244
+                                     677899******************88764444...............2348*****************99977768899 PP
+
+                     PI31_Prot_N  80 vdrlgnklvirgla...lgddkiasfeiavrdyvsssalPvritaedrsdlaeklkdvfiseerladLisllkvsivqk 155
+                                     ++ + ++lvi+++    +  ++  ++ +++++yv ++                + ++  +++++l +L +l+++++v +
+  tr|A0A0R4IFW4|A0A0R4IFW4_DANRE 245 AVPMVQTLVINAVLkmeTSLENSRKLLLKPDEYVTAEW---------------TGGSSGVVYRDLRRLSRLVRDQLVYP 308
+                                     999********9765446667888999*******9998...............56778888888888888888888888 PP
+
+                     PI31_Prot_N 156 lvp 158
+                                     l+ 
+  tr|A0A0R4IFW4|A0A0R4IFW4_DANRE 309 LMA 311
+                                     875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (485 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1049  (0.0546952); expected 383.6 (0.02)
+Passed bias filter:                      558  (0.0290943); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.69
+# Mc/sec: 2283.42
+//
+Query:       sp|Q9Y3I1|FBX7_HUMAN  [L=522]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.6e-09   36.5   3.7    7.8e-09   35.4   3.7    1.6  1  F-box-like   F-box-like
+    1.8e-07   31.1   0.0    3.8e-07   30.1   0.0    1.5  1  PI31_Prot_N  PI31 proteasome regulator N-terminal
+
+
+Domain annotation for each model (and alignments):
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.4   3.7   8.2e-13   7.8e-09       4      48 .]     335     378 ..     332     378 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 35.4 bits;  conditional E-value: 8.2e-13
+            F-box-like   4 LPdEiLlqIFsyLppsdLlrlalVCrrWrrvaldtplLWrrlvlr 48 
+                           LP E+ l+IF+ L+ ++ l+l++VCr+  ++ +d+ lLWr l+lr
+  sp|Q9Y3I1|FBX7_HUMAN 335 LPLELKLRIFRLLDVRSVLSLSAVCRDLFTASNDP-LLWRFLYLR 378
+                           9******************************9887.*****9986 PP
+
+>> PI31_Prot_N  PI31 proteasome regulator N-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.1   0.0     4e-11   3.8e-07       3     157 ..     190     317 ..     188     322 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 30.1 bits;  conditional E-value: 4e-11
+           PI31_Prot_N   3 sdLsssydalallvHacmtalgFrlvglgedkkieesdsksecqslaprLpaeWnassdsysFrYaheqssmt.fllkvdrlgnklvir 90 
+                           +d s + dal++l+H +m+++g+   g++ ++ +               +p++W+  s+ y+++Y h   +     l ++ lgn +v++
+  sp|Q9Y3I1|FBX7_HUMAN 190 ADCSDANDALIVLIHLLMLESGYIPQGTEAKALS---------------MPEKWKL-SGVYKLQYMHPLCEGSsATLTCVPLGNLIVVN 262
+                           5778899*****************9999888655...............9****88.**********99965559************** PP
+
+           PI31_Prot_N  91 gla...lgddkiasfeiavrdyvsssalPvritaedrsdlaeklkdvfiseerladLisllkvsivqklv 157
+                           ++     +  ++ ++++ ++ ++ +++l                ++v + +++l++L +l+k+++v +l+
+  sp|Q9Y3I1|FBX7_HUMAN 263 ATLkinNEIRSVKRLQLLPESFICKEKL---------------GENVANIYKDLQKLSRLFKDQLVYPLL 317
+                           97544488899999************94...............489999******************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (522 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       543  (0.0283122); expected 383.6 (0.02)
+Passed bias filter:                      435  (0.0226811); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.72
+# Mc/sec: 2352.70
+//
+[ok]

@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039573.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039573
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O95473|SNG4_HUMAN  [L=234]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-24   87.3  13.1    1.3e-24   87.0  13.1    1.1  1  MARVEL    Membrane-associating domain
+
+
+Domain annotation for each model (and alignments):
+>> MARVEL  Membrane-associating domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.0  13.1   6.5e-29   1.3e-24       1     144 []      18     163 ..      18     163 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 87.0 bits;  conditional E-value: 6.5e-29
+                MARVEL   1 fllsplgilrilqlvfaiiilgliaslia.......kldqllgspssalnfavfvavfsflyalfllvlylfk...nsaftsilwplid 79 
+                           fl++p++i r+++ vf++i++++  + ++       +l+++l+s+s a++fav +++++fl +l++lvl++ +     ++ +++++l+d
+  sp|O95473|SNG4_HUMAN  18 FLRRPKTITRVFEGVFSLIVFSSLLTDGYqnkmespQLHCILNSNSVACSFAVGAGFLAFLSCLAFLVLDTQEtriAGTRFKTAFQLLD 106
+                           6899************************9******************************************99*9************** PP
+
+                MARVEL  80 livdalaallwlvafialaaglrdiscafesnqysasltvrcgqaqaavafgflavllfaasavl 144
+                           +i+ +l+a++w+ +f++la+++++        + ++      ++aqaa+af+f+++l+++++a+l
+  sp|O95473|SNG4_HUMAN 107 FILAVLWAVVWFMGFCFLANQWQH--------SPPKEFLLGSSSAQAAIAFTFFSILVWIFQAYL 163
+                           ************************........889999999********************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (234 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       686  (0.0357683); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.52
+# Mc/sec: 1450.17
+//
+[ok]

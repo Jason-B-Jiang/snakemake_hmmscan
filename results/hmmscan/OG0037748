@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037748.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037748
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651144.1  [L=171]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-28   98.4   6.1    4.1e-28   98.4   6.1    1.3  1  FCD       FCD domain
+    1.6e-05   24.5   0.1    5.4e-05   22.9   0.1    1.9  1  GntR      Bacterial regulatory proteins, gntR family
+
+
+Domain annotation for each model (and alignments):
+>> FCD  FCD domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.4   6.1   4.3e-32   4.1e-28       1     124 [.      36     157 ..      36     158 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.4 bits;  conditional E-value: 4.3e-32
+             FCD   1 elyelRalLEpeaarlaarratdadlaeleealealeaaaaegdleefaeadreFHralaeasgnpvlaefleslrdrlrrlrrlalrspgdlre 95 
+                     e++e+R +LE++a+r a+ r+ +++la+le+ l+++++  +eg+   ++  +r+FH+ l+++sg+p+l + ++ l+  +++ +rl+l++++    
+  XP_002651144.1  36 EVFEMRSALEGLAVRVAVGRIGERQLAALERMLDEMDDYRDEGAA--WVSRHRAFHEYLCSLSGRPRLMKQISALYSLVEAPMRLWLQHGEKPLS 128
+                     78*************************************999997..************************************************ PP
+
+             FCD  96 siaeHraildAirardaeaAraamrrHle 124
+                     + +eH  ildAira+da++A+a++r+H+e
+  XP_002651144.1 129 ARQEHAVILDAIRAGDAARAEAVVREHIE 157
+                     ***************************98 PP
+
+>> GntR  Bacterial regulatory proteins, gntR family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.9   0.1   5.6e-09   5.4e-05      39      64 .]       1      26 [.       1      26 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 22.9 bits;  conditional E-value: 5.6e-09
+                    HHHHHHHHHHHHTTSEEEETTCEEEE CS
+            GntR 39 ttvReALrrLeaeglverrqgrGtfV 64
+                    ++vReA rrL a+glv+ r++rG++V
+  XP_002651144.1  1 MPVREAFRRLDAQGLVTLRPNRGAVV 26
+                    8**********************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (171 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       436  (0.0227332); expected 383.6 (0.02)
+Passed bias filter:                      344  (0.0179363); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.17s 00:00:00.48 Elapsed: 00:00:00.49
+# Mc/sec: 1114.92
+//
+[ok]

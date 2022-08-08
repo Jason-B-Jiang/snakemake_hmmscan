@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048833.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048833
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P36003  [L=928]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.1e-34  119.2   0.1    2.7e-24   86.1   0.1    3.4  1  Pkinase         Protein kinase domain
+    9.5e-18   64.5   0.0    1.9e-14   53.7   0.0    2.3  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.1   0.1   2.8e-28   2.7e-24       4     153 ..     452     615 ..     449     626 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 86.1 bits;  conditional E-value: 2.8e-28
+              EEEEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHHHHHHHHHHHHHHHSCTTB--EEEEEEE.SSEEEEEEE--TTEBHHHHHH.......HHSS--H CS
+  Pkinase   4 leklGeGsfGkVykaveketgkivAvKkikkekakkkkekkvlrEikilkklkhpnivrlyevfee.kdelylvleyveggeladlle.......rkgslse 97 
+               + +G G+ G + ++++ etg   ++K++k +  ++ k k+vlrE++i ++lkh++i+ l+++  + +  +y ++e ++ g+l dl+         k  ++e
+   P36003 452 GKIIGFGAWGIIRECFDIETGVGRVIKIVKFKGHQNIK-KHVLREVAIWRTLKHNRILPLLDWKLDdNYAMYCLTERINDGTLYDLVIswdefkrSKIPFAE 552
+              689*****************************999988.5**********************977626678899********99998878888644444777 PP
+
+              H..HHHHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEETTTE.....EEE-SGTTSEESSSSCC CS
+  Pkinase  98 e..eakkiakqilegleylHsegvvHrDlKpeNiLidekge.....lKitDFGlakelesssk 153
+              +   + ++  q+l++l+y+Hs+ +vH D+K eN L++++g+     + ++DFG+++++++++ 
+   P36003 553 RcrLTIFLSLQLLSALKYMHSKTIVHGDIKLENCLLQKEGKksdwkVFLCDFGMSCHFDEKHV 615
+              6545568899***************************88888999999*********999875 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.7   0.0     2e-18   1.9e-14       3     162 ..     451     619 ..     449     625 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 53.7 bits;  conditional E-value: 2e-18
+                     EEEEEEEESSEEEEEEEEETTTTSTEEEEEEEEESTTSSHHHHHHHHHHHHHHHTS-BTTB--EEEEEE.SSSSEEEEEE--TTEBHHHHHHHT. CS
+  PK_Tyr_Ser-Thr   3 lgkklGeGafGeVvegtlkgekekkevkVavKtlkeeaeeeekeefleeakimkklkhpnivkllgvct.keepllivteyvegGdLlefLrkk. 95 
+                     lgk +G Ga+G + e+       ++ v  ++K++k + +++ k+++l+e++i ++lkh++i+ ll + + ++  ++ +te ++ G+L + + +  
+          P36003 451 LGKIIGFGAWGIIRECFDI----ETGVGRVIKIVKFKGHQNIKKHVLREVAIWRTLKHNRILPLLDWKLdDNYAMYCLTERINDGTLYDLVISWd 541
+                     6789999999999999888....77888899***99999999**************************95556699************9998776 PP
+
+                     ..CTTTSEHHHHHH....HHHHHHHHHHHHHHTTEEEST-SGGGEEEEC.....TTEEEE-STTTHEETTTSSEEEET CS
+  PK_Tyr_Ser-Thr  96 ..ekekltlkdllk....falqiAkGmeyLeskklvHrdlaarNvLlse.....nkvvkisDfGLardiekdseykkk 162
+                       +++k+ + + ++    ++lq+ ++++y++sk++vH d+   N+Ll++     + +v ++DfG++ +  +++ y+++
+          P36003 542 efKRSKIPFAERCRltifLSLQLLSALKYMHSKTIVHGDIKLENCLLQKegkksDWKVFLCDFGMSCHFDEKHVYRND 619
+                     67555665555444111157899*************************97776666999********99777777654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (928 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       703  (0.0366547); expected 383.6 (0.02)
+Passed bias filter:                      314  (0.0163721); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.22s 00:00:00.68 Elapsed: 00:00:00.62
+# Mc/sec: 4828.74
+//
+[ok]

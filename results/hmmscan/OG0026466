@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026466.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026466
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O45421|O45421_CAEEL  [L=324]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-23   84.0   0.0    6.7e-18   65.4   0.0    2.1  1  Trypsin   Trypsin
+    5.4e-08   32.8   0.4     0.0012   18.6   0.1    2.5  0  DUF316    Nematode trypsin-6-like family
+
+
+Domain annotation for each model (and alignments):
+>> Trypsin  Trypsin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.4   0.0     7e-22   6.7e-18      70     221 .]     154     316 ..     118     316 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 65.4 bits;  conditional E-value: 7e-22
+                             EEEEEEEETTEBTTT.T.TTTEEEEEESSSSTSBSSBHCCBBCSTTHTTSTTTEEEEEESSBSSTSSBSSBEEEEEEEEEEHHHHHH CS
+                 Trypsin  70 kvekvivhpnynpst.l.dnDiallklkepvklgdtvrpiclpaassslpvgttclvsGwgrtkekgksdtlqevevpvvsretcks 154
+                             kv+ v+v  ++ +s+ l  +D+a++++++++ ++++vrpiclp+  +++  +++  v Gwgr + ++ s  l   e+p+  + +ck+
+  tr|O45421|O45421_CAEEL 154 KVRAVLVDGEFASSNcLkGHDWAIVEVEKRIHFSENVRPICLPR--PNMYYTKSLAVPGWGRSYIFNESGPLI-HEIPMRIDRDCKR 237
+                             45555555555555532599************************..44578889********99999555554.677777788**** PP
+
+                             HTTTT...STTTEEEEEST...TSS.SBCTTTTTTSEEEETTT.....EEEEEEEEE.SSSSBTTSEEEEEEGGGGHHHH CS
+                 Trypsin 155 aykgk...vtenmlcagak...egg.kdacqGDSGGPlvcsdg.....elvGivswg.kgcakgnrpgvytkvssyldwi 221
+                              ++++     ++++ca ++   +++   +c+GDSGG l  +d      +l+ i+s+g +gc ++   + +t+v++yl+ i
+  tr|O45421|O45421_CAEEL 238 PWSDRlpaDADDFICATSMnvsNYSaPRTCHGDSGGGLEYRDDnygraFLIAITSFGtRGCPSN-MLARFTRVDMYLNLI 316
+                             *888888889********988866669***********999999*************9999999.67*********9977 PP
+
+>> DUF316  Nematode trypsin-6-like family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (324 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       406  (0.021169); expected 383.6 (0.02)
+Passed bias filter:                      360  (0.0187705); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.54
+# Mc/sec: 1950.89
+//
+[ok]

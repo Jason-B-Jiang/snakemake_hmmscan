@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031441.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031441
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86L07|Q86L07_DICDI  [L=164]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.1e-09   36.8   1.7      6e-09   36.3   1.7    1.3  1  PCNA_C         Proliferating cell nuclear antigen, C-terminal
+    8.2e-06   26.0   1.9      0.028   14.6   1.2    2.1  0  DNA_pol3_beta  DNA polymerase III beta subunit, N-terminal do
+
+
+Domain annotation for each model (and alignments):
+>> PCNA_C  Proliferating cell nuclear antigen, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.3   1.7   6.2e-13     6e-09       3     128 .]      39     162 ..      36     162 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 36.3 bits;  conditional E-value: 6.2e-13
+                             --SSSSEEEEEEHHHHHHHHHHHTTT-S.EEEEEEETTEEEEEEEESSEEEEEEE--BEESSSGGCCBEEEESS-EEEEEEHHHH.. CS
+                  PCNA_C   3 pdseydavvklpssefaricrdlsqlsd.svvisvtkegvkfsasGdiGsasivlkqvkdvdkeeeavklelkepvtltfalkYl.. 86 
+                             ++ ey++ v +ps   + ic +l + +d ++ i+v k+ + f+ +  i +a+ivl+++k+     +   l  k+  +  f  kY+  
+  tr|Q86L07|Q86L07_DICDI  39 ENDEYQCEVLMPSNLLSDICNELKSYKDlNLKIQVNKNNLLFKIDDSIINADIVLENKKT-----KEFYLICKKNFSIEFKNKYFlk 120
+                             4679*********************9986799*******************999987654.....34566678899999*****712 PP
+
+                             .HHHGGGGGG-SEEEEEEETTSEEEEEEEETTEEEEEEEE-BS CS
+                  PCNA_C  87 .aeftkatsLservtlslssevPlvveykikdvgllayllakk 128
+                              ++++k   + ++  l++ +  Pl++ ++i +v   +++la++
+  tr|Q86L07|Q86L07_DICDI 121 iNNIVKKINI-KECFLQMNEKYPLIIIFSICSVSSFQFYLAPI 162
+                             2445666665.45789************************985 PP
+
+>> DNA_pol3_beta  DNA polymerase III beta subunit, N-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (164 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1295  (0.0675218); expected 383.6 (0.02)
+Passed bias filter:                      440  (0.0229418); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.65
+# Mc/sec: 816.60
+//
+[ok]

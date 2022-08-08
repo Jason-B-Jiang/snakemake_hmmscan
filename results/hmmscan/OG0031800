@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031800.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031800
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VQS3|Q9VQS3_DROME  [L=663]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-14   52.2  24.0    1.9e-09   37.2   5.0    4.6  1  LRR_8     Leucine rich repeat
+    1.2e-07   32.1  22.1       0.13   12.9   0.2    5.5  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.2   5.0     2e-13   1.9e-09       4      61 .]     291     348 ..     289     348 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.2 bits;  conditional E-value: 2e-13
+                             SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+                   LRR_8   4 tsLdLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61 
+                             ++L+Ls N ++sl+ ++ +g s L +LdLs+N+l++l+  +f   +sLrsL+L+ N++
+  tr|Q9VQS3|Q9VQS3_DROME 291 MYLNLSGNAISSLNISFESGPSTLLTLDLSRNRLEHLNFTWFYRTTSLRSLHLQENHF 348
+                             78******************************************************96 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (663 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       599  (0.0312321); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.23s 00:00:00.68 Elapsed: 00:00:00.62
+# Mc/sec: 3476.20
+//
+[ok]

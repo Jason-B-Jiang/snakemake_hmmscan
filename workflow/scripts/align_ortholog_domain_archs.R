@@ -59,12 +59,12 @@ main <- function() {
   
   # assign domain architectures to ortholog pairs in orthogroups_df, and
   # align all pairs of single-copy orthologs with Needleman-Wunsch alignment
-  orthogroups_df <- assign_and_align_domain_archs(orthogroups_df,
-                                       orthogroup_domain_archs,
-                                       fam_to_clan)
+  aligned_domain_archs <- assign_and_align_domain_archs(orthogroups_df,
+                                                        orthogroup_domain_archs,
+                                                        fam_to_clan)
   
   # write modified orthogroups_df dataframe to specified filepath
-  write_csv(orthogroups_df, args[4])
+  write_csv(aligned_domain_archs, args[4])
 }
 
 ################################################################################

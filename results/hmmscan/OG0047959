@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047959.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047959
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ35534.1  [L=755]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-08   33.5   3.9    3.8e-08   33.5   3.9    3.3  1  ArfGap    Putative GTPase activating protein for Arf
+    8.4e-05   23.1   0.2       0.02   15.6   0.0    3.1  0  Ank_4     Ankyrin repeats (many copies)
+
+
+Domain annotation for each model (and alignments):
+>> ArfGap  Putative GTPase activating protein for Arf
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.5   3.9   3.9e-12   3.8e-08       3      43 ..     300     340 ..     298     351 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 33.5 bits;  conditional E-value: 3.9e-12
+                 HHHHHCCSCCCCB-TTT-SBS--EEETTTTEEE-HHHHHHH CS
+      ArfGap   3 alkellkepenkvCaDCgakeptWaslnlgvflCieCsgvH 43 
+                 +++e +++ +n +C+DC ++++t+as+n+gv++C++C+ +H
+  EPZ35534.1 300 EVEEECSKTGNTKCVDCFNENATFASVNIGVVVCLNCALMH 340
+                 567778899******************************99 PP
+
+>> Ank_4  Ankyrin repeats (many copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (755 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       845  (0.0440586); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.21s 00:00:00.66 Elapsed: 00:00:00.75
+# Mc/sec: 3280.34
+//
+[ok]

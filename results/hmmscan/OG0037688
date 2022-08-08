@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037688.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037688
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002650906.1  [L=130]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-06   28.3   0.0    3.2e-06   27.2   0.0    1.6  1  MarR_2    MarR family
+      4e-06   27.4   0.1      1e-05   26.1   0.0    1.7  1  HTH_27    Winged helix DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> MarR_2  MarR family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.2   0.0   3.4e-10   3.2e-06      11      61 .]      29      79 ..      20      79 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 27.2 bits;  conditional E-value: 3.4e-10
+                    HHHHCCTTTSBEHHHHHHHHTSSHHHHHHHHHHHHHTTSEEEECSSSSTTS CS
+          MarR_2 11 LaalarspgpltvgeLaarlgvsksavsrlvkrLveaGLVerepspaDkRa 61
+                    L+ ++r ++++ +  +a++ g++ +++ rl++rL   G+V r+++ +D+Ra
+  XP_002650906.1 29 LLMIGRLGDGVHQVKVAQASGMESPSLVRLLDRLCHDGYVCRSEDIHDRRA 79
+                    55677777779999************************************7 PP
+
+>> HTH_27  Winged helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.0     1e-09     1e-05       9      68 .]      29      88 ..      21      88 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 1e-09
+          HTH_27  9 LhtirhrlrekkladickrlnvedshisyslkkLteaGLlereedeedgRetfvslTakG 68
+                    L  i++ ++++ +  ++++ ++e+ + +++l +L+  G++ r+ed +d+R++ +slT++G
+  XP_002650906.1 29 LLMIGRLGDGVHQVKVAQASGMESPSLVRLLDRLCHDGYVCRSEDIHDRRAKALSLTERG 88
+                    667888999999999*******************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (130 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       627  (0.032692); expected 383.6 (0.02)
+Passed bias filter:                      441  (0.0229939); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.21s 00:00:00.52 Elapsed: 00:00:00.61
+# Mc/sec: 683.34
+//
+[ok]

@@ -1,0 +1,225 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0009291.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0009291
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A2RRV5|A2RRV5_DANRE  [L=713]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-51  173.6   0.2    6.7e-51  173.1   0.2    1.2  1  RasGEF    RasGEF domain
+      2e-13   51.0   0.1    5.2e-13   49.6   0.0    1.8  1  Histone   Core histone H2A/H2B/H3/H4
+
+
+Domain annotation for each model (and alignments):
+>> RasGEF  RasGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.1   0.2     7e-55   6.7e-51       1     179 []     180     359 ..     180     359 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 173.1 bits;  conditional E-value: 7e-55
+                  RasGEF   1 elAeqltlidaelfskikpeellgsawskrdkkes.pnveavierfnrlsnwvaseilseeslkeRakviekfikvaqecrklnNfn 86 
+                             e+A+qltl++++++++++p+el+gs+w+k+dk+ + pn++++i+++++l+ w+ ++i+++e+++eR++v++++i++ q  ++lnNfn
+  tr|A2RRV5|A2RRV5_DANRE 180 EIARQLTLLESDFYRAVQPSELVGSVWTKEDKEINsPNLLRMIRHTTNLTLWLEKCIVETENVEERVSVVSRIIEILQVFQELNNFN 266
+                             79******************************8867*************************************************** PP
+
+                  RasGEF  87 slmaIlsaLqsssvsrLkktwaavskeslktleeleelmspennykkyrealkkaaskkpciPflglyltdltfieegnpdtl...e 170
+                             +++ ++sa++ss+v+rL +t+++++++++k+lee +el  +e +ykky ++l+++  + pc+Pf+g+ylt+++  eegnpd+l    
+  tr|A2RRV5|A2RRV5_DANRE 267 GVLEVVSAMNSSPVYRLDHTFEQIPSRQRKILEEAHEL--SEDHYKKYLAKLRSI--NPPCVPFFGIYLTNILKTEEGNPDFLkrhG 349
+                             *************************************7..5667***********..7888************************95 PP
+
+                  RasGEF 171 gk.iNfekrr 179
+                             ++ iNf+krr
+  tr|A2RRV5|A2RRV5_DANRE 350 TElINFSKRR 359
+                             556*****98 PP
+
+>> Histone  Core histone H2A/H2B/H3/H4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.6   0.0   5.4e-17   5.2e-13      20     130 ..      58     168 ..      40     169 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 49.6 bits;  conditional E-value: 5.4e-17
+                             XXXXXXHT..TS-SSSSB--TT--XTTHHHHHHHHHHHHXXSXSSXHHHHHHHHHHHH.TTSSSXEEXHHHHHHHHHHHHHHHHHHH CS
+                 Histone  20 kvsakker..kasskskkkkkrryrpgtvalkeirkyqkstdlliqklpfaRvvreivksekedlrisaeavlalqealEallvelf 104
+                             +++++++r  ++ +++ +++++ +  +++  + + + +k+++++  +lp+++++  +++  + +++i+ + ++++ ++lE++ ++++
+  tr|A2RRV5|A2RRV5_DANRE  58 TLCQAQPRtvQDVEERVQRSFPHPIEKWAIADAQAAIEKRKRRNPLALPVDKIHPLLKE--VLGYKIDHQVSVYIVAVLEYISADIL 142
+                             566766667899****************************************9999998..************************** PP
+
+                             HHHHHHHHHTTXSEEXHHHHHHHHHH CS
+                 Histone 105 eeAnllakhaKRvTitpkDiqlArrl 130
+                             ++A+++++++++ +i ++Di +A++ 
+  tr|A2RRV5|A2RRV5_DANRE 143 KLAGNYVRNIRHYEISQQDITVAMCA 168
+                             ************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (713 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       649  (0.0338391); expected 383.6 (0.02)
+Passed bias filter:                      448  (0.0233589); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.22s 00:00:00.63 Elapsed: 00:00:00.67
+# Mc/sec: 3433.26
+//
+Query:       tr|A0A140LGX2|A0A140LGX2_DANRE  [L=111]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (111 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       285  (0.01486); expected 383.6 (0.02)
+Passed bias filter:                      118  (0.00615256); expected 383.6 (0.02)
+Passed Vit filter:                        12  (0.000625684); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 641.61
+//
+Query:       tr|A0A140LGB4|A0A140LGB4_DANRE  [L=714]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-51  173.6   0.2    6.8e-51  173.1   0.2    1.2  1  RasGEF    RasGEF domain
+      2e-13   51.0   0.1    5.2e-13   49.6   0.0    1.8  1  Histone   Core histone H2A/H2B/H3/H4
+
+
+Domain annotation for each model (and alignments):
+>> RasGEF  RasGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.1   0.2     7e-55   6.8e-51       1     179 []     181     360 ..     181     360 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 173.1 bits;  conditional E-value: 7e-55
+                          RasGEF   1 elAeqltlidaelfskikpeellgsawskrdkkes.pnveavierfnrlsnwvaseilseeslkeRakviekfikvaqe 78 
+                                     e+A+qltl++++++++++p+el+gs+w+k+dk+ + pn++++i+++++l+ w+ ++i+++e+++eR++v++++i++ q 
+  tr|A0A140LGB4|A0A140LGB4_DANRE 181 EIARQLTLLESDFYRAVQPSELVGSVWTKEDKEINsPNLLRMIRHTTNLTLWLEKCIVETENVEERVSVVSRIIEILQV 259
+                                     79******************************8867******************************************* PP
+
+                          RasGEF  79 crklnNfnslmaIlsaLqsssvsrLkktwaavskeslktleeleelmspennykkyrealkkaaskkpciPflglyltd 157
+                                      ++lnNfn+++ ++sa++ss+v+rL +t+++++++++k+lee +el  +e +ykky ++l+++  + pc+Pf+g+ylt+
+  tr|A0A140LGB4|A0A140LGB4_DANRE 260 FQELNNFNGVLEVVSAMNSSPVYRLDHTFEQIPSRQRKILEEAHEL--SEDHYKKYLAKLRSI--NPPCVPFFGIYLTN 334
+                                     *********************************************7..5667***********..7888********** PP
+
+                          RasGEF 158 ltfieegnpdtl...egk.iNfekrr 179
+                                     ++  eegnpd+l    ++ iNf+krr
+  tr|A0A140LGB4|A0A140LGB4_DANRE 335 ILKTEEGNPDFLkrhGTElINFSKRR 360
+                                     **************95556*****98 PP
+
+>> Histone  Core histone H2A/H2B/H3/H4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.6   0.0   5.4e-17   5.2e-13      20     130 ..      56     166 ..      38     167 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 49.6 bits;  conditional E-value: 5.4e-17
+                                     XXXXXXHT..TS-SSSSB--TT--XTTHHHHHHHHHHHHXXSXSSXHHHHHHHHHHHH.TTSSSXEEXHHHHHHHHHHH CS
+                         Histone  20 kvsakker..kasskskkkkkrryrpgtvalkeirkyqkstdlliqklpfaRvvreivksekedlrisaeavlalqeal 96 
+                                     +++++++r  ++ +++ +++++ +  +++  + + + +k+++++  +lp+++++  +++  + +++i+ + ++++ ++l
+  tr|A0A140LGB4|A0A140LGB4_DANRE  56 TLCQAQPRtvQDVEERVQRSFPHPIEKWAIADAQAAIEKRKRRNPLALPVDKIHPLLKE--VLGYKIDHQVSVYIVAVL 132
+                                     566766667899****************************************9999998..****************** PP
+
+                                     HHHHHHHHHHHHHHHHHTTXSEEXHHHHHHHHHH CS
+                         Histone  97 EallvelfeeAnllakhaKRvTitpkDiqlArrl 130
+                                     E++ ++++++A+++++++++ +i ++Di +A++ 
+  tr|A0A140LGB4|A0A140LGB4_DANRE 133 EYISADILKLAGNYVRNIRHYEISQQDITVAMCA 166
+                                     ********************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (714 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       651  (0.0339434); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.19s 00:00:00.65 Elapsed: 00:00:00.63
+# Mc/sec: 3648.90
+//
+Query:       tr|A0A140LGZ9|A0A140LGZ9_DANRE  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       306  (0.015955); expected 383.6 (0.02)
+Passed bias filter:                       91  (0.00474477); expected 383.6 (0.02)
+Passed Vit filter:                         8  (0.000417123); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 1166.88
+//
+Query:       tr|A0A140LH22|A0A140LH22_DANRE  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       313  (0.0163199); expected 383.6 (0.02)
+Passed bias filter:                      114  (0.005944); expected 383.6 (0.02)
+Passed Vit filter:                         8  (0.000417123); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.13s 00:00:00.47 Elapsed: 00:00:00.51
+# Mc/sec: 963.72
+//
+[ok]

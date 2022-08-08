@@ -1,0 +1,82 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040213.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040213
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q13201|MMRN1_HUMAN  [L=1228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-26   91.7   0.0    1.5e-25   90.0   0.0    2.1  1  C1q       C1q domain
+    2.2e-12   47.6   1.7    2.2e-12   47.6   1.7    2.8  1  EMI       EMI domain
+    6.8e-08   32.8  10.8    1.7e-07   31.5  10.8    1.7  1  EGF       EGF-like domain
+
+
+Domain annotation for each model (and alignments):
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.0   0.0   2.3e-29   1.5e-25       1     127 []    1102    1225 ..    1102    1225 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 90.0 bits;  conditional E-value: 2.3e-29
+                             EEEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEETTEEEEEEEEE-SSSS... CS
+                    C1q    1 AFsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvknkeevlsvydeekkss... 83  
+                             AF+as+t  ++ +    ++ F+++ vN+g +y+p+tGkF++p+ GvY+F+y+++   ++++   lv ++ ++l++ +e+ +s+   
+  sp|Q13201|MMRN1_HUMAN 1102 AFFASHTYGMTIPG---PILFNNLDVNYGASYTPRTGKFRIPYLGVYVFKYTIE-SFSAHISGFLVVDGIDKLAFESENINSEihc 1183
+                             9*************...9************************************.888899889******************9999 PP
+
+                             EEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                    C1q   84 ldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                             ++v +g+++leL++g+eVwl+la  +g++ a++   +tFsG+Ll
+  sp|Q13201|MMRN1_HUMAN 1184 DRVLTGDALLELNYGQEVWLRLA--KGTIPAKFPPVTTFSGYLL 1225
+                             99*********************..9*****************8 PP
+
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.6   1.7   3.4e-16   2.2e-12       1      68 []     208     277 ..     208     277 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 47.6 bits;  conditional E-value: 3.4e-16
+                    EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqge.rkCs.tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                            +n+Cay       +++ +++ +yv   + p    C +   +C+ + + + +p+yr+++k+vt+l wrCCpG+sg
+  sp|Q13201|MMRN1_HUMAN 208 KNWCAYvhtrLSPTVILDNQVTYVPGGKGP----CGWTgGSCPqRSQKISNPVYRMQHKIVTSLDWRCCPGYSG 277
+                            6******99888899999**********99....*********999**************************96 PP
+
+>> EGF  EGF-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.5  10.8   2.7e-11   1.7e-07       1      32 []    1045    1075 ..    1045    1075 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 31.5 bits;  conditional E-value: 2.7e-11
+                             GGSTTSTTT-EEEEETTTEEEEEETTTEESTT CS
+                    EGF    1 CspnpCsngGtCvdtgrggytCiCpeGytGkr 32  
+                             Cs +pC+ngGtC++++ +++tC C +++tG++
+  sp|Q13201|MMRN1_HUMAN 1045 CSRHPCQNGGTCINGR-TSFTCACRHPFTGDN 1075
+                             9***************.*************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1228 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2026  (0.105636); expected 383.6 (0.02)
+Passed bias filter:                      524  (0.0273215); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                        27  (0.00140779); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.74u 0.22s 00:00:00.96 Elapsed: 00:00:00.88
+# Mc/sec: 4520.35
+//
+[ok]

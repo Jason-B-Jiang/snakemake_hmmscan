@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035497.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035497
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q1LW08|Q1LW08_DANRE  [L=167]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-50  172.7   1.0    1.4e-50  172.6   1.0    1.0  1  G-alpha   G-protein alpha subunit
+    1.3e-05   24.8   0.0    2.5e-05   23.9   0.0    1.4  1  Arf       ADP-ribosylation factor family
+
+
+Domain annotation for each model (and alignments):
+>> G-alpha  G-protein alpha subunit
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  172.6   1.0   1.4e-54   1.4e-50     131     300 ..       3     166 ..       1     167 [] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 172.6 bits;  conditional E-value: 1.4e-54
+                             HHHHHHHCCSHHHHHHHCCG.CCTT--TTHHHHHCTHHHHCSTT----CHHHHCS-----SEEEEEEECT-TEEEEEEEE-SSHHHH CS
+                 G-alpha 131 gedikaLwndpgiqelyerr.nkiklednaeyFlddleritspdYlptddDilkarlktvGisetkfevdsklefrivdvgGqrser 216
+                             +e i+ Lw d+g++++++   ++ +++ ++eyF d+le+it+++Y+p   Di +++ +t Gi e+++ ++       v+  Gqr +r
+  tr|Q1LW08|Q1LW08_DANRE   3 VEPIRHLWADEGFKNCFKLCkDNHRHLTSLEYFVDRLEQITANNYIPITADIFRTHSPTNGIAELTIPMN------SVTFSGQRGQR 83 
+                             5679**************663566699****************************************887......46678****** PP
+
+                             HGTCCCTTTECEEEEEEEGGGTT-B-SS-TTSBHHHHHHHHHHCCCC-GGGTTSEEEEEEE-HHHHHHHCCCS-GGGCCTT--H CS
+                 G-alpha 217 kkWvpffddvdaiiFlvslsefdqvlyedekvnrleeslklFkeicnnkllkntpiiLflnKlDileeKlkkgklskyfpsyeg 300
+                             kkW+++f++v+++iF++slse+d+ l+e +++nr+eesl lF+++ ++++++++ i+L+lnK+Dil +K++ ++l+++fp++eg
+  tr|Q1LW08|Q1LW08_DANRE  84 KKWIHHFENVTTVIFVASLSEYDEFLEE-NNKNRMEESLPLFNSVTHSPWFAQSFILLLLNKKDILARKIQFSHLKTFFPEFEG 166
+                             ************************9988.66***************************************************96 PP
+
+>> Arf  ADP-ribosylation factor family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.9   0.0   2.6e-09   2.5e-05      39     128 ..      55     148 ..      49     161 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 23.9 bits;  conditional E-value: 2.6e-09
+                             EEEECSSSSEEEEEEEETTEEEEEEEE-SSGGGGGGGGGHCTTESEEEEE.........EETT-GCCHHHHHHHHHHHHTSGGGTTS CS
+                     Arf  39 lvttvPTigfnveeleiknlkftvwDvGGqeklRplWknYfektdavifv.........vDsadreRleeakeeLkalleeeelkev 116
+                             + t++PT g    ++ ++ ++f+     Gq+  R+ W + fe++++vifv         ++ ++++R+ee+   +++++++   ++ 
+  tr|Q1LW08|Q1LW08_DANRE  55 FRTHSPTNGIAELTIPMNSVTFS-----GQRGQRKKWIHHFENVTTVIFVaslseydefLEENNKNRMEESLPLFNSVTHSPWFAQS 136
+                             67889999999999999999986.....**********************332222222234567799999999************* PP
+
+                             EEEEEEE-TTST CS
+                     Arf 117 allvlaNKqDlp 128
+                              +l+l NK+D+ 
+  tr|Q1LW08|Q1LW08_DANRE 137 FILLLLNKKDIL 148
+                             **********75 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (167 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       755  (0.039366); expected 383.6 (0.02)
+Passed bias filter:                      601  (0.0313364); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.23s 00:00:00.57 Elapsed: 00:00:00.73
+# Mc/sec: 739.83
+//
+[ok]

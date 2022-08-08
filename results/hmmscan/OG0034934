@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034934.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034934
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QMG3|A0A2R8QMG3_DANRE  [L=338]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-16   60.4  15.2    1.5e-09   37.9   2.5    4.9  2  Kazal_2   Kazal-type serine protease inhibitor domain
+    2.2e-11   43.7  13.2    4.5e-08   33.1   3.1    4.8  2  Kazal_1   Kazal-type serine protease inhibitor domain
+
+
+Domain annotation for each model (and alignments):
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.7   5.0   7.6e-13   7.3e-09       2      49 .]      81     125 ..      80     125 .. 0.97
+   2 !   37.9   2.5   1.6e-13   1.5e-09       2      48 ..     172     216 ..     171     216 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 35.7 bits;  conditional E-value: 7.6e-13
+                                     ECCCCCT-----EEETTSEEESSHHHHHHHHHHHTTT--..EEEESS- CS
+                         Kazal_2   2 ceckCpeleydpVCGsDgktYtseCkLqaagCllkrkskkelkydGsC 49 
+                                     c++kC+  +y+pVCGs+g  Y ++C L++ +C+l++++   +++dG+C
+  tr|A0A2R8QMG3|A0A2R8QMG3_DANRE  81 CDFKCS-GDYAPVCGSNGESYENHCLLRKDACKLQTEVL--VVSDGAC 125
+                                     999***.88889***************************..******* PP
+
+  == domain 2  score: 37.9 bits;  conditional E-value: 1.6e-13
+                                     ECCCCCT-----EEETTSEEESSHHHHHHHHHHHTTT--..EEEESS CS
+                         Kazal_2   2 ceckCpeleydpVCGsDgktYtseCkLqaagCllkrkskkelkydGs 48 
+                                     c+ +C++ +++pVC+sDg+ Y+++C+ +  +C++++ ++  +ky G+
+  tr|A0A2R8QMG3|A0A2R8QMG3_DANRE 172 CNIDCSHISFNPVCASDGRSYDNPCQVKEVSCQKQERIE--VKYLGH 216
+                                     99******************************9999999..***996 PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.1   3.1   4.7e-12   4.5e-08       8      49 .]      84     125 ..      74     125 .. 0.92
+   2 !   23.7   2.6     4e-09   3.8e-05       8      47 ..     175     215 ..     161     216 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 33.1 bits;  conditional E-value: 4.7e-12
+                                     SECSSS--EEETTSEEESSHHHHHHHHHCCSSS--EEECSS- CS
+                         Kazal_1   8 aCpreyepvCGtDgkTYsneCllCaengkkgtklqlehdGeC 49 
+                                      C+ +y pvCG++g +Y+n Cll +   k +t++ ++ dG+C
+  tr|A0A2R8QMG3|A0A2R8QMG3_DANRE  84 KCSGDYAPVCGSNGESYENHCLLRKDACKLQTEVLVVSDGAC 125
+                                     4**********************877779************9 PP
+
+  == domain 2  score: 23.7 bits;  conditional E-value: 4e-09
+                                     SEC.SSS--EEETTSEEESSHHHHHHHHHCCSSS--EEECS CS
+                         Kazal_1   8 aCp.reyepvCGtDgkTYsneCllCaengkkgtklqlehdG 47 
+                                      C+   ++pvC +Dg +Y+n C+    + +k+  +++++ G
+  tr|A0A2R8QMG3|A0A2R8QMG3_DANRE 175 DCShISFNPVCASDGRSYDNPCQVKEVSCQKQERIEVKYLG 215
+                                     4666679*****************65555888888887776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (338 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       924  (0.0481777); expected 383.6 (0.02)
+Passed bias filter:                      409  (0.0213254); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 1907.03
+//
+[ok]

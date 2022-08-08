@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030648.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030648
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54MV0|Q54MV0_DICDI  [L=318]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-22   80.4   0.1    3.8e-09   36.9   0.0    4.3  2  CBS       CBS domain
+
+
+Domain annotation for each model (and alignments):
+>> CBS  CBS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.6   0.0   2.4e-08   0.00047       8      51 ..     189     232 ..     170     238 .. 0.90
+   2 !   36.9   0.0     2e-13   3.8e-09       7      54 ..     253     299 ..     250     302 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 20.6 bits;  conditional E-value: 2.4e-08
+                             SCEEEETTSBHHHHHHHHHHHTSSEEEEEETTTBEEEEEEHHHH CS
+                     CBS   8 dvvtvppdttleealelmrekgvsrlPVVdedgklvGivtlrDl 51 
+                             +v+++  ++++ +a++l+ ++++ ++P+V++ +++vG ++ +Dl
+  tr|Q54MV0|Q54MV0_DICDI 189 KVHSILDTEPVFKAFQLIQKYKIYGMPIVNDKNQIVGNISIHDL 232
+                             7889999***********999966*****99999*********9 PP
+
+  == domain 2  score: 36.9 bits;  conditional E-value: 2e-13
+                             SSCEEEETTSBHHHHHHHHHHHTSSEEEEEETTTBEEEEEEHHHHHHH CS
+                     CBS   7 rdvvtvppdttleealelmrekgvsrlPVVdedgklvGivtlrDllra 54 
+                             r+++t++ +t l+e+++++ ++ ++r+  V e gk++Gi+t +D+++ 
+  tr|Q54MV0|Q54MV0_DICDI 253 RPPITCDKSTKLSELFNIFLNNQIHRVHLV-EGGKPIGIITITDIISM 299
+                             79****************98999****999.899***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (318 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       563  (0.029355); expected 383.6 (0.02)
+Passed bias filter:                      381  (0.0198655); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.57
+# Mc/sec: 1808.24
+//
+[ok]

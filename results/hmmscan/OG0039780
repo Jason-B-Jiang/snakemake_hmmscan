@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039780.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039780
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P40225|TPO_HUMAN  [L=353]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-48  163.3   0.2      3e-47  160.8   0.0    2.0  1  EPO_TPO   Erythropoietin/thrombopoietin
+
+
+Domain annotation for each model (and alignments):
+>> EPO_TPO  Erythropoietin/thrombopoietin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.8   0.0   1.6e-51     3e-47       2     152 ..      26     166 ..      25     175 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 160.8 bits;  conditional E-value: 1.6e-51
+              EPO_TPO   2 pvCdsrvleklireakeaesalsqckdlcslsenvtlPttkvslkeWkkmeeeqkaqevwqgltlLseavlkaqallanssqsslvlqlh 91 
+                          p+Cd rvl kl+r+++ ++s+lsqc++  +l+++v+lP++++sl eWk++ ee+kaq++++++tlL+e+v++a+++l +++ ssl+ ql 
+  sp|P40225|TPO_HUMAN  26 PACDLRVLSKLLRDSHVLHSRLSQCPEVHPLPTPVLLPAVDFSLGEWKTQMEETKAQDILGAVTLLLEGVMAARGQLGPTCLSSLLGQL- 114
+                          99***************************************************************************************. PP
+
+              EPO_TPO  92 vdkavsslrslrallrlLgtqeislPdasaaplrTvtvktlsklFqiysnfLRgklk.Lfla 152
+                           +++v+ l  l+al+ lLgtq   +P++     rT+++k+++++F +++ +LRgk++ L l+
+  sp|P40225|TPO_HUMAN 115 -SGQVRLL--LGALQSLLGTQL--PPQG-----RTTAHKDPNAIFLSFQHLLRGKVRfLMLV 166
+                          .*******..************..****.....************************74443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (353 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       260  (0.0135565); expected 383.6 (0.02)
+Passed bias filter:                      193  (0.0100631); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.68
+# Mc/sec: 1673.07
+//
+[ok]

@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035983.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035983
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5U3B4|Q5U3B4_DANRE  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-30  104.7   3.2    4.4e-30  103.7   3.2    1.5  1  IGF2_C    Insulin-like growth factor II E-peptide
+    1.3e-13   51.9   6.5    1.5e-10   42.0   6.5    2.6  1  Insulin   Insulin/IGF/Relaxin family
+
+
+Domain annotation for each model (and alignments):
+>> IGF2_C  Insulin-like growth factor II E-peptide
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.7   3.2   4.6e-34   4.4e-30       1      56 []     129     184 ..     129     184 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 103.7 bits;  conditional E-value: 4.6e-34
+                  IGF2_C   1 KfskydvWqkksaqRlrRgvPalLrarryrllaeeleaaeeakrHrpLisLpskdP 56 
+                             K+sky+vWq+k+aqRlrRgvP++L ar++r+++e+++++e++++HrpL++Lp+++P
+  tr|Q5U3B4|Q5U3B4_DANRE 129 KYSKYEVWQQKAAQRLRRGVPSILLARKFRRQMEKIQDEEQTSFHRPLMTLPNRQP 184
+                             9*****************************************************99 PP
+
+>> Insulin  Insulin/IGF/Relaxin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.0   6.5   1.6e-14   1.5e-10       2      85 .]      43      97 ..      42      97 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 42.0 bits;  conditional E-value: 1.6e-14
+                            HHHTHHHHHHHHHHHGGXXGTEEESXTTXX......................XXXXXXXX....-CHHHHTTSTBCCCCCCCCC CS
+                 Insulin  2 klCGreLvralievCgevkrgafytapkareeedplveqveaedkeeaelkylgldeesrrrkrGiveeCClkgCtlrsLekyC 85
+                            +lCG eLv++l++vCge   g++   +  r                       +  ++srr++rGiveeCC+++C+l+ L++yC
+  tr|Q5U3B4|Q5U3B4_DANRE 43 TLCGGELVDTLQFVCGE--DGFYI--S--R-----------------------PNRSNSRRPQRGIVEECCFRSCELHLLQQYC 97
+                            89***************..88855..4..3.......................23578999*********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       856  (0.0446321); expected 383.6 (0.02)
+Passed bias filter:                      520  (0.027113); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.21s 00:00:00.52 Elapsed: 00:00:00.62
+# Mc/sec: 1030.34
+//
+[ok]

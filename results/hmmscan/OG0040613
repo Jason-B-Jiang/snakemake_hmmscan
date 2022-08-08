@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040613.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040613
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q7Z4P5|GDF7_HUMAN  [L=450]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      6e-33  114.0   0.1    9.2e-33  113.4   0.1    1.3  1  TGF_beta         Transforming growth factor beta like domain
+    1.3e-09   38.1   0.0    2.1e-09   37.5   0.0    1.2  1  TGFb_propeptide  TGF-beta propeptide
+
+
+Domain annotation for each model (and alignments):
+>> TGF_beta  Transforming growth factor beta like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.4   0.1   9.6e-37   9.2e-33       1     102 []     348     449 ..     348     449 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 113.4 bits;  conditional E-value: 9.6e-37
+                           SSEEE--EEECCCH--.-SEEE-SEEE--EEES--...--CCCSSSSHHHHHHGGGCT.SSTSSS-EEEESSEEEEEEEEE.ETTEEEE CS
+              TGF_beta   1 eCrrkelevsfedlgwddwiiaPkgyeakyCsGsCskeekaeksatnhallqslvkelkpkkvpkpcCvPtklsslsvlyvdeennvvl 89 
+                           +C+rk+l+v+f++lgwddwiiaP  yea++C+G C+   +++ + tnha++q+l++++ p+++p++cCvP +ls++s+ly+d  nnvv+
+  sp|Q7Z4P5|GDF7_HUMAN 348 RCSRKPLHVDFKELGWDDWIIAPLDYEAYHCEGLCDFPLRSHLEPTNHAIIQTLLNSMAPDAAPASCCVPARLSPISILYIDAANNVVY 436
+                           6**********************************8888888889******************************************** PP
+
+                           EEEEEEEE-EEEE CS
+              TGF_beta  90 kkledmvvkeCgC 102
+                           k++edmvv++CgC
+  sp|Q7Z4P5|GDF7_HUMAN 437 KQYEDMVVEACGC 449
+                           ************* PP
+
+>> TGFb_propeptide  TGF-beta propeptide
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5   0.0   2.2e-13   2.1e-09      44     184 ..      85     227 ..      66     252 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 2.2e-13
+       TGFb_propeptide  44 ksaP.qfmldLYnslsaeeepllsaqderaldeadtvmsfvnkvendkel.rhekefkFnlseipegeavtaAeLRlykdrskekfkne 130
+                           +++P  fm++LY+sl ++    ++a     + +adt+  f  +  +d++  +  ++f F++s++++ + v+ AeLR++  r + +    
+  sp|Q7Z4P5|GDF7_HUMAN  85 SVVPhHFMMSLYRSLAGRAPAGAAAVSASGHGRADTITGFTDQATQDESAaETGQSFLFDVSSLNDADEVVGAELRVLR-RGSPESGPG 172
+                           678878**********7666456666688899********99877755553666************************6.444555555 PP
+
+       TGFb_propeptide 131 tlrisvYqvlkeakgrdaslrlldsrlvt.aseegWlsfdvtaavnrWlknpeen 184
+                           + +     +l + +g  +  rll sr  +    ++W++fdv +a++r  ++p+  
+  sp|Q7Z4P5|GDF7_HUMAN 173 SWTSPPLLLLSTCPGAARAPRLLYSRAAEpLVGQRWEAFDVADAMRRHRREPRPP 227
+                           55555555554457777779*******9989999***********9988877665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (450 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       435  (0.0226811); expected 383.6 (0.02)
+Passed bias filter:                      255  (0.0132958); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.58
+# Mc/sec: 2517.35
+//
+[ok]

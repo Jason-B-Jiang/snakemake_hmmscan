@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035536.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035536
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1Q6U6|F1Q6U6_DANRE  [L=314]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-11   44.8   5.7    1.1e-11   44.8   5.7    2.5  1  Kazal_2   Kazal-type serine protease inhibitor domain
+    7.3e-06   26.1   1.8    7.3e-06   26.1   1.8    2.8  1  FOLN      Follistatin/Osteonectin-like EGF domain
+    2.3e-05   24.4  10.2    2.3e-05   24.4  10.2    2.2  1  Kazal_1   Kazal-type serine protease inhibitor domain
+
+
+Domain annotation for each model (and alignments):
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.8   5.7   1.7e-15   1.1e-11       2      49 .]      52      96 ..      51      96 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 44.8 bits;  conditional E-value: 1.7e-15
+                            ECCCCCT-----EEETTSEEESSHHHHHHHHHHHTTT--..EEEESS- CS
+                 Kazal_2  2 ceckCpeleydpVCGsDgktYtseCkLqaagCllkrkskkelkydGsC 49
+                            c+++C+ ++ +pVCGs+gk+Y ++C+L++ +Cl++ k++  + +dG C
+  tr|F1Q6U6|F1Q6U6_DANRE 52 CIEQCK-PHNHPVCGSNGKMYQNHCELHRDACLTGVKIQ--ISHDGQC 96
+                            99****.99999***************************..******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   1.8   1.1e-09   7.3e-06       1      22 []      29      50 ..      29      50 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 1.1e-09
+                    FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                            C n++C++G++C v ++g+P C
+  tr|F1Q6U6|F1Q6U6_DANRE 29 CANVFCGAGRECSVTEKGEPTC 50
+                            ********************** PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4  10.2   3.6e-09   2.3e-05       8      49 .]      55      96 ..      40      96 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 3.6e-09
+                            SECSSS--EEETTSEEESSHHHHHHHHHCCSSS--EEECSS- CS
+                 Kazal_1  8 aCpreyepvCGtDgkTYsneCllCaengkkgtklqlehdGeC 49
+                             C  +  pvCG++gk Y+n C l       g k+q++hdG+C
+  tr|F1Q6U6|F1Q6U6_DANRE 55 QCKPHNHPVCGSNGKMYQNHCELHRDACLTGVKIQISHDGQC 96
+                            5999999****************777779************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (314 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1207  (0.0629334); expected 383.6 (0.02)
+Passed bias filter:                      515  (0.0268523); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.22s 00:00:00.64 Elapsed: 00:00:00.69
+# Mc/sec: 1472.48
+//
+[ok]

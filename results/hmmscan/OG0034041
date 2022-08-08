@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034041.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034041
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R7M8|F1R7M8_DANRE  [L=542]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.9e-69  230.8   0.0    1.1e-68  230.4   0.0    1.2  1  IRK_C     Inward rectifier potassium channel C-terminal domai
+      2e-55  186.6   3.8      1e-54  184.3   3.8    1.9  1  IRK       Inward rectifier potassium channel transmembrane do
+
+
+Domain annotation for each model (and alignments):
+>> IRK_C  Inward rectifier potassium channel C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  230.4   0.0   1.1e-72   1.1e-68       1     173 [.     311     484 ..     311     485 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 230.4 bits;  conditional E-value: 1.1e-72
+                   IRK_C   1 lkFSkkaviakrdgklClmfrvgdlrkshlieakvrakllkkkvtkeGevieleqsdlklevdtgedriflvlPltvvHvideeSPl 87 
+                             l FS+ av+a rdgklC+m+rvg+lrkshl+ea+vra+llk++vt eGe+++l++sdl++++dtg+driflv+P+t+vH+i+eeSP+
+  tr|F1R7M8|F1R7M8_DANRE 311 LVFSDVAVVAVRDGKLCMMWRVGNLRKSHLVEAHVRAQLLKPRVTPEGEFLPLDNSDLNVGFDTGTDRIFLVSPVTIVHEINEESPF 397
+                             57************************************************************************************* PP
+
+                   IRK_C  88 ydlsakdlk.eedfElvvilegtvestgavtqartSYlpeEilWGhrFeevvslkkeekYkvdyskfektveve.tpkcsakeleek 172
+                             +++++  l+ ++d+E+vvileg+ve+t+++tq+r+S+l++EilWGhrFe+v++ +k+  Y+vdys f++t+ev+ tp+csakel+ek
+  tr|F1R7M8|F1R7M8_DANRE 398 FEMDKGALEgDKDLEVVVILEGMVEATAMTTQCRSSFLASEILWGHRFEPVLFERKN-CYQVDYSYFNRTYEVTdTPTCSAKELAEK 483
+                             ********84689***************************************99999.***************99*********998 PP
+
+                   IRK_C 173 k 173
+                             k
+  tr|F1R7M8|F1R7M8_DANRE 484 K 484
+                             6 PP
+
+>> IRK  Inward rectifier potassium channel transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  184.3   3.8     1e-58     1e-54       1     142 []     136     304 ..     136     304 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 184.3 bits;  conditional E-value: 1e-58
+                     IRK   1 vkKnGecnvelknieekslrylkDlfttlvdlkwryllllfvlsfvlswllfallwylialahgDle.................... 67 
+                             v K+G+cnv++ n++e+ +ryl+Dlftt+vd++wr++l++f+lsf+l+wllf++ ++lia+ahgDl+                    
+  tr|F1R7M8|F1R7M8_DANRE 136 VGKDGRCNVTFVNMSERGQRYLTDLFTTCVDIRWRWMLVVFTLSFLLTWLLFGFTFWLIAAAHGDLNplassssspsslssslapld 222
+                             67************************************************************************************* PP
+
+                     IRK  68 .......eeekeeekepCvanvksftsallfslEtqttigyGsrvvteeCpeailllviqsivgllidavlvgivlaKlarp 142
+                                     e   e++epC+++v+sf++a+lfslEtqt+igyG+r vte Cp a+l +v+q+ivg++ida+++g+v+aK+a+p
+  tr|F1R7M8|F1R7M8_DANRE 223 ategssrVEMVAETEEPCFQQVNSFMAAFLFSLETQTSIGYGFRSVTEACPLAVLAVVLQCIVGCIIDAFIIGAVMAKIAKP 304
+                             **9988767788999*****************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (542 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       774  (0.0403566); expected 383.6 (0.02)
+Passed bias filter:                      502  (0.0261745); expected 383.6 (0.02)
+Passed Vit filter:                        74  (0.00385839); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.53u 0.25s 00:00:00.78 Elapsed: 00:00:00.92
+# Mc/sec: 1903.58
+//
+[ok]

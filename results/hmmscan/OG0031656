@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031656.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031656
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q7K5M0|SCARF_DROME  [L=655]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.7e-31  107.6   2.9    2.7e-31  107.6   2.9    3.4  1  CLIP_SPH_Scar  Clip-domain serine protease homolog Scarface
+      1e-30  107.3   0.0    1.8e-30  106.5   0.0    1.3  1  Trypsin        Trypsin
+
+
+Domain annotation for each model (and alignments):
+>> CLIP_SPH_Scar  Clip-domain serine protease homolog Scarface
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.6   2.9   2.8e-35   2.7e-31       1      65 [.     343     407 ..     343     408 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 107.6 bits;  conditional E-value: 2.8e-35
+          CLIP_SPH_Scar   1 gCaaalkCveeeyCsleGvisetpvaLseeeklyrvPlteCknletgvvGkCCRDPnYvDPWPag 65 
+                            +Ca+al+C++e++C++ Gv+setpv Ls++e+++rvPlt+C+++e+g  GkCCRDPnYvDPWP++
+  sp|Q7K5M0|SCARF_DROME 343 KCASALVCTSENFCNAIGVLSETPVELSPMEAAFRVPLTDCLQTENGSPGKCCRDPNYVDPWPVN 407
+                            6**************************************************************98 PP
+
+>> Trypsin  Trypsin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.5   0.0   1.8e-34   1.8e-30       9     211 ..     431     632 ..     424     639 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 106.5 bits;  conditional E-value: 1.8e-34
+                            TTSSTTEEEEEETTC.EEEEEEEEEETTEEEEEGGGTTT..GGGEEEEESESBTTSCTTT..EEEEEEEEEEEETTEBTTTTTTTEEE CS
+                Trypsin   9 kgsfpwqvslsvksg.khlCgGslisenwvlTAaHCvsn..asdvkvvlgehnlkksegk..eqklkvekvivhpnynpstldnDial 91 
+                              + pwq+++ ++s+ +++CgG++i++++vl+ a Cv++   +d++v +ge +l ++++    q   v+ v vhp+y+pst ++D+a+
+  sp|Q7K5M0|SCARF_DROME 431 FAEIPWQAMILRESSkTLICGGAIIGDQFVLSSASCVNGlpVTDIRVKAGEWELGSTNEPlpFQLTGVKTVDVHPDYDPSTNSHDLAI 518
+                            5678**********99*************************9*********7777777665567777888****************** PP
+
+                            EEESSSSTSBSSBHCCBBCSTTHTTSTTTEEEEEESSBSSTSS.BSSBEEEEEEEEEEHH.HHHHHTTTTSTTTEEEEESTTSSSBCT CS
+                Trypsin  92 lklkepvklgdtvrpiclpaassslpvgttclvsGwgrtkekg.ksdtlqevevpvvsre.tcksaykgkvtenmlcagakeggkdac 177
+                            ++l++++++ ++++pic+ ++++  +  ++c++sGwg+++ +   +  l++v+ ++ +   +c+        ++ +c  +   + d+c
+  sp|Q7K5M0|SCARF_DROME 519 IRLERRLEFASHIQPICISDEDP--KDSEQCFTSGWGKQALSIhEEGALMHVTDTLPQARsECSA------DSSSVCSAT---KFDSC 595
+                            ********************777..99999********877776666787777666555567777......488899888...78*** PP
+
+                            TTTTTSEEEETTT...EEEEEEEEESSSSBTTSEEEE CS
+                Trypsin 178 qGDSGGPlvcsdg...elvGivswgkgcakgnrpgvy 211
+                            q D G++l c++g    l Gi  + ++c++g++  ++
+  sp|Q7K5M0|SCARF_DROME 596 QFDVGSALACGSGssvRLKGIFAGENSCGEGQTVRFA 632
+                            ******************************9987665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (655 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       545  (0.0284165); expected 383.6 (0.02)
+Passed bias filter:                      282  (0.0147036); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.73
+# Mc/sec: 2911.32
+//
+[ok]

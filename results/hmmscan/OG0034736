@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034736.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034736
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IAX2|A0A0R4IAX2_DANRE  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-12   48.1  23.4    4.7e-09   36.1   7.9    2.8  2  FYTT      Forty-two-three protein
+
+
+Domain annotation for each model (and alignments):
+>> FYTT  Forty-two-three protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   7.9   2.5e-13   4.7e-09      15      89 ..      18      97 ..       8     111 .. 0.81
+   2 !   23.4   0.8   1.9e-09   3.6e-05     202     288 ..     167     252 ..     149     258 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 2.5e-13
+                            FYTT 15 saegldkidmslddiiklnrkegrk.....rnfpklnrriqqssarqlrrrvirrGlqqnkGfGknslgrrGrvtpGkrr 89
+                                     a++ dkid+slddiikln+ke++      +   ++n+ +++ +   l++r+ rrG qq +G G+ +  rrG  ++ +  
+  tr|A0A0R4IAX2|A0A0R4IAX2_DANRE 18 HASSSDKIDLSLDDIIKLNKKEQQAnraktKRSANRNNILKKLNQVSLQQRGRRRGAQQYQGPGRMRGLRRGFRGSARGM 97
+                                    46778*****************987777666667778889999999*******************988899876664443 PP
+
+  == domain 2  score: 23.4 bits;  conditional E-value: 1.9e-09
+                            FYTT 202 dkpvakrtrqwrtsttnGGiltvsidnpGalqapvaqrprltrtavpsfllkrd.saeekkipkGvplqfdinsvGkqt 279
+                                     +k +  +t + r ++  G +ltvs+ n  +   +v+  ++  r    + l  r  +      pkG+plqf+  +   qt
+  tr|A0A0R4IAX2|A0A0R4IAX2_DANRE 167 EKLQKYQTINSRRTAPSGSMLTVSLPNAKSAPVAVTTSNQARRGG--TVLRGRSsRGAGSASPKGIPLQFNYKATTNQT 243
+                                     45555566677777889********99988888888777766654..345545404556789***************** PP
+
+                            FYTT 280 Gmtlnerfg 288
+                                      ++ln+rf 
+  tr|A0A0R4IAX2|A0A0R4IAX2_DANRE 244 TVSLNDRFT 252
+                                     ********7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       969  (0.050524); expected 383.6 (0.02)
+Passed bias filter:                      538  (0.0280515); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.48u 0.24s 00:00:00.72 Elapsed: 00:00:00.70
+# Mc/sec: 1685.68
+//
+[ok]

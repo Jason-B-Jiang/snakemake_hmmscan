@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035305.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035305
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1RC73|F1RC73_DANRE  [L=1200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-08   34.9   0.0    2.1e-08   34.0   0.0    1.5  1  Pkinase   Protein kinase domain
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.0   0.0   1.1e-12   2.1e-08     179     264 .]       2      75 ..       1      75 [. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 34.0 bits;  conditional E-value: 1.1e-12
+                             HHHHHHHHHHHHHHSS-STTTSSHHHHHHHHHHTHHHHHHHCTSHH...HHHTTS-HHHHHHHHHHT-SSGCCSTTHHHHHTSGGG CS
+                 Pkinase 179 DvWslGvilyelltgkppfsgekgkekvekeldqlekilkilgetkeklpeakeiseeakdllkkllkkdpkkRltaeellqhpyl 264
+                             D+W+lG++lye+ t k+ f++ + k+ v k+++             +  p+  + s+++++ll +l+k++p++R++++ +l++p+l
+  tr|F1RC73|F1RC73_DANRE   2 DIWALGCVLYEMCTLKHAFEAGNMKNLVLKIIRG------------SYPPVSIHYSPDLRSLLAQLFKRNPRERPSVSTILDKPFL 75 
+                             9*******************88888877777777............345777789****************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1648  (0.0859273); expected 383.6 (0.02)
+Passed bias filter:                      424  (0.0221075); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.21s 00:00:00.83 Elapsed: 00:00:00.77
+# Mc/sec: 5014.19
+//
+[ok]

@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0027035.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0027035
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A8WFK8|A8WFK8_CAEEL  [L=514]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.8e-10   39.4   0.1    1.2e-09   38.6   0.1    1.4  1  CUB       CUB domain
+    4.6e-07   30.6   0.1      1e-06   29.5   0.1    1.6  1  Lectin_C  Lectin C-type domain
+
+
+Domain annotation for each model (and alignments):
+>> CUB  CUB domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6   0.1   1.3e-13   1.2e-09       1     110 []      32     149 ..      32     149 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 1.3e-13
+                             SCEE....E-SSEEEEESTTTTS..---SS-EEEEEEE--TTEEEEEEEESEEB--BST..SSSSEEEEEETTESS.SSEEEEE-SS CS
+                     CUB   1 Cgge....ltessgsisspnypk..eYeenkeCvweiraekgssvklkfedfeleeeee..cayDyveirdgeeas.skllgkfcGs 78 
+                             C+g+    +t++ +++++pny    +Y++  +C + i+a+++ +v +++ d+e+e +    c  Dyv + ++ +++  +++  +c +
+  tr|A8WFK8|A8WFK8_CAEEL  32 CSGTvvlnATKELQYLTTPNYELsyKYPPFLDCRFFIKAPDKTRVVVEIIDMEMEPRIFdeC-SDYVGFAEDVTEKnISKMLTLCET 117
+                             566555557889999******974478999************************96633448.9*******9998856788899999 PP
+
+                             SS-SEEE-SSSEEEEEEE--SS--SSEEEEEE CS
+                     CUB  79 ekpediksssnqllikfvsdesvskkGFkity 110
+                                 ++ ss+n+l+i f+sde ++ +G +++y
+  tr|A8WFK8|A8WFK8_CAEEL 118 LTKRQYISSTNTLTIIFQSDELIEYRGARLSY 149
+                             99999**********************98887 PP
+
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.1   1.1e-10     1e-06       2     109 .]     177     285 ..     176     285 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 1.1e-10
+                             EEEHHHHHHHHHHTTSEEB--SSHHHHHHHHHHSTSTTSEEEEEEEECSSTTEEEETTSTBCSTTTC.....SE-BSSTSSTTSEEE CS
+                Lectin_C   2 kksweeAeeaCqkkggsLvsvnskeeldflssllkksaksfWigltdeknegewkwedgskvnttkl.....yknwepsensenedC 83 
+                             k  w  A++ C +++++L+++++ ++   l++l k+  ++fW+g td ++eg +  +++++    ++       n   ++n++n+dC
+  tr|A8WFK8|A8WFK8_CAEEL 177 KTDWITAQNRCMEQQSNLITIETGAKTTELENLFKSVPTRFWTGDTDATTEGLLVGINDREAP--NIpgresG-N-SYTDNNDNNDC 259
+                             678999***************************************999999998888777766..55555431.2.46999****** PP
+
+                             EEEGCSTTSEEEEEETTSEEEEEEEE CS
+                Lectin_C  84 velrekssgkwndenCnkklpfvCek 109
+                               +   +++    + C + + ++Ce+
+  tr|A8WFK8|A8WFK8_CAEEL 260 MTVHFGDNQPFRMDGCASFNAYICEM 285
+                             ***7888899999***********95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (514 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       958  (0.0499505); expected 383.6 (0.02)
+Passed bias filter:                      780  (0.0406695); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.22s 00:00:00.65 Elapsed: 00:00:00.61
+# Mc/sec: 2707.27
+//
+[ok]

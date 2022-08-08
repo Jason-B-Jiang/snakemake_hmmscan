@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040519.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040519
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P20809|IL11_HUMAN  [L=199]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.7e-59  199.3   0.0    4.3e-59  199.1   0.0    1.0  1  IL11      Interleukin 11
+
+
+Domain annotation for each model (and alignments):
+>> IL11  Interleukin 11
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.1   0.0   2.2e-63   4.3e-59       4     169 ..      32     198 ..      26     199 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 199.1 bits;  conditional E-value: 2.2e-63
+                  IL11   4 lrkakaeldklvnqtrsLlkltkqllkdlklkfpseiehrlksLPalsmsasdlsslevkstLsqLrtdlksfekHleWLkkakkkskk 92 
+                           ++ ++aeld++v++trsLl +t+ql+++l++kfp +++h+l+sLP+l+msa +l++l++  +L++Lr+dl s+ +H++WL++a++ s k
+  sp|P20809|IL11_HUMAN  32 SPDPRAELDSTVLLTRSLLADTRQLAAQLRDKFPADGDHNLDSLPTLAMSAGALGALQLPGVLTRLRADLLSYLRHVQWLRRAGGSSLK 120
+                           34489************************************************************************************ PP
+
+                  IL11  93 slepklgelishlkrLlnslqrlmsklglprvpv.vspslppisatawevvqasheileklklfldwavRvLlllkrk 169
+                           +lep+lg+l+++l+rLl++lq+lms+l+lp++p+ +++++++ +++aw+ ++a+h+il++l+l+ldwavR+Llllk++
+  sp|P20809|IL11_HUMAN 121 TLEPELGTLQARLDRLLRRLQLLMSRLALPQPPPdPPAPPLAPPSSAWGGIRAAHAILGGLHLTLDWAVRGLLLLKTR 198
+                           *********************************98665666666********************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (199 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       495  (0.0258095); expected 383.6 (0.02)
+Passed bias filter:                      367  (0.0191355); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.31u 0.18s 00:00:00.49 Elapsed: 00:00:00.52
+# Mc/sec: 1227.17
+//
+[ok]

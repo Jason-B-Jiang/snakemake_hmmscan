@@ -1,0 +1,158 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0022376.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0022376
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8NI29|FBX27_HUMAN  [L=283]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.2e-76  255.5   0.0    2.7e-76  255.3   0.0    1.1  1  FBA         F-box associated region
+    9.9e-13   47.7   0.5    2.2e-12   46.6   0.5    1.6  1  F-box       F-box domain
+    7.3e-10   38.7   1.8    1.8e-09   37.4   1.8    1.7  1  F-box-like  F-box-like
+
+
+Domain annotation for each model (and alignments):
+>> FBA  F-box associated region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  255.3   0.0   4.2e-80   2.7e-76       1     178 []     105     278 ..     105     278 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 255.3 bits;  conditional E-value: 4.2e-80
+                    FBA   1 yvkkplgRNLlknpsGeeklahwkvlenggdgwkveetpagaeelpdakvqscfvtsygwcskeqvidLkkeGlweelLdsfkpeIev 88 
+                            + ++p+gRNL++np+G+e+l++w ++++ggdgw vee+   ++++p a+ q+cfvts++wc k+qv+dL++eGlw+elLds ++eI+v
+  sp|Q8NI29|FBX27_HUMAN 105 CARRPIGRNLIRNPCGQEGLRKW-MVQHGGDGWVVEEN---RTTVPGAPSQTCFVTSFSWCCKKQVLDLEEEGLWPELLDSGRIEICV 188
+                            7899*******************.9***********98...9****9999************************************** PP
+
+                    FBA  89 sdWyaarkdcgcvyeliveLldkkkkvlaefdtkelvteqwaerqwqqvshvFsnYgkGVrfvrFehggkdtqfwaghygakvtgssV 176
+                            sdW+ ar+d+gc+y+l v+Lld++++vl++f++ + +++qw+++ + +v+hvFsn++ GVrfv+Feh+g+dtqfwaghyga+vt+ssV
+  sp|Q8NI29|FBX27_HUMAN 189 SDWWGARHDSGCMYRLLVQLLDANQTVLDKFSAVPDPIPQWNNNACLHVTHVFSNIKMGVRFVSFEHRGQDTQFWAGHYGARVTNSSV 276
+                            **************************************************************************************** PP
+
+                    FBA 177 kv 178
+                            +v
+  sp|Q8NI29|FBX27_HUMAN 277 IV 278
+                            97 PP
+
+>> F-box  F-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6   0.5   3.4e-16   2.2e-12       1      42 [.      26      68 ..      26      69 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 3.4e-16
+                           HHHSHHHHHHHHHTTS-HHH.HHHHTTT-HHHHHHHTSHHHHH CS
+                  F-box  1 lsrLPsevlrhILerLpfsd.llalrrVSkgwrilidddrlwc 42
+                           ls+LP+e+l+ +L+++p+++ l ++r+V++gwr l+d+  lw+
+  sp|Q8NI29|FBX27_HUMAN 26 LSQLPPELLLVVLSHVPPRTlLGRCRQVCRGWRALVDGQALWL 68
+                           699************************************9996 PP
+
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4   1.8   2.8e-13   1.8e-09       2      42 ..      27      67 ..      26      72 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 2.8e-13
+             F-box-like  2 srLPdEiLlqIFsyLppsdLlr.lalVCrrWrrvaldtplLW 42
+                           s+LP+E+Ll ++s++pp++Ll  +++VCr Wr +++  + LW
+  sp|Q8NI29|FBX27_HUMAN 27 SQLPPELLLVVLSHVPPRTLLGrCRQVCRGWRALVD-GQALW 67
+                           79*************99975544***********95.55999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (283 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       347  (0.0180927); expected 383.6 (0.02)
+Passed bias filter:                      278  (0.014495); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 1786.74
+//
+Query:       sp|Q96EF6|FBX17_HUMAN  [L=278]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.6e-67  226.0   0.0    3.2e-67  225.7   0.0    1.1  1  FBA         F-box associated region
+    2.1e-10   40.4   1.8    4.8e-10   39.2   1.8    1.6  1  F-box-like  F-box-like
+    8.9e-10   38.3   1.1    2.2e-09   37.0   1.1    1.7  1  F-box       F-box domain
+
+
+Domain annotation for each model (and alignments):
+>> FBA  F-box associated region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  225.7   0.0     5e-71   3.2e-67       1     178 []     100     273 ..     100     273 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 225.7 bits;  conditional E-value: 5e-71
+                    FBA   1 yvkkplgRNLlknpsGeeklahwkvlenggdgwkveetpagaeelpdakvqscfvtsygwcskeqvidLkkeGlweelLdsfkpeIev 88 
+                            + + p+gRNL+ n++Ge++++ w  +e+gg+gw++e++    +++p a+ q+cfvts++wcsk+q++dL+ eG+w+elLds+++eI+v
+  sp|Q96EF6|FBX17_HUMAN 100 CLRAPFGRNLIFNSCGEQGFRGW-EVEHGGNGWAIEKN---LTPVPGAPSQTCFVTSFEWCSKRQLVDLVMEGVWQELLDSAQIEICV 183
+                            7789*******************.7899********99...*****9999************************************** PP
+
+                    FBA  89 sdWyaarkdcgcvyeliveLldkkkkvlaefdtkelvteqwaerqwqqvshvFsnYgkGVrfvrFehggkdtqfwaghygakvtgssV 176
+                             dW+ ar++cgcvy+l v+Lld+ +k + +f++++ ++ qw+er ++qvshvF+n+gkG+r+v+Fe+ g+d + w ghyga vt+ssV
+  sp|Q96EF6|FBX17_HUMAN 184 ADWWGARENCGCVYQLRVRLLDVYEKEVVKFSASPDPVLQWTERGCRQVSHVFTNFGKGIRYVSFEQYGRDVSSWVGHYGALVTHSSV 271
+                            **************************************************************************************** PP
+
+                    FBA 177 kv 178
+                            +v
+  sp|Q96EF6|FBX17_HUMAN 272 RV 273
+                            98 PP
+
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.2   1.8   7.6e-14   4.8e-10       2      42 ..      19      59 ..      18      60 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 39.2 bits;  conditional E-value: 7.6e-14
+             F-box-like  2 srLPdEiLlqIFsyLppsdLlr.lalVCrrWrrvaldtplLW 42
+                           + LP+E+L+q++s++pp++L+  ++ VCr Wr+++ d p +W
+  sp|Q96EF6|FBX17_HUMAN 19 DALPPELLVQVLSHVPPRSLVTrCRPVCRAWRDIV-DGPTVW 59
+                           68****************99988***********9.667998 PP
+
+>> F-box  F-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.0   1.1   3.5e-13   2.2e-09       3      42 ..      20      60 ..      18      61 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 37.0 bits;  conditional E-value: 3.5e-13
+                           HSHHHHHHHHHTTS-HHH.HHHHTTT-HHHHHHHTSHHHHH CS
+                  F-box  3 rLPsevlrhILerLpfsd.llalrrVSkgwrilidddrlwc 42
+                            LP+e+l ++L+++p+++ + ++r V++ wr+++d++  w+
+  sp|Q96EF6|FBX17_HUMAN 20 ALPPELLVQVLSHVPPRSlVTRCRPVCRAWRDIVDGPTVWL 60
+                           69**********************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (278 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       291  (0.0151728); expected 383.6 (0.02)
+Passed bias filter:                      249  (0.012983); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 1646.21
+//
+[ok]

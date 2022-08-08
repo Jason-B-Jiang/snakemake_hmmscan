@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030757.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030757
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B0G197|B0G197_DICDI  [L=202]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.4e-21   75.6   0.0    3.5e-21   75.1   0.0    1.2  1  MaoC_dehydratas  MaoC like domain
+    1.3e-05   25.5   0.0    1.8e-05   25.0   0.0    1.2  1  MaoC_dehydrat_N  N-terminal half of MaoC dehydratase
+
+
+Domain annotation for each model (and alignments):
+>> MaoC_dehydratas  MaoC like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.1   0.0   3.6e-25   3.5e-21       4     105 ..      62     168 ..      59     185 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 75.1 bits;  conditional E-value: 3.6e-25
+                             CCTTSEEEEEEEEEEEHHHHHHHHHHHTCG-HHHTSHH.HHHCSTTSSSB--HHHHHHHHHHHHHHHHSTT....ECCCEEEEEEEE CS
+         MaoC_dehydratas   4 naigekvetekeitvteadialyalvsgDlnpiHvdpe.fAkkagfggpIahGmltlaivaklveeelgdn....vvarvgeikvrF 85 
+                             + +g+++ t++  ++t++ ++ +a  +gD+++iH+dpe + ++++fggpIahG+ltl+++    ee +++        ++g++k+rF
+  tr|B0G197|B0G197_DICDI  62 TLVGKEIGTSEYFKITQDRVNSFAESTGDFQWIHIDPErAKSESPFGGPIAHGFLTLSLAPMFAEEVMPNVegikYGVNYGFNKIRF 148
+                             568999999999**************************666799****************999999998878888899********* PP
+
+                             -S--BTTCEEEEEEEEEEEE CS
+         MaoC_dehydratas  86 tkpVlpgdtlkvelevvgkr 105
+                              +pV+++  l+ ++e ++ +
+  tr|B0G197|B0G197_DICDI 149 LSPVPVDGNLRCKFELQELT 168
+                             ************99998855 PP
+
+>> MaoC_dehydrat_N  N-terminal half of MaoC dehydratase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   0.0   1.8e-09   1.8e-05       2     124 ..      63     187 ..      62     193 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 1.8e-09
+         MaoC_dehydrat_N   2 liGvef.ekvkaevereairkFakAigetnpayvdeaaaraag.yrsliaPptflivlet.kaaelleelgidlsrllhgeqsfeyh 85 
+                             l+G+e+ + ++++++++++++Fa+++g+ + +++d++ a+++  +++ ia   ++  l+   a+e+++ +++   ++  g +++++ 
+  tr|B0G197|B0G197_DICDI  63 LVGKEIgTSEYFKITQDRVNSFAESTGDFQWIHIDPERAKSESpFGGPIAHGFLTLSLAPmFAEEVMPNVEGIKYGVNYGFNKIRFL 149
+                             6999**77799**************************99976527776666666667775234489999988777888888****** PP
+
+         MaoC_dehydrat_N  86 eplraGDelttesqiadvkdkkgnGalkfvvvetevtnq 124
+                              p+ ++ +l ++ ++++++   g Ga  +++ + ev++q
+  tr|B0G197|B0G197_DICDI 150 SPVPVDGNLRCKFELQELTPVSG-GAQAVIKLTFEVEDQ 187
+                             ***************99999998.999999988888877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (202 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       591  (0.030815); expected 383.6 (0.02)
+Passed bias filter:                      526  (0.0274258); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 1215.03
+//
+[ok]

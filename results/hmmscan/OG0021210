@@ -1,0 +1,115 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0021210.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0021210
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IV76|A0A0R4IV76_DANRE  [L=975]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.4e-42  141.1  22.5    6.8e-28   96.6   8.3    6.0  2  MCC-bdg_PDZ  PDZ domain of MCC-2 bdg protein for Usher syndro
+      5e-08   33.4   0.5      5e-08   33.4   0.5    2.7  1  EF-hand_7    EF-hand domain pair
+    4.6e-06   25.9   0.2     0.0012   18.4   0.0    2.9  0  EF-hand_1    EF hand
+
+
+Domain annotation for each model (and alignments):
+>> MCC-bdg_PDZ  PDZ domain of MCC-2 bdg protein for Usher syndrome
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.6   8.3   1.1e-31   6.8e-28       1      64 [.     552     615 ..     552     616 .. 0.99
+   2 !   59.6   6.3   3.7e-20   2.4e-16       1      65 []     878     944 ..     878     944 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.6 bits;  conditional E-value: 1.1e-31
+                     MCC-bdg_PDZ   1 rLqsrIeeLkaqnevLsltleerkqqseeLsldlgkaEsnatALrlALeyserlkeayeqllal 64 
+                                     rL+srIe+Lk+qn++L+ tlee+k+++e++s++lgk+Esn+tALrlAL+yse+++eaye llal
+  tr|A0A0R4IV76|A0A0R4IV76_DANRE 552 RLNSRIEHLKSQNDLLTITLEECKSNAERMSMLLGKYESNSTALRLALQYSEQCIEAYELLLAL 615
+                                     8*************************************************************98 PP
+
+  == domain 2  score: 59.6 bits;  conditional E-value: 3.7e-20
+                     MCC-bdg_PDZ   1 rLqsrIeeLkaqnevLsltleerkqqseeLsldlgkaEsnatALrlALe.....yserlkeayeqllalv 65 
+                                     +L++r++eL++++e+L++++e r+qqs+e+++dl++a+   + L++A+e     ++++lk+++ q++a+v
+  tr|A0A0R4IV76|A0A0R4IV76_DANRE 878 KLKARVQELVSALERLTKSSEVRHQQSAEFVNDLKRAN---SNLVAAYEkakkkHQNKLKKLECQMMAMV 944
+                                     79************************************...9**************************97 PP
+
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.4   0.5   7.9e-12     5e-08       1      67 [.      23      80 ..      23      82 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 33.4 bits;  conditional E-value: 7.9e-12
+                       EF-hand_7  1 eeklkeaFkelDtdgdgyldkeeLlrllrkifqgsgegkklsdeeleelfkefDldkdGvisfdEFl 67
+                                    ee+l++ F++ D dgdg++++++Ll ++r+       + +   +++ e++  +  d  G+isf++F 
+  tr|A0A0R4IV76|A0A0R4IV76_DANRE 23 EERLQRLFQTCDGDGDGFINRNDLLMVCRQ------LNME---DSVAEIMGQLGADERGKISFEDFT 80
+                                    689********************7758884......4444...46889******************6 PP
+
+>> EF-hand_1  EF hand
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (975 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2265  (0.118098); expected 383.6 (0.02)
+Passed bias filter:                      694  (0.0361854); expected 383.6 (0.02)
+Passed Vit filter:                       112  (0.00583972); expected 19.2 (0.001)
+Passed Fwd filter:                        56  (0.00291986); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.90u 0.22s 00:00:01.12 Elapsed: 00:00:01.04
+# Mc/sec: 3053.64
+//
+Query:       sp|P23508|CRCM_HUMAN  [L=829]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-43  147.1  21.6    4.6e-28   97.1   7.5    7.4  2  MCC-bdg_PDZ  PDZ domain of MCC-2 bdg protein for Usher syndro
+
+
+Domain annotation for each model (and alignments):
+>> MCC-bdg_PDZ  PDZ domain of MCC-2 bdg protein for Usher syndrome
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.1   7.5   2.4e-32   4.6e-28       1      64 [.     402     465 ..     402     466 .. 0.99
+   2 !   64.8   6.2   2.8e-22   5.4e-18       1      65 []     732     798 ..     732     798 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 97.1 bits;  conditional E-value: 2.4e-32
+           MCC-bdg_PDZ   1 rLqsrIeeLkaqnevLsltleerkqqseeLsldlgkaEsnatALrlALeyserlkeayeqllal 64 
+                           rL+srIe+Lk+qn++L+ tlee+k+++e++s+++gk+EsnatALrlAL+yse+++eaye llal
+  sp|P23508|CRCM_HUMAN 402 RLNSRIEHLKSQNDLLTITLEECKSNAERMSMLVGKYESNATALRLALQYSEQCIEAYELLLAL 465
+                           8*************************************************************98 PP
+
+  == domain 2  score: 64.8 bits;  conditional E-value: 2.8e-22
+           MCC-bdg_PDZ   1 rLqsrIeeLkaqnevLsltleerkqqseeLsldlgkaEsnatALrlALe.....yserlkeayeqllalv 65 
+                           +L++r++eL++++e+L++++e+r+qqs+e+++dl++a+   + L++A+e     ++++lk++++q++a+v
+  sp|P23508|CRCM_HUMAN 732 KLKARVQELVSALERLTKSSEIRHQQSAEFVNDLKRAN---SNLVAAYEkakkkHQNKLKKLESQMMAMV 798
+                           79************************************...9**************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (829 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3125  (0.162939); expected 383.6 (0.02)
+Passed bias filter:                      753  (0.0392617); expected 383.6 (0.02)
+Passed Vit filter:                       143  (0.00745607); expected 19.2 (0.001)
+Passed Fwd filter:                        92  (0.00479691); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 1.49u 0.24s 00:00:01.73 Elapsed: 00:00:01.48
+# Mc/sec: 1814.78
+//
+[ok]

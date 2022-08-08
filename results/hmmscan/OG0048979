@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048979.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048979
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P37302  [L=537]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.1e-41  142.8   1.0    2.4e-41  141.7   0.2    1.8  1  Peptidase_M28  Peptidase family M28
+    1.4e-09   38.0   0.0    3.1e-09   36.9   0.0    1.6  1  PA             PA domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.7   0.2   2.5e-45   2.4e-41       1     196 [.     295     495 ..     295     497 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 141.7 bits;  conditional E-value: 2.5e-45
+                    EEEEEESTTS.SCEEEEEEE----SSTTGGT---TTTTHHHHHHHHHHHHHCHHGGCCSSCEEEEEEESSSS-S-HHHHHHHH..HCCTTCCECEE CS
+  Peptidase_M28   1 NviatlegkatdevlllgAHyDsvgvgrgpifvGAdDnAsgvaalLelarvlaasgsrpkrgvrflffdaEEagllGSkafak..akpelkkiaav 94 
+                    N+ia+++++++d+ ++lgAH Dsv +  gp   G++D++sg+ +lL++a++l++   + +++vrf+++ aEE+gllGS+++a    k+e++ki+++
+         P37302 295 NIIADTKHGDPDNIVALGAHSDSVEE--GP---GINDDGSGTISLLNVAKQLTH--FKINNKVRFAWWAAEEEGLLGSNFYAYnlTKEENSKIRVF 383
+                    9*********9**************9..**...********************9..699***********************876666******** PP
+
+                    EEEES-SCTT--EEE.HHHHHHHHHHHHHHHHHHHHTT-TTSCTEEEEECS---STCHHHHCCT--EEEE..........CSSSC-TTTTSTTSSG CS
+  Peptidase_M28  95 lnlDmvgsggkellf.esgdkssselekelkalakpvgraaaedpfdersgrgrsDhspflkagvpvldl..........aetgfpevyHtprDtl 179
+                    ++ Dm++s++ e+ +   ++k+ ++ ++elk+l   + +a++ +++    ++grsD++ f+++g+p+  +          + +  +++yH+ +D++
+         P37302 384 MDYDMMASPNYEYEIyDANNKENPKGSEELKNLYVDYYKAHHLNYTLVP-FDGRSDYVGFINNGIPAGGIatgaeknnvnNGKVLDRCYHQLCDDV 478
+                    *************999455555555555555555555554333554443.5899************************9999999*********** PP
+
+                    GGB-HHHHHHHHHHHHH CS
+  Peptidase_M28 180 dnidkdtlariaelvle 196
+                    +n+++d++ + ++l+++
+         P37302 479 SNLSWDAFITNTKLIAH 495
+                    *******9999999876 PP
+
+>> PA  PA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.9   0.0   3.3e-13   3.1e-09       3      91 .]     177     268 ..     175     268 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 36.9 bits;  conditional E-value: 3.3e-13
+      PA   3 gplVy.aedgcfagdgiaadfe..vdvkGkivLvqr...tfaeKaanAqaaGAagviivnntelgaatgaagnqgspdditiPavgvskadgeal 91 
+             g+lV  ++ gc+  d+  a+    +  + +i+L++r    f++K++ A + G  +v+i++n++ ++ +g  g+ g+p+++t+ +vgv +++g++l
+  P37302 177 GKLVEiPNLGCEEKDY--ASVVppRHNEKQIALIERgkcPFGDKSNLAGKFGFTAVVIYDNEP-KSKEGLHGTLGEPTKHTVATVGVPYKVGKKL 268
+             7888744499965655..333355567788*****999**********************997.566667888899****************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (537 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       587  (0.0306064); expected 383.6 (0.02)
+Passed bias filter:                      443  (0.0230982); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.20s 00:00:00.63 Elapsed: 00:00:00.79
+# Mc/sec: 2194.83
+//
+[ok]

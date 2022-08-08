@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029078.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029078
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P14196|AAC2_DICDI  [L=464]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-06   25.7  41.5      0.014   15.3   1.2    4.5  4  AT_hook   AT hook motif
+
+
+Domain annotation for each model (and alignments):
+>> AT_hook  AT hook motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.8   7.2   9.4e-05       1.8       1      12 [.     177     188 ..     177     189 .. 0.90
+   2 !   15.3   1.2   7.1e-07     0.014       1      10 [.     198     207 ..     198     210 .. 0.89
+   3 !    8.4   3.3   0.00013       2.4       2       9 ..     225     232 ..     224     236 .. 0.86
+   4 !   11.0   6.7   1.8e-05      0.35       1      12 [.     255     266 ..     255     267 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 9.4e-05
+               AT_hook   1 kRkRGRPrKaat 12 
+                           kR RGRPrK+++
+  sp|P14196|AAC2_DICDI 177 KRSRGRPRKNPP 188
+                           8********986 PP
+
+  == domain 2  score: 15.3 bits;  conditional E-value: 7.1e-07
+               AT_hook   1 kRkRGRPrKa 10 
+                           kRkRGRP+K+
+  sp|P14196|AAC2_DICDI 198 KRKRGRPPKM 207
+                           8********7 PP
+
+  == domain 3  score: 8.4 bits;  conditional E-value: 0.00013
+               AT_hook   2 RkRGRPrK 9  
+                           +kRGRP+K
+  sp|P14196|AAC2_DICDI 225 KKRGRPKK 232
+                           9******9 PP
+
+  == domain 4  score: 11.0 bits;  conditional E-value: 1.8e-05
+               AT_hook   1 kRkRGRPrKaat 12 
+                           ++kRGRP+Ka++
+  sp|P14196|AAC2_DICDI 255 PKKRGRPPKAKG 266
+                           79********97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (464 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4289  (0.22363); expected 383.6 (0.02)
+Passed bias filter:                      771  (0.0402002); expected 383.6 (0.02)
+Passed Vit filter:                       425  (0.0221597); expected 19.2 (0.001)
+Passed Fwd filter:                       156  (0.0081339); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 2.14u 0.35s 00:00:02.49 Elapsed: 00:00:01.72
+# Mc/sec: 878.44
+//
+[ok]

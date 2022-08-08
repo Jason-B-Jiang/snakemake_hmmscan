@@ -1,0 +1,901 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003711.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003711
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EFE0|G5EFE0_CAEEL  [L=740]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-19   69.8   0.0    4.3e-19   69.0   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    8.3e-07   28.8   0.1    1.7e-06   27.8   0.1    1.6  1  SH3_2     Variant SH3 domain
+    7.4e-07   28.8   0.1    1.4e-06   27.9   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.0   0.0   6.8e-23   4.3e-19       2     122 ..     103     228 ..     102     237 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 69.0 bits;  conditional E-value: 6.8e-23
+                     PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea...rryns 84 
+                             y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +    +yn+
+  tr|G5EFE0|G5EFE0_CAEEL 103 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSNdsrETYNN 187
+                             78**************************************************9976..4666********98766554312247*** PP
+
+                     PTB  85 ilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                             +l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|G5EFE0|G5EFE0_CAEEL 188 VLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 228
+                             ******9876543222677******************9986 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.8   0.1   2.7e-10   1.7e-06       3      55 ..     635     684 ..     633     686 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.8 bits;  conditional E-value: 2.7e-10
+                             EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                   SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                             +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|G5EFE0|G5EFE0_CAEEL 635 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 684
+                             677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9   0.1   2.1e-10   1.4e-06       4      48 .]     638     680 ..     635     680 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 2.1e-10
+                             SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                   SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                             YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|G5EFE0|G5EFE0_CAEEL 638 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 680
+                             56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (740 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       893  (0.0465613); expected 383.6 (0.02)
+Passed bias filter:                      467  (0.0243495); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.21s 00:00:00.66 Elapsed: 00:00:00.65
+# Mc/sec: 3669.20
+//
+Query:       tr|G5ED33|G5ED33_CAEEL  [L=917]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-19   69.4   0.0    6.1e-19   68.5   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.8e-19   68.5   0.1    1.2e-18   66.9   0.0    1.9  1  SAM_3     SAM domain (Sterile alpha motif)
+    1.1e-06   28.4   0.1    2.3e-06   27.4   0.1    1.6  1  SH3_2     Variant SH3 domain
+    9.7e-07   28.4   0.1    1.8e-06   27.6   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.5   0.0   1.3e-22   6.1e-19       2     122 ..     103     228 ..     102     236 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.5 bits;  conditional E-value: 1.3e-22
+                     PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea...rryns 84 
+                             y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +    +yn+
+  tr|G5ED33|G5ED33_CAEEL 103 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSNdsrETYNN 187
+                             78**************************************************9976..4666********98766554312247*** PP
+
+                     PTB  85 ilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                             +l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|G5ED33|G5ED33_CAEEL 188 VLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 228
+                             ******9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.9   0.0   2.4e-22   1.2e-18       4      64 ..     810     870 ..     807     871 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 66.9 bits;  conditional E-value: 2.4e-22
+                   SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                             v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|G5ED33|G5ED33_CAEEL 810 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 870
+                             78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.1   4.7e-10   2.3e-06       3      55 ..     610     659 ..     608     661 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.7e-10
+                             EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                   SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                             +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|G5ED33|G5ED33_CAEEL 610 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 659
+                             677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.1   3.7e-10   1.8e-06       4      48 .]     613     655 ..     610     655 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 3.7e-10
+                             SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                   SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                             YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|G5ED33|G5ED33_CAEEL 613 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 655
+                             56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (917 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       946  (0.0493248); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.61u 0.19s 00:00:00.80 Elapsed: 00:00:00.67
+# Mc/sec: 4425.37
+//
+Query:       tr|A0A061AJ42|A0A061AJ42_CAEEL  [L=690]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-19   69.2   0.1      8e-19   67.4   0.0    2.0  1  SAM_3     SAM domain (Sterile alpha motif)
+    7.9e-07   28.9   0.1    1.6e-06   27.9   0.1    1.6  1  SH3_2     Variant SH3 domain
+    6.9e-07   28.9   0.1    1.2e-06   28.1   0.1    1.4  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.4   0.0   1.3e-22     8e-19       4      64 ..     583     643 ..     580     644 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.4 bits;  conditional E-value: 1.3e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A061AJ42|A0A061AJ42_CAEEL 583 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 643
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9   0.1   2.5e-10   1.6e-06       3      55 ..     383     432 ..     381     434 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 2.5e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A061AJ42|A0A061AJ42_CAEEL 383 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 432
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.1   1.9e-10   1.2e-06       4      48 .]     386     428 ..     383     428 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 1.9e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A061AJ42|A0A061AJ42_CAEEL 386 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 428
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (690 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       932  (0.0485948); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.51u 0.15s 00:00:00.66 Elapsed: 00:00:00.66
+# Mc/sec: 3359.43
+//
+Query:       tr|O18250|O18250_CAEEL  [L=862]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.9e-19   69.5   0.0    5.6e-19   68.6   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.3e-19   68.7   0.1    1.1e-18   67.0   0.0    2.0  1  SAM_3     SAM domain (Sterile alpha motif)
+      1e-06   28.6   0.1    2.1e-06   27.5   0.1    1.6  1  SH3_2     Variant SH3 domain
+    8.9e-07   28.5   0.1    1.6e-06   27.7   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.6   0.0   1.2e-22   5.6e-19       2     122 ..      48     173 ..      47     181 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.6 bits;  conditional E-value: 1.2e-22
+                     PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea...rryns 84 
+                             y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +    +yn+
+  tr|O18250|O18250_CAEEL  48 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSNdsrETYNN 132
+                             78**************************************************9976..4666********98766554312247*** PP
+
+                     PTB  85 ilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                             +l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|O18250|O18250_CAEEL 133 VLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 173
+                             ******9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.0   0.0   2.2e-22   1.1e-18       4      64 ..     755     815 ..     752     816 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.0 bits;  conditional E-value: 2.2e-22
+                   SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                             v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|O18250|O18250_CAEEL 755 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 815
+                             78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   4.4e-10   2.1e-06       3      55 ..     555     604 ..     553     606 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 4.4e-10
+                             EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                   SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                             +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|O18250|O18250_CAEEL 555 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 604
+                             677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.1   3.4e-10   1.6e-06       4      48 .]     558     600 ..     555     600 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 3.4e-10
+                             SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                   SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                             YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|O18250|O18250_CAEEL 558 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 600
+                             56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (862 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       863  (0.0449971); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.54u 0.18s 00:00:00.72 Elapsed: 00:00:00.65
+# Mc/sec: 4287.06
+//
+Query:       tr|Q7YTG1|Q7YTG1_CAEEL  [L=845]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-19   69.6   0.0    5.4e-19   68.7   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.2e-19   68.7   0.1      1e-18   67.1   0.0    2.0  1  SAM_3     SAM domain (Sterile alpha motif)
+    9.7e-07   28.6   0.1    2.1e-06   27.6   0.1    1.6  1  SH3_2     Variant SH3 domain
+    8.7e-07   28.5   0.1    1.6e-06   27.7   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.7   0.0   1.1e-22   5.4e-19       2     122 ..      31     156 ..      30     164 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.7 bits;  conditional E-value: 1.1e-22
+                     PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea...rryns 84 
+                             y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +    +yn+
+  tr|Q7YTG1|Q7YTG1_CAEEL  31 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSNdsrETYNN 115
+                             78**************************************************9976..4666********98766554312247*** PP
+
+                     PTB  85 ilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                             +l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|Q7YTG1|Q7YTG1_CAEEL 116 VLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 156
+                             ******9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.1   0.0   2.2e-22     1e-18       4      64 ..     738     798 ..     735     799 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.1 bits;  conditional E-value: 2.2e-22
+                   SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                             v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|Q7YTG1|Q7YTG1_CAEEL 738 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 798
+                             78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.1   4.3e-10   2.1e-06       3      55 ..     538     587 ..     536     589 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 4.3e-10
+                             EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                   SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                             +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|Q7YTG1|Q7YTG1_CAEEL 538 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 587
+                             677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.1   3.3e-10   1.6e-06       4      48 .]     541     583 ..     538     583 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 3.3e-10
+                             SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                   SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                             YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|Q7YTG1|Q7YTG1_CAEEL 541 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 583
+                             56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (845 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1188  (0.0619427); expected 383.6 (0.02)
+Passed bias filter:                      645  (0.0336305); expected 383.6 (0.02)
+Passed Vit filter:                        72  (0.00375411); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.74
+# Mc/sec: 3677.28
+//
+Query:       tr|A0A061ACM2|A0A061ACM2_CAEEL  [L=870]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      3e-19   69.5   0.0    5.7e-19   68.6   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.4e-19   68.6   0.1    1.1e-18   67.0   0.0    2.0  1  SAM_3     SAM domain (Sterile alpha motif)
+      1e-06   28.5   0.1    2.1e-06   27.5   0.1    1.6  1  SH3_2     Variant SH3 domain
+    9.1e-07   28.5   0.1    1.6e-06   27.7   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.6   0.0   1.2e-22   5.7e-19       2     122 ..      31     156 ..      30     164 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.6 bits;  conditional E-value: 1.2e-22
+                             PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea 79 
+                                     y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +
+  tr|A0A061ACM2|A0A061ACM2_CAEEL  31 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSN 107
+                                     78**************************************************9976..4666********987665543 PP
+
+                             PTB  80 ...rrynsilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                                         +yn++l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|A0A061ACM2|A0A061ACM2_CAEEL 108 dsrETYNNVLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 156
+                                     12247*********9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.0   0.0   2.3e-22   1.1e-18       4      64 ..     763     823 ..     760     824 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.0 bits;  conditional E-value: 2.3e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A061ACM2|A0A061ACM2_CAEEL 763 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 823
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   4.4e-10   2.1e-06       3      55 ..     563     612 ..     561     614 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 4.4e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A061ACM2|A0A061ACM2_CAEEL 563 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 612
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.1   3.4e-10   1.6e-06       4      48 .]     566     608 ..     563     608 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 3.4e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A061ACM2|A0A061ACM2_CAEEL 566 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 608
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (870 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       891  (0.0464571); expected 383.6 (0.02)
+Passed bias filter:                      438  (0.0228375); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.49u 0.22s 00:00:00.71 Elapsed: 00:00:00.61
+# Mc/sec: 4635.00
+//
+Query:       tr|A0A061ADW6|A0A061ADW6_CAEEL  [L=887]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-19   69.5   0.0    5.8e-19   68.6   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.5e-19   68.6   0.1    1.1e-18   67.0   0.0    1.9  1  SAM_3     SAM domain (Sterile alpha motif)
+    1.1e-06   28.5   0.1    2.2e-06   27.5   0.1    1.6  1  SH3_2     Variant SH3 domain
+    9.3e-07   28.5   0.1    1.7e-06   27.6   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.6   0.0   1.2e-22   5.8e-19       2     122 ..      48     173 ..      47     181 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.6 bits;  conditional E-value: 1.2e-22
+                             PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea 79 
+                                     y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +
+  tr|A0A061ADW6|A0A061ADW6_CAEEL  48 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSN 124
+                                     78**************************************************9976..4666********987665543 PP
+
+                             PTB  80 ...rrynsilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                                         +yn++l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|A0A061ADW6|A0A061ADW6_CAEEL 125 dsrETYNNVLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 173
+                                     12247*********9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.0   0.0   2.3e-22   1.1e-18       4      64 ..     780     840 ..     777     841 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.0 bits;  conditional E-value: 2.3e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A061ADW6|A0A061ADW6_CAEEL 780 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 840
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   4.5e-10   2.2e-06       3      55 ..     580     629 ..     578     631 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 4.5e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A061ADW6|A0A061ADW6_CAEEL 580 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 629
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.1   3.5e-10   1.7e-06       4      48 .]     583     625 ..     580     625 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 3.5e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A061ADW6|A0A061ADW6_CAEEL 583 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 625
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (887 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       907  (0.0472913); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.51u 0.18s 00:00:00.69 Elapsed: 00:00:00.64
+# Mc/sec: 4484.45
+//
+Query:       tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL  [L=918]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-19   69.4   0.0    6.1e-19   68.5   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+    3.8e-19   68.5   0.1    1.2e-18   66.9   0.0    1.9  1  SAM_3     SAM domain (Sterile alpha motif)
+    1.1e-06   28.4   0.1    2.3e-06   27.4   0.1    1.6  1  SH3_2     Variant SH3 domain
+    9.7e-07   28.4   0.1    1.8e-06   27.6   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.5   0.0   1.3e-22   6.1e-19       2     122 ..     104     229 ..     103     237 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.5 bits;  conditional E-value: 1.3e-22
+                             PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea 79 
+                                     y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +
+  tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL 104 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSN 180
+                                     78**************************************************9976..4666********987665543 PP
+
+                             PTB  80 ...rrynsilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                                         +yn++l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL 181 dsrETYNNVLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 229
+                                     12247*********9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.9   0.0   2.4e-22   1.2e-18       4      64 ..     811     871 ..     808     872 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 66.9 bits;  conditional E-value: 2.4e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL 811 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 871
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.1   4.7e-10   2.3e-06       3      55 ..     611     660 ..     609     662 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.7e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL 611 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 660
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.1   3.7e-10   1.8e-06       4      48 .]     614     656 ..     611     656 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 3.7e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A4V0IJW4|A0A4V0IJW4_CAEEL 614 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 656
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (918 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       948  (0.0494291); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.53u 0.17s 00:00:00.70 Elapsed: 00:00:00.64
+# Mc/sec: 4604.56
+//
+Query:       tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL  [L=943]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-19   69.3   0.0    6.4e-19   68.4   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+      4e-19   68.4   0.1    1.2e-18   66.9   0.0    1.9  1  SAM_3     SAM domain (Sterile alpha motif)
+    1.2e-06   28.4   0.1    2.3e-06   27.4   0.1    1.6  1  SH3_2     Variant SH3 domain
+      1e-06   28.3   0.1    1.8e-06   27.5   0.1    1.4  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.4   0.0   1.3e-22   6.4e-19       2     122 ..     104     229 ..     103     237 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.4 bits;  conditional E-value: 1.3e-22
+                             PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea 79 
+                                     y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +
+  tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL 104 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSN 180
+                                     78**************************************************9976..4666********987665543 PP
+
+                             PTB  80 ...rrynsilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                                         +yn++l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL 181 dsrETYNNVLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 229
+                                     12247*********9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.9   0.0   2.5e-22   1.2e-18       4      64 ..     836     896 ..     833     897 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 66.9 bits;  conditional E-value: 2.5e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL 836 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 896
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.1   4.9e-10   2.3e-06       3      55 ..     636     685 ..     634     687 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.9e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL 636 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 685
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   3.8e-10   1.8e-06       4      48 .]     639     681 ..     636     681 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 3.8e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A4V6M3U0|A0A4V6M3U0_CAEEL 639 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 681
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (943 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       987  (0.0514625); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.59u 0.19s 00:00:00.78 Elapsed: 00:00:00.68
+# Mc/sec: 4466.27
+//
+Query:       tr|A0A061AKT4|A0A061AKT4_CAEEL  [L=179]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.4e-20   71.5   0.3    8.9e-20   70.5   0.0    1.7  1  SAM_3     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.5   0.0   4.6e-24   8.9e-20       3      64 ..      71     132 ..      69     133 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 70.5 bits;  conditional E-value: 4.6e-24
+                           SAM_3   3 svsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                      v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A061AKT4|A0A061AKT4_CAEEL  71 RVAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 132
+                                     578**********************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (179 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       667  (0.0347776); expected 383.6 (0.02)
+Passed bias filter:                      471  (0.0245581); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 1001.85
+//
+Query:       tr|A0A061ACP8|A0A061ACP8_CAEEL  [L=942]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-19   69.3   0.0    6.4e-19   68.4   0.0    1.4  1  PTB       Phosphotyrosine-binding domain
+      4e-19   68.4   0.1    1.2e-18   66.9   0.0    1.9  1  SAM_3     SAM domain (Sterile alpha motif)
+    1.2e-06   28.4   0.1    2.3e-06   27.4   0.1    1.6  1  SH3_2     Variant SH3 domain
+      1e-06   28.4   0.1    1.8e-06   27.5   0.1    1.4  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> PTB  Phosphotyrosine-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.4   0.0   1.3e-22   6.4e-19       2     122 ..     103     228 ..     102     236 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 68.4 bits;  conditional E-value: 1.3e-22
+                             PTB   2 yrVehLttfeldsktglqavedairklqlldaqgrvwtqelllqVsdqgitLtDnetkeel.esypldsishcaavlea 79 
+                                     y VehL+tf ++++ gl+  +d+irkl++++++  +w+q l+l+ + +++t  D +   el e++pl+ i++  a + +
+  tr|A0A061ACP8|A0A061ACP8_CAEEL 103 YYVEHLATFAVGRQFGLTFPADGIRKLKQMEKNSAIWAQPLILRFRHNAVTVEDDN--GELvEQFPLELIEQPTAHVSN 179
+                                     78**************************************************9976..4666********987665543 PP
+
+                             PTB  80 ...rrynsilalvvkesessk...tdvhlFqcdelkaeliaediesals 122
+                                         +yn++l++vv+e +++    t++h+Fqc +++a  +aed+++ ++
+  tr|A0A061ACP8|A0A061ACP8_CAEEL 180 dsrETYNNVLLFVVREDRKRMstpTEMHIFQCIRVSATDVAEDLKNYVQ 228
+                                     12247*********9876543222677******************9985 PP
+
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.9   0.0   2.5e-22   1.2e-18       4      64 ..     835     895 ..     832     896 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 66.9 bits;  conditional E-value: 2.5e-22
+                           SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                                     v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|A0A061ACP8|A0A061ACP8_CAEEL 835 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 895
+                                     78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.1   4.9e-10   2.3e-06       3      55 ..     635     684 ..     633     686 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.9e-10
+                                     EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                           SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                                     +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|A0A061ACP8|A0A061ACP8_CAEEL 635 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 684
+                                     677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   3.8e-10   1.8e-06       4      48 .]     638     680 ..     635     680 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 3.8e-10
+                                     SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                           SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                                     YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|A0A061ACP8|A0A061ACP8_CAEEL 638 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 680
+                                     56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (942 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       985  (0.0513583); expected 383.6 (0.02)
+Passed bias filter:                      485  (0.0252881); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.56u 0.17s 00:00:00.73 Elapsed: 00:00:00.73
+# Mc/sec: 4161.23
+//
+Query:       tr|Q7YTG2|Q7YTG2_CAEEL  [L=665]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-19   69.3   0.1    7.7e-19   67.5   0.0    2.0  1  SAM_3     SAM domain (Sterile alpha motif)
+    7.4e-07   29.0   0.1    1.5e-06   28.0   0.1    1.6  1  SH3_2     Variant SH3 domain
+    6.6e-07   28.9   0.1    1.2e-06   28.1   0.1    1.5  1  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_3  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.5   0.0   1.2e-22   7.7e-19       4      64 ..     558     618 ..     555     619 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 67.5 bits;  conditional E-value: 1.2e-22
+                   SAM_3   4 vsitqkSspeeVkaWLtakgFskktvksLgklsGaqllslskeeLkqicgaaegkRLysqL 64 
+                             v i++kSspe+V++WL++kgFs  +++ L   +Ga+l+slsk  L+q cg++eg  LysqL
+  tr|Q7YTG2|Q7YTG2_CAEEL 558 VAINEKSSPEDVTRWLQEKGFSPRVIDLLDGQDGANLFSLSKLHLQQACGRDEGGYLYSQL 618
+                             78**********************************************************9 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   0.1   2.4e-10   1.5e-06       3      55 ..     358     407 ..     356     409 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 2.4e-10
+                             EESS-B-SCGCCB--B-TTEEEEEE..EEEECTTEEEEEE.CCCEEEEEGCGEE CS
+                   SH3_2   3 ravrdyvgedpelLsfkkGdvihvlslgdkesdgwweGav.gGrvGlfPselve 55 
+                             +++ d  g+++ +L+++kG+   v+     +  +wwe+ + + rvG++P+++++
+  tr|Q7YTG2|Q7YTG2_CAEEL 358 VVTYDRGGQNTKELTVHKGEYLEVI----FDERNWWECKNmHQRVGYVPHTILS 407
+                             677788889****************....8888*******9*********9986 PP
+
+>> SH3_1  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.1   1.9e-10   1.2e-06       4      48 .]     361     403 ..     358     403 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 1.9e-10
+                             SSBEXSSTTBXEBSTTEEEEEEEEESSSEEEEEETTSTEEEEEEG CS
+                   SH3_1   4 YDYeatesdELsfkkGDviivleksedgWwkgrlkgtgkeGliPs 48 
+                             YD  ++++ EL+ +kG+ ++v+  +e +Ww+++++ + ++G++P+
+  tr|Q7YTG2|Q7YTG2_CAEEL 361 YDRGGQNTKELTVHKGEYLEVIF-DERNWWECKNMHQ-RVGYVPH 403
+                             56667899***************.5556*******96.9*****7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (665 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1220  (0.0636112); expected 383.6 (0.02)
+Passed bias filter:                      655  (0.0341519); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.53u 0.18s 00:00:00.71 Elapsed: 00:00:00.69
+# Mc/sec: 3130.29
+//
+[ok]

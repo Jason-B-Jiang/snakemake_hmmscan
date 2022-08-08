@@ -1,0 +1,104 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0021127.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0021127
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|H0WEV0|H0WEV0_DANRE  [L=1112]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-11   44.3   0.1    5.9e-11   42.7   0.1    1.9  1  NACHT     NACHT domain
+    6.1e-08   33.3   0.0    1.8e-07   31.7   0.0    1.8  0  AAA_16    AAA ATPase domain
+      2e-07   31.4   0.0    7.6e-07   29.6   0.0    1.9  1  AAA_22    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.7   0.1   9.2e-15   5.9e-11       2     153 ..     269     433 ..     268     443 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 42.7 bits;  conditional E-value: 9.2e-15
+                             CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-C.............CHHH CS
+                   NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvse.............vwav 75 
+                             ++++ Ge G+GK+tL+++  ++  e++++      v+ +++++ + s+++rsl +l ++ql +     s+             +   
+  tr|H0WEV0|H0WEV0_DANRE 269 VLVISGERGCGKSTLAAWCLQTFSEQNPDL----PVIRHFCGTSTSSTDVRSLLRLCTAQLRKAHNGDSPdwdeslentsefeYLHR 351
+                             789**********************99766....699*****************999999998888887767778877777776666 PP
+
+                             HCCSCCCEE......EEEE-STT-SS-TCH.........HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE.....EEEE--TCC CS
+                   NACHT  76 llelperlL......lilDglDelvtdlgqkekqpvrtlLselirkkllpeasllltvrpralrdleeqleea...ivlevegfses 153
+                              ++ ++ +L      l++Dg+D l + lg   kq+v+ l  +++++ l+p +++++t++ + l +  ++++     ++l+ ++f  +
+  tr|H0WEV0|H0WEV0_DANRE 352 AVQAFTAALnlrpciLLIDGIDLLTETLGL-SKQEVKSL--QWLPAVLPPFCKMIITTTFTDLTH--KSFSCRtdvQILKCPPFPDP 433
+                             666666666999999***************.77777776..599**************9888743..33332223566666666555 PP
+
+>> AAA_16  AAA ATPase domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> AAA_22  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.6   0.0   1.2e-10   7.6e-07       4     105 ..     266     382 ..     263     402 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 29.6 bits;  conditional E-value: 1.2e-10
+                  AAA_22   4 tagilvvtGesGtGKTtllrrlleqldeeakaeeerpevv...fvtlpsstsskdllrellralglelka.........erlsseel 78 
+                             ++++lv+ Ge G+GK+tl+++ l+++ e+    +++ +v+     t +sst+ ++llr    +l   +++         e+ s+ e+
+  tr|H0WEV0|H0WEV0_DANRE 266 EKSVLVISGERGCGKSTLAAWCLQTFSEQ----NPDLPVIrhfCGTSTSSTDVRSLLRLCTAQLRKAHNGdspdwdeslENTSEFEY 348
+                             7899**********************654....2466666533555666667888888888888877777******99978888888 PP
+
+                  AAA_22  79 lealeqalrarav..ielliiDEaqhlr.....s 105
+                             l++  qa+ a+    + +l+iD ++ l+     s
+  tr|H0WEV0|H0WEV0_DANRE 349 LHRAVQAFTAALNlrPCILLIDGIDLLTetlglS 382
+                             8555555555555699**********96544332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1112 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       709  (0.0369675); expected 383.6 (0.02)
+Passed bias filter:                      529  (0.0275823); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.57u 0.21s 00:00:00.77 Elapsed: 00:00:01.04
+# Mc/sec: 3457.59
+//
+Query:       sp|Q6P2S7|TTC41_HUMAN  [L=1318]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.5e-06   26.2   0.0    8.7e-05   22.9   0.0    2.7  0  DUF4062   Domain of unknown function (DUF4062)
+
+
+Domain annotation for each model (and alignments):
+>> DUF4062  Domain of unknown function (DUF4062)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1318 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       892  (0.0465092); expected 383.6 (0.02)
+Passed bias filter:                      583  (0.0303978); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.18s 00:00:00.77 Elapsed: 00:00:00.74
+# Mc/sec: 5765.70
+//
+[ok]

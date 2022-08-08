@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034174.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034174
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A5WVN8|A5WVN8_DANRE  [L=243]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    4.3e-10   39.5   0.0    5.2e-10   39.2   0.0    1.1  1  adh_short     short chain dehydrogenase
+    5.1e-09   36.1   0.0    6.4e-09   35.8   0.0    1.1  1  adh_short_C2  Enoyl-(Acyl carrier protein) reductase
+
+
+Domain annotation for each model (and alignments):
+>> adh_short  short chain dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.2   0.0   5.4e-14   5.2e-10       2     142 ..       7     150 ..       6     194 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 39.2 bits;  conditional E-value: 5.4e-14
+                             EEEEESTTSHHHHHHHHHHHHTTSEEEEEESCHHHHHHHHHHHHHT.TCEEEEEESTTTSHHHHHHHHHHHHHHHSSESEEEEE--S CS
+               adh_short   2 vvlvtGassGIGraiakelakeGakvvvvdrseekleevakelkee.gakalaiqvDvtdreevealvekavkklgkldvLvnNAGi 87 
+                             vvl  G+++ +G  i+k+++ +G+kv+v++r  +kle+++  +    +++++++ ++v +++ ve++ ++  k +gk+  +v   G 
+  tr|A5WVN8|A5WVN8_DANRE   7 VVLALGGAGTVGSGIVKAFLDRGFKVAVISRDGSKLEKLKGFVSPGtKSNLITLVGNVGSEDGVEEVKQALLKSVGKITDVVSSLGF 93 
+                             8999***********************************99998877999************************************* PP
+
+                             ..S--STGGGCSHHHHHHHHHHHTHHHHHHHHHHHHHHHHHTTEEEEEEEEGGGTSC CS
+               adh_short  88 ..tgsgpfselseeewervievNltgvflltravlpamlkqssGrIvnvsSvagkvp 142
+                                + gp +    +e   vie+ l+++f   +a++p   +  +G+  +++  ag++ 
+  tr|A5WVN8|A5WVN8_DANRE  94 swWQGGPPHTQPLKELHWVIETLLFSTFVSWKAFFPLVRDDPNGTYTFITGGAGEKV 150
+                             776778999999999**********************99**************9553 PP
+
+>> adh_short_C2  Enoyl-(Acyl carrier protein) reductase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.8   0.0   6.7e-13   6.4e-09       4     141 ..      15     158 ..      12     188 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 35.8 bits;  conditional E-value: 6.7e-13
+                             TSHHHHHHHHHHHTT-EEEEEESSGGHHHHHHHHHHHTTSE..E.EE--TTSHHHHHHHHHHHHHHHSSEEEEEE-----EGCSS-G CS
+            adh_short_C2   4 sgIGraiAkalaeeGaevvltdlneeakkrveelaeelgae..v.lecDVtdeeqvealveevvekfgklDilvnnagiapklkgpf 87 
+                               +G +i+ka+ ++G +v++  ++ ++ ++++ +++ + ++  + l  +V +e+ ve++ +++ +++gk+  +v + g++    gp 
+  tr|A5WVN8|A5WVN8_DANRE  15 GTVGSGIVKAFLDRGFKVAVISRDGSKLEKLKGFVSPGTKSnlItLVGNVGSEDGVEEVKQALLKSVGKITDVVSSLGFSWWQGGPP 101
+                             56899**********************999999999877555548*************************************999** PP
+
+                             GGH-HHHHHHHHHHHTHHHHHHHHHHHHHCTSC..CEEEEEEEGGGTSB.STTTTHH CS
+            adh_short_C2  88 letsreefdraldvnlyglfllakaalplmkeg..gsivnlssvgaerv.vpnynay 141
+                             ++ + +e++ ++++ l ++f   ka+ pl+++   g    ++  ++e+v +p+    
+  tr|A5WVN8|A5WVN8_DANRE 102 HTQPLKELHWVIETLLFSTFVSWKAFFPLVRDDpnGTYTFITGGAGEKVlMPGTGFL 158
+                             ****************************99987778888888777776646666654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (243 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       452  (0.0235674); expected 383.6 (0.02)
+Passed bias filter:                      429  (0.0223682); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.68
+# Mc/sec: 1148.20
+//
+[ok]

@@ -1,0 +1,78 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032816.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032816
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|M9NDI3|M9NDI3_DROME  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-16   58.9  10.1    2.9e-15   56.6  10.1    2.0  1  Vps5      Vps5 C terminal like
+    3.6e-15   56.5   0.2    9.7e-15   55.1   0.2    1.8  1  PX        PX domain
+
+
+Domain annotation for each model (and alignments):
+>> Vps5  Vps5 C terminal like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6  10.1     3e-19   2.9e-15       6     229 ..     231     443 ..     224     448 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 3e-19
+                    Vps5   6 kkltssvsks..stkfeEqDewFedkkqeldslesqLkklykaiellvsqrkelasataelakslesLaslelskslskalsqLaev 90 
+                             k+l++++ ++  s  + + +++Fe++ q l++   +L++ +   e + +  k++  + ++++++l++L++ e  +   + + + ae+
+  tr|M9NDI3|M9NDI3_DROME 231 KSLGKTTDEIllSATVRDVNDFFENELQFLTEYHGHLREAALRTEKMTQRHKDVGDSHQKISNALTQLSTTEKGNVE-TFVAKTAEI 316
+                             45555555557788999******************************************************988765.678899*** PP
+
+                    Vps5  91 eerikellerqaeqdvltLgetideYlrligsvksvfsqRvklwqkwqeaeqelskkkeqleKlekaaksqqdklqqlkkeveeler 177
+                              erik+l  r a    l+Lg t++ Y r   + k+++  R++++  ++ a+++l+k +++ + ++            +  ev+e+e+
+  tr|M9NDI3|M9NDI3_DROME 317 FERIKNLETRVASDQDLKLGDTLRYYQRDSDAAKALLIRRLRCLAAYEAANRNLEKARSKNKDVH------------APLEVQEAET 391
+                             *******************************************************9997654443............4579****** PP
+
+                    Vps5 178 rvqqaekeFeeisetikkElerFeeervedfknsvekyLesaiesqkeliel 229
+                               ++a ++Fe +s+  k+El  F + rv+ fk+s+ +  e  i++ k   e+
+  tr|M9NDI3|M9NDI3_DROME 392 AQAEACEKFESMSACGKEELIGFRNRRVAAFKKSLVELSELEIKHAKTQYEY 443
+                             *********************************************9998887 PP
+
+>> PX  PX domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.1   0.2     1e-18   9.7e-15       3      84 .]     100     212 ..      98     212 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 55.1 bits;  conditional E-value: 1e-18
+                             ESSSSEEEEEEEHHHHHHHHHHHHHHHTTS..SSTSSSTSTTSSTT..........................SHHHH...HHHHHHH CS
+                      PX   3 tqkeeektvyRrYsdFeeLhskLlekfpsl..iipplPekkklgry..........................deefi...ekRrkqL 58 
+                             +++++  +v R++++F++Lh++++e+ +++  iipp+P++ ++++                           ++e++   +k  +++
+  tr|M9NDI3|M9NDI3_DROME 100 GFSKKDNNVVRQHEEFVWLHDRIEENDDYAgyIIPPCPPRPDFDASreklqrlgegegnmtkeefkkmkselEAEYLatfKKTVAMH 186
+                             688999**********************7778********666666666666799999999777777777775555556677777** PP
+
+                             HHHHHHHHCSHHHHTSHHHHHHHHSS CS
+                      PX  59 eeylqrllnhpvlredevltdFLess 84 
+                             e++l+rl++hpv+r d++l+ FLe++
+  tr|M9NDI3|M9NDI3_DROME 187 EVFLRRLASHPVFRVDQHLKVFLEYD 212
+                             ***********************975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1144  (0.0596486); expected 383.6 (0.02)
+Passed bias filter:                      526  (0.0274258); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 2482.59
+//
+[ok]

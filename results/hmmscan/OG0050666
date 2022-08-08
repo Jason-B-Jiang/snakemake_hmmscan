@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050666.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050666
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAF7683713.1  [L=298]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.2e-16   61.0   0.4    3.4e-16   59.6   0.1    1.8  1  Flavokinase      Riboflavin kinase
+    8.9e-11   42.3   0.2    1.4e-10   41.6   0.2    1.4  1  CTP_transf_like  Cytidylyltransferase-like
+     0.0001   22.3   0.1    0.00018   21.5   0.1    1.5  0  FAD_syn          FAD synthetase
+
+
+Domain annotation for each model (and alignments):
+>> Flavokinase  Riboflavin kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.6   0.1   5.4e-20   3.4e-16       7     120 ..     183     289 ..     178     292 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 59.6 bits;  conditional E-value: 5.4e-20
+                   EEEEEES-SSCHTTTT--EEEEE-S.B.GTSEEEEEEEEECCCEEEEEEEEEEEEETTTSSECEEEEEEETTTSS--TTSEEEEEEEEEEEE----S CS
+   Flavokinase   7 lsgkVvkGfgrGkelgfpTaNlplekllpktGVYagwarvegqskvlpmvmsiGvnptykntkksvEvhildfaadlygkeirvellgylRpekkfd 103
+                   + g V++G + G++lgfpTaN+ +++ ++++GVY + + +e+  +++++++ +  +       + +E+h+++  +d+yg +i++ l  ylR+  +  
+  KAF7683713.1 183 YAGIVEHGLHAGRKLGFPTANIYVDQFINDEGVYDCNILLEE--RMYNGIAYYDKRRP-----NVLEAHLFNKIDDFYGVKIKIILNFYLRQPVETF 272
+                   6799********************9999************99..9****999998877.....579*****9999********************99 PP
+
+                   SHHHHHHHHHHHHHHHH CS
+   Flavokinase 104 sleaLieqiekDievar 120
+                   s e + + i++Die   
+  KAF7683713.1 273 SKEVMEKIIKQDIECIA 289
+                   ************99765 PP
+
+>> CTP_transf_like  Cytidylyltransferase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.6   0.2   2.2e-14   1.4e-10       1     112 [.      24     137 ..      24     181 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 41.6 bits;  conditional E-value: 2.2e-14
+                      EEEE--TT--HHHHHHHHHHHHHSSESEEEEEESSTHCTST-..STSSTHHHHHHHHHHHTTCTTEEEEEEESEHC...HHHHHTTTTEEEEEE CS
+  CTP_transf_like   1 lagGtFDpiHlGHlrlleqakklleedlivgvpsdeppkkkk..kplasaeeRlemlelakevdevisvdpweltr...evlkklkpdklylvi 89 
+                      l+gG+FD++HlGH++ l  akk++e+ l++++  de   k+k   p+ +  +R   l  ++ vd +i+  + + +    e++k++kp+ ++l +
+     KAF7683713.1  24 LVGGVFDILHLGHIHFLTDAKKHGEY-LVIALEPDEHIIKYKkrIPIHTQRQRAMILSSLRIVDHIIMLPFLKEDEdyyELVKNIKPNVIALTM 116
+                      689***********************.********999999548899*********************999988889999*******9999999 PP
+
+                      EHHHHHHHHSHHHHHHHHHHHHH CS
+  CTP_transf_like  90 gadvledfsewkeleeilgnvkl 112
+                      g+ ++ +   +++ + i ++ ++
+     KAF7683713.1 117 GDSQFYTK--CNQAKLINAKIRV 137
+                      99988884..5544444443333 PP
+
+>> FAD_syn  FAD synthetase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (298 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       782  (0.0407738); expected 383.6 (0.02)
+Passed bias filter:                      397  (0.0206997); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.22s 00:00:00.60 Elapsed: 00:00:00.89
+# Mc/sec: 1088.34
+//
+[ok]

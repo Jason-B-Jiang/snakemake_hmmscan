@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034035.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034035
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5XTP1|Q5XTP1_DANRE  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    6.7e-62  205.7   2.8    1.2e-31  108.7   0.1    2.0  2  Crystall       Beta/Gamma crystallin
+    9.8e-07   28.9   4.2      0.029   14.6   0.1    3.5  0  IL4_i_Ig       Interleukin-4 inducing immunoglobulin-binding 
+    6.6e-05   22.9   4.6      0.016   15.2   0.5    3.3  0  Inhibitor_I36  Peptidase inhibitor family I36
+
+
+Domain annotation for each model (and alignments):
+>> Crystall  Beta/Gamma crystallin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.7   0.3   5.4e-32   3.4e-28       1      82 []       3      82 ..       3      82 .. 0.98
+   2 !  108.7   0.1   1.9e-35   1.2e-31       1      81 [.      91     171 ..      91     172 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 97.7 bits;  conditional E-value: 5.4e-32
+                            EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEEE CS
+                Crystall  1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrpi 82
+                            kiv++e++nfqGr++e+ +dc+++++  + s+++Si+V+sGaWv+Ye+pn++G+ yll +geY+++  w++ nd+++S++ i
+  tr|Q5XTP1|Q5XTP1_DANRE  3 KIVFFEDKNFQGRRYECDSDCSDFHT--YLSRCNSIRVESGAWVVYERPNYTGNRYLLTRGEYPEYLGWMGLNDCLSSCKII 82
+                            79************************..99*************************************************976 PP
+
+  == domain 2  score: 108.7 bits;  conditional E-value: 1.9e-35
+                             EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEE CS
+                Crystall   1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrp 81 
+                             k++ly+k++f+G+ +e  edcps+qer+  ++v+S+kVl+G+W++Ye+pn+rG+qy+le+g+Yr+  dwga  +++qS+r+
+  tr|Q5XTP1|Q5XTP1_DANRE  91 KVQLYDKPDFTGQAIESIEDCPSVQERFRLREVNSCKVLDGYWIFYEHPNYRGHQYFLEKGNYRKPVDWGAICPSVQSFRR 171
+                             799*****************************************************************************8 PP
+
+>> IL4_i_Ig  Interleukin-4 inducing immunoglobulin-binding domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Inhibitor_I36  Peptidase inhibitor family I36
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       324  (0.0168935); expected 383.6 (0.02)
+Passed bias filter:                      271  (0.01413); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.58
+# Mc/sec: 972.38
+//
+[ok]

@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032205.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032205
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VQ77|Q9VQ77_DROME  [L=350]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.8e-18   66.8   2.7    3.4e-18   65.9   2.7    1.5  1  MADF_DNA_bdg  Alcohol dehydrogenase transcription factor Myb/
+    3.8e-11   42.7   0.9    8.4e-11   41.6   0.9    1.6  1  BESS          BESS motif
+
+
+Domain annotation for each model (and alignments):
+>> MADF_DNA_bdg  Alcohol dehydrogenase transcription factor Myb/SANT-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.9   2.7   3.5e-22   3.4e-18       1      84 []       8      87 ..       8      87 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 65.9 bits;  conditional E-value: 3.5e-22
+            MADF_DNA_bdg  1 LIelvrkrpvLwdrsh.pdyrnkeareeaweeiaeelnsdvsveeckkkwknLRdsyrrelrkkktesgeskksrwryyeelsFL 84
+                            LI++v kr++Lwd+++  +yrn++  + +w ++a+ +++dvs+  ckk++k +Rdsyr e+rk +  +++ + s+w+y+++l+F+
+  tr|Q9VQ77|Q9VQ77_DROME  8 LIQEVSKRRCLWDTNMsISYRNQD-AALQWASVAQIMQQDVSI--CKKRFKGMRDSYRAEVRKIQ--QKRIEMSHWPYFRSLEFM 87
+                            8***************55566655.8999*********77777..********************..*****************8 PP
+
+>> BESS  BESS motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.6   0.9   8.8e-15   8.4e-11       1      34 [.     236     269 ..     236     270 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 41.6 bits;  conditional E-value: 8.8e-15
+                    BESS   1 DsDdlFLlSllPtmKrLpplqklkfkikiqqlll 34 
+                             DsD +FL+S+ P++K+L+   +lkf++++ ++l 
+  tr|Q9VQ77|Q9VQ77_DROME 236 DSDLSFLMSMMPHVKSLSAISNLKFRMEMARVLV 269
+                             9****************************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (350 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       499  (0.026018); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.65
+# Mc/sec: 1753.22
+//
+[ok]

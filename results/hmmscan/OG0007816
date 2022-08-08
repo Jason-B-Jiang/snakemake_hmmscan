@@ -1,0 +1,395 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0007816.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0007816
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q04688|ELG_DROME  [L=464]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.4e-32  111.9   0.1    3.1e-32  110.8   0.1    1.6  1  Ets         Ets-domain
+    8.2e-32  109.4   2.0    1.4e-31  108.6   2.0    1.4  1  GABP-alpha  GA-binding protein alpha chain
+    3.7e-31  107.0   2.2      1e-30  105.6   2.2    1.8  1  SAM_PNT     Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> Ets  Ets-domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.8   0.1   4.9e-36   3.1e-32       1      80 [.     347     425 ..     347     426 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 110.8 bits;  conditional E-value: 4.9e-36
+                  Ets   1 qLwqFllelLedpekkdiikWtdkekgeFklvdseevaelWgkrknkpkmnyeklsralRyyykkgilekvkgkrlvykF 80 
+                          qLwqFlle+L+d e+ d+i+W++  +geFkl+d+++va+lWg++knkp+mnyeklsralRyyy+ ++++kv+gkr+ ykF
+  sp|Q04688|ELG_DROME 347 QLWQFLLEILTDCEHTDVIEWVGT-EGEFKLTDPDRVARLWGEKKNKPAMNYEKLSRALRYYYDGDMISKVSGKRFAYKF 425
+                          79********************76.9****************************************************** PP
+
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.6   2.0   2.2e-35   1.4e-31       2      84 ..      45     124 ..      44     125 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 108.6 bits;  conditional E-value: 2.2e-35
+           GABP-alpha   2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlvqinvqvksekeskkrinIldilkPvd 84 
+                          +i+ ++di+epls+L++l+e+++ + l+ y+f+LQd+q+L+++k+Lv+qcvk+eGlvqinvq+++    +krinI+d+lkP++
+  sp|Q04688|ELG_DROME  45 IIIVHMDIREPLSMLKSLVEQKIGVCLNYYTFWLQDAQELESHKNLVDQCVKGEGLVQINVQIQT---IRKRINIADVLKPTE 124
+                          89**************************************************************9...789**********97 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.6   2.2   1.6e-34     1e-30       2      83 ..     187     268 ..     186     269 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 105.6 bits;  conditional E-value: 1.6e-34
+                          CCHHHCSCTTTSSSSGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHHHHH CS
+              SAM_PNT   2 sslekeqkrlaipadPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapllaGdiLyehLqnlrke 83 
+                          s++++eq rl+ip+ ++eWt++hV++Wlewavk+f+l  i++s+++m+G+eLc++t+eef++++p+++G+i+++hLq l+++
+  sp|Q04688|ELG_DROME 187 SKFKREQIRLKIPEAANEWTHAHVTYWLEWAVKQFELVGINMSDWQMNGQELCAMTHEEFNQKLPRDPGNIFWTHLQLLKEC 268
+                          6899***************************************************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (464 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       731  (0.0381146); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.59
+# Mc/sec: 2542.25
+//
+Query:       tr|A0A0B4KHY6|A0A0B4KHY6_DROME  [L=484]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.5e-32  111.8   0.1    3.3e-32  110.7   0.1    1.6  1  Ets         Ets-domain
+    8.8e-32  109.3   2.0    1.5e-31  108.5   2.0    1.4  1  GABP-alpha  GA-binding protein alpha chain
+    3.9e-31  107.0   2.2    1.1e-30  105.5   2.2    1.8  1  SAM_PNT     Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> Ets  Ets-domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.7   0.1   5.2e-36   3.3e-32       1      80 [.     347     425 ..     347     426 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 110.7 bits;  conditional E-value: 5.2e-36
+                             Ets   1 qLwqFllelLedpekkdiikWtdkekgeFklvdseevaelWgkrknkpkmnyeklsralRyyykkgilekvkgkrlvyk 79 
+                                     qLwqFlle+L+d e+ d+i+W++  +geFkl+d+++va+lWg++knkp+mnyeklsralRyyy+ ++++kv+gkr+ yk
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME 347 QLWQFLLEILTDCEHTDVIEWVGT-EGEFKLTDPDRVARLWGEKKNKPAMNYEKLSRALRYYYDGDMISKVSGKRFAYK 424
+                                     79********************76.9***************************************************** PP
+
+                             Ets  80 F 80 
+                                     F
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME 425 F 425
+                                     * PP
+
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.5   2.0   2.4e-35   1.5e-31       2      84 ..      45     124 ..      44     125 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 108.5 bits;  conditional E-value: 2.4e-35
+                      GABP-alpha   2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlvqinvqvksekeskkrinIldil 80 
+                                     +i+ ++di+epls+L++l+e+++ + l+ y+f+LQd+q+L+++k+Lv+qcvk+eGlvqinvq+++    +krinI+d+l
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME  45 IIIVHMDIREPLSMLKSLVEQKIGVCLNYYTFWLQDAQELESHKNLVDQCVKGEGLVQINVQIQT---IRKRINIADVL 120
+                                     89**************************************************************9...789******** PP
+
+                      GABP-alpha  81 kPvd 84 
+                                     kP++
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME 121 KPTE 124
+                                     **97 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.5   2.2   1.7e-34   1.1e-30       2      83 ..     187     268 ..     186     269 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 105.5 bits;  conditional E-value: 1.7e-34
+                                     CCHHHCSCTTTSSSSGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHH CS
+                         SAM_PNT   2 sslekeqkrlaipadPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapllaGdiLyehLqnl 80 
+                                     s++++eq rl+ip+ ++eWt++hV++Wlewavk+f+l  i++s+++m+G+eLc++t+eef++++p+++G+i+++hLq l
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME 187 SKFKREQIRLKIPEAANEWTHAHVTYWLEWAVKQFELVGINMSDWQMNGQELCAMTHEEFNQKLPRDPGNIFWTHLQLL 265
+                                     6899*************************************************************************** PP
+
+                                     HHH CS
+                         SAM_PNT  81 rke 83 
+                                     +++
+  tr|A0A0B4KHY6|A0A0B4KHY6_DROME 266 KEC 268
+                                     986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (484 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       785  (0.0409302); expected 383.6 (0.02)
+Passed bias filter:                      484  (0.0252359); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.13s 00:00:00.53 Elapsed: 00:00:00.55
+# Mc/sec: 2854.71
+//
+Query:       tr|Q9I9E8|Q9I9E8_DANRE  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.8e-33  113.4   0.6    9.6e-33  112.4   0.6    1.5  1  Ets         Ets-domain
+    7.8e-31  106.2   1.0    1.6e-30  105.2   1.0    1.6  1  GABP-alpha  GA-binding protein alpha chain
+    3.3e-23   81.6   0.0    7.3e-23   80.4   0.0    1.6  1  SAM_PNT     Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> Ets  Ets-domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.4   0.6   1.5e-36   9.6e-33       1      81 []     311     390 ..     311     390 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.4 bits;  conditional E-value: 1.5e-36
+                     Ets   1 qLwqFllelLedpekkdiikWtdkekgeFklvdseevaelWgkrknkpkmnyeklsralRyyykkgilekvkgkrlvykFv 81 
+                             qLwqFllelL+d++++d+i+W+++ +geFkl ++e va+ Wg+rknkp+mnyeklsralRyyy+ ++++kv+gkr+vykFv
+  tr|Q9I9E8|Q9I9E8_DANRE 311 QLWQFLLELLTDKDSRDCISWVGE-EGEFKLNQPELVAQKWGQRKNKPTMNYEKLSRALRYYYDGDMISKVQGKRFVYKFV 390
+                             79********************66.9******************************************************6 PP
+
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.2   1.0   2.5e-34   1.6e-30       2      84 ..      37     117 ..      36     118 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 105.2 bits;  conditional E-value: 2.5e-34
+              GABP-alpha   2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlvqinvqvksekeskkrinIldilkPvd 84 
+                             +i+q+idinep+ +L+klLe rlqi l+ y+++LQd+q L++d+sL++q+vk++G+vq++vq++++ + ++++nIl+i+kPv+
+  tr|Q9I9E8|Q9I9E8_DANRE  37 LITQDIDINEPIGNLKKLLEPRLQIPLDGYDICLQDIQ-LHPDHSLFDQGVKTDGTVQLSVQIVTKPG-EEKLNILEIVKPVE 117
+                             79************************************.**************************997.66**********98 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.4   0.0   1.1e-26   7.3e-23       2      83 ..     165     244 ..     164     245 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 80.4 bits;  conditional E-value: 1.1e-26
+                             CCHHHCSCTTTSSSSGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHHHHH CS
+                 SAM_PNT   2 sslekeqkrlaipadPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapllaGdiLyehLqnlrke 83 
+                             ++++keq rl+ip dP +Wt ++V++W  w++kef + ++++  +++ G++Lc  ++eefl+++p  +G+iL++hL+ lrk 
+  tr|Q9I9E8|Q9I9E8_DANRE 165 EGYRKEQVRLNIPYDPVQWTADQVIHWAVWVMKEFGIDEMEVGGIHIPGRQLCGFSQEEFLQRVP--SGEILWSHLELLRKY 244
+                             679**************************************************************..************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       509  (0.0265394); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 2475.32
+//
+Query:       tr|B0V0E2|B0V0E2_DANRE  [L=92]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.9e-20   72.3   0.1    4.8e-20   71.7   0.1    1.3  1  GABP-alpha  GA-binding protein alpha chain
+
+
+Domain annotation for each model (and alignments):
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.7   0.1   2.5e-24   4.8e-20       2      58 ..      37      92 .]      36      92 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 71.7 bits;  conditional E-value: 2.5e-24
+              GABP-alpha  2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlv 58
+                            +i+q+idinep+ +L+klLe rlqi l+ y+++LQd+q L++d+sL++q+vk++G+v
+  tr|B0V0E2|B0V0E2_DANRE 37 LITQDIDINEPIGNLKKLLEPRLQIPLDGYDICLQDIQ-LHPDHSLFDQGVKTDGTV 92
+                            79************************************.****************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (92 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       367  (0.0191355); expected 383.6 (0.02)
+Passed bias filter:                      293  (0.0152771); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.31u 0.16s 00:00:00.47 Elapsed: 00:00:00.48
+# Mc/sec: 615.68
+//
+Query:       tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE  [L=451]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-33  113.5   0.6    9.5e-33  112.5   0.6    1.6  1  Ets         Ets-domain
+    7.3e-31  106.3   1.0    1.6e-30  105.2   1.0    1.6  1  GABP-alpha  GA-binding protein alpha chain
+    2.5e-23   81.9   0.0    5.6e-23   80.8   0.0    1.6  1  SAM_PNT     Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> Ets  Ets-domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.5   0.6   1.5e-36   9.5e-33       1      81 []     307     386 ..     307     386 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.5 bits;  conditional E-value: 1.5e-36
+                             Ets   1 qLwqFllelLedpekkdiikWtdkekgeFklvdseevaelWgkrknkpkmnyeklsralRyyykkgilekvkgkrlvyk 79 
+                                     qLwqFllelL+d++++d+i+W+++ +geFkl ++e va+ Wg+rknkp+mnyeklsralRyyy+ ++++kv+gkr+vyk
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE 307 QLWQFLLELLTDKDSRDCISWVGE-EGEFKLNQPELVAQKWGQRKNKPTMNYEKLSRALRYYYDGDMISKVQGKRFVYK 384
+                                     79********************66.9***************************************************** PP
+
+                             Ets  80 Fv 81 
+                                     Fv
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE 385 FV 386
+                                     *6 PP
+
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.2   1.0   2.5e-34   1.6e-30       2      84 ..      37     117 ..      36     118 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 105.2 bits;  conditional E-value: 2.5e-34
+                      GABP-alpha   2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlvqinvqvksekeskkrinIldil 80 
+                                     +i+q+idinep+ +L+klLe rlqi l+ y+++LQd+q L++d+sL++q+vk++G+vq++vq++++ + ++++nIl+i+
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE  37 LITQDIDINEPIGNLKKLLEPRLQIPLDGYDICLQDIQ-LHPDHSLFDQGVKTDGTVQLSVQIVTKPG-EEKLNILEIV 113
+                                     79************************************.**************************997.66******** PP
+
+                      GABP-alpha  81 kPvd 84 
+                                     kPv+
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE 114 KPVE 117
+                                     **98 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.8   0.0   8.7e-27   5.6e-23       2      83 ..     165     244 ..     164     245 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 80.8 bits;  conditional E-value: 8.7e-27
+                                     CCHHHCSCTTTSSSSGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHH CS
+                         SAM_PNT   2 sslekeqkrlaipadPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapllaGdiLyehLqnl 80 
+                                     ++++keq rl+ip dP +Wt ++V++W  w++kef + ++++  +++ G++Lc  ++eefl+++p  +G+iL++hL+ l
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE 165 EGYRKEQVRLNIPYDPVQWTADQVIHWAVWVMKEFGIDEMEVGGIHIPGRQLCGFSQEEFLQRVP--SGEILWSHLELL 241
+                                     679**************************************************************..************ PP
+
+                                     HHH CS
+                         SAM_PNT  81 rke 83 
+                                     rk+
+  tr|A0A2R8PYJ7|A0A2R8PYJ7_DANRE 242 RKC 244
+                                     *96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (451 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       495  (0.0258095); expected 383.6 (0.02)
+Passed bias filter:                      411  (0.0214297); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.57
+# Mc/sec: 2555.81
+//
+Query:       sp|Q06546|GABPA_HUMAN  [L=454]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      2e-32  111.4   0.4    4.5e-32  110.3   0.4    1.6  1  Ets         Ets-domain
+    3.8e-32  110.5   0.7      8e-32  109.4   0.7    1.6  1  GABP-alpha  GA-binding protein alpha chain
+    8.1e-30  102.7   0.2    2.6e-29  101.1   0.2    2.0  1  SAM_PNT     Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> Ets  Ets-domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.3   0.4     7e-36   4.5e-32       1      81 []     321     400 ..     321     400 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 110.3 bits;  conditional E-value: 7e-36
+                    Ets   1 qLwqFllelLedpekkdiikWtdkekgeFklvdseevaelWgkrknkpkmnyeklsralRyyykkgilekvkgkrlvykFv 81 
+                            qLwqFllelL+d++ +d+i+W++  +geFkl ++e va+ Wg+rknkp+mnyeklsralRyyy+ +++ kv+gkr+vykFv
+  sp|Q06546|GABPA_HUMAN 321 QLWQFLLELLTDKDARDCISWVGD-EGEFKLNQPELVAQKWGQRKNKPTMNYEKLSRALRYYYDGDMICKVQGKRFVYKFV 400
+                            79********************66.9******************************************************6 PP
+
+>> GABP-alpha  GA-binding protein alpha chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.4   0.7   1.3e-35     8e-32       2      84 ..      37     118 ..      36     119 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 109.4 bits;  conditional E-value: 1.3e-35
+             GABP-alpha   2 vivqaidineplstLrklLeerlqidlekyefyLQdtqkLdedksLveqcvkveGlvqinvqvksekeskkrinIldilkPvd 84 
+                            ++ qaidinep+ +L+klLe rlq++l+++e++LQd+q Ld+++sL++q+vk++G+vq++vqv+s ++ ++++nIl+i+kP+d
+  sp|Q06546|GABPA_HUMAN  37 CVSQAIDINEPIGNLKKLLEPRLQCSLDAHEICLQDIQ-LDPERSLFDQGVKTDGTVQLSVQVISYQGIEPKLNILEIVKPAD 118
+                            789***********************************.******************************************98 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.1   0.2   4.1e-33   2.6e-29       2      83 ..     171     250 ..     170     251 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 101.1 bits;  conditional E-value: 4.1e-33
+                            CCHHHCSCTTTSSSSGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHHHHH CS
+                SAM_PNT   2 sslekeqkrlaipadPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapllaGdiLyehLqnlrke 83 
+                            ++++keq+rl+ip dP++W++++Vl+W+ w++kef++++id++++++sG+eLcsl++e+f +++p   G+iL++hL+ lrk 
+  sp|Q06546|GABPA_HUMAN 171 EGYRKEQERLGIPYDPIQWSTDQVLHWVVWVMKEFSMTDIDLTTLNISGRELCSLNQEDFFQRVP--RGEILWSHLELLRKY 250
+                            679**************************************************************..************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (454 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       507  (0.0264352); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.55
+# Mc/sec: 2674.92
+//
+[ok]

@@ -1,0 +1,584 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0006276.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0006276
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VS55|Q9VS55_DROME  [L=818]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.5e-40  134.2  91.1    1.5e-06   28.5   0.9   12.2  0  zf-H2C2_2  Zinc-finger double domain
+    2.3e-28   97.1  99.3    0.00011   22.6   0.6   11.3  4  zf-C2H2    Zinc finger, C2H2 type
+    1.2e-24   84.9  90.6    0.00016   22.3   0.4   11.3  1  zf-C2H2_4  C2H2-type zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.6   0.6   1.7e-08   0.00011       1      23 []     322     344 ..     322     344 .. 0.99
+   2 !   16.1   3.6   1.8e-06     0.012       1      23 []     465     488 ..     465     488 .. 0.97
+   3 !   18.4   1.9   3.7e-07    0.0023       1      23 []     550     573 ..     550     573 .. 0.96
+   4 !   21.5   4.1   3.7e-08   0.00024       1      23 []     587     609 ..     587     609 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 22.6 bits;  conditional E-value: 1.7e-08
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             +kC++C +sF+++  L++Hi+tH
+  tr|Q9VS55|Q9VS55_DROME 322 FKCSICERSFRSNVGLQNHINTH 344
+                             8*********************9 PP
+
+  == domain 2  score: 16.1 bits;  conditional E-value: 1.8e-06
+                             EEETTTTEEESSHHHHHHHHHC.C CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                             ++C++C+ ++ rk +L++Hi+  H
+  tr|Q9VS55|Q9VS55_DROME 465 FQCNYCPTTCGRKADLRVHIKHmH 488
+                             89*******************988 PP
+
+  == domain 3  score: 18.4 bits;  conditional E-value: 3.7e-07
+                             EEETTTTEEESSHHHHHHHHHC.C CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                             + C+ C++ F+++ +L+rH++  H
+  tr|Q9VS55|Q9VS55_DROME 550 FHCDQCPQAFRQRQLLRRHMNLvH 573
+                             78*******************988 PP
+
+  == domain 4  score: 21.5 bits;  conditional E-value: 3.7e-08
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             +kCp C++ F++k nL+rH+ tH
+  tr|Q9VS55|Q9VS55_DROME 587 HKCPSCPREFTHKGNLMRHMETH 609
+                             79********************9 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   0.4   2.5e-08   0.00016       1      23 [.     322     344 ..     322     345 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 2.5e-08
+               zf-C2H2_4   1 fkCpiCgksFsskkaLlrHlkth 23 
+                             fkC+iC +sF+s+ +L++H++th
+  tr|Q9VS55|Q9VS55_DROME 322 FKCSICERSFRSNVGLQNHINTH 344
+                             8*********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (818 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1905  (0.0993274); expected 383.6 (0.02)
+Passed bias filter:                      595  (0.0310235); expected 383.6 (0.02)
+Passed Vit filter:                        74  (0.00385839); expected 19.2 (0.001)
+Passed Fwd filter:                        41  (0.00213775); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.24s 00:00:00.90 Elapsed: 00:00:00.69
+# Mc/sec: 3816.07
+//
+Query:       tr|Q6JAA4|Q6JAA4_DANRE  [L=798]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.6e-48  161.1  93.8    1.4e-08   34.8   0.7   11.2  0  zf-H2C2_2    Zinc-finger double domain
+    5.2e-33  111.8 100.1    0.00035   21.0   1.7   11.3  5  zf-C2H2      Zinc finger, C2H2 type
+    2.2e-25   87.2  95.5     0.0056   17.5   2.7   11.3  0  zf-C2H2_4    C2H2-type zinc finger
+      8e-17   60.8  87.6    6.1e-07   29.2   0.4   10.4  1  zf-H2C2_5    C2H2-type zinc-finger domain
+      1e-06   28.9  54.9       0.11   12.8   0.1   10.9  0  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.8   4.0   4.5e-07    0.0017       1      23 []     306     328 ..     306     328 .. 0.98
+   2 !   19.0   4.0   3.9e-07    0.0015       1      23 []     334     356 ..     334     356 .. 0.98
+   3 !   21.0   1.7   9.1e-08   0.00035       1      23 []     362     385 ..     362     385 .. 0.96
+   4 !   17.7   3.0   9.8e-07    0.0038       1      23 []     419     441 ..     419     441 .. 0.99
+   5 !   17.6   0.3   1.1e-06    0.0042       1      20 [.     595     614 ..     595     616 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 18.8 bits;  conditional E-value: 4.5e-07
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             ++C+ C+++++r+snL rH+++H
+  tr|Q6JAA4|Q6JAA4_DANRE 306 FQCELCSYTCPRRSNLDRHMKSH 328
+                             89********************9 PP
+
+  == domain 2  score: 19.0 bits;  conditional E-value: 3.9e-07
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             +kC+ Cg+ F++  +L++H++tH
+  tr|Q6JAA4|Q6JAA4_DANRE 334 HKCHLCGRAFRTVTLLRNHLNTH 356
+                             79********************9 PP
+
+  == domain 3  score: 21.0 bits;  conditional E-value: 9.1e-08
+                             EEETTTTEEESSHHHHHHHHHC.C CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                             +kC+dC++ F ++ +L+rH+r  H
+  tr|Q6JAA4|Q6JAA4_DANRE 362 HKCTDCDMAFVTSGELVRHRRYkH 385
+                             79*******************988 PP
+
+  == domain 4  score: 17.7 bits;  conditional E-value: 9.8e-07
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             ++C+ C++  ++ + LkrH+rtH
+  tr|Q6JAA4|Q6JAA4_DANRE 419 FQCSLCSYASRDTYKLKRHMRTH 441
+                             89********************9 PP
+
+  == domain 5  score: 17.6 bits;  conditional E-value: 1.1e-06
+                             EEETTTTEEESSHHHHHHHH CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHi 20 
+                             ++C++Cgk+F+r+  + rH 
+  tr|Q6JAA4|Q6JAA4_DANRE 595 FVCTKCGKTFTRRNTMARHA 614
+                             89*****************5 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   0.4   1.6e-10   6.1e-07       1      25 []     391     415 ..     391     415 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 1.6e-10
+               zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHtg 25 
+                             +KCs CDY +++ s LkRH++ Htg
+  tr|Q6JAA4|Q6JAA4_DANRE 391 FKCSMCDYASVEVSKLKRHIRSHTG 415
+                             8***********************8 PP
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (798 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1525  (0.0795141); expected 383.6 (0.02)
+Passed bias filter:                      509  (0.0265394); expected 383.6 (0.02)
+Passed Vit filter:                        87  (0.00453621); expected 19.2 (0.001)
+Passed Fwd filter:                        47  (0.0024506); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.68u 0.19s 00:00:00.87 Elapsed: 00:00:00.84
+# Mc/sec: 3081.10
+//
+Query:       tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE  [L=809]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.9e-48  160.9  93.8    1.5e-08   34.8   0.7   11.2  0  zf-H2C2_2    Zinc-finger double domain
+    6.1e-33  111.5 100.1    0.00035   20.9   1.7   11.3  5  zf-C2H2      Zinc finger, C2H2 type
+    2.6e-25   87.0  95.5     0.0056   17.5   2.7   11.3  0  zf-C2H2_4    C2H2-type zinc finger
+    9.1e-17   60.6  87.6    6.2e-07   29.1   0.4   10.4  1  zf-H2C2_5    C2H2-type zinc-finger domain
+    1.2e-06   28.7  54.9       0.11   12.8   0.1   10.9  0  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.8   4.0   4.6e-07    0.0017       1      23 []     317     339 ..     317     339 .. 0.98
+   2 !   19.0   4.0   3.9e-07    0.0015       1      23 []     345     367 ..     345     367 .. 0.98
+   3 !   20.9   1.7   9.2e-08   0.00035       1      23 []     373     396 ..     373     396 .. 0.96
+   4 !   17.7   3.0     1e-06    0.0038       1      23 []     430     452 ..     430     452 .. 0.99
+   5 !   17.5   0.3   1.1e-06    0.0042       1      20 [.     606     625 ..     606     627 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 18.8 bits;  conditional E-value: 4.6e-07
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     ++C+ C+++++r+snL rH+++H
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 317 FQCELCSYTCPRRSNLDRHMKSH 339
+                                     89********************9 PP
+
+  == domain 2  score: 19.0 bits;  conditional E-value: 3.9e-07
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     +kC+ Cg+ F++  +L++H++tH
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 345 HKCHLCGRAFRTVTLLRNHLNTH 367
+                                     79********************9 PP
+
+  == domain 3  score: 20.9 bits;  conditional E-value: 9.2e-08
+                                     EEETTTTEEESSHHHHHHHHHC.C CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                                     +kC+dC++ F ++ +L+rH+r  H
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 373 HKCTDCDMAFVTSGELVRHRRYkH 396
+                                     79*******************988 PP
+
+  == domain 4  score: 17.7 bits;  conditional E-value: 1e-06
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     ++C+ C++  ++ + LkrH+rtH
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 430 FQCSLCSYASRDTYKLKRHMRTH 452
+                                     89********************9 PP
+
+  == domain 5  score: 17.5 bits;  conditional E-value: 1.1e-06
+                                     EEETTTTEEESSHHHHHHHH CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHi 20 
+                                     ++C++Cgk+F+r+  + rH 
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 606 FVCTKCGKTFTRRNTMARHA 625
+                                     89*****************5 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.1   0.4   1.6e-10   6.2e-07       1      25 []     402     426 ..     402     426 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 29.1 bits;  conditional E-value: 1.6e-10
+                       zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHtg 25 
+                                     +KCs CDY +++ s LkRH++ Htg
+  tr|A0A2R8QUZ1|A0A2R8QUZ1_DANRE 402 FKCSMCDYASVEVSKLKRHIRSHTG 426
+                                     8***********************8 PP
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (809 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1542  (0.0804004); expected 383.6 (0.02)
+Passed bias filter:                      518  (0.0270087); expected 383.6 (0.02)
+Passed Vit filter:                        87  (0.00453621); expected 19.2 (0.001)
+Passed Fwd filter:                        47  (0.0024506); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.66u 0.17s 00:00:00.83 Elapsed: 00:00:00.83
+# Mc/sec: 3175.51
+//
+Query:       tr|A0A2R8Q542|A0A2R8Q542_DANRE  [L=784]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.8e-37  126.2  95.2      4e-07   30.3   3.1   11.3  0  zf-H2C2_2    Zinc-finger double domain
+    3.5e-29   99.7  97.2    0.00034   21.0   1.7   10.9  5  zf-C2H2      Zinc finger, C2H2 type
+    1.3e-23   81.7  87.8     0.0054   17.5   2.7   10.5  0  zf-C2H2_4    C2H2-type zinc finger
+    3.2e-09   36.5  81.3    5.5e-05   22.9   3.2    9.5  0  zf-H2C2_5    C2H2-type zinc-finger domain
+    8.5e-07   29.2  49.3       0.11   12.9   0.1   10.0  0  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.8   4.0   4.4e-07    0.0017       1      23 []     306     328 ..     306     328 .. 0.98
+   2 !   19.0   4.0   3.8e-07    0.0015       1      23 []     334     356 ..     334     356 .. 0.98
+   3 !   21.0   1.7   8.9e-08   0.00034       1      23 []     362     385 ..     362     385 .. 0.96
+   4 !   17.7   3.0   9.7e-07    0.0037       1      23 []     405     427 ..     405     427 .. 0.99
+   5 !   17.6   0.3   1.1e-06    0.0041       1      20 [.     581     600 ..     581     602 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 18.8 bits;  conditional E-value: 4.4e-07
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     ++C+ C+++++r+snL rH+++H
+  tr|A0A2R8Q542|A0A2R8Q542_DANRE 306 FQCELCSYTCPRRSNLDRHMKSH 328
+                                     89********************9 PP
+
+  == domain 2  score: 19.0 bits;  conditional E-value: 3.8e-07
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     +kC+ Cg+ F++  +L++H++tH
+  tr|A0A2R8Q542|A0A2R8Q542_DANRE 334 HKCHLCGRAFRTVTLLRNHLNTH 356
+                                     79********************9 PP
+
+  == domain 3  score: 21.0 bits;  conditional E-value: 8.9e-08
+                                     EEETTTTEEESSHHHHHHHHHC.C CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                                     +kC+dC++ F ++ +L+rH+r  H
+  tr|A0A2R8Q542|A0A2R8Q542_DANRE 362 HKCTDCDMAFVTSGELVRHRRYkH 385
+                                     79*******************988 PP
+
+  == domain 4  score: 17.7 bits;  conditional E-value: 9.7e-07
+                                     EEETTTTEEESSHHHHHHHHHCC CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                                     ++C+ C++  ++ + LkrH+rtH
+  tr|A0A2R8Q542|A0A2R8Q542_DANRE 405 FQCSLCSYASRDTYKLKRHMRTH 427
+                                     89********************9 PP
+
+  == domain 5  score: 17.6 bits;  conditional E-value: 1.1e-06
+                                     EEETTTTEEESSHHHHHHHH CS
+                         zf-C2H2   1 ykCpdCgksFkrksnLkrHi 20 
+                                     ++C++Cgk+F+r+  + rH 
+  tr|A0A2R8Q542|A0A2R8Q542_DANRE 581 FVCTKCGKTFTRRNTMARHA 600
+                                     89*****************5 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (784 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1501  (0.0782627); expected 383.6 (0.02)
+Passed bias filter:                      488  (0.0254445); expected 383.6 (0.02)
+Passed Vit filter:                        80  (0.00417123); expected 19.2 (0.001)
+Passed Fwd filter:                        43  (0.00224204); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.67u 0.19s 00:00:00.86 Elapsed: 00:00:00.80
+# Mc/sec: 3177.13
+//
+Query:       tr|K7DY15|K7DY15_DANRE  [L=53]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (53 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       383  (0.0199698); expected 383.6 (0.02)
+Passed bias filter:                      194  (0.0101152); expected 383.6 (0.02)
+Passed Vit filter:                        12  (0.000625684); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.31u 0.18s 00:00:00.49 Elapsed: 00:00:00.60
+# Mc/sec: 285.94
+//
+Query:       tr|K7DY19|K7DY19_DANRE  [L=125]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (125 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1116  (0.0581886); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.32u 0.15s 00:00:00.47 Elapsed: 00:00:00.62
+# Mc/sec: 647.88
+//
+Query:       sp|P49711|CTCF_HUMAN  [L=727]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.9e-50  165.9  94.9    1.3e-08   35.0   0.7   11.3  0  zf-H2C2_2    Zinc-finger double domain
+    9.9e-34  114.0 102.1    9.4e-05   22.7   1.1   11.2  6  zf-C2H2      Zinc finger, C2H2 type
+    2.6e-26   90.1  96.7      0.005   17.7   2.7   11.3  0  zf-C2H2_4    C2H2-type zinc finger
+    9.9e-19   66.9  89.5    5.5e-07   29.3   0.4   10.8  1  zf-H2C2_5    C2H2-type zinc-finger domain
+    5.6e-08   32.9  57.4        0.1   13.0   0.1   11.0  0  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.9   4.0     4e-07    0.0015       1      23 []     266     288 ..     266     288 .. 0.98
+   2 !   19.1   4.0   3.5e-07    0.0013       1      23 []     294     316 ..     294     316 .. 0.98
+   3 !   22.7   1.1   2.5e-08   9.4e-05       1      23 []     322     345 ..     322     345 .. 0.96
+   4 !   17.8   3.0   8.8e-07    0.0034       1      23 []     379     401 ..     379     401 .. 0.99
+   5 !   15.9   1.7   3.8e-06     0.014       1      23 []     437     460 ..     437     460 .. 0.97
+   6 !   17.2   0.4   1.4e-06    0.0054       1      19 [.     555     573 ..     555     575 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 18.9 bits;  conditional E-value: 4e-07
+                           EEETTTTEEESSHHHHHHHHHCC CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                           ++C+ C+++++r+snL rH+++H
+  sp|P49711|CTCF_HUMAN 266 FQCELCSYTCPRRSNLDRHMKSH 288
+                           89********************9 PP
+
+  == domain 2  score: 19.1 bits;  conditional E-value: 3.5e-07
+                           EEETTTTEEESSHHHHHHHHHCC CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                           +kC+ Cg+ F++  +L++H++tH
+  sp|P49711|CTCF_HUMAN 294 HKCHLCGRAFRTVTLLRNHLNTH 316
+                           79********************9 PP
+
+  == domain 3  score: 22.7 bits;  conditional E-value: 2.5e-08
+                           EEETTTTEEESSHHHHHHHHHC.C CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                           +kCpdC++ F ++ +L+rH+r  H
+  sp|P49711|CTCF_HUMAN 322 HKCPDCDMAFVTSGELVRHRRYkH 345
+                           79*******************988 PP
+
+  == domain 4  score: 17.8 bits;  conditional E-value: 8.8e-07
+                           EEETTTTEEESSHHHHHHHHHCC CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                           ++C+ C++  ++ + LkrH+rtH
+  sp|P49711|CTCF_HUMAN 379 FQCSLCSYASRDTYKLKRHMRTH 401
+                           89********************9 PP
+
+  == domain 5  score: 15.9 bits;  conditional E-value: 3.8e-06
+                           EEETTTTEEESSHHHHHHHHHC.C CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                           + Cp+C+ +  rks+L +H+r+ H
+  sp|P49711|CTCF_HUMAN 437 FHCPHCDTVIARKSDLGVHLRKqH 460
+                           78********************99 PP
+
+  == domain 6  score: 17.2 bits;  conditional E-value: 1.4e-06
+                           EEETTTTEEESSHHHHHHH CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrH 19 
+                           ++C++Cgk+F+r+  + rH
+  sp|P49711|CTCF_HUMAN 555 FVCSKCGKTFTRRNTMARH 573
+                           89***************** PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.3   0.4   1.4e-10   5.5e-07       1      25 []     351     375 ..     351     375 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 29.3 bits;  conditional E-value: 1.4e-10
+             zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHtg 25 
+                           +KCs CDY +++ s LkRH++ Htg
+  sp|P49711|CTCF_HUMAN 351 FKCSMCDYASVEVSKLKRHIRSHTG 375
+                           8***********************8 PP
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (727 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1314  (0.0685124); expected 383.6 (0.02)
+Passed bias filter:                      434  (0.0226289); expected 383.6 (0.02)
+Passed Vit filter:                        75  (0.00391053); expected 19.2 (0.001)
+Passed Fwd filter:                        41  (0.00213775); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.63u 0.16s 00:00:00.79 Elapsed: 00:00:00.73
+# Mc/sec: 3209.99
+//
+Query:       sp|Q8NI51|CTCFL_HUMAN  [L=663]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.4e-43  144.3  99.1    2.8e-06   27.6   5.8   11.3  0  zf-H2C2_2  Zinc-finger double domain
+    4.5e-31  105.7 112.7      5e-05   23.6   0.8   11.3  3  zf-C2H2    Zinc finger, C2H2 type
+    4.2e-24   83.2 107.2     0.0052   17.6   2.0   11.4  0  zf-C2H2_4  C2H2-type zinc finger
+      2e-15   56.3  86.9    4.4e-05   23.2   0.8   10.6  0  zf-H2C2_5  C2H2-type zinc-finger domain
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.6   0.8     1e-08     5e-05       1      23 []     313     336 ..     313     336 .. 0.97
+   2 !   18.7   0.6   3.9e-07    0.0019       1      23 []     428     451 ..     428     451 .. 0.98
+   3 !   20.0   1.0   1.4e-07   0.00068       1      19 [.     546     564 ..     546     567 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 23.6 bits;  conditional E-value: 1e-08
+                            EEETTTTEEESSHHHHHHHHHC.C CS
+                zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                            ykC+dC++ F ++ +L+rH+r  H
+  sp|Q8NI51|CTCFL_HUMAN 313 YKCNDCNMAFVTSGELVRHRRYkH 336
+                            9********************988 PP
+
+  == domain 2  score: 18.7 bits;  conditional E-value: 3.9e-07
+                            EEETTTTEEESSHHHHHHHHHC.C CS
+                zf-C2H2   1 ykCpdCgksFkrksnLkrHirt.H 23 
+                            y+Cp+C     rks+L++H+r  H
+  sp|Q8NI51|CTCFL_HUMAN 428 YQCPHCATIIARKSDLRVHMRNlH 451
+                            9********************999 PP
+
+  == domain 3  score: 20.0 bits;  conditional E-value: 1.4e-07
+                            EEETTTTEEESSHHHHHHH CS
+                zf-C2H2   1 ykCpdCgksFkrksnLkrH 19 
+                            ykC++Cgk F+r+ nL rH
+  sp|Q8NI51|CTCFL_HUMAN 546 YKCSKCGKGFSRWINLHRH 564
+                            9****************** PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (663 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1713  (0.0893164); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        64  (0.00333698); expected 19.2 (0.001)
+Passed Fwd filter:                        29  (0.00151207); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.60u 0.18s 00:00:00.78 Elapsed: 00:00:00.83
+# Mc/sec: 2599.93
+//
+[ok]

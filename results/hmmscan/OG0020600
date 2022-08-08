@@ -1,0 +1,140 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0020600.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0020600
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1RAA3|F1RAA3_DANRE  [L=410]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.9e-41  142.1   0.0    2.7e-41  141.7   0.0    1.2  1  Galactosyl_T  Galactosyltransferase
+      4e-06   26.6   0.0    8.9e-06   25.4   0.0    1.5  1  Fringe        Fringe-like
+
+
+Domain annotation for each model (and alignments):
+>> Galactosyl_T  Galactosyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.7   0.0   2.8e-45   2.7e-41       2     193 ..     122     314 ..     121     316 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 141.7 bits;  conditional E-value: 2.8e-45
+            Galactosyl_T   2 rRnaiRktWmnekeaeg.nriktlFlvGlsakedk..kvkelvmeeaklygDivvvdledsYenltlKtltlllwavskvpeaklil 85 
+                             +R+++R+tW+ e   ++ ++ik++Fl+G ++++      ++l++ e++++gDi+  d+ed++ nltlK + +l+w++  +p+ k+i 
+  tr|F1RAA3|F1RAA3_DANRE 122 KRQVVRRTWGREGVFQKnINIKRVFLLGVPQNQSAlpLWDKLLEYESHTFGDILLWDFEDTFFNLTLKEIHFLQWINVSCPKTKFIF 208
+                             8************988789**********995554223699********************************************** PP
+
+            Galactosyl_T  86 kvDdDvyvnpdkLlsllkqelidpsessvygkvlkegavirkkkskwyvseeeykfsryppyasGtlYvlsreavekllkaskhrkf 172
+                             k D Dvyvn+d++l++l+ +  + +++ + g ++ + ++ir+  sk +v+e  y    yp+ya G ++v+s++ + kl+ a k++++
+  tr|F1RAA3|F1RAA3_DANRE 209 KGDADVYVNIDNILEMLESQ--EIDKDLFVGDIIVHAKPIRRRSSKYFVPEFIYGQGIYPSYAGGGGFVMSGHTALKLHLACKEVEL 293
+                             *******************9..8899************************************************************* PP
+
+            Galactosyl_T 173 lkleDvlvGilaedlgisrvd 193
+                             ++++Dv++G+++ ++g++++ 
+  tr|F1RAA3|F1RAA3_DANRE 294 FPIDDVFLGMCLLRIGLQPTR 314
+                             ****************99875 PP
+
+>> Fringe  Fringe-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.4   0.0   9.3e-10   8.9e-06      87     205 ..     204     318 ..     194     321 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 25.4 bits;  conditional E-value: 9.3e-10
+                  Fringe  87 kkWfchvDDDnylnveaLlklLskynhtqdvylGkpsld.rpieaterteenk.......kkkvkfwfatGGaGfclsralalklaP 165
+                             +k + + D D y+n++++l++L++ + ++d+++G   ++ +pi+   r+  +k         +  +    GG+Gf++s + alkl+ 
+  tr|F1RAA3|F1RAA3_DANRE 204 TKFIFKGDADVYVNIDNILEMLESQEIDKDLFVGDIIVHaKPIRR--RS--SKyfvpefiYGQGIYPSYAGGGGFVMSGHTALKLHL 286
+                             566777899*************************99875256666..22..221233444445555556****************32 PP
+
+                  Fringe 166 wasggrfvstsekirlpdDctlGfiieelLgvslthsslf 205
+                                 ++ v+    +   dD+ lG+++ + +g + t+ + f
+  tr|F1RAA3|F1RAA3_DANRE 287 ---ACKEVE----LFPIDDVFLGMCLLR-IGLQPTRHEGF 318
+                             ...222222....33369999**99988.88887776655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (410 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       765  (0.0398874); expected 383.6 (0.02)
+Passed bias filter:                      551  (0.0287293); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.57
+# Mc/sec: 2343.75
+//
+Query:       sp|Q6UX72|B3GN9_HUMAN  [L=402]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.4e-36  126.3   0.0    6.7e-36  124.0   0.0    1.8  1  Galactosyl_T  Galactosyltransferase
+    1.1e-05   25.1   0.0    7.4e-05   22.4   0.0    1.9  1  Fringe        Fringe-like
+
+
+Domain annotation for each model (and alignments):
+>> Galactosyl_T  Galactosyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.0   0.0   6.9e-40   6.7e-36       1     192 [.     130     331 ..     130     334 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 124.0 bits;  conditional E-value: 6.9e-40
+           Galactosyl_T   1 krRnaiRktWmnekeaegnriktlFlvGlsakedk............kvkelvmeeaklygDivvvdledsYenltlKtltlllwavs 76 
+                            +rR+a+R+tW++e   +g  ++++Fl+G +  +++            + ++l+ +e+  y Di+   ++d++ nltlK + +l wa+ 
+  sp|Q6UX72|B3GN9_HUMAN 130 ERRQAVRQTWGAEGRVQGALVRRVFLLGVPRGAGSggadevgegartHWRALLRAESLAYADILLWAFDDTFFNLTLKEIHFLAWASA 217
+                            69*************************9876443211111111221156778999999****************************** PP
+
+           Galactosyl_T  77 kvpeaklilkvDdDvyvnpdkLlsllkqelidpsessvygkvlkegavirkkkskwyvseeeykfsryppyasGtlYvlsreavekll 164
+                            ++p ++++ k D Dv+vn+ +Ll++l+ +  dp ++ ++g v+ + ++ir   sk y++e  y    yp+ya G ++vls+  +++l+
+  sp|Q6UX72|B3GN9_HUMAN 218 FCPDVRFVFKGDADVFVNVGNLLEFLAPR--DPAQDLLAGDVIVHARPIRTRASKYYIPEAVYGLPAYPAYAGGGGFVLSGATLHRLA 303
+                            *****************************..********************************************************* PP
+
+           Galactosyl_T 165 kaskhrkflkleDvlvGilaedlgisrv 192
+                             a  ++++++++Dv++G+++++l++ ++
+  sp|Q6UX72|B3GN9_HUMAN 304 GACAQVELFPIDDVFLGMCLQRLRLTPE 331
+                            **********************998775 PP
+
+>> Fringe  Fringe-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.4   0.0   7.7e-09   7.4e-05      88     198 ..     223     329 ..     212     338 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 22.4 bits;  conditional E-value: 7.7e-09
+                 Fringe  88 kWfchvDDDnylnveaLlklLskynhtqdvylGkpsld.rpieaterteenk.....kkkvkfwfatGGaGfclsralalklaPwasg 169
+                            + + + D D ++nv +Ll++L+  ++ qd+  G   ++ rpi++  ++              + +  GG+Gf+ls a  ++l   a  
+  sp|Q6UX72|B3GN9_HUMAN 223 RFVFKGDADVFVNVGNLLEFLAPRDPAQDLLAGDVIVHaRPIRTRASK-Y-YipeavYGLPAYPAYAGGGGFVLSGATLHRL---A-- 303
+                            56667799**************************98753788884333.2.223333555678888****************...3.. PP
+
+                 Fringe 170 grfvstsekirlpdDctlGfiieelLgvs 198
+                            g + + +      dD+ lG+++++ L+ +
+  sp|Q6UX72|B3GN9_HUMAN 304 GACAQVEL--FPIDDVFLGMCLQR-LRLT 329
+                            44444333..3369********98.6655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (402 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       354  (0.0184577); expected 383.6 (0.02)
+Passed bias filter:                      276  (0.0143907); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.13s 00:00:00.52 Elapsed: 00:00:00.53
+# Mc/sec: 2464.39
+//
+[ok]

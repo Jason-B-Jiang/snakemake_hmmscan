@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048344.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048344
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P39927  [L=425]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.2e-24   84.1   1.8    7.2e-24   84.1   1.8    2.9  1  CSTF2_hinge  Hinge domain of cleavage stimulation factor subu
+    5.3e-06   26.1   5.0    5.3e-06   26.1   5.0    3.0  1  CSTF_C       Transcription termination and cleavage factor C-
+
+
+Domain annotation for each model (and alignments):
+>> CSTF2_hinge  Hinge domain of cleavage stimulation factor subunit 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.1   1.8   7.5e-28   7.2e-24       2      81 .]     175     255 ..     174     255 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 84.1 bits;  conditional E-value: 7.5e-28
+  CSTF2_hinge   2 lPqgeqlpp.gltapdaIsktLsslppeqllellsqlKalaqqnp...sqarelLkqnpqLayAllqalllmglvdpdvvtsvl 81 
+                  lP    ++  ++ apd+Is++Ls++pp ql+e++s+lK+l++q++   sq++++L++n +++++++qall+mg++d++vvt+vl
+       P39927 175 LP---SFQDgSIIAPDKISQNLSKIPPLQLIEIISNLKILSNQENiqkSQLESFLDTNSDITISVTQALLEMGFIDYSVVTKVL 255
+                  66...67777899*******************************9999*********************************996 PP
+
+>> CSTF_C  Transcription termination and cleavage factor C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   5.0   5.5e-10   5.3e-06       4      28 ..     389     413 ..     381     420 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 5.5e-10
+  CSTF_C   4 ekaeLimQVLqLseeqIaaLPpdeR 28 
+              ++++i QVL L+++qI++LP d++
+  P39927 389 NQQDMIKQVLTLTPAQIQSLPSDQQ 413
+             689*********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (425 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       892  (0.0465092); expected 383.6 (0.02)
+Passed bias filter:                      554  (0.0288858); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.22s 00:00:00.66 Elapsed: 00:00:00.66
+# Mc/sec: 2093.73
+//
+[ok]

@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049892.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049892
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9P7H5|COX24_SCHPO  [L=175]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-12   47.3  21.5      2e-12   46.9  21.5    1.2  1  DUF1713   Mitochondrial domain of unknown function (DUF1713)
+    2.8e-07   31.3   0.1    5.5e-07   30.4   0.1    1.4  1  Pet20     Mitochondrial protein Pet20
+
+
+Domain annotation for each model (and alignments):
+>> DUF1713  Mitochondrial domain of unknown function (DUF1713)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.9  21.5   2.1e-16     2e-12       2      33 .]     144     175 .]     143     175 .] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 46.9 bits;  conditional E-value: 2.1e-16
+                DUF1713   2 dSVlrKRrkKMkKHKyKKlrKrtRalrrklgk 33 
+                            +SV+rKR++KM+KHK+KK+++r+Ralr++lgk
+  sp|Q9P7H5|COX24_SCHPO 144 TSVKRKRKLKMNKHKFKKRLRRQRALRKRLGK 175
+                            7******************************8 PP
+
+>> Pet20  Mitochondrial protein Pet20
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.4   0.1   5.7e-11   5.5e-07       2      57 ..      40      94 ..      39     119 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 30.4 bits;  conditional E-value: 5.7e-11
+                  Pet20  2 lPkVptTdyleskelqtdiLfaGYrPllypvkenllllesnkekeitaeeklneqe 57
+                           lP VptT +++ +++++   faGYrPl   ++  +++ ++++ +++ ++e+ + qe
+  sp|Q9P7H5|COX24_SCHPO 40 LPTVPTTSHVSYRQIAKANFFAGYRPLSANQICVPKVESKTQVSQS-QDEEDQPQE 94
+                           9**************************9999999999999864444.444443333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (175 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       722  (0.0376453); expected 383.6 (0.02)
+Passed bias filter:                      353  (0.0184055); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 922.80
+//
+[ok]

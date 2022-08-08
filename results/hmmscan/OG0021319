@@ -1,0 +1,114 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0021319.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0021319
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R3W5|F1R3W5_DANRE  [L=69]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.9e-18   65.1   7.1    8.8e-18   64.9   7.1    1.0  1  EMI       EMI domain
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.9   7.1   4.6e-22   8.8e-18       2      68 .]       2      68 ..       1      68 [. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 64.9 bits;  conditional E-value: 4.6e-22
+                     EMI  2 nvCay....evevavvtgtesyvqpvykpyltlCqgerkCs..tyrtvyrpayrqvyktvtelewrCCpGwsg 68
+                            n Cay    +v+++v++g  +++++ +      C++ +kC+  +yr+ y+p+y+++yktvtelew+CCpG++g
+  tr|F1R3W5|F1R3W5_DANRE  2 NHCAYvvekTVSFTVQDGAAPFMKAMK------CAWGQKCPttKYRMYYKPMYKVAYKTVTELEWKCCPGYTG 68
+                            89***8888888888888888888877......********99****************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (69 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       446  (0.0232546); expected 383.6 (0.02)
+Passed bias filter:                      243  (0.0126701); expected 383.6 (0.02)
+Passed Vit filter:                        12  (0.000625684); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.31u 0.20s 00:00:00.51 Elapsed: 00:00:00.65
+# Mc/sec: 344.39
+//
+Query:       sp|Q96A84|EMID1_HUMAN  [L=441]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-23   82.6 133.9    1.5e-09   37.5  31.5    4.8  3  Collagen  Collagen triple helix repeat (20 copies)
+    7.6e-16   58.7  10.2    1.2e-15   58.1  10.2    1.3  1  EMI       EMI domain
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.9  31.8   8.8e-12   8.5e-08       1      54 [.     212     265 ..     212     270 .. 0.76
+   2 !   36.1  29.8   4.4e-13   4.2e-09       2      55 ..     289     342 ..     286     343 .. 0.84
+   3 !   37.5  31.5   1.6e-13   1.5e-09       2      57 ..     313     368 ..     312     374 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 31.9 bits;  conditional E-value: 8.8e-12
+                            XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------B CS
+               Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGea 54 
+                            G++G++G +GppGp+G++G+pG+aG+ G +G++G++GppG++G+pG+p + G++
+  sp|Q96A84|EMID1_HUMAN 212 GSRGPMGMRGPPGPQGPPGSPGRAGAVGTPGERGPPGPPGPPGPPGPPAPVGPP 265
+                            677888888888888888888888888888888888888888888887777765 PP
+
+  == domain 2  score: 36.1 bits;  conditional E-value: 4.4e-13
+                            XXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB CS
+               Collagen   2 ppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaG 55 
+                            p+G++G+pGppGp G++G+pG++G +G++G+ G++Gp+G++G +G pGekGe+G
+  sp|Q96A84|EMID1_HUMAN 289 PQGPTGPPGPPGPMGPPGPPGPTGVPGSPGHIGPPGPTGPKGISGHPGEKGERG 342
+                            578888888888888888888888888888888888888888888888888887 PP
+
+  == domain 3  score: 37.5 bits;  conditional E-value: 1.6e-13
+                            XXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB-- CS
+               Collagen   2 ppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGap 57 
+                             pG+pG+ GppGp+G++G +G++GekGe+G +Ge+Gp+G+aG++G+pG+kG++G++
+  sp|Q96A84|EMID1_HUMAN 313 VPGSPGHIGPPGPTGPKGISGHPGEKGERGLRGEPGPQGSAGQRGEPGPKGDPGEK 368
+                            45555555555555555555555555555555555555555555555555555544 PP
+
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.1  10.2   1.2e-19   1.2e-15       1      68 []      34     101 ..      34     101 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 58.1 bits;  conditional E-value: 1.2e-19
+                    EMI   1 rnvCayevevavvtgte..syvqpvykpyltlCqgerkCs..tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                            rn+C+y v+ +++++++  +y+q+v ++    C+++ +C+  +yrtv+rp+y++ yk+vt+ ewrCCpG+sg
+  sp|Q96A84|EMID1_HUMAN  34 RNWCSYVVTRTISCHVQngTYLQRVLQN----CPWPMSCPgsSYRTVVRPTYKVMYKIVTAREWRCCPGHSG 101
+                            8*****5555554444322599999988....**************************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (441 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       326  (0.0169978); expected 383.6 (0.02)
+Passed bias filter:                      237  (0.0123573); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.57
+# Mc/sec: 2480.44
+//
+[ok]

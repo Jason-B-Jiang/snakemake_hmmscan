@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040832.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040832
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P0DMU3|F231L_HUMAN  [L=169]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.3e-112  370.8   3.1   8.1e-112  370.7   3.1    1.0  1  DUF4741   Domain of unknown function (DUF4741)
+
+
+Domain annotation for each model (and alignments):
+>> DUF4741  Domain of unknown function (DUF4741)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  370.7   3.1  4.2e-116  8.1e-112       1     169 []       1     169 []       1     169 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 370.7 bits;  conditional E-value: 4.2e-116
+                DUF4741   1 mgsskglwkerpsdhtsecfsttacpvafillvwnrqtpaglqslytgrhsslsvraqragpqasreegtfwkervgqerwlirlgss 88 
+                            m sskglwkerps+htsecfsttacpvafillvwn+qtpaglqsl+tgrh+sls+raqragp+asreegtfw+ervgqerwlir+gss
+  sp|P0DMU3|F231L_HUMAN   1 MVSSKGLWKERPSAHTSECFSTTACPVAFILLVWNSQTPAGLQSLCTGRHPSLSARAQRAGPRASREEGTFWTERVGQERWLIRSGSS 88 
+                            789************************************************************************************* PP
+
+                DUF4741  89 qnesqedqgadlishaglkadnqresstwadevedrrpqctpalnltpshphpprslitflrsvieiqippglvavggtva 169
+                            qnesqedqga lis+aglkadn+resstwa+evedrrpqctpalnltpshphpp sl+tflrsvi+iqippglva+ggtva
+  sp|P0DMU3|F231L_HUMAN  89 QNESQEDQGAGLISQAGLKADNRRESSTWANEVEDRRPQCTPALNLTPSHPHPPHSLTTFLRSVIGIQIPPGLVAAGGTVA 169
+                            *******************************************************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (169 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       257  (0.0134001); expected 383.6 (0.02)
+Passed bias filter:                      205  (0.0106888); expected 383.6 (0.02)
+Passed Vit filter:                        12  (0.000625684); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.18s 00:00:00.48 Elapsed: 00:00:00.51
+# Mc/sec: 1072.49
+//
+[ok]

@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035954.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035954
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5XTP0|Q5XTP0_DANRE  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.3e-63  210.4   2.8    7.3e-31  106.2   0.1    2.0  2  Crystall       Beta/Gamma crystallin
+    0.00021   21.2   0.1       0.25   11.4   0.0    2.6  0  Inhibitor_I36  Peptidase inhibitor family I36
+
+
+Domain annotation for each model (and alignments):
+>> Crystall  Beta/Gamma crystallin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.8   0.5   2.1e-34   2.1e-30       1      82 []       3      82 ..       3      82 .. 0.98
+   2 !  106.2   0.1   7.6e-35   7.3e-31       1      81 [.      91     171 ..      91     172 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 104.8 bits;  conditional E-value: 2.1e-34
+                            EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEEE CS
+                Crystall  1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrpi 82
+                            +i+++e++nfqGr++e+ +dc+++++  + ++++Si+V+sGaWv+Ye+pnf G+qy+l +geY+d+++w++ ndr++S+++i
+  tr|Q5XTP0|Q5XTP0_DANRE  3 RIIFFEDKNFQGRRHECDSDCSDFHT--YLNRCNSIRVESGAWVVYERPNFIGYQYVLTRGEYPDYQRWMGLNDRLCSCKMI 82
+                            699***********************..9999***********************************************987 PP
+
+  == domain 2  score: 106.2 bits;  conditional E-value: 7.6e-35
+                             EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEE CS
+                Crystall   1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrp 81 
+                             ki+ly+k +f G+ +e++edcps+ er+ +++v+S+kVl+G+W++Ye+pn+rGrqyll++geYr+  dwga  +++qS+++
+  tr|Q5XTP0|Q5XTP0_DANRE  91 KIQLYDKGDFAGQVYETTEDCPSVVERFRTREVHSCKVLDGIWIFYEHPNYRGRQYLLQKGEYRKPVDWGAVCPTVQSFKR 171
+                             79*****************************************************************************98 PP
+
+>> Inhibitor_I36  Peptidase inhibitor family I36
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       331  (0.0172585); expected 383.6 (0.02)
+Passed bias filter:                      240  (0.0125137); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.54
+# Mc/sec: 1045.70
+//
+[ok]

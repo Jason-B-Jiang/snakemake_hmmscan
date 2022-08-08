@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033910.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033910
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A3KPQ7|CEIP2_DANRE  [L=1378]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.9e-34  117.5   0.3      1e-20   74.1   0.0    3.5  2  ILEI      Interleukin-like EMT inducer
+    6.4e-28   97.3   0.0      3e-27   95.1   0.0    2.1  1  G8        G8 domain
+
+
+Domain annotation for each model (and alignments):
+>> ILEI  Interleukin-like EMT inducer
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.1   0.0     1e-24     1e-20       1      88 [.     267     357 ..     267     358 .. 0.97
+   2 !   39.0   0.1   9.7e-14   9.3e-10       1      89 []    1239    1323 ..    1239    1323 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 74.1 bits;  conditional E-value: 1e-24
+                   ILEI   1 rGinvvvvdektgkvldsksFdty..eeeserlveylksipdgsiVlvavkdeassnlsdearkales.lGskkiknlkfrdswafig 85 
+                            rGin+ vvd++t +vl +++Fdt+  +++s+rl e lk++p+g+iV++a+ d+a +nl  e++++++  lGs++i++lk+rd wa++ 
+  sp|A3KPQ7|CEIP2_DANRE 267 RGINLRVVDQDTAEVLVNERFDTHesQDDSKRLGELLKALPAGRIVALATGDSAVKNLVFETKQTIHDlLGSNYISDLKYRDAWALVS 354
+                            8***********************9669999********************************************************9 PP
+
+                   ILEI  86 rkG 88 
+                            + G
+  sp|A3KPQ7|CEIP2_DANRE 355 VIG 357
+                            988 PP
+
+  == domain 2  score: 39.0 bits;  conditional E-value: 9.7e-14
+                   ILEI    1 rGinvvvvdektgkvldsksFdtyeeeserlveylk.sipdgsiVlvavkdeassnlsdearkaleslGskkiknlkfrdswafig 85  
+                             +G+ +v+vd+++gkv+++  F+     + +++++ k +i ++siVl+a++++++s     + + leslGs+k+ +l+++   af g
+  sp|A3KPQ7|CEIP2_DANRE 1239 SGFLLVTVDACSGKVTKNSMFSS---LDTKMEQFFKtGIMKRSIVLLATRGQPASFA--GVAQYLESLGSAKTPDLQNKVAIAFFG 1319
+                             599******************99...688************************6544..589************************ PP
+
+                   ILEI   86 rkGs 89  
+                             + G+
+  sp|A3KPQ7|CEIP2_DANRE 1320 FLGQ 1323
+                             9986 PP
+
+>> G8  G8 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.1   0.0   3.1e-31     3e-27      11     121 .]     130     246 ..     122     246 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 95.1 bits;  conditional E-value: 3.1e-31
+                     G8  11 gdnvvIpagqtvlldvsspklrsllvq..GtLifsdd....knieleaeyilvqggGkLeiGteeepfkgkatItLrg..kelqseeg 90 
+                            ++ vvI++g+   ld ss++l s+++q  G+++f+dd    kni+l++++il+++gG+L+iG +++++++ atItL g  +e+  +e 
+  sp|A3KPQ7|CEIP2_DANRE 130 KKVVVIHSGEHYRLD-SSATLYSITIQagGSVVFADDkkgsKNITLRTRHILIEDGGALHIGAPKCRYRSLATITLVGrsDETAVTEV 216
+                            6789**********7.6777**************999******************************************9999***** PP
+
+                     G8  91 pnvgakvlgvlegGtlelhGqprkrtwtkLa 121
+                            p++g+k+lgv +gGtlelhG++r  +wt L+
+  sp|A3KPQ7|CEIP2_DANRE 217 PGMGRKFLGVNSGGTLELHGSERM-SWTFLT 246
+                            ***********************9.***986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1378 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       510  (0.0265916); expected 383.6 (0.02)
+Passed bias filter:                      439  (0.0228896); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.83
+# Mc/sec: 5360.16
+//
+[ok]

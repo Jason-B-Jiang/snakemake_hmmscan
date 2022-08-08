@@ -1,0 +1,202 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013053.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013053
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q17525|Q17525_CAEEL  [L=465]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.2e-26   90.3   0.0    1.7e-25   89.2   0.0    1.6  1  PET       PET Domain
+      2e-25   88.8  53.1    1.8e-11   44.2   7.0    4.5  3  LIM       LIM domain
+
+
+Domain annotation for each model (and alignments):
+>> PET  PET Domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.2   0.0   1.8e-29   1.7e-25       1      84 [.     153     235 ..     153     236 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 89.2 bits;  conditional E-value: 1.8e-29
+                     PET   1 veYeWvPpglkqelvkrYmevlpkekvPvvgsegekyrkkqllkqLPlhDqdvskCkeLseeekkelekFvkqrkeeaLGvGev 84 
+                             v+Y+W+P   +++lv+rYm++lp++++P+vgs+ge++rk++l+ qLPl+D++v++++ ++e+++k+l++Fv++++++++GvG+v
+  tr|Q17525|Q17525_CAEEL 153 VQYAWAPLP-DKNLVSRYMKALPEDERPLVGSKGEQNRKSRLQFQLPLYDCNVEDARFVEEKDVKTLQNFVENVRNNVIGVGRV 235
+                             58*****98.99**********************************************************************98 PP
+
+>> LIM  LIM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.1  10.7   2.3e-11   2.2e-07       1      56 [.     272     331 ..     272     333 .. 0.83
+   2 !   44.2   7.0   1.8e-15   1.8e-11       1      57 [.     337     392 ..     337     393 .. 0.97
+   3 !   31.4  10.3   1.9e-11   1.8e-07       1      52 [.     397     450 ..     397     456 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 31.1 bits;  conditional E-value: 2.3e-11
+                             -TTT--BE-....TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHH CS
+                     LIM   1 CagCnkkia....drelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylk 56 
+                             C+ Cn+  +      e   +   +++H++CF+C++C++ L ++ ++  ++k yC ++y++
+  tr|Q17525|Q17525_CAEEL 272 CKDCNEMMEtgdiGVECHHHSTTDTYHPNCFRCETCRQLLVDNIYFFYKNKYYCGRHYAD 331
+                             8899999885555344444567789*******************9999999*******87 PP
+
+  == domain 2  score: 44.2 bits;  conditional E-value: 1.8e-15
+                             -TTT--BE-TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHHH CS
+                     LIM   1 CagCnkkiadrelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylkk 57 
+                             CagC++ i ++e++  a++k+wH ++F C +C+ +L   +++ +d++++C ++ylk 
+  tr|Q17525|Q17525_CAEEL 337 CAGCDELIFANEYTF-AEEKSWHFDHFACYKCDFKLGGSRYMTRDENPFCLDCYLKH 392
+                             **************6.**************************************986 PP
+
+  == domain 3  score: 31.4 bits;  conditional E-value: 1.9e-11
+                             -TTT--BE-TTTEEEEETTEEEETT..TSB-TTT-SB-CTT.CEEETTEEEEHH CS
+                     LIM   1 CagCnkkiadrelvlkaldkvwHee..CFtCsdCqkeLkegsfyekdgklyCkk 52 
+                             C  C+ ki ++e  l+ ++ +wH e  CF+C +C+ +L  ++f++k++kl+C++
+  tr|Q17525|Q17525_CAEEL 397 CDTCQSKIGPDEKRLNYNETHWHAEerCFQCVQCKMNLIGKKFMLKNHKLLCSS 450
+                             9********999999********7555*************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (465 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       996  (0.0519318); expected 383.6 (0.02)
+Passed bias filter:                      366  (0.0190834); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.21s 00:00:00.68 Elapsed: 00:00:00.70
+# Mc/sec: 2149.71
+//
+Query:       tr|F1QNJ3|F1QNJ3_DANRE  [L=541]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-35  122.0   0.1    1.9e-35  121.2   0.1    1.4  1  PET       PET Domain
+    2.1e-28   98.4  59.4    1.4e-12   47.7  11.1    5.2  3  LIM       LIM domain
+
+
+Domain annotation for each model (and alignments):
+>> PET  PET Domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.2   0.1     2e-39   1.9e-35       1      84 [.     205     288 ..     205     289 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 121.2 bits;  conditional E-value: 2e-39
+                     PET   1 veYeWvPpglkqelvkrYmevlpkekvPvvgsegekyrkkqllkqLPlhDqdvskCkeLseeekkelekFvkqrkeeaLGvGev 84 
+                             v+YeW+Ppg++q+l+ rYme+lp e++P++g++g++yrkkq++kqLP hDqd++ C+eLs+ e k+++++v+++k+eaLG+G++
+  tr|F1QNJ3|F1QNJ3_DANRE 205 VTYEWAPPGINQSLALRYMELLPPEQRPIAGTTGADYRKKQMAKQLPDHDQDPERCHELSPGEIKQMQQYVRKYKDEALGIGDI 288
+                             69********************************************************************************98 PP
+
+>> LIM  LIM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   8.7   4.7e-16   4.5e-12       1      56 [.     354     413 ..     354     415 .. 0.90
+   2 !   47.7  11.1   1.4e-16   1.4e-12       1      58 []     419     475 ..     419     475 .. 0.92
+   3 !   26.5   8.9   6.2e-10     6e-06       1      52 [.     479     532 ..     479     538 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 4.7e-16
+                             -TTT--BE-....TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHH CS
+                     LIM   1 CagCnkkia....drelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylk 56 
+                             C++C+k+ +    +    ++ +dk wH++CF+C++C + L ++ +++k+g+lyC ++y +
+  tr|F1QNJ3|F1QNJ3_DANRE 354 CHQCQKPMKkgepAVFAERAGYDKLWHPACFVCCTCTELLVDMIYFWKKGQLYCGRHYGD 413
+                             *********776655566779*************************************76 PP
+
+  == domain 2  score: 47.7 bits;  conditional E-value: 1.4e-16
+                             -TTT--BE-TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHHHC CS
+                     LIM   1 CagCnkkiadrelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylkkf 58 
+                             C gC++ i ++e++ +a++++wH ++F+C+dC++ L+ +++++ ++k++Ck +y+k++
+  tr|F1QNJ3|F1QNJ3_DANRE 419 CGGCDELIFSNEYT-QAEGQNWHLKHFCCFDCDCVLAGETYVMEKEKPVCKPCYMKNH 475
+                             **************.8***********************76655669*******9975 PP
+
+  == domain 3  score: 26.5 bits;  conditional E-value: 6.2e-10
+                             -TTT--BE-TTTEEEEETTEEEE..TTTSB-TTT-SB-CTT.CEEETTEEEEHH CS
+                     LIM   1 CagCnkkiadrelvlkaldkvwH..eeCFtCsdCqkeLkegsfyekdgklyCkk 52 
+                             C +C+k+i+++   ++  +++wH  ++CF+C+ C+k L  ++f+  +gkl C+ 
+  tr|F1QNJ3|F1QNJ3_DANRE 479 CVACQKPIEPESQRVSYGEHHWHaePQCFQCAGCSKCLMGQRFMALQGKLICSV 532
+                             99*******8777779*******5447*************************85 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (541 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       758  (0.0395224); expected 383.6 (0.02)
+Passed bias filter:                      252  (0.0131394); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.65
+# Mc/sec: 2697.87
+//
+Query:       sp|Q9UGI8|TES_HUMAN  [L=421]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-41  140.2   2.7    3.9e-41  139.3   2.7    1.5  1  PET       PET Domain
+    2.3e-28   98.3  58.8    3.8e-14   52.8   8.1    4.6  2  LIM       LIM domain
+
+
+Domain annotation for each model (and alignments):
+>> PET  PET Domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.3   2.7   4.1e-45   3.9e-41       1      85 []     109     193 ..     109     193 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 139.3 bits;  conditional E-value: 4.1e-45
+                  PET   1 veYeWvPpglkqelvkrYmevlpkekvPvvgsegekyrkkqllkqLPlhDqdvskCkeLseeekkelekFvkqrkeeaLGvGevk 85 
+                          v+YeW+Pp ++q+l+++Ym++lpkek+Pv+gseg++yrkkql+kqLP+hDqd+skC+eLs++e+ke+e+Fvk++k+eaLGvG+vk
+  sp|Q9UGI8|TES_HUMAN 109 VTYEWAPPVQNQALARQYMQMLPKEKQPVAGSEGAQYRKKQLAKQLPAHDQDPSKCHELSPREVKEMEQFVKKYKSEALGVGDVK 193
+                          69*********************************************************************************97 PP
+
+>> LIM  LIM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.9   9.1   2.7e-16   2.6e-12       1      57 [.     236     296 ..     236     297 .. 0.90
+   2 !   52.8   8.1   3.9e-18   3.8e-14       1      58 []     301     357 ..     301     357 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 46.9 bits;  conditional E-value: 2.7e-16
+                          -TTT--BE-....TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHHH CS
+                  LIM   1 CagCnkkia....drelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylkk 57 
+                          C++C+ + +    + +  ++ +dk wH++CF+Cs+C++ L ++ +++k++klyC ++y+++
+  sp|Q9UGI8|TES_HUMAN 236 CYCCKLSMKegdpAIYAERAGYDKLWHPACFVCSTCHELLVDMIYFWKNEKLYCGRHYCDS 296
+                          888888888777667778889*************************************986 PP
+
+  == domain 2  score: 52.8 bits;  conditional E-value: 3.9e-18
+                          -TTT--BE-TTTEEEEETTEEEETTTSB-TTT-SB-CTT.CEEETTEEEEHHHHHHHC CS
+                  LIM   1 CagCnkkiadrelvlkaldkvwHeeCFtCsdCqkeLkegsfyekdgklyCkkdylkkf 58 
+                          CagC++ i ++e++ +a++++wH ++F+C+dC+  L+ + ++++++k++Ck +y+k++
+  sp|Q9UGI8|TES_HUMAN 301 CAGCDELIFSNEYT-QAENQNWHLKHFCCFDCDSILAGEIYVMVNDKPVCKPCYVKNH 357
+                          **************.8**************************************9975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (421 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1217  (0.0634548); expected 383.6 (0.02)
+Passed bias filter:                      475  (0.0247667); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.21s 00:00:00.65 Elapsed: 00:00:00.59
+# Mc/sec: 2292.19
+//
+[ok]

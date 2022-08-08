@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032756.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032756
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q8IPS7|Q8IPS7_DROME  [L=534]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.4e-07   29.2   0.0    1.1e-06   28.6   0.0    1.4  1  Peptidase_M24  Metallopeptidase family M24
+    1.3e-06   28.3   0.0    2.5e-06   27.3   0.0    1.4  1  AMP_N          Aminopeptidase P, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M24  Metallopeptidase family M24
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.6   0.0   1.2e-10   1.1e-06      51     126 ..     287     368 ..     244     480 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 28.6 bits;  conditional E-value: 1.2e-10
+                             SEEEEGGGGGSTTTBCSSSB....--TTEEEEEEEEEEETTEEEEEEEEE.EESSGSHHHHHHHHHHHHHHHHHHHT-ST.T CS
+           Peptidase_M24  51 pivasgenaallhytpndrv....lkegdlvlidagaeydgyasditrTv.lvGkfdpeqrelyeavleaqeaaieavkp.G 126
+                               +++  ++ l h++p+ ++    l+ + l  +dag++y gy +  +r +   G+f+p q+ +y a+l++++ + ++++  G
+  tr|Q8IPS7|Q8IPS7_DROME 287 LAASFDYKCRLRHARPDVTKtscgLDGNGLWQMDAGCQYGGYEGGLARCWpSSGRFTPPQKMIYGALLDMRRDLCSLIQYaG 368
+                             336677777788888853334577**************************889******************99999887445 PP
+
+>> AMP_N  Aminopeptidase P, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.3   0.0   2.6e-10   2.5e-06      31      74 ..     133     175 ..     104     183 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 27.3 bits;  conditional E-value: 2.6e-10
+                             TEE------HHHHHHH----SS-EEEEEESSEEEE...EEEE-- CS
+                   AMP_N  31 dveypFrqnsdFfYltGfnepdavlvlekgedkkehkstLfvpr 74 
+                               +ypFrq+ dF+Yl+ + +p+a+lvl++++ k+++ + Lf+ +
+  tr|Q8IPS7|Q8IPS7_DROME 133 ARSYPFRQRPDFLYLCDCLRPGAALVLTRSR-KRNTGALLFLSQ 175
+                             578************************7533.466788888865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (534 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       479  (0.0249752); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.68
+# Mc/sec: 2552.29
+//
+[ok]

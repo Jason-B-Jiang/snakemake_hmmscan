@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035274.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035274
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A1D5NSZ9|A0A1D5NSZ9_DANRE  [L=263]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.7e-18   65.2  15.5      1e-08   35.3   1.9    2.2  2  SCHIP-1   Schwannomin-interacting protein 1
+
+
+Domain annotation for each model (and alignments):
+>> SCHIP-1  Schwannomin-interacting protein 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   6.4   6.4e-13   1.2e-08      27      98 ..      96     167 ..      81     191 .. 0.71
+   2 !   35.3   1.9   5.3e-13     1e-08     173     234 ..     200     261 ..     189     263 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 6.4e-13
+                         SCHIP-1  27 eaeksrkpslqsrlqsGmnLqiCfvnetssdtesdasdsestetslksPkstsisqekkldaknpypsspqs 98 
+                                     ++ +sr  sl srlqs mnLq+Cf+n+++s++e ++ + + + t+++s  ++s++ ek+  +    p + +s
+  tr|A0A1D5NSZ9|A0A1D5NSZ9_DANRE  96 DDCNSRLTSLTSRLQSQMNLQLCFINNSESEEEEEEIEAKKEVTKQSSKSGSSQQLEKERGSSSASPKKTKS 167
+                                     5667899************************99999888844444444444344445555544444444444 PP
+
+  == domain 2  score: 35.3 bits;  conditional E-value: 5.3e-13
+                         SCHIP-1 173 edkrrlsrqiltdlnvaqLqvivnDLhsqietlneeLvqlLlkrDdlhmeqDamLvDieDLt 234
+                                     +++++ +r++l+++++  L+ +   L   i+ l  eLv  Ll+rD+l +eqDamL ++ D+t
+  tr|A0A1D5NSZ9|A0A1D5NSZ9_DANRE 200 RERKHYERNDLKNFSLKELKALRTSLSKDIHDLSSELVGRLLTRDQLRTEQDAMLLEVQDMT 261
+                                     5678899*****************************************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (263 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2328  (0.121383); expected 383.6 (0.02)
+Passed bias filter:                      651  (0.0339434); expected 383.6 (0.02)
+Passed Vit filter:                        59  (0.00307628); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.45u 0.21s 00:00:00.66 Elapsed: 00:00:00.71
+# Mc/sec: 1197.32
+//
+[ok]

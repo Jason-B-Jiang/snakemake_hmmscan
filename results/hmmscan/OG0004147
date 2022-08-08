@@ -1,0 +1,901 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004147.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004147
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EF34|G5EF34_CAEEL  [L=966]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-24   86.6 140.0    2.4e-09   37.5  14.4   14.0  2  VWC         von Willebrand factor type C domain
+    1.6e-12   47.9  42.9    4.7e-06   27.2   9.6   14.7  3  Antistasin  Antistasin family
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5  14.4   2.5e-13   2.4e-09       5      57 .]     607     658 ..     601     658 .. 0.94
+   2 !   27.7  16.3   2.8e-10   2.7e-06       1      57 []     744     797 ..     744     797 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 2.5e-13
+                     VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             g+++ +ge+w+ + C  CtC+ ++v C++++Cp+  C++p + ++e++CC++C
+  tr|G5EF34|G5EF34_CAEEL 607 GRLFTDGETWQLAPCVSCTCRVGHVLCRTTECPPIACPNP-EYQNEEDCCPTC 658
+                             78999***********************************.79999******* PP
+
+  == domain 2  score: 27.7 bits;  conditional E-value: 2.8e-10
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C +++ vy+ ge+w+   C +C+C + +++ C+++ Cp  +C++p  ++ eg CC+ C
+  tr|G5EF34|G5EF34_CAEEL 744 CSYQSSVYAIGEQWQDGRCSNCSCVTgGQTVCRQMVCP--HCDDP--VPIEGHCCPLC 797
+                             999**********************999*********7..9****..*********99 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   7.0   3.3e-09   3.2e-05       1      26 []     389     415 ..     389     415 .. 0.98
+   2 !   26.3  10.3   9.3e-10   8.9e-06       1      26 []     426     454 ..     426     454 .. 0.87
+   3 !   27.2   9.6   4.9e-10   4.7e-06       1      26 []     457     483 ..     457     483 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 3.3e-09
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cp+l  C+l C +G+++D  GC +CeC
+  tr|G5EF34|G5EF34_CAEEL 389 CPSLeLCSLRCANGLRRDNIGCYVCEC 415
+                             ***889********************* PP
+
+  == domain 2  score: 26.3 bits;  conditional E-value: 9.3e-10
+              Antistasin   1 Cppl...nCrlsCpyGfqtDenGCptCeC 26 
+                             C +l   nC ++C +G+ +De+GC +C+C
+  tr|G5EF34|G5EF34_CAEEL 426 CRELndeNCEKQCAHGYLKDEDGCTVCKC 454
+                             65633559********************* PP
+
+  == domain 3  score: 27.2 bits;  conditional E-value: 4.9e-10
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cppl +C+++C yGf+t++ GC +C+C
+  tr|G5EF34|G5EF34_CAEEL 457 CPPLhQCHKHCLYGFETNSAGCSLCKC 483
+                             ***77********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (966 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1394  (0.0726837); expected 383.6 (0.02)
+Passed bias filter:                      496  (0.0258616); expected 383.6 (0.02)
+Passed Vit filter:                        82  (0.00427551); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.21s 00:00:00.82 Elapsed: 00:00:00.77
+# Mc/sec: 4065.03
+//
+Query:       tr|E1B6S3|E1B6S3_CAEEL  [L=875]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.4e-26   91.9 240.0    2.1e-09   37.6  14.4   12.9  2  VWC         von Willebrand factor type C domain
+    9.1e-13   48.6  42.9    4.2e-06   27.3   9.6   13.8  3  Antistasin  Antistasin family
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.6  14.4   2.2e-13   2.1e-09       5      57 .]     516     567 ..     510     567 .. 0.94
+   2 !   27.8  16.3   2.5e-10   2.4e-06       1      57 []     653     706 ..     653     706 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.6 bits;  conditional E-value: 2.2e-13
+                     VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             g+++ +ge+w+ + C  CtC+ ++v C++++Cp+  C++p + ++e++CC++C
+  tr|E1B6S3|E1B6S3_CAEEL 516 GRLFTDGETWQLAPCVSCTCRVGHVLCRTTECPPIACPNP-EYQNEEDCCPTC 567
+                             78999***********************************.79999******* PP
+
+  == domain 2  score: 27.8 bits;  conditional E-value: 2.5e-10
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C +++ vy+ ge+w+   C +C+C + +++ C+++ Cp  +C++p  ++ eg CC+ C
+  tr|E1B6S3|E1B6S3_CAEEL 653 CSYQSSVYAIGEQWQDGRCSNCSCVTgGQTVCRQMVCP--HCDDP--VPIEGHCCPLC 706
+                             999**********************999*********7..9****..*********99 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   7.0     3e-09   2.8e-05       1      26 []     298     324 ..     298     324 .. 0.98
+   2 !   26.4  10.3   8.3e-10   7.9e-06       1      26 []     335     363 ..     335     363 .. 0.87
+   3 !   27.3   9.6   4.4e-10   4.2e-06       1      26 []     366     392 ..     366     392 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 3e-09
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cp+l  C+l C +G+++D  GC +CeC
+  tr|E1B6S3|E1B6S3_CAEEL 298 CPSLeLCSLRCANGLRRDNIGCYVCEC 324
+                             ***889********************* PP
+
+  == domain 2  score: 26.4 bits;  conditional E-value: 8.3e-10
+              Antistasin   1 Cppl...nCrlsCpyGfqtDenGCptCeC 26 
+                             C +l   nC ++C +G+ +De+GC +C+C
+  tr|E1B6S3|E1B6S3_CAEEL 335 CRELndeNCEKQCAHGYLKDEDGCTVCKC 363
+                             65633559********************* PP
+
+  == domain 3  score: 27.3 bits;  conditional E-value: 4.4e-10
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cppl +C+++C yGf+t++ GC +C+C
+  tr|E1B6S3|E1B6S3_CAEEL 366 CPPLhQCHKHCLYGFETNSAGCSLCKC 392
+                             ***77********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (875 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1257  (0.0655404); expected 383.6 (0.02)
+Passed bias filter:                      442  (0.023046); expected 383.6 (0.02)
+Passed Vit filter:                        75  (0.00391053); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.15s 00:00:00.74 Elapsed: 00:00:00.75
+# Mc/sec: 3779.93
+//
+Query:       tr|G5EBZ2|G5EBZ2_CAEEL  [L=904]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.6e-26   91.3 240.3    2.2e-09   37.6  14.4   12.9  2  VWC         von Willebrand factor type C domain
+    1.1e-12   48.4  42.9    4.3e-06   27.3   9.6   13.6  3  Antistasin  Antistasin family
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.6  14.4   2.3e-13   2.2e-09       5      57 .]     541     592 ..     535     592 .. 0.94
+   2 !   27.8  16.3   2.6e-10   2.5e-06       1      57 []     678     731 ..     678     731 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.6 bits;  conditional E-value: 2.3e-13
+                     VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             g+++ +ge+w+ + C  CtC+ ++v C++++Cp+  C++p + ++e++CC++C
+  tr|G5EBZ2|G5EBZ2_CAEEL 541 GRLFTDGETWQLAPCVSCTCRVGHVLCRTTECPPIACPNP-EYQNEEDCCPTC 592
+                             78999***********************************.79999******* PP
+
+  == domain 2  score: 27.8 bits;  conditional E-value: 2.6e-10
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C +++ vy+ ge+w+   C +C+C + +++ C+++ Cp  +C++p  ++ eg CC+ C
+  tr|G5EBZ2|G5EBZ2_CAEEL 678 CSYQSSVYAIGEQWQDGRCSNCSCVTgGQTVCRQMVCP--HCDDP--VPIEGHCCPLC 731
+                             999**********************999*********7..9****..*********99 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.6   7.0   3.1e-09   2.9e-05       1      26 []     323     349 ..     323     349 .. 0.98
+   2 !   26.4  10.3   8.6e-10   8.2e-06       1      26 []     360     388 ..     360     388 .. 0.87
+   3 !   27.3   9.6   4.5e-10   4.3e-06       1      26 []     391     417 ..     391     417 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 24.6 bits;  conditional E-value: 3.1e-09
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cp+l  C+l C +G+++D  GC +CeC
+  tr|G5EBZ2|G5EBZ2_CAEEL 323 CPSLeLCSLRCANGLRRDNIGCYVCEC 349
+                             ***889********************* PP
+
+  == domain 2  score: 26.4 bits;  conditional E-value: 8.6e-10
+              Antistasin   1 Cppl...nCrlsCpyGfqtDenGCptCeC 26 
+                             C +l   nC ++C +G+ +De+GC +C+C
+  tr|G5EBZ2|G5EBZ2_CAEEL 360 CRELndeNCEKQCAHGYLKDEDGCTVCKC 388
+                             65633559********************* PP
+
+  == domain 3  score: 27.3 bits;  conditional E-value: 4.5e-10
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cppl +C+++C yGf+t++ GC +C+C
+  tr|G5EBZ2|G5EBZ2_CAEEL 391 CPPLhQCHKHCLYGFETNSAGCSLCKC 417
+                             ***77********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (904 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1336  (0.0696595); expected 383.6 (0.02)
+Passed bias filter:                      492  (0.0256531); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.18s 00:00:00.77 Elapsed: 00:00:00.73
+# Mc/sec: 3994.61
+//
+Query:       tr|G5EEX3|G5EEX3_CAEEL  [L=900]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.4e-26   91.4 240.3    2.2e-09   37.6  14.4   12.9  2  VWC         von Willebrand factor type C domain
+    1.1e-12   48.4  42.9    4.3e-06   27.3   9.6   13.7  3  Antistasin  Antistasin family
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.6  14.4   2.3e-13   2.2e-09       5      57 .]     541     592 ..     535     592 .. 0.94
+   2 !   27.8  16.3   2.6e-10   2.5e-06       1      57 []     678     731 ..     678     731 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.6 bits;  conditional E-value: 2.3e-13
+                     VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             g+++ +ge+w+ + C  CtC+ ++v C++++Cp+  C++p + ++e++CC++C
+  tr|G5EEX3|G5EEX3_CAEEL 541 GRLFTDGETWQLAPCVSCTCRVGHVLCRTTECPPIACPNP-EYQNEEDCCPTC 592
+                             78999***********************************.79999******* PP
+
+  == domain 2  score: 27.8 bits;  conditional E-value: 2.6e-10
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C +++ vy+ ge+w+   C +C+C + +++ C+++ Cp  +C++p  ++ eg CC+ C
+  tr|G5EEX3|G5EEX3_CAEEL 678 CSYQSSVYAIGEQWQDGRCSNCSCVTgGQTVCRQMVCP--HCDDP--VPIEGHCCPLC 731
+                             999**********************999*********7..9****..*********99 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.6   7.0   3.1e-09   2.9e-05       1      26 []     323     349 ..     323     349 .. 0.98
+   2 !   26.4  10.3   8.6e-10   8.2e-06       1      26 []     360     388 ..     360     388 .. 0.87
+   3 !   27.3   9.6   4.5e-10   4.3e-06       1      26 []     391     417 ..     391     417 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 24.6 bits;  conditional E-value: 3.1e-09
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cp+l  C+l C +G+++D  GC +CeC
+  tr|G5EEX3|G5EEX3_CAEEL 323 CPSLeLCSLRCANGLRRDNIGCYVCEC 349
+                             ***889********************* PP
+
+  == domain 2  score: 26.4 bits;  conditional E-value: 8.6e-10
+              Antistasin   1 Cppl...nCrlsCpyGfqtDenGCptCeC 26 
+                             C +l   nC ++C +G+ +De+GC +C+C
+  tr|G5EEX3|G5EEX3_CAEEL 360 CRELndeNCEKQCAHGYLKDEDGCTVCKC 388
+                             65633559********************* PP
+
+  == domain 3  score: 27.3 bits;  conditional E-value: 4.5e-10
+              Antistasin   1 Cppl.nCrlsCpyGfqtDenGCptCeC 26 
+                             Cppl +C+++C yGf+t++ GC +C+C
+  tr|G5EEX3|G5EEX3_CAEEL 391 CPPLhQCHKHCLYGFETNSAGCSLCKC 417
+                             ***77********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (900 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1314  (0.0685124); expected 383.6 (0.02)
+Passed bias filter:                      479  (0.0249752); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.60u 0.17s 00:00:00.77 Elapsed: 00:00:00.74
+# Mc/sec: 3913.15
+//
+Query:       tr|Q8SXY5|Q8SXY5_DROME  [L=452]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (452 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1342  (0.0699724); expected 383.6 (0.02)
+Passed bias filter:                      540  (0.0281558); expected 383.6 (0.02)
+Passed Vit filter:                        69  (0.00359768); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.71
+# Mc/sec: 2066.00
+//
+Query:       sp|Q7T3Q2|CRIM1_DANRE  [L=1027]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    9.1e-65  216.6   2.0    9.7e-65  216.5   0.1    2.1  1  CRIM1_C     Cysteine-rich motor neuron 1 protein C-terminal
+    1.8e-39  134.0 119.5    2.2e-10   40.8  14.7   16.3  6  VWC         von Willebrand factor type C domain
+    9.3e-19   67.8  60.4    1.4e-07   32.0   9.2   14.5  4  Antistasin  Antistasin family
+    7.1e-08   33.1  20.8    7.1e-08   33.1  20.8   16.5  1  IGFBP       Insulin-like growth factor binding protein
+
+
+Domain annotation for each model (and alignments):
+>> CRIM1_C  Cysteine-rich motor neuron 1 protein C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.5   0.1     2e-68   9.7e-65       1     129 [.     898    1026 ..     898    1027 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 216.5 bits;  conditional E-value: 2e-68
+                CRIM1_C    1 endivhlkr.dlghlqvdyreskrpkpsedssldsvawvavpiiialvliialllinqkkqwipvscyrtptkpsclnnqlvyvdc 85  
+                             end++ ++r ++g+lq++y ++k+p psed+ l+  awva+p++++++++ alll+nq+kqwipv+cyrtp+k +clnnqlvyvdc
+  sp|Q7T3Q2|CRIM1_DANRE  898 ENDVMPQFRgEFGSLQMPYLDGKTPLPSEDAGLH-WAWVALPVLMMMLTLAALLLVNQRKQWIPVPCYRTPNKSTCLNNQLVYVDC 982 
+                             8********99**********************9.69************************************************* PP
+
+                CRIM1_C   86 kkGtkvqvdssqrmlriadpdsrysGfysmqkqnnlqadnfyqt 129 
+                             +kGtkvqvdssqrmlriadpdsrysG+ysmqk+nnlqadnfyqt
+  sp|Q7T3Q2|CRIM1_DANRE  983 QKGTKVQVDSSQRMLRIADPDSRYSGYYSMQKHNNLQADNFYQT 1026
+                             *******************************************9 PP
+
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.3  11.2   8.9e-11   4.2e-07       1      57 []     330     384 ..     330     384 .. 0.98
+   2 !   32.6  13.7   1.7e-11   7.9e-08       1      57 []     397     450 ..     397     450 .. 0.98
+   3 !   32.1  13.4   2.4e-11   1.2e-07       3      57 .]     606     657 ..     603     657 .. 0.95
+   4 !   38.6  13.6   2.3e-13   1.1e-09       5      57 .]     679     729 ..     674     729 .. 0.94
+   5 !   35.3  12.9   2.3e-12   1.1e-08       3      57 .]     751     803 ..     748     803 .. 0.94
+   6 !   40.8  14.7   4.6e-14   2.2e-10       1      57 []     812     866 ..     812     866 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 30.3 bits;  conditional E-value: 8.9e-11
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            C++ng+ y++g+ ++ d C+ C+C+ +   C + +C   +Ce      ++geCC+vC
+  sp|Q7T3Q2|CRIM1_DANRE 330 CTLNGVEYHDGDMFRMDACRFCRCQGGVSVCFTAQCGVLHCERY--YVPDGECCPVC 384
+                            99****************************************98..999******** PP
+
+  == domain 2  score: 32.6 bits;  conditional E-value: 1.7e-11
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            C+vng++ ++g+ w++d C+ C+C ++  +C    C  ++C +p  ++++geCC+vC
+  sp|Q7T3Q2|CRIM1_DANRE 397 CYVNGQILAHGDHWREDDCTFCQCVSGDARCVAAACG-HSCLNP--VTVPGECCPVC 450
+                            9***********************************6.9*****..*********** PP
+
+  == domain 3  score: 32.1 bits;  conditional E-value: 2.4e-11
+                    VWC   3 vngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            ++g+ +eng++w+   C+ C C++++  C  i+Cp  +C++p  + ++g CC++C
+  sp|Q7T3Q2|CRIM1_DANRE 606 MDGRRHENGQSWHDG-CRDCYCHAGREMCALISCPVPPCDNP--TIRPGHCCPTC 657
+                            6899**********9.**************************..9********** PP
+
+  == domain 4  score: 38.6 bits;  conditional E-value: 2.3e-13
+                    VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            g+ + +ge+w+ d+C++CtC++++v C++  Cp+  C+sp  +  ++ CC+ C
+  sp|Q7T3Q2|CRIM1_DANRE 679 GEYFVEGETWNIDSCTQCTCHSGRVLCETEVCPPLLCHSP--IRTQDSCCPHC 729
+                            677889**********************************..9*********9 PP
+
+  == domain 5  score: 35.3 bits;  conditional E-value: 2.3e-12
+                    VWC   3 vngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            ++g ++ + e+wkp++C  C+C d++++C   +Cp+ +C+ p  + ++g+CC+ C
+  sp|Q7T3Q2|CRIM1_DANRE 751 EDGDIFLAAESWKPNVCSSCVCLDGAISCFSESCPPVNCARP--VLRKGQCCPYC 803
+                            578899999*********************************..9********99 PP
+
+  == domain 6  score: 40.8 bits;  conditional E-value: 4.6e-14
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            C +ngk+y ++e w  d+C+ C C ++++ C++++Cp+ +C++p   ++eg CC+ C
+  sp|Q7T3Q2|CRIM1_DANRE 812 CHFNGKTYMDEERWDIDSCTHCYCLQGQTLCSTVSCPALPCHQP--LTVEGSCCPMC 866
+                            9*******************************************..9*********9 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.0   7.6   2.2e-09   1.1e-05       1      26 []     463     492 ..     463     492 .. 0.92
+   2 !   32.0   9.2     3e-11   1.4e-07       4      26 .]     503     526 ..     499     526 .. 0.88
+   3 !   26.0   9.5   2.3e-09   1.1e-05       1      26 []     533     558 ..     533     558 .. 0.97
+   4 !   29.2  10.1   2.3e-10   1.1e-06       1      26 []     561     586 ..     561     586 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 26.0 bits;  conditional E-value: 2.2e-09
+             Antistasin   1 Cppl.nCrls...CpyGfqtDenGCptCeC 26 
+                            C +l nC+l    C +Gf++D++GC+tC C
+  sp|Q7T3Q2|CRIM1_DANRE 463 CGSLdNCTLLeqsCAFGFRLDPSGCRTCAC 492
+                            888889*888889***************** PP
+
+  == domain 2  score: 32.0 bits;  conditional E-value: 3e-11
+             Antistasin   4 l.nCrlsCpyGfqtDenGCptCeC 26 
+                            + +C+l+Cp+GfqtD +GC++C+C
+  sp|Q7T3Q2|CRIM1_DANRE 503 MaSCTLKCPFGFQTDIHGCDVCQC 526
+                            258********************* PP
+
+  == domain 3  score: 26.0 bits;  conditional E-value: 2.3e-09
+             Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                            C+++ C ++Cp+G+ ++++GC+tC+C
+  sp|Q7T3Q2|CRIM1_DANRE 533 CKAVACAKDCPFGYIKNKHGCDTCRC 558
+                            98889********************* PP
+
+  == domain 4  score: 29.2 bits;  conditional E-value: 2.3e-10
+             Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                            Cp+l C++ Cp Gfq De GC +C+C
+  sp|Q7T3Q2|CRIM1_DANRE 561 CPELPCDKACPMGFQHDELGCLICQC 586
+                            ************************** PP
+
+>> IGFBP  Insulin-like growth factor binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.1  20.8   1.5e-11   7.1e-08       1      55 []      31      84 ..      31      84 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 33.1 bits;  conditional E-value: 1.5e-11
+                  IGFBP  1 CpekCeaeeCppeaesCpagvelvedgCgcCkvCarqegesCg...vktprCaegLeC 55
+                           C + C++++C+ e++ C+    +v   CgcC+vCa+q++esCg     +++C++gL+C
+  sp|Q7T3Q2|CRIM1_DANRE 31 CLP-CDKSKCE-EPKPCTGS--VVLGICGCCSVCAKQKNESCGgvyGLYGTCDRGLRC 84
+                           877.******5.5699*444..59*******************9763348******** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1027 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       942  (0.0491162); expected 383.6 (0.02)
+Passed bias filter:                      275  (0.0143386); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.58u 0.16s 00:00:00.74 Elapsed: 00:00:00.72
+# Mc/sec: 4614.27
+//
+Query:       tr|A8WHY5|A8WHY5_DANRE  [L=220]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.2e-16   58.4  47.9    2.9e-09   37.2  15.4    3.2  1  VWC       von Willebrand factor type C domain
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.2  15.4   1.5e-13   2.9e-09       1      57 []     103     158 ..     103     158 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 37.2 bits;  conditional E-value: 1.5e-13
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C ++g+vye g+ ++p+ C++CtC + +  +C+   C + +C +p  + ++geCC++C
+  tr|A8WHY5|A8WHY5_DANRE 103 CEYGGEVYELGQHFQPSACEQCTCYSdGIAHCQVADCAPPPCVDP--VYQKGECCPQC 158
+                             999*********************9868899**************..9********** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (220 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       727  (0.037906); expected 383.6 (0.02)
+Passed bias filter:                      171  (0.008916); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.15s 00:00:00.52 Elapsed: 00:00:00.53
+# Mc/sec: 1336.36
+//
+Query:       tr|E7F8B1|E7F8B1_DANRE  [L=242]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.6e-08   32.3  42.9    2.2e-07   31.2  12.6    3.2  1  VWC       von Willebrand factor type C domain
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.2  12.6   1.1e-11   2.2e-07       1      57 []     104     159 ..     104     159 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 31.2 bits;  conditional E-value: 1.1e-11
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkd.skvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C ++gk+y+  ee++ + C+ C+C+  ++v C+   Cp+ +C +p  + +++ CC+vC
+  tr|E7F8B1|E7F8B1_DANRE 104 CLFRGKTYRVLEEFRLSPCERCRCEVnKEVYCTISGCPALHCVNP--VYEPNHCCPVC 159
+                             9***********************98699****************..999******** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (242 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1739  (0.0906721); expected 383.6 (0.02)
+Passed bias filter:                      752  (0.0392096); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 1435.75
+//
+Query:       tr|B3DH05|B3DH05_DANRE  [L=1027]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    7.5e-65  216.9   2.2    9.7e-65  216.5   0.1    2.2  1  CRIM1_C     Cysteine-rich motor neuron 1 protein C-terminal
+      1e-39  134.7 119.6    2.2e-10   40.8  14.7   16.3  6  VWC         von Willebrand factor type C domain
+    8.1e-19   68.0  60.6    1.4e-07   32.0   9.2   14.4  4  Antistasin  Antistasin family
+    7.1e-08   33.1  20.8    7.1e-08   33.1  20.8   16.5  1  IGFBP       Insulin-like growth factor binding protein
+
+
+Domain annotation for each model (and alignments):
+>> CRIM1_C  Cysteine-rich motor neuron 1 protein C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.5   0.1     2e-68   9.7e-65       1     129 [.     898    1026 ..     898    1027 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 216.5 bits;  conditional E-value: 2e-68
+                 CRIM1_C    1 endivhlkr.dlghlqvdyreskrpkpsedssldsvawvavpiiialvliialllinqkkqwipvscyrtptkpsclnnqlvyvd 84  
+                              end++ ++r ++g+lq++y ++k+p psed+ l+  awva+p++++++++ alll+nq+kqwipv+cyrtp+k +clnnqlvyvd
+  tr|B3DH05|B3DH05_DANRE  898 ENDVMPQFRgEFGSLQMPYLDGKTPLPSEDAGLH-WAWVALPVLMMMLTLAALLLVNQRKQWIPVPCYRTPNKSTCLNNQLVYVD 981 
+                              8********99**********************9.69************************************************ PP
+
+                 CRIM1_C   85 ckkGtkvqvdssqrmlriadpdsrysGfysmqkqnnlqadnfyqt 129 
+                              c+kGtkvqvdssqrmlriadpdsrysG+ysmqk+nnlqadnfyqt
+  tr|B3DH05|B3DH05_DANRE  982 CQKGTKVQVDSSQRMLRIADPDSRYSGYYSMQKHNNLQADNFYQT 1026
+                              ********************************************9 PP
+
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.0  11.3   5.2e-11   2.5e-07       1      57 []     330     384 ..     330     384 .. 0.98
+   2 !   32.6  13.7   1.7e-11   7.9e-08       1      57 []     397     450 ..     397     450 .. 0.98
+   3 !   32.1  13.4   2.4e-11   1.2e-07       3      57 .]     606     657 ..     603     657 .. 0.95
+   4 !   38.6  13.6   2.3e-13   1.1e-09       5      57 .]     679     729 ..     674     729 .. 0.94
+   5 !   35.3  12.9   2.3e-12   1.1e-08       3      57 .]     751     803 ..     748     803 .. 0.94
+   6 !   40.8  14.7   4.6e-14   2.2e-10       1      57 []     812     866 ..     812     866 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 31.0 bits;  conditional E-value: 5.2e-11
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C++ng+ y++g+ ++ d C+ C+C+ +   C + +C   +Ce      ++geCC+vC
+  tr|B3DH05|B3DH05_DANRE 330 CTFNGVEYHDGDMFRMDACRFCRCQGGVSVCFTAQCGVLHCERY--YVPDGECCPVC 384
+                             9*****************************************98..999******** PP
+
+  == domain 2  score: 32.6 bits;  conditional E-value: 1.7e-11
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C+vng++ ++g+ w++d C+ C+C ++  +C    C  ++C +p  ++++geCC+vC
+  tr|B3DH05|B3DH05_DANRE 397 CYVNGQILAHGDHWREDDCTFCQCVSGDARCVAAACG-HSCLNP--VTVPGECCPVC 450
+                             9***********************************6.9*****..*********** PP
+
+  == domain 3  score: 32.1 bits;  conditional E-value: 2.4e-11
+                     VWC   3 vngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             ++g+ +eng++w+   C+ C C++++  C  i+Cp  +C++p  + ++g CC++C
+  tr|B3DH05|B3DH05_DANRE 606 MDGRRHENGQSWHDG-CRDCYCHAGREMCALISCPVPPCDNP--TIRPGHCCPTC 657
+                             6899**********9.**************************..9********** PP
+
+  == domain 4  score: 38.6 bits;  conditional E-value: 2.3e-13
+                     VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             g+ + +ge+w+ d+C++CtC++++v C++  Cp+  C+sp  +  ++ CC+ C
+  tr|B3DH05|B3DH05_DANRE 679 GEYFVEGETWNIDSCTQCTCHSGRVLCETEVCPPLLCHSP--IRTQDSCCPHC 729
+                             677889**********************************..9*********9 PP
+
+  == domain 5  score: 35.3 bits;  conditional E-value: 2.3e-12
+                     VWC   3 vngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             ++g ++ + e+wkp++C  C+C d++++C   +Cp+ +C+ p  + ++g+CC+ C
+  tr|B3DH05|B3DH05_DANRE 751 EDGDIFLAAESWKPNVCSSCVCLDGAISCFSESCPPVNCARP--VLRKGQCCPYC 803
+                             578899999*********************************..9********99 PP
+
+  == domain 6  score: 40.8 bits;  conditional E-value: 4.6e-14
+                     VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                             C +ngk+y ++e w  d+C+ C C ++++ C++++Cp+ +C++p   ++eg CC+ C
+  tr|B3DH05|B3DH05_DANRE 812 CHFNGKTYMDEERWDIDSCTHCYCLQGQTLCSTVSCPALPCHQP--LTVEGSCCPMC 866
+                             9*******************************************..9*********9 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   7.4   2.2e-09     1e-05       1      26 []     463     492 ..     463     492 .. 0.92
+   2 !   32.0   9.2     3e-11   1.4e-07       4      26 .]     503     526 ..     499     526 .. 0.88
+   3 !   26.1   9.9   2.1e-09   9.9e-06       1      26 []     533     558 ..     533     558 .. 0.98
+   4 !   29.2  10.1   2.3e-10   1.1e-06       1      26 []     561     586 ..     561     586 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 2.2e-09
+              Antistasin   1 Cppl.nCrls...CpyGfqtDenGCptCeC 26 
+                             C +l nC+l    C +Gf++D++GC+tC C
+  tr|B3DH05|B3DH05_DANRE 463 CGSLdNCTLLeqsCVFGFRLDPSGCRTCAC 492
+                             888889*888889***************** PP
+
+  == domain 2  score: 32.0 bits;  conditional E-value: 3e-11
+              Antistasin   4 l.nCrlsCpyGfqtDenGCptCeC 26 
+                             + +C+l+Cp+GfqtD +GC++C+C
+  tr|B3DH05|B3DH05_DANRE 503 MaSCTLKCPFGFQTDIHGCDVCQC 526
+                             258********************* PP
+
+  == domain 3  score: 26.1 bits;  conditional E-value: 2.1e-09
+              Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                             C++++C ++Cp+G+ ++++GC+tC+C
+  tr|B3DH05|B3DH05_DANRE 533 CKAVSCAKDCPFGYIKNKHGCDTCRC 558
+                             99999********************* PP
+
+  == domain 4  score: 29.2 bits;  conditional E-value: 2.3e-10
+              Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                             Cp+l C++ Cp Gfq De GC +C+C
+  tr|B3DH05|B3DH05_DANRE 561 CPELPCDKACPMGFQHDELGCLICQC 586
+                             ************************** PP
+
+>> IGFBP  Insulin-like growth factor binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.1  20.8   1.5e-11   7.1e-08       1      55 []      31      84 ..      31      84 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 33.1 bits;  conditional E-value: 1.5e-11
+                   IGFBP  1 CpekCeaeeCppeaesCpagvelvedgCgcCkvCarqegesCg...vktprCaegLeC 55
+                            C + C++++C+ e++ C+    +v   CgcC+vCa+q++esCg     +++C++gL+C
+  tr|B3DH05|B3DH05_DANRE 31 CLP-CDKSKCE-EPKPCTGS--VVLGICGCCSVCAKQKNESCGgvyGLYGTCDRGLRC 84
+                            877.******5.5699*444..59*******************9763348******** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1027 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       944  (0.0492205); expected 383.6 (0.02)
+Passed bias filter:                      276  (0.0143907); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.57u 0.20s 00:00:00.77 Elapsed: 00:00:00.71
+# Mc/sec: 4677.91
+//
+Query:       sp|Q9NZV1|CRIM1_HUMAN  [L=1036]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.5e-73  245.0   1.8    2.1e-73  244.6   0.4    2.0  1  CRIM1_C     Cysteine-rich motor neuron 1 protein C-terminal
+    1.3e-37  128.0 126.0    3.6e-10   40.1  13.6   15.9  6  VWC         von Willebrand factor type C domain
+    5.3e-18   65.4  63.2    6.1e-08   33.2   9.2   14.3  4  Antistasin  Antistasin family
+    2.7e-07   31.2  20.6    2.7e-07   31.2  20.6   16.3  1  IGFBP       Insulin-like growth factor binding protein
+
+
+Domain annotation for each model (and alignments):
+>> CRIM1_C  Cysteine-rich motor neuron 1 protein C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  244.6   0.4   4.3e-77   2.1e-73       1     130 []     907    1036 .]     907    1036 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 244.6 bits;  conditional E-value: 4.3e-77
+                CRIM1_C    1 endivhlkrdlghlqvdyreskrpkpsedssldsvawvavpiiialvliialllinqkkqwipvsc.yrtptkpsclnnqlvyvdc 85  
+                             endivhl+rd+ghlqvdyr+ +r +psedsslds+a+v+vpiii+l +iia+l+inqkkqwip+ c yrtptkps+lnnqlv+vdc
+  sp|Q9NZV1|CRIM1_HUMAN  907 ENDIVHLPRDMGHLQVDYRD-NRLHPSEDSSLDSIASVVVPIIICLSIIIAFLFINQKKQWIPLLCwYRTPTKPSSLNNQLVSVDC 991 
+                             8*******************.99*************************************************************** PP
+
+                CRIM1_C   86 kkGtkvqvdssqrmlriadpdsrysGfysmqkqnnlqadnfyqtv 130 
+                             kkGt+vqvdssqrmlria+pd+r+sGfysmqkqn+lqadnfyqtv
+  sp|Q9NZV1|CRIM1_HUMAN  992 KKGTRVQVDSSQRMLRIAEPDARFSGFYSMQKQNHLQADNFYQTV 1036
+                             *******************************************96 PP
+
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.4  12.4   8.3e-11     4e-07       1      57 []     336     390 ..     336     390 .. 0.98
+   2 !   31.3  15.0   4.3e-11     2e-07       1      57 []     403     456 ..     403     456 .. 0.98
+   3 !   30.4  14.3   8.1e-11   3.9e-07       3      57 .]     611     662 ..     608     662 .. 0.95
+   4 !   38.4  16.2   2.5e-13   1.2e-09       5      57 .]     684     734 ..     679     734 .. 0.94
+   5 !   33.1  14.5   1.1e-11   5.4e-08       4      57 .]     757     808 ..     753     808 .. 0.93
+   6 !   40.1  13.6   7.5e-14   3.6e-10       1      57 []     819     873 ..     819     873 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 30.4 bits;  conditional E-value: 8.3e-11
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            Cv+n++ y +g+ ++ d C+ C+C+ +   C + +C e +Ce      +egeCC+vC
+  sp|Q9NZV1|CRIM1_HUMAN 336 CVFNNVEYYDGDMFRMDNCRFCRCQGGVAICFTAQCGEINCERY--YVPEGECCPVC 390
+                            ******************************************98..999******** PP
+
+  == domain 2  score: 31.3 bits;  conditional E-value: 4.3e-11
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            C+ ng + ++g+ w++d C+ C+C +++ +C  + C  ++C++p  +k++geCC+vC
+  sp|Q9NZV1|CRIM1_HUMAN 403 CYANGLILAHGDRWREDDCTFCQCVNGERHCVATVCG-QTCTNP--VKVPGECCPVC 456
+                            999*********************************6.9*****..*********** PP
+
+  == domain 3  score: 30.4 bits;  conditional E-value: 8.1e-11
+                    VWC   3 vngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            v+g  ++n+e+w+   C++C C +++  C  i+Cp   C +p  + ++g+CC++C
+  sp|Q9NZV1|CRIM1_HUMAN 611 VDGHHHKNEESWHDG-CRECYCLNGREMCALITCPVPACGNP--TIHPGQCCPSC 662
+                            78999********99.**************************..9*********9 PP
+
+  == domain 4  score: 38.4 bits;  conditional E-value: 2.5e-13
+                    VWC   5 gkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            g+ + +ge+w+ d+C++CtC++++v C++  Cp+  C++p     ++ CC++C
+  sp|Q9NZV1|CRIM1_HUMAN 684 GEYFVEGETWNIDSCTQCTCHSGRVLCETEVCPPLLCQNP--SRTQDSCCPQC 734
+                            677889**********************************..899******** PP
+
+  == domain 5  score: 33.1 bits;  conditional E-value: 1.1e-11
+                    VWC   4 ngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            +g ++ + e+wkpd+C+ C C ds ++C   +Cp  +Ce p  + ++g+CC+ C
+  sp|Q9NZV1|CRIM1_HUMAN 757 EGDIFLAAESWKPDVCTSCICIDSVISCFSESCPSVSCERP--VLRKGQCCPYC 808
+                            57889999*********************************..9********99 PP
+
+  == domain 6  score: 40.1 bits;  conditional E-value: 7.5e-14
+                    VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                            C ++gk y+++e w  d+C+ C C ++++ C++++Cp+ +C +p  +++eg CC+ C
+  sp|Q9NZV1|CRIM1_HUMAN 819 CHFSGKAYADEERWDLDSCTHCYCLQGQTLCSTVSCPPLPCVEP--INVEGSCCPMC 873
+                            99******************************************..**********9 PP
+
+>> Antistasin  Antistasin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.2  10.8     2e-09   9.4e-06       1      26 []     469     498 ..     469     498 .. 0.94
+   2 !   28.8   9.5   3.1e-10   1.5e-06       1      26 []     505     532 ..     505     532 .. 0.89
+   3 !   22.6   9.7   2.6e-08   0.00012       1      26 []     539     564 ..     539     564 .. 0.98
+   4 !   33.2   9.2   1.3e-11   6.1e-08       1      26 []     567     592 ..     567     592 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 26.2 bits;  conditional E-value: 2e-09
+             Antistasin   1 Cppl.nCrls...CpyGfqtDenGCptCeC 26 
+                            C +l nC+l+   C +Gf++D+nGC+tC+C
+  sp|Q9NZV1|CRIM1_HUMAN 469 CGELsNCTLTgkdCINGFKRDHNGCRTCQC 498
+                            88877**999999***************** PP
+
+  == domain 2  score: 28.8 bits;  conditional E-value: 3.1e-10
+             Antistasin   1 Cpp..lnCrlsCpyGfqtDenGCptCeC 26 
+                            C++  + C+l+Cp+Gf tD+ +C++CeC
+  sp|Q9NZV1|CRIM1_HUMAN 505 CSErkQGCTLNCPFGFLTDAQNCEICEC 532
+                            7664359********************* PP
+
+  == domain 3  score: 22.6 bits;  conditional E-value: 2.6e-08
+             Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                            C p+ C+++Cp G+ ++++GC++C+C
+  sp|Q9NZV1|CRIM1_HUMAN 539 CRPIICDKYCPLGLLKNKHGCDICRC 564
+                            99989********************* PP
+
+  == domain 4  score: 33.2 bits;  conditional E-value: 1.3e-11
+             Antistasin   1 CpplnCrlsCpyGfqtDenGCptCeC 26 
+                            Cp+l+C++ Cp Gfq+D++GC +C+C
+  sp|Q9NZV1|CRIM1_HUMAN 567 CPELSCSKICPLGFQQDSHGCLICKC 592
+                            ************************** PP
+
+>> IGFBP  Insulin-like growth factor binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.2  20.6   5.7e-11   2.7e-07       1      55 []      37      90 ..      37      90 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 31.2 bits;  conditional E-value: 5.7e-11
+                  IGFBP  1 CpekCeaeeCppeaesCpagvelvedgCgcCkvCarqegesCg...vktprCaegLeC 55
+                           C + C++++C+ e+++C +g+ +v+  CgcC +Ca+q++esCg     +++C++gL+C
+  sp|Q9NZV1|CRIM1_HUMAN 37 CLP-CDESKCE-EPRNC-PGS-IVQGVCGCCYTCASQRNESCGgtfGIYGTCDRGLRC 90
+                           877.******5.579**.555.59*******************8884458******** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1036 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       952  (0.0496376); expected 383.6 (0.02)
+Passed bias filter:                      291  (0.0151728); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.63u 0.19s 00:00:00.82 Elapsed: 00:00:00.68
+# Mc/sec: 4960.19
+//
+Query:       sp|Q96DN2|VWCE_HUMAN  [L=955]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.9e-27   95.5 175.0    2.2e-08   34.4  10.3   10.4  4  VWC             von Willebrand factor type C domain
+    2.1e-19   69.2  37.7    3.5e-08   33.3   0.8    8.3  1  cEGF            Complement Clr-like EGF-like
+    4.2e-16   59.0  32.6    6.3e-09   36.0   2.0    9.5  3  EGF_CA          Calcium-binding EGF domain
+      1e-10   41.8  34.5      1e-05   25.8   6.8    9.3  0  FXa_inhibition  Coagulation Factor Xa inhibitory site
+
+
+Domain annotation for each model (and alignments):
+>> VWC  von Willebrand factor type C domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.1  17.1   4.8e-11   2.3e-07       1      57 []     386     440 ..     386     440 .. 0.97
+   2 !   34.4  10.3   4.5e-12   2.2e-08       1      57 []     501     559 ..     501     559 .. 0.95
+   3 !   28.7   8.2   2.8e-10   1.3e-06       1      57 []     629     684 ..     629     684 .. 0.96
+   4 !   28.4  14.8   3.5e-10   1.7e-06       1      57 []     687     742 ..     687     742 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 31.1 bits;  conditional E-value: 4.8e-11
+                   VWC   1 CvvngkvyengeewkpdlCkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                           C++ g ++e+++ w++  C +C C+d+kv C+k++C+ + C++p   +++g CC++C
+  sp|Q96DN2|VWCE_HUMAN 386 CWHLGAMHESRSRWTEPGCSQCWCEDGKVTCEKVRCE-AACSHP-IPSRDGGCCPSC 440
+                           9***********************************7.99****.7899*******9 PP
+
+  == domain 2  score: 34.4 bits;  conditional E-value: 4.5e-12
+                   VWC   1 Cvvngkvyengeewkpdl..CkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                           C+++g+ y++g ++      C++C+C++++v+C+ ++Cpe  C+ ++ +  +g+CC +C
+  sp|Q96DN2|VWCE_HUMAN 501 CYFHGRWYADGAVFSGGGdeCTTCVCQNGEVECSFMPCPELACPREEWRLGPGQCCFTC 559
+                           999***********976566************************************999 PP
+
+  == domain 3  score: 28.7 bits;  conditional E-value: 2.8e-10
+                   VWC   1 Cvvngkvyengeewkpdl..CkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                           C++ g+++ n+e++ + l  C  C C  ++v C+++ Cp  +C+ p   +++geCC+vC
+  sp|Q96DN2|VWCE_HUMAN 629 CTYTGRIFYNNETFPSVLdpCLSCICLLGSVACSPVDCP-ITCTYP--FHPDGECCPVC 684
+                           999***********988888******************8.9*****..9********** PP
+
+  == domain 4  score: 28.4 bits;  conditional E-value: 3.5e-10
+                   VWC   1 Cvvngkvyengeewkpdl..CkkCtCkdskvnCdkikCpeskCespaaakaegeCCkvC 57 
+                           C ++g+  +ng++++ d   C+ CtC+ ++v+C+k++C+   C++p  a  +g+CC++C
+  sp|Q96DN2|VWCE_HUMAN 687 CNYEGRKVANGQVFTLDDepCTRCTCQLGEVSCEKVPCQ-RACADP--ALLPGDCCSSC 742
+                           9999999********99889******************7.89****..99********9 PP
+
+>> cEGF  Complement Clr-like EGF-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.3   0.8   7.2e-12   3.5e-08       1      24 []     200     223 ..     200     223 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 33.3 bits;  conditional E-value: 7.2e-12
+                           SEEEE-STTEEE.ETTTEEEE--T CS
+                  cEGF   1 SYrCsCppGYkltpdGrsCtDIDE 24 
+                           SY+CsC+ G+ l ++ +sC+D++E
+  sp|Q96DN2|VWCE_HUMAN 200 SYKCSCRTGFHLHGNRHSCVDVNE 223
+                           9**********************9 PP
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.0   7.8   1.7e-09   8.2e-06       1      42 []     142     179 ..     142     179 .. 0.93
+   2 !   26.5   7.4   1.2e-09   5.6e-06       1      42 []     181     218 ..     181     218 .. 0.91
+   3 !   36.0   2.0   1.3e-12   6.3e-09       1      42 []     220     261 ..     220     261 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 26.0 bits;  conditional E-value: 1.7e-09
+                EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegyennedetkC 42 
+                           D+dEC + +  C+  ++CvNteG+f C+C +g + ++d+++C
+  sp|Q96DN2|VWCE_HUMAN 142 DIDECVTSS--CE--GHCVNTEGGFVCECGPGMQLSADRHSC 179
+                           9*****965..*9..9*****************999999998 PP
+
+  == domain 2  score: 26.5 bits;  conditional E-value: 1.2e-09
+                EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegyennedetkC 42 
+                           D+dEC   +  C+  + C N++Gs++C+C+ g++   ++++C
+  sp|Q96DN2|VWCE_HUMAN 181 DTDECLGTP--CQ--QRCKNSIGSYKCSCRTGFHLHGNRHSC 218
+                           99***9966..99..89*****************88888888 PP
+
+  == domain 3  score: 36.0 bits;  conditional E-value: 1.3e-12
+                EGF_CA   1 DvdECas..gthnCpentvCvNteGsfeCvCeegyennedetkC 42 
+                           Dv+EC+   ++ +C+   +C+Nt+Gsf C+C++g++  +d+ +C
+  sp|Q96DN2|VWCE_HUMAN 220 DVNECRRplERRVCH--HSCHNTVGSFLCTCRPGFRLRADRVSC 261
+                           9*****9545699*9..89****************988777777 PP
+
+>> FXa_inhibition  Coagulation Factor Xa inhibitory site
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (955 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       701  (0.0365504); expected 383.6 (0.02)
+Passed bias filter:                      147  (0.00766463); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.52u 0.13s 00:00:00.65 Elapsed: 00:00:00.68
+# Mc/sec: 4528.86
+//
+[ok]

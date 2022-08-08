@@ -1,0 +1,1523 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0001928.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0001928
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q02332|PDHK2_CAEEL  [L=401]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.1e-41  140.6   0.0    5.5e-41  140.2   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    1.1e-09   38.9   0.0    1.9e-09   38.1   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.2   0.0   5.7e-45   5.5e-41       2     162 .]      30     188 ..      29     188 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 140.2 bits;  conditional E-value: 5.7e-45
+            BCDHK_Adom3   2 vslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe..leenekftevLe 87 
+                            ++++q ++fg+    gt  +s  fl++el vrla++++e+  lP +l+++ps k v +wYa+sfe+Ll ++  +   e+  +f++ L+
+  sp|Q02332|PDHK2_CAEEL  30 LTIQQYLDFGRI---GTSANSYTFLKNELLVRLANIMQEFTLLPPKLLQMPSSKMVSNWYAESFEDLLLFEASDssPEQVARFNDQLT 114
+                            789*******96...6789***************************************************99843356669******* PP
+
+            BCDHK_Adom3  88 kikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             ++krH++vv+t+A+G++el+e+   + + ++ iq+FLdrfy +RI+iRmL +qh+ ++ +  +  e++++vG+Id
+  sp|Q02332|PDHK2_CAEEL 115 VVLKRHAHVVETMAEGLIELRESDGVDiASEKGIQYFLDRFYINRISIRMLQNQHLVVFGNVLP--ESPRHVGCID 188
+                            *********************886665578899****************************986..45579***97 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.1   0.0     2e-13   1.9e-09       3     109 ..     238     357 ..     236     360 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 38.1 bits;  conditional E-value: 2e-13
+                            HHHHHHHHHHHHHHHHHH....HCTTT......EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH.....HSSTCHTSTSS CS
+              HATPase_c   3 ekrLrqiisnlvdNavkf....atkag......eieveikaseddlvisveDnGiGipkedlkklfe.kfsq.....ddstkrggggt 74 
+                            +++L++++ +l +Na+++        g      +i+v + + ++dl+i++ D G G+++ +l++l    +s+      d+t+    g 
+  sp|Q02332|PDHK2_CAEEL 238 PSHLYHMMFELFKNAMRAtveyH---GvdddlpDIKVYVVKGQEDLSIKICDRGGGVSRTILERLYNyMYSTappppRDGTQAPLAGY 322
+                            679**************954441...222233356666664458***********************99999****999999999*** PP
+
+                            SHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+              HATPase_c  75 GlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                            G+Gl +++ +++ + G++ + s +g+Gt+  ++l+
+  sp|Q02332|PDHK2_CAEEL 323 GYGLPLSRLYARYFLGDLFLVSMEGHGTDACIYLK 357
+                            *********9998889************9988876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (401 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       425  (0.0221597); expected 383.6 (0.02)
+Passed bias filter:                      411  (0.0214297); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 2214.22
+//
+Query:       sp|P91622|PDK_DROME  [L=413]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.5e-48  162.5   0.0    1.2e-47  161.9   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.5e-11   43.7   0.0    6.2e-11   42.9   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.9   0.0   1.3e-51   1.2e-47       1     161 [.      32     192 ..      32     193 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 161.9 bits;  conditional E-value: 1.3e-51
+          BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe.leen.ekftevLek 88 
+                          p+s++q+++fg++    +  ks  flr+elpvrla+++ke+  lP++l+++ s+++v +wY++sfe++l ++k+e +++n +kf+  L+ 
+  sp|P91622|PDK_DROME  32 PLSIKQFMDFGQNA---CEKKSYIFLRKELPVRLANIMKEIALLPDNLLHTRSVSEVSSWYVKSFEDVLVYEKAEpTHDNlQKFVADLDL 118
+                          68**********85...566***************************************************9984455555********* PP
+
+          BCDHK_Adom3  89 ikkrHdnvvttlAqGvlelkekrkrk...qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiI 161
+                          i++rH++vv+t+AqGv+e+ke++  +    ++s+iq+FLdr+ymsRI+iRmLi+qh+ L+  + +     +++G++
+  sp|P91622|PDK_DROME 119 IRNRHNDVVQTMAQGVIEMKENEGGQvdaPTESSIQYFLDRLYMSRISIRMLINQHTLLFGGNPH--AGGRHIGCL 192
+                          ********************776544566899****************************99765..445678875 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.9   0.0   6.5e-15   6.2e-11       3     109 ..     244     366 ..     242     369 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 42.9 bits;  conditional E-value: 6.5e-15
+                          HHHHHHHHHHHHHHHHHH.........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTSSSH CS
+            HATPase_c   3 ekrLrqiisnlvdNavkf.........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggggtGl 76 
+                          +++L+ ++ +l +N++++         + + + ++v i + ++d++++++D G Gip+++ ++lf+  +s+      +d  ++   g G+
+  sp|P91622|PDK_DROME 244 PSHLYYMLFELFKNSMRAvvehhghdnNDTLPPLKVAICKGKEDICVKISDQGGGIPRSQTDQLFKyMYSTapqpskSDLHTVPLAGYGY 333
+                          57899************97655543221122244888886558***********************99999**9966556666689**** PP
+
+                          HHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+            HATPase_c  77 GlsivkklvelmgGeiwvesepgrGttftftlp 109
+                          Gl i++ +++ ++G+i + s +g Gt+ +++l+
+  sp|P91622|PDK_DROME 334 GLPISRLYARYFHGDIVLLSCEGFGTDAIIYLK 366
+                          **********999**************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (413 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       535  (0.0278951); expected 383.6 (0.02)
+Passed bias filter:                      472  (0.0246103); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.53
+# Mc/sec: 2512.60
+//
+Query:       tr|A0A0B4K7V5|A0A0B4K7V5_DROME  [L=413]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.5e-48  162.5   0.0    1.2e-47  161.9   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.5e-11   43.7   0.0    6.2e-11   42.9   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.9   0.0   1.3e-51   1.2e-47       1     161 [.      32     192 ..      32     193 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 161.9 bits;  conditional E-value: 1.3e-51
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe.lee 78 
+                                     p+s++q+++fg++    +  ks  flr+elpvrla+++ke+  lP++l+++ s+++v +wY++sfe++l ++k+e +++
+  tr|A0A0B4K7V5|A0A0B4K7V5_DROME  32 PLSIKQFMDFGQNA---CEKKSYIFLRKELPVRLANIMKEIALLPDNLLHTRSVSEVSSWYVKSFEDVLVYEKAEpTHD 107
+                                     68**********85...566***************************************************99844555 PP
+
+                     BCDHK_Adom3  79 n.ekftevLekikkrHdnvvttlAqGvlelkekrkrk...qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskke 153
+                                     n +kf+  L+ i++rH++vv+t+AqGv+e+ke++  +    ++s+iq+FLdr+ymsRI+iRmLi+qh+ L+  + +   
+  tr|A0A0B4K7V5|A0A0B4K7V5_DROME 108 NlQKFVADLDLIRNRHNDVVQTMAQGVIEMKENEGGQvdaPTESSIQYFLDRLYMSRISIRMLINQHTLLFGGNPH--A 184
+                                     55*****************************776544566899****************************99765..4 PP
+
+                     BCDHK_Adom3 154 psdyvGiI 161
+                                       +++G++
+  tr|A0A0B4K7V5|A0A0B4K7V5_DROME 185 GGRHIGCL 192
+                                     45678875 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.9   0.0   6.5e-15   6.2e-11       3     109 ..     244     366 ..     242     369 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 42.9 bits;  conditional E-value: 6.5e-15
+                                     HHHHHHHHHHHHHHHHHH.........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HS CS
+                       HATPase_c   3 ekrLrqiisnlvdNavkf.........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......dd 65 
+                                     +++L+ ++ +l +N++++         + + + ++v i + ++d++++++D G Gip+++ ++lf+  +s+      +d
+  tr|A0A0B4K7V5|A0A0B4K7V5_DROME 244 PSHLYYMLFELFKNSMRAvvehhghdnNDTLPPLKVAICKGKEDICVKISDQGGGIPRSQTDQLFKyMYSTapqpskSD 322
+                                     57899************97655543221122244888886558***********************99999**996655 PP
+
+                                     STCHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+                       HATPase_c  66 stkrggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                                       ++   g G+Gl i++ +++ ++G+i + s +g Gt+ +++l+
+  tr|A0A0B4K7V5|A0A0B4K7V5_DROME 323 LHTVPLAGYGYGLPISRLYARYFHGDIVLLSCEGFGTDAIIYLK 366
+                                     6666689**************999**************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (413 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       535  (0.0278951); expected 383.6 (0.02)
+Passed bias filter:                      472  (0.0246103); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.54
+# Mc/sec: 2481.54
+//
+Query:       tr|A8DY78|A8DY78_DROME  [L=422]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.9e-48  162.5   0.0    1.3e-47  161.8   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.8e-11   43.6   0.0    6.5e-11   42.8   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.8   0.0   1.3e-51   1.3e-47       1     161 [.      32     192 ..      32     193 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 161.8 bits;  conditional E-value: 1.3e-51
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe.leen.ekftev 85 
+                             p+s++q+++fg++    +  ks  flr+elpvrla+++ke+  lP++l+++ s+++v +wY++sfe++l ++k+e +++n +kf+  
+  tr|A8DY78|A8DY78_DROME  32 PLSIKQFMDFGQNA---CEKKSYIFLRKELPVRLANIMKEIALLPDNLLHTRSVSEVSSWYVKSFEDVLVYEKAEpTHDNlQKFVAD 115
+                             68**********85...566***************************************************9984455555****** PP
+
+             BCDHK_Adom3  86 LekikkrHdnvvttlAqGvlelkekrkrk...qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiI 161
+                             L+ i++rH++vv+t+AqGv+e+ke++  +    ++s+iq+FLdr+ymsRI+iRmLi+qh+ L+  + +     +++G++
+  tr|A8DY78|A8DY78_DROME 116 LDLIRNRHNDVVQTMAQGVIEMKENEGGQvdaPTESSIQYFLDRLYMSRISIRMLINQHTLLFGGNPH--AGGRHIGCL 192
+                             ***********************776544566899****************************99765..445678875 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.8   0.0   6.7e-15   6.5e-11       3     109 ..     244     366 ..     242     369 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 42.8 bits;  conditional E-value: 6.7e-15
+                             HHHHHHHHHHHHHHHHHH.........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTS CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf.........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrgggg 73 
+                             +++L+ ++ +l +N++++         + + + ++v i + ++d++++++D G Gip+++ ++lf+  +s+      +d  ++   g
+  tr|A8DY78|A8DY78_DROME 244 PSHLYYMLFELFKNSMRAvvehhghdnNDTLPPLKVAICKGKEDICVKISDQGGGIPRSQTDQLFKyMYSTapqpskSDLHTVPLAG 330
+                             57899************97655543221122244888886558***********************99999**9966556666689* PP
+
+                             SSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  74 tGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                              G+Gl i++ +++ ++G+i + s +g Gt+ +++l+
+  tr|A8DY78|A8DY78_DROME 331 YGYGLPISRLYARYFHGDIVLLSCEGFGTDAIIYLK 366
+                             *************999**************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (422 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       547  (0.0285208); expected 383.6 (0.02)
+Passed bias filter:                      527  (0.027478); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.61
+# Mc/sec: 2220.82
+//
+Query:       tr|A0A0B4KFG2|A0A0B4KFG2_DROME  [L=415]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.6e-48  162.5   0.0    1.2e-47  161.9   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.7e-11   43.6   0.0    6.2e-11   42.9   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.9   0.0   1.3e-51   1.2e-47       1     161 [.      32     192 ..      32     193 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 161.9 bits;  conditional E-value: 1.3e-51
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe.lee 78 
+                                     p+s++q+++fg++    +  ks  flr+elpvrla+++ke+  lP++l+++ s+++v +wY++sfe++l ++k+e +++
+  tr|A0A0B4KFG2|A0A0B4KFG2_DROME  32 PLSIKQFMDFGQNA---CEKKSYIFLRKELPVRLANIMKEIALLPDNLLHTRSVSEVSSWYVKSFEDVLVYEKAEpTHD 107
+                                     68**********85...566***************************************************99844555 PP
+
+                     BCDHK_Adom3  79 n.ekftevLekikkrHdnvvttlAqGvlelkekrkrk...qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskke 153
+                                     n +kf+  L+ i++rH++vv+t+AqGv+e+ke++  +    ++s+iq+FLdr+ymsRI+iRmLi+qh+ L+  + +   
+  tr|A0A0B4KFG2|A0A0B4KFG2_DROME 108 NlQKFVADLDLIRNRHNDVVQTMAQGVIEMKENEGGQvdaPTESSIQYFLDRLYMSRISIRMLINQHTLLFGGNPH--A 184
+                                     55*****************************776544566899****************************99765..4 PP
+
+                     BCDHK_Adom3 154 psdyvGiI 161
+                                       +++G++
+  tr|A0A0B4KFG2|A0A0B4KFG2_DROME 185 GGRHIGCL 192
+                                     45678875 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.9   0.0   6.5e-15   6.2e-11       3     109 ..     244     366 ..     242     369 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 42.9 bits;  conditional E-value: 6.5e-15
+                                     HHHHHHHHHHHHHHHHHH.........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HS CS
+                       HATPase_c   3 ekrLrqiisnlvdNavkf.........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......dd 65 
+                                     +++L+ ++ +l +N++++         + + + ++v i + ++d++++++D G Gip+++ ++lf+  +s+      +d
+  tr|A0A0B4KFG2|A0A0B4KFG2_DROME 244 PSHLYYMLFELFKNSMRAvvehhghdnNDTLPPLKVAICKGKEDICVKISDQGGGIPRSQTDQLFKyMYSTapqpskSD 322
+                                     57899************97655543221122244888886558***********************99999**996655 PP
+
+                                     STCHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+                       HATPase_c  66 stkrggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                                       ++   g G+Gl i++ +++ ++G+i + s +g Gt+ +++l+
+  tr|A0A0B4KFG2|A0A0B4KFG2_DROME 323 LHTVPLAGYGYGLPISRLYARYFHGDIVLLSCEGFGTDAIIYLK 366
+                                     6666689**************999**************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (415 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       531  (0.0276865); expected 383.6 (0.02)
+Passed bias filter:                      503  (0.0262266); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.62
+# Mc/sec: 2165.87
+//
+Query:       tr|A1L284|A1L284_DANRE  [L=176]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.2e-45  154.0   0.3    3.8e-45  153.7   0.3    1.0  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.7   0.3     2e-49   3.8e-45       1     142 [.      25     168 ..      25     174 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 153.7 bits;  conditional E-value: 2e-49
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekfte 84 
+                             p+s++q+++fg++  +++  +s  flr+el vrla+ ++e+  lP+ l  +ps+k v++wY qsfeeLl+++k +    +  ++f e
+  tr|A1L284|A1L284_DANRE  25 PMSIKQFLDFGRE--NACEKTSYMFLRKELAVRLANTMREVTLLPDSLQIQPSVKLVESWYSQSFEELLKFEKRSpedPHTLNDFLE 109
+                             689*********7..46789***************************************************8864344444588*** PP
+
+             BCDHK_Adom3  85 vLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhi 142
+                             +L ki++rH++vv+t+AqGv+e+kek   +  i+s++q+FLdrfy++RI+ RmLi+qh 
+  tr|A1L284|A1L284_DANRE 110 MLIKIRNRHNDVVPTMAQGVIEYKEKFGFDpFISSNVQYFLDRFYTNRISFRMLINQHS 168
+                             *************************9987779**************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (176 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       427  (0.0222639); expected 383.6 (0.02)
+Passed bias filter:                      338  (0.0176234); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.15s 00:00:00.48 Elapsed: 00:00:00.54
+# Mc/sec: 1060.27
+//
+Query:       tr|B3DIT9|B3DIT9_DANRE  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.2e-49  166.3   0.0    7.9e-49  165.7   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    7.2e-15   55.6   0.0    1.2e-14   54.9   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.7   0.0   8.2e-53   7.9e-49       1     162 []      30     192 ..      30     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 165.7 bits;  conditional E-value: 8.2e-53
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekfte 84 
+                             p+s++q+++fg+   +++  +s+ flr+elpvrla+++ke++ lP++l+ +ps k  ++wYaqs+ eL+++ +++    +  +kfte
+  tr|B3DIT9|B3DIT9_DANRE  30 PLSMKQFIDFGSA--NACEKTSFMFLRQELPVRLANIMKEIDFLPDKLLGTPSLKLLQSWYAQSLMELVDFLEKDpddKKILTKFTE 114
+                             69*********96..45789***************************************************6654222233489*** PP
+
+             BCDHK_Adom3  85 vLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             +L ++++rH+nvv+t+AqGvle+ke+   +  +++++q+FLdrfymsRI++RmL++qh+ +++ s++ ++p +++G Id
+  tr|B3DIT9|B3DIT9_DANRE 115 TLINVRNRHNNVVPTMAQGVLEYKEAFGVDpVTNQNVQYFLDRFYMSRISTRMLMNQHTLIFDGSTNPAHP-KHIGSID 192
+                             ************************9988777899*******************************996666.88**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.9   0.0   1.2e-18   1.2e-14       3     109 ..     242     362 ..     240     365 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 54.9 bits;  conditional E-value: 1.2e-18
+                             HHHHHHHHHHHHHHHHHH.....HCTTT.....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTST CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf.....atkag.....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggg 72 
+                             +++L++++ +l +Na+++     +   +      i+v+++   +dl+i+ +D G G+p  ++++lf   +s+      +d+++    
+  tr|B3DIT9|B3DIT9_DANRE 242 PSHLYHMLFELFKNAMRAtvethE---TslhlpPIKVRVSLGTEDLTIKMSDRGSGVPLRKIERLFSyMYSTapspvaEDTRNAPLA 325
+                             679**************9664431...23333367888887456***********************99999****76666666679 PP
+
+                             SSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  73 gtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                             g+G+Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  tr|B3DIT9|B3DIT9_DANRE 326 GFGYGLPISRLYAKYFQGDLQLYSMEGYGTSAVIYLK 362
+                             *******************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       541  (0.0282079); expected 383.6 (0.02)
+Passed bias filter:                      494  (0.0257573); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.18s 00:00:00.59 Elapsed: 00:00:00.66
+# Mc/sec: 2009.45
+//
+Query:       tr|F1R2D5|F1R2D5_DANRE  [L=237]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.6e-15   57.0   0.0    3.4e-15   56.6   0.0    1.2  1  HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like A
+
+
+Domain annotation for each model (and alignments):
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   0.0   1.8e-19   3.4e-15       3     109 ..      70     190 ..      68     193 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 1.8e-19
+                             HHHHHHHHHHHHHHHHHH.....HCTTT.....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTST CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf.....atkag.....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggg 72 
+                             +++L++++ +l +Na+++     +   +      i+v+++   +dl+i+ +D G G+p  ++++lf   +s+      +d+++    
+  tr|F1R2D5|F1R2D5_DANRE  70 PSHLYHMLFELFKNAMRAtvethE---TslhlpPIKVRVSLGTEDLTIKMSDRGSGVPLRKIERLFSyMYSTapspvaEDTRNAPLA 153
+                             679**************9664431...23333367888887456***********************99999****76666666679 PP
+
+                             SSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  73 gtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                             g+G+Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  tr|F1R2D5|F1R2D5_DANRE 154 GFGYGLPISRLYAKYFQGDLQLYSMEGYGTSAVIYLK 190
+                             *******************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (237 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       381  (0.0198655); expected 383.6 (0.02)
+Passed bias filter:                      371  (0.0193441); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.15s 00:00:00.53 Elapsed: 00:00:00.52
+# Mc/sec: 1469.91
+//
+Query:       tr|E7F3U3|E7F3U3_DANRE  [L=405]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.7e-51  173.7   0.0    3.8e-51  173.3   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    2.9e-14   53.6   0.0    5.2e-14   52.8   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.3   0.0   3.9e-55   3.8e-51       1     162 []      25     189 ..      25     189 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 173.3 bits;  conditional E-value: 3.9e-55
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpelee...nekfte 84 
+                             p+s++q+++fg++  +++  +s+ flr+elpvrla+++ke++ lP++l+++ps++ v++wY+qsf+++le+++++ ++   n++ft+
+  tr|E7F3U3|E7F3U3_DANRE  25 PLSMKQFIDFGSE--NACEKTSFTFLRQELPVRLANIMKEIDLLPDNLLRTPSVRLVQSWYMQSFQDILEFKDKDADDetvNHDFTD 109
+                             69*********96..46789***************************************************998655545589**** PP
+
+             BCDHK_Adom3  85 vLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqsks.kkepsdyvGiId 162
+                             ++ ki++rH++vv+t+AqGv e+ke++ ++  +++++q+FLdrfymsRI+iRmL++qh+ L+  + + +  +++ +G Id
+  tr|E7F3U3|E7F3U3_DANRE 110 AVIKIRNRHNDVVPTMAQGVVEYKETYGTDpITSQNMQYFLDRFYMSRISIRMLLNQHTLLFGGKVRdNPAHPKQIGSID 189
+                             **************************9998567889**************************988764444567799886 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.8   0.0   5.4e-18   5.2e-14       3     108 ..     239     358 ..     237     362 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 52.8 bits;  conditional E-value: 5.4e-18
+                             HHHHHHHHHHHHHHHHHH.......HCTTT.....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHT CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf.......atkag.....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrg 70 
+                             +++L++++ +l +Na+++       a         ++++ +  + +dl+++v+D G G+p  ++++lf+  +s+      d s+++ 
+  tr|E7F3U3|E7F3U3_DANRE 239 PSHLYHMVFELFKNAMRAtmelyedA---MeyppvHVQIVLG-H-EDLTVKVSDRGGGVPLRKIDRLFTyTYSTaprpqmDTSRATP 320
+                             679***************76665542...0333336666666.4.5***********************99999****988888888 PP
+
+                             STSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEE CS
+               HATPase_c  71 gggtGlGlsivkklvelmgGeiwvesepgrGttftftl 108
+                               g G+Gl i++ +++ ++G++++ s +g Gt+ ++++
+  tr|E7F3U3|E7F3U3_DANRE 321 LAGYGYGLPISRLYARYFQGDLKLYSMEGFGTDAVIYI 358
+                             9*******************************988776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (405 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       548  (0.0285729); expected 383.6 (0.02)
+Passed bias filter:                      482  (0.0251317); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.20s 00:00:00.61 Elapsed: 00:00:00.61
+# Mc/sec: 2129.85
+//
+Query:       tr|A0A2R8QMA3|A0A2R8QMA3_DANRE  [L=405]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.4e-49  168.2   0.0      2e-49  167.6   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.8e-12   46.8   0.0    5.6e-12   46.3   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.6   0.0   2.1e-53     2e-49       1     162 []      25     187 ..      25     187 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 167.6 bits;  conditional E-value: 2.1e-53
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...l 76 
+                                     p+s++q+++fg++  +++  +s  flr+elpvrla+ ++e++ lP+ l+++ps+k v++wY+qsf eLle+++ +    
+  tr|A0A2R8QMA3|A0A2R8QMA3_DANRE  25 PLSIKQFLEFGRD--NACEKTSYMFLRKELPVRLANTMREVNLLPDRLLSQPSVKLVQKWYLQSFLELLEFENRKpedG 101
+                                     68*********96..46789***************************************************88643444 PP
+
+                     BCDHK_Adom3  77 eenekftevLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkep 154
+                                     +  ++f e+L +i++rH++vv+t+AqGv+e+kek   +  ++s+iq+FLdrfy++RI+ RmLi+qh+ L+ ++ + ++p
+  tr|A0A2R8QMA3|A0A2R8QMA3_DANRE 102 HALNDFLETLIEIRNRHNDVVPTMAQGVIEYKEKFGFDpFVSSNIQYFLDRFYTNRISFRMLINQHTLLFGNDINPAHP 180
+                                     44578****************************99877799*******************************9986666 PP
+
+                     BCDHK_Adom3 155 sdyvGiId 162
+                                      +++G Id
+  tr|A0A2R8QMA3|A0A2R8QMA3_DANRE 181 -KHIGSID 187
+                                     .88**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.3   0.0   5.8e-16   5.6e-12       3     109 ..     238     358 ..     236     361 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 46.3 bits;  conditional E-value: 5.8e-16
+                                     HHHHHHHHHHHHHHHHHH......HCTTTEEEEEEEEEE..TEEEEEEEESSSSSTHHHHHCTTS.TTHH.....HSST CS
+                       HATPase_c   3 ekrLrqiisnlvdNavkf......atkageieveikase..ddlvisveDnGiGipkedlkklfe.kfsq.....ddst 67 
+                                     +++L +++ +l +Na+++       +k+g   ++ k++   +dl+++++D G G+   ++++lf   +s+      ds+
+  tr|A0A2R8QMA3|A0A2R8QMA3_DANRE 238 PSHLFHMLFELFKNAMRAtndlheGSKEGLPLIKAKVTLgiEDLSVKISDRGGGVALRKIDRLFNyTYSTaptpsLDSK 316
+                                     679***************6555432244433444443112369**********************99999***998888 PP
+
+                                     CHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+                       HATPase_c  68 krggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                                     ++   g+G Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  tr|A0A2R8QMA3|A0A2R8QMA3_DANRE 317 RVPLAGFGHGLPISRLYARYFQGDLKLYSMEGVGTDAVIYLK 358
+                                     8999********************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (405 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       439  (0.0228896); expected 383.6 (0.02)
+Passed bias filter:                      419  (0.0218468); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.65
+# Mc/sec: 2030.11
+//
+Query:       tr|A0A0R4IV23|A0A0R4IV23_DANRE  [L=298]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.5e-47  161.5   0.0    2.2e-47  161.0   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.0   0.0   1.1e-51   2.2e-47       1     162 []      25     187 ..      25     187 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 161.0 bits;  conditional E-value: 1.1e-51
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...l 76 
+                                     p+s++q+++fg++  +++  +s  flr+el vrla+ ++e+  lP+ l  +ps+k v++wY qsfeeLl+++k +    
+  tr|A0A0R4IV23|A0A0R4IV23_DANRE  25 PMSIKQFLDFGRE--NACEKTSYMFLRKELAVRLANTMREVTLLPDSLQIQPSVKLVESWYSQSFEELLKFEKRSpedP 101
+                                     689*********7..46789***************************************************88643444 PP
+
+                     BCDHK_Adom3  77 eenekftevLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkep 154
+                                     +  ++f e+L ki++rH++vv+t+AqGv+e+kek   +  i+s++q+FLdrfy++RI+ RmLi+qh+ L+ + +    +
+  tr|A0A0R4IV23|A0A0R4IV23_DANRE 102 HTLNDFLEMLIKIRNRHNDVVPTMAQGVIEYKEKFGFDpFISSNVQYFLDRFYTNRISFRMLINQHTLLFGDAAC-LAQ 179
+                                     44588****************************9987779*******************************9876.555 PP
+
+                     BCDHK_Adom3 155 sdyvGiId 162
+                                     ++++G Id
+  tr|A0A0R4IV23|A0A0R4IV23_DANRE 180 PKHIGSID 187
+                                     58899996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (298 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       494  (0.0257573); expected 383.6 (0.02)
+Passed bias filter:                      446  (0.0232546); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.65
+# Mc/sec: 1481.89
+//
+Query:       tr|B0R159|B0R159_DANRE  [L=428]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.2e-40  139.1   0.0    1.8e-40  138.6   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    9.2e-14   52.0   0.0    2.7e-13   50.5   0.0    1.8  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+    1.7e-06   28.2   0.0    0.00047   20.2   0.0    2.2  0  HATPase_c_3  Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.6   0.0   2.8e-44   1.8e-40       2     162 .]      87     239 ..      86     239 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 138.6 bits;  conditional E-value: 2.8e-44
+             BCDHK_Adom3   2 vslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkp.eleenekftevLe 87 
+                             ++ ++++  g++p+ +++l+sa++l++elpvr+ahr+k +++lP+++  np i +v+++Y+++++ L ++p   + e + ++ ++++
+  tr|B0R159|B0R159_DANRE  87 LTPATMLYAGKSPDGQHILSSARYLHKELPVRIAHRIKGFRSLPFIIGCNPTILQVHELYIRAYHMLSDFPAIqDQETEARYSKMVK 173
+                             566899*******9999*******************************************************8558889******** PP
+
+             BCDHK_Adom3  88 kikkrHdnvvttlAqGvlelkekrkrkqidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             +++++H++vvt+lA+G+ e++++      ++ +++FLd+ ++sR+giRmL+++hiaL+e++      +d+vGiI+
+  tr|B0R159|B0R159_DANRE 174 QLLDDHKDVVTMLAEGFRECRKH---ILDEMLVRNFLDTTLTSRLGIRMLATHHIALHEDN------PDFVGIIC 239
+                             *********************98...577888***************************84......48*****9 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.5   0.0   4.2e-17   2.7e-13       5     109 ..     285     417 ..     282     419 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 50.5 bits;  conditional E-value: 4.2e-17
+                             HHHHHHHHHHHHHHHHHCTTT.........EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH.................. CS
+               HATPase_c   5 rLrqiisnlvdNavkfatkag.........eieveikaseddlvisveDnGiGipkedlkklfe.kfsq.................. 63 
+                              L  i+ +l++Na+++ t ++         ++ v+i  ++ d+vi+++D G Gip ++l+k++  +fs+                  
+  tr|B0R159|B0R159_DANRE 285 PLDYILPELLKNAMRA-TMEShldtpynvpDVVVTIANNDTDFVIRISDRGGGIPHSILDKVMHyHFSTaeqsaqdprmsnlfdsmt 370
+                             57899**********9.434412223333366888886669*******************777667777777776666666664443 PP
+
+                             .HSSTCHT.....STSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  64 .ddstkrg.....gggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                              +     g       g+G+Gl  +++++e +gG++ ++s +g+Gt+++++l+
+  tr|B0R159|B0R159_DANRE 371 nS-----GpqsgpMHGFGFGLPTSRAYAEYLGGSLAIQSMQGIGTDVYLRLR 417
+                             23.....233334799999*****************************9985 PP
+
+>> HATPase_c_3  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (428 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       660  (0.0344126); expected 383.6 (0.02)
+Passed bias filter:                      644  (0.0335784); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.69
+# Mc/sec: 1997.71
+//
+Query:       tr|A0A2R8QBB6|A0A2R8QBB6_DANRE  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.4e-48  164.9   0.1    2.2e-48  164.3   0.1    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    1.6e-13   51.3   0.0    2.6e-13   50.5   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.3   0.1   2.3e-52   2.2e-48       1     162 []      30     192 ..      30     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 164.3 bits;  conditional E-value: 2.3e-52
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...l 76 
+                                     p+s++q+++fg++  +++  +s+ flr+elpvrl++++ke++ lP+ l+++ps++ v++wY+qs+ e+le+ +++    
+  tr|A0A2R8QBB6|A0A2R8QBB6_DANRE  30 PLSMKQFLDFGST--NACEKTSFVFLRQELPVRLSNIMKEINLLPKRLLTTPSVQMVHSWYIQSLMEILEFLEKSpddH 106
+                                     69*********96..46789***************************************************55432235 PP
+
+                     BCDHK_Adom3  77 eenekftevLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkep 154
+                                     +  e+f+ +L +i++rH++vv+t+AqGv+e+ke   ++  ++++iq+FLdrfy sRI+iRmLi+qh+ +++  ++  +p
+  tr|A0A2R8QBB6|A0A2R8QBB6_DANRE 107 SILEEFVAALVNIRNRHNDVVPTMAQGVIEYKEVFGQDpVTNQNIQYFLDRFYLSRISIRMLINQHTLVFDGATNPVHP 185
+                                     55678***************************9887776899******************************9986666 PP
+
+                     BCDHK_Adom3 155 sdyvGiId 162
+                                      + +G Id
+  tr|A0A2R8QBB6|A0A2R8QBB6_DANRE 186 -NTIGSID 192
+                                     .99**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.5   0.0   2.7e-17   2.6e-13       3     109 ..     242     362 ..     240     365 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 50.5 bits;  conditional E-value: 2.7e-17
+                                     HHHHHHHHHHHHHHHHHH......HCTTT....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......H CS
+                       HATPase_c   3 ekrLrqiisnlvdNavkf......atkag....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......d 64 
+                                     +++L++i+ +l +Na+++      +   g     i+v + +  +dl+i+ +D G G+p  ++++lf   +s+      d
+  tr|A0A2R8QBB6|A0A2R8QBB6_DANRE 242 PSHLYHILFELFKNAMRAtieshkE---GsnlpAIQVMVAVGGEDLTIKMSDRGGGVPFRKMENLFSyMYSTaptpqmD 317
+                                     679**************96654331...3333366777776557***********************99999****966 PP
+
+                                     SSTCHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+                       HATPase_c  65 dstkrggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                                     ++++    g+G+Gl i++ +++ ++G++++ s +g+Gt+ +++l+
+  tr|A0A2R8QBB6|A0A2R8QBB6_DANRE 318 EKQRAPLAGFGYGLPISRLYAKYFQGDLQLYSMEGHGTDAVIHLK 362
+                                     6666667*********************************99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       536  (0.0279472); expected 383.6 (0.02)
+Passed bias filter:                      498  (0.0259659); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.66
+# Mc/sec: 1990.80
+//
+Query:       tr|E7FD62|E7FD62_DANRE  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.4e-48  164.9   0.1    2.2e-48  164.3   0.1    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    1.6e-13   51.2   0.0    2.7e-13   50.5   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.3   0.1   2.3e-52   2.2e-48       1     162 []      30     192 ..      30     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 164.3 bits;  conditional E-value: 2.3e-52
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekfte 84 
+                             p+s++q+++fg++  +++  +s+ flr+elpvrl++++ke++ lP+ l+++ps++ v++wY+qs+ e+le+ +++    +  e+f+ 
+  tr|E7FD62|E7FD62_DANRE  30 PLSMKQFLDFGST--NACEKTSFVFLRQELPVRLSNIMKEINLLPKRLLTTPSVQMVHSWYIQSLMEILEFLEKSpddHSILEEFVA 114
+                             69*********96..46789***************************************************5543223555678*** PP
+
+             BCDHK_Adom3  85 vLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             +L +i++rH++vv+t+AqGv+e+ke   ++  ++++iq+FLdrfy sRI+iRmLi+qh+ +++  ++  +p + +G Id
+  tr|E7FD62|E7FD62_DANRE 115 ALVNIRNRHNDVVPTMAQGVIEYKEVFGQDpVTNQNIQYFLDRFYLSRISIRMLINQHTLVFDGATNPVHP-NTIGSID 192
+                             ************************9887776899******************************9986666.99**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.5   0.0   2.8e-17   2.7e-13       3     109 ..     242     362 ..     240     365 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 50.5 bits;  conditional E-value: 2.8e-17
+                             HHHHHHHHHHHHHHHHHH......HCTTT....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTST CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf......atkag....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggg 72 
+                             +++L++i+ +l +Na+++      +   g     i+v + +  +dl+i+ +D G G+p  ++++lf   +s+      d++++    
+  tr|E7FD62|E7FD62_DANRE 242 PSHLYHILFELFKNAMRAtienhkE---GsnlpAIQVMVAVGGEDLTIKMSDRGGGVPFRKMENLFSyMYSTaptpqmDEKQRAPLA 325
+                             679**************96654331...2333366777776557***********************99999****9666666667* PP
+
+                             SSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  73 gtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                             g+G+Gl i++ +++ ++G++++ s +g+Gt+ +++l+
+  tr|E7FD62|E7FD62_DANRE 326 GFGYGLPISRLYAKYFQGDLQLYSMEGHGTDAVIHLK 362
+                             ********************************99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       540  (0.0281558); expected 383.6 (0.02)
+Passed bias filter:                      497  (0.0259138); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.15s 00:00:00.57 Elapsed: 00:00:00.85
+# Mc/sec: 1567.27
+//
+Query:       tr|F1Q8X6|F1Q8X6_DANRE  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.4e-47  160.9   0.0      4e-47  160.2   0.0    1.4  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    3.4e-13   50.2   0.0    5.5e-13   49.5   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.2   0.0   4.1e-51     4e-47       1     162 []      30     192 ..      30     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 160.2 bits;  conditional E-value: 4.1e-51
+             BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkp.e..leenekfte 84 
+                             p+s++q+++fg++  +++  +s+ flr+elpvr+++ +ke+  lP++l e++s++ v++w++qs+ ++le++++         +f+e
+  tr|F1Q8X6|F1Q8X6_DANRE  30 PLSMKQFLDFGTT--NACEKTSFAFLRQELPVRMSNSLKEISLLPDQLIETQSVQLVHSWFVQSLMDILEFQDKcPddPRVLAEFVE 114
+                             69*********96..46789***************************************************8863233333478*** PP
+
+             BCDHK_Adom3  85 vLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             +L +i++rH++vv+t+AqGv+e++++   +  ++++iq+FLdrfymsR++iRmLi+qh+ +++ s++  +p + +G+Id
+  tr|F1Q8X6|F1Q8X6_DANRE 115 TLVTIRNRHNDVVPTMAQGVIEYRDTFGADpVTSQNIQYFLDRFYMSRVSIRMLINQHTLIFDGSTNPGHP-SSIGCID 192
+                             ************************99988768899******************************996666.77***97 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.0   5.7e-17   5.5e-13       3     109 ..     242     362 ..     240     365 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 5.7e-17
+                             HHHHHHHHHHHHHHHHHH.......HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTSSS CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf.......atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggggtG 75 
+                             +++L++++ +l +Na+++       +++ + i+v +    +dl+i+++D G G+p  ++++lf   +s+       d++++   g+G
+  tr|F1Q8X6|F1Q8X6_DANRE 242 PSHLYHMVFELFKNAMRAtienhetSSTLPPIKVMVALGGEDLSIKISDRGGGVPFRKIERLFSyMYSTaprptiGDHQRTPMAGFG 328
+                             679**************966544322233355666665457***********************99999*****999999999**** PP
+
+                             HHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  76 lGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                             +Gl i++ +++ ++G++++   +g Gt+ +++l+
+  tr|F1Q8X6|F1Q8X6_DANRE 329 YGLPISRLYARYFQGDLQLYPMEGYGTDAVIQLK 362
+                             ****************************999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       477  (0.024871); expected 383.6 (0.02)
+Passed bias filter:                      440  (0.0229418); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.63
+# Mc/sec: 2085.59
+//
+Query:       tr|E9QGW0|E9QGW0_DANRE  [L=359]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.3e-45  153.6   0.0    6.4e-45  153.0   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+      3e-12   47.1   0.0    4.4e-12   46.6   0.0    1.2  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.0   0.0   6.7e-49   6.4e-45      25     162 .]       2     142 ..       1     142 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 153.0 bits;  conditional E-value: 6.7e-49
+             BCDHK_Adom3  25 flreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekftevLekikkrHdnvvttlAqGvlelk 108
+                             flr+elpvrla+ ++e++ lP+ l+++ps+k v++wY+qsf eLle+++ +    +  ++f e+L +i++rH++vv+t+AqGv+e+k
+  tr|E9QGW0|E9QGW0_DANRE   2 FLRKELPVRLANTMREVNLLPDRLLSQPSVKLVQKWYLQSFLELLEFENRKpedGHALNDFLETLIEIRNRHNDVVPTMAQGVIEYK 88 
+                             9**********************************************8864344444578*************************** PP
+
+             BCDHK_Adom3 109 ekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                             ek   +  ++s+iq+FLdrfy++RI+ RmLi+qh+ L+ ++ + ++p +++G Id
+  tr|E9QGW0|E9QGW0_DANRE  89 EKFGFDpFVSSNIQYFLDRFYTNRISFRMLINQHTLLFGNDINPAHP-KHIGSID 142
+                             *99877799*******************************9986666.88**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6   0.0   4.6e-16   4.4e-12       3     109 ..     192     312 ..     190     315 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 4.6e-16
+                             HHHHHHHHHHHHHHHHHH......HCTTTEEEEEEEEEE..TEEEEEEEESSSSSTHHHHHCTTS.TTHH.....HSSTCHTSTSSS CS
+               HATPase_c   3 ekrLrqiisnlvdNavkf......atkageieveikase..ddlvisveDnGiGipkedlkklfe.kfsq.....ddstkrggggtG 75 
+                             +++L +++ +l +Na+++       +k+g   ++ k++   +dl+++++D G G+   ++++lf   +s+      ds+++   g+G
+  tr|E9QGW0|E9QGW0_DANRE 192 PSHLFHMLFELFKNAMRAtndlheGSKEGLPLIKAKVTLgiEDLSVKISDRGGGVALRKIDRLFNyTYSTaptpsLDSKRVPLAGFG 278
+                             679***************6555432244433444443112369**********************99999***9988888999**** PP
+
+                             HHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+               HATPase_c  76 lGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                              Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  tr|E9QGW0|E9QGW0_DANRE 279 HGLPISRLYARYFQGDLKLYSMEGVGTDAVIYLK 312
+                             ****************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (359 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       357  (0.0186141); expected 383.6 (0.02)
+Passed bias filter:                      345  (0.0179884); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.50
+# Mc/sec: 2294.06
+//
+Query:       tr|A0A0R4IR80|A0A0R4IR80_DANRE  [L=406]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.1e-47  160.5   0.0    4.7e-47  160.0   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    5.5e-12   46.3   0.0    8.1e-12   45.7   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.0   0.0   4.9e-51   4.7e-47       1     162 []      25     187 ..      25     187 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 160.0 bits;  conditional E-value: 4.9e-51
+                     BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...l 76 
+                                     p+s++q+++fg++  +++  +s  flr+el vrla+ ++e+  lP+ l  +ps+k v++wY qsfeeLl+++k +    
+  tr|A0A0R4IR80|A0A0R4IR80_DANRE  25 PMSIKQFLDFGRE--NACEKTSYMFLRKELAVRLANTMREVTLLPDSLQIQPSVKLVESWYSQSFEELLKFEKRSpedP 101
+                                     689*********7..46789***************************************************88643444 PP
+
+                     BCDHK_Adom3  77 eenekftevLekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkep 154
+                                     +  ++f e+L ki++rH++vv+t+AqGv+e+kek   +  i+s++q+FLdrfy++RI+ RmLi+qh+ L+ + +    +
+  tr|A0A0R4IR80|A0A0R4IR80_DANRE 102 HTLNDFLEMLIKIRNRHNDVVPTMAQGVIEYKEKFGFDpFISSNVQYFLDRFYTNRISFRMLINQHTLLFGDAAC-LAQ 179
+                                     44588****************************9987779*******************************9876.555 PP
+
+                     BCDHK_Adom3 155 sdyvGiId 162
+                                     ++++G Id
+  tr|A0A0R4IR80|A0A0R4IR80_DANRE 180 PKHIGSID 187
+                                     58899996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.7   0.0   8.4e-16   8.1e-12       3     109 ..     237     359 ..     235     362 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 45.7 bits;  conditional E-value: 8.4e-16
+                                     HHHHHHHHHHHHHHHHHH......HCTTT....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH....... CS
+                       HATPase_c   3 ekrLrqiisnlvdNavkf......atkag....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq....... 63 
+                                     +++L +++ +l +N++++      ++++g    +  v++   ++dl+i+++D G G+p  ++++lf   +s+       
+  tr|A0A0R4IR80|A0A0R4IR80_DANRE 237 PSHLFHMLFELFKNSMRAtvelyeNSSEGlppvKAMVTLG--KEDLSIKISDKGGGVPLRKIDRLFNyMYSTaptprld 313
+                                     679***************7766542222322223355555..56***********************99999**99996 PP
+
+                                     HSSTCHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+                       HATPase_c  64 ddstkrggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                                      ++ ++   g+G+Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  tr|A0A0R4IR80|A0A0R4IR80_DANRE 314 PSQPAVPLAGFGYGLPISRLYARYFQGDLNLYSVEGFGTDAVIHLK 359
+                                     55566668*********************************99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (406 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       500  (0.0260702); expected 383.6 (0.02)
+Passed bias filter:                      464  (0.0241931); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.59
+# Mc/sec: 2234.21
+//
+Query:       sp|Q15118|PDK1_HUMAN  [L=436]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.5e-49  166.5   0.0    6.6e-49  166.0   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    7.6e-14   52.3   0.0    1.3e-13   51.5   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  166.0   0.0   6.9e-53   6.6e-49       1     161 [.      56     219 ..      56     220 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 166.0 bits;  conditional E-value: 6.9e-53
+           BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekftevL 86 
+                           p+s++q+++fg+   +++  +s+ flr+elpvrla+++ke+  lP++l+++ps++ v++wY+qs++eLl++++++    +   +ft+++
+  sp|Q15118|PDK1_HUMAN  56 PLSMKQFLDFGSV--NACEKTSFMFLRQELPVRLANIMKEISLLPDNLLRTPSVQLVQSWYIQSLQELLDFKDKSaedAKAIYDFTDTV 142
+                           69*********95..35789***************************************************9985333444578***** PP
+
+           BCDHK_Adom3  87 ekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqsks.kkepsdyvGiI 161
+                            +i++rH++v++t+AqGv+e+ke+   +  +++++q+FLdrfymsRI+iRmL++qh  L+  + + + ++++++G I
+  sp|Q15118|PDK1_HUMAN 143 IRIRNRHNDVIPTMAQGVIEYKESFGVDpVTSQNVQYFLDRFYMSRISIRMLLNQHSLLFGGKGKgSPSHRKHIGSI 219
+                           **********************99988768899***************************99877655556889998 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.5   0.0   1.4e-17   1.3e-13       3     109 ..     270     390 ..     268     393 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 51.5 bits;  conditional E-value: 1.4e-17
+                           HHHHHHHHHHHHHHHHHH....HCTTT.....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTSSS CS
+             HATPase_c   3 ekrLrqiisnlvdNavkf....atkag.....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggggtG 75 
+                           +++L++++ +l +Na+++       a+      i+v+++  ++dl+++ +D G G+p  ++++lf   +s+      + s+++   g+G
+  sp|Q15118|PDK1_HUMAN 270 PSHLYHMVFELFKNAMRAtmehH--ANrgvypPIQVHVTLGNEDLTVKMSDRGGGVPLRKIDRLFNyMYSTaprprvETSRAVPLAGFG 356
+                           679**************944331..223344434555554356***********************99999****9988999999**** PP
+
+                           HHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+             HATPase_c  76 lGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                           +Gl i++ +++ ++G++++ s +g Gt+ +++++
+  sp|Q15118|PDK1_HUMAN 357 YGLPISRLYAQYFQGDLKLYSLEGYGTDAVIYIK 390
+                           ****************************988876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (436 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       321  (0.0167371); expected 383.6 (0.02)
+Passed bias filter:                      312  (0.0162678); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.60
+# Mc/sec: 2351.87
+//
+Query:       sp|Q16654|PDK4_HUMAN  [L=411]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      2e-49  167.7   0.2    2.8e-49  167.2   0.2    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    8.2e-15   55.4   0.0    1.5e-14   54.5   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.2   0.2   2.9e-53   2.8e-49       1     162 []      34     195 ..      34     195 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 167.2 bits;  conditional E-value: 2.9e-53
+           BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekftevL 86 
+                           p+s++ql++fg++  +++  +s+ flr+elpvrla+++ke++ lP +lv+++s++ vk+wY+qs+ +L+e+++++    +  ++f+++L
+  sp|Q16654|PDK4_HUMAN  34 PLSMKQLLDFGSE--NACERTSFAFLRQELPVRLANILKEIDILPTQLVNTSSVQLVKSWYIQSLMDLVEFHEKSpddQKALSDFVDTL 120
+                           69*********96..46789***************************************************8874334444578***** PP
+
+           BCDHK_Adom3  87 ekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                            k+++rH+nvv+t+AqG++e+k++ + +  +++++q+FLdrfym+RI++RmL++qhi ++++s++   +++++G Id
+  sp|Q16654|PDK4_HUMAN 121 IKVRNRHHNVVPTMAQGIIEYKDACTVDpVTNQNLQYFLDRFYMNRISTRMLMNQHILIFSDSQT--GNPSHIGSID 195
+                           **********************9877666899******************************975..55588**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.5   0.0   1.6e-18   1.5e-14       3     109 ..     245     365 ..     243     368 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 54.5 bits;  conditional E-value: 1.6e-18
+                           HHHHHHHHHHHHHHHHHH.......HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTSSSHH CS
+             HATPase_c   3 ekrLrqiisnlvdNavkf.......atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggggtGlG 77 
+                           +++L++++ +l +Na+++       +++ + iev +   ++dl+i+++D G G+p  ++++lf   +s+      d+s++    g+G+G
+  sp|Q16654|PDK4_HUMAN 245 PSHLHHMLFELFKNAMRAtvehqenQPSLTPIEVIVVLGKEDLTIKISDRGGGVPLRIIDRLFSyTYSTaptpvmDNSRNAPLAGFGYG 333
+                           679***************77655433344466666665567***********************99999****9999999999****** PP
+
+                           HHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+             HATPase_c  78 lsivkklvelmgGeiwvesepgrGttftftlp 109
+                           l i++ +++ ++G++++ s +g Gt+ +++l+
+  sp|Q16654|PDK4_HUMAN 334 LPISRLYAKYFQGDLNLYSLSGYGTDAIIYLK 365
+                           **************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (411 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       572  (0.0298243); expected 383.6 (0.02)
+Passed bias filter:                      513  (0.026748); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.57
+# Mc/sec: 2335.67
+//
+Query:       sp|Q15119|PDK2_HUMAN  [L=407]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.3e-51  174.7   0.0    1.9e-51  174.2   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    2.2e-12   47.6   0.0    3.6e-12   46.9   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.2   0.0     2e-55   1.9e-51       1     162 []      30     192 ..      30     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 174.2 bits;  conditional E-value: 2e-55
+           BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekftevL 86 
+                           p+s++q+++fg++  +++  +s+ flr+elpvrla+++ke++ lP+ ++++ps++ v++wY+qs+ +++e+ +++       ++ft++L
+  sp|Q15119|PDK2_HUMAN  30 PLSMKQFLDFGSS--NACEKTSFTFLRQELPVRLANIMKEINLLPDRVLSTPSVQLVQSWYVQSLLDIMEFLDKDpedHRTLSQFTDAL 116
+                           69*********96..56789***************************************************5542223666689***** PP
+
+           BCDHK_Adom3  87 ekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                            +i++rH++vv+t+AqGvle+k+++ ++   +++iq+FLdrfy sRI+iRmLi+qh+ +++ s++ ++p +++G Id
+  sp|Q15119|PDK2_HUMAN 117 VTIRNRHNDVVPTMAQGVLEYKDTYGDDpVSNQNIQYFLDRFYLSRISIRMLINQHTLIFDGSTNPAHP-KHIGSID 192
+                           **********************99988768899******************************996666.88**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.9   0.0   3.7e-16   3.6e-12       3     109 ..     242     361 ..     240     364 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 46.9 bits;  conditional E-value: 3.7e-16
+                           HHHHHHHHHHHHHHHHHHHC.TTT.......EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH.....HSSTCHTSTSSSHH CS
+             HATPase_c   3 ekrLrqiisnlvdNavkfat.kag.......eieveikaseddlvisveDnGiGipkedlkklfe.kfsq.....ddstkrggggtGlG 77 
+                           +++L++++ +l +Na+++ t +++        i+v +   e+dl+i+ +D G G+p  ++++lf   +s+      ++  +   g+G+G
+  sp|Q15119|PDK2_HUMAN 242 PSHLYHMLFELFKNAMRA-TvESHesslilpPIKVMVALGEEDLSIKMSDRGGGVPLRKIERLFSyMYSTaptpqPGTGGTPLAGFGYG 329
+                           679**************9.42333223333344555555568***********************99999998843344444699999* PP
+
+                           HHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+             HATPase_c  78 lsivkklvelmgGeiwvesepgrGttftftlp 109
+                           l i++ +++ ++G++++ s +g Gt+ +++l+
+  sp|Q15119|PDK2_HUMAN 330 LPISRLYAKYFQGDLQLFSMEGFGTDAVIYLK 361
+                           **************************999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (407 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       482  (0.0251317); expected 383.6 (0.02)
+Passed bias filter:                      442  (0.023046); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.62
+# Mc/sec: 2126.06
+//
+Query:       sp|Q15120|PDK3_HUMAN  [L=406]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.4e-48  164.2   0.0    3.5e-48  163.6   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    4.6e-12   46.5   0.0    7.4e-12   45.9   0.0    1.3  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  163.6   0.0   3.6e-52   3.5e-48       1     162 []      26     188 ..      26     188 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 163.6 bits;  conditional E-value: 3.6e-52
+           BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpe...leenekftevL 86 
+                           p+s++q+++fg++  +++  +s  flr+elpvrla+ ++e++ lP++l++ ps+  v++wY+qsf eLle+++++    +  ++f +vL
+  sp|Q15120|PDK3_HUMAN  26 PLSIKQFLDFGRD--NACEKTSYMFLRKELPVRLANTMREVNLLPDNLLNRPSVGLVQSWYMQSFLELLEYENKSpedPQVLDNFLQVL 112
+                           68*********96..46789***************************************************8864334333578***** PP
+
+           BCDHK_Adom3  87 ekikkrHdnvvttlAqGvlelkekrkrk.qidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                            k+++rH++vv+t+AqGv+e+kek   +  i+++iq+FLdrfy++RI+ RmLi+qh+ L+  +++  +p +++G Id
+  sp|Q15120|PDK3_HUMAN 113 IKVRNRHNDVVPTMAQGVIEYKEKFGFDpFISTNIQYFLDRFYTNRISFRMLINQHTLLFGGDTNPVHP-KHIGSID 188
+                           ***********************99877799*******************************9986666.88**996 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.9   0.0   7.7e-16   7.4e-12       3     109 ..     238     359 ..     236     362 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 45.9 bits;  conditional E-value: 7.7e-16
+                           HHHHHHHHHHHHHHHHHH......HCTTT....EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH......HSSTCHTSTSS CS
+             HATPase_c   3 ekrLrqiisnlvdNavkf......atkag....eieveikaseddlvisveDnGiGipkedlkklfe.kfsq......ddstkrggggt 74 
+                           +++L +++ +l +N++++        k+g    +  v++   ++dl+i+++D G G+p  ++++lf   +s+      + +++    g+
+  sp|Q15120|PDK3_HUMAN 238 PSHLFHMLFELFKNSMRAtvelyeDRKEGypavKTLVTLG--KEDLSIKISDLGGGVPLRKIDRLFNyMYSTaprpslEPTRAAPLAGF 324
+                           679***************7766652244422113355555..56***********************99999***99988888889*** PP
+
+                           SHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+             HATPase_c  75 GlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                           G+Gl i++ +++ ++G++++ s +g Gt+ +++l+
+  sp|Q15120|PDK3_HUMAN 325 GYGLPISRLYARYFQGDLKLYSMEGVGTDAVIYLK 359
+                           *****************************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (406 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       449  (0.023411); expected 383.6 (0.02)
+Passed bias filter:                      416  (0.0216904); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.63
+# Mc/sec: 2077.09
+//
+Query:       sp|O14874|BCKD_HUMAN  [L=412]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.9e-41  140.7   0.0    5.9e-41  140.1   0.0    1.2  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    1.6e-13   51.3   0.0    5.3e-13   49.6   0.0    1.8  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.1   0.0   6.1e-45   5.9e-41       5     162 .]      73     222 ..      69     222 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 140.1 bits;  conditional E-value: 6.1e-45
+           BCDHK_Adom3   5 rqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkp.eleenekftevLekikkr 92 
+                             ++  g++++ ++llksa++l++elpvr+ahr+k ++ lP+++  np i +v+++Y+++f++L+++p+  +  ++ ++++++++++++
+  sp|O14874|BCKD_HUMAN  73 TMMLYAGRSQDGSHLLKSARYLQQELPVRIAHRIKGFRCLPFIIGCNPTILHVHELYIRAFQKLTDFPPIkDQADEAQYCQLVRQLLDD 161
+                           56888899988888******************************************************98558889************* PP
+
+           BCDHK_Adom3  93 HdnvvttlAqGvlelkekrkrkqidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiId 162
+                           H++vvt lA+G+ e++++    + ++ +++FLd+ ++sR+giRmL+++h+aL+e++      +d+vGiI+
+  sp|O14874|BCKD_HUMAN 162 HKDVVTLLAEGLRESRKH---IEDEKLVRYFLDKTLTSRLGIRMLATHHLALHEDK------PDFVGIIC 222
+                           ****************88...567889***************************83......59*****9 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.6   0.0   5.5e-17   5.3e-13       5     109 ..     268     401 ..     265     403 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 49.6 bits;  conditional E-value: 5.5e-17
+                           HHHHHHHHHHHHHHHHHCTTT.........EEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH.................... CS
+             HATPase_c   5 rLrqiisnlvdNavkfatkag.........eieveikaseddlvisveDnGiGipkedlkklfe.kfsq.................... 63 
+                            L  i+ +l++Na+++ t ++         ++ ++i  +++dl i+++D G Gi  +dl+++++ +f++                    
+  sp|O14874|BCKD_HUMAN 268 PLDYILPELLKNAMRA-TMEShldtpynvpDVVITIANNDVDLIIRISDRGGGIAHKDLDRVMDyHFTTaeastqdprisplfghldmh 355
+                           68899**********9.444412223333356778776779*******************88888888888888888888888888875 PP
+
+                           HSSTCHTSTSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+             HATPase_c  64 ddstkrggggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                           +++++    g+G+Gl  +++++e +gG+++++s +g+Gt+++++l+
+  sp|O14874|BCKD_HUMAN 356 SGAQSGPMHGFGFGLPTSRAYAEYLGGSLQLQSLQGIGTDVYLRLR 401
+                           555666679999******************************9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (412 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       513  (0.026748); expected 383.6 (0.02)
+Passed bias filter:                      496  (0.0258616); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.59
+# Mc/sec: 2255.11
+//
+Query:       EPZ36222.1  [L=397]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.6e-59  198.5   0.0    9.8e-59  197.9   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+      2e-14   54.2   0.0    3.8e-14   53.2   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  197.9   0.0     1e-62   9.8e-59       1     162 []      23     215 ..      23     215 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 197.9 bits;  conditional E-value: 1e-62
+  BCDHK_Adom3   1 pvslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpelee.................... 78 
+                  +vslrq+v+fg++p++gt+l++ qfl++elp+rla+rv el+nlP+gl+++psi +vk+wYa+sf+eL+e+pk e+                      
+   EPZ36222.1  23 GVSLRQMVEFGKNPNQGTMLRATQFLSDELPIRLAKRVIELNNLPFGLNKMPSILRVKHWYAESFQELIEFPKIEIAGyirdkyrnsfmngkayytqf 120
+                  59***********************************************************************8644456668999************ PP
+
+  BCDHK_Adom3  79 ...............nekftevLekikkrHdnvvttlAqGvlelkekrkrkqidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiI 161
+                                  ++ft++++ ik+rHd+++  +A G++e+k+k k++q+++eiq FLdrfy sRIgiR+Li+q +aL++q     +++dyvGiI
+   EPZ36222.1 121 dasdtqylpvdtgsyIQDFTNLISAIKRRHDPTMISMAWGIIEWKNKDKDNQVNKEIQIFLDRFYLSRIGIRVLIGQQVALQSQP----PQKDYVGII 214
+                  *************988*****************************************************************9995....4679***** PP
+
+  BCDHK_Adom3 162 d 162
+                  +
+   EPZ36222.1 215 C 215
+                  9 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.2   0.0     4e-18   3.8e-14       4     109 ..     262     387 ..     259     389 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 53.2 bits;  conditional E-value: 4e-18
+                 HHHHHHHHHHHHHHHHH........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH...........HSSTCHTSTSSSHHHHHHH CS
+   HATPase_c   4 krLrqiisnlvdNavkf........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq...........ddstkrggggtGlGlsivk 82 
+                 ++L+++i +l++N++++        + + + i++ i   ++d++i+++D G Gip++ l+++f+  +++            ++ +    g+G+Gl i++
+  EPZ36222.1 262 SHLHHMIFELLKNSLRAvvefhgleKEEYPPIKLIIAEGKEDITIKISDEGGGIPRSGLPLIFTyLYTTaniqfdensfqFNEFNAPMAGFGYGLPISR 360
+                 78***************999876543355577777775448*******************9999666669999886666655666669*********** PP
+
+                 HHHHHTTSEEEEEEETTSEEEEEEEEE CS
+   HATPase_c  83 klvelmgGeiwvesepgrGttftftlp 109
+                  +++ +gG++ v+s +g Gt+ +++l 
+  EPZ36222.1 361 LYARYFGGDLAVISMEGYGTDAYLHLS 387
+                 **********************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (397 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       492  (0.0256531); expected 383.6 (0.02)
+Passed bias filter:                      449  (0.023411); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.20s 00:00:00.57 Elapsed: 00:00:00.53
+# Mc/sec: 2408.83
+//
+Query:       P40530  [L=394]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.5e-23   83.5   0.6    1.5e-23   83.5   0.6    1.5  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+      3e-15   56.8   0.0    5.3e-15   56.0   0.0    1.4  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.5   0.6   1.6e-27   1.5e-23       4     161 ..      58     211 ..      55     212 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 83.5 bits;  conditional E-value: 1.6e-27
+  BCDHK_Adom3   4 lrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkp.eleenekftevLekikkrHdnvvttl 100
+                  +++++q+ + +++++ +     + + l   +++r++++++lPy+ v np+i++ +++Y++s+++Ll+++ p el++  k++   ++++++H++ +  l
+       P40530  58 YEYFLQYRPPLTKKEEYMLTIKTINLLLSLTCKRLNAIQRLPYNAVINPHIERTNSLYLKSLQTLLSIAYPyELHNPPKIQAKFTELLDDHEDAIVVL 155
+                  5566666444555334444444556688899***************************************988*999********************* PP
+
+  BCDHK_Adom3 101 AqGvlelkekrkrkqidseiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiI 161
+                  A+G++e+++       + +i++FL+ ++++RI +++L++++++L  q+k  +++++++Gi+
+       P40530 156 AKGLQEIQSC----YPKFQISQFLNFHLKERITMKLLVTHYLSLMAQNKG-DTNKRMIGIL 211
+                  ********76....35678****************************887.666699**96 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.0   0.0   5.6e-19   5.3e-15       6     109 ..     261     383 ..     257     386 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 56.0 bits;  conditional E-value: 5.6e-19
+                HHHHHHHHHHHHHHH..HCTTTEEEEEEEE...EETEEEEEEEESSSSSTHHHHHCTTS.TTHH.............HSSTCHTSTSSSHHHHHHHHHHH CS
+  HATPase_c   6 LrqiisnlvdNavkf..atkageieveika...seddlvisveDnGiGipkedlkklfe.kfsq.............ddstkrggggtGlGlsivkklve 86 
+                L+ i+ ++ +Na ++  a  +++  +ei+    ++d+l ++++D G Gi++e   ++f  ++s+              +++ ++ +g G+Gl ++k + e
+     P40530 261 LEYIMTEVFKNAFEAqiALGKEHMPIEINLlkpDDDELYLRIRDHGGGITPEVEALMFNySYSThtqqsadsestdlPGEQINNVSGMGFGLPMCKTYLE 360
+                8899**********9654488899888888655449**********************999999999998877777666667779*************** PP
+
+                HTTSEEEEEEETTSEEEEEEEEE CS
+  HATPase_c  87 lmgGeiwvesepgrGttftftlp 109
+                l+gG+i v+s  g Gt+++++l+
+     P40530 361 LFGGKIDVQSLLGWGTDVYIKLK 383
+                ********************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (394 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       476  (0.0248188); expected 383.6 (0.02)
+Passed bias filter:                      404  (0.0210647); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.65
+# Mc/sec: 1955.25
+//
+Query:       sp|Q9P6P9|PDK_SCHPO  [L=425]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      4e-48  163.4   0.0    6.1e-48  162.8   0.0    1.3  1  BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehy
+    2.3e-13   50.7   0.0    4.9e-13   49.7   0.0    1.6  1  HATPase_c    Histidine kinase-, DNA gyrase B-, and HSP90-like
+
+
+Domain annotation for each model (and alignments):
+>> BCDHK_Adom3  Mitochondrial branched-chain alpha-ketoacid dehydrogenase kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.8   0.0   6.4e-52   6.1e-48       2     161 ..      23     240 ..      22     241 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 162.8 bits;  conditional E-value: 6.4e-52
+          BCDHK_Adom3   2 vslrqlvqfgekpsegtllksaqflreelpvrlahrvkelenlPyglvenpsikkvkdwYaqsfeeLlelpkpelee............. 78 
+                          +sl+qlv fg++p++gtl+++  flr+elp+rla+r+++l+nl   l +++ i+ vk  Y +s+ee++el+  el +             
+  sp|Q9P6P9|PDK_SCHPO  23 LSLKQLVYFGKNPTPGTLFRAGLFLRDELPIRLARRIQDLQNLSPMLRSMKRISSVKAAYGRSMEEIIELKGVELPKclpkharyhnapk 112
+                          8*********************************************************************99887778888999999*** PP
+
+          BCDHK_Adom3  79 ...................................................nekftevLekikkrHdnvvttlAqGvlelkekrkrkqid 117
+                                                                             n++f+ +L++i++rHdnv   +A  ++e+++k  ++qid
+  sp|Q9P6P9|PDK_SCHPO 113 wrsslmdseilhnpslanthldsskgryfetdfsdqdngvdcnwpesllkfNSNFAYLLNTIRTRHDNVAVEIALDIQEYRRK--TNQID 200
+                          *********************************************************************************99..89*** PP
+
+          BCDHK_Adom3 118 seiqsFLdrfymsRIgiRmLieqhiaLteqskskkepsdyvGiI 161
+                          ++iq FLdrfymsRIgiRmL++q+iaL ++     ++++yvG+I
+  sp|Q9P6P9|PDK_SCHPO 201 NSIQIFLDRFYMSRIGIRMLLGQYIALVSEP----PRENYVGVI 240
+                          ****************************995....5789****9 PP
+
+>> HATPase_c  Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.7   0.0   5.1e-17   4.9e-13       3     109 ..     287     415 ..     285     417 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 49.7 bits;  conditional E-value: 5.1e-17
+                          HHHHHHHHHHHHHHHHHH........HCTTTEEEEEEEEEETEEEEEEEESSSSSTHHHHHCTTS.TTHH.............HSSTCHT CS
+            HATPase_c   3 ekrLrqiisnlvdNavkf........atkageieveikaseddlvisveDnGiGipkedlkklfe.kfsq.............ddstkrg 70 
+                          e++L +++ ++++N++++        +   + i+v + + ++d++i+++D G Gi++ +++++    f++             ++++++ 
+  sp|Q9P6P9|PDK_SCHPO 287 ESHLNHAVFEILKNSLRAtvefhgvdSDFFPPIKVIVAKGQEDITIKISDEGGGISRRNIPLVWSyMFTTasptltddphdivSANSTTP 376
+                          7899*************9554433322233367888886558*******************88888888888889999999976666667 PP
+
+                          STSSSHHHHHHHHHHHHTTSEEEEEEETTSEEEEEEEEE CS
+            HATPase_c  71 gggtGlGlsivkklvelmgGeiwvesepgrGttftftlp 109
+                            g+G+Gl +++ +++ +gG+++++s +g Gt+++++l 
+  sp|Q9P6P9|PDK_SCHPO 377 MAGFGFGLPLARLYTRYFGGDLELISMEGYGTDVYIHLN 415
+                          89**********************************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (425 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       532  (0.0277387); expected 383.6 (0.02)
+Passed bias filter:                      511  (0.0266437); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.57
+# Mc/sec: 2411.52
+//
+[ok]

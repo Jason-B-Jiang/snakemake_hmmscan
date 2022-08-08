@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031899.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031899
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q7KT58|Q7KT58_DROME  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-17   63.7  18.3    2.6e-10   40.0   6.1    4.6  2  LRR_8     Leucine rich repeat
+    1.4e-09   38.1   0.3    1.4e-06   28.3   0.1    2.7  1  LRR_5     BspA type Leucine rich repeat region (6 copies)
+    2.5e-07   31.0  18.2    4.2e-05   23.9   2.5    5.5  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.0   6.1   4.1e-14   2.6e-10       2      61 .]     289     348 ..     288     348 .. 0.97
+   2 !   33.1   1.9   5.9e-12   3.8e-08       5      47 ..     316     358 ..     314     360 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 40.0 bits;  conditional E-value: 4.1e-14
+                             T-SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+                   LRR_8   2 nLtsLdLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61 
+                             +L +L L +N++  l+d+ F++ +   +++L  N+l+++  g f+ L++L+ L+L++N++
+  tr|Q7KT58|Q7KT58_DROME 289 KLLTLRLERNNIARLPDQLFRNTPLILEIHLAFNNLDRIQSGLFDKLKNLQVLNLEHNPI 348
+                             5779******************************************************97 PP
+
+  == domain 2  score: 33.1 bits;  conditional E-value: 5.9e-12
+                             EEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT CS
+                   LRR_8   5 sLdLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsg 47 
+                             +++L +N+l+ ++ g F +l+nL+vL+L +N +tt+  +af  
+  tr|Q7KT58|Q7KT58_DROME 316 EIHLAFNNLDRIQSGLFDKLKNLQVLNLEHNPITTIALNAFTP 358
+                             589*************************************975 PP
+
+>> LRR_5  BspA type Leucine rich repeat region (6 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.1   2.3e-10   1.4e-06       9     122 ..     240     357 ..     234     361 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 2.3e-10
+                   LRR_5   9 yncnltsitipssvtsIgeyaFsnctslksitlpsslteigsyaFsncssltsitips.sltsigeyaFsncsslkeitlp.snltt 93 
+                             + ++l+si++ +   ++  + F  +++l  i + s+++++++   +  ++l ++ ++  ++ +++++ F+n   + ei+l  +nl  
+  tr|Q7KT58|Q7KT58_DROME 240 HMTELQSIELFNCGDNVPTELFWMSEQLAYIGIRSNISYLSKDFLKVQKKLLTLRLERnNIARLPDQLFRNTPLILEIHLAfNNLDR 326
+                             456999******************************************9*******8549**********999999***97368*** PP
+
+                   LRR_5  94 igssaFsnc.slesitips.svtkigsnaFs 122
+                             i+s  F +  +l+ ++++   +t+i  naF 
+  tr|Q7KT58|Q7KT58_DROME 327 IQSGLFDKLkNLQVLNLEHnPITTIALNAFT 357
+                             ********99******996379999999995 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       510  (0.0265916); expected 383.6 (0.02)
+Passed bias filter:                      372  (0.0193962); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.21s 00:00:00.64 Elapsed: 00:00:00.64
+# Mc/sec: 2286.81
+//
+[ok]

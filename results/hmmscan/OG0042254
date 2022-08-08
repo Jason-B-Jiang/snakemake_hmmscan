@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0042254.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0042254
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       QXFS01001171.1_1  [L=116]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.2e-14   54.5  10.5    4.5e-06   27.2   0.3    3.3  3  EsV_1_7_cys  EsV-1-7 cysteine-rich motif
+
+
+Domain annotation for each model (and alignments):
+>> EsV_1_7_cys  EsV-1-7 cysteine-rich motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.6   0.1   3.8e-05      0.73       6      19 ..       4      23 ..       1      28 [. 0.76
+   2 !   22.1   1.3   9.4e-09   0.00018       1      26 []      41      74 ..      41      74 .. 0.89
+   3 !   27.2   0.3   2.4e-10   4.5e-06       6      26 .]      90     114 ..      77     114 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 3.8e-05
+       EsV_1_7_cys  6 kkPsFG......rfCsaHke 19
+                      k+Ps+G       +Cs+ ++
+  QXFS01001171.1_1  4 KQPSYGiiggkaQYCSKCAK 23
+                      55********7744999854 PP
+
+  == domain 2  score: 22.1 bits;  conditional E-value: 9.4e-09
+       EsV_1_7_cys  1 C..epCtkkPsFG......rfCsaHkedgMVnVr 26
+                      C  e+C k +++G      ++C+ H++ +M++V+
+  QXFS01001171.1_1 41 CniEGCQKNATYGhigekaCRCKPHADNDMIDVK 74
+                      98778*888********8844*****99****96 PP
+
+  == domain 3  score: 27.2 bits;  conditional E-value: 2.4e-10
+       EsV_1_7_cys   6 kkPsFG..rf..CsaHkedgMVnVr 26 
+                       k+P+FG  ++  C +HkedgM++++
+  QXFS01001171.1_1  90 KQPTFGliKPthCFEHKEDGMIDLK 114
+                       78******5556***********86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (116 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       842  (0.0439022); expected 383.6 (0.02)
+Passed bias filter:                      299  (0.01559); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.23s 00:00:00.53 Elapsed: 00:00:00.63
+# Mc/sec: 597.09
+//
+[ok]

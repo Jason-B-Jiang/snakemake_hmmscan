@@ -1,0 +1,392 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0009189.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0009189
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VY15|Q9VY15_DROME  [L=843]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.3e-49  167.9   0.7    6.2e-47  160.4   0.2    2.1  1  Myotub-related  Myotubularin-like phosphatase domain
+      2e-07   30.9   0.4      5e-07   29.6   0.0    1.8  1  3-PAP           Myotubularin-associated protein
+
+
+Domain annotation for each model (and alignments):
+>> Myotub-related  Myotubularin-like phosphatase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.4   0.2   6.5e-51   6.2e-47     176     355 ..     400     588 ..     388     589 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 160.4 bits;  conditional E-value: 6.5e-51
+                             ---HHHHHHHHHHHHHHH......TSS--HHHHHHHHHHH-HHHHHHHHHHHHHHHHHHHHCS---EEEE-SSSSSHHHHHHHHHHH CS
+          Myotub-related 176 ienihvmreslkklvealkds...ekeasekkwlsklekskWLkhikaiLeaaaliaksvelekssvLvhcsdGwDrtsqlsslaql 259
+                             +++i+ +  +++kl+++++ +   +   +++k+l  lek++WL  ++  L+ a     +++ ++ + +++ s+G D    +sslaql
+  tr|Q9VY15|Q9VY15_DROME 400 LPSIQDVLRAYQKLRRLCTPEtpeKFMLQDDKYLGLLEKTNWLFYVSLCLRYASEASATLR-SGVTCVLQESNGRDLCCVISSLAQL 485
+                             67899999**********999765355789******************************8.8888889****************** PP
+
+                             HH-GGGGSHHHHHHHHHHHTTTTT--HHHHTTSS-...T.......TSTT---HHHHHHHHHHHHHHH-TTT-SB-HHHHHHHHHHH CS
+          Myotub-related 260 lldpyyRTieGfqvLiekeWlsfGhkfaeRsghlsseka.......kskersPvflqFldcvyqllrqfptafeFnerfLlrlldhl 339
+                             lldp++RTi+Gfq L++keW++  h+f++R gh    +         ++e+sPvfl+Fldcv+qll+qfp +feF++++L +l d++
+  tr|Q9VY15|Q9VY15_DROME 486 LLDPHFRTIDGFQSLVQKEWVALEHPFQRRLGHVYPAQPaggnaelFDSEQSPVFLLFLDCVWQLLQQFPDEFEFTQTYLTTLWDSC 572
+                             *********************************99444457777777788************************************* PP
+
+                             HH--SSTT-SSSHHHH CS
+          Myotub-related 340 yscqfGtFLcnseker 355
+                             +   f tF ++++ +r
+  tr|Q9VY15|Q9VY15_DROME 573 FMPIFDTFQFDTQAQR 588
+                             *************998 PP
+
+>> 3-PAP  Myotubularin-associated protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.6   0.0   5.2e-11     5e-07      54     121 ..     664     729 ..     620     737 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 29.6 bits;  conditional E-value: 5.2e-11
+                   3-PAP  54 seqffrewlskpadlhglllpqlsgtqiklWkqcYlRwvPeaqikhGgk..vtafhklskLadeveaLqr 121
+                               q+f    s p+d    l+p     ++++W qcY Rw+P + i++Gg+  v ++h+l  L +++ + qr
+  tr|Q9VY15|Q9VY15_DROME 664 NPQLFATASSVPQDR--YLQPAHRIFDLQVWDQCYYRWLPILDIRGGGQpqVDLYHRL--LLSNIAKVQR 729
+                             458899999999999..9******************************9775555554..4444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (843 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       460  (0.0239846); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.21s 00:00:00.72 Elapsed: 00:00:00.73
+# Mc/sec: 3763.15
+//
+Query:       sp|A0JMF6|MTMRA_DANRE  [L=752]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.7e-49  168.8   8.6    1.8e-36  126.0   3.9    3.1  2  Myotub-related  Myotubularin-like phosphatase domain
+    1.6e-48  163.8   0.1    3.5e-48  162.8   0.1    1.6  1  3-PAP           Myotubularin-associated protein
+
+
+Domain annotation for each model (and alignments):
+>> Myotub-related  Myotubularin-like phosphatase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.5   0.2     9e-15   8.6e-11      24     111 ..     209     290 ..     200     315 .. 0.79
+   2 !  126.0   3.9   1.8e-40   1.8e-36     175     355 ..     320     484 ..     313     485 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 41.5 bits;  conditional E-value: 9e-15
+                            THHHHHTT-.......SSSSEEEE-TTTTSSS-TTS-SSEEEETT--HHHHHHHHTTBGGG---EEEEE-TTT--EEEEE--BS-TT. CS
+         Myotub-related  24 ekefkrlgvsaeekkksssewrisevNedyklcetYpsllvvpksisdevlkkaakfrskkRiPvlsyrhkengavitRssqplvgls 111
+                            +++++r        ++  sewr+ ++N+ y ++++ p+ +vvp s  d+ lk+ a +  ++RiP+ ++ h+ +g+ ++R s  +   +
+  sp|A0JMF6|MTMRA_DANRE 209 SSDWDREIK-----RTGASEWRVCTINQGYFISPSLPEFFVVPVSLADQDLKQYACCFYSQRIPLWCWNHP-SGSALVRMSNISDPQQ 290
+                            555555442.....334678*********************************99999999*********8.7888999987554443 PP
+
+  == domain 2  score: 126.0 bits;  conditional E-value: 1.8e-40
+                            ----HHHHHHHHHHHHHHH...TSS--HHHHHHHHHHH-HHHHHHHHHHHHHHHHHHHHCS---EEEE-SSSSSHHHHHHHHHHHHH- CS
+         Myotub-related 175 nienihvmreslkklvealkdsekeasekkwlsklekskWLkhikaiLeaaaliaksvelekssvLvhcsdGwDrtsqlsslaqllld 262
+                            n++ni+ ++ +l kl++++  ++ e+se+kwls+le+s+W++ +++ L+ a+ ++  +e+++ sv++   +  D    +ssl+ql+ d
+  sp|A0JMF6|MTMRA_DANRE 320 NLPNIQDIQAALLKLRQICVIESFEESEEKWLSSLESSRWMEYVRTFLRHAVEVVYMLESRHVSVILLEKEDRDLSCVISSLVQLMCD 407
+                            899***************999987799************************************************************* PP
+
+                            GGGGSHHHHHHHHHHHTTTTT--HHHHTTSS-...TTSTT---HHHHHHHHHHHHHHH-TTT-SB-HHHHHHHHHHHHH--SSTT-SS CS
+         Myotub-related 263 pyyRTieGfqvLiekeWlsfGhkfaeRsghlssekakskersPvflqFldcvyqllrqfptafeFnerfLlrlldhlyscqfGtFLcn 350
+                            p++R+++Gfq+Li+keW+ +Gh+f +R++hl++++   k               l++q+p afeF+e +L  l d++    f tFL+n
+  sp|A0JMF6|MTMRA_DANRE 408 PHCRSLHGFQALIQKEWVMAGHRFLDRCNHLKKSD---K-------------EELWNQYPAAFEFTEVYLTVLGDSMWVPVFSTFLFN 479
+                            ********************************655...3.............369********************************* PP
+
+                            SHHHH CS
+         Myotub-related 351 seker 355
+                            + ++r
+  sp|A0JMF6|MTMRA_DANRE 480 CPRQR 484
+                            ***99 PP
+
+>> 3-PAP  Myotubularin-associated protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.8   0.1   3.6e-52   3.5e-48       1     129 [.     549     677 ..     549     680 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 162.8 bits;  conditional E-value: 3.6e-52
+                  3-PAP   1 krrkksysstlrgsppslkngllrdeeallrrnslllrlksdlllaessdendseqffrewlskpadlhglllpqlsgtqiklWkqcY 88 
+                            +r+kk+ysst+rg p+ ++ng l+ +++l+rrnsl+lrl+sdl++++++ e++se+f+r+++s+ +dl+glllpql+++++++Wk+++
+  sp|A0JMF6|MTMRA_DANRE 549 RRSKKNYSSTVRGLPSLMRNGSLGPNDTLTRRNSLVLRLRSDLSQVREQPETPSERFVRDFFSRAVDLQGLLLPQLLPSHLSVWKLYF 636
+                            699************************************************************************************* PP
+
+                  3-PAP  89 lRwvPeaqikhGgkvtafhklskLadeveaLqraLrqkrss 129
+                            lRwvPeaqi hGg+vtafhkls+L+de+e+Lq++Lrq+++ 
+  sp|A0JMF6|MTMRA_DANRE 637 LRWVPEAQIPHGGPVTAFHKLSVLTDEIEMLQNQLRQYKGA 677
+                            **************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (752 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       504  (0.0262787); expected 383.6 (0.02)
+Passed bias filter:                      448  (0.0233589); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.20s 00:00:00.68 Elapsed: 00:00:00.67
+# Mc/sec: 3614.76
+//
+Query:       tr|E7F1F0|E7F1F0_DANRE  [L=765]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    7.2e-65  219.4   7.5    2.7e-53  181.3   3.2    2.2  2  Myotub-related  Myotubularin-like phosphatase domain
+    1.7e-48  163.8   0.1    3.6e-48  162.8   0.1    1.5  1  3-PAP           Myotubularin-associated protein
+
+
+Domain annotation for each model (and alignments):
+>> Myotub-related  Myotubularin-like phosphatase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   0.1   2.3e-14   2.2e-10      22     110 ..     207     289 ..     190     314 .. 0.80
+   2 !  181.3   3.2   2.8e-57   2.7e-53     175     355 ..     320     497 ..     311     498 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 2.3e-14
+                             -TTHHHHHTT-.......SSSSEEEE-TTTTSSS-TTS-SSEEEETT--HHHHHHHHTTBGGG---EEEEE-TTT--EEEEE--BS- CS
+          Myotub-related  22 daekefkrlgvsaeekkksssewrisevNedyklcetYpsllvvpksisdevlkkaakfrskkRiPvlsyrhkengavitRssqplv 108
+                             d +++++r        ++  sewr+ ++N+ y ++++ p+ +vvp s  d+ lk+ a +  ++RiP+ ++ h+  g+ ++R s  + 
+  tr|E7F1F0|E7F1F0_DANRE 207 DCSSDWDREIK-----RTGASEWRVCTINQGYFISPSLPEFFVVPVSLADQDLKQYACCFYSQRIPLWCWNHP-CGSALVRMSNISD 287
+                             55555555442.....334678*********************************99999999*********8.7888999987554 PP
+
+                             TT CS
+          Myotub-related 109 gl 110
+                               
+  tr|E7F1F0|E7F1F0_DANRE 288 PQ 289
+                             44 PP
+
+  == domain 2  score: 181.3 bits;  conditional E-value: 2.8e-57
+                             ----HHHHHHHHHHHHHHH...TSS--HHHHHHHHHHH-HHHHHHHHHHHHHHHHHHHHCS---EEEE-SSSSSHHHHHHHHHHHHH CS
+          Myotub-related 175 nienihvmreslkklvealkdsekeasekkwlsklekskWLkhikaiLeaaaliaksvelekssvLvhcsdGwDrtsqlsslaqlll 261
+                             n++ni+ ++ +l kl++++  ++ e+se+kwls+le+s+W++ +++ L+ a+ ++  +e+++ sv++   +  D    +ssl+ql+ 
+  tr|E7F1F0|E7F1F0_DANRE 320 NLPNIQDIQAALLKLRQICVIESFEESEEKWLSSLESSRWMEYVRTFLRHAVEVVYMLESRHVSVILLEKEDRDLSCVISSLVQLMC 406
+                             899***************999987799************************************************************ PP
+
+                             -GGGGSHHHHHHHHHHHTTTTT--HHHHTTSS-...TTSTT---HHHHHHHHHHHHHHH-TTT-SB-HHHHHHHHHHHHH--SSTT- CS
+          Myotub-related 262 dpyyRTieGfqvLiekeWlsfGhkfaeRsghlssekakskersPvflqFldcvyqllrqfptafeFnerfLlrlldhlyscqfGtFL 348
+                             dp++R+++Gfq+Li+keW+ +Gh+f +R++hl+++   +ke+sP fl+Fldcv+ql++q+p afeF+e +L  l d++    f tFL
+  tr|E7F1F0|E7F1F0_DANRE 407 DPHCRSLHGFQALIQKEWVMAGHRFLDRCNHLKKS---DKEESPLFLLFLDCVWQLWNQYPAAFEFTEVYLTVLGDSMWVPVFSTFL 490
+                             *********************************64...59*********************************************** PP
+
+                             SSSHHHH CS
+          Myotub-related 349 cnseker 355
+                             +n+ ++r
+  tr|E7F1F0|E7F1F0_DANRE 491 FNCPRQR 497
+                             *****99 PP
+
+>> 3-PAP  Myotubularin-associated protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.8   0.1   3.7e-52   3.6e-48       1     129 [.     562     690 ..     562     693 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 162.8 bits;  conditional E-value: 3.7e-52
+                   3-PAP   1 krrkksysstlrgsppslkngllrdeeallrrnslllrlksdlllaessdendseqffrewlskpadlhglllpqlsgtqiklWkqc 87 
+                             +r+kk+ysst+rg p+ ++ng l+ +++l+rrnsl+lrl+sdl++++++ e++se+f+r+++s+ +dl+glllpql+++++++Wk++
+  tr|E7F1F0|E7F1F0_DANRE 562 RRSKKNYSSTVRGLPSLMRNGSLGPNDTLTRRNSLVLRLRSDLSQVREQPETPSERFVRDFFSRAVDLQGLLLPQLLPSHLSVWKLY 648
+                             699************************************************************************************ PP
+
+                   3-PAP  88 YlRwvPeaqikhGgkvtafhklskLadeveaLqraLrqkrss 129
+                             +lRwvPeaqi hGg+vtafhkls+L+de+e+Lq++Lrq+++ 
+  tr|E7F1F0|E7F1F0_DANRE 649 FLRWVPEAQIPHGGPVTAFHKLSVLTDEIEMLQNQLRQYKGA 690
+                             ***************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (765 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       518  (0.0270087); expected 383.6 (0.02)
+Passed bias filter:                      464  (0.0241931); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.17s 00:00:00.64 Elapsed: 00:00:00.70
+# Mc/sec: 3511.83
+//
+Query:       tr|F1Q8B7|F1Q8B7_DANRE  [L=752]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      4e-49  167.6   8.3    1.5e-36  126.2   3.8    3.1  2  Myotub-related  Myotubularin-like phosphatase domain
+    1.6e-48  163.8   0.1    3.5e-48  162.8   0.1    1.6  1  3-PAP           Myotubularin-associated protein
+
+
+Domain annotation for each model (and alignments):
+>> Myotub-related  Myotubularin-like phosphatase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.2   0.1   2.2e-14   2.1e-10      22     111 ..     207     290 ..     190     316 .. 0.80
+   2 !  126.2   3.8   1.6e-40   1.5e-36     175     355 ..     320     484 ..     310     485 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 40.2 bits;  conditional E-value: 2.2e-14
+                             -TTHHHHHTT-.......SSSSEEEE-TTTTSSS-TTS-SSEEEETT--HHHHHHHHTTBGGG---EEEEE-TTT--EEEEE--BS- CS
+          Myotub-related  22 daekefkrlgvsaeekkksssewrisevNedyklcetYpsllvvpksisdevlkkaakfrskkRiPvlsyrhkengavitRssqplv 108
+                             d +++++r        ++  sewr+ ++N+ y ++++ p+ +vvp s  d+ lk+ a +  ++RiP+ ++ h+  g+ ++R s  + 
+  tr|F1Q8B7|F1Q8B7_DANRE 207 DCSSDWDREIK-----RTGASEWRVCTINQGYFISPSLPEFFVVPVSLADQDLKQYACCFYSQRIPLWCWNHP-CGSALVRMSNISD 287
+                             55555555442.....334678*********************************99999999*********8.7888999987554 PP
+
+                             TT. CS
+          Myotub-related 109 gls 111
+                               +
+  tr|F1Q8B7|F1Q8B7_DANRE 288 PQQ 290
+                             443 PP
+
+  == domain 2  score: 126.2 bits;  conditional E-value: 1.6e-40
+                             ----HHHHHHHHHHHHHHH...TSS--HHHHHHHHHHH-HHHHHHHHHHHHHHHHHHHHCS---EEEE-SSSSSHHHHHHHHHHHHH CS
+          Myotub-related 175 nienihvmreslkklvealkdsekeasekkwlsklekskWLkhikaiLeaaaliaksvelekssvLvhcsdGwDrtsqlsslaqlll 261
+                             n++ni+ ++ +l kl++++  ++ e+se+kwls+le+s+W++ +++ L+ a+ ++  +e+++ sv++   +  D    +ssl+ql+ 
+  tr|F1Q8B7|F1Q8B7_DANRE 320 NLPNIQDIQAALLKLRQICVIESFEESEEKWLSSLESSRWMEYVRTFLRHAVEVVYMLESRHVSVILLEKEDRDLSCVISSLVQLMC 406
+                             899***************999987799************************************************************ PP
+
+                             -GGGGSHHHHHHHHHHHTTTTT--HHHHTTSS-...TTSTT---HHHHHHHHHHHHHHH-TTT-SB-HHHHHHHHHHHHH--SSTT- CS
+          Myotub-related 262 dpyyRTieGfqvLiekeWlsfGhkfaeRsghlssekakskersPvflqFldcvyqllrqfptafeFnerfLlrlldhlyscqfGtFL 348
+                             dp++R+++Gfq+Li+keW+ +Gh+f +R++hl++++   k               l++q+p afeF+e +L  l d++    f tFL
+  tr|F1Q8B7|F1Q8B7_DANRE 407 DPHCRSLHGFQALIQKEWVMAGHRFLDRCNHLKKSD---K-------------EELWNQYPAAFEFTEVYLTVLGDSMWVPVFSTFL 477
+                             *********************************655...3.............369******************************* PP
+
+                             SSSHHHH CS
+          Myotub-related 349 cnseker 355
+                             +n+ ++r
+  tr|F1Q8B7|F1Q8B7_DANRE 478 FNCPRQR 484
+                             *****99 PP
+
+>> 3-PAP  Myotubularin-associated protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.8   0.1   3.6e-52   3.5e-48       1     129 [.     549     677 ..     549     680 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 162.8 bits;  conditional E-value: 3.6e-52
+                   3-PAP   1 krrkksysstlrgsppslkngllrdeeallrrnslllrlksdlllaessdendseqffrewlskpadlhglllpqlsgtqiklWkqc 87 
+                             +r+kk+ysst+rg p+ ++ng l+ +++l+rrnsl+lrl+sdl++++++ e++se+f+r+++s+ +dl+glllpql+++++++Wk++
+  tr|F1Q8B7|F1Q8B7_DANRE 549 RRSKKNYSSTVRGLPSLMRNGSLGPNDTLTRRNSLVLRLRSDLSQVREQPETPSERFVRDFFSRAVDLQGLLLPQLLPSHLSVWKLY 635
+                             699************************************************************************************ PP
+
+                   3-PAP  88 YlRwvPeaqikhGgkvtafhklskLadeveaLqraLrqkrss 129
+                             +lRwvPeaqi hGg+vtafhkls+L+de+e+Lq++Lrq+++ 
+  tr|F1Q8B7|F1Q8B7_DANRE 636 FLRWVPEAQIPHGGPVTAFHKLSVLTDEIEMLQNQLRQYKGA 677
+                             ***************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (752 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       510  (0.0265916); expected 383.6 (0.02)
+Passed bias filter:                      448  (0.0233589); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.18s 00:00:00.64 Elapsed: 00:00:00.61
+# Mc/sec: 3970.62
+//
+Query:       sp|Q9NXD2|MTMRA_HUMAN  [L=777]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.4e-67  227.0   3.9    7.2e-56  189.7   1.9    2.1  2  Myotub-related  Myotubularin-like phosphatase domain
+      2e-57  192.7   0.1    3.5e-57  191.9   0.1    1.4  1  3-PAP           Myotubularin-associated protein
+
+
+Domain annotation for each model (and alignments):
+>> Myotub-related  Myotubularin-like phosphatase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.3   0.0   1.7e-13   1.6e-09      26     130 ..     226     322 ..     212     334 .. 0.81
+   2 !  189.7   1.9   7.5e-60   7.2e-56     175     355 ..     335     511 ..     324     512 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 37.3 bits;  conditional E-value: 1.7e-13
+                            HHHHTT-.......SSSSEEEE-TTTTSSS-TTS-SSEEEETT--HHHHHHHHTTBGGG---EEEEE-TTT--EEEEE--BS-TT.T- CS
+         Myotub-related  26 efkrlgvsaeekkksssewrisevNedyklcetYpsllvvpksisdevlkkaakfrskkRiPvlsyrhkengavitRssqplvglskk 113
+                            +++r        ++  s wr+ ++Ne y +++  p+ +vvp+s  d+ lk  ++    +R+P+ ++ h +ng+ ++R +  +  l  +
+  sp|Q9NXD2|MTMRA_HUMAN 226 DWDREIK-----RTGASGWRVCSINEGYMISTCLPEYIVVPSSLADQDLKIFSHSFVGRRMPLWCWSH-SNGSALVRMALIKDVL--Q 305
+                            4444332.....234568***********************************999999*********.6********9888877..4 PP
+
+                            --HHHHHHHHHHHTT.- CS
+         Myotub-related 114 rskeDeklleaifkssk 130
+                            + k D+++ +ai+ks+ 
+  sp|Q9NXD2|MTMRA_HUMAN 306 QRKIDQRICNAITKSHP 322
+                            44568899999998854 PP
+
+  == domain 2  score: 189.7 bits;  conditional E-value: 7.5e-60
+                            ----HHHHHHHHHHHHHHH...TSS--HHHHHHHHHHH-HHHHHHHHHHHHHHHHHHHHCS---EEEE-SSSSSHHHHHHHHHHHHH- CS
+         Myotub-related 175 nienihvmreslkklvealkdsekeasekkwlsklekskWLkhikaiLeaaaliaksvelekssvLvhcsdGwDrtsqlsslaqllld 262
+                             ++ni++++ ++ kl +++ ++  e++e+kwls+le+++WL+ ++a L+ +a ++  +e+++ sv+++ ++G D    ++sl+q++ld
+  sp|Q9NXD2|MTMRA_HUMAN 335 TLPNIQEVQAAFVKLKQLCVNEPFEETEEKWLSSLENTRWLEYVRAFLKHSAELVYMLESKHLSVVLQEEEGRDLSCCVASLVQVMLD 422
+                            689****************99987789************************************************************* PP
+
+                            GGGGSHHHHHHHHHHHTTTTT--HHHHTTSS-...TTSTT---HHHHHHHHHHHHHHH-TTT-SB-HHHHHHHHHHHHH--SSTT-SS CS
+         Myotub-related 263 pyyRTieGfqvLiekeWlsfGhkfaeRsghlssekakskersPvflqFldcvyqllrqfptafeFnerfLlrlldhlyscqfGtFLcn 350
+                            py+RTi+Gfq Li+keW+ +G++f +R++hl+    +s+++sP fl+Fld+++qll+q+p afeF+e++L  l+d++  + fGtFL+n
+  sp|Q9NXD2|MTMRA_HUMAN 423 PYFRTITGFQSLIQKEWVMAGYQFLDRCNHLK----RSEKESPLFLLFLDATWQLLEQYPAAFEFSETYLAVLYDSTRISLFGTFLFN 506
+                            *******************************9....45689*********************************************** PP
+
+                            SHHHH CS
+         Myotub-related 351 seker 355
+                            s ++r
+  sp|Q9NXD2|MTMRA_HUMAN 507 SPHQR 511
+                            *9998 PP
+
+>> 3-PAP  Myotubularin-associated protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  191.9   0.1   3.7e-61   3.5e-57       1     131 [.     574     704 ..     574     705 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 191.9 bits;  conditional E-value: 3.7e-61
+                  3-PAP   1 krrkksysstlrgsppslkngllrdeeallrrnslllrlksdlllaessdendseqffrewlskpadlhglllpqlsgtqiklWkqcY 88 
+                            kr+kksysstlrg+p++lkng+++d+e l+rrnsl+l+ k+d++++++s+++d+eq+frew+skpa+lhg++lp++sgt+iklWk+cY
+  sp|Q9NXD2|MTMRA_HUMAN 574 KRTKKSYSSTLRGMPSALKNGIISDQELLPRRNSLILKPKPDPAQQTDSQNSDTEQYFREWFSKPANLHGVILPRVSGTHIKLWKLCY 661
+                            89************************************************************************************** PP
+
+                  3-PAP  89 lRwvPeaqikhGgkvtafhklskLadeveaLqraLrqkrssls 131
+                            +RwvPeaqi+ Gg++tafhkls+Ladev++L+r+Lrq+rs+++
+  sp|Q9NXD2|MTMRA_HUMAN 662 FRWVPEAQISLGGSITAFHKLSLLADEVDVLSRMLRQQRSGPL 704
+                            ***************************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (777 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       533  (0.0277908); expected 383.6 (0.02)
+Passed bias filter:                      467  (0.0243495); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.16s 00:00:00.66 Elapsed: 00:00:00.69
+# Mc/sec: 3641.40
+//
+[ok]

@@ -1,0 +1,77 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035903.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035903
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B8A5Y2|B8A5Y2_DANRE  [L=270]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-42  144.1   1.7    1.8e-41  140.6   1.2    2.1  1  Anth_Ig   Anthrax receptor extracellular domain
+    2.7e-14   53.9   0.1      4e-14   53.4   0.1    1.2  1  VWA       von Willebrand factor type A domain
+    2.3e-06   28.3   0.0    9.3e-06   26.3   0.0    1.9  0  VWA_2     von Willebrand factor type A domain
+
+
+Domain annotation for each model (and alignments):
+>> Anth_Ig  Anthrax receptor extracellular domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.6   1.2   2.9e-45   1.8e-41       1     101 [.     139     239 ..     139     240 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 140.6 bits;  conditional E-value: 2.9e-45
+                 Anth_Ig   1 ksCieilsvepssvCvgesfevvlrgrgfenaknsdevlCsfkinetkvvnekpvsvednsllCpapvleeageelevevslnnGks 87 
+                             ksCieil++epssvC+g+sf+vv+rg+gf +a+n+++vlCsfk+n+t++vne+pvsved+ llCpap+++eag+++ ++vs+n+G s
+  tr|B8A5Y2|B8A5Y2_DANRE 139 KSCIEILAAEPSSVCAGDSFQVVVRGNGFLHARNINQVLCSFKVNDTSTVNERPVSVEDTLLLCPAPIINEAGKVIYLQVSMNEGLS 225
+                             7************************************************************************************** PP
+
+                 Anth_Ig  88 fisssltitateCs 101
+                             +i+ss++it+ eC 
+  tr|B8A5Y2|B8A5Y2_DANRE 226 YITSSVHITTAECF 239
+                             *************6 PP
+
+>> VWA  von Willebrand factor type A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.4   0.1   6.2e-18     4e-14      39     161 ..       3     120 ..       2     130 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 53.4 bits;  conditional E-value: 6.2e-18
+                             EEEEEEESSSEEEEECCCCHHHHHHHHHHHHTH.CGGGGSSB-HHHHHHHHHHHHHHHHGTSCTTSEEEEEEEESS--SS.S..HHH CS
+                     VWA  39 rvglvqfssevktefslndysskeellsalnnl.kysgggttntgkalkyalqklfkssagaRenakkviilltdGksnd.g..dpk 121
+                             r++++ fs+  +t+++l++ +  +++ + ln+l + + gg+t+++ +l++a  ++++++ g    a +vii ltdG+ nd +    +
+  tr|B8A5Y2|B8A5Y2_DANRE   3 RMSFIVFSTRGTTIMRLTENR--DDITRGLNTLkREIPGGDTYMNLGLEEANVQIYHGNYG----AASVIIALTDGELNDhQfvTAQ 83 
+                             7899***************55..99*******99889999999******************....9**************66***** PP
+
+                             HHHHHHHCTTEEEEEEEESSSHHHHHHHHHSCSSTCGTEE CS
+                     VWA 122 eaaaeakeagikvfavGvgnadekelLnkiasepgeghvf 161
+                             ++a++a++ g  v++vGv++ +e++ L +ia + +  hvf
+  tr|B8A5Y2|B8A5Y2_DANRE  84 QEAQRARSMGAIVYCVGVKDFNETQ-LATIADTIE--HVF 120
+                             *************************.****99887..776 PP
+
+>> VWA_2  von Willebrand factor type A domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (270 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       626  (0.0326399); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.56
+# Mc/sec: 1567.56
+//
+[ok]

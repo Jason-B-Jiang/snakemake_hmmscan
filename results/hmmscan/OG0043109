@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0043109.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0043109
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EOB12252.1  [L=95]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.5e-13   50.9   0.1    6.2e-06   26.5   0.0    2.0  1  HTH_Tnp_1     Transposase
+      8e-10   38.8   0.0    1.8e-06   28.1   0.0    2.0  1  HTH_28        Helix-turn-helix domain
+    9.9e-07   28.2   0.0    0.00016   21.1   0.0    2.1  0  HTH_Tnp_ISL3  Helix-turn-helix domain of transposase family I
+    6.9e-06   25.9   0.0    3.2e-05   23.8   0.0    1.9  0  HTH_23        Homeodomain-like domain
+
+
+Domain annotation for each model (and alignments):
+>> HTH_Tnp_1  Transposase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.0   1.3e-09   6.2e-06       5      54 ..       2      52 ..       1      56 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 1.3e-09
+   HTH_Tnp_1  5 rrfseefklravkeslepgasvsevArrhgvspnqLykWrkqyr.egeeal 54
+                ++fs efk ++ ++ le   s ++vAr  ++sp + +kW  +yr  g+++l
+  EOB12252.1  2 AKFSLEFKKEVSEKCLEDELSLKSVARMYDISPCTVRKWAYAYReHGIGVL 52
+                59*****************************************98787776 PP
+
+>> HTH_28  Helix-turn-helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.0   3.7e-10   1.8e-06       1      50 [.       8      58 ..       8      58 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 3.7e-10
+      HTH_28  1 qRleivlllaaGe.svreaArelgisrrtvyrWikryregGlagLlprrgr 50
+                ++ e+ +  ++ e s + +Ar + is+ tv++W   yre+G+  L+ ++gr
+  EOB12252.1  8 FKKEVSEKCLEDElSLKSVARMYDISPCTVRKWAYAYREHGIGVLTGKKGR 58
+                57888888899999****************************888878876 PP
+
+>> HTH_Tnp_ISL3  Helix-turn-helix domain of transposase family ISL3
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> HTH_23  Homeodomain-like domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (95 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       414  (0.0215861); expected 383.6 (0.02)
+Passed bias filter:                      370  (0.0192919); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.30u 0.20s 00:00:00.50 Elapsed: 00:00:00.54
+# Mc/sec: 571.11
+//
+[ok]

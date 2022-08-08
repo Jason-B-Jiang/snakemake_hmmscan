@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040728.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040728
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P79522|PRR3_HUMAN  [L=188]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-06   26.0   4.3    1.2e-05   25.2   4.3    1.4  1  zf-CCCH   Zinc finger C-x8-C-x5-C-x3-H type (and similar)
+
+
+Domain annotation for each model (and alignments):
+>> zf-CCCH  Zinc finger C-x8-C-x5-C-x3-H type (and similar)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   4.3   6.2e-10   1.2e-05       2      26 ..     157     181 ..     156     181 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 6.2e-10
+                           HCHCBSHHHHCS--TTGGG-SSBSC CS
+               zf-CCCH   2 ktelCkffmrtGyCkyGdrCkFaHg 26 
+                           +++ C++f++ G+C+y d C F H+
+  sp|P79522|PRR3_HUMAN 157 DRPVCRHFAKKGHCRYEDLCAFYHP 181
+                           689*********************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (188 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       332  (0.0173106); expected 383.6 (0.02)
+Passed bias filter:                      221  (0.011523); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.31u 0.17s 00:00:00.48 Elapsed: 00:00:00.57
+# Mc/sec: 1061.01
+//
+[ok]

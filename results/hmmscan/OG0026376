@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026376.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026376
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EBX7|G5EBX7_CAEEL  [L=383]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      1e-37  129.3   0.0    2.3e-37  128.2   0.0    1.6  1  RNase_Zc3h12a  Zc3h12a-like Ribonuclease NYN domain
+
+
+Domain annotation for each model (and alignments):
+>> RNase_Zc3h12a  Zc3h12a-like Ribonuclease NYN domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  128.2   0.0   1.2e-41   2.3e-37       2     141 ..      50     198 ..      49     205 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 128.2 bits;  conditional E-value: 1.2e-41
+           RNase_Zc3h12a   2 lrtiviDGsnVa............lshgdqsifsvrglaiaveyFvkrgheevtvfvpkfrkeaakkekisdkeeleeleeeelivl 76 
+                             lr+i+iDG++V+            l++ d+sif++r++++a++yF++rgh++v+++++++r++a   +k+sd++el+ l+++eliv+
+  tr|G5EBX7|G5EBX7_CAEEL  50 LRPICIDGTDVSnklnhiirknmdLFPVDKSIFNMRAITMALWYFISRGHAAVVFLPTNLRDFA---QKCSDPHELSLLAKLELIVF 133
+                             8***********9988877777666677************************************...******************** PP
+
+           RNase_Zc3h12a  77 tpsssldgkksvsyddrfilklAeekdgvivsndkyrdllsen.pelkeiveerllsftfvkdkfm 141
+                             ++s  l++++ v +++++++++A+++dg+iv+++k++ ll +  +el+++v++ l+s+ f++d+ +
+  tr|G5EBX7|G5EBX7_CAEEL 134 DESTALNPSSAV-LLSKTVATWAQNNDGCIVGSRKKYGLLGQRySELIDRVTNTLISPAFTPDNEL 198
+                             *******98888.*****************************99*******************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (383 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       466  (0.0242974); expected 383.6 (0.02)
+Passed bias filter:                      414  (0.0215861); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.56
+# Mc/sec: 2226.62
+//
+[ok]

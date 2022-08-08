@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040133.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040133
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P08887|IL6RA_HUMAN  [L=468]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-20   74.0   1.1      2e-20   73.1   1.1    1.4  1  IL6Ra-bind  Interleukin-6 receptor alpha chain, binding
+    1.2e-06   28.7   0.0    4.8e-06   26.7   0.0    2.1  1  ig          Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> IL6Ra-bind  Interleukin-6 receptor alpha chain, binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.1   1.1   2.1e-24     2e-20       1      95 [.     118     212 ..     118     213 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 73.1 bits;  conditional E-value: 2.1e-24
+                            EEEEEEET.TTEEEEEEEESTT--TT-EEEEEEEETTSSSEE....EESEEEETTSSEEEEEESSHTTHHSSCSEEEEEEEEECSSCE CS
+             IL6Ra-bind   1 dLtCvvke.lsnlsCeWkpgkkasedtkyvLyvrksrlekae....eCqeyseddntrigCqldllevlsssfeqvticVngsskagp 83 
+                            +L+C++k+ lsn++CeW p++++s +tk+vL+vrk+++++ae    +Cq+++e++  +++Cql+  e++ ssf +v++cV  +s++g+
+  sp|P08887|IL6RA_HUMAN 118 QLSCFRKSpLSNVVCEWGPRSTPSLTTKAVLLVRKFQNSPAEdfqePCQYSQESQ--KFSCQLAVPEGD-SSFYIVSMCV--ASSVGS 200
+                            69****************************************9*99****99999..***********8.88********..****** PP
+
+                            EEEEEEEEEGGG CS
+             IL6Ra-bind  84 irssdqtvqllr 95 
+                            + s++qt+q ++
+  sp|P08887|IL6RA_HUMAN 201 KFSKTQTFQGCG 212
+                            ********9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.7   0.0     5e-10   4.8e-06       7      73 ..      36      97 ..      30     101 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 26.7 bits;  conditional E-value: 5e-10
+                           EEETTS-EEEEEEEESSSCTSEEEEEESSSSCSEEEEEEEEETTCEEEEEEEECSSTGGGTEEEEEE CS
+                     ig  7 lvleGesatLtCsvstqtkptdvtWkkegqtkiesqkvvkegnrrkgssslliskvteedaGtYtCe 73
+                           + l+G+s+tLtC   + +++++v+W   +     +++   ++++  +  +ll+++v++ d+G+Y C+
+  sp|P08887|IL6RA_HUMAN 36 TSLPGDSVTLTCPGVEPEDNATVHWVLRKPA--AGSH---PSRWAGMGRRLLLRSVQLHDSGNYSCY 97
+                           6789*********************987754..3444...678***********************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (468 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       421  (0.0219511); expected 383.6 (0.02)
+Passed bias filter:                      346  (0.0180406); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.20s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 2414.64
+//
+[ok]

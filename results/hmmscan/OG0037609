@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037609.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037609
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002650662.1  [L=299]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.5e-15   56.4   0.0    2.4e-12   47.1   0.0    2.0  1  UvrD_C          UvrD-like helicase C-terminal domain
+      5e-09   35.9   6.2    9.5e-09   35.0   6.2    1.5  1  zf-C4_Topoisom  Topoisomerase DNA binding C4 zinc finger
+    9.9e-09   35.1   0.0    0.00068   19.6   0.0    2.4  0  UvrD_C_2        UvrD-like helicase C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> UvrD_C  UvrD-like helicase C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.1   0.0   3.8e-16   2.4e-12     288     343 ..     127     192 ..     105     196 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 47.1 bits;  conditional E-value: 3.8e-16
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..........xxxxxxxxxxxxxxxxxxxxxxxxx RF
+          UvrD_C 288 iTiHqAKGLEFdvVflagveegtfPsyrskk..........eeknleEEkrlfYVaiTRAkkrLfi 343
+                      T+H +KG E d+V+l g+  + fP+    +          ++   +EE+rlfYVa+TRA++ + +
+  XP_002650662.1 127 KTVHTSKGDEADYVILPGMVMRGFPNVKVDDplfslvmpqgDTFPSSEERRLFYVALTRARRSVAM 192
+                     6************************8887779999999988777789**************98876 PP
+
+>> zf-C4_Topoisom  Topoisomerase DNA binding C4 zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.0   6.2   1.5e-12   9.5e-09       3      35 ..     248     281 ..     246     285 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 35.0 bits;  conditional E-value: 1.5e-12
+                     E-SSS-.-EEEEEE-SSSEEEEESST.T----EE CS
+  zf-C4_Topoisom   3 kCPkCg.gdLvlkrgkkGkFvGCsnYPeCkftkk 35 
+                      CP C+ g+L+ + g +GkF++Cs +P+Ck+  +
+  XP_002650662.1 248 ACPGCKvGELIWRPGPYGKFLSCSTFPKCKYKPP 281
+                     5******************************865 PP
+
+>> UvrD_C_2  UvrD-like helicase C-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (299 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       570  (0.02972); expected 383.6 (0.02)
+Passed bias filter:                      504  (0.0262787); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.37u 0.22s 00:00:00.59 Elapsed: 00:00:00.59
+# Mc/sec: 1647.34
+//
+[ok]

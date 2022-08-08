@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040584.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040584
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9HAV5|TNR27_HUMAN  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-12   46.0  35.8    9.7e-08   32.4   7.4    4.3  2  TNFR_c6   TNFR/NGFR cysteine-rich region
+
+
+Domain annotation for each model (and alignments):
+>> TNFR_c6  TNFR/NGFR cysteine-rich region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   8.0   8.5e-10   1.6e-05       1      32 [.       3      32 ..       3      41 .. 0.88
+   2 !   32.4   7.4     5e-12   9.7e-08       1      39 []      44      83 ..      44      83 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 8.5e-10
+                           --TTCEEBTTCTCSEEEEE-B-TTEEECC--B CS
+                TNFR_c6  1 CpegtYtdsenseeClpCtrCppgqvvlrpCt 32
+                           C+e++Y+d++++  C+ C+rC pgq+ +++C 
+  sp|Q9HAV5|TNR27_HUMAN  3 CQENEYWDQWGR--CVTCQRCGPGQELSKDCG 32
+                           **********75..*****************7 PP
+
+  == domain 2  score: 32.4 bits;  conditional E-value: 5e-12
+                           --TTCEEBTTCTCSEEEEE-B-T.TEEECC--BTTC--EE CS
+                TNFR_c6  1 CpegtYtdsenseeClpCtrCpp.gqvvlrpCtptsdtvC 39
+                           Cp++ Y +s+++++C++C +C   + v++ +Ct+ts++vC
+  sp|Q9HAV5|TNR27_HUMAN 44 CPPRRYKSSWGHHRCQSCITCAViNRVQKVNCTATSNAVC 83
+                           **********9999*******8857777************ PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       876  (0.045675); expected 383.6 (0.02)
+Passed bias filter:                      427  (0.0222639); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.56
+# Mc/sec: 1703.66
+//
+[ok]

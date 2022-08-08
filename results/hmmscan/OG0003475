@@ -1,0 +1,588 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003475.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003475
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q557E7|CBLA_DICDI  [L=665]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.6e-13   50.3  12.2    2.8e-13   49.6  12.2    1.4  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    7.4e-11   42.7   0.4    7.4e-11   42.7   0.4    3.0  1  Cbl_N2      CBL proto-oncogene N-terminus, EF hand-like domai
+    1.4e-06   28.4   0.2    1.2e-05   25.4   0.0    2.7  1  SH2         SH2 domain
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.6  12.2   4.4e-17   2.8e-13       2      50 .]     615     659 ..     614     659 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 49.6 bits;  conditional E-value: 4.4e-17
+                           GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B--EE CS
+            zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpiesv 50 
+                           +++C +C+d++ n+v+l+CgHl +C+ C+ kl    kkCpiCr+ i++v
+  sp|Q557E7|CBLA_DICDI 615 KDLCTVCMDNEINTVFLECGHLSCCSLCSVKL----KKCPICRSRITRV 659
+                           689*****************************....**********986 PP
+
+>> Cbl_N2  CBL proto-oncogene N-terminus, EF hand-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.7   0.4   1.2e-14   7.4e-11       1      72 [.     236     308 ..     236     317 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 42.7 bits;  conditional E-value: 1.2e-14
+                           ---SSHHHHHHHHHHHTT-SE.EEHHHHHHHHHHHH---GGG.HHHHHHHH-TT-SSEEEHHHHHHHHHHH-- CS
+                Cbl_N2   1 fritkkeAaefWkksfgkrti.vpwkefkealekvhkveskkealaLkstidltcndyisvfefdvFtrlFqP 72 
+                           + + ++eA+ +W++  g+++  vpw+ f++ ++k+++ e   ++++L+ t+d+t ++y++ f+ +vF+++F  
+  sp|Q557E7|CBLA_DICDI 236 YELLSNEAKVLWNQFGGNKITfVPWSIFFKGFQKFFNKEILAYESSLRYTLDFTRDGYVTPFKLSVFIKWFGA 308
+                           78999*******9988888778*************************************************75 PP
+
+>> SH2  SH2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.4   0.0   1.9e-09   1.2e-05       2      51 ..     325     374 ..     324     397 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.4 bits;  conditional E-value: 1.9e-09
+                           BESSSHHHHHHHHHHHTSSTTEEEEEEESSSTTEEEEEEEETT.EEEEEEE CS
+                   SH2   2 yhgkisrkeaerlLleekkdGtFLvReSeskpGdytlsvvedg.kvkhyki 51 
+                           + g+is+ ea +lL + ++ G +L+R S++  G +++++v++  +++h+  
+  sp|Q557E7|CBLA_DICDI 325 FSGFISGIEATQLLSR-QQVGYYLLRCSKTIVGAFAITFVDSTnHIRHCLL 374
+                           789************9.************************9988899865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (665 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3654  (0.190521); expected 383.6 (0.02)
+Passed bias filter:                      555  (0.0289379); expected 383.6 (0.02)
+Passed Vit filter:                       242  (0.012618); expected 19.2 (0.001)
+Passed Fwd filter:                        76  (0.00396267); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.14u 0.29s 00:00:01.43 Elapsed: 00:00:01.12
+# Mc/sec: 1918.36
+//
+Query:       tr|Q55EJ5|Q55EJ5_DICDI  [L=369]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.6e-12   45.7   8.3    4.6e-12   45.7   8.3    1.6  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.7   8.3   2.4e-16   4.6e-12       2      49 ..     319     362 ..     318     363 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 45.7 bits;  conditional E-value: 2.4e-16
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B--E CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpies 49 
+                             ++ C iC++  r+vv+lpC H+v+C +C++ +     +Cp+Cr  i++
+  tr|Q55EJ5|Q55EJ5_DICDI 319 KRSCSICYEGVRDVVFLPCSHVVTCFDCSSMV----GTCPVCRMMIQT 362
+                             689*****************************....********9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (369 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       983  (0.051254); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.58
+# Mc/sec: 2062.53
+//
+Query:       tr|Q55CM4|Q55CM4_DICDI  [L=424]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.9e-11   42.7  16.0    3.9e-11   42.7  16.0    2.8  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.7  16.0     2e-15   3.9e-11       2      50 .]     374     418 ..     373     418 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 42.7 bits;  conditional E-value: 2e-15
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B--EE CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpiesv 50 
+                             +++C iC+d++ n+vll+CgH+++C +C +k+      CpiCrq+i+sv
+  tr|Q55CM4|Q55CM4_DICDI 374 SDCCTICFDSKINAVLLKCGHCAVCLQCTRKI----SICPICRQKIDSV 418
+                             689*****************************....**********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (424 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3355  (0.174931); expected 383.6 (0.02)
+Passed bias filter:                      677  (0.035299); expected 383.6 (0.02)
+Passed Vit filter:                       124  (0.0064654); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.50u 0.18s 00:00:00.68 Elapsed: 00:00:00.81
+# Mc/sec: 1703.37
+//
+Query:       tr|A1Z971|A1Z971_DROME  [L=700]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-11   44.5  11.4    1.1e-11   44.5  11.4    3.6  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.5  11.4   5.7e-16   1.1e-11       2      49 ..     650     693 ..     649     694 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 44.5 bits;  conditional E-value: 5.7e-16
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B--E CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpies 49 
+                             +e+C+iC+d+p ++v+l+CgH+++C +C + l    ++CpiCrq i +
+  tr|A1Z971|A1Z971_DROME 650 DELCKICMDAPIECVFLECGHMATCTSCGKVL----NECPICRQYIVR 693
+                             789*****************************....********9966 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (700 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1968  (0.102612); expected 383.6 (0.02)
+Passed bias filter:                      726  (0.0378539); expected 383.6 (0.02)
+Passed Vit filter:                        91  (0.00474477); expected 19.2 (0.001)
+Passed Fwd filter:                        16  (0.000834246); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.20s 00:00:00.82 Elapsed: 00:00:00.70
+# Mc/sec: 3245.90
+//
+Query:       tr|F1QKD6|F1QKD6_DANRE  [L=271]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      1e-12   47.8  12.3      1e-12   47.8  12.3    2.0  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    7.8e-08   31.7   0.6     0.0075   15.8   0.0    2.5  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.8  12.3   1.1e-16     1e-12       2      47 ..     221     262 ..     220     265 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 47.8 bits;  conditional E-value: 1.1e-16
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                             e++C+iC+d+p ++vll+CgH+v+C++C +++    ++CpiCrq +
+  tr|F1QKD6|F1QKD6_DANRE 221 ENLCKICMDSPIDCVLLECGHMVTCSKCGKRM----NECPICRQYV 262
+                             789*****************************....*******977 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (271 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1821  (0.0949476); expected 383.6 (0.02)
+Passed bias filter:                      785  (0.0409302); expected 383.6 (0.02)
+Passed Vit filter:                       219  (0.0114187); expected 19.2 (0.001)
+Passed Fwd filter:                        96  (0.00500547); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.70u 0.19s 00:00:00.88 Elapsed: 00:00:00.73
+# Mc/sec: 1195.49
+//
+Query:       tr|F1RCH2|F1RCH2_DANRE  [L=384]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      2e-11   43.7  12.2      2e-11   43.7  12.2    2.6  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    1.1e-06   28.1   8.5     0.0023   17.4   0.4    3.1  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.7  12.2     2e-15     2e-11       2      47 ..     334     375 ..     333     378 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 43.7 bits;  conditional E-value: 2e-15
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                             e++C iC+d+  ++vll+CgH+v+C +C +++     +CpiCrq +
+  tr|F1RCH2|F1RCH2_DANRE 334 ENLCRICMDAVIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 375
+                             789*****************************....*******977 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (384 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1460  (0.0761249); expected 383.6 (0.02)
+Passed bias filter:                      595  (0.0310235); expected 383.6 (0.02)
+Passed Vit filter:                        80  (0.00417123); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.67
+# Mc/sec: 1843.63
+//
+Query:       tr|F1QYQ0|F1QYQ0_DANRE  [L=377]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.9e-11   43.7  12.2    1.9e-11   43.7  12.2    2.6  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+      1e-06   28.2   8.5     0.0023   17.4   0.4    3.1  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.7  12.2     2e-15   1.9e-11       2      47 ..     327     368 ..     326     371 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 43.7 bits;  conditional E-value: 2e-15
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                             e++C iC+d+  ++vll+CgH+v+C +C +++     +CpiCrq +
+  tr|F1QYQ0|F1QYQ0_DANRE 327 ENLCRICMDAVIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 368
+                             789*****************************....*******977 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (377 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1441  (0.0751343); expected 383.6 (0.02)
+Passed bias filter:                      576  (0.0300328); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.18s 00:00:00.59 Elapsed: 00:00:00.65
+# Mc/sec: 1862.40
+//
+Query:       tr|A0A0R4I9R5|A0A0R4I9R5_DANRE  [L=363]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-11   44.4  11.9    1.1e-11   44.4  11.9    2.9  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    6.2e-07   28.8   9.2     0.0023   17.4   0.4    2.9  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.4  11.9   1.2e-15   1.1e-11       2      47 ..     313     354 ..     312     357 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 44.4 bits;  conditional E-value: 1.2e-15
+                                     GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+                      zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                                     +++C iC+d+  ++vll+CgH+v+C +C +++     +CpiCrq +
+  tr|A0A0R4I9R5|A0A0R4I9R5_DANRE 313 DNLCRICMDAVIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 354
+                                     799*****************************....*******987 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (363 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1139  (0.0593879); expected 383.6 (0.02)
+Passed bias filter:                      407  (0.0212211); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.60
+# Mc/sec: 1958.15
+//
+Query:       tr|X1WG81|X1WG81_DANRE  [L=325]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.4e-12   46.6  12.3    2.4e-12   46.6  12.3    3.0  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    1.9e-06   28.1   6.2    1.9e-06   28.1   6.2    2.7  1  FYVE_2      FYVE-type zinc finger
+    2.2e-06   27.1   9.4     0.0018   17.8   0.0    2.9  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6  12.3   3.8e-16   2.4e-12       2      47 ..     275     316 ..     274     319 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 3.8e-16
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                             e++C+iC+d+p ++vll+CgH+v+C +C +++     +CpiCrq +
+  tr|X1WG81|X1WG81_DANRE 275 ENLCKICMDSPIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 316
+                             789*****************************....*******977 PP
+
+>> FYVE_2  FYVE-type zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   6.2     3e-10   1.9e-06      54     106 ..      43      93 ..      33     100 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 3e-10
+                  FYVE_2  54 ethCirCleefkllvnkkrqCldCklnvCkkCgveskkekvwlCkiCseaRev 106
+                             e++C  C  +f  l+  k++C dCk+  C +C+++ ++ + wlC+ C++ R +
+  tr|X1WG81|X1WG81_DANRE  43 EHTCKSCGGRFDSLT-RKHVCMDCKKSYCSQCSTQ-QELQPWLCRTCQRFRGI 93 
+                             789*********875.6789************986.56778*******99976 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (325 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1165  (0.0607435); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        63  (0.00328484); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.57
+# Mc/sec: 1831.03
+//
+Query:       tr|F1QFN6|F1QFN6_DANRE  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.7e-12   46.4  12.3    2.7e-12   46.4  12.3    2.9  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    2.4e-08   33.4   2.8      0.002   17.6   0.0    2.9  0  ARMET_C     ARMET, C-terminal
+    2.1e-06   28.0   6.2    2.1e-06   28.0   6.2    2.7  1  FYVE_2      FYVE-type zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.4  12.3   4.2e-16   2.7e-12       2      47 ..     296     337 ..     295     340 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 46.4 bits;  conditional E-value: 4.2e-16
+                             GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+              zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                             e++C+iC+d+p ++vll+CgH+v+C +C +++     +CpiCrq +
+  tr|F1QFN6|F1QFN6_DANRE 296 ENLCKICMDSPIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 337
+                             789*****************************....*******977 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> FYVE_2  FYVE-type zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   6.2   3.3e-10   2.1e-06      54     106 ..      43      93 ..      33     100 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 3.3e-10
+                  FYVE_2  54 ethCirCleefkllvnkkrqCldCklnvCkkCgveskkekvwlCkiCseaRev 106
+                             e++C  C  +f  l+  k++C dCk+  C +C+++ ++ + wlC+ C++ R +
+  tr|F1QFN6|F1QFN6_DANRE  43 EHTCKSCGGRFDSLT-RKHVCMDCKKSYCSQCSTQ-QELQPWLCRTCQRFRGI 93 
+                             789*********875.6789************986.56778*******99976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1004  (0.0523489); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 1739.81
+//
+Query:       sp|Q8WZ73|RFFL_HUMAN  [L=363]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.9e-12   46.9  12.4    1.9e-12   46.9  12.4    3.1  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+    1.4e-07   30.9   4.2     0.0026   17.2   0.1    2.6  0  ARMET_C     ARMET, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.9  12.4     2e-16   1.9e-12       2      47 ..     313     354 ..     312     357 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 46.9 bits;  conditional E-value: 2e-16
+                           GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+            zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                           e++C+iC+d+p ++vll+CgH+v+C +C +++    ++CpiCrq +
+  sp|Q8WZ73|RFFL_HUMAN 313 ENLCKICMDSPIDCVLLECGHMVTCTKCGKRM----NECPICRQYV 354
+                           789*****************************....*******987 PP
+
+>> ARMET_C  ARMET, C-terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (363 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1024  (0.0533917); expected 383.6 (0.02)
+Passed bias filter:                      412  (0.0214818); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                        18  (0.000938527); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.79
+# Mc/sec: 1478.99
+//
+Query:       sp|Q969K3|RNF34_HUMAN  [L=372]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.8e-11   43.8  11.8    1.8e-11   43.8  11.8    3.3  1  zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.8  11.8   9.4e-16   1.8e-11       2      47 ..     322     363 ..     321     366 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 43.8 bits;  conditional E-value: 9.4e-16
+                            GSB-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+             zf-C3HC4_3   2 eeeCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                            +++C iC+d+  ++vll+CgH+v+C +C +++     +CpiCrq +
+  sp|Q969K3|RNF34_HUMAN 322 DSLCRICMDAVIDCVLLECGHMVTCTKCGKRM----SECPICRQYV 363
+                            789*****************************....*******977 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (372 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1525  (0.0795141); expected 383.6 (0.02)
+Passed bias filter:                      581  (0.0302936); expected 383.6 (0.02)
+Passed Vit filter:                        91  (0.00474477); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.78
+# Mc/sec: 1541.50
+//
+Query:       KAF7682627.1  [L=204]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.5e-12   46.1   9.4    3.5e-12   46.1   9.4    1.6  1  zf-C3HC4_3   Zinc finger, C3HC4 type (RING finger)
+      7e-07   29.1   8.3    1.3e-06   28.3   8.3    1.4  1  Prok-RING_4  Prokaryotic RING finger family 4
+
+
+Domain annotation for each model (and alignments):
+>> zf-C3HC4_3  Zinc finger, C3HC4 type (RING finger)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   9.4   3.6e-16   3.5e-12       4      47 ..     156     195 ..     153     198 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 3.6e-16
+                   B-TTTSSSBS-EEETTEEEEEE-HHHHHHHHHTT-B-TTT--B- CS
+    zf-C3HC4_3   4 eCviCldrprnvvllpCgHlvlCeeCaekllkekkkCpiCrqpi 47 
+                    C+iCld++ ++vl+pC H+v+C++C  ++    k CpiCr++i
+  KAF7682627.1 156 VCKICLDNNIEIVLYPCLHMVTCYSCTLNI----KLCPICRKDI 195
+                   6*****************************....********99 PP
+
+>> Prok-RING_4  Prokaryotic RING finger family 4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   8.3   1.4e-10   1.3e-06       1      40 [.     157     195 ..     157     199 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 1.4e-10
+   Prok-RING_4   1 CvlctenekkvilepCgHl.vCreCfdskdlsaCPlCrrri 40 
+                   C++c  n+ +++l pC H+  C +C  +   + CP+Cr+ i
+  KAF7682627.1 157 CKICLDNNIEIVLYPCLHMvTCYSCTLN--IKLCPICRKDI 195
+                   *******************78****765..556*****987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (204 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       919  (0.047917); expected 383.6 (0.02)
+Passed bias filter:                      617  (0.0321706); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.58
+# Mc/sec: 1141.33
+//
+[ok]

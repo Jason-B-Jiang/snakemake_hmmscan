@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047809.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047809
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ34968.1  [L=132]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.5e-20   72.6   0.1    3.4e-19   68.9   0.1    2.0  1  Pyrid_ox_like   Pyridoxamine 5'-phosphate oxidase like
+      3e-08   33.8   0.0    7.5e-08   32.6   0.0    1.7  1  Putative_PNPOx  Pyridoxamine 5'-phosphate oxidase
+
+
+Domain annotation for each model (and alignments):
+>> Pyrid_ox_like  Pyridoxamine 5'-phosphate oxidase like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.9   0.1   3.6e-23   3.4e-19      35     145 ..       5     104 ..       1     107 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 68.9 bits;  conditional E-value: 3.6e-23
+  Pyrid_ox_like  35 qeveedgdlwfltkkdsdkvkeiredsevnlafsdkskksyvsvsGtaevveDrakikelWnevlkawfpegkddpnltllkvsakeaeyWdsksg 130
+                    +++e++g+l f+t+ ++ k++e+r++++v+laf+d+ ++++vs+sGt+e+++D a i+e W+++           p+l +l v ++e eyWds s+
+     EPZ34968.1   5 KSKEFNGELKFITSLNTSKISELRANNNVCLAFVDPANNTFVSMSGTVEISQDPANIDEIWSPI-----------PDLSVLNVAVDELEYWDSYSE 89 
+                    5689***********************************************************8...........9******************** PP
+
+  Pyrid_ox_like 131 klkvllkiakaavtg 145
+                     ++ l+ ++ka   g
+     EPZ34968.1  90 TMVKLVGLVKAIWSG 104
+                    **********98777 PP
+
+>> Putative_PNPOx  Pyridoxamine 5'-phosphate oxidase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.6   0.0   7.8e-12   7.5e-08      34      87 ..       7      58 ..       1      59 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 32.6 bits;  conditional E-value: 7.8e-12
+                    EEETTTTEEEEEEETTSHHHHHHHHH-EEEEEEEETTGSEEEEEEEEEEEESCH CS
+  Putative_PNPOx 34 kygddrdgivfatnadsrklrnleenprvallflddelgrgvrieGtaelvsdg 87
+                    k+++++  + f+t+  + k  +l++n++v+l+f+d+++++ v+++Gt+e+ +d+
+      EPZ34968.1  7 KEFNGE--LKFITSLNTSKISELRANNNVCLAFVDPANNTFVSMSGTVEISQDP 58
+                    667777..889***************************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (132 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       467  (0.0243495); expected 383.6 (0.02)
+Passed bias filter:                      412  (0.0214818); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.29u 0.21s 00:00:00.50 Elapsed: 00:00:00.61
+# Mc/sec: 703.91
+//
+[ok]

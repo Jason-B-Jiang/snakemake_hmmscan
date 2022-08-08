@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026342.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026342
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9XUU2|Q9XUU2_CAEEL  [L=436]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    8.7e-31  106.6   0.0    8.1e-16   58.4   0.0    3.0  2  CUB           CUB domain
+    1.6e-06   28.3  11.7    6.7e-06   26.3   4.0    2.6  1  Ldl_recept_a  Low-density lipoprotein receptor domain class A
+
+
+Domain annotation for each model (and alignments):
+>> CUB  CUB domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.4   0.0   8.4e-20   8.1e-16       6     110 .]      30     140 ..      25     140 .. 0.87
+   2 !   43.7   0.0   3.2e-15     3e-11       1      99 [.     163     281 ..     163     287 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 58.4 bits;  conditional E-value: 8.4e-20
+                             -SSEEEEESTTTTS---SS-EEEEEEE--TTEEEEEEEESEEB--BST....SSSSEEEEE.ETTESSSSEEEEE-SSSS-SEEE-S CS
+                     CUB   6 tessgsisspnypkeYeenkeCvweiraekgssvklkfedfeleeeee....cayDyveir.dgeeasskllgkfcGsekpedikss 87 
+                             t ++g i+sp yp+ ++   +C+++i++   + ++l+f +f+l ++++    c   y+ ++  +++ ++++ +++cG++ p  i++ 
+  tr|Q9XUU2|Q9XUU2_CAEEL  30 TPTTGFIESPGYPSAFSAPLDCIFNITTAASNVIQLSFVSFDLASKNQlsdqCLDSYLLVVvVDRHGRQHVGERLCGNQVPLSINTM 116
+                             557899**************************************988888889999876551455556788899************* PP
+
+                             SSEEEEEEE--SS.--SSEEEEEE CS
+                     CUB  88 snqllikfvsdes.vskkGFkity 110
+                             ++ + ++fv++++ ++++GF+i+y
+  tr|Q9XUU2|Q9XUU2_CAEEL 117 QSWMQVQFVTTSTnQKHRGFRIQY 140
+                             *********966515679****99 PP
+
+  == domain 2  score: 43.7 bits;  conditional E-value: 3.2e-15
+                             SCEE..E-SSEEEEESTTTTS---SS-EEEEEEE--TTEEEEEEEESEEB--BST.SSSSEEEEEETTESSS...........SEEE CS
+                     CUB   1 Cgge..ltessgsisspnypkeYeenkeCvweiraekgssvklkfedfeleeeee.cayDyveirdgeeass...........kllg 73 
+                             Cgg+    + sg+i sp yp  Y++n++C+w ir+e ++++ +++ ++ l  +   c+   + i+dg+++++           +  +
+  tr|Q9XUU2|Q9XUU2_CAEEL 163 CGGHstPGQLSGEILSPGYPTTYPKNSTCNWLIRVEARQRIYIRIVHLHLAPTIAeCERASLTIIDGYKHEKygidrkestseTSEA 249
+                             77774445789***************************************966445*********9987544111111111114456 PP
+
+                             EE-S......SSS-SEEE-SSSEEEEEEE--S CS
+                     CUB  74 kfcG......sekpediksssnqllikfvsde 99 
+                             kfcG      +e  + + ss n+++++f+++e
+  tr|Q9XUU2|Q9XUU2_CAEEL 250 KFCGsqlyyaEEGMKSYLSSANRIVVRFITQE 281
+                             78887777776777888888888888888765 PP
+
+>> Ldl_recept_a  Low-density lipoprotein receptor domain class A
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.3   4.0     7e-10   6.7e-06      10      37 .]     338     369 ..     332     369 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 26.3 bits;  conditional E-value: 7e-10
+                             ETTSE..EEEGGGTTSSSTTSS..SSGCCSST CS
+            Ldl_recept_a  10 Cgsge..CIprswvCdgeaDCe..DgSDEenC 37 
+                             C+s++  CI++s+vCdg + C   D SDE++C
+  tr|Q9XUU2|Q9XUU2_CAEEL 338 CASRSrlCIHSSLVCDGIHNCVegDFSDEQHC 369
+                             8888889**************63377****** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (436 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       562  (0.0293029); expected 383.6 (0.02)
+Passed bias filter:                      386  (0.0201262); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.68
+# Mc/sec: 2087.41
+//
+[ok]

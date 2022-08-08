@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037931.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037931
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002652421.1  [L=159]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      3e-16   59.5   1.3    1.9e-15   56.9   1.3    1.9  1  SnoaL     SnoaL-like polyketide cyclase
+    9.2e-16   58.5   0.4    1.2e-15   58.1   0.4    1.1  1  SnoaL_2   SnoaL-like domain
+
+
+Domain annotation for each model (and alignments):
+>> SnoaL  SnoaL-like polyketide cyclase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.9   1.3     2e-19   1.9e-15       2     120 ..      43     148 ..      42     152 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 56.9 bits;  conditional E-value: 2e-19
+                     HHHHHHHHHHHTT-HHHHHGTEEEEEEETCCTTTCECHHHHHHHHHHHHHHHCTTCEEEEEEEEEETTEEEEEEEEEEEESSEBTTBE-TT-EEE CS
+           SnoaL   2 lvlrfyeevwnsgdldaldelvaedvvdhnpeeeparGlegfrafveelfkafPDlkvevedlvaegdkvaarltftGthtgeflGipptGkkvk 96 
+                     lv++fy+ ++n++++++++ +vaed+++hnp  e+++G++ f   +   fk+ P+ + ++ +  a+gd v+++++              +Gk+ +
+  XP_002652421.1  43 LVVDFYDSFFNKHQVQEAAAVVAEDYIQHNP--EVPDGKAPFVGYFGGYFKENPESRARIVRSAADGDLVYLHVHS------------TNGKADR 123
+                     799**************************88..9*****************************************4............4566555 PP
+
+                     EEE.EEEEEEETTEEEEEEEEECHH CS
+           SnoaL  97 fee.itllrvedGkIveewdviDll 120
+                      ++ i+++rv+dGkIve+wdvi+ +
+  XP_002652421.1 124 GQAiIDIFRVQDGKIVEHWDVIQAV 148
+                     544289***************9865 PP
+
+>> SnoaL_2  SnoaL-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.1   0.4   1.2e-19   1.2e-15       1     102 []      44     141 ..      44     141 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 58.1 bits;  conditional E-value: 1.2e-19
+                     HHHHHH.HHHTTTHHHHHCTEEEEEEEEET.TSEEESHHHHHHHHHHHHHHEEEEEEEEEEEEEETTEEEEEEEEEEEECTTSSEEEE.EEEEEE CS
+         SnoaL_2   1 vrrfla.alnagdldalaalfapdvvwedp.ggelrGreairaflraafaafpdlrfeihdviaegdrvavewtvtgtipatgrgvtv.rgvdvf 92 
+                     v +f++  +n++ ++++aa++a+d+ +++p ++   G++ +  ++ ++f+++p+ r++i + +a+gd v  +++ t     +g++ +    +d+f
+  XP_002652421.1  44 VVDFYDsFFNKHQVQEAAAVVAEDYIQHNPeVP--DGKAPFVGYFGGYFKENPESRARIVRSAADGDLVYLHVHST-----NGKADRGqAIIDIF 131
+                     567998789*********************765..9*************************************998.....4555444489**** PP
+
+                     EEETTEEEEE CS
+         SnoaL_2  93 rvedGkiaev 102
+                     rv+dGki+e+
+  XP_002652421.1 132 RVQDGKIVEH 141
+                     ********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (159 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       624  (0.0325356); expected 383.6 (0.02)
+Passed bias filter:                      542  (0.0282601); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.20s 00:00:00.57 Elapsed: 00:00:00.69
+# Mc/sec: 749.18
+//
+[ok]

@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025798.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025798
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|G5EF33|MIG13_CAEEL  [L=362]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.9e-09   36.9   0.0    8.3e-07   29.4   0.0    2.5  1  CUB           CUB domain
+    1.1e-07   32.0   5.0    1.1e-07   32.0   5.0    1.9  1  Ldl_recept_a  Low-density lipoprotein receptor domain class A
+
+
+Domain annotation for each model (and alignments):
+>> CUB  CUB domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.0   8.6e-11   8.3e-07      13     109 ..      54     171 ..      41     172 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 8.6e-11
+                            ESTTTTS---SS-EEEEEEE--TTEEEEEEEESEEB--BST...SSSSEEEEEETTES...............S.SSEEEEE-SSSS- CS
+                    CUB  13 sspnypkeYeenkeCvweiraekgssvklkfedfeleeeee...cayDyveirdgeea...............s.skllgkfcGsekp 81 
+                            +s+ + ++Y+++ +Cv  + a+ g+s+ ++  +f++ ++e+   c++D ++++d e+                s  +++g+fcG+ + 
+  sp|G5EF33|MIG13_CAEEL  54 HSKYGQEPYNTSRNCVLMLVAPIGYSIRVRALQFDVASTENartCEKDTLHVFDHETTldpesyaparidditSpGPIIGQFCGHFEN 141
+                            34555669***************************987776777********997653111111111111111225799*****8777 PP
+
+                            SEEE.-SSSEEEEEEE--SS.--SSEEEEE CS
+                    CUB  82 edik.sssnqllikfvsdes.vskkGFkit 109
+                              ++ ss+n+l++ ++s+ + +++kGFk++
+  sp|G5EF33|MIG13_CAEEL 142 RILNtSSHNALTLWWHSNPNgSNSKGFKLH 171
+                            7776155688999999975516779**987 PP
+
+>> Ldl_recept_a  Low-density lipoprotein receptor domain class A
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.0   5.0   1.1e-11   1.1e-07       2      33 ..     182     213 ..     181     214 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 32.0 bits;  conditional E-value: 1.1e-11
+                            SSSSTCEEETTSEEEEGGGTTSSSTTSSSSGC CS
+           Ldl_recept_a   2 tCepnefqCgsgeCIprswvCdgeaDCeDgSD 33 
+                            +C   ef+Cg+geCIp + +Cd  aDC++g+D
+  sp|G5EF33|MIG13_CAEEL 182 NCVTGEFSCGNGECIPIESACDRFADCSNGED 213
+                            6999**************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (362 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       637  (0.0332134); expected 383.6 (0.02)
+Passed bias filter:                      393  (0.0204912); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.62
+# Mc/sec: 1899.98
+//
+[ok]

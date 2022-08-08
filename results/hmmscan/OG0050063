@@ -1,0 +1,84 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050063.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050063
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9HGK9|CENPT_SCHPO  [L=479]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.8e-27   93.4   0.5    2.5e-26   91.9   0.5    1.7  1  CENP-T_C       Centromere kinetochore component CENP-T histon
+    2.8e-10   40.5   0.1    5.9e-10   39.5   0.1    1.5  1  CENP-S         CENP-S protein
+    1.9e-06   28.3   0.3    1.9e-06   28.3   0.3    3.0  1  Histone        Core histone H2A/H2B/H3/H4
+    0.00021   21.6   0.0    0.00054   20.3   0.0    1.8  0  CBFD_NFYB_HMF  Histone-like transcription factor (CBF/NF-Y) a
+
+
+Domain annotation for each model (and alignments):
+>> CENP-T_C  Centromere kinetochore component CENP-T histone fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.9   0.5   5.2e-30   2.5e-26       7      99 ..     385     472 ..     379     476 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 91.9 bits;  conditional E-value: 5.2e-30
+               CENP-T_C   7 slPaavvkklakrfakasgskaklskealealekasdeffeqvgeDLeayakHagRKtidesDvilLmkrqrkvtskttlfslaqryL 94 
+                            +lP++ ++kla+++     s++k+  + +e l++as+ ff+q+++DL a+a+Ha RKtid +Dv+lLmkrqrk+++k++l sl q+yL
+  sp|Q9HGK9|CENPT_SCHPO 385 VLPETNIRKLANSY-----SQKKIAGSVIEELTTASELFFKQIANDLSAFADHAHRKTIDTQDVVLLMKRQRKISEKKSLSSLMQQYL 467
+                            59***********9.....556****************************************************************** PP
+
+               CENP-T_C  95 PrEll 99 
+                             rE++
+  sp|Q9HGK9|CENPT_SCHPO 468 SREIA 472
+                            ***85 PP
+
+>> CENP-S  CENP-S protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.5   0.1   1.2e-13   5.9e-10      24      75 ..     401     452 ..     387     453 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 39.5 bits;  conditional E-value: 1.2e-13
+                 CENP-S  24 veatkqfiaaltelvykqlenlakDLeaFAkHAkRstittdDvlLlaRrnes 75 
+                             ++  ++i+ lt       +++a+DL aFA HA R+ti+t+Dv+Ll++r+ +
+  sp|Q9HGK9|CENPT_SCHPO 401 KKIAGSVIEELTTASELFFKQIANDLSAFADHAHRKTIDTQDVVLLMKRQRK 452
+                            455666666665444445667799************************9875 PP
+
+>> Histone  Core histone H2A/H2B/H3/H4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.3     4e-10   1.9e-06      48     129 ..     372     448 ..     361     450 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 4e-10
+                            HHHHHHHHHXXSXSSXHHHHHHHHHHHH.TTSSSXEEXHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTXSEEXHHHHHHHHH CS
+                Histone  48 lkeirkyqkstdlliqklpfaRvvreivksekedlrisaeavlalqealEallvelfeeAnllakhaKRvTitpkDiqlArr 129
+                            +k +r+y+ks++l  + + +++    + + + ++++i ++ ++ l++a+E ++ +++ + +  a ha+R+Ti  +D+ l ++
+  sp|Q9HGK9|CENPT_SCHPO 372 KKPKRRYSKSSTLVLPETNIRK----LAN-SYSQKKIAGSVIEELTTASELFFKQIANDLSAFADHAHRKTIDTQDVVLLMK 448
+                            6779999999999999999888....666.7778*******************************************99887 PP
+
+>> CBFD_NFYB_HMF  Histone-like transcription factor (CBF/NF-Y) and archaeal histone
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (479 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1160  (0.0604828); expected 383.6 (0.02)
+Passed bias filter:                      470  (0.024506); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.58
+# Mc/sec: 2664.44
+//
+[ok]

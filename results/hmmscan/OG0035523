@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035523.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035523
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F069|E7F069_DANRE  [L=792]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      8e-25   86.9   0.0    1.4e-24   86.1   0.0    1.4  1  RHD_dimer     Rel homology dimerisation domain
+    1.6e-24   86.8   0.2    6.6e-24   84.8   0.2    2.0  1  RHD_DNA_bind  Rel homology DNA-binding domain
+    0.00028   21.0   0.2     0.0012   19.0   0.0    2.2  0  TIG           IPT/TIG domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.1   0.0   2.3e-28   1.4e-24       2     102 ..     507     605 ..     506     606 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 86.1 bits;  conditional E-value: 2.3e-28
+               RHD_dimer   2 icrlsktsgsveGgeelillcekvqkddikvrFleeke.gkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrps 87 
+                             +++++++++sv Gg ++il +++++  ++kv+F+e+++ + ++We+ea++ +++++++  +++++PpYrd++i +pv+V++++ + +
+  tr|E7F069|E7F069_DANRE 507 VEHQDTDHSSVLGGAQMILRGQNFTP-ESKVIFFEKTHgDLQIWESEAKVYRDKSTSN-LLFLEIPPYRDTNIYRPVKVNFHVLNGK 591
+                             678999********************.***********888*****************.9*************************88 PP
+
+               RHD_dimer  88 dketsepleFtYlPe 102
+                             +k +s++++FtY+P 
+  tr|E7F069|E7F069_DANRE 592 KK-CSQSQNFTYTPL 605
+                             87.***********6 PP
+
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.8   0.2     1e-27   6.6e-24       1     169 []     337     497 ..     337     497 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 84.8 bits;  conditional E-value: 1e-27
+                             EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--S.SEE.EEEEEEESSSS.--B-S....SEEECTTEETT.. CS
+            RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydg.eak.irvslvtkdep.lrpHa....hslvgkdckdg.. 78 
+                             l+I  qP+q+ +R++Y++E +s+G++++     s+ ++P v++ +y+g e   ++++++t+d++ lrpHa    h+++gk+ +++  
+  tr|E7F069|E7F069_DANRE 337 LRIEAQPRQH-HRAHYETE-GSRGAVKA-----SSGGHPVVQLRGYTGtEPLvLQIFIGTADDRnLRPHAfyqvHRITGKTVTTNsq 416
+                             79********.********.9******9.....999************6333599*****99988***************5333335 PP
+
+                             ........EEEEEE-TT.TSEEE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEEECSTTSEEE CS
+            RHD_DNA_bind  79 ........vcevelkpe.dmvasfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqaflpdstgnftt 156
+                                     ++ev ++p+ +m+a++++ GIl++++ ++e +     e+++ +kn              ++vrl+F++++   ++ ++ 
+  tr|E7F069|E7F069_DANRE 417 drmlngtkILEVPMEPKeNMRAVIDCAGILKLRNADIELKKG---ETDVGRKN--------------TRVRLVFRVHI--PQPGGQW 484
+                             68999999*********9*******************98766...89999999..............99*********..6666666 PP
+
+                             EEEEEEEEEEEET CS
+            RHD_DNA_bind 157 alepvvSnpiydk 169
+                                +v+S+ i+++
+  tr|E7F069|E7F069_DANRE 485 LSLQVASQTIECS 497
+                             789*******985 PP
+
+>> TIG  IPT/TIG domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (792 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       453  (0.0236196); expected 383.6 (0.02)
+Passed bias filter:                      328  (0.017102); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.22s 00:00:00.66 Elapsed: 00:00:00.69
+# Mc/sec: 3716.94
+//
+[ok]

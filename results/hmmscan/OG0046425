@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046425.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046425
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF17666.1  [L=171]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.6e-17   63.0   0.0    4.3e-17   62.7   0.0    1.1  1  YjgF_endoribonc  YjgF/chorismate_mutase-like, putative endori
+    1.2e-08   35.0   0.0    3.3e-08   33.6   0.0    1.7  1  Ribonuc_L-PSP    Endoribonuclease L-PSP
+
+
+Domain annotation for each model (and alignments):
+>> YjgF_endoribonc  YjgF/chorismate_mutase-like, putative endoribonuclease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.7   0.0   4.5e-21   4.3e-17      10     138 ..      30     157 ..      21     163 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 62.7 bits;  conditional E-value: 4.5e-21
+                      ----..----SSSS-SEEEETTEEEE--B--EETTE.E--BS-BTTTB-HHHHHHHHHHHHHHHHHHHHHHHSSGGG-SEEEEEEEEE-B-TT- CS
+  YjgF_endoribonc  10 elpk..vaaalGayepyaivasflttsfqlpylqek.llyvGllGddvsvseGiaaarlaalnalaqlkeaaGelarvkrlirleGvlnvtqdy 100
+                       l k  v+a    y p  + +++l t++ +py+ ++  l+ G++G+++sv+e    a l a+n l ++k+  G    v     l+G +n    +
+       PJF17666.1  30 DLDKwmVPAPKAVYVPVVKCGKMLYTAGHVPYQPGTsTLFEGKVGAQFSVEEANKVAELIAVNMLKNIKDCIGTSLWV-----LNGFVNADGAF 118
+                      4444337888899*******************9776378**********************************86555.....*********** PP
+
+                      --HHHHHHHHHHHHHHHHG.GGG--EEEEEE-SS-GGGB CS
+  YjgF_endoribonc 101 iempkvldaasdlllevlG.eaGrhartiltnhvmplna 138
+                       ++ +v+++as+ll +v+G e G hart+++ + +p+n 
+       PJF17666.1 119 AQHSMVINGASELLVKVFGsEIGSHARTAVGAPGLPFNG 157
+                      ******************9788**************986 PP
+
+>> Ribonuc_L-PSP  Endoribonuclease L-PSP
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.6   0.0   3.5e-12   3.3e-08       5     110 ..      37     156 ..      35     159 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 33.6 bits;  conditional E-value: 3.5e-12
+                    TTTSSS-BSEEEETTEEEEEEE-SB-TTTSCB.-SSHHHHHHHHHHHHHHHHHHTT--GGG.........EEEEEEEESSGGGHHHHHHHHHHHSS CS
+  Ribonuc_L-PSP   5 paaaapYsqavkagnlvyvsGqlpldeetgklvegdveeqtrqalenikavLaaagaslsd.........vVkvtvFladiedfaevnevyaeafd 91 
+                    pa+ a Y+++vk g+++y++G++p+++ t +l+eg+v +q     +n  a L a+++   +         +  ++ F++    fa+ + v+++a++
+     PJF17666.1  37 PAPKAVYVPVVKCGKMLYTAGHVPYQPGTSTLFEGKVGAQFSVEEANKVAELIAVNM--LKnikdcigtsLWVLNGFVNADGAFAQHSMVINGASE 130
+                    678999*********************999999988887764333333333333332..111344666677778999999999************* PP
+
+                    SS......T.S--EEEEEE-SBSGGG CS
+  Ribonuc_L-PSP  92 ed......k.kaParsaveVaaLppg 110
+                            + + +ar+av++  Lp++
+     PJF17666.1 131 LLvkvfgsEiGSHARTAVGAPGLPFN 156
+                    999999986789**********9954 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (171 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       316  (0.0164764); expected 383.6 (0.02)
+Passed bias filter:                      301  (0.0156942); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.52
+# Mc/sec: 1055.76
+//
+[ok]

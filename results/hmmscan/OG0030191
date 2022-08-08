@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030191.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030191
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54WF8|Q54WF8_DICDI  [L=265]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.2e-10   39.6   3.4    8.3e-10   38.6   3.4    1.5  1  SNARE       SNARE domain
+    1.4e-08   35.1  10.3    1.4e-08   35.1  10.3    2.4  1  Syntaxin_2  Syntaxin-like protein
+
+
+Domain annotation for each model (and alignments):
+>> SNARE  SNARE domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6   3.4   8.7e-14   8.3e-10       8      53 .]     211     256 ..     210     256 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 8.7e-14
+                             HHHHHHHHHHHHHHHHHHHHHHHHCTXXXXXXXXXXXXXXXXXXXX CS
+                   SNARE   8 tnVenaqsnveraqkeLkkavkyqksnRklkciillilviillvvl 53 
+                              nV+ ++ nv+++++eL+ka++y+ s+Rk+ +ii+++++i++ +v+
+  tr|Q54WF8|Q54WF8_DICDI 211 KNVDMVEMNVSQGNQELVKANQYACSARKKVVIIVILVLIVIGLVV 256
+                             59****************************************9987 PP
+
+>> Syntaxin_2  Syntaxin-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1  10.3   1.5e-12   1.4e-08       1      97 [.       7      95 ..       7      99 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 1.5e-12
+              Syntaxin_2  1 issnlfkinsnvstleklvkqlgtkrdtqelrdklheliekiseliketsellkklsqlenkssdsqqklqkekLsrefkealqeFqkl 89
+                            i++ l+++n+ +++++++ ++++++rdt e+r  +++ ie+ + li++++++l+ +s+          +++ +kL+ +f+e+ ++F+k 
+  tr|Q54WF8|Q54WF8_DICDI  7 IATYLNSLNETTQKIQSKKSTINSSRDTVEFRGTIKSDIENGKTLINNIKQQLSGFSR--------ADRVKVNKLTGQFNELTKQFEKE 87
+                            678899****************************************************........7799******************9 PP
+
+              Syntaxin_2 90 qrqyaeke 97
+                             +++ +++
+  tr|Q54WF8|Q54WF8_DICDI 88 STEIINLQ 95
+                            99988876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (265 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2384  (0.124303); expected 383.6 (0.02)
+Passed bias filter:                      977  (0.0509411); expected 383.6 (0.02)
+Passed Vit filter:                       107  (0.00557902); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 1346.30
+//
+[ok]

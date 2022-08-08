@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050444.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050444
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P79005|TAZ1_SCHPO  [L=663]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.7e-37  128.7   2.1    2.7e-37  128.7   2.1    2.2  1  TRF              Telomere repeat binding factor (TRF)
+    2.1e-05   24.7   0.2    5.1e-05   23.5   0.2    1.6  0  Myb_DNA-binding  Myb-like DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> TRF  Telomere repeat binding factor (TRF)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  128.7   2.1   2.8e-41   2.7e-37       2     218 ..     125     351 ..     124     363 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 128.7 bits;  conditional E-value: 2.8e-41
+                           HHCTHHHHHH.....HHHHHHHHHHTHHHHHHHHHHHTT....SHHHHHHHHHHHHHHHHHHHHHHHHHHHH..........HHHHCHS CS
+                   TRF   2 lksLplLdnl.....stqllrllaespyqkilaivsepd....sefgeafdtllslfertkklysekkplls..........psilkkr 71 
+                           ++s++ ++++     ++q+++++ae+++++++ai+se++    ++  e+f+++l+  e++k+ly+++++l++          +s+++k+
+  sp|P79005|TAZ1_SCHPO 125 VRSIWDIEKAsllvnDCQNIANMAEQKVMMVSAIFSESSkdivNP--ESFSERLGK-ETVKDLYEFNEQLTTkyglefrtifFSYIRKY 210
+                           79********999999***********************885555..*********.******************************** PP
+
+                           CHH......HHHHHHHHHCCCHCTEECSSSTS-HHHHHHHHHHHHCHTTTSHHHHHHHHHHHHHHHHHHHHHHHHTTTHHHHHHHHHHH CS
+                   TRF  72 ess......iestlrkinlatfllsvlgtleigflelaenfldifcpenelgkllkpqgvLyleLktqayisalkeaeerskeeiLddl 154
+                           +++      +e++l++i+++t l+++l++++ ++l+l++++ld++++++e+++++ ++ vL++eL ++++ ++  ++++ +++e++ ++
+  sp|P79005|TAZ1_SCHPO 211 DAYwclfedLEKPLKSIQFFTGLIDLLDNTN-KHLTLRSIVLDALLSADEEDSFYGDALVLFEELVIRYFGTD--SNPSIDASEFILSC 296
+                           *******************************.*****************************************..9************* PP
+
+                           SSSTCHHHHHHHTT-HHH-HHHHHHCCHHHHHHHHHHHHHHHTCCHHHHHS-HHHHHHHHHHHH CS
+                   TRF 155 fpddlediLlerrngklltpsetdfverckkrkekLlniinekdkeLlqkyswesflkellsYv 218
+                           +p+++ d+L      ++++ ++++++++c+++k+++ n++n++   L+ ++s+++f++++++++
+  sp|P79005|TAZ1_SCHPO 297 LPYTSLDAL------NVVCGQVWKSQKICDFLKSTIGNTSNSP---LQLRASFPAFVNAVIHFL 351
+                           *******99......9***************************...****************97 PP
+
+>> Myb_DNA-binding  Myb-like DNA-binding domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (663 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1252  (0.0652797); expected 383.6 (0.02)
+Passed bias filter:                      552  (0.0287815); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.23s 00:00:00.73 Elapsed: 00:00:00.73
+# Mc/sec: 2928.84
+//
+[ok]

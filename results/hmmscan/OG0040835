@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040835.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040835
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q6ZSN1|YI023_HUMAN  [L=163]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.1e-92  304.7  32.0    4.7e-83  276.0  23.7    2.0  2  DUF4575   Domain of unknown function (DUF4575)
+
+
+Domain annotation for each model (and alignments):
+>> DUF4575  Domain of unknown function (DUF4575)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   1.2   1.4e-12   2.6e-08      22      52 ..       1      31 [.       1      32 [. 0.97
+   2 !  276.0  23.7   2.4e-87   4.7e-83       1     129 []      33     161 ..      33     161 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 1.4e-12
+                DUF4575 22 mgvprdrggrgagsqstprggcllpprlgsq 52
+                           mgvpr r grgagsqs prg cl p r gsq
+  sp|Q6ZSN1|YI023_HUMAN  1 MGVPRAREGRGAGSQSPPRGRCLHPFRWGSQ 31
+                           9*****************************9 PP
+
+  == domain 2  score: 276.0 bits;  conditional E-value: 2.4e-87
+                DUF4575   1 rgrgeglalspllpgvppppamgvprdrggrgagsqstprggcllpprlgsqqpageeglvlsprlagdaspccdgspksqgvkrgwl 88 
+                            rgrgeglalspllpgvppppamgvprdrggrgagsqstprggcllpprlgsqqpageeglvlsprlagdaspccdgspksqgvkrgwl
+  sp|Q6ZSN1|YI023_HUMAN  33 RGRGEGLALSPLLPGVPPPPAMGVPRDRGGRGAGSQSTPRGGCLLPPRLGSQQPAGEEGLVLSPRLAGDASPCCDGSPKSQGVKRGWL 120
+                            8*************************************************************************************** PP
+
+                DUF4575  89 svptsrgvppppaigvliarggrgagsqslprgwsftplrw 129
+                            svptsrgvppppaigvliarggrgagsqslprgwsftplrw
+  sp|Q6ZSN1|YI023_HUMAN 121 SVPTSRGVPPPPAIGVLIARGGRGAGSQSLPRGWSFTPLRW 161
+                            ***************************************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (163 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       201  (0.0104802); expected 383.6 (0.02)
+Passed bias filter:                      127  (0.00662183); expected 383.6 (0.02)
+Passed Vit filter:                         4  (0.000208561); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.17s 00:00:00.47 Elapsed: 00:00:00.58
+# Mc/sec: 912.27
+//
+[ok]

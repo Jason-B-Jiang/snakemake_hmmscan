@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032759.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032759
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q8MMD7|Q8MMD7_DROME  [L=468]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.5e-50  171.8   0.1    2.1e-50  171.3   0.1    1.2  1  ATP-gua_Ptrans   ATP:guanido phosphotransferase, C-terminal c
+    9.9e-15   54.8   0.0    2.5e-14   53.5   0.0    1.7  1  ATP-gua_PtransN  ATP:guanido phosphotransferase, N-terminal d
+
+
+Domain annotation for each model (and alignments):
+>> ATP-gua_Ptrans  ATP:guanido phosphotransferase, C-terminal catalytic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  171.3   0.1   2.2e-54   2.1e-50       2     212 ..     225     440 ..     224     441 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 171.3 bits;  conditional E-value: 2.2e-54
+                             HHHHHHHHHCT-.-GGG-EEEEECTT.S-HHHHHHHHHT..T-S-..SS--HHHHCTTTT....TTTTTT-EEEEETTSSEEEEESS CS
+          ATP-gua_Ptrans   2 vekkvkkaleslkeeelkgkyyslte.lteeerqelvek..hllf..kekdkllqaaela....rdwpkgrgvlinedetflvwvNe 79 
+                             + k+++++++++ +e+++g+yy++te l+++++ +++ +  +l++   ++++l+qaae++    + wp+grg ++n++++++vw+N+
+  tr|Q8MMD7|Q8MMD7_DROME 225 MSKIFTTHFADAIGETDSGNYYTMTElLEPDSEVTMMLSslGLMIplLDTKDLVQAAESTafngALWPYGRGAFVNSANNMAVWLNC 311
+                             67899999*9999*************8666666666655458888999*********999888899********************* PP
+
+                             SSSEEEEEEEES...S-HHHHHHHHHHHHHHHCCCC-B-EETTTEE--SSGGG-BT--EEEEEEE-CCHHCST..TTHHHHHHHTTE CS
+          ATP-gua_Ptrans  80 eDHlRiislekg...ldleevyerlsrlddlleeklefafdeklGyltscptnlGTGlRasvmikLPaLskekqieklkellkklgl 163
+                             ++HlRiis++++   +d++++y+r+ r+ ++le++l+f++++ lGyl+s+p+ lGTGl++++++kL +L+ke+  ++l++l+     
+  tr|Q8MMD7|Q8MMD7_DROME 312 QEHLRIISTTSSkepADMGAAYTRVGRAITYLETQLHFKESYLLGYLQSRPSYLGTGLKMTTIVKLTNLMKEM--DNLRHLC----- 391
+                             ************9999********************************************************7..*******..... PP
+
+                             EEEETTTCCHCCHTTEEEEEES--SSS-HHHHHHHHHHHHHHHHHHHHH CS
+          ATP-gua_Ptrans 164 qvRGlygegseavgniydiSNqrrlGlsEeeivqdlisvvkqlielEke 212
+                              vRGl++++++ ++ ++++ N++++G+ E+ ++qd++++v+++++lEk+
+  tr|Q8MMD7|Q8MMD7_DROME 392 SVRGLSMVTNRLSKLTVRLVNMQSMGVVEYVLFQDYCTAVTNILSLEKD 440
+                             9**********************************************97 PP
+
+>> ATP-gua_PtransN  ATP:guanido phosphotransferase, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.5   0.0   2.6e-18   2.5e-14       4      65 ..      79     148 ..      77     150 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 53.5 bits;  conditional E-value: 2.6e-18
+                             T-HHHHC--HHHHHHHTT---TTS--HHHHHHHHHHSTT-.........-S---SSTTHHHHTHHHHHHH CS
+         ATP-gua_PtransN   4 nsllkkyLtpevfdklknrkTksgftLddvIqsgvdnpdsg........vGvvAgDeesYevFaelfdpv 65 
+                              s+l++ L++ v+dk+k r+T+ +++L+dv ++++ ++ +         +G+ A+D++ ++vF+e++ p+
+  tr|Q8MMD7|Q8MMD7_DROME  79 TSYLSRFLKRGVYDKIKRRQTRLDHNLFDVLWPAMRKTSKArhleedinCGIIAPDFDVFVVFQEFLVPL 148
+                             589********************************55555455555666*****************9886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (468 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       491  (0.0256009); expected 383.6 (0.02)
+Passed bias filter:                      365  (0.0190312); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.69
+# Mc/sec: 2191.02
+//
+[ok]

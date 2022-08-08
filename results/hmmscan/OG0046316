@@ -1,0 +1,70 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046316.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046316
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF16995.1  [L=784]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.3e-19   71.0   0.9    1.6e-11   44.9   0.0    3.2  2  AAA        ATPase family associated with various cellular act
+    6.6e-11   42.0   0.9    1.9e-10   40.5   0.1    2.2  1  AAA_lid_3  AAA+ lid domain
+
+
+Domain annotation for each model (and alignments):
+>> AAA  ATPase family associated with various cellular activities (AAA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.9   0.0   1.6e-15   1.6e-11       1      44 [.     535     578 ..     535     585 .. 0.95
+   2 !   23.9   0.0     5e-09   4.8e-05      78     131 ..     583     635 ..     576     636 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 44.9 bits;  conditional E-value: 1.6e-15
+                 EEEESSTTSSHHHHHHHHHHHHTSEEEEEETTTSSCSSTTHHHH CS
+         AAA   1 vllyGppGtGKTllakavakelgvefleisgsellskyvgesek 44 
+                 +ll+GppGtGKT+la+ava ++g++f+ ++ s+++++yvge ++
+  PJF16995.1 535 ILLFGPPGTGKTMLARAVAAQSGASFIAVNSSSIFDMYVGEDSR 578
+                 69**************************************9876 PP
+
+  == domain 2  score: 23.9 bits;  conditional E-value: 5e-09
+                 SHHHHHHHHHHHHHHHHHTTSSSSTEEEEEEESSGGGSCHHHHSTTSEEEEETE CS
+         AAA  78 eseeeervvnqLlteldgvkkkeskvivigatnrpdkldpallrgRfdrkieie 131
+                  + ++ +++n++++e+dg+ ++++ ++v++atnrp  ld+a+l +R+ r+i i+
+  PJF16995.1 583 GRASRVEIINEFMAEWDGLLSQNHGITVMAATNRPYALDDAVL-RRLPRRILID 635
+                 55677899***********************************.7*****9886 PP
+
+>> AAA_lid_3  AAA+ lid domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.5   0.1     2e-14   1.9e-10       1      36 [.     658     693 ..     658     700 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 40.5 bits;  conditional E-value: 2e-14
+   AAA_lid_3   1 dVdlkelAerTeGysGADLaalcreAallAlrrgid 36 
+                 +V+l ++A r+e+ysG+DL++ c  Aa++ lrr++ 
+  PJF16995.1 658 SVSLMDIALRCENYSGSDLKNMCMAAAMRSLRRVRA 693
+                 699******************************875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (784 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       520  (0.027113); expected 383.6 (0.02)
+Passed bias filter:                      473  (0.0246624); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        18  (0.000938527); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.24s 00:00:00.71 Elapsed: 00:00:00.65
+# Mc/sec: 3888.06
+//
+[ok]

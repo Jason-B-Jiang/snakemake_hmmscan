@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034889.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034889
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WCE8|X1WCE8_DANRE  [L=293]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-18   67.6  33.4    6.2e-12   45.9  10.4    2.1  1  MARVEL    Membrane-associating domain
+
+
+Domain annotation for each model (and alignments):
+>> MARVEL  Membrane-associating domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.9  10.4   3.2e-16   6.2e-12       2     143 ..     144     283 ..     143     284 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 45.9 bits;  conditional E-value: 3.2e-16
+                  MARVEL   2 llsplgilrilqlvfaiiilgliasliakldqllgspssalnfavfvavfsflyalfllvlylfknsaftsilwplidlivdalaal 88 
+                             +++ +g+l++ + + a+ii+ +i+          + +++a++++++v +++f+++++++v+++++++   ++++  ++  + +la+ 
+  tr|X1WCE8|X1WCE8_DANRE 144 MATAPGLLKVCETFIACIIFVFISEPE------SYKQNAATQWCLAVYCICFILSAGIIVMCVGECTGCLPFSFARFLSTYALLAVS 224
+                             67889********************99......7889************************************************** PP
+
+                  MARVEL  89 lwlvafialaaglrdiscafe.....snqysasltvrcgqaqaavafgflavllfaasav 143
+                             ++l a i++ ++  d + +++     +  +s    + ++++ a ++++ l+++l++a+++
+  tr|X1WCE8|X1WCE8_DANRE 225 MYLSATIIWPIYKFDNKHGGQshrpnICGSSIG-LCPWDKLVAITVLSSLNFILYLADLI 283
+                             ************999666633456664444444.55799******************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (293 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       734  (0.038271); expected 383.6 (0.02)
+Passed bias filter:                      268  (0.0139736); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.62
+# Mc/sec: 1531.10
+//
+[ok]

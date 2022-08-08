@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0028461.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0028461
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q8IG38|Q8IG38_CAEEL  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.8e-12   47.1  30.1     0.0041   17.6   0.8    5.6  2  zf-C2H2    Zinc finger, C2H2 type
+    1.4e-11   44.3  30.3     0.0029   18.4   1.0    5.7  0  zf-C2H2_4  C2H2-type zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.5   2.5   9.5e-07    0.0091       1      20 [.     109     128 ..     109     132 .. 0.90
+   2 !   17.6   0.8   4.3e-07    0.0041       2      23 .]     176     197 ..     175     197 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 16.5 bits;  conditional E-value: 9.5e-07
+                             EEETTTTEEESSHHHHHHHH CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHi 20 
+                             y+C++C+++F+ k+nL++H 
+  tr|Q8IG38|Q8IG38_CAEEL 109 YQCDECDRMFTLKHNLQNHF 128
+                             9******************6 PP
+
+  == domain 2  score: 17.6 bits;  conditional E-value: 4.3e-07
+                             EETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   2 kCpdCgksFkrksnLkrHirtH 23 
+                             +CpdC++ F ++  L++H++ H
+  tr|Q8IG38|Q8IG38_CAEEL 176 ECPDCHEFFLTQTALQKHMKEH 197
+                             6*******************99 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1162  (0.0605871); expected 383.6 (0.02)
+Passed bias filter:                      298  (0.0155378); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.61
+# Mc/sec: 1824.93
+//
+[ok]

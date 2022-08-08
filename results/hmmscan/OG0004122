@@ -1,0 +1,682 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004122.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004122
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q93878|Q93878_CAEEL  [L=380]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.3e-77  260.0   0.9    3.6e-77  259.3   0.9    1.3  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    5.2e-27   94.1   1.1    5.2e-27   94.1   1.1    1.8  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  259.3   0.9   3.8e-81   3.6e-77       1     228 []     146     360 ..     146     360 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 259.3 bits;  conditional E-value: 3.8e-81
+         COPIIcoated_ERV   1 CYgaeeeekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhd 87 
+                             CYga ++   CCntC+dV++aY+ kgw+++  e++eqC++++++++ +e+k+egCr++g+++v kvaGnfh+apg+  q +++hvhd
+  tr|Q93878|Q93878_CAEEL 146 CYGAAADG-ICCNTCDDVKSAYAVKGWQVN-IEEVEQCKNDKWVKEFNEHKNEGCRVYGTVKVAKVAGNFHLAPGDPHQAMRSHVHD 230
+                             *****988.********************7.9******************************************************* PP
+
+         COPIIcoated_ERV  88 lssyekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggk 174
+                             l++++    k++ sHt+++ sfg+++pg++  PLdg    ++++++ +m+qY++kvvptry++ld++  +++q+svt+h+++l  + 
+  tr|Q93878|Q93878_CAEEL 231 LHNLDP--VKFDASHTVNHVSFGKSFPGKN-YPLDGKV--NTDNRGGIMYQYYVKVVPTRYDYLDGRVDQSHQFSVTTHKKDLGFR- 311
+                             ****96..99*******************5.******4..67889*******************998888*************974. PP
+
+         COPIIcoated_ERV 175 deehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                                  ++glPG f++Y++sPl+v+++e r+sf++fl+slcai+GGv+++a+l+D
+  tr|Q93878|Q93878_CAEEL 312 -----QSGLPGFFLQYEFSPLMVQYEEFRQSFASFLVSLCAIVGGVFAMAQLVD 360
+                             .....579*********************************************9 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.1   1.1   5.5e-31   5.2e-27       1      90 [.       7      97 ..       7      98 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 94.1 bits;  conditional E-value: 5.5e-31
+                            XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--.SEEEEEEEEEE.SS-GGGEEEEEEETTEC CS
+                 ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrs.eklevnlditfpalpCellsldvqDesge 88
+                            lk+fDa++K  +d+++kt sGg+++l++++ i++L++ e++++l+tev e+l+vd++ s e++++++ditf++lpC+++++dv+D+s e
+  tr|Q93878|Q93878_CAEEL  7 LKHFDAYRKPMDDFRVKTLSGGLVTLIATIAIVLLIVLETKQFLSTEVLEHLFVDSTTSdERVHIEFDITFTKLPCNFITVDVMDVSSE 95
+                            799****************************************************77755**************************998 PP
+
+                            EE CS
+                 ERGIC_N 89 he 90
+                             +
+  tr|Q93878|Q93878_CAEEL 96 AQ 97
+                            76 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (380 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       876  (0.045675); expected 383.6 (0.02)
+Passed bias filter:                      539  (0.0281037); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.22s 00:00:00.63 Elapsed: 00:00:00.67
+# Mc/sec: 1846.23
+//
+Query:       sp|Q54DW2|ERGI3_DICDI  [L=383]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.4e-84  282.8   0.0    2.4e-84  282.8   0.0    1.8  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    1.2e-32  112.2   1.8      2e-32  111.4   0.2    2.0  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  282.8   0.0   2.5e-88   2.4e-84       1     228 []     143     363 ..     143     363 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 282.8 bits;  conditional E-value: 2.5e-88
+        COPIIcoated_ERV   1 CYgaeeee..keCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvh 86 
+                            CYgae+++   +CCntCe+Vr aY+kkgw ++ ++ i qC+reg+++++ eq+ egC+++g + vnkvaGnfh+apgksfq++++hvh
+  sp|Q54DW2|ERGI3_DICDI 143 CYGAEDPSkgIGCCNTCEEVRVAYSKKGWGLD-PSGIPQCIREGFTKNLVEQNGEGCQVYGFILVNKVAGNFHFAPGKSFQQHHMHVH 229
+                            ******997789*******************6.******************************************************* PP
+
+        COPIIcoated_ERV  87 dlssyekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggk 174
+                            dl+++++   ++n+sHti++Lsfg+++pg k nPLd+++  k+e  + +mfqYf+kvvpt ye l++++i tnqysvteh r l ++ 
+  sp|Q54DW2|ERGI3_DICDI 230 DLQPFKD--GSFNVSHTINRLSFGNDFPGIK-NPLDDVT--KTEMVGVGMFQYFVKVVPTIYEGLNGNRIATNQYSVTEHYRLLAKKG 312
+                            ******6..89*******************5.******5..67889***************************************976 PP
+
+        COPIIcoated_ERV 175 deehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                            +e    +glPG+ff+Yd+sP++++v+e+ ksf++flt++caiiGGv+tv+++ D
+  sp|Q54DW2|ERGI3_DICDI 313 EE---PSGLPGLFFMYDLSPIMMKVSERGKSFASFLTNVCAIIGGVFTVFGIFD 363
+                            55...79********************************************998 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  111.4   0.2   2.1e-36     2e-32       1      91 []       6      96 ..       6      96 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 111.4 bits;  conditional E-value: 2.1e-36
+                           XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECEE CS
+                ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgehe 90
+                           lk+fDa+pK+ +d+++kt +G+i+s++  ++il+L++s++t y++t++++el+vd++r+ekl++n+ditf++lpC++lsld++D+sgeh+
+  sp|Q54DW2|ERGI3_DICDI  6 LKKFDAYPKTVDDFRVKTYTGAIVSIIGGVFILWLFFSQVTLYFSTDIHHELFVDTTRGEKLKINMDITFHHLPCAYLSLDAMDVSGEHQ 95
+                           79***************************************************************************************8 PP
+
+                           E CS
+                ERGIC_N 91 l 91
+                           +
+  sp|Q54DW2|ERGI3_DICDI 96 F 96
+                           5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (383 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       643  (0.0335263); expected 383.6 (0.02)
+Passed bias filter:                      466  (0.0242974); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.61
+# Mc/sec: 2046.08
+//
+Query:       tr|Q54UL9|Q54UL9_DICDI  [L=421]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.3e-52  177.7   0.2    6.3e-52  176.8   0.2    1.3  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    4.1e-22   78.4   0.2      8e-22   77.4   0.2    1.4  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  176.8   0.2   6.6e-56   6.3e-52       8     227 ..     198     408 ..     188     408 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 176.8 bits;  conditional E-value: 6.6e-56
+         COPIIcoated_ERV   8 ekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqe.ekrhvhdlssyek 93 
+                             +++CCn+Ced+r+ Y+ +++  +  ++  qC  e        q +egCri+g+l+v+k++G+fhi +g+ +++ ++ hvh  +++ +
+  tr|Q54UL9|Q54UL9_DICDI 198 KQKCCNSCEDLRQYYRLNRIPQNLADDSPQCLIE-----RPVQDDEGCRIYGSLSVQKMKGDFHILAGTGIDQsHDGHVHHAHHIPR 279
+                             479*****************************55.....566788**************************9955588887766665 PP
+
+         COPIIcoated_ERV  94 e....keklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggkde 176
+                             e     +++n++H+ihk+sfge+++g  +nPL+++       ++ +  +Y+l+vvp  y+k+d   +etnqys+t+  r ++  +  
+  tr|Q54UL9|Q54UL9_DICDI 280 EnigrIKHFNITHHIHKFSFGEDIEGL-INPLEDFG---IVAQSLAVQTYYLQVVPAIYKKNDF-VLETNQYSYTYDYRIVNMFNLG 361
+                             44666899******************9.6******4...456789999**************98.99***************98665 PP
+
+         COPIIcoated_ERV 177 ehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasli 227
+                                 + +PG++f+Yd+sPl+++v +++k++++++ts+cai GG+++v++l+
+  tr|Q54UL9|Q54UL9_DICDI 362 ----QLFPGIYFKYDLSPLMIEVDQTSKPLVELITSICAIGGGMYVVLGLV 408
+                             ....56*****************************************9986 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.4   0.2   8.3e-26     8e-22       2      85 ..      55     139 ..      54     143 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 77.4 bits;  conditional E-value: 8.3e-26
+                             XXXXXXXXXXXXX.X.XXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEET CS
+                 ERGIC_N   2 krfDafpKvkedltq.kttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDe 85 
+                             k fD++pKv++d+ + k+t Gg+ +++cil++++Ll+se+  y+ +  +++l vd +r+++l +n+di+fp+l C  +++dv+D 
+  tr|Q54UL9|Q54UL9_DICDI  55 KLFDFYPKVNDDVPRhKSTFGGVATMICILITTYLLVSEIYFYTFPIREHSLKVDITRGNRLPINIDIHFPRLVCTDITIDVVDG 139
+                             67***********999*******************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (421 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       814  (0.0424423); expected 383.6 (0.02)
+Passed bias filter:                      525  (0.0273737); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.59
+# Mc/sec: 2306.69
+//
+Query:       tr|Q9VUM3|Q9VUM3_DROME  [L=373]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.4e-75  254.1   1.1    1.8e-75  253.8   1.1    1.1  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    8.3e-28   96.6   0.6    6.3e-27   93.8   0.1    2.2  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  253.8   1.1   1.9e-79   1.8e-75       1     227 [.     138     352 ..     138     353 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 253.8 bits;  conditional E-value: 1.9e-79
+         COPIIcoated_ERV   1 CYgaeeeekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhd 87 
+                             CYgae+++++CCntCedV +aY+ ++w++   +kieqC+  +y+++ +++ kegCri+g+levn++aG+fh+apgksf+ ++ h+hd
+  tr|Q9VUM3|Q9VUM3_DROME 138 CYGAEHNATHCCNTCEDVLDAYRLRKWTVA-VDKIEQCK-GKYKRSDEDAFKEGCRIQGHLEVNRMAGSFHFAPGKSFSIRQFHIHD 222
+                             *****************************7.9*******.569999999*************************************9 PP
+
+         COPIIcoated_ERV  88 lssyekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekl..dkekietnqysvtehersleg 172
+                             ++  +     +++sHti++Lsfge+++ +k++PLdg +  + +e+k+ mf+Y+lk+vpt y +   d+e i tnq+svt+++++l++
+  tr|Q9VUM3|Q9VUM3_DROME 223 FQFSN-----VKLSHTINHLSFGEKIEFAKTHPLDGLR-VDVAETKSEMFNYYLKIVPTLYMRGnsDGEPIYTNQFSVTRYRKDLSD 303
+                             87654.....89*************************6.66788999**************98833455799**************8 PP
+
+         COPIIcoated_ERV 173 gkdeehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasli 227
+                             +      ++g+PG+ff+Y++sPl+v++ e+++sf hf t++c+iiGGv+tva+++
+  tr|Q9VUM3|Q9VUM3_DROME 304 R------ERGMPGIFFSYELSPLMVKYAERHSSFGHFATNCCSIIGGVFTVAGIL 352
+                             4......579******************************************986 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.8   0.1   6.6e-31   6.3e-27       1      90 [.       7      96 ..       7      97 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 93.8 bits;  conditional E-value: 6.6e-31
+                            XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECE CS
+                 ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgeh 89
+                            l+r+Da+p++ +d++++t+ G+ ++++++ +i +L++ e+ +y++++ +eel+vd++r++kl++nld+t+++l C+++sld++D+sg++
+  tr|Q9VUM3|Q9VUM3_DROME  7 LRRLDAYPRTLDDFSVRTVGGAAVTIISTSIISLLIFLEVLNYMQPTLNEELFVDTTRDHKLRINLDVTLHNLACNYISLDAMDSSGDT 95
+                            79************99***********************************************************************98 PP
+
+                            E CS
+                 ERGIC_N 90 e 90
+                            +
+  tr|Q9VUM3|Q9VUM3_DROME 96 H 96
+                            7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (373 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       702  (0.0366025); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.62
+# Mc/sec: 1936.57
+//
+Query:       sp|Q803I2|ERGI3_DANRE  [L=383]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    7.8e-92  307.3   0.9    9.9e-92  307.0   0.9    1.1  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    8.9e-32  109.3   0.3    1.8e-31  108.4   0.0    1.6  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  307.0   0.9     1e-95   9.9e-92       1     228 []     145     363 ..     145     363 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 307.0 bits;  conditional E-value: 1e-95
+        COPIIcoated_ERV   1 CYgaeeeekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhdl 88 
+                            CYgae+++ +CCntC+dVreaY+++gwaf+++++ieqC+reg+++k++eqk+egC+++g levnkvaGnfh+apgksfq++++hvhdl
+  sp|Q803I2|ERGI3_DANRE 145 CYGAETDDLKCCNTCDDVREAYRRRGWAFKTPDTIEQCKREGFSQKMQEQKNEGCQVYGFLEVNKVAGNFHFAPGKSFQQSHVHVHDL 232
+                            **************************************************************************************** PP
+
+        COPIIcoated_ERV  89 ssyekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggkde 176
+                            +s+    +++n++H i++Lsfg+++pg  +nPLd+t+   ++ ++++m+qYf+k+vpt y k d+e ++tnq+svt+he+  +g    
+  sp|Q803I2|ERGI3_DANRE 233 QSFGL--DNINMTHFIKHLSFGKDYPGI-VNPLDDTN--VAAPQASMMYQYFVKIVPTIYVKGDGEVVKTNQFSVTRHEKIANGLI-- 313
+                            ****6..89******************9.6******6..568899***********************************999974.. PP
+
+        COPIIcoated_ERV 177 ehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                               ++glPGvf+ Y++sP++v+++e+++sf+hflt++caiiGGv+tva+liD
+  sp|Q803I2|ERGI3_DANRE 314 --GDQGLPGVFVLYELSPMMVKFTEKQRSFTHFLTGVCAIIGGVFTVAGLID 363
+                            ..569**********************************************9 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.4   0.0   1.8e-35   1.8e-31       1      90 [.       7      96 ..       7      97 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 108.4 bits;  conditional E-value: 1.8e-35
+                           XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECEE CS
+                ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgehe 90
+                           lk+fDa+pK+ ed++ kt  G+++++++ l++l+L++sel++yl++ev++el+vd+sr++kl++n+d+ fp++pC++ls+d++D++ge++
+  sp|Q803I2|ERGI3_DANRE  7 LKQFDAYPKTLEDFRIKTCGGATVTIISGLIMLILFFSELQYYLTKEVHPELFVDTSRGDKLRINIDVIFPHMPCAYLSIDAMDVAGEQQ 96
+                           79************99************************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (383 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       743  (0.0387403); expected 383.6 (0.02)
+Passed bias filter:                      550  (0.0286772); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.65
+# Mc/sec: 1897.24
+//
+Query:       sp|Q9Y282|ERGI3_HUMAN  [L=383]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.2e-92  310.0   1.0    1.5e-92  309.7   1.0    1.1  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+      4e-32  110.5   0.1    9.1e-32  109.3   0.0    1.7  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  309.7   1.0   1.5e-96   1.5e-92       1     228 []     145     363 ..     145     363 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 309.7 bits;  conditional E-value: 1.5e-96
+        COPIIcoated_ERV   1 CYgaeeeekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhdl 88 
+                            CYgae+e+ +CCntCedVreaY+++gwaf+++++ieqC+reg+++k++eqk+egC+++g levnkvaGnfh+apgksfq++++hvhdl
+  sp|Q9Y282|ERGI3_HUMAN 145 CYGAEAEDIKCCNTCEDVREAYRRRGWAFKNPDTIEQCRREGFSQKMQEQKNEGCQVYGFLEVNKVAGNFHFAPGKSFQQSHVHVHDL 232
+                            **************************************************************************************** PP
+
+        COPIIcoated_ERV  89 ssyekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggkde 176
+                            +s+    +++n++H i++Lsfge++pg  +nPLd+t+   ++ ++++mfqYf+kvvpt y k+d+e ++tnq+svt+he+  +g    
+  sp|Q9Y282|ERGI3_HUMAN 233 QSFGL--DNINMTHYIQHLSFGEDYPGI-VNPLDHTN--VTAPQASMMFQYFVKVVPTVYMKVDGEVLRTNQFSVTRHEKVANGLL-- 313
+                            ****6..89******************9.6******6..56889*********************9**************999874.. PP
+
+        COPIIcoated_ERV 177 ehakkglPGvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                               ++glPGvf+ Y++sP++v+ +e+++sf+hflt++caiiGG++tva+liD
+  sp|Q9Y282|ERGI3_HUMAN 314 --GDQGLPGVFVLYELSPMMVKLTEKHRSFTHFLTGVCAIIGGMFTVAGLID 363
+                            ..569**********************************************9 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.3   0.0   9.4e-36   9.1e-32       1      90 [.       7      96 ..       7      97 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 109.3 bits;  conditional E-value: 9.4e-36
+                           XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECEE CS
+                ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgehe 90
+                           lk+fDa+pK+ ed+++kt  G+++++v+ ll+l+L+lsel++yl+tev++el+vdksr++kl++n+d+ fp++pC++ls+d++D++ge++
+  sp|Q9Y282|ERGI3_HUMAN  7 LKQFDAYPKTLEDFRVKTCGGATVTIVSGLLMLLLFLSELQYYLTTEVHPELYVDKSRGDKLKINIDVLFPHMPCAYLSIDAMDVAGEQQ 96
+                           79**************************************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (383 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       710  (0.0370197); expected 383.6 (0.02)
+Passed bias filter:                      516  (0.0269044); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.58
+# Mc/sec: 2120.15
+//
+Query:       XP_013239239.1  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.4e-57  194.0   0.0    4.6e-57  193.6   0.0    1.2  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    3.3e-20   72.3   2.5    2.2e-19   69.6   2.5    2.3  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  193.6   0.0   4.8e-61   4.6e-57       8     228 .]     156     389 ..     149     389 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 193.6 bits;  conditional E-value: 4.8e-61
+  COPIIcoated_ERV   8 e......keCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkk.egCrikgklevnkvaGnfhiapgksfqeekrhvhdlssyeke 94 
+                      +       +CCntC++V  aYk+ g+ ++  +++eqC   +  +k+ + +k egCr++g+++vn++ Gn+hiapg sfq e+ h+hdl+++++ 
+   XP_013239239.1 156 SpespfgINCCNTCDEVIGAYKRLGIPLPPLTTFEQCLPSKSISKLLATRKgEGCRLHGYARVNRIPGNIHIAPGVSFQIESAHLHDLRPFDD- 248
+                      444566679****************************977666666555555****************************************7. PP
+
+  COPIIcoated_ERV  95 keklnfsHtihkLsfgeelpgek..................knPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersl 170
+                        ++n+sH i+kL f  +++g +                  +nPL+gt   k +++ +++f Y  kvv+t++++l++ +i+t+qys+t h+++ 
+   XP_013239239.1 249 -YRFNLSHRIDKLYFD-SVEGYSmdmgdtvssddeikknliSNPLEGTL--KIASSYDMAFLYTAKVVSTEIKSLSGASITTHQYSATAHSTNK 338
+                      .88************9.445555678***************9******4..5677999*****************999************9776 PP
+
+  COPIIcoated_ERV 171 eggkdeehakkglPGvffnYdisPlkvivkeerk.sflhfltslcaiiGGvltvasliD 228
+                                +glPGvff  disPl + ++e+++ s+l+f+ +l+aiiGG++t+asl+D
+   XP_013239239.1 339 PP--------GGLPGVFFDIDISPLIILYSEQNAySWLSFMAQLFAIIGGIYTIASLLD 389
+                      65........59*********************************************99 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.6   2.5   2.3e-23   2.2e-19       3      91 .]       5     103 ..       3     103 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 69.6 bits;  conditional E-value: 2.3e-23
+                     XXXXXXXXXXXX.XXXXXXXX..........XXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTE CS
+         ERGIC_N   3 rfDafpKvkedltqkttsGgi..........islvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesg 87 
+                      fD+f K ++d++q+t+ Ggi          +s+v+++l+++Ll++ + ++++++ ++e++vd++++e++ +++ditfpalpC  ++ldv+D++g
+  XP_013239239.1   5 DFDLFAKPNDDFKQRTALGGIglfiklilssVSIVSMILCFLLLVACFINFRKVTWESEIMVDTKHKEQMILHFDITFPALPCMTIGLDVIDVAG 99 
+                     79******************8777777777789************************************************************** PP
+
+                     CEEE CS
+         ERGIC_N  88 ehel 91 
+                     eh++
+  XP_013239239.1 100 EHQM 103
+                     **95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       837  (0.0436415); expected 383.6 (0.02)
+Passed bias filter:                      598  (0.0311799); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.18s 00:00:00.63 Elapsed: 00:00:00.60
+# Mc/sec: 2191.81
+//
+Query:       PJF18829.1  [L=474]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.8e-72  242.6   0.8    6.8e-72  242.1   0.8    1.2  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  242.1   0.8   3.5e-76   6.8e-72       1     228 []     234     454 ..     234     454 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 242.1 bits;  conditional E-value: 3.5e-76
+  COPIIcoated_ERV   1 CYgaeeee....keCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhdlss 90 
+                      CY a ++       CCn+C+ V  aY++++ + +++++ieqC  e++ eki+++++egCri+g++evnkv+Gnfh+apg+sf+ ++ h+hd++ 
+       PJF18829.1 234 CYKAAANGpdgkPYCCNSCSAVFAAYEHRNLSPPEMNQIEQCVAEDWPEKIRDHANEGCRISGHFEVNKVSGNFHFAPGRSFDANNYHLHDIRF 327
+                      99999988888899******************************************************************************99 PP
+
+  COPIIcoated_ERV  91 yekekeklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggkdeehakkglP 184
+                      ++    +l+fsH ih Lsfge+ ++  +nPLd+t+  +++++++  f+Y +k+v t ++  d++ ++tnq++vt++e++++g k      +++P
+       PJF18829.1 328 LDG--LHLDFSHRIHYLSFGEHHEKI-VNPLDNTE--NKASSAERSFKYHTKIVATDFKLRDGRVLHTNQFAVTQNENETKGDK------AAFP 410
+                      995..88*************887777.7******5..6788999*******************9**************999864......46** PP
+
+  COPIIcoated_ERV 185 GvffnYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                       vffnY+isP+ vi++e +k++++flt++caiiGGv+tva+++D
+       PJF18829.1 411 SVFFNYEISPMIVIYTEYKKPLTSFLTGVCAIIGGVYTVAAIVD 454
+                      *******************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (474 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       674  (0.0351426); expected 383.6 (0.02)
+Passed bias filter:                      458  (0.0238803); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.62
+# Mc/sec: 2473.14
+//
+Query:       EPZ33261.1  [L=371]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      9e-73  245.0   2.0    1.5e-72  244.2   2.0    1.4  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    1.4e-27   95.9   1.8    2.8e-27   94.9   0.5    2.0  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  244.2   2.0   1.6e-76   1.5e-72       1     228 []     139     351 ..     139     351 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 244.2 bits;  conditional E-value: 1.6e-76
+  COPIIcoated_ERV   1 CYgaeeeekeCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhvhdlssyeke 94 
+                      CY+ae e ++CCntC++V +aY+++gw+ +d +k+ qC +egya++ik+++ egCri+g++ev+kva +fhiapg sf+ +++h+hdl+++++ 
+       EPZ33261.1 139 CYNAEIEPNQCCNTCNEVIRAYENRGWSAKDVSKFAQCVEEGYADRIKNERGEGCRIEGYFEVKKVAAEFHIAPGLSFHYQDMHIHDLNPFSD- 231
+                      ********************************************************************************************7. PP
+
+  COPIIcoated_ERV  95 keklnfsHtihkLsfgeelpgekknPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvtehersleggkdeehakkglPGvff 188
+                        ++++sHti++Lsfg+   +   nPLd+++  +++ ++++mfqYf++vv+t++e+ +++k++tnq++vt+ +r+ e+            G+ff
+       EPZ33261.1 232 -VTYDLSHTINSLSFGKPEGTFVLNPLDNHS--EKAASTEYMFQYFINVVSTNIEYANGKKVHTNQFAVTTAKRPSEK-----------VGIFF 311
+                      .89*************77555558******5..67889*************************************997...........4**** PP
+
+  COPIIcoated_ERV 189 nYdisPlkvivkeerksflhfltslcaiiGGvltvasliD 228
+                      n+disP+++i+ e+++sf++flt++cai+GG+++ a+++D
+       EPZ33261.1 312 NFDISPMNIIYVEQSRSFSSFLTRVCAIVGGIFAAAGFLD 351
+                      *************************************998 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.9   0.5   2.9e-31   2.8e-27       1      88 [.       5      92 ..       5      94 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 94.9 bits;  conditional E-value: 2.9e-31
+                XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTEC CS
+     ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesge 88
+                l++fDa+ K+ +d+++kt++Gg+i++++++li++L+++e+ +y++t+ +++l vd+sr++ + v l+it+p++pC lls+d++D+sge
+  EPZ33261.1  5 LQKFDAYAKTLDDFKTKTSTGGVITVFSYVLIIYLFIAECVSYFSTSFDTQLNVDTSRRDLMPVYLNITLPKAPCFLLSVDIMDASGE 92
+                789***********************************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (371 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       803  (0.0418687); expected 383.6 (0.02)
+Passed bias filter:                      482  (0.0251317); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 2061.61
+//
+Query:       P39727  [L=415]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.4e-80  270.5   0.3    1.7e-80  270.2   0.3    1.1  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    1.1e-29  102.6   0.2    3.2e-29  101.2   0.0    1.8  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  270.2   0.3   1.7e-84   1.7e-80       1     228 []     143     399 ..     143     399 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 270.2 bits;  conditional E-value: 1.7e-84
+  COPIIcoated_ERV   1 CYgaeeee.........keCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhv 85 
+                      CYga++++         k CC+ C+ Vr+aY ++gwaf dg++ieqCeregy++ki+e+ +egCrikg++++n+++Gn+h+apgk +q++  h+
+           P39727 143 CYGAKDQSqnenlaqeeKVCCQDCDAVRSAYLEAGWAFFDGKNIEQCEREGYVSKINEHLNEGCRIKGSAQINRIQGNLHFAPGKPYQNAYGHF 236
+                      ******9999******9***************************************************************************** PP
+
+  COPIIcoated_ERV  86 hdlssyekekeklnfsHtihkLsfgeelpgek...............knPLdgtkakkeeeekalmfqYflkvvptryekldkekietnqysvt 164
+                      hd+s y+k +++lnf+H+i++Lsfg+ +++++               ++PLdg ++  +++++ ++f+Yf k+vptrye+ld+  iet q+s+t
+           P39727 237 HDTSLYDK-TSNLNFNHIINHLSFGKPIQSHSkllgndkrhggavvaTSPLDGRQVFPDRNTHFHQFSYFAKIVPTRYEYLDNVVIETAQFSAT 329
+                      *******7.677****************99999*********************999999*********************999********** PP
+
+  COPIIcoated_ERV 165 ehersleggkdee.....hakkglPGvffnYdisPlkvivkeerk.sflhfltslcaiiGGvltvasliD 228
+                       h+r+l gg+d++     h ++g+PG+f+++++sPlkvi+ke++  ++++f+++++++iGGvl+v++++D
+           P39727 330 FHSRPLAGGRDKDhpntlHVRGGIPGMFVFFEMSPLKVINKEQHGqTWSGFILNCITSIGGVLAVGTVMD 399
+                      **********9999****9*************************99*********************998 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.2   0.0   3.3e-33   3.2e-29       3      90 ..       8      95 ..       6      96 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 101.2 bits;  conditional E-value: 3.3e-33
+             XXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECEE CS
+  ERGIC_N  3 rfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgehe 90
+             ++Daf K++ed++++t+ Gg+i+l cil++lfLl++e+ ++ ++ ++++lvvd++r+ kle+n+d+tfp++pC+l++ld++D+sge +
+   P39727  8 SLDAFAKTEEDVRVRTRAGGLITLSCILTTLFLLVNEWGQFNSVVTRPQLVVDRDRHAKLELNMDVTFPSMPCDLVNLDIMDDSGEMQ 95
+             79***********************************************************************************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (415 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       554  (0.0288858); expected 383.6 (0.02)
+Passed bias filter:                      436  (0.0227332); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.14s 00:00:00.55 Elapsed: 00:00:00.58
+# Mc/sec: 2296.09
+//
+Query:       sp|Q09895|YAI8_SCHPO  [L=390]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.3e-74  249.0   0.1    6.9e-74  248.6   0.1    1.1  1  COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+    9.1e-29   99.7   0.1    3.7e-28   97.7   0.0    2.0  1  ERGIC_N          Endoplasmic Reticulum-Golgi Intermediate Com
+
+
+Domain annotation for each model (and alignments):
+>> COPIIcoated_ERV  Endoplasmic reticulum vesicle transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  248.6   0.1   7.2e-78   6.9e-74       1     228 []     139     378 ..     139     378 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 248.6 bits;  conditional E-value: 7.2e-78
+       COPIIcoated_ERV   1 CYgaeeee....keCCntCedVreaYkkkgwafedgekieqCeregyaekikeqkkegCrikgklevnkvaGnfhiapgksfqeekrhv 85 
+                           CYga + +     +CCntC+ Vr+aY k++w++ d + ++qC++e+++e  ++qk egC+++g+l+vn++aGnfhiapg+s+q++++hv
+  sp|Q09895|YAI8_SCHPO 139 CYGAADFApedtPGCCNTCDAVRDAYGKAHWRIGDVDAFKQCKDENFKELYEAQKVEGCNLAGQLSVNRMAGNFHIAPGRSTQNGNQHV 227
+                           9**9987777789**************************************************************************** PP
+
+       COPIIcoated_ERV  86 hdlssyekekeklnfsHtihkLsfgeelpgek..knPLdgtkakkeeeekalmfqYflkvvptryekldkek..ietnqysvtehersl 170
+                           hd++ y +e + +++sH+ih+Lsfg+ l+ +   +nPLdgt   k+ ++++++++Yf+k+v+ ++  l+k++  i+tn+y+vt+hers+
+  sp|Q09895|YAI8_SCHPO 228 HDTRDYINELDLHDMSHSIHHLSFGPPLDASVhySNPLDGTV--KKVSTADYRYEYFIKCVSYQFMPLSKSTlpIDTNKYAVTQHERSI 314
+                           *******999***************9999887779******4..67889*******************88755599************* PP
+
+       COPIIcoated_ERV 171 eggkdee.....hakkglPGvffnYdisPlkvivkeerk.sflhfltslcaiiGGvltvasliD 228
+                           +gg++e+     + ++g+PGv+f++disP++vi ++ r  +f +fl +++a++GG++t+as++D
+  sp|Q09895|YAI8_SCHPO 315 RGGREEKvpthvNFHGGIPGVWFQFDISPMRVIERQVRGnTFGGFLSNVLALLGGCVTLASFVD 378
+                           ***9999***997789**********************99***********************9 PP
+
+>> ERGIC_N  Endoplasmic Reticulum-Golgi Intermediate Compartment (ERGIC)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.7   0.0   3.8e-32   3.7e-28       1      89 [.       7      95 ..       7      97 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 97.7 bits;  conditional E-value: 3.8e-32
+                          XXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXX-EEEEEE--S--SEEEEEEEEEE.SS-GGGEEEEEEETTECE CS
+               ERGIC_N  1 lkrfDafpKvkedltqkttsGgiislvcillilfLllselteylatevkeelvvdksrseklevnlditfpalpCellsldvqDesgeh 89
+                          l+rfDaf+K+ ed + kt+sGg+i+lv+ l+++f++l+e+ +y+++  ++e++v+ s+++++e+n++itfp++pC++l++dv+D+sge 
+  sp|Q09895|YAI8_SCHPO  7 LRRFDAFQKTVEDARIKTASGGLITLVSGLIVIFIVLMEWINYRRVIAVHEIIVNPSHGDRMEINFNITFPRIPCQILTVDVLDVSGEF 95
+                          79************99***********************************************************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (390 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       600  (0.0312842); expected 383.6 (0.02)
+Passed bias filter:                      494  (0.0257573); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.55
+# Mc/sec: 2295.19
+//
+[ok]

@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039910.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039910
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q3KNT9|TMM95_HUMAN  [L=176]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.3e-86  285.5   1.5    8.4e-86  285.3   1.5    1.0  1  TMEM95    TMEM95 family
+
+
+Domain annotation for each model (and alignments):
+>> TMEM95  TMEM95 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  285.3   1.5   4.4e-90   8.4e-86       1     151 []      17     167 ..      17     167 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 285.3 bits;  conditional E-value: 4.4e-90
+                 TMEM95   1 cvfcrlkakdlsgrlarlcsqleaqkkeceastdfsafaldevslnkvtekthrvlrvleikrslsslplywewlqktklpeytreal 88 
+                            cvfcrl+a+dlsgrlarlcsq+ea++kec as+dfsafaldevs+nkvtekthrvlrv+eik+++sslp+yw+wl+ktklpeytreal
+  sp|Q3KNT9|TMM95_HUMAN  17 CVFCRLPAHDLSGRLARLCSQMEARQKECGASPDFSAFALDEVSMNKVTEKTHRVLRVMEIKEAVSSLPSYWSWLRKTKLPEYTREAL 104
+                            **************************************************************************************** PP
+
+                 TMEM95  89 capacrGstilyncstcegkevscwprkrcfPgshdlrearilllsvsgavlllgvlsllves 151
+                            c+pacrGst+lyncstc+g+evscwprkrcfPgs+dl+ea+illls++ga lllgvlsllves
+  sp|Q3KNT9|TMM95_HUMAN 105 CPPACRGSTTLYNCSTCKGTEVSCWPRKRCFPGSQDLWEAKILLLSIFGAFLLLGVLSLLVES 167
+                            *************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (176 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       677  (0.035299); expected 383.6 (0.02)
+Passed bias filter:                      456  (0.023776); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.60
+# Mc/sec: 943.72
+//
+[ok]

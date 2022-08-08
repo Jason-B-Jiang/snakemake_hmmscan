@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0028782.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0028782
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9N517|Q9N517_CAEEL  [L=412]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.4e-33  116.3   0.3    1.9e-33  115.8   0.3    1.1  1  Neur_chan_LBD   Neurotransmitter-gated ion-channel ligand bin
+    1.2e-28  100.9   0.1    4.5e-24   85.9   0.0    2.1  1  Neur_chan_memb  Neurotransmitter-gated ion-channel transmembr
+
+
+Domain annotation for each model (and alignments):
+>> Neur_chan_LBD  Neurotransmitter-gated ion-channel ligand binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.8   0.3     2e-37   1.9e-33      18     179 ..      34     193 ..      20     216 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 115.8 bits;  conditional E-value: 2e-37
+                             TTSTTTS-EEEEEEEEEEEEEEEETTTTEEEEEEEEEEEEEESTTE--GGGTSSSSEEEEETTTS----EEETT.SSCEESSSSSS- CS
+           Neur_chan_LBD  18 PveneskpvkVklelslsqiidvdeknqvlttnvwlkqkWtDerLkwdpedyggieslrlpsekiWlPdivlyn.kadeehevtekn 103
+                             +  n++ p++V+++++++++ +   +++++ ++++l ++W+D +++ +++++  +++  +  +kiWlPd++++n + +  h+vt +n
+  tr|Q9N517|Q9N517_CAEEL  34 N-GNPKAPLQVHFGFYVESLGNFRATEMTYDMDMYLYMSWQDDSMRHNETEHVLVNDKDIL-DKIWLPDLYFANaRTAYFHKVTVHN 118
+                             3.37888*****************************************8886555555543.59*********************** PP
+
+                             EEEEEETTSEEEEEEEEEEEEE----GSSTTS-EEEEEEEEEESSS-TTTEEEEESSSCCCEEETTC-BBSSEEEE CS
+           Neur_chan_LBD 104 vnlrvssdGtvlwsppailkssCsidvkyFPfDeqnCslkfgSwtynkeeidleweeekksvveeeeidlsdflen 179
+                              n+ +s++Gt+ + ++++l+++C++d+k +P+D q+C +k+ S+++ k+e+++ w  ++ ++  + eidl++f+  
+  tr|Q9N517|Q9N517_CAEEL 119 FNMFISPQGTISYGTRVTLNLACNLDLKDYPLDYQTCYIKVISYAHVKNEMNVSWFPND-PIRFNPEIDLPEFHIR 193
+                             ********************************************************976.5889999****99865 PP
+
+>> Neur_chan_memb  Neurotransmitter-gated ion-channel transmembrane region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.9   0.0   4.7e-28   4.5e-24       2      97 ..     239     334 ..     238     339 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 85.9 bits;  conditional E-value: 4.7e-28
+                             HHHHHHHHHHHHHHHHCHCTC.TTHHHHHHHHHHHHHHHHHHHHCCCHHHHCCS-HHHCHHHHHHHHHHHHHHHHHHHHHHHCHSTT CS
+          Neur_chan_memb   2 iiPcvlisiLsvlvFyLpsda.gekvtLgIsvlLslTvfllliteilPktSlvipLigkYLlftmvfvtlsivetvfVlnvhhrspr 87 
+                             +iP+ li+ +s+++F++++ a +++v+L+ ++lL+l++    i+  lP +S++++++  +  ++m+f + +++e+++V+ +  r ++
+  tr|Q9N517|Q9N517_CAEEL 239 YIPTGLIVAISWVSFWIDRRAvPARVSLSFTTLLTLSTQGNGIRYALPAVSYAKAIDY-FYGVCMLFIFGVLLEFAAVNSYMRRANK 324
+                             9*********************************************************.**************************** PP
+
+                             TBSTHHHHHH CS
+          Neur_chan_memb  88 thtmpawvrk 97 
+                              + m++++++
+  tr|Q9N517|Q9N517_CAEEL 325 YNHMAEKIQS 334
+                             ****999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (412 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       590  (0.0307628); expected 383.6 (0.02)
+Passed bias filter:                      426  (0.0222118); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 2386.20
+//
+[ok]

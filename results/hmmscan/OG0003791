@@ -1,0 +1,768 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003791.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003791
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55E48|Q55E48_DICDI  [L=142]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-33  115.2   0.0    2.1e-33  115.0   0.0    1.0  1  AhpC-TSA  AhpC/TSA family
+    1.8e-16   60.3   0.0    2.2e-16   60.0   0.0    1.0  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.0   0.0   2.2e-37   2.1e-33       1     120 [.       6     124 ..       6     127 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 115.0 bits;  conditional E-value: 2.2e-37
+                             TTSB---EEEECTTCEEEECCHH..TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdy..kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfp 85 
+                             vg+ apdfe+kn  g+ v+l+++  k +p+vl+fypkd++p C+ + ++++++y++  e+g+evigvs+d ++shk+f+ k+sl+f+
+  tr|Q55E48|Q55E48_DICDI   6 VGNIAPDFEAKNYLGQIVTLKEFkeKSQPIVLYFYPKDNSPECQ-KSCEFRDKYQKSIEAGAEVIGVSSDGEDSHKSFVSKYSLPFT 91 
+                             799********************6444****************5.68**************************************** PP
+
+                             EEE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSB CS
+                AhpC-TSA  86 llsDeegkvakaygvltedkglalratfvidkegk 120
+                             ll D+++k+ak ygv     +l+ r+tf+idk+g 
+  tr|Q55E48|Q55E48_DICDI  92 LLTDKHSKLAKLYGVNG--ILLPGRKTFIIDKHGF 124
+                             ****************5..57***********996 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.0   0.0   2.3e-20   2.2e-16       1     125 [.       5     123 ..       5     129 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 60.0 bits;  conditional E-value: 2.3e-20
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSE..EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkk..vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+g+ aPdf+ ++    g+ v+l+efk+k+  +v++f+p   +P C+++ ++ +k+++   e g +v++v++d ++  k+f++k++l
+  tr|Q55E48|Q55E48_DICDI   5 KVGNIAPDFEAKN--YLGQIVTLKEFKEKSqpIVLYFYPKDNSPECQKSCEFRDKYQKS-IEAGAEVIGVSSDGEDSHKSFVSKYSL 88 
+                             68999*****755..99********9888777****************99999999999.999************************ PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGG..EEE-EEEEEEETT CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedaseg..irtpryavidedg 125
+                             +f++l+D  ++++k +G++       g  +  + +++id++g
+  tr|Q55E48|Q55E48_DICDI  89 PFTLLTDKHSKLAKLYGVN-------GilLPGRKTFIIDKHG 123
+                             *****************88.......5334556899999988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (142 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       480  (0.0250274); expected 383.6 (0.02)
+Passed bias filter:                      369  (0.0192398); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.20s 00:00:00.53 Elapsed: 00:00:00.69
+# Mc/sec: 666.01
+//
+Query:       tr|B0G133|B0G133_DICDI  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-34  117.8   0.0    3.2e-34  117.6   0.0    1.0  1  AhpC-TSA  AhpC/TSA family
+    4.6e-20   71.9   0.0    5.5e-20   71.7   0.0    1.0  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.6   0.0   3.4e-38   3.2e-34       1     122 [.       6     124 ..       6     126 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 117.6 bits;  conditional E-value: 3.4e-38
+                             TTSB---EEEECTTCEEEECCHHTTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEEE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdykgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpll 87 
+                             +g+ ap+f+l+n+dg+ ++l+d++gkp+v+ffyp++   vCt+e++ +++ ye+f e g+ev g s+++ ++hkkf++++++n+++l
+  tr|B0G133|B0G133_DICDI   6 IGEIAPEFTLPNKDGKLFNLKDFAGKPLVIFFYPNNIGWVCTREVCYFRDSYEKFIEMGAEVPGNSPNTMDNHKKFHAAHRVNYTIL 92 
+                             899************************************************************************************ PP
+
+                             E-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  88 sDeegkvakaygvltedkglalratfvidkegkir 122
+                             sD++g++ k ygv     +l+ r tfvidk+gki+
+  tr|B0G133|B0G133_DICDI  93 SDKNGAIGKLYGVN---GLLPGRVTFVIDKNGKIA 124
+                             **************...789*************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.7   0.0   5.7e-24   5.5e-20       3     128 ..       7     124 ..       5     137 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 71.7 bits;  conditional E-value: 5.7e-24
+                             TSBB---ECCEETTCEEEEEHHHHTTSEEEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-TSEE CS
+                 Redoxin   3 gdkaPdftlplaatdgnsvslsefkgkkvvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkeglkfpv 89 
+                             g+ aP+ftlp+  +dg+ ++l++f+gk++v++f+p +   +C++e++y+++ +e++ e g +v + + ++ +  k+f +++ +++++
+  tr|B0G133|B0G133_DICDI   7 GEIAPEFTLPN--KDGKLFNLKDFAGKPLVIFFYPNNIGWVCTREVCYFRDSYEKFIEMGAEVPGNSPNTMDNHKKFHAAHRVNYTI 91 
+                             6779****977..************************************************************************** PP
+
+                             EE-TTSHHHHHTT-TTEEE.GGG.EEE-EEEEEEETTEEE CS
+                 Redoxin  90 lsDesaaftkalGlrleedaseg.irtpryavidedgkvv 128
+                             lsD ++a+ k +G++       g +  + ++vid++gk+ 
+  tr|B0G133|B0G133_DICDI  92 LSDKNGAIGKLYGVN-------GlLPGRVTFVIDKNGKIA 124
+                             *************99.......424567799*******96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       397  (0.0206997); expected 383.6 (0.02)
+Passed bias filter:                      360  (0.0187705); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.29u 0.16s 00:00:00.44 Elapsed: 00:00:00.57
+# Mc/sec: 858.35
+//
+Query:       tr|Q55EF1|Q55EF1_DICDI  [L=154]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-39  133.8   0.0    3.7e-39  133.5   0.0    1.1  1  AhpC-TSA  AhpC/TSA family
+    7.9e-21   74.4   0.0    9.3e-21   74.2   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.5   0.0   3.9e-43   3.7e-39       1     122 [.       6     127 ..       6     129 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 133.5 bits;  conditional E-value: 3.9e-43
+                             TTSB---EEEECTTCEEEECCHH..TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdy..kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfp 85 
+                             vg+ apdfe+kn  g+tv+l+++  k +p+vl+fypkd++pvCt+  ++++++y++f e+g+evigvs+d ++shk+f+ k+sl+f+
+  tr|Q55EF1|Q55EF1_DICDI   6 VGNIAPDFEAKNYLGQTVTLKEFkeKSQPIVLYFYPKDNSPVCTKDSCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSLPFT 92 
+                             799********************6444************************************************************ PP
+
+                             EEE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  86 llsDeegkvakaygvltedkglalratfvidkegkir 122
+                             ll D+++k+ak ygv     +l+ r+tf+idk+g+i+
+  tr|Q55EF1|Q55EF1_DICDI  93 LLTDKHSKLAKLYGVNG--ILLPGRKTFIIDKHGIIA 127
+                             ****************5..57**************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.2   0.0   9.7e-25   9.3e-21       1     132 [.       5     131 ..       5     144 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 74.2 bits;  conditional E-value: 9.7e-25
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSE..EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkk..vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+g+ aPdf+ ++    g++v+l+efk+k+  +v++f+p   +P+C++  +++++ ++++ e g +v++v++d ++  k+f++k++l
+  tr|Q55EF1|Q55EF1_DICDI   5 KVGNIAPDFEAKN--YLGQTVTLKEFKEKSqpIVLYFYPKDNSPVCTKDSCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSL 89 
+                             68999*****755..9*********9888777*******************777666667*************************** PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGG..EEE-EEEEEEETTEEEEEEE CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedaseg..irtpryavidedgkvvylev 132
+                             +f++l+D  ++++k +G++       g  +  + +++id++g +  ++ 
+  tr|Q55EF1|Q55EF1_DICDI  90 PFTLLTDKHSKLAKLYGVN-------GilLPGRKTFIIDKHGIIAGIHD 131
+                             *****************88.......53345578*********987765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (154 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       489  (0.0254966); expected 383.6 (0.02)
+Passed bias filter:                      423  (0.0220554); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.28u 0.17s 00:00:00.45 Elapsed: 00:00:00.52
+# Mc/sec: 947.82
+//
+Query:       tr|Q559T9|Q559T9_DICDI  [L=181]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.9e-26   90.3   0.1    1.3e-25   89.8   0.1    1.1  1  AhpC-TSA  AhpC/TSA family
+      1e-14   54.6   0.0    1.4e-14   54.2   0.0    1.2  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.8   0.1   1.3e-29   1.3e-25       2     122 ..       9     131 ..       9     133 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 89.8 bits;  conditional E-value: 1.3e-29
+                             TSB---EEEECTTCEEEECCHH..TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEE CS
+                AhpC-TSA   2 gdkapdfelkngdgetvslsdy..kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpl 86 
+                             gd  p+f++++++g + +l+d   ++k +++ffypk++++   + +++++++y+ +k + +evigv+ d++++ ++fa+ ++++f +
+  tr|Q559T9|Q559T9_DICDI   9 GDVSPNFNAPDQNGIRLTLDDSkfQNKTIIIFFYPKNESKSGANMAREFRDNYQILKTLQCEVIGVNYDDHQKNQQFAQFNDIPFSM 95 
+                             6788***************8877799************************************************************* PP
+
+                             EE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  87 lsDeegkvakaygvltedkglalratfvidkegkir 122
+                             lsD++g++a+++gv ++   ++ ++tfvi+ke+ i 
+  tr|Q559T9|Q559T9_DICDI  96 LSDTDGAIARRFGVHKDLLIFPSKTTFVINKEHRID 131
+                             ********************************9986 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.2   0.0   1.4e-18   1.4e-14       1     145 [.       7     146 ..       7     151 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 54.2 bits;  conditional E-value: 1.4e-18
+                             -TTSBB---ECCEETTCEEEEEHHH..HTTSEEEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslse..fkgkkvvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+gd  P+f+ p+  ++g  ++l++  f++k+++++f+p + +    + ++++++ ++ lk+   +v++v+ d+ +  ++f+  +++
+  tr|Q559T9|Q559T9_DICDI   7 KEGDVSPNFNAPD--QNGIRLTLDDskFQNKTIIIFFYPKNESKSGANMAREFRDNYQILKTLQCEVIGVNYDDHQKNQQFAQFNDI 91 
+                             578988****988..********9999*************88888888777888888888*************************** PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGGEEE-EEEEEEETTEEEEEEESSSCHTSTTSHHH CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedasegirtpryavidedgkvvylevepepeteesnaea 145
+                             +f +lsD ++a+++ +G+   +d    + +++++vi++++++  ++  p ++  es +++
+  tr|Q559T9|Q559T9_DICDI  92 PFSMLSDTDGAIARRFGVH--KDLLI-FPSKTTFVINKEHRIDTIYSNPIKV--ESHLKQ 146
+                             *****************55..66555.6**************9999988886..455444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (181 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       917  (0.0478127); expected 383.6 (0.02)
+Passed bias filter:                      519  (0.0270608); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.54
+# Mc/sec: 1086.69
+//
+Query:       tr|Q552Z0|Q552Z0_DICDI  [L=198]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.6e-44  148.7   0.0      1e-43  148.3   0.0    1.2  1  AhpC-TSA  AhpC/TSA family
+    8.5e-28   97.0   0.0    1.1e-27   96.7   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.3   0.0   1.1e-47     1e-43       1     122 [.      51     172 ..      51     174 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 148.3 bits;  conditional E-value: 1.1e-47
+                             TTSB---EEEECTTCEEEECCHHTTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEEE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdykgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpll 87 
+                             vgd+apdf++ ++dg+++sl+d+++k++vl+fypkd +p+Ct+e+++++++ye+f+e+g+ v+gvs+d+ esh kf +k++l+f+ll
+  tr|Q552Z0|Q552Z0_DICDI  51 VGDQAPDFTASDKDGKSYSLKDFADKVLVLYFYPKDSTPGCTKEACSFRDNYEQFTEAGAVVVGVSSDDAESHSKFSAKYRLPFTLL 137
+                             8************************************************************************************** PP
+
+                             E-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  88 sDeegkvakaygvltedkglalratfvidkegkir 122
+                              D++g++ak+ygv +e  +++ r+tf+idk++ki+
+  tr|Q552Z0|Q552Z0_DICDI 138 TDNKGEMAKKYGVKKELLLIPGRSTFIIDKNQKIA 172
+                             *********************************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.7   0.0   1.1e-31   1.1e-27       1     129 [.      50     173 ..      50     189 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 96.7 bits;  conditional E-value: 1.1e-31
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSEEEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-TS CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkkvvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkeglkf 87 
+                             k+gd+aPdft  +  +dg+s+sl++f++k++v++f+p   +P C++e++ +++ +e++ e g  vv+v++d+ +  ++f +k+ l+f
+  tr|Q552Z0|Q552Z0_DICDI  50 KVGDQAPDFTASD--KDGKSYSLKDFADKVLVLYFYPKDSTPGCTKEACSFRDNYEQFTEAGAVVVGVSSDDAESHSKFSAKYRLPF 134
+                             69********866..**********************************888888888***************************** PP
+
+                             EEEE-TTSHHHHHTT-TTEEE.GGG.EEE-EEEEEEETTEEEE CS
+                 Redoxin  88 pvlsDesaaftkalGlrleedaseg.irtpryavidedgkvvy 129
+                             ++l+D +++++k++G++  +      i  +++++id+++k+  
+  tr|Q552Z0|Q552Z0_DICDI 135 TLLTDNKGEMAKKYGVK--KE-L-LlIPGRSTFIIDKNQKIAL 173
+                             ***************77..22.2.247889**********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (198 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       962  (0.050159); expected 383.6 (0.02)
+Passed bias filter:                      658  (0.0343084); expected 383.6 (0.02)
+Passed Vit filter:                        68  (0.00354554); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.13s 00:00:00.49 Elapsed: 00:00:00.80
+# Mc/sec: 804.75
+//
+Query:       tr|Q54NG4|Q54NG4_DICDI  [L=157]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.2e-41  139.1   0.0    9.4e-41  138.7   0.0    1.1  1  AhpC-TSA  AhpC/TSA family
+    2.6e-24   85.7   0.0    3.2e-24   85.4   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.7   0.0   9.8e-45   9.4e-41       1     121 [.       6     126 ..       6     128 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 138.7 bits;  conditional E-value: 9.8e-45
+                             TTSB---EEEECTTCEEEECCHHTTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEEE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdykgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpll 87 
+                             v d+apdf++ +++g+++sls+++gkp+vlffypkd+++ Ct+e+++++++y  f ++g++vig+s d+pesh++f+ k+sl+++l+
+  tr|Q54NG4|Q54NG4_DICDI   6 VDDQAPDFSGIDQNGKNISLSQFNGKPLVLFFYPKDDSKTCTNEACEFRDKYSSFVNAGADVIGISNDDPESHANFISKNSLPYTLI 92 
+                             679************************************************************************************ PP
+
+                             E-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBE CS
+                AhpC-TSA  88 sDeegkvakaygvltedkglalratfvidkegki 121
+                             sD++g++ak+ygv +e   ++ r+tf+++k++ki
+  tr|Q54NG4|Q54NG4_DICDI  93 SDKDGEIAKKYGVHKELLFFPGRTTFILNKDHKI 126
+                             ********************************99 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.4   0.0   3.3e-28   3.2e-24       1     131 [.       5     130 ..       5     142 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 85.4 bits;  conditional E-value: 3.3e-28
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSEEEEEEESTTT-HHHHHTHH.HHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-T CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkkvvvnfvpgafcPtCsaehp.yleklaellkekgvdvvavvadndafvkefwgkeglk 86 
+                             k++d+aPdf+   ++++g+++sls+f+gk++v++f+p  ++ tC++e++ + +k++ +  + g dv++++ d+ +   +f++k++l+
+  tr|Q54NG4|Q54NG4_DICDI   5 KVDDQAPDFSG--IDQNGKNISLSQFNGKPLVLFFYPKDDSKTCTNEACeFRDKYSSF-VNAGADVIGISNDDPESHANFISKNSLP 88 
+                             6899******5..67**********************************555555555.***********999999*********** PP
+
+                             SEEEE-TTSHHHHHTT-TTEEE.GGGEEE-EEEEEEETTEEEEEE CS
+                 Redoxin  87 fpvlsDesaaftkalGlrleedasegirtpryavidedgkvvyle 131
+                             ++++sD +++++k++G+    +   ++  ++++++++d+k++ ++
+  tr|Q54NG4|Q54NG4_DICDI  89 YTLISDKDGEIAKKYGVH---KELLFFPGRTTFILNKDHKIIGTH 130
+                             ****************77...44566899************9776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (157 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       490  (0.0255488); expected 383.6 (0.02)
+Passed bias filter:                      430  (0.0224204); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.15s 00:00:00.47 Elapsed: 00:00:00.56
+# Mc/sec: 905.51
+//
+Query:       tr|Q54W30|Q54W30_DICDI  [L=152]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-33  114.2   0.1    4.3e-33  114.0   0.1    1.1  1  AhpC-TSA  AhpC/TSA family
+    4.9e-16   58.8   0.0    5.6e-16   58.7   0.0    1.0  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.0   0.1   4.5e-37   4.3e-33       1     123 [.       6     127 ..       6     128 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 114.0 bits;  conditional E-value: 4.5e-37
+                             TTSB---EEEECTTCEEEECCHHTT.SEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdykg.kpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpl 86 
+                             vgd++p f++kn+dg++++ sdy g kp vlff+p++   +C+ e+++++++ye+f e gvevig s++s+esh++faek++++f+l
+  tr|Q54W30|Q54W30_DICDI   6 VGDQCPLFSVKNKDGKEIKASDYIGkKPFVLFFFPNNIGYYCKSEVCEFRDAYEKFCEFGVEVIGASPNSVESHNRFAEKHKIPFNL 92 
+                             8**********************665************************************************************* PP
+
+                             EE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEEE CS
+                AhpC-TSA  87 lsDeegkvakaygvltedkglalratfvidkegkiry 123
+                             + De +k+ak +gv     +++ r tf+id  gki +
+  tr|Q54W30|Q54W30_DICDI  93 VVDEGRKLAKTFGVD--GFLITDRVTFIIDITGKIVF 127
+                             **************9..568**************975 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.7   0.0   5.9e-20   5.6e-16       2     131 ..       6     129 ..       5     143 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 58.7 bits;  conditional E-value: 5.9e-20
+                             TTSBB---ECCEETTCEEEEEHHHHTTSE.EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-TS CS
+                 Redoxin   2 agdkaPdftlplaatdgnsvslsefkgkk.vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkeglkf 87 
+                             +gd+ P f+ ++  +dg++++ s++ gkk  v++f+p +   +C+ e++++++ +e++ e gv+v++ + ++ +  ++f++k++++f
+  tr|Q54W30|Q54W30_DICDI   6 VGDQCPLFSVKN--KDGKEIKASDYIGKKpFVLFFFPNNIGYYCKSEVCEFRDAYEKFCEFGVEVIGASPNSVESHNRFAEKHKIPF 90 
+                             79*******866..**********777775899*****99999******************************************** PP
+
+                             EEEE-TTSHHHHHTT-TTEEE.GGG..EEE-EEEEEEETTEEEEEE CS
+                 Redoxin  88 pvlsDesaaftkalGlrleedaseg..irtpryavidedgkvvyle 131
+                              +++De+ +++k +G++       g  i  + +++id  gk+v  +
+  tr|Q54W30|Q54W30_DICDI  91 NLVVDEGRKLAKTFGVD-------GflITDRVTFIIDITGKIVFSH 129
+                             ***************88.......444566778999999***9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       477  (0.024871); expected 383.6 (0.02)
+Passed bias filter:                      408  (0.0212733); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.16s 00:00:00.48 Elapsed: 00:00:00.51
+# Mc/sec: 955.62
+//
+Query:       tr|Q55FA7|Q55FA7_DICDI  [L=154]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.2e-40  137.0   0.0    3.8e-40  136.7   0.0    1.1  1  AhpC-TSA  AhpC/TSA family
+    1.5e-21   76.7   0.0    1.8e-21   76.5   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.7   0.0     4e-44   3.8e-40       1     122 [.       6     127 ..       6     129 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 136.7 bits;  conditional E-value: 4e-44
+                             TTSB---EEEECTTCEEEECCHHTT..SEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdykg..kpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfp 85 
+                             vg+ apdfe+kn  g+tv+l+++k+  +p+vl+fypkd++pvCt+e ++++++y++f e+g+evigvs+d ++shk+f+ k+sl+f+
+  tr|Q55FA7|Q55FA7_DICDI   6 VGNVAPDFEAKNYLGQTVTLKEFKDksQPIVLYFYPKDNSPVCTKESCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSLPFT 92 
+                             799********************6656************************************************************ PP
+
+                             EEE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  86 llsDeegkvakaygvltedkglalratfvidkegkir 122
+                             ll D+++k+ak ygv     +l+ r+tf+idk+g+i+
+  tr|Q55FA7|Q55FA7_DICDI  93 LLTDKHSKLAKLYGVNG--ILLPGRKTFIIDKHGIIA 127
+                             ****************5..57**************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.5   0.0   1.9e-25   1.8e-21       1     132 [.       5     131 ..       5     144 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 76.5 bits;  conditional E-value: 1.9e-25
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSE..EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkk..vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+g+ aPdf+ ++    g++v+l+efk+k+  +v++f+p   +P+C++e +++++ ++++ e g +v++v++d ++  k+f++k++l
+  tr|Q55FA7|Q55FA7_DICDI   5 KVGNVAPDFEAKN--YLGQTVTLKEFKDKSqpIVLYFYPKDNSPVCTKESCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSL 89 
+                             68999*****755..9*********99998889******************777666667*************************** PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGG..EEE-EEEEEEETTEEEEEEE CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedaseg..irtpryavidedgkvvylev 132
+                             +f++l+D  ++++k +G++       g  +  + +++id++g +  ++ 
+  tr|Q55FA7|Q55FA7_DICDI  90 PFTLLTDKHSKLAKLYGVN-------GilLPGRKTFIIDKHGIIAGIHD 131
+                             *****************88.......53345578*********987765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (154 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       472  (0.0246103); expected 383.6 (0.02)
+Passed bias filter:                      400  (0.0208561); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 891.00
+//
+Query:       tr|Q54W09|Q54W09_DICDI  [L=152]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.8e-40  135.9   0.0      8e-40  135.7   0.0    1.0  1  AhpC-TSA  AhpC/TSA family
+    5.7e-23   81.4   0.0    6.7e-23   81.1   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.7   0.0   8.3e-44     8e-40       1     122 [.       6     128 ..       6     130 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.7 bits;  conditional E-value: 8.3e-44
+                             TTSB---EEEECTTCEEEECCHH.TT.SEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdy.kg.kpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfp 85 
+                             vgd+apdf+ +++dg+ vsl+d+ k+ kp+vl+fypkd++  Ct+e+++++++y++f e+g++vigvs d+ esh kf  k+sl+f+
+  tr|Q54W09|Q54W09_DICDI   6 VGDQAPDFTCPDKDGKLVSLKDFiKDqKPIVLYFYPKDETSICTKEACEFRDKYQKFIEAGADVIGVSRDDAESHSKFTSKYSLPFT 92 
+                             8**********************9666************************************************************ PP
+
+                             EEE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  86 llsDeegkvakaygvltedkglalratfvidkegkir 122
+                             ll D+ g++ak yg+   + + + r tf+idk+gk++
+  tr|Q54W09|Q54W09_DICDI  93 LLTDKGGELAKLYGAEG-NFLSPGRVTFIIDKNGKVA 128
+                             ****************5.57***************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.1   0.0     7e-27   6.7e-23       1     128 [.       5     128 ..       5     143 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 81.1 bits;  conditional E-value: 7e-27
+                             -TTSBB---ECCEETTCEEEEEHHH.HTTSE.EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslse.fkgkk.vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+gd+aPdft p+  +dg+ vsl++  k++k +v++f+p   +  C++e++++++ ++++ e g dv++v+ d+ +  ++f +k++l
+  tr|Q54W09|Q54W09_DICDI   5 KVGDQAPDFTCPD--KDGKLVSLKDfIKDQKpIVLYFYPKDETSICTKEACEFRDKYQKFIEAGADVIGVSRDDAESHSKFTSKYSL 89 
+                             69********999..**********9666555*******************777666667*************************** PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGG.EEE-EEEEEEETTEEE CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedaseg.irtpryavidedgkvv 128
+                             +f++l+D +++++k +G++     +++    + +++id++gkv 
+  tr|Q54W09|Q54W09_DICDI  90 PFTLLTDKGGELAKLYGAE-----GNFlSPGRVTFIIDKNGKVA 128
+                             *****************77.....344223456899******96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       511  (0.0266437); expected 383.6 (0.02)
+Passed bias filter:                      456  (0.023776); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.62
+# Mc/sec: 795.13
+//
+Query:       tr|Q55EE4|Q55EE4_DICDI  [L=154]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-40  136.8   0.0    4.2e-40  136.6   0.0    1.1  1  AhpC-TSA  AhpC/TSA family
+      2e-21   76.3   0.0    2.4e-21   76.1   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.6   0.0   4.4e-44   4.2e-40       1     122 [.       6     127 ..       6     129 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 136.6 bits;  conditional E-value: 4.4e-44
+                             TTSB---EEEECTTCEEEECCHH..TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSE CS
+                AhpC-TSA   1 vgdkapdfelkngdgetvslsdy..kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfp 85 
+                             vg+ apdfe+kn  g+tv+l+++  k +p+vl+fypkd++pvCt+e ++++++y++f e+g+evigvs+d ++shk+f+ k+sl+f+
+  tr|Q55EE4|Q55EE4_DICDI   6 VGNIAPDFEAKNYLGQTVTLKEFkeKSQPIVLYFYPKDNSPVCTKESCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSLPFT 92 
+                             799********************6444************************************************************ PP
+
+                             EEE-TTCHHHHHTT-CETTTTCCSEEEEEE-TTSBEE CS
+                AhpC-TSA  86 llsDeegkvakaygvltedkglalratfvidkegkir 122
+                             ll D+++k+ak ygv     +l+ r+tf+idk+g+i+
+  tr|Q55EE4|Q55EE4_DICDI  93 LLTDKHSKLAKLYGVNG--ILLPGRKTFIIDKHGIIA 127
+                             ****************5..57**************97 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.1   0.0   2.5e-25   2.4e-21       1     132 [.       5     131 ..       5     144 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 76.1 bits;  conditional E-value: 2.5e-25
+                             -TTSBB---ECCEETTCEEEEEHHHHTTSE..EEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT- CS
+                 Redoxin   1 kagdkaPdftlplaatdgnsvslsefkgkk..vvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkegl 85 
+                             k+g+ aPdf+ ++    g++v+l+efk+k+  +v++f+p   +P+C++e +++++ ++++ e g +v++v++d ++  k+f++k++l
+  tr|Q55EE4|Q55EE4_DICDI   5 KVGNIAPDFEAKN--YLGQTVTLKEFKEKSqpIVLYFYPKDNSPVCTKESCEFRDKYQKFIEAGAEVIGVSSDGEDSHKSFVSKYSL 89 
+                             68999*****755..9*********9888777*******************777666667*************************** PP
+
+                             TSEEEE-TTSHHHHHTT-TTEEE.GGG..EEE-EEEEEEETTEEEEEEE CS
+                 Redoxin  86 kfpvlsDesaaftkalGlrleedaseg..irtpryavidedgkvvylev 132
+                             +f++l+D  ++++k +G++       g  +  + +++id++g +  ++ 
+  tr|Q55EE4|Q55EE4_DICDI  90 PFTLLTDKHSKLAKLYGVN-------GilLPGRKTFIIDKHGIIAGIHD 131
+                             *****************88.......53345578*********987765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (154 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       500  (0.0260702); expected 383.6 (0.02)
+Passed bias filter:                      430  (0.0224204); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.15s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 884.35
+//
+Query:       P40553  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.2e-27   93.5   0.0    1.3e-26   93.1   0.0    1.2  1  AhpC-TSA  AhpC/TSA family
+    2.5e-20   72.8   0.0    3.3e-20   72.4   0.0    1.1  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.1   0.0   1.3e-30   1.3e-26       1     121 [.      65     185 ..      65     188 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 93.1 bits;  conditional E-value: 1.3e-30
+               TTSB---EEEECTTCEEEECCHH..TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEEEE-TTCHHHHHTT CS
+  AhpC-TSA   1 vgdkapdfelkngdgetvslsdy..kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpllsDeegkvakayg 99 
+               +gd++pd++l n+d  ++sl+++  ++++vv+f+yp++ +p+Ct++++ ++++y+e+k+  + v+g+s+ds++s+kkf+ k++l+++llsD++++++  +g
+    P40553  65 IGDPIPDLSLLNEDNDSISLKKIteNNRVVVFFVYPRASTPGCTRQACGFRDNYQELKK-YAAVFGLSADSVTSQKKFQSKQNLPYHLLSDPKREFIGLLG 164
+               8**********************94447888888************************5.677************************************** PP
+
+               -CETTTTCCSEEEEEE-TTSBE CS
+  AhpC-TSA 100 vltedkglalratfvidkegki 121
+               + +++  + +r++f++ + gk+
+    P40553 165 AKKTPLSGSIRSHFIFVD-GKL 185
+               ***************974.666 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.4   0.0   3.5e-24   3.3e-20       3     143 ..      66     201 ..      64     205 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 72.4 bits;  conditional E-value: 3.5e-24
+              TSBB---ECCEETTCEEEEEHHH..HTTSEEEEEEESTTT-HHHHHTHH.HHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-TSEEEE-TTSHHHHHT CS
+  Redoxin   3 gdkaPdftlplaatdgnsvslse..fkgkkvvvnfvpgafcPtCsaehp.yleklaellkekgvdvvavvadndafvkefwgkeglkfpvlsDesaaftkal 101
+              gd++Pd++l  +++d+ s+sl++   ++++vv +++p+a +P C+++++ + ++++el  +k   v++++ad+ + +k+f +k++l++++lsD++ +f   l
+   P40553  66 GDPIPDLSL--LNEDNDSISLKKitENNRVVVFFVYPRASTPGCTRQACgFRDNYQEL--KKYAAVFGLSADSVTSQKKFQSKQNLPYHLLSDPKREFIGLL 163
+              9*******8..78**********966666677799**************888888888..7778999*********************************** PP
+
+              T-TTEEE.GGGEEE-EEEEEEETTEEEEEEESSSCHT.STTSH CS
+  Redoxin 102 Glrleedasegirtpryavidedgkvvylevepepet.eesna 143
+              G++  +   +g  +++++++  dgk++ + v  +p +  +++a
+   P40553 164 GAK--KTPLSG-SIRSHFIF-VDGKLKFKRVKISP-EvSVNDA 201
+              *55..666665.55555554.57888888888877.5456655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       487  (0.0253924); expected 383.6 (0.02)
+Passed bias filter:                      334  (0.0174149); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 1365.56
+//
+Query:       sp|O94561|PRX_SCHPO  [L=195]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.6e-29   99.9   0.0    1.4e-28   99.4   0.0    1.2  1  AhpC-TSA  AhpC/TSA family
+    1.3e-19   70.5   0.0    1.9e-19   69.9   0.0    1.3  1  Redoxin   Redoxin
+
+
+Domain annotation for each model (and alignments):
+>> AhpC-TSA  AhpC/TSA family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.4   0.0   1.5e-32   1.4e-28       1     117 [.      48     165 ..      48     169 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 99.4 bits;  conditional E-value: 1.5e-32
+                          TTSB---EEEECTTCEEEECCHH.TTSEEEEEEESTTT-HHHHHHHHHHHHTHHHHHCTTEEEEEEESSSHHHHHHHHHHHH-SSEEEE- CS
+             AhpC-TSA   1 vgdkapdfelkngdgetvslsdy.kgkpvvlffypkdwcpvCttelpalaklyeefkergvevigvsvdspeshkkfaekeslnfpllsD 89 
+                          vgd +pd++l+++dg++++l d+ ++k +v+f ypk+ +p+Ct++ + ++++y+++++ ++ev+g+s d+ +++k+f +k++++++llsD
+  sp|O94561|PRX_SCHPO  48 VGDVIPDITLPDEDGTSIRLRDItANKGLVIFAYPKASTPGCTKQGCGFRDNYPKIQASDYEVLGLSFDTSKAQKAFKDKQNFPYHLLSD 137
+                          89*********************888**************************************************************** PP
+
+                          TTCHHHHHTT-CETTTTCCSEEEEEE-T CS
+             AhpC-TSA  90 eegkvakaygvltedkglalratfvidk 117
+                          ++g+++k++g+ ++  g   r+++++ k
+  sp|O94561|PRX_SCHPO 138 PKGELIKKLGAEKPGGGKLFRSHWIFEK 165
+                          ************9998888899988876 PP
+
+>> Redoxin  Redoxin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.9   0.0     2e-23   1.9e-19       1     107 [.      47     150 ..      47     176 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 69.9 bits;  conditional E-value: 2e-23
+                          -TTSBB---ECCEETTCEEEEEHHH.HTTSEEEEEEESTTT-HHHHHTHHHHHTHHHHHHCSTTTEEEEEESSSHHHHHHHHHTT-TSEE CS
+              Redoxin   1 kagdkaPdftlplaatdgnsvslse.fkgkkvvvnfvpgafcPtCsaehpyleklaellkekgvdvvavvadndafvkefwgkeglkfpv 89 
+                          ++gd +Pd+tlp+  +dg+s+ l++  ++k +v++++p a +P C+++ + +++ ++++ +++ +v++++ d++  +k+f +k++ ++++
+  sp|O94561|PRX_SCHPO  47 QVGDVIPDITLPD--EDGTSIRLRDiTANKGLVIFAYPKASTPGCTKQGCGFRDNYPKIQASDYEVLGLSFDTSKAQKAFKDKQNFPYHL 134
+                          689********99..***********************************777777888******************************* PP
+
+                          EE-TTSHHHHHTT-TTEE CS
+              Redoxin  90 lsDesaaftkalGlrlee 107
+                          lsD+++++ k+lG++  +
+  sp|O94561|PRX_SCHPO 135 LSDPKGELIKKLGAE--K 150
+                          *************55..3 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (195 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       356  (0.018562); expected 383.6 (0.02)
+Passed bias filter:                      340  (0.0177277); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.16s 00:00:00.47 Elapsed: 00:00:00.45
+# Mc/sec: 1392.01
+//
+[ok]

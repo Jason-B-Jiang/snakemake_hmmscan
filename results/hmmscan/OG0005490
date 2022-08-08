@@ -1,0 +1,561 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0005490.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0005490
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q76P23|PM34_DICDI  [L=329]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.5e-59  197.3   6.4    2.9e-19   68.9   0.3    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.7   0.4   3.1e-22     6e-18       3      92 ..      18     115 ..      16     120 .. 0.94
+   2 !   66.2   0.0     1e-22     2e-18       2      94 ..     124     208 ..     123     211 .. 0.94
+   3 !   68.9   0.3   1.5e-23   2.9e-19       6      89 ..     219     307 ..     214     312 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 64.7 bits;  conditional E-value: 3.1e-22
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS........HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHH CS
+             Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa........ildvlkkiykeeGlrglyrGllpnllrvapasalkf 83 
+                           +++l + ++Gg+ag++a  +t+P+ +v trlq+q+k++++ ++++         +d++k+i+kee  r ly+Gl  +l+++  +s+++ 
+  sp|Q76P23|PM34_DICDI  18 VEALGHAISGGVAGMAAIALTYPFSTVSTRLQVQQKKQQQGQQSEittvpyknSIDAFKRIIKEENWRTLYSGLKSALIGIGASSFVYY 106
+                           567889*******************************999888889******************************************* PP
+
+                           HHHHHHHHH CS
+             Mito_carr  84 vlyetlkrl 92 
+                             y  lk +
+  sp|Q76P23|PM34_DICDI 107 YWYTLLKSI 115
+                           ***999986 PP
+
+  == domain 2  score: 66.2 bits;  conditional E-value: 1e-22
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHH CS
+             Mito_carr   2 elsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlk 90 
+                           el+++++l++++lag++++l t P++vv trlq++++++       i+  +k i+k+eG+ gly+Gl+p+l+ v+ + +++fv+ye+l+
+  sp|Q76P23|PM34_DICDI 124 ELGTIENLAIAALAGCANVLTTLPIWVVNTRLQINSDKG-------IVGQFKYIIKNEGFGGLYKGLIPALILVS-NPSVQFVSYEKLR 204
+                           678899******************************996.......99*************************99.************9 PP
+
+                           HHHC CS
+             Mito_carr  91 rlll 94 
+                            l  
+  sp|Q76P23|PM34_DICDI 205 ALWR 208
+                           9876 PP
+
+  == domain 3  score: 68.9 bits;  conditional E-value: 1.5e-23
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHH CS
+             Mito_carr   6 lkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetl 89 
+                           l+ ++ G++a+++a++vt+P  +vK rlq+q++++++ +s++     +ld+++ki+k++G++g+++G+  +++++++ +a +f++ +++
+  sp|Q76P23|PM34_DICDI 219 LEVFILGAIAKLIAGIVTYPYLLVKSRLQSQSGNASNPESQQqqykgTLDAIGKIFKSDGFLGFFKGMPSKMVQTVIGAAFMFLVKDKV 307
+                           6779**************************99997777776677778*************************************99976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (329 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       946  (0.0493248); expected 383.6 (0.02)
+Passed bias filter:                      615  (0.0320663); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.70
+# Mc/sec: 1510.84
+//
+Query:       tr|Q9VZD9|Q9VZD9_DROME  [L=314]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.3e-56  188.6   3.7    2.2e-20   72.5   0.0    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.3   0.1   5.9e-20   1.1e-15       5      92 ..      15      98 ..      12     102 .. 0.93
+   2 !   72.5   0.0   1.1e-24   2.2e-20       3      94 ..     107     201 ..     105     204 .. 0.89
+   3 !   58.8   0.2   2.2e-20   4.1e-16       6      89 ..     211     303 ..     206     308 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 57.3 bits;  conditional E-value: 5.9e-20
+                            HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHH CS
+               Mito_carr  5 vlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrl 92
+                             + + ++G+++g++a +  +Pld+v+ rlq+++     +    +++v+k+i+  eG+ +lyrGl+p l    ++++++f ++  lk +
+  tr|Q9VZD9|Q9VZD9_DROME 15 NFVHAVSGAAGGCIAMSTFYPLDTVRSRLQLEEAGDVRS----TRQVIKEIVLGEGFQSLYRGLGPVLQSLCISNFVYFYTFHALKAV 98
+                            67899**************************99997664....89************************************9999875 PP
+
+  == domain 2  score: 72.5 bits;  conditional E-value: 1.1e-24
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHH CS
+               Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvl 85 
+                              s+lk+ll G++ag++++l ttP++vv trl + +  +++ + ++    +l+ lk + ++eG++gl++G +p+l+ v+ + al+f++
+  tr|Q9VZD9|Q9VZD9_DROME 107 HSALKDLLLGSIAGIINVLTTTPFWVVNTRLRMRNVAGTSDEVNKhyknLLEGLKYVAEKEGIAGLWSGTIPSLMLVS-NPALQFMM 192
+                             68899****************************7766666555555567***************************99.******** PP
+
+                             HHHHHHHHC CS
+               Mito_carr  86 yetlkrlll 94 
+                             ye+lkr ++
+  tr|Q9VZD9|Q9VZD9_DROME 193 YEMLKRNIM 201
+                             ******987 PP
+
+  == domain 3  score: 58.8 bits;  conditional E-value: 2.2e-20
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.........HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHH CS
+               Mito_carr   6 lkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.........ildvlkkiykeeGlrglyrGllpnllrvapasalkf 83 
+                             l+ +++G++a+a+at++t+Pl +v t+    +k+s +k s++         +l+ +  i++++G+rgl+rGl +++l+++ ++al+f
+  tr|Q9VZD9|Q9VZD9_DROME 211 LSFFFIGAIAKAFATVLTYPLQLVQTKQRHRSKESDSKPSTSagstprtesTLELMISILQHQGIRGLFRGLEAKILQTVLTAALMF 297
+                             556899********************999988887666666578999**************************************** PP
+
+                             HHHHHH CS
+               Mito_carr  84 vlyetl 89 
+                             ++ye++
+  tr|Q9VZD9|Q9VZD9_DROME 298 MAYEKI 303
+                             ****98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (314 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       569  (0.0296679); expected 383.6 (0.02)
+Passed bias filter:                      444  (0.0231503); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.63
+# Mc/sec: 1609.88
+//
+Query:       tr|A0A0R4IBF3|A0A0R4IBF3_DANRE  [L=252]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.5e-42  142.3   0.2    2.3e-20   72.4   0.0    3.1  2  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.2   0.0   5.7e-19   1.1e-14       6      92 ..      17      99 ..      13     103 .. 0.92
+   2 !   72.4   0.0   1.2e-24   2.3e-20       4      94 ..     107     201 ..     104     204 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 54.2 bits;  conditional E-value: 5.7e-19
+                                    HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHH CS
+                       Mito_carr  6 lkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvly 86
+                                    l + +aG+++ ++a +v +Pld+++ rlq+++k+++k++      +l++i+keeGl++ yrG+ p +     +++++f ++
+  tr|A0A0R4IBF3|A0A0R4IBF3_DANRE 17 LVHAVAGAMGSVTAMTVFFPLDTARLRLQVDEKRKAKST----PAILSEIIKEEGLLAPYRGWFPVICSLCCSNFVYFYCF 93
+                                    67899*****************************99875....5689********************************** PP
+
+                                    HHHHHH CS
+                       Mito_carr 87 etlkrl 92
+                                     +lk +
+  tr|A0A0R4IBF3|A0A0R4IBF3_DANRE 94 HSLKAT 99
+                                    999976 PP
+
+  == domain 2  score: 72.4 bits;  conditional E-value: 1.2e-24
+                                     HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHH CS
+                       Mito_carr   4 svlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvap 77 
+                                     ++ ++l++G++ag+v++lvttPl+vv trl +q+ + +++  ++     i d++ +i+++eG+ +l+ G  p+ll v  
+  tr|A0A0R4IBF3|A0A0R4IBF3_DANRE 107 TAGRDLIIGIAAGVVNVLVTTPLWVVNTRLKLQGAKFRNEDIQPthyngIKDAFVQIMRQEGVGALWNGTFPSLLLVL- 184
+                                     67799***************************99998887777778888**************************999. PP
+
+                                     HHHHHHHHHHHHHHHHC CS
+                       Mito_carr  78 asalkfvlyetlkrlll 94 
+                                     + a++f++ye lkr +l
+  tr|A0A0R4IBF3|A0A0R4IBF3_DANRE 185 NPAVQFMIYEGLKRQIL 201
+                                     *************9775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (252 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       563  (0.029355); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.14s 00:00:00.51 Elapsed: 00:00:00.55
+# Mc/sec: 1492.70
+//
+Query:       tr|F1QY21|F1QY21_DANRE  [L=294]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.4e-42  142.4   8.1    3.2e-20   71.9   0.0    4.0  2  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.9   0.0   1.7e-24   3.2e-20       4      94 ..      84     178 ..      81     181 .. 0.92
+   2 !   50.6   0.3   7.5e-18   1.4e-13       3      91 ..     185     279 ..     183     283 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 71.9 bits;  conditional E-value: 1.7e-24
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHH CS
+               Mito_carr   4 svlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvl 85 
+                             ++ ++l++G++ag+v++lvttPl+vv trl +q+ + +++  ++     i d++ +i+++eG+ +l+ G  p+ll v  + a++f++
+  tr|F1QY21|F1QY21_DANRE  84 TAGRDLIIGIAAGVVNVLVTTPLWVVNTRLKLQGAKFRNEDIQPthyngIKDAFVQIMRQEGVGALWNGTFPSLLLVL-NPAVQFMI 169
+                             67799***************************99998887777778888**************************999.******** PP
+
+                             HHHHHHHHC CS
+               Mito_carr  86 yetlkrlll 94 
+                             ye lkr +l
+  tr|F1QY21|F1QY21_DANRE 170 YEGLKRQIL 178
+                             *****9775 PP
+
+  == domain 2  score: 50.6 bits;  conditional E-value: 7.5e-18
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHH.......HHHHHHGGGTTHHHHHHHHHHHHHHH CS
+               Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiy.......keeGlrglyrGllpnllrvapasalk 82 
+                             ls ++ +l+G++a+avat++t+Pl +v   l   ++ + + +s+ +l+ l+ ++       ++ G++gl++Gl ++ll+++ ++al+
+  tr|F1QY21|F1QY21_DANRE 185 LSSVEVFLIGAVAKAVATTITYPLQTVQSVLRFGQHGQPAGQSR-LLNSLRSVMyllinrvRKWGILGLFKGLEAKLLQTVLTAALM 270
+                             677899***************************98888887766.4444444444444555************************** PP
+
+                             HHHHHHHHH CS
+               Mito_carr  83 fvlyetlkr 91 
+                             f+lye++  
+  tr|F1QY21|F1QY21_DANRE 271 FLLYEKIAS 279
+                             *****9865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (294 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       523  (0.0272694); expected 383.6 (0.02)
+Passed bias filter:                      361  (0.0188227); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.60
+# Mc/sec: 1591.16
+//
+Query:       tr|E7FBD9|E7FBD9_DANRE  [L=312]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    6.8e-57  189.5   3.7    6.7e-21   74.1   0.0    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.3   0.0   3.5e-21   6.6e-17       5      95 ..      15     101 ..      12     103 .. 0.92
+   2 !   74.1   0.0   3.5e-25   6.7e-21       5      92 ..     106     197 ..     102     201 .. 0.91
+   3 !   54.2   0.3   5.9e-19   1.1e-14       3      90 ..     205     297 ..     203     302 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 61.3 bits;  conditional E-value: 3.5e-21
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHH CS
+               Mito_carr   5 vlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkr 91 
+                             +l + +aG+++ ++a +v +Pld++++rlq++++++++++    + +l +i keeG+++lyrG+ p +     +++++f +++tlkr
+  tr|E7FBD9|E7FBD9_DANRE  15 TLVHAVAGAMGSVTAMTVFFPLDTARIRLQVDENRKSQST---PI-ILAEIAKEEGVLSLYRGWFPVISSLCCSNFVYFYTFNTLKR 97 
+                             67899****************************9988865...33.6**************************************** PP
+
+                             HHCT CS
+               Mito_carr  92 lllk 95 
+                             ++ +
+  tr|E7FBD9|E7FBD9_DANRE  98 VMVT 101
+                             9876 PP
+
+  == domain 2  score: 74.1 bits;  conditional E-value: 3.5e-25
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHH CS
+               Mito_carr   5 vlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvly 86 
+                             +  +ll+G ++gav++l+ttP++vv trl +q+ + ++++ ++     i+d++++i+ +eG+  l+ G lp+l+ v+ + a++f++y
+  tr|E7FBD9|E7FBD9_DANRE 106 PSTDLLMGFISGAVNVLLTTPMWVVNTRLKLQGAKFRNEELHQthykgIVDAFSQIIAHEGVGTLWNGTLPSLVLVF-NPAVQFMFY 191
+                             66799**************************99997776666667777*****************************.********* PP
+
+                             HHHHHH CS
+               Mito_carr  87 etlkrl 92 
+                             e +kr 
+  tr|E7FBD9|E7FBD9_DANRE 192 EAMKRK 197
+                             ****96 PP
+
+  == domain 3  score: 54.2 bits;  conditional E-value: 5.9e-19
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.......HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHH CS
+               Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.......ildvlkkiykeeGlrglyrGllpnllrvapasalk 82 
+                             +s ++ +l+G++a+a+at++t+Pl +v   l   + +s +k+  +       +++ l   +k +Gl+gly+Gl ++ll+++ ++al+
+  tr|E7FBD9|E7FBD9_DANRE 205 ISSFEIFLIGAIAKAIATTATYPLQTVQAILRFGQYKSDDKG--GlvgslrnVVSLLMDRIKRHGLLGLYKGLEAKLLQTVLTAALM 289
+                             678899***************************887777644..33467666777777777************************** PP
+
+                             HHHHHHHH CS
+               Mito_carr  83 fvlyetlk 90 
+                             fv+ye++ 
+  tr|E7FBD9|E7FBD9_DANRE 290 FVVYEKIT 297
+                             *****986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (312 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       466  (0.0242974); expected 383.6 (0.02)
+Passed bias filter:                      349  (0.018197); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.54
+# Mc/sec: 1861.80
+//
+Query:       sp|O43808|PM34_HUMAN  [L=307]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.9e-56  186.5   1.4    6.1e-22   77.5   0.0    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.8   0.0   8.7e-20   1.7e-15       6      95 ..      10      95 ..       6      97 .. 0.93
+   2 !   77.5   0.0   3.2e-26   6.1e-22       3      96 ..      99     196 ..      97     197 .. 0.92
+   3 !   50.1   0.2   1.1e-17   2.1e-13       4      90 ..     201     292 ..     199     297 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 56.8 bits;  conditional E-value: 8.7e-20
+                          HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHHCT CS
+             Mito_carr  6 lkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrlllk 95
+                          l + +aG+++ ++a +v +Pld+++ rlq+++k+++k+    +  vl +i+keeGl++ yrG+ p +     +++++f ++++lk l  k
+  sp|O43808|PM34_HUMAN 10 LVHAVAGAVGSVTAMTVFFPLDTARLRLQVDEKRKSKT----THMVLLEIIKEEGLLAPYRGWFPVISSLCCSNFVYFYTFNSLKALWVK 95
+                          67899*****************************9986....5569***************************************99876 PP
+
+  == domain 2  score: 77.5 bits;  conditional E-value: 3.2e-26
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHH CS
+             Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvly 86 
+                            ++ k+l++G +ag+v++l+ttPl+vv trl +q+ + +++   +     i+d++++i+++eG+++l+ G  p+ll v+ + a++f++y
+  sp|O43808|PM34_HUMAN  99 STTGKDLVVGFVAGVVNVLLTTPLWVVNTRLKLQGAKFRNEDIVPtnykgIIDAFHQIIRDEGISALWNGTFPSLLLVF-NPAIQFMFY 186
+                           567899******************************98887666677888*****************************.********* PP
+
+                           HHHHHHHCTT CS
+             Mito_carr  87 etlkrlllkk 96 
+                           e lkr llkk
+  sp|O43808|PM34_HUMAN 187 EGLKRQLLKK 196
+                           *****99986 PP
+
+  == domain 3  score: 50.1 bits;  conditional E-value: 1.1e-17
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHH CS
+             Mito_carr   4 svlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvlye 87 
+                           s l  +++G++a+a+at+vt+Pl +v   l   +++ + ++++      il  l++ ++  G++gly+Gl ++ll+++ ++al+f++ye
+  sp|O43808|PM34_HUMAN 201 SSLDVFIIGAVAKAIATTVTYPLQTVQSILRFGRHRLNPENRTLgslrnILYLLHQRVRRFGIMGLYKGLEAKLLQTVLTAALMFLVYE 289
+                           566789**************************88886665544466778888999999******************************* PP
+
+                           HHH CS
+             Mito_carr  88 tlk 90 
+                           +l 
+  sp|O43808|PM34_HUMAN 290 KLT 292
+                           976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (307 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       581  (0.0302936); expected 383.6 (0.02)
+Passed bias filter:                      378  (0.0197091); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.58
+# Mc/sec: 1704.44
+//
+Query:       EPZ31694.1  [L=314]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    8.1e-55  182.8   0.9    2.2e-24   85.3   0.1    3.1  3  Mito_carr  Mitochondrial carrier protein
+    5.9e-05   23.3   0.1       0.53   10.7   0.1    3.0  0  HMD        H2-forming N5,N10-methylene-tetrahydromethanopteri
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.3   0.1   2.3e-28   2.2e-24       3      95 ..       4      98 ..       2     100 .. 0.91
+   2 !   35.4   0.0   8.6e-13   8.2e-09       5      95 ..     111     203 ..     107     205 .. 0.80
+   3 !   59.7   0.0   2.2e-20   2.1e-16       9      86 ..     215     293 ..     207     300 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 85.3 bits;  conditional E-value: 2.3e-28
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.HHHHHHHHHHHHHHHGG.GTTHHHHHHHHHHHHHHHHHHHHHHHHHHCT CS
+   Mito_carr  3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa.ildvlkkiykeeGlrgl.yrGllpnllrvapasalkfvlyetlkrlllk 95
+                l+++++ ++G+l+++++ ++++Pldv+Ktrlq+q+k+s+k+++++ ++d+lk+iykeeG+ gl + Gl++n++ +a++++ +f +y  l+  + k
+  EPZ31694.1  4 LPPFANAISGALGAIISNTLVYPLDVAKTRLQVQNKESAKSTKYKgTIDALKQIYKEEGIQGLyWNGLGANWISTASSQFSYFYFYGLLRPAYEK 98
+                6899*******************************99876665556****************8469*********************99988766 PP
+
+  == domain 2  score: 35.4 bits;  conditional E-value: 8.6e-13
+                 HHHHHHHHHHHHHHHHHHHHHH.HHHHHHHHH..CCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHHCT CS
+   Mito_carr   5 vlkellaGglagavatlvttPl.dvvKtrlqt..qkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrlllk 95 
+                 +l ell G+ a+a+++l+t P+  ++K  + +  + ++++++  + + +++  ++ e+G++gl++Gl p+l+ v+ + +++ +++e+lk+++++
+  EPZ31694.1 111 TLWELLLGAHAAALGQLFTIPVvNLLKAFIKSviATRQQTTRPAKDFHQTMIDVLNEDGITGLWKGLKPSLILVI-NPSITYAIFEKLKHWYME 203
+                 56689****************7467777766633222222233334***************************99.***************987 PP
+
+  == domain 3  score: 59.7 bits;  conditional E-value: 2.2e-20
+                 HHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS.HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHH CS
+   Mito_carr   9 llaGglagavatlvttPldvvKtrlqtqkksskkkksaa.ildvlkkiykeeGlrglyrGllpnllrvapasalkfvly 86 
+                 + +G++++++at++t+P  + K+rlq + ++++++ +++ ++dv++k+yk+eG+rgl++Gl +++++ +  +al ++l 
+  EPZ31694.1 215 FWMGAISKTLATILTYPYIMSKVRLQWKCEENNENLQYKgAIDVMRKVYKSEGFRGLFKGLNAQIVKAVLCQALLLTLK 293
+                 779************************9999776654445*********************************998876 PP
+
+>> HMD  H2-forming N5,N10-methylene-tetrahydromethanopterin dehydrogenase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (314 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       704  (0.0367068); expected 383.6 (0.02)
+Passed bias filter:                      534  (0.027843); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.57
+# Mc/sec: 1765.45
+//
+Query:       EPZ32108.1  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      1e-53  179.3   4.1    1.2e-21   76.5   0.2    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.5   0.2   6.1e-26   1.2e-21       7      97 .]       6      96 ..       2      96 .. 0.97
+   2 !   56.7   0.0   9.4e-20   1.8e-15       3      91 ..      99     190 ..      97     196 .. 0.86
+   3 !   46.3   0.3   1.7e-16   3.2e-12      28      89 ..     216     277 ..     205     283 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 76.5 bits;  conditional E-value: 6.1e-26
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHHCTTC CS
+   Mito_carr  7 kellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrlllkks 97
+                 + +aG+ +g+++  +t+Pl +v trlq+qk+ ++++ ++++ld+++ki+++eG++gl++Gl   l+++a++++++   yet++++++kk+
+  EPZ32108.1  6 VHAIAGAGGGMISMALTYPLVTVATRLQVQKNDTETEAYQSTLDAFSKIIEKEGVKGLFSGLESGLFGIAVTNSVYYYWYETVRTYFMKKN 96
+                689*************************************************************************************986 PP
+
+  == domain 2  score: 56.7 bits;  conditional E-value: 9.4e-20
+                 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS....HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHH CS
+   Mito_carr   3 lsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa....ildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkr 91 
+                 ls+++ ll+G++agav+t++t+P++vv trl ++kks  ++++       ++v   i+k++Gl+++++G+lp+l+ v+ +  ++ +++e+lk 
+  EPZ32108.1  99 LSTFHLLLSGSIAGAVTTILTNPIWVVNTRLTAKKKSLDENEKVLkelsSWNVAWDILKDDGLLAFFQGILPALVLVI-NPTMQYFVFEKLKA 190
+                 678999***************************9999776553337899****************************9.66666667788776 PP
+
+  == domain 3  score: 46.3 bits;  conditional E-value: 1.7e-16
+                 HHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHH CS
+   Mito_carr  28 vvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetl 89 
+                 +vK r+q+++++ ++k++a+i+d+++ki+keeG+ gly+Gl  +  +++ ++a+ f++ e+l
+  EPZ32108.1 216 TVKSRMQLKQSKDNNKRYAGIIDAFQKIFKEEGFYGLYKGLQSKASQSVLTAAILFLAKEKL 277
+                 7********************************************************99975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       953  (0.0496898); expected 383.6 (0.02)
+Passed bias filter:                      571  (0.0297721); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 1499.07
+//
+Query:       Q06497  [L=328]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.8e-54  180.4   6.0    3.5e-20   71.8   0.1    3.1  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.8   0.1   1.8e-24   3.5e-20       6      96 ..       4     105 ..       2     106 .. 0.96
+   2 !   40.9   0.0   8.1e-15   1.6e-10       4      96 ..     123     212 ..     121     213 .. 0.89
+   3 !   69.4   0.7     1e-23   1.9e-19       2      93 ..     219     305 ..     218     311 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 71.8 bits;  conditional E-value: 1.8e-24
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSS...........HHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHHC CS
+  Mito_carr   6 lkellaGglagavatlvttPldvvKtrlqtqkksskkkksaa...........ildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrlll 94 
+                l++ l+G++a a+a ++++Pld+ Kt +q+q + s+++ s++           ++d++ +i+ke+G++gly+G++++ + ++++++++f+ y ++++ ++
+     Q06497   4 LESALTGAVASAMANIAVYPLDLSKTIIQSQVSPSSSEDSNEgkvlpnrryknVVDCMINIFKEKGILGLYQGMTVTTVATFVQNFVYFFWYTFIRKSYM 103
+                57899****************************99999998899******************************************************99 PP
+
+                TT CS
+  Mito_carr  95 kk 96 
+                k+
+     Q06497 104 KH 105
+                97 PP
+
+  == domain 2  score: 40.9 bits;  conditional E-value: 8.1e-15
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHH..HHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHHCTT CS
+  Mito_carr   4 svlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiyk..eeGlrglyrGllpnllrvapasalkfvlyetlkrlllkk 96 
+                s+++el+ G++a+++++l+t P+ vv tr qt  + +++k    + +v+k iy+  +  ++++++Gl   l  ++ + +++ ++++ lk++++++
+     Q06497 123 STIEELVLGVAAASISQLFTSPMAVVATRQQTVHSAESAK----FTNVIKDIYRenNGDITAFWKGLRTGLALTI-NPSITYASFQRLKEVFFHD 212
+                67899***************************88887663....9********9423459************999.99************99875 PP
+
+  == domain 3  score: 69.4 bits;  conditional E-value: 1e-23
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+  Mito_carr   2 elsvlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrll 93 
+                +ls++++++ G+l+++++tlvt+Pl v+K +lq+++++ ++     + ++l  +yk+eGl++l++G+lp+l++ ++ ++l f++   l + l
+     Q06497 219 SLSAVQNFILGVLSKMISTLVTQPLIVAKAMLQSAGSKFTT-----FQEALLYLYKNEGLKSLWKGVLPQLTKGVIVQGLLFAFRGELTKSL 305
+                57899**********************************99.....9************************************877665554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (328 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       754  (0.0393138); expected 383.6 (0.02)
+Passed bias filter:                      507  (0.0264352); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.64
+# Mc/sec: 1656.98
+//
+[ok]

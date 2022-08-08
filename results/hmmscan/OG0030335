@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030335.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030335
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54HB8|Q54HB8_DICDI  [L=943]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.6e-10   40.7   5.0    2.8e-08   33.5   1.2    3.2  1  EF-hand_8  EF-hand domain pair
+    2.8e-06   26.4   0.2    2.8e-06   26.4   0.2    2.5  1  COPI_C     Coatomer (COPI) alpha subunit C-terminus
+    4.7e-06   25.9   2.6      0.079   12.6   0.0    3.1  0  EF-hand_1  EF hand
+    1.1e-05   25.0   4.4       0.16   12.0   0.0    3.7  0  EF-hand_6  EF-hand domain
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_8  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.5   1.2   5.9e-12   2.8e-08       2      51 ..      92     140 ..      91     142 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 33.5 bits;  conditional E-value: 5.9e-12
+               EF-hand_8   2 kgkItreeLkrilrllglkelsedevdilfrefDtdgdGyisfdEFcvll 51 
+                             +g++t+++L + l++ g+  + +d+v ++f+ +D+d+dG+i+++E  vl 
+  tr|Q54HB8|Q54HB8_DICDI  92 GGSMTFDDLLSGLAVCGKS-TEKDKVNVIFKFIDIDDDGIITKEEISVLS 140
+                             89*********77777888.*************************98875 PP
+
+>> COPI_C  Coatomer (COPI) alpha subunit C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.4   0.2   5.9e-10   2.8e-06     158     315 ..     674     841 ..     660     871 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 26.4 bits;  conditional E-value: 5.9e-10
+                             TS--EEE--BTTTTT--SSS--B-..----HH.HHHHHHHHHHHHHHHT-HHHHHHHHHHHHHHGGG----SHHHHHHHHHHHHHHH CS
+                  COPI_C 158 slpsllvalernwkeaaaknglPa..lvlkls.qleerLkaaYkltTeGkfseavekfrsillsipllvVdskqevdevkeLieicr 241
+                             +++ +  + + n++++a++n++P+  ++ kl+ +  e +k++ + + +G f+ea+  + + +    ll V s ++++ +++ i+ c 
+  tr|Q54HB8|Q54HB8_DICDI 674 NNNIINNQNKDNFTDTASSNSNPTspISQKLNsESIEYMKKCINQMENGNFKEAILDLDQCIKI--LLQVHS-NNLSIIQNEINFCV 757
+                             445566667789999999998887224445541566789********************98763..455554.56888999****** PP
+
+                             HHHHHHHHHHHHHHS-SSHHHHHHHHHHHHHHHHS-..........--HHHHHHHHHHHHHHHHHHTBHHHHHHHHHHHHHH-- CS
+                  COPI_C 242 eYivgLriElkRkelkkslddqkraaElaAYfthcn..........lqpvHliLaLrsAlnlffKlknfktaasfarrLLelgp 315
+                              Y v+L++ ++ ke++k+++++  + E++ Y+   +          lq+ H+ +  + A++     +nf  a ++   +L+ g 
+  tr|Q54HB8|Q54HB8_DICDI 758 GYKVTLNLLIEIKEIEKKIEQESNKDEVSSYYETIAllskflvdipLQTNHRLVCAKMAVKYNLISNNFGIAGKLIEIILQKGI 841
+                             ***************************999986544111111112267777777777777777777777777777777776554 PP
+
+>> EF-hand_1  EF hand
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> EF-hand_6  EF-hand domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (943 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4253  (0.221753); expected 383.6 (0.02)
+Passed bias filter:                      767  (0.0399917); expected 383.6 (0.02)
+Passed Vit filter:                       346  (0.0180406); expected 19.2 (0.001)
+Passed Fwd filter:                        96  (0.00500547); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 1.43u 0.27s 00:00:01.70 Elapsed: 00:00:01.46
+# Mc/sec: 2101.17
+//
+[ok]

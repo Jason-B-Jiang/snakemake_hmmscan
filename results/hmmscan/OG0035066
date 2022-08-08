@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035066.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035066
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F9Y0|E7F9Y0_DANRE  [L=481]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.1e-14   51.9   1.4    8.1e-14   51.9   1.4    3.1  1  Ferric_reduct  Ferric reductase like transmembrane component
+      5e-07   30.4   0.1    1.3e-06   29.0   0.1    1.8  1  F420_oxidored  NADP oxidoreductase coenzyme F420-dependent
+
+
+Domain annotation for each model (and alignments):
+>> Ferric_reduct  Ferric reductase like transmembrane component
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.9   1.4   8.4e-18   8.1e-14       3     123 ..     257     400 ..     255     402 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 51.9 bits;  conditional E-value: 8.4e-18
+           Ferric_reduct   3 ilalillplalllalRnnllepltglsldr.......lllfHkwlGvlafllallHvilylvnalrfsal................d 66 
+                              +al+ l+l++l +l  ++l++++g++++r       +l  +k+lG+l fl+a+lH+++ ++++lr+ ++                +
+  tr|E7F9Y0|E7F9Y0_DANRE 257 AVALVTLSLVYLPGLFAAFLQLWRGTKYRRfppwldnWLQRRKQLGLLSFLCAALHGVYSVCQPLRRVTQhrlinaayrqvkagteE 343
+                             799*********99999****9******9999*9996666**************************988899*******99999998 PP
+
+           Ferric_reduct  67 eerlldsllkrpynllGvvalllllilaitSlpfvrrrlsyevFyylHillvvayll 123
+                              + +l+ + +++y  +Gv++l +l +laitS+p+v + l+++ F +++  l +++l 
+  tr|E7F9Y0|E7F9Y0_DANRE 344 PWDELAVWRSELYLSCGVLGLGVLSLLAITSVPSVGNTLNWREFTFVQSGLGYVALT 400
+                             899999999999999*********************************987777654 PP
+
+>> F420_oxidored  NADP oxidoreductase coenzyme F420-dependent
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0   0.1   1.4e-10   1.3e-06       1      95 [.      26     114 ..      26     115 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 1.4e-10
+                             EEEEETTSHHHHHHHHHHHHTTS.GGCEEEEEESSCCCHHH.HHHHHC-EEECECHHHHHHH-SEEEE-S-HHHHHHHHHHCHHHHT CS
+           F420_oxidored   1 kiaiiGaGnmgealasgllaagaqpheivvansrnpekaee.laeelgvkvtavsneeaaeeadvvvlavkpeaveevlselkdalk 86 
+                             ++ai+G+G++ ++la +l+++      + v+ sr  +++ + l  ++ v ++  +   aa+ a vv++a+ pe++ ++l    +al+
+  tr|E7F9Y0|E7F9Y0_DANRE  26 TVAILGSGDFSRSLAVRLVSSR---VRVAVG-SRCVNRIPSgLFPDA-VALMN-QEGAAAQAACVVFMALFPEHYGSLLGLR-SALA 105
+                             59*******************9...999978.999999866244554.44555.5667778999***************887.**** PP
+
+                             TSEEEEESS CS
+           F420_oxidored  87 gkivisila 95 
+                             gk+++++++
+  tr|E7F9Y0|E7F9Y0_DANRE 106 GKVLVDVSN 114
+                             *******98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (481 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       504  (0.0262787); expected 383.6 (0.02)
+Passed bias filter:                      342  (0.017832); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.83
+# Mc/sec: 1876.70
+//
+[ok]

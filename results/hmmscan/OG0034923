@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034923.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034923
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8RTF7|A0A2R8RTF7_DANRE  [L=241]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.2e-113  379.3  18.1    1.4e-85  287.2  11.7    2.1  2  CLN6      Ceroid-lipofuscinosis neuronal protein 6
+
+
+Domain annotation for each model (and alignments):
+>> CLN6  Ceroid-lipofuscinosis neuronal protein 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.5   0.4   4.8e-32   9.3e-28       4      71 ..      24      88 ..      21      88 .. 0.94
+   2 !  287.2  11.7   7.1e-90   1.4e-85     134     280 .]      88     234 ..      87     234 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 97.5 bits;  conditional E-value: 4.8e-32
+                            CLN6  4 ekedkkkkskfhldlwlyltlqnwvldfgrpivmiilplewfplnkpsvgdyfhlaynvitpflllkl 71
+                                     +e++ + ++fh+++w+++tlqnw+ld+grpi   ++pl+wfplnkps++dy+h++yn++tpflllk+
+  tr|A0A2R8RTF7|A0A2R8RTF7_DANRE 24 LRESCLTPDQFHSCFWCCFTLQNWLLDIGRPI---FCPLDWFPLNKPSAADYCHMLYNITTPFLLLKI 88
+                                    57889999***********************6...79*****************************96 PP
+
+  == domain 2  score: 287.2 bits;  conditional E-value: 7.1e-90
+                            CLN6 134 idsfellyyydeslghllwyipfflilflyftgcftkvkaekklplsallllapsslyywylvtegqifilfiltflam 212
+                                     idsfell+yydeslg ++wy+p+flilflyftgcft vkaekk+p+sa++ll+ps+lyywylvtegqifi fi+tf+am
+  tr|A0A2R8RTF7|A0A2R8RTF7_DANRE  88 IDSFELLQYYDESLGLCMWYVPLFLILFLYFTGCFTIVKAEKKMPVSAWILLGPSGLYYWYLVTEGQIFIPFIFTFFAM 166
+                                     8****************************************************************************** PP
+
+                            CLN6 213 lavvlhqkrkgllldsnglfllysfsitlllvavwvallwndkvlrkkypgvlyvpepwalytlhikd 280
+                                     +a+vlhqkrkg+l+dsnglfllysfsi+l+lv+vwva+lwndkvlrkkypgv+y+pepwalytlh++d
+  tr|A0A2R8RTF7|A0A2R8RTF7_DANRE 167 MATVLHQKRKGFLPDSNGLFLLYSFSISLFLVSVWVACLWNDKVLRKKYPGVMYIPEPWALYTLHLRD 234
+                                     *****************************************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (241 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       699  (0.0364461); expected 383.6 (0.02)
+Passed bias filter:                      324  (0.0168935); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.22s 00:00:00.64 Elapsed: 00:00:00.70
+# Mc/sec: 1109.30
+//
+[ok]

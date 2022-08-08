@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047603.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047603
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ34090.1  [L=81]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-06   26.6   0.1    9.4e-06   26.1   0.1    1.3  1  SAM_1     SAM domain (Sterile alpha motif)
+    8.3e-05   22.7   0.0    0.00015   21.9   0.0    1.4  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.1   9.8e-10   9.4e-06      28      63 ..       1      36 [.       1      37 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 9.8e-10
+                TSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+       SAM_1 28 eidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63
+                +idgd L  l+ d L+++gv+++GH  +Il +I++L
+  EPZ34090.1  1 MIDGDVLPYLDYDYLKEIGVSKIGHCARILGEIKHL 36
+                69*******************************987 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.9   0.0   1.5e-08   0.00015      30      65 ..       2      36 ..       1      37 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 21.9 bits;  conditional E-value: 1.5e-08
+                CSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+       SAM_2 30 itgaelllrlteedLkrlGitsvghrkkilkkiqel 65
+                i+g ++l++l+ + Lk++G+++ gh  +il +i+ l
+  EPZ34090.1  2 IDG-DVLPYLDYDYLKEIGVSKIGHCARILGEIKHL 36
+                899.**************************999976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (81 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       478  (0.0249231); expected 383.6 (0.02)
+Passed bias filter:                      396  (0.0206476); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.22s 00:00:00.54 Elapsed: 00:00:00.68
+# Mc/sec: 385.29
+//
+[ok]

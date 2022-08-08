@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031963.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031963
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86CW5|Q86CW5_DROME  [L=1413]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.7e-33  114.3  26.6    1.9e-20   73.1   6.6    6.4  2  MADF_DNA_bdg    Alcohol dehydrogenase transcription factor My
+    4.2e-05   23.5  11.6    0.00013   21.9   2.1    4.6  1  Myb_DNA-bind_5  Myb/SANT-like DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> MADF_DNA_bdg  Alcohol dehydrogenase transcription factor Myb/SANT-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.1   6.6   1.9e-24   1.9e-20       1      84 []      59     149 ..      59     149 .. 0.96
+   2 !   32.9   0.1   6.8e-12   6.6e-08       1      64 [.     214     275 ..     214     290 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 73.1 bits;  conditional E-value: 1.9e-24
+            MADF_DNA_bdg   1 LIelvrkrpvLwdrshpdyrnkeareeaweeiaeelnsdvsveeckkkwknLRdsyrrelrkkk.....tesgeskksrwr....yy 78 
+                             LI+lvr++p+L+d +hp++r+ ++re++w++ia++l+  +++++ck+ w+ LR++y+r++r+ +       ++++++ rwr    y+
+  tr|Q86CW5|Q86CW5_DROME  59 LIALVRRQPLLYDARHPKFRDVAQREKQWKKIASRLA--TNATNCKRSWSALRYKYQRHVRRLRnfhrsAIQKDRAALRWRpcmeYE 143
+                             8************************************..67777************************99999999999999999** PP
+
+            MADF_DNA_bdg  79 eelsFL 84 
+                             ee++F+
+  tr|Q86CW5|Q86CW5_DROME 144 EEMRFM 149
+                             *****8 PP
+
+  == domain 2  score: 32.9 bits;  conditional E-value: 6.8e-12
+            MADF_DNA_bdg   1 LIelvrkrpvLwdrshpdyrnkeareeaweeiaeelnsdvsveeckkkwknLRdsyrrelrkkk 64 
+                             LIe+v ++p+L+d++   y+n   r  +w++i+ e++   ++++++k w +L ++y+ el ++ 
+  tr|Q86CW5|Q86CW5_DROME 214 LIEAVSAYPLLYDSTCTGYQNTRHRFLIWSAISNEVH--DKATKLMKCWLKLQTRYEWELIHRP 275
+                             8************************************..77777*************9997765 PP
+
+>> Myb_DNA-bind_5  Myb/SANT-like DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.9   2.1   1.4e-08   0.00013      10      73 ..      56     120 ..      52     124 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 21.9 bits;  conditional E-value: 1.4e-08
+          Myb_DNA-bind_5  10 kevLvelvekrksilegkksdaatnkaKnraWkeIaervna.lgsveRtaeelkkkwedlkrrak 73 
+                             +++L++lv+++  +   ++ + ++ +++++ Wk+Ia r+ +  + ++R++ +l+ k+++  rr +
+  tr|Q86CW5|Q86CW5_DROME  56 ERLLIALVRRQPLLYDARHPKFRDVAQREKQWKKIASRLATnATNCKRSWSALRYKYQRHVRRLR 120
+                             67899**********************************9955558***********99877766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1413 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       656  (0.0342041); expected 383.6 (0.02)
+Passed bias filter:                      412  (0.0214818); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.19s 00:00:00.82 Elapsed: 00:00:00.81
+# Mc/sec: 5663.16
+//
+[ok]

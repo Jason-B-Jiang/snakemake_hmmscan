@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026083.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026083
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9N5S7|Q9N5S7_CAEEL  [L=257]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.1e-12   45.9   0.3    1.5e-11   44.4   0.0    1.9  1  Thioredoxin_7   Thioredoxin-like
+    6.5e-06   26.3   0.0    1.2e-05   25.4   0.0    1.5  1  Thioredox_DsbH  Protein of unknown function, DUF255
+
+
+Domain annotation for each model (and alignments):
+>> Thioredoxin_7  Thioredoxin-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.4   0.0   1.6e-15   1.5e-11       2      82 ..      36     118 ..      35     119 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 44.4 bits;  conditional E-value: 1.6e-15
+                             --SSHHHHHHHHHHHT--EEEEE--TT-HHHHHHHHHHHH-HHHHH.HH..HT-EEEEESS--S-GGG..-TT---SSEEEEE- CS
+           Thioredoxin_7   2 wlsdleealaaaaergkpvlvdfgadwcftCqvlerdvlsdeevkaala..kkfvllrldvterdani.ieldeqgvPvvafld 82 
+                             w   ++ a+  a+  +kp++  ++ +wc+ C+ l+r++ s+++ ++++    kfv+++++++e+ +   +++d+ ++P ++fld
+  tr|Q9N5S7|Q9N5S7_CAEEL  36 WVE-FDKAIGIAKDLNKPIFFLIHKTWCGACKSLKRELKSSPKTDELIIlsRKFVMVNVEDDEEPEDPkYSPDGGYIPRILFLD 118
+                             554.8999999*********************************9964334**********888887778*************8 PP
+
+>> Thioredox_DsbH  Protein of unknown function, DUF255
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.4   0.0   1.3e-09   1.2e-05      18      85 ..      32     100 ..      17     125 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.4 bits;  conditional E-value: 1.3e-09
+          Thioredox_DsbH  18 npvdWypwgeealekAkeedkpillsiGyaachWChvmekesfedeevaa..llnesfvsvkvDreerPd 85 
+                             + ++W +++ +a+  Ak+ +kpi++ i  ++c  C+ +++e  + +++ +  +l ++fv+v v+ +e P+
+  tr|Q9N5S7|Q9N5S7_CAEEL  32 SAIEWVEFD-KAIGIAKDLNKPIFFLIHKTWCGACKSLKRELKSSPKTDEliILSRKFVMVNVEDDEEPE 100
+                             679999996.69*****************************99999998733689*************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (257 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3836  (0.20001); expected 383.6 (0.02)
+Passed bias filter:                     1102  (0.0574587); expected 383.6 (0.02)
+Passed Vit filter:                       692  (0.0360811); expected 19.2 (0.001)
+Passed Fwd filter:                       182  (0.00948955); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.16u 0.28s 00:00:01.44 Elapsed: 00:00:01.13
+# Mc/sec: 736.07
+//
+[ok]

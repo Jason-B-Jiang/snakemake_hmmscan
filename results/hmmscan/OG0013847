@@ -1,0 +1,201 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013847.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013847
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|B0V3F8|PRKRA_DANRE  [L=282]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.6e-27   96.1   0.0    4.6e-12   46.6   0.0    3.2  2  dsrm       Double-stranded RNA binding motif
+    7.4e-13   48.7   0.8      1e-09   38.6   0.0    2.6  1  Staufen_C  Staufen C-terminal domain
+    4.1e-09   36.7   3.8    6.2e-05   23.3   0.1    4.0  0  DND1_DSRM  double strand RNA binding domain from DEAD END PRO
+
+
+Domain annotation for each model (and alignments):
+>> dsrm  Double-stranded RNA binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6   0.0   7.2e-16   4.6e-12       1      67 []      11      75 ..      11      75 .. 0.94
+   2 !   41.2   0.0   3.4e-14   2.2e-10       1      67 []     100     165 ..     100     165 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 7.2e-16
+                           HHHHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHHH CS
+                   dsrm  1 pKskLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalekL 67
+                           p+++L+ey  k    p ye +  +g +h  p+F  +v++ g+  ++G gs+KK A++ AA++al+ L
+  sp|B0V3F8|PRKRA_DANRE 11 PIQLLHEYGIKISSAPKYELIHADGDAHQ-PSFMFSVTI-GEVTCKGRGSTKKAAKHEAAEAALKLL 75
+                           789*************************9.*********.66666*******************976 PP
+
+  == domain 2  score: 41.2 bits;  conditional E-value: 3.4e-14
+                            HHHHHHH.HHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHHH CS
+                   dsrm   1 pKskLqe.ycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalekL 67 
+                            p+  Lqe  +q+ +  p+y++  e+gp h+ ++F++ ++++g +  +G+gs+KK+A  +AA+++++kL
+  sp|B0V3F8|PRKRA_DANRE 100 PVGILQElAMQRVWCLPEYVVFMETGPGHM-KEFTIACRLEGLEE-TGSGSSKKLARRAAAENMIAKL 165
+                            6778***56666667777777777777777.9********99998.*******************997 PP
+
+>> Staufen_C  Staufen C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6   0.0   1.6e-13     1e-09      44     107 ..     211     275 ..     180     278 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 1.6e-13
+                            HHHHHHHHHHH---EEEEEE---T.TS-EEEEEEE-SSS-EEEEEEESSHHHHHHHHHHHHHHHH CS
+              Staufen_C  44 kqqLeylarvqgfqveysDfPkgn.kkeflslvtlstePvqllhGiGssleasHdeAAlsaLklL 107
+                             q L+ ++  +gfqv y D    + + +++ lv lst+Pv ++hG+G +  ++H+ AA +aL+ +
+  sp|B0V3F8|PRKRA_DANRE 211 IQMLLEISLELGFQVTYIDIDELTvNGQYQCLVELSTRPVTVCHGSGVTSSNAHNAAAHNALQYI 275
+                            56677777789********988652679**********************************875 PP
+
+>> DND1_DSRM  double strand RNA binding domain from DEAD END PROTEIN 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (282 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       376  (0.0196048); expected 383.6 (0.02)
+Passed bias filter:                      321  (0.0167371); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.37u 0.23s 00:00:00.60 Elapsed: 00:00:00.73
+# Mc/sec: 1251.20
+//
+Query:       tr|F1Q8C8|F1Q8C8_DANRE  [L=289]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.8e-27   95.9   0.0    4.8e-12   46.5   0.0    3.2  2  dsrm       Double-stranded RNA binding motif
+    4.8e-13   49.3   0.1    1.1e-09   38.5   0.0    2.6  1  Staufen_C  Staufen C-terminal domain
+    4.7e-09   36.5   3.8    6.5e-05   23.2   0.1    4.0  0  DND1_DSRM  double strand RNA binding domain from DEAD END PRO
+
+
+Domain annotation for each model (and alignments):
+>> dsrm  Double-stranded RNA binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.5   0.0   7.5e-16   4.8e-12       1      67 []      18      82 ..      18      82 .. 0.94
+   2 !   41.1   0.0   3.5e-14   2.3e-10       1      67 []     107     172 ..     107     172 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 46.5 bits;  conditional E-value: 7.5e-16
+                            HHHHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHHH CS
+                    dsrm  1 pKskLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalekL 67
+                            p+++L+ey  k    p ye +  +g +h  p+F  +v++ g+  ++G gs+KK A++ AA++al+ L
+  tr|F1Q8C8|F1Q8C8_DANRE 18 PIQLLHEYGIKISSAPKYELIHADGDAHQ-PSFMFSVTI-GEVTCKGRGSTKKAAKHEAAEAALKLL 82
+                            789*************************9.*********.66666*******************976 PP
+
+  == domain 2  score: 41.1 bits;  conditional E-value: 3.5e-14
+                             HHHHHHH.HHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHHH CS
+                    dsrm   1 pKskLqe.ycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalekL 67 
+                             p+  Lqe  +q+ +  p+y++  e+gp h+ ++F++ ++++g +  +G+gs+KK+A  +AA+++++kL
+  tr|F1Q8C8|F1Q8C8_DANRE 107 PVGILQElAMQRVWCLPEYVVFMETGPGHM-KEFTIACRLEGLEE-TGSGSSKKLARRAAAENMIAKL 172
+                             6778***56666667777777777777777.9********99998.*******************997 PP
+
+>> Staufen_C  Staufen C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.5   0.0   1.7e-13   1.1e-09      44     107 ..     218     282 ..     187     285 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 38.5 bits;  conditional E-value: 1.7e-13
+                             HHHHHHHHHHH---EEEEEE---T.TS-EEEEEEE-SSS-EEEEEEESSHHHHHHHHHHHHHHHH CS
+               Staufen_C  44 kqqLeylarvqgfqveysDfPkgn.kkeflslvtlstePvqllhGiGssleasHdeAAlsaLklL 107
+                              q L+ ++  +gfqv y D    + + +++ lv lst+Pv ++hG+G +  ++H+ AA +aL+ +
+  tr|F1Q8C8|F1Q8C8_DANRE 218 IQMLLEISLELGFQVTYIDIDELTvNGQYQCLVELSTRPVTVCHGSGVTSSNAHNAAAHNALQYI 282
+                             56677777789********988652679**********************************875 PP
+
+>> DND1_DSRM  double strand RNA binding domain from DEAD END PROTEIN 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (289 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       396  (0.0206476); expected 383.6 (0.02)
+Passed bias filter:                      337  (0.0175713); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.58
+# Mc/sec: 1606.40
+//
+Query:       sp|O75569|PRKRA_HUMAN  [L=313]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.8e-32  112.0   0.3    1.3e-13   51.5   0.0    3.3  2  dsrm       Double-stranded RNA binding motif
+    7.5e-10   39.1   0.6    2.7e-07   30.8   0.0    3.3  1  Staufen_C  Staufen C-terminal domain
+    8.1e-08   32.6   2.1     0.0064   16.9   0.2    3.8  0  DND1_DSRM  double strand RNA binding domain from DEAD END PRO
+
+
+Domain annotation for each model (and alignments):
+>> dsrm  Double-stranded RNA binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.5   0.0     2e-17   1.3e-13       1      67 []      35      99 ..      35      99 .. 0.94
+   2 !   49.9   0.1   6.6e-17   4.2e-13       1      66 [.     127     191 ..     127     192 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 51.5 bits;  conditional E-value: 2e-17
+                           HHHHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHHH CS
+                   dsrm  1 pKskLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalekL 67
+                           p+++L+ey  k++  p+ye+ +++++ h  p+F+ +v+v++ ++ +G+g++KK+A+++AA++a++ L
+  sp|O75569|PRKRA_HUMAN 35 PIQVLHEYGMKTKNIPVYECERSDVQIHV-PTFTFRVTVGDITC-TGEGTSKKLAKHRAAEAAINIL 99
+                           7899**********************999.*********55555.*******************976 PP
+
+  == domain 2  score: 49.9 bits;  conditional E-value: 6.6e-17
+                            HHHHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHH CS
+                   dsrm   1 pKskLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalek 66 
+                            p+  Lqe++ + g++++ ++ s+eg+p +++++++ +++ +  + +G+g++KK+A+ +AA++ l+k
+  sp|O75569|PRKRA_HUMAN 127 PIGSLQELAIHHGWRLPEYTLSQEGGPAHKREYTTICRL-ESFMETGKGASKKQAKRNAAEKFLAK 191
+                            6788*************************9*********.99999*****************9875 PP
+
+>> Staufen_C  Staufen C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8   0.0   4.2e-11   2.7e-07      44     107 ..     242     306 ..     218     310 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 4.2e-11
+                            HHHHHHHHHHH---EEEEEE--.-TTS-EEEEEEE-SSS-EEEEEEESSHHHHHHHHHHHHHHHH CS
+              Staufen_C  44 kqqLeylarvqgfqveysDfPk.gnkkeflslvtlstePvqllhGiGssleasHdeAAlsaLklL 107
+                             q L+ +a+ qgf++ y D      + +++ l  lst+P  ++hG+G s  ++   AA +aL+ L
+  sp|O75569|PRKRA_HUMAN 242 IQLLSEIAKEQGFNITYLDIDElSANGQYQCLAELSTSPITVCHGSGISCGNAQSDAAHNALQYL 306
+                            577999*************9872456799*********************************988 PP
+
+>> DND1_DSRM  double strand RNA binding domain from DEAD END PROTEIN 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (313 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       532  (0.0277387); expected 383.6 (0.02)
+Passed bias filter:                      475  (0.0247667); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.67
+# Mc/sec: 1508.33
+//
+[ok]

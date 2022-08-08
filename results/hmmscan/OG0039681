@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039681.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039681
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P42081|CD86_HUMAN  [L=329]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.4e-09   35.9   2.8    8.1e-07   29.4   0.1    2.9  1  Ig_2      Immunoglobulin domain
+    1.1e-07   32.1   0.6    2.7e-07   30.8   0.1    1.9  1  V-set     Immunoglobulin V-set domain
+
+
+Domain annotation for each model (and alignments):
+>> Ig_2  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.1   8.4e-11   8.1e-07       2      78 ..     139     235 ..     138     236 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 8.4e-11
+                  Ig_2   2 pvlrpsptvvtegepvtLtCs.asgnpppk...vqwykggevin......sspn........ffinavs...aedsgtYtCrarntkgg 69 
+                           p++ p  +++te+ +++LtCs ++g+p+pk   v ++ ++++i+      +s++        +++++vs   +++++t +C+ +++k+ 
+  sp|P42081|CD86_HUMAN 139 PEIVPI-SNITENVYINLTCSsIHGYPEPKkmsVLLRTKNSTIEydgvmqKSQDnvtelydvSISLSVSfpdVTSNMTIFCILETDKTR 226
+                           666666.99************888**9998899*******99999998886666799999986667766666***************** PP
+
+                  Ig_2  70 evsrpvelt 78 
+                             s+p+ ++
+  sp|P42081|CD86_HUMAN 227 LLSSPFSIE 235
+                           ******986 PP
+
+>> V-set  Immunoglobulin V-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8   0.1   2.8e-11   2.7e-07       8      97 ..      30     117 ..      24     132 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 2.8e-11
+                           EETTSEEEEEEEECSS..SSTTCCEEEEEEEETTSSEEEEEEEEST..CEEEEESTTTEEEEEEGCTTEEEEEESSESGGG-EEEEEEE CS
+                 V-set   8 vaeGesvtLpCtlsss..eseeslsvyWyrqppgkkpteliayysn..kskeekkkgrvslrkdpsngdfsltiqnltlsDsGtYtCav 92 
+                           +  +e++ LpC++ +s  +s  +l v W  q++      l+++ +   k+k  +   ++ +r+++++ + +l+++nl+  D G+Y+C +
+  sp|P42081|CD86_HUMAN  30 AYFNETADLPCQFANSqnQSLSELVVFWQDQEN------LVLNEVYlgKEKFDSVHSKYMGRTSFDSDSWTLRLHNLQIKDKGLYQCII 112
+                           556799*****9998844555566666666553......3444444214444444777888889999********************98 PP
+
+                           ETSSE CS
+                 V-set  93 vpkge 97 
+                           ++k+ 
+  sp|P42081|CD86_HUMAN 113 HHKKP 117
+                           55443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (329 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1301  (0.0678346); expected 383.6 (0.02)
+Passed bias filter:                      788  (0.0410866); expected 383.6 (0.02)
+Passed Vit filter:                        88  (0.00458835); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.65
+# Mc/sec: 1639.05
+//
+[ok]

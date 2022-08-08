@@ -1,0 +1,1633 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0002248.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0002248
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VIV0|Q9VIV0_DROME  [L=1309]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-24   85.2   4.9    6.6e-24   85.2   4.9    2.2  1  RhoGEF    RhoGEF domain
+    4.6e-19   68.6   0.0    1.4e-18   67.0   0.0    1.9  1  PH_16     PH domain
+
+
+Domain annotation for each model (and alignments):
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.2   4.9   6.9e-28   6.6e-24       2     180 ..     447     623 ..     446     626 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 85.2 bits;  conditional E-value: 6.9e-28
+                             HHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.HHHHTTSS-S-SHHHHHHHHSTH CS
+                  RhoGEF   2 ikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlkkeskeekeaesigdvflkladkf 88 
+                             i E++ TE++++++L v+++v+++ l++   +++ +++++F  ++++ +lh + +l++L+ ++    +e++  +si+d++l++++  
+  tr|Q9VIV0|Q9VIV0_DROME 447 IYEFIMTEKHHCQTLIVMQKVFVESLER--HFPSLNLNSMFPRLQQLTDLH-TCFLRQLRLKQ----REQHMVDSIADILLDFFSLE 526
+                             78**********************9995..59*******************.99999787777....678889***********664 PP
+
+                             HH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHHHHH CS
+                  RhoGEF  89 kk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdyealk 169
+                             +       Y e+c+n+ +al+ +k ++ +++ f+++ + + ++p ++k  + ++++   qRl++YpLL++ llk+  +++ + ++l+
+  tr|Q9VIV0|Q9VIV0_DROME 527 QAqclrlaYGEFCANHRSALDQFKLCL-TEPSFAEWYKHCLQNPLLKKKGIPECILFVTQRLTKYPLLIEPLLKSARDNKLETDKLQ 612
+                             4379*********************87.*********************************************************** PP
+
+                             HHHHHHHHHHH CS
+                  RhoGEF 170 kaleaikevas 180
+                              al+ +k+++ 
+  tr|Q9VIV0|Q9VIV0_DROME 613 HALNLVKSLLV 623
+                             ******99875 PP
+
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.0   0.0   1.5e-22   1.4e-18       5     126 ..     656     774 ..     653     775 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 67.0 bits;  conditional E-value: 1.5e-22
+                   PH_16   5 eeFkkldlt...krkLihegeltwrkskgklvelhalLledilvlLqkk..deklvlkslstaveskdeKtlspiikLkklivreva 86 
+                             + F+k +l    +r+L ++g  t+ + + k++ + ++ l+d l +L+++   +k+ +++        ++K    ++ L+kl++re+a
+  tr|Q9VIV0|Q9VIV0_DROME 656 KPFRKTELGvesRRRLKFDGLATLMQGRAKTQLVLVVVLTDCLCFLSENsgHNKYSFFTP-------EHK--AGVVPLQKLLIREKA 733
+                             5688888877789**********************************7622578888888.......889..9*************9 PP
+
+                   PH_16  87 td.kkalflistsesdpqmyelvastkserktWlklieeav 126
+                                ++++++is+++  p+myel  +t ++++tW+++i++av
+  tr|Q9VIV0|Q9VIV0_DROME 734 GTeSRGIYIISSNPDFPEMYELKVQTPKDKNTWIQTIRQAV 774
+                             6549***********************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1309 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2497  (0.130194); expected 383.6 (0.02)
+Passed bias filter:                      815  (0.0424944); expected 383.6 (0.02)
+Passed Vit filter:                       108  (0.00563116); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.79u 0.28s 00:00:01.07 Elapsed: 00:00:00.84
+# Mc/sec: 5071.56
+//
+Query:       tr|M9PBE1|M9PBE1_DROME  [L=1319]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.7e-24   85.2   4.9    6.7e-24   85.2   4.9    2.2  1  RhoGEF    RhoGEF domain
+    4.6e-19   68.6   0.0    1.4e-18   67.0   0.0    1.9  1  PH_16     PH domain
+
+
+Domain annotation for each model (and alignments):
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.2   4.9   6.9e-28   6.7e-24       2     180 ..     447     623 ..     446     626 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 85.2 bits;  conditional E-value: 6.9e-28
+                             HHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.HHHHTTSS-S-SHHHHHHHHSTH CS
+                  RhoGEF   2 ikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlkkeskeekeaesigdvflkladkf 88 
+                             i E++ TE++++++L v+++v+++ l++   +++ +++++F  ++++ +lh + +l++L+ ++    +e++  +si+d++l++++  
+  tr|M9PBE1|M9PBE1_DROME 447 IYEFIMTEKHHCQTLIVMQKVFVESLER--HFPSLNLNSMFPRLQQLTDLH-TCFLRQLRLKQ----REQHMVDSIADILLDFFSLE 526
+                             78**********************9995..59*******************.99999787777....678889***********664 PP
+
+                             HH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHHHHH CS
+                  RhoGEF  89 kk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdyealk 169
+                             +       Y e+c+n+ +al+ +k ++ +++ f+++ + + ++p ++k  + ++++   qRl++YpLL++ llk+  +++ + ++l+
+  tr|M9PBE1|M9PBE1_DROME 527 QAqclrlaYGEFCANHRSALDQFKLCL-TEPSFAEWYKHCLQNPLLKKKGIPECILFVTQRLTKYPLLIEPLLKSARDNKLETDKLQ 612
+                             4379*********************87.*********************************************************** PP
+
+                             HHHHHHHHHHH CS
+                  RhoGEF 170 kaleaikevas 180
+                              al+ +k+++ 
+  tr|M9PBE1|M9PBE1_DROME 613 HALNLVKSLLV 623
+                             ******99875 PP
+
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.0   0.0   1.5e-22   1.4e-18       5     126 ..     656     774 ..     653     775 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 67.0 bits;  conditional E-value: 1.5e-22
+                   PH_16   5 eeFkkldlt...krkLihegeltwrkskgklvelhalLledilvlLqkk..deklvlkslstaveskdeKtlspiikLkklivreva 86 
+                             + F+k +l    +r+L ++g  t+ + + k++ + ++ l+d l +L+++   +k+ +++        ++K    ++ L+kl++re+a
+  tr|M9PBE1|M9PBE1_DROME 656 KPFRKTELGvesRRRLKFDGLATLMQGRAKTQLVLVVVLTDCLCFLSENsgHNKYSFFTP-------EHK--AGVVPLQKLLIREKA 733
+                             5688888877789**********************************7622578888888.......889..9*************9 PP
+
+                   PH_16  87 td.kkalflistsesdpqmyelvastkserktWlklieeav 126
+                                ++++++is+++  p+myel  +t ++++tW+++i++av
+  tr|M9PBE1|M9PBE1_DROME 734 GTeSRGIYIISSNPDFPEMYELKVQTPKDKNTWIQTIRQAV 774
+                             6549***********************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1319 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2509  (0.13082); expected 383.6 (0.02)
+Passed bias filter:                      826  (0.0430679); expected 383.6 (0.02)
+Passed Vit filter:                       108  (0.00563116); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.78u 0.21s 00:00:00.99 Elapsed: 00:00:00.90
+# Mc/sec: 4770.24
+//
+Query:       tr|F1QCK8|F1QCK8_DANRE  [L=1012]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      6e-41  139.3   0.2    1.2e-40  138.3   0.2    1.6  1  PH_16     PH domain
+    7.1e-31  107.9   1.6    7.1e-31  107.9   1.6    2.2  1  RhoGEF    RhoGEF domain
+    1.1e-05   25.9   0.0    2.8e-05   24.7   0.0    1.7  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.3   0.2   1.9e-44   1.2e-40       3     127 .]     328     445 ..     326     445 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 138.3 bits;  conditional E-value: 1.9e-44
+                   PH_16   3 lgeeFkkldlt..krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevat 87 
+                             +g+ F+k+dl   +rkL++eg++ w+ ++g+l+++ alLl+d+lvlLq+kd+++v+ ++       d+K  +++i+L+klivreva+
+  tr|F1QCK8|F1QCK8_DANRE 328 DGRVFRKEDLSqgRRKLLFEGTVNWKAASGRLKDILALLLTDVLVLLQEKDQRYVFSTV-------DNK--PSVISLQKLIVREVAH 405
+                             6789******9999*********************************************.......***..**************** PP
+
+                   PH_16  88 dkkalflistsesdpqmyelvastkserktWlklieeave 127
+                             +++a+fli++s+++p+mye+++ +k++r+tW++ i++ave
+  tr|F1QCK8|F1QCK8_DANRE 406 EERAMFLICASSNEPEMYEIHTASKEDRNTWITHIRQAVE 445
+                             **************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.9   1.6   1.1e-34   7.1e-31       1     182 [.     108     298 ..     108     299 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 107.9 bits;  conditional E-value: 1.1e-34
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....H.HHHTTSS-S-SHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...k.eskeekeaesigdvflk 83 
+                             vi El++TE ++vr+Lk++ +vy + l+e+  l e+ ++ +F  ++++lelh +++l++L+er     + +s+ +  +++++d++ +
+  tr|F1QCK8|F1QCK8_DANRE 108 VIYELIQTEIHHVRTLKIMLRVYARELREALQLDERRLDCLFPRLDSLLELH-NHFLSRLRERRVeslQpGSERNYAINKLSDILIS 193
+                             799**********************9*998899999999*************.8888888887765651455555556666666555 PP
+
+                             HHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHH CS
+                  RhoGEF  84 ladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpd 164
+                              ++          Y ++cs++++a+ ++ke++++nkkf+++++++++ + +++l   +++++  qR+++Yp+LL+ +l +t++  ++
+  tr|F1QCK8|F1QCK8_DANRE 194 QFSGELGdrmkesYGDFCSRHTEAVNHYKEQLQSNKKFQNLMRKLSNLSIVRRLGVPECILLVTQRITKYPVLLERILHNTEAGTEE 280
+                             4443222467779************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHHHH CS
+                  RhoGEF 165 yealkkaleaikevasqi 182
+                             +e l +al  ik+v  q+
+  tr|F1QCK8|F1QCK8_DANRE 281 HEGLAQALGLIKDVIVQV 298
+                             *************98876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1012 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2270  (0.118359); expected 383.6 (0.02)
+Passed bias filter:                      558  (0.0290943); expected 383.6 (0.02)
+Passed Vit filter:                        88  (0.00458835); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.73u 0.20s 00:00:00.93 Elapsed: 00:00:00.69
+# Mc/sec: 4712.77
+//
+Query:       tr|A2RUX1|A2RUX1_DANRE  [L=935]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-38  130.5   0.1    8.3e-38  129.2   0.1    1.7  1  PH_16     PH domain
+    1.2e-30  107.2   0.3      3e-30  105.9   0.3    1.7  1  RhoGEF    RhoGEF domain
+      3e-06   27.1   5.7    5.4e-06   26.3   5.7    1.4  0  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.2   0.1   1.3e-41   8.3e-38       4     126 ..     466     578 ..     463     579 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.2 bits;  conditional E-value: 1.3e-41
+                   PH_16   4 geeFkkldltkrkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevatdkk 90 
+                             g+ F+  +l +r+Liheg+l w++ +++l+++++lL++dilv+Lq+kd++++++sl        +K  s++++L++l+vr++a++++
+  tr|A2RUX1|A2RUX1_DANRE 466 GALFRPAELLRRQLIHEGTLLWKTPSSRLKDVQVLLMTDILVFLQEKDQRFIFASL--------DK--SAVVSLQSLLVRDIANQER 542
+                             678*****************************************************........56..9****************** PP
+
+                   PH_16  91 alflistsesdpqmyelvastkserktWlklieeav 126
+                             +lflis+++s p+myel a +k +r+tWl+li++++
+  tr|A2RUX1|A2RUX1_DANRE 543 GLFLISSESSPPEMYELYAASKDDRNTWLRLIQQTI 578
+                             **********************************98 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.9   0.3   4.7e-34     3e-30       1     180 [.     245     433 ..     245     436 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 105.9 bits;  conditional E-value: 4.7e-34
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....H.HHHTTSS-S-SHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...k.eskeekeaesigdvflk 83 
+                             vi El++TE ++vr+L+++  v+++ + ee+ l++  ++ +F ++e +l++h +++l++L +r     + +s+++ ++++i+dv+ k
+  tr|A2RUX1|A2RUX1_DANRE 245 VIYELIQTELHHVRTLRIMDCVFRRGMLEEVQLEPGVVHALFPCLERLLSIH-THFLTQLLARRAhslQpGSTNNFTITQISDVLIK 330
+                             799*********************88888999********************.7777767666664552688999999******766 PP
+
+                             HHST.HHH.....HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHH CS
+                  RhoGEF  84 ladk.fkk.....YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpd 164
+                              ++  f       Yse+cs++ ka+kl+kel++++k+++ f++++++ p +++  +++++++  qR+++Yp+LL+ +  +t+++ ++
+  tr|A2RUX1|A2RUX1_DANRE 331 QFSGqFADdmlkaYSEFCSRHMKAVKLYKELLARDKRLQLFIRRVSRGPLLRRHGFQECILLVTQRITKYPVLLQRIHDNTKDNLEE 417
+                             6655366589999************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHH CS
+                  RhoGEF 165 yealkkaleaikevas 180
+                                l++al +++e++ 
+  tr|A2RUX1|A2RUX1_DANRE 418 AAGLSQALACLRELLC 433
+                             **********999875 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (935 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1211  (0.063142); expected 383.6 (0.02)
+Passed bias filter:                      561  (0.0292507); expected 383.6 (0.02)
+Passed Vit filter:                        72  (0.00375411); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.57u 0.14s 00:00:00.71 Elapsed: 00:00:00.61
+# Mc/sec: 4939.65
+//
+Query:       tr|F1REH9|F1REH9_DANRE  [L=940]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-32  111.3   0.2    7.4e-32  109.9   0.2    1.8  1  PH_16     PH domain
+    6.5e-31  108.0   4.5    6.5e-31  108.0   4.5    2.4  1  RhoGEF    RhoGEF domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.9   0.2   7.7e-36   7.4e-32       3     127 .]     294     416 ..     292     416 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 109.9 bits;  conditional E-value: 7.7e-36
+                   PH_16   3 lgeeFkkldlt..krkLihegeltwrkskg.....klvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkkliv 82 
+                             +g+ F+++d+   krkL+heg l wr++++     k++++ +lLl+d+l+lL +kd +l ++sl       d K  +++i+L kliv
+  tr|F1REH9|F1REH9_DANRE 294 SGRVFRREDMLqgKRKLLHEGMLNWRVTNNkgkgdKHTDVIVLLLSDVLLLLLEKDSRLTFASL-------DGK--PAVISLLKLIV 371
+                             5678*****99899************998522223699**************************.......999..*********** PP
+
+                   PH_16  83 revatdkkalflistsesdpqmyelvastkserktWlklieeave 127
+                             re a+++ka+flis+s  +p+mye ++s+ +er+tW++ i +ave
+  tr|F1REH9|F1REH9_DANRE 372 REAAHNEKAMFLISASLDTPEMYEFHTSSAEERNTWTNKIWKAVE 416
+                             ****************************************99996 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.0   4.5   6.8e-35   6.5e-31       1     183 []      74     265 ..      74     265 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 108.0 bits;  conditional E-value: 6.8e-35
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....H.HHHTTSS-S-SHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...k.eskeekeaesigdvflk 83 
+                             vi+El++TE ++vr+Lk++ +vy++ l++   + e  ++ +F ++e++le+h +f+l++L+ r     + +s+++  ++++gd++ +
+  tr|F1REH9|F1REH9_DANRE  74 VIHELIQTEINHVRTLKIVLNVYIRELRNTLQMDETRLERLFPQVENLLEVH-QFFLDNLKLRRLdsmEpGSSQNYCIHNLGDILIT 159
+                             89**********************9999888999******************.*****99977654542677888888999999777 PP
+
+                             HHST.HHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSH CS
+                  RhoGEF  84 ladk.fkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshp 163
+                              ++  +        Y  +cs++++a+  +k l+++nkkf+++++++ + + +++l + +++++  qR+++Yp+L++ ++k+t+++++
+  tr|F1REH9|F1REH9_DANRE 160 QFSGeI-GsrlrylYGMFCSRHTDAVNFYKDLMQNNKKFQNLIRKICQLSIVRRLGIPEIILLITQRITKYPVLFERVIKYTEDESE 245
+                             775523.2599**************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHHHHHH CS
+                  RhoGEF 164 dyealkkaleaikevasqiN 183
+                             ++ +l k l+ +k+   q+N
+  tr|F1REH9|F1REH9_DANRE 246 EQMDLIKGLDFLKDTIAQVN 265
+                             ***************99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (940 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2202  (0.114813); expected 383.6 (0.02)
+Passed bias filter:                      457  (0.0238281); expected 383.6 (0.02)
+Passed Vit filter:                        74  (0.00385839); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.18s 00:00:00.83 Elapsed: 00:00:00.74
+# Mc/sec: 4103.28
+//
+Query:       tr|A0A0R4IPD6|A0A0R4IPD6_DANRE  [L=2539]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-40  138.0   0.8      3e-40  137.1   0.8    1.5  1  PH_16     PH domain
+    2.2e-33  116.1   0.9    2.2e-33  116.1   0.9    2.2  1  RhoGEF    RhoGEF domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  137.1   0.8   3.1e-44     3e-40       2     126 ..    1958    2074 ..    1957    2075 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 137.1 bits;  conditional E-value: 3.1e-44
+                           PH_16    2 klgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikL 77  
+                                      k+g++F+++dl   rkLih+g+l++++s+g+l++++alLl d++v+Lq+kd+k++++sl       d++  s++i+L
+  tr|A0A0R4IPD6|A0A0R4IPD6_DANRE 1958 KSGQMFAREDLLrGRKLIHDGPLQLKNSAGRLKDVQALLLRDVIVFLQEKDQKYIFASL-------DQR--STVISL 2025
+                                      6899******9878*********************************************.......999..****** PP
+
+                           PH_16   78 kklivrevatdkkalflistsesdpqmyelvastkserktWlklieeav 126 
+                                      +klivreva+++kalfli +  ++p+m+e+ +s+k+er+tW++li+ea+
+  tr|A0A0R4IPD6|A0A0R4IPD6_DANRE 2026 QKLIVREVANEEKALFLITAGIEKPEMVEVYTSSKEERNTWMQLIQEAM 2074
+                                      ***********************************************98 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.1   0.9   2.3e-37   2.2e-33       1     182 [.    1740    1929 ..    1740    1930 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 116.1 bits;  conditional E-value: 2.3e-37
+                                      HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.H...HHHTTSS- CS
+                          RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlkk...eskeekea 74  
+                                      vi El++TE ++vr+Lk++ +vy k l +e+ l+++ ++++F  ++++l+lh++f+ + L er k+   +++    +
+  tr|A0A0R4IPD6|A0A0R4IPD6_DANRE 1740 VIYELIQTEMHHVRTLKIMADVYSKGLLREVQLEAQTVEKMFPMLDDVLDLHTQFFSH-LLERKKEsgsQEEGGFVI 1815
+                                      799*********************99999999********************666655.555555335567778899 PP
+
+                                      S-SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHH CS
+                          RhoGEF   75 esigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlp 145 
+                                      ++igdv+ + ++  +       Y ++c ++++a+  +kel  k+k+f+af+++  ++p +++l++ +++++  qR++
+  tr|A0A0R4IPD6|A0A0R4IPD6_DANRE 1816 QRIGDVLVSQFSGSSAermkkvYGKFCGRHNEAVNFYKELHTKDKRFQAFIKKKMSSPVVRRLSIPECILLVTQRIT 1892
+                                      ******9888877554578899******************************************************* PP
+
+                                      HHHHHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF  146 rYpLLLkellkhtpeshpdyealkkaleaikevasqi 182 
+                                      +Yp+LL+ +l+ht+e+++d+ ++++ l+ +kev   +
+  tr|A0A0R4IPD6|A0A0R4IPD6_DANRE 1893 KYPVLLQRILQHTKENEEDHADVSQGLKLVKEVIAAV 1929
+                                      ********************************98766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2539 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2828  (0.147453); expected 383.6 (0.02)
+Passed bias filter:                      601  (0.0313364); expected 383.6 (0.02)
+Passed Vit filter:                       185  (0.00964597); expected 19.2 (0.001)
+Passed Fwd filter:                        38  (0.00198133); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.47u 0.25s 00:00:01.72 Elapsed: 00:00:01.12
+# Mc/sec: 7373.78
+//
+Query:       tr|F1RB67|F1RB67_DANRE  [L=1375]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-41  140.2   1.7    7.3e-41  139.0   0.1    2.5  1  PH_16     PH domain
+    9.6e-33  114.0   2.2    9.6e-33  114.0   2.2    2.3  1  RhoGEF    RhoGEF domain
+    1.4e-07   31.4   6.8    2.7e-07   30.5   6.8    1.5  1  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+    3.9e-07   30.6   0.2      6e-05   23.6   0.0    3.1  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.0   0.1   1.5e-44   7.3e-41       2     126 ..     805     921 ..     804     922 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 139.0 bits;  conditional E-value: 1.5e-44
+                   PH_16   2 klgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevat 87 
+                             k+g++F+++dl   r+L+h+g+l++++++g+l+++halLl+d+lv+Lq+kd+k+v++sl       d++   ++i+L+klivreva+
+  tr|F1RB67|F1RB67_DANRE 805 KSGQMFAREDLVrGRRLLHDGPLQLKNTAGRLKDVHALLLSDVLVFLQEKDQKYVFASL-------DQR--ATVISLQKLIVREVAH 882
+                             6899*******978*********************************************.......998..9*************** PP
+
+                   PH_16  88 dkkalflistsesdpqmyelvastkserktWlklieeav 126
+                             ++++lfli +   +p+m+e++as+++er+tW+++i++a+
+  tr|F1RB67|F1RB67_DANRE 883 EERGLFLITAGIANPEMVEVHASSREERNTWMQIIQDAM 921
+                             *************************************98 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.0   2.2     2e-36   9.6e-33       1     182 [.     587     776 ..     587     777 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 114.0 bits;  conditional E-value: 2e-36
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.H...HHHTTSS-S-SHHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlkk...eskeekeaesigdvflkl 84 
+                             vi El++TE +++r+L+++ +vy k l     l+++ ++++F  ++++lelh sf++++L er k+   + ++   +++igd++ + 
+  tr|F1RB67|F1RB67_DANRE 587 VIYELIQTEMHHLRTLRIMCDVYSKGLLMDLQLEPQAVEKMFPMLDDLLELH-SFFFSALLERKKEarlDGTDGFLIHRIGDLLVSQ 672
+                             799*********************77776668********************.9999999999984445566777789999997777 PP
+
+                             HSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHH CS
+                  RhoGEF  85 adkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdy 165
+                             +++ +       Y ++cs++++a+  +k l +++k+f+af+++  +++ +++l++ +++++  qR+++Yp+LL+ +l+ht+e+++d+
+  tr|F1RB67|F1RB67_DANRE 673 FSDSNAesmkriYGKFCSRHNEAVNFYKDLHARDKRFQAFIRKKMSSSVVRRLSIPECILLVTQRITKYPVLLQRILQHTKENEKDF 759
+                             76655457899**************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHHH CS
+                  RhoGEF 166 ealkkaleaikevasqi 182
+                             e+l +a++ +k++  ++
+  tr|F1RB67|F1RB67_DANRE 760 EDLTQAFQLLKDIIASV 776
+                             ************99876 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.5   6.8   5.6e-11   2.7e-07       1      49 [.     387     433 ..     387     437 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 30.5 bits;  conditional E-value: 5.6e-11
+                             --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SC CS
+                    C1_1   1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpke 49 
+                             H + + n  +p+ C++C++ l    k +++C++C+++vHk+C e++p++
+  tr|F1RB67|F1RB67_DANRE 387 HLFTAVNSLHPALCQQCNKTL--NTKDAVHCTNCNIRVHKSCRENIPIC 433
+                             89999999*************..**********************9976 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1375 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2439  (0.12717); expected 383.6 (0.02)
+Passed bias filter:                      482  (0.0251317); expected 383.6 (0.02)
+Passed Vit filter:                       102  (0.00531832); expected 19.2 (0.001)
+Passed Fwd filter:                        30  (0.00156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.82u 0.21s 00:00:01.03 Elapsed: 00:00:00.88
+# Mc/sec: 5058.80
+//
+Query:       tr|A0A2R8QCY0|A0A2R8QCY0_DANRE  [L=1599]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-40  137.2   0.0    6.8e-40  135.9   0.0    1.7  1  PH_16     PH domain
+    1.2e-32  113.7   4.4    1.2e-32  113.7   4.4    2.4  1  RhoGEF    RhoGEF domain
+    1.2e-05   25.8   0.0    3.9e-05   24.2   0.0    1.9  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.9   0.0   1.1e-43   6.8e-40       3     127 .]    1039    1155 ..    1037    1155 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 135.9 bits;  conditional E-value: 1.1e-43
+                           PH_16    3 lgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLk 78  
+                                      +g +F+k+d+t  r+L+h+g+l w++++g+l+++ a Ll+d lv+Lq+kd+k++++++       d+K  +p+i+L+
+  tr|A0A2R8QCY0|A0A2R8QCY0_DANRE 1039 TGCTFRKQDITsGRNLLHQGPLLWKTATGRLKDVLAFLLSDSLVFLQEKDQKYIFATV-------DQK--PPVISLQ 1106
+                                      5779*******99*********************************************.......***..******* PP
+
+                           PH_16   79 klivrevatdkkalflistsesdpqmyelvastkserktWlklieeave 127 
+                                      klivreva++++++flis+s+ +p+mye++a +k er+ W++li+eave
+  tr|A0A2R8QCY0|A0A2R8QCY0_DANRE 1107 KLIVREVANEERGMFLISASSAGPEMYEVHAASKDERNAWMRLIREAVE 1155
+                                      ***********************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.7   4.4   1.9e-36   1.2e-32       1     182 [.     819    1009 ..     819    1010 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 113.7 bits;  conditional E-value: 1.9e-36
+                                      HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS CS
+                          RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeeke 73  
+                                      vi E+++TE ++v++L v+ ev+++ +++e+ l +e i  iF +++e+l+lh + +l++++er +    + s+++  
+  tr|A0A2R8QCY0|A0A2R8QCY0_DANRE  819 VIYEFMQTELHHVQTLMVMAEVFRRGMRDEVGLDAETIGRIFPCLDELLQLH-RDFLTAMRERRQscvqNSSSKNFL 894 
+                                      799*************************************************.778888988888665436667777 PP
+
+                                      -S-SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHH CS
+                          RhoGEF   74 aesigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRl 144 
+                                      ++++gd+fl+ +++ +       Y e+cs++++a++++kel+++nk+f+ f+++ ++++ ++++++ +++++  qR+
+  tr|A0A2R8QCY0|A0A2R8QCY0_DANRE  895 IHRVGDIFLQQFSQENAekmkqvYGEFCSHHTEAVSYFKELQQQNKRFQLFIKQQSSNSLVKRREIPECILLVTQRI 971 
+                                      99*******9998766568999******************************************************* PP
+
+                                      HHHHHHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF  145 prYpLLLkellkhtpeshpdyealkkaleaikevasqi 182 
+                                      ++Yp+LL+ +l++t+e  +++++l++al  i+e+ s +
+  tr|A0A2R8QCY0|A0A2R8QCY0_DANRE  972 TKYPVLLERILQYTDEGTEEHSDLSRALVLIRELISAV 1009
+                                      ********************************999876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1599 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1999  (0.104229); expected 383.6 (0.02)
+Passed bias filter:                      664  (0.0346212); expected 383.6 (0.02)
+Passed Vit filter:                        88  (0.00458835); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.80u 0.19s 00:00:00.99 Elapsed: 00:00:00.89
+# Mc/sec: 5793.61
+//
+Query:       tr|F6P6M2|F6P6M2_DANRE  [L=1753]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-40  137.3   0.0    7.7e-40  135.7   0.0    1.9  1  PH_16     PH domain
+    1.2e-32  113.7   4.6    1.2e-32  113.7   4.6    2.3  1  RhoGEF    RhoGEF domain
+    1.1e-05   25.9   0.0    4.4e-05   24.0   0.0    2.1  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.7   0.0   1.2e-43   7.7e-40       3     127 .]    1133    1249 ..    1131    1249 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 135.7 bits;  conditional E-value: 1.2e-43
+                   PH_16    3 lgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivreva 86  
+                              +g +F+k+d+t  r+L+h+g+l w++++g+l+++ a Ll+d lv+Lq+kd+k++++++       d+K  +p+i+L+klivreva
+  tr|F6P6M2|F6P6M2_DANRE 1133 TGCTFRKQDITsGRNLLHQGPLLWKTATGRLKDVLAFLLSDSLVFLQEKDQKYIFATV-------DQK--PPVISLQKLIVREVA 1208
+                              5779*******99*********************************************.......***..*************** PP
+
+                   PH_16   87 tdkkalflistsesdpqmyelvastkserktWlklieeave 127 
+                              ++++++flis+s+ +p+mye++a +k er+ W++li+eave
+  tr|F6P6M2|F6P6M2_DANRE 1209 NEERGMFLISASSAGPEMYEVHAASKDERNAWMRLIREAVE 1249
+                              ***************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.7   4.6   1.9e-36   1.2e-32       1     182 [.     913    1103 ..     913    1104 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 113.7 bits;  conditional E-value: 1.9e-36
+                              HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S-SHHHH CS
+                  RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeaesigdvf 81  
+                              vi E+++TE ++v++L v+ ev+++ +++e+ l +e i  iF +++e+l+lh + +l++++er +    ++s+++  ++++gd+f
+  tr|F6P6M2|F6P6M2_DANRE  913 VIYEFMQTELHHVQTLMVMAEVFRRGMRDEVGLDAETIGRIFPCLDELLQLH-RDFLTAMRERRQscvqNNSSKNFLIHRVGDIF 996 
+                              799*************************************************.77888898888866543667777799****** PP
+
+                              HHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-T CS
+                  RhoGEF   82 lkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpe 160 
+                              l+ +++ +       Y e+cs++++a++++kel+++nk+f+ f+++ ++++ ++++++ +++++  qR+++Yp+LL+ +l++t+e
+  tr|F6P6M2|F6P6M2_DANRE  997 LQQFSQENAekmkqvYGEFCSHHTEAVSYFKELQQQNKRFQLFIKQQSSNSLVKRREIPECILLVTQRITKYPVLLERILQYTDE 1081
+                              *9998766568999*********************************************************************** PP
+
+                              TSHHHHHHHHHHHHHHHHHHHH CS
+                  RhoGEF  161 shpdyealkkaleaikevasqi 182 
+                                +++++l++al  i+e+ s +
+  tr|F6P6M2|F6P6M2_DANRE 1082 GTEEHSDLSRALVLIRELISAV 1103
+                              ****************999876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1753 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1794  (0.0935398); expected 383.6 (0.02)
+Passed bias filter:                      492  (0.0256531); expected 383.6 (0.02)
+Passed Vit filter:                        84  (0.00437979); expected 19.2 (0.001)
+Passed Fwd filter:                        25  (0.00130351); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.81u 0.20s 00:00:01.01 Elapsed: 00:00:00.78
+# Mc/sec: 7275.57
+//
+Query:       tr|X1WCM0|X1WCM0_DANRE  [L=911]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-39  134.4   0.0    4.5e-39  133.3   0.0    1.7  1  PH_16     PH domain
+    5.4e-30  105.0   2.0    5.4e-30  105.0   2.0    2.0  1  RhoGEF    RhoGEF domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.3   0.0   4.6e-43   4.5e-39       2     127 .]     485     604 ..     484     604 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 133.3 bits;  conditional E-value: 4.6e-43
+                   PH_16   2 klgeeFkkldlt..krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivreva 86 
+                             k+ge F k+dl+  +r+L+h++ lt+r+++g+l+++ alLl+d+l +Lq+k++k+v+++l       ++K  ++++ L++livre+a
+  tr|X1WCM0|X1WCM0_DANRE 485 KNGEIFGKQDLQksHRTLTHSSVLTCRTTSGRLRDVLALLLTDVLAFLQEKEQKFVFAAL-------EQK--PSVMPLRRLIVREIA 562
+                             67899*******999*********************************************.......999..*************** PP
+
+                   PH_16  87 tdkkalflistses.dpqmyelvastkserktWlklieeave 127
+                             +++++lflis+++s +p+mye++++t++er+tW++l+++a+e
+  tr|X1WCM0|X1WCM0_DANRE 563 NQERGLFLISSDCSgGPEMYEIHTQTREERNTWMTLLRQAAE 604
+                             **************99***********************986 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.0   2.0   5.6e-34   5.4e-30       3     182 ..     277     456 ..     275     457 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 105.0 bits;  conditional E-value: 5.6e-34
+                             HHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S-SHHHHHHHH CS
+                  RhoGEF   3 kElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeaesigdvflkla 85 
+                              El++TE ++v++L+v+ +v ++ l+e + ++++ i++iF  ++e+l+lhr+fll+ +e+r+      +++++  +++ig    +++
+  tr|X1WCM0|X1WCM0_DANRE 277 VELMQTEFHHVQTLTVMADVLRRGLQEDVQVEQDVISQIFPRLDELLALHRNFLLD-METRQRasvyPGEHKNYIIQQIGPNASQMI 362
+                             69************************999*********************666666.****98655424444444566666666666 PP
+
+                             STHHHHHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHHHHHHHH CS
+                  RhoGEF  86 dkfkkYseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdyealkkal 172
+                                + Y ++cs++++alk++k+++++n+k++ fl++ + ++  +++++ ++L++  qR+++Yp+L++ ll+ht++ + ++ ++  +l
+  tr|X1WCM0|X1WCM0_DANRE 363 ---ELYGDFCSQHPEALKIYKQQLQNNRKLQLFLRQQSTKSVIKRREIPEFLLLVTQRITKYPVLIERLLQHTDDGSGEHYDIAMSL 446
+                             ...78********************************************************************************** PP
+
+                             HHHHHHHHHH CS
+                  RhoGEF 173 eaikevasqi 182
+                             e ++ v +++
+  tr|X1WCM0|X1WCM0_DANRE 447 EGLRAVIEEV 456
+                             ***9999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (911 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1961  (0.102247); expected 383.6 (0.02)
+Passed bias filter:                      681  (0.0355076); expected 383.6 (0.02)
+Passed Vit filter:                       135  (0.00703895); expected 19.2 (0.001)
+Passed Fwd filter:                        25  (0.00130351); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.18s 00:00:00.83 Elapsed: 00:00:00.93
+# Mc/sec: 3170.58
+//
+Query:       tr|A0A2R8QA33|A0A2R8QA33_DANRE  [L=864]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-30  107.3   2.0    1.1e-30  107.3   2.0    1.9  1  RhoGEF    RhoGEF domain
+    1.5e-19   70.2   0.2    2.7e-15   56.4   0.0    2.9  1  PH_16     PH domain
+    5.5e-07   29.5   3.4      1e-06   28.6   3.4    1.5  1  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+
+
+Domain annotation for each model (and alignments):
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.3   2.0   1.7e-34   1.1e-30       1     180 [.     247     435 ..     247     438 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 107.3 bits;  conditional E-value: 1.7e-34
+                                     HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S CS
+                          RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeae 75 
+                                     vi El++TE ++vr+L+++  v+++ + ee++++   ++ iF +++++l +h +++l++L +r +     +s+ + +++
+  tr|A0A2R8QA33|A0A2R8QA33_DANRE 247 VIYELIQTEFNHVRTLRIMEGVFRRGMLEEVMMEMGVVHAIFPCLDQLLLIH-TNFLSQLLQRRSnslaSNSNRNFTIQ 324
+                                     799*********************9998899*********************.8888888888874554377888899* PP
+
+                                     -SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHH CS
+                          RhoGEF  76 sigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYp 148
+                                     ++gd++ + ++ ++       Y e+cs++ ka+kl+kel++++k+f++f++++++ + +++   ++++++  qR+++Yp
+  tr|A0A2R8QA33|A0A2R8QA33_DANRE 325 KLGDILVEQFSGQNAedmrkcYVEFCSRHLKAVKLYKELLARDKRFQQFIRRVSRGSLLRRHGVQECILLVTQRITKYP 403
+                                     *****999998877679999*********************************************************** PP
+
+                                     HHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF 149 LLLkellkhtpeshpdyealkkaleaikevas 180
+                                     +L++ +l +t+ ++++ + l ++l+ i+e++ 
+  tr|A0A2R8QA33|A0A2R8QA33_DANRE 404 VLMQRILDNTKGNEEESKSLAQSLTLIRELLC 435
+                                     ***************************99875 PP
+
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.4   0.0   4.3e-19   2.7e-15      73     126 ..     505     557 ..     498     558 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 56.4 bits;  conditional E-value: 4.3e-19
+                           PH_16  73 piikLkklivrevatdkkalflistsesdpqmyelvastkserktWlklieeav 126
+                                     + + L++livr++a++++++flis s+  p+myel+a +k +r+tW+k+i+++v
+  tr|A0A2R8QA33|A0A2R8QA33_DANRE 505 TFLCLQNLIVRDIANQQRGMFLISHST-PPEMYELHAASKDDRNTWMKIIQQTV 557
+                                     56789*******************999.9***********************98 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.6   3.4   1.6e-10     1e-06       1      50 [.      47      94 ..      47      97 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 28.6 bits;  conditional E-value: 1.6e-10
+                                    --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCT CS
+                            C1_1  1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkec 50
+                                    H +   +++ +t C+ C++++   +k +l+C +C++++H++C   ++++ 
+  tr|A0A2R8QA33|A0A2R8QA33_DANRE 47 HLFTSLSVSATTLCSACNKSI--TAKEALSCPTCNVTIHNRCRDTLANCA 94
+                                    8888889999***********..*******************99887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (864 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1365  (0.0711716); expected 383.6 (0.02)
+Passed bias filter:                      542  (0.0282601); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.54u 0.15s 00:00:00.69 Elapsed: 00:00:00.69
+# Mc/sec: 4023.64
+//
+Query:       tr|F1R083|F1R083_DANRE  [L=981]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-40  138.4   0.0    3.6e-40  136.8   0.0    1.9  1  PH_16     PH domain
+    5.1e-33  114.9   4.6    5.1e-33  114.9   4.6    2.3  1  RhoGEF    RhoGEF domain
+    6.3e-06   26.7   0.0    2.1e-05   25.1   0.0    1.9  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.8   0.0   5.6e-44   3.6e-40       3     127 .]     361     477 ..     359     477 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 136.8 bits;  conditional E-value: 5.6e-44
+                   PH_16   3 lgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevatd 88 
+                             +g +F+k+d+t  r+L+h+g+l w++++g+l+++ a Ll+d lv+Lq+kd+k++++++       d+K  +p+i+L+klivreva++
+  tr|F1R083|F1R083_DANRE 361 TGCTFRKQDITsGRNLLHQGPLLWKTATGRLKDVLAFLLSDSLVFLQEKDQKYIFATV-------DQK--PPVISLQKLIVREVANE 438
+                             5779*******99*********************************************.......***..***************** PP
+
+                   PH_16  89 kkalflistsesdpqmyelvastkserktWlklieeave 127
+                             ++++flis+s+ +p+mye++a +k er+ W++li+eave
+  tr|F1R083|F1R083_DANRE 439 ERGMFLISASSAGPEMYEVHAASKDERNAWMRLIREAVE 477
+                             *************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.9   4.6     8e-37   5.1e-33       1     182 [.     141     331 ..     141     332 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 114.9 bits;  conditional E-value: 8e-37
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S-SHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeaesigdvflk 83 
+                             vi E+++TE ++v++L v+ ev+++ +++e+ l +e i  iF +++e+l+lh + +l++++er +    ++s+++  ++++gd+fl+
+  tr|F1R083|F1R083_DANRE 141 VIYEFMQTELHHVQTLMVMAEVFRRGMRDEVGLDAETIGRIFPCLDELLQLH-RDFLTAMRERRQscvqNNSSKNFLIHRVGDIFLQ 226
+                             799*************************************************.77888898888866543667777799*******9 PP
+
+                             HHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHH CS
+                  RhoGEF  84 ladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpd 164
+                              +++ +       Y e+cs++++a++++kel+++nk+f+ f+++ ++++ ++++++ +++++  qR+++Yp+LL+ +l++t+e  ++
+  tr|F1R083|F1R083_DANRE 227 QFSQENAekmkqvYGEFCSHHTEAVSYFKELQQQNKRFQLFIKQQSSNSLVKRREIPECILLVTQRITKYPVLLERILQYTDEGTEE 313
+                             998766568999*************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHHHH CS
+                  RhoGEF 165 yealkkaleaikevasqi 182
+                             +++l++al  i+e+ s +
+  tr|F1R083|F1R083_DANRE 314 HSDLSRALVLIRELISAV 331
+                             ************999876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (981 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2301  (0.119975); expected 383.6 (0.02)
+Passed bias filter:                      636  (0.0331613); expected 383.6 (0.02)
+Passed Vit filter:                        83  (0.00432765); expected 19.2 (0.001)
+Passed Fwd filter:                        27  (0.00140779); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.17s 00:00:00.83 Elapsed: 00:00:00.84
+# Mc/sec: 3774.29
+//
+Query:       tr|E7F4U1|E7F4U1_DANRE  [L=872]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-35  121.7   0.1    5.7e-35  120.0   0.0    1.9  1  PH_16     PH domain
+    1.1e-30  107.3   2.0    1.1e-30  107.3   2.0    1.9  1  RhoGEF    RhoGEF domain
+    5.4e-07   29.5   3.4    1.1e-06   28.6   3.4    1.5  1  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+    3.1e-06   27.7   0.0    6.9e-06   26.6   0.0    1.6  1  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.0   0.0   1.2e-38   5.7e-35       6     126 ..     470     580 ..     466     581 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 120.0 bits;  conditional E-value: 1.2e-38
+                   PH_16   6 eFkkldltkrkLihegeltwrkskg.klvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevatdkka 91 
+                              F+  +l +r Liheg l w++++g +l+++h+lL++d+lv++q+kd+k+v+ +l        +K  ++++ L++livr++a+++++
+  tr|E7F4U1|E7F4U1_DANRE 470 VFHGAELLRRGLIHEGALLWKTAQGsRLKDVHVLLMTDVLVFMQEKDQKYVFPTL--------DK--PSVLCLQNLIVRDIANQQRG 546
+                             69999*****************985489***************************........56..9******************* PP
+
+                   PH_16  92 lflistsesdpqmyelvastkserktWlklieeav 126
+                             +flis s+  p+myel+a +k +r+tW+k+i+++v
+  tr|E7F4U1|E7F4U1_DANRE 547 MFLISHST-PPEMYELHAASKDDRNTWMKIIQQTV 580
+                             *****999.9***********************98 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.3   2.0   2.3e-34   1.1e-30       1     180 [.     247     435 ..     247     438 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 107.3 bits;  conditional E-value: 2.3e-34
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S-SHHHHHH CS
+                  RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeaesigdvflk 83 
+                             vi El++TE ++vr+L+++  v+++ + ee++++   ++ iF +++++l +h +++l++L +r +     +s+ + +++++gd++ +
+  tr|E7F4U1|E7F4U1_DANRE 247 VIYELIQTEFNHVRTLRIMEGVFRRGMLEEVMMEMGVVHAIFPCLDQLLLIH-TNFLSQLLQRRSnslaSNSNRNFTIQKLGDILVE 332
+                             799*********************9998899*********************.8888888888874554377888899******999 PP
+
+                             HHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHH CS
+                  RhoGEF  84 ladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpd 164
+                              ++ ++       Y e+cs++ ka+kl+kel++++k+f++f++++++ + +++   ++++++  qR+++Yp+L++ +l +t+ ++++
+  tr|E7F4U1|E7F4U1_DANRE 333 QFSGQNAedmrkcYVEFCSRHLKAVKLYKELLARDKRFQQFIRRVSRGSLLRRHGVQECILLVTQRITKYPVLMQRILDNTKGNEEE 419
+                             998877679999*************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHH CS
+                  RhoGEF 165 yealkkaleaikevas 180
+                              + l ++l+ i+e++ 
+  tr|E7F4U1|E7F4U1_DANRE 420 SKSLAQSLTLIRELLC 435
+                             ***********99875 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.6   3.4   2.2e-10   1.1e-06       1      50 [.      47      94 ..      47      97 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 28.6 bits;  conditional E-value: 2.2e-10
+                            --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCT CS
+                    C1_1  1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkec 50
+                            H +   +++ +t C+ C++++   +k +l+C +C++++H++C   ++++ 
+  tr|E7F4U1|E7F4U1_DANRE 47 HLFTSLSVSATTLCSACNKSI--TAKEALSCPTCNVTIHNRCRDTLANCA 94
+                            8888889999***********..*******************99887765 PP
+
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.6   0.0   1.4e-09   6.9e-06       2     104 ..     482     580 ..     481     581 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 26.6 bits;  conditional E-value: 1.4e-09
+                             EEEEEEEEECSSSSTSEEEEEEEEETTEEEEESSC...TCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTSSSTEEEEE CS
+                      PH   2 vkeGwLlkkgsgkkkswkkrwfvLkdsellyyknd...ksekdkepkgsislsncevvevvatedpkrkfcfelriverngsrtyll 85 
+                             ++eG Ll k+ + + + k+ ++ L +++l++ +++      +  ++  ++ l+n+ v+++      +++ +f + ++  ++++ y l
+  tr|E7F4U1|E7F4U1_DANRE 482 IHEGALLWKTAQGS-RLKDVHVLLMTDVLVFMQEKdqkYVFPTLDKPSVLCLQNLIVRDI----ANQQRGMFLISHS--TPPEMYEL 561
+                             78999776666666.9*******************7765556666667777777777766....9999999999777..778***** PP
+
+                             EESSHHHHHHHHHHHHHHH CS
+                      PH  86 qasseeerkeWikaiqsai 104
+                             +a+s+++r++W+k iq+++
+  tr|E7F4U1|E7F4U1_DANRE 562 HAASKDDRNTWMKIIQQTV 580
+                             ****************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (872 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1391  (0.0725272); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                        67  (0.0034934); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.55u 0.17s 00:00:00.72 Elapsed: 00:00:00.82
+# Mc/sec: 3457.31
+//
+Query:       tr|A0A2R8PYT3|A0A2R8PYT3_DANRE  [L=1600]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.7e-40  137.2   0.0    6.9e-40  135.9   0.0    1.7  1  PH_16     PH domain
+    1.1e-32  113.9   4.6    1.1e-32  113.9   4.6    2.4  1  RhoGEF    RhoGEF domain
+    1.2e-05   25.9   0.0      4e-05   24.2   0.0    1.9  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.9   0.0   1.1e-43   6.9e-40       3     127 .]    1041    1157 ..    1039    1157 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 135.9 bits;  conditional E-value: 1.1e-43
+                           PH_16    3 lgeeFkkldlt.krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLk 78  
+                                      +g +F+k+d+t  r+L+h+g+l w++++g+l+++ a Ll+d lv+Lq+kd+k++++++       d+K  +p+i+L+
+  tr|A0A2R8PYT3|A0A2R8PYT3_DANRE 1041 TGCTFRKQDITsGRNLLHQGPLLWKTATGRLKDVLAFLLSDSLVFLQEKDQKYIFATV-------DQK--PPVISLQ 1108
+                                      5779*******99*********************************************.......***..******* PP
+
+                           PH_16   79 klivrevatdkkalflistsesdpqmyelvastkserktWlklieeave 127 
+                                      klivreva++++++flis+s+ +p+mye++a +k er+ W++li+eave
+  tr|A0A2R8PYT3|A0A2R8PYT3_DANRE 1109 KLIVREVANEERGMFLISASSAGPEMYEVHAASKDERNAWMRLIREAVE 1157
+                                      ***********************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.9   4.6   1.7e-36   1.1e-32       1     182 [.     821    1011 ..     821    1012 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 113.9 bits;  conditional E-value: 1.7e-36
+                                      HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS CS
+                          RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeeke 73  
+                                      vi E+++TE ++v++L v+ ev+++ +++e+ l +e i  iF +++e+l+lh + +l++++er +    ++s+++  
+  tr|A0A2R8PYT3|A0A2R8PYT3_DANRE  821 VIYEFMQTELHHVQTLMVMAEVFRRGMRDEVGLDAETIGRIFPCLDELLQLH-RDFLTAMRERRQscvqNNSSKNFL 896 
+                                      799*************************************************.778888988888665436677777 PP
+
+                                      -S-SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHH CS
+                          RhoGEF   74 aesigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRl 144 
+                                      ++++gd+fl+ +++ +       Y e+cs++++a++++kel+++nk+f+ f+++ ++++ ++++++ +++++  qR+
+  tr|A0A2R8PYT3|A0A2R8PYT3_DANRE  897 IHRVGDIFLQQFSQENAekmkqvYGEFCSHHTEAVSYFKELQQQNKRFQLFIKQQSSNSLVKRREIPECILLVTQRI 973 
+                                      99*******9998766568999******************************************************* PP
+
+                                      HHHHHHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF  145 prYpLLLkellkhtpeshpdyealkkaleaikevasqi 182 
+                                      ++Yp+LL+ +l++t+e  +++++l++al  i+e+ s +
+  tr|A0A2R8PYT3|A0A2R8PYT3_DANRE  974 TKYPVLLERILQYTDEGTEEHSDLSRALVLIRELISAV 1011
+                                      ********************************999876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1600 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2012  (0.104906); expected 383.6 (0.02)
+Passed bias filter:                      658  (0.0343084); expected 383.6 (0.02)
+Passed Vit filter:                        85  (0.00443193); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.82u 0.18s 00:00:01.00 Elapsed: 00:00:00.93
+# Mc/sec: 5578.92
+//
+Query:       tr|A0A286YAR8|A0A286YAR8_DANRE  [L=1038]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-41  139.3   0.2    1.3e-40  138.3   0.2    1.6  1  PH_16     PH domain
+    7.3e-31  107.9   1.6    7.3e-31  107.9   1.6    2.1  1  RhoGEF    RhoGEF domain
+    1.2e-05   25.9   0.0    2.9e-05   24.6   0.0    1.7  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.3   0.2     2e-44   1.3e-40       3     127 .]     328     445 ..     326     445 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 138.3 bits;  conditional E-value: 2e-44
+                           PH_16   3 lgeeFkkldlt..krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkk 79 
+                                     +g+ F+k+dl   +rkL++eg++ w+ ++g+l+++ alLl+d+lvlLq+kd+++v+ ++       d+K  +++i+L+k
+  tr|A0A286YAR8|A0A286YAR8_DANRE 328 DGRVFRKEDLSqgRRKLLFEGTVNWKAASGRLKDILALLLTDVLVLLQEKDQRYVFSTV-------DNK--PSVISLQK 397
+                                     6789******9999*********************************************.......***..******** PP
+
+                           PH_16  80 livrevatdkkalflistsesdpqmyelvastkserktWlklieeave 127
+                                     livreva++++a+fli++s+++p+mye+++ +k++r+tW++ i++ave
+  tr|A0A286YAR8|A0A286YAR8_DANRE 398 LIVREVAHEERAMFLICASSNEPEMYEIHTASKEDRNTWITHIRQAVE 445
+                                     **********************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.9   1.6   1.1e-34   7.3e-31       1     182 [.     108     298 ..     108     299 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 107.9 bits;  conditional E-value: 1.1e-34
+                                     HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....H.HHHTTSS-S CS
+                          RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...k.eskeekeae 75 
+                                     vi El++TE ++vr+Lk++ +vy + l+e+  l e+ ++ +F  ++++lelh +++l++L+er     + +s+ +  ++
+  tr|A0A286YAR8|A0A286YAR8_DANRE 108 VIYELIQTEIHHVRTLKIMLRVYARELREALQLDERRLDCLFPRLDSLLELH-NHFLSRLRERRVeslQpGSERNYAIN 185
+                                     799**********************9*998899999999*************.88888888877656514555555566 PP
+
+                                     -SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHH CS
+                          RhoGEF  76 sigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYp 148
+                                     +++d++ + ++          Y ++cs++++a+ ++ke++++nkkf+++++++++ + +++l   +++++  qR+++Yp
+  tr|A0A286YAR8|A0A286YAR8_DANRE 186 KLSDILISQFSGELGdrmkesYGDFCSRHTEAVNHYKEQLQSNKKFQNLMRKLSNLSIVRRLGVPECILLVTQRITKYP 264
+                                     666665554443222467779********************************************************** PP
+
+                                     HHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF 149 LLLkellkhtpeshpdyealkkaleaikevasqi 182
+                                     +LL+ +l +t++  +++e l +al  ik+v  q+
+  tr|A0A286YAR8|A0A286YAR8_DANRE 265 VLLERILHNTEAGTEEHEGLAQALGLIKDVIVQV 298
+                                     *****************************98876 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1038 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2301  (0.119975); expected 383.6 (0.02)
+Passed bias filter:                      583  (0.0303978); expected 383.6 (0.02)
+Passed Vit filter:                        88  (0.00458835); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.69u 0.17s 00:00:00.86 Elapsed: 00:00:00.84
+# Mc/sec: 4016.67
+//
+Query:       tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE  [L=902]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-35  121.6   0.1      6e-35  119.9   0.0    1.9  1  PH_16     PH domain
+    1.1e-25   91.0   6.4    1.1e-25   91.0   6.4    2.3  1  RhoGEF    RhoGEF domain
+    5.7e-07   29.4   3.4    1.1e-06   28.5   3.4    1.5  1  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+    3.1e-06   27.7   0.0    7.3e-06   26.5   0.0    1.7  1  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  119.9   0.0   1.3e-38     6e-35       6     126 ..     500     610 ..     496     611 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 119.9 bits;  conditional E-value: 1.3e-38
+                           PH_16   6 eFkkldltkrkLihegeltwrkskg.klvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivr 83 
+                                      F+  +l +r Liheg l w++++g +l+++h+lL++d+lv++q+kd+k+v+ +l        +K  ++++ L++livr
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 500 VFHGAELLRRGLIHEGALLWKTAQGsRLKDVHVLLMTDVLVFMQEKDQKYVFPTL--------DK--PSVLCLQNLIVR 568
+                                     69999*****************985489***************************........56..9*********** PP
+
+                           PH_16  84 evatdkkalflistsesdpqmyelvastkserktWlklieeav 126
+                                     ++a++++++flis s+  p+myel+a +k +r+tW+k+i+++v
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 569 DIANQQRGMFLISHST-PPEMYELHAASKDDRNTWMKIIQQTV 610
+                                     *************999.9***********************98 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.0   6.4   2.3e-29   1.1e-25       1     180 [.     247     465 ..     247     468 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 91.0 bits;  conditional E-value: 2.3e-29
+                                     HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S CS
+                          RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeae 75 
+                                     vi El++TE ++vr+L+++  v+++ + ee++++   ++ iF +++++l +h +++l++L +r +     +s+ + +++
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 247 VIYELIQTEFNHVRTLRIMEGVFRRGMLEEVMMEMGVVHAIFPCLDQLLLIH-TNFLSQLLQRRSnslaSNSNRNFTIQ 324
+                                     799*********************9998899*********************.8888888888874554377888899* PP
+
+                                     -SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGG.................... CS
+                          RhoGEF  76 sigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpec.................... 128
+                                     ++gd++ + ++ ++       Y e+cs++ ka+kl+kel++++k+f++f++  +e+pe                     
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 325 KLGDILVEQFSGQNAedmrkcYVEFCSRHLKAVKLYKELLARDKRFQQFIRV-REQPEKdfsicvleyyvfneisfhlh 402
+                                     *****999998877679999******************************96.77777779****************** PP
+
+                                     ...........TT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF 129 ...........skldLeslLikPvqRlprYpLLLkellkhtpeshpdyealkkaleaikevas 180
+                                                ++   ++++++  qR+++Yp+L++ +l +t+ ++++ + l ++l+ i+e++ 
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 403 svqrvsrgsllRRHGVQECILLVTQRITKYPVLMQRILDNTKGNEEESKSLAQSLTLIRELLC 465
+                                     **********************************************************99875 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.5   3.4   2.3e-10   1.1e-06       1      50 [.      47      94 ..      47      97 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 28.5 bits;  conditional E-value: 2.3e-10
+                                    --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCT CS
+                            C1_1  1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkec 50
+                                    H +   +++ +t C+ C++++   +k +l+C +C++++H++C   ++++ 
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 47 HLFTSLSVSATTLCSACNKSI--TAKEALSCPTCNVTIHNRCRDTLANCA 94
+                                    8888889999***********..*******************99887765 PP
+
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.0   1.5e-09   7.3e-06       2     104 ..     512     610 ..     511     611 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 1.5e-09
+                                     EEEEEEEEECSSSSTSEEEEEEEEETTEEEEESSC...TCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTS CS
+                              PH   2 vkeGwLlkkgsgkkkswkkrwfvLkdsellyyknd...ksekdkepkgsislsncevvevvatedpkrkfcfelriver 77 
+                                     ++eG Ll k+ + + + k+ ++ L +++l++ +++      +  ++  ++ l+n+ v+++      +++ +f + ++  
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 512 IHEGALLWKTAQGS-RLKDVHVLLMTDVLVFMQEKdqkYVFPTLDKPSVLCLQNLIVRDI----ANQQRGMFLISHS-- 583
+                                     78999776666666.9*******************7765556666667777777777766....9999999999777.. PP
+
+                                     SSTEEEEEEESSHHHHHHHHHHHHHHH CS
+                              PH  78 ngsrtyllqasseeerkeWikaiqsai 104
+                                     ++++ y l+a+s+++r++W+k iq+++
+  tr|A0A2R8Q3N3|A0A2R8Q3N3_DANRE 584 TPPEMYELHAASKDDRNTWMKIIQQTV 610
+                                     778*********************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (902 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1438  (0.0749778); expected 383.6 (0.02)
+Passed bias filter:                      568  (0.0296157); expected 383.6 (0.02)
+Passed Vit filter:                        67  (0.0034934); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.53u 0.16s 00:00:00.69 Elapsed: 00:00:00.64
+# Mc/sec: 4529.39
+//
+Query:       sp|Q12802|AKP13_HUMAN  [L=2813]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.4e-41  141.3   1.9    3.6e-41  140.0   1.9    1.8  1  PH_16          PH domain
+    1.1e-29  104.0   2.9    1.1e-29  104.0   2.9    2.7  1  RhoGEF         RhoGEF domain
+    1.3e-05   25.7   0.0    1.3e-05   25.7   0.0    2.4  1  PH             PH domain
+    0.00032   20.7   1.1    0.00095   19.2   1.1    1.9  1  RII_binding_1  RII binding domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.0   1.9   7.5e-45   3.6e-41       2     127 .]    2217    2333 ..    2216    2333 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 140.0 bits;  conditional E-value: 7.5e-45
+                  PH_16    2 klgeeFkkldltkrkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevat 87  
+                             k+g++F+k+dl+++kL+++g + +++++g+l+e++a+Ll+dilv+Lq+kd+k++++sl       d+K  s++i+Lkklivreva+
+  sp|Q12802|AKP13_HUMAN 2217 KSGQMFAKEDLKRKKLVRDGSVFLKNAAGRLKEVQAVLLTDILVFLQEKDQKYIFASL-------DQK--STVISLKKLIVREVAH 2293
+                             6899******************************************************.......***..**************** PP
+
+                  PH_16   88 dkkalflistsesdpqmyelvastkserktWlklieeave 127 
+                             ++k+lflis+   dp+m+e++as+k+er++W+++i+++++
+  sp|Q12802|AKP13_HUMAN 2294 EEKGLFLISMGMTDPEMVEVHASSKEERNSWIQIIQDTIN 2333
+                             *************************************995 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.0   2.9   2.3e-33   1.1e-29       1     181 [.    1998    2187 ..    1998    2189 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 104.0 bits;  conditional E-value: 2.3e-33
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....HHHHTTSS-S-SHHHHHH CS
+                 RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...keskeekeaesigdvflk 83  
+                             vi El++TE ++vr+Lk++  vy + ++   l++++ ++++F +++e++++h++f+ + Le + +   ++s+++  +++igdv+ +
+  sp|Q12802|AKP13_HUMAN 1998 VIYELMQTEFHHVRTLKIMSGVYSQGMMADLLFEQQMVEKLFPCLDELISIHSQFFQRILERKKEslvDKSEKNFLIKRIGDVLVN 2083
+                             799*********************999877799*******************8888666666665555588899999******988 PP
+
+                             HHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSH CS
+                 RhoGEF   84 ladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshp 163 
+                              ++  +       Y ++c ++++++ ++k l +k+k+f+af+++  +++ +++l + +++++  qR+++Yp+L++ +l++t++++ 
+  sp|Q12802|AKP13_HUMAN 2084 QFSGENAerlkktYGKFCGQHNQSVNYFKDLYAKDKRFQAFVKKKMSSSVVRRLGIPECILLVTQRITKYPVLFQRILQCTKDNEV 2169
+                             887766568999************************************************************************** PP
+
+                             HHHHHHHHHHHHHHHHHH CS
+                 RhoGEF  164 dyealkkaleaikevasq 181 
+                             ++e+l ++l+ +k+v   
+  sp|Q12802|AKP13_HUMAN 2170 EQEDLAQSLSLVKDVIGA 2187
+                             **************9866 PP
+
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.7   0.0   2.8e-09   1.3e-05       7     104 ..    2232    2332 ..    2216    2333 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 25.7 bits;  conditional E-value: 2.8e-09
+                             EEEECSSSST....SEEEEEEEEETTEEEEESSC....TCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTSSSTEEEE CS
+                     PH    7 Llkkgsgkkk....swkkrwfvLkdsellyyknd....ksekdkepkgsislsncevvevvatedpkrkfcfelriverngsrtyl 84  
+                             L+++gs + k    + k+  +vL ++ l++ +++       +  ++ ++isl+++ v+ev      ++k  f + + ++++ + + 
+  sp|Q12802|AKP13_HUMAN 2232 LVRDGSVFLKnaagRLKEVQAVLLTDILVFLQEKdqkyIFASLDQKSTVISLKKLIVREV----AHEEKGLFLISMGMTDP-EMVE 2312
+                             445555555588889*********999999999999987778888899**********99....9************9999.**** PP
+
+                             EEESSHHHHHHHHHHHHHHH CS
+                     PH   85 lqasseeerkeWikaiqsai 104 
+                              +ass+eer++Wi+ iq++i
+  sp|Q12802|AKP13_HUMAN 2313 VHASSKEERNSWIQIIQDTI 2332
+                             ****************9876 PP
+
+>> RII_binding_1  RII binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.2   1.1     2e-07   0.00095       1      19 []    1246    1264 ..    1246    1264 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 19.2 bits;  conditional E-value: 2e-07
+          RII_binding_1    1 deiEeaanRivslVIqeAv 19  
+                             d+iEeaa+Riv++VI++++
+  sp|Q12802|AKP13_HUMAN 1246 DLIEEAASRIVDAVIEQVK 1264
+                             89***************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2813 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2190  (0.114187); expected 383.6 (0.02)
+Passed bias filter:                      483  (0.0251838); expected 383.6 (0.02)
+Passed Vit filter:                       107  (0.00557902); expected 19.2 (0.001)
+Passed Fwd filter:                        27  (0.00140779); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 1.21u 0.22s 00:00:01.43 Elapsed: 00:00:01.06
+# Mc/sec: 8585.17
+//
+Query:       sp|Q92974|ARHG2_HUMAN  [L=986]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.7e-35  119.8   0.0    1.3e-34  118.8   0.0    1.5  1  PH_16     PH domain
+    3.5e-29  102.4   0.3    7.5e-29  101.3   0.3    1.6  1  RhoGEF    RhoGEF domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.8   0.0   1.4e-38   1.3e-34       7     126 ..     463     570 ..     458     571 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 118.8 bits;  conditional E-value: 1.4e-38
+                  PH_16   7 FkkldltkrkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevatdkkalfl 94 
+                            F +++l +rkLih+g l w++++g+ +++ +lL++d+lv+Lq+kd+k+++ +l        +K  +++++L++livr++a+++k++fl
+  sp|Q92974|ARHG2_HUMAN 463 FGREELLRRKLIHDGCLLWKTATGRFKDVLVLLMTDVLVFLQEKDQKYIFPTL--------DK--PSVVSLQNLIVRDIANQEKGMFL 540
+                            999**************************************************........56..9********************** PP
+
+                  PH_16  95 istsesdpqmyelvastkserktWlklieeav 126
+                            is+++  p+mye+++ ++ +r tW+++i++ v
+  sp|Q92974|ARHG2_HUMAN 541 ISAAP--PEMYEVHTASRDDRSTWIRVIQQSV 570
+                            ****9..**********************987 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.3   0.3   7.8e-33   7.5e-29       1     182 [.     239     429 ..     239     430 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 101.3 bits;  conditional E-value: 7.8e-33
+                            HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH....H.HHHTTSS-S-SHHHHHHH CS
+                 RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk...k.eskeekeaesigdvflkl 84 
+                            vi El++TE ++vr+Lk++++ ++  + ee  l++  ++ +F +++e+ ++h + +l++L er     + +s+ +  ++++gd++ + 
+  sp|Q92974|ARHG2_HUMAN 239 VIYELIQTELHHVRTLKIMTRLFRTGMLEELHLEPGVVQGLFPCVDELSDIH-TRFLSQLLERRRqalCpGSTRNFVIHRLGDLLISQ 325
+                            799*********************66666668********************.66666666666535526778888899*****8887 PP
+
+                            HSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHH CS
+                 RhoGEF  85 adkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdye 166
+                            ++  +       Yse+cs+++kalkl+kel +++k+f++f++++ + + +++   ++++++  qR+++YpLL++ +l+h +  +++++
+  sp|Q92974|ARHG2_HUMAN 326 FSGPSAeqmcktYSEFCSRHSKALKLYKELYARDKRFQQFIRKVTRPAVLKRHGVQECILLVTQRITKYPLLISRILQHSHGIEEERQ 413
+                            766443468999**************************************************************************** PP
+
+                            HHHHHHHHHHHHHHHH CS
+                 RhoGEF 167 alkkaleaikevasqi 182
+                            +l  al  +ke++s++
+  sp|Q92974|ARHG2_HUMAN 414 DLTTALGLVKELLSNV 429
+                            ***********99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (986 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1129  (0.0588665); expected 383.6 (0.02)
+Passed bias filter:                      576  (0.0300328); expected 383.6 (0.02)
+Passed Vit filter:                        63  (0.00328484); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.16s 00:00:00.67 Elapsed: 00:00:00.67
+# Mc/sec: 4787.43
+//
+Query:       sp|Q8N1W1|ARG28_HUMAN  [L=1705]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-39  133.4   0.2      1e-38  132.1   0.2    1.7  1  PH_16     PH domain
+    7.6e-30  104.5   7.0    7.6e-30  104.5   7.0    2.4  1  RhoGEF    RhoGEF domain
+    1.3e-07   31.5   3.2    3.9e-07   30.0   3.2    1.9  1  C1_1      Phorbol esters/diacylglycerol binding domain (C1 do
+    1.8e-05   25.3   0.0    0.00012   22.7   0.0    2.5  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.1   0.2   2.1e-42     1e-38       2     127 .]    1070    1188 ..    1069    1188 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 132.1 bits;  conditional E-value: 2.1e-42
+                  PH_16    2 klgeeFkkldlt..krkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrev 85  
+                             k+g+ F+k+ l+  +r+L+++g ++w++++g+ +++ alLl+d+l++Lq+kd+k++++++       d+K  +++i+L+kli+rev
+  sp|Q8N1W1|ARG28_HUMAN 1070 KNGHVFRKQALMseERTLLYDGLVYWKTATGRFKDILALLLTDVLLFLQEKDQKYIFAAV-------DQK--PSVISLQKLIAREV 1146
+                             57889******9999*********************************************.......***..************** PP
+
+                  PH_16   86 atdkkalflistsesdpqmyelvastkserktWlklieeave 127 
+                             a++++++flis+s+ +p+mye+++++k+er++W+++i++ave
+  sp|Q8N1W1|ARG28_HUMAN 1147 ANEERGMFLISASSAGPEMYEIHTNSKEERNNWMRRIQQAVE 1188
+                             ****************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.5   7.0   1.6e-33   7.6e-30       1     182 [.     853    1041 ..     853    1042 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 104.5 bits;  conditional E-value: 1.6e-33
+                             HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.H...HHHTTSS-S-SHHHHHH CS
+                 RhoGEF    1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlkk...eskeekeaesigdvflk 83  
+                             vi El++TE +++++L ++ e+++k ++ee  l ++ +++iF +++e+le+hr+f+++ ++er ++   +s+ +  +++igd++ +
+  sp|Q8N1W1|ARG28_HUMAN  853 VIFELMQTEMHHIQTLFIMSEIFRKGMKEELQLDHSTVDKIFPCLDELLEIHRHFFYS-MKERRQEscaGSDRNFVIDRIGDILVQ 937 
+                             799*************************999*********************888866.6677763356778888899*****877 PP
+
+                             HHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSH CS
+                 RhoGEF   84 ladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshp 163 
+                              +++ +       Y e+c ++++a+ l+kel+ +nkkf++f++  +++  ++++ + +++++  qR+++Yp+L++ +l++t+e+ +
+  sp|Q8N1W1|ARG28_HUMAN  938 QFSEENAskmkkiYGEFCCHHKEAVNLFKELQ-QNKKFQNFIKLRNSNLLARRRGIPECILLVTQRITKYPVLVERILQYTKERTE 1022
+                             776644457889******************65.***************************************************** PP
+
+                             HHHHHHHHHHHHHHHHHHH CS
+                 RhoGEF  164 dyealkkaleaikevasqi 182 
+                             ++++l kal+ ik++   +
+  sp|Q8N1W1|ARG28_HUMAN 1023 EHKDLRKALCLIKDMIATV 1041
+                             *************998765 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.0   3.2     8e-11   3.9e-07       1      50 [.     653     700 ..     653     702 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 30.0 bits;  conditional E-value: 8e-11
+                            --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCT CS
+                   C1_1   1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkec 50 
+                            H++++ +f+    C  C++ l  ++k  l+Cs+C+ +vHk C   +p ++
+  sp|Q8N1W1|ARG28_HUMAN 653 HQFAPGTFSGVLQCLVCDKTL--LGKESLQCSNCNANVHKGCKDAAPACT 700
+                            *********************..*******************99988765 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1705 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1773  (0.0924449); expected 383.6 (0.02)
+Passed bias filter:                      581  (0.0302936); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.77u 0.19s 00:00:00.96 Elapsed: 00:00:00.72
+# Mc/sec: 7674.57
+//
+Query:       tr|A0A590UK10|A0A590UK10_HUMAN  [L=1089]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-39  134.9   0.5    3.2e-39  133.7   0.5    1.6  1  PH_16     PH domain
+    1.7e-32  113.2   3.0    1.7e-32  113.2   3.0    2.4  1  RhoGEF    RhoGEF domain
+    1.1e-06   29.2   0.0    2.5e-06   28.0   0.0    1.6  1  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.7   0.5     5e-43   3.2e-39       2     127 .]     416     532 ..     415     532 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 133.7 bits;  conditional E-value: 5e-43
+                           PH_16   2 klgeeFkkldltkrkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkkl 80 
+                                     k+g +F+k+d+ +r+L  eg l w++++g+l+++ a+Ll+d+l+lLq+kd+k+v++s+       d+K  +p+i+L+kl
+  tr|A0A590UK10|A0A590UK10_HUMAN 416 KNGLTFRKEDMLQRQLHLEGMLCWKTTSGRLKDILAILLTDVLLLLQEKDQKYVFASV-------DSK--PPVISLQKL 485
+                                     56789*****************************************************.......***..********* PP
+
+                           PH_16  81 ivrevatdkkalflistsesdpqmyelvastkserktWlklieeave 127
+                                     ivreva+++ka+flis+s ++p+mye+ +s+k++r+ W+  i++ave
+  tr|A0A590UK10|A0A590UK10_HUMAN 486 IVREVANEEKAMFLISASLQGPEMYEIYTSSKEDRNAWMAHIQRAVE 532
+                                     *********************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.2   3.0   2.7e-36   1.7e-32       1     183 []     197     388 ..     197     388 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 113.2 bits;  conditional E-value: 2.7e-36
+                                     HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S CS
+                          RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeae 75 
+                                     v+ El++TE ++vr+Lk++ +vy ++l+ee  +s++ i  +F + +++le h s++l +L+er +    ++s+ +  ++
+  tr|A0A590UK10|A0A590UK10_HUMAN 197 VLYELMQTEVHHVRTLKIMLKVYSRALQEELQFSSKAIGRLFPCADDLLETH-SHFLARLKERRQesleEGSDRNYVIQ 274
+                                     688************************9999*********************.9999999999996665488888999* PP
+
+                                     -SHHHHHHHHSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHH CS
+                          RhoGEF  76 sigdvflkladkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYp 148
+                                     +igd++ + ++  +       Y  +cs +++a++++k l+++nkkf+++++++ + + +++l  ++++++  qR+++Yp
+  tr|A0A590UK10|A0A590UK10_HUMAN 275 KIGDLLVQQFSGENGermkekYGVFCSGHNEAVSHYKLLLQQNKKFQNLIKKIGNFSIVRRLGVQECILLVTQRITKYP 353
+                                     *****9988877654688999********************************************************** PP
+
+                                     HHHHHHHHTS-TTSHHHHHHHHHHHHHHHHHHHHH CS
+                          RhoGEF 149 LLLkellkhtpeshpdyealkkaleaikevasqiN 183
+                                     +L++ ++++t++  +dye+l +al+ ik++ sq++
+  tr|A0A590UK10|A0A590UK10_HUMAN 354 VLVERIIQNTEAGTEDYEDLTQALNLIKDIISQVD 388
+                                     *******************************9985 PP
+
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   0.0   3.9e-10   2.5e-06       9     104 ..     440     531 ..     421     532 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 3.9e-10
+                                     EECSSSSTSEEEEEEEEETTEEEEESSC....TCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTSSSTEEE CS
+                              PH   9 kkgsgkkkswkkrwfvLkdsellyyknd....ksekdkepkgsislsncevvevvatedpkrkfcfelriverngsrty 83 
+                                     k +sg   + k+  ++L +++ll+ +++       +  ++  +isl+++ v+ev      ++k +f +  + +++ + y
+  tr|A0A590UK10|A0A590UK10_HUMAN 440 KTTSG---RLKDILAILLTDVLLLLQEKdqkyVFASVDSKPPVISLQKLIVREV----ANEEKAMFLISASLQGP-EMY 510
+                                     23332...78899999999998888888899966777777889*********99....88889999997775566.*** PP
+
+                                     EEEESSHHHHHHHHHHHHHHH CS
+                              PH  84 llqasseeerkeWikaiqsai 104
+                                      +++ss+e+r++W+++iq+a+
+  tr|A0A590UK10|A0A590UK10_HUMAN 511 EIYTSSKEDRNAWMAHIQRAV 531
+                                     ******************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1089 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1740  (0.0907242); expected 383.6 (0.02)
+Passed bias filter:                      527  (0.027478); expected 383.6 (0.02)
+Passed Vit filter:                       101  (0.00526618); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.76u 0.21s 00:00:00.97 Elapsed: 00:00:00.70
+# Mc/sec: 5024.96
+//
+Query:       sp|Q6ZSZ5|ARHGI_HUMAN  [L=1361]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-39  134.4   0.5    4.3e-39  133.3   0.5    1.6  1  PH_16     PH domain
+    2.4e-32  112.7   3.0    2.4e-32  112.7   3.0    2.4  1  RhoGEF    RhoGEF domain
+    1.3e-06   28.9   0.0    3.5e-06   27.6   0.0    1.7  1  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_16  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.3   0.5   6.7e-43   4.3e-39       2     127 .]     670     786 ..     669     786 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 133.3 bits;  conditional E-value: 6.7e-43
+                  PH_16   2 klgeeFkkldltkrkLihegeltwrkskgklvelhalLledilvlLqkkdeklvlkslstaveskdeKtlspiikLkklivrevatdk 89 
+                            k+g +F+k+d+ +r+L  eg l w++++g+l+++ a+Ll+d+l+lLq+kd+k+v++s+       d+K  +p+i+L+klivreva+++
+  sp|Q6ZSZ5|ARHGI_HUMAN 670 KNGLTFRKEDMLQRQLHLEGMLCWKTTSGRLKDILAILLTDVLLLLQEKDQKYVFASV-------DSK--PPVISLQKLIVREVANEE 748
+                            56789*****************************************************.......***..****************** PP
+
+                  PH_16  90 kalflistsesdpqmyelvastkserktWlklieeave 127
+                            ka+flis+s ++p+mye+ +s+k++r+ W+  i++ave
+  sp|Q6ZSZ5|ARHGI_HUMAN 749 KAMFLISASLQGPEMYEIYTSSKEDRNAWMAHIQRAVE 786
+                            ************************************97 PP
+
+>> RhoGEF  RhoGEF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.7   3.0   3.7e-36   2.4e-32       1     183 []     451     642 ..     451     642 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 112.7 bits;  conditional E-value: 3.7e-36
+                            HHHHHHHHHHHHHHHHHHHHHHTHCCCHHCTCCHHHHHHHHCTTHHHHHHHHHHHHHHHHHHHH.....HHHHTTSS-S-SHHHHHHH CS
+                 RhoGEF   1 vikElleTErsYvrdLkvlvevylkplseeellseeeikiiFsnieeilelhrsflleeLeerlk....keskeekeaesigdvflkl 84 
+                            v+ El++TE ++vr+Lk++ +vy ++l+ee  +s++ i  +F + +++le h s++l +L+er +    ++s+ +  +++igd++ + 
+  sp|Q6ZSZ5|ARHGI_HUMAN 451 VLYELMQTEVHHVRTLKIMLKVYSRALQEELQFSSKAIGRLFPCADDLLETH-SHFLARLKERRQesleEGSDRNYVIQKIGDLLVQQ 537
+                            688************************9999*********************.9999999999996665488888999******9988 PP
+
+                            HSTHHH......HHHHHHCHHHHHHHHHHHHHHHHHHHHHHHHHHTSGGGTT--HHHHTTHHHHHHHHHHHHHHHHHHTS-TTSHHHH CS
+                 RhoGEF  85 adkfkk......YseYcsnydkalkllkelskknkkfkafleeaeerpecskldLeslLikPvqRlprYpLLLkellkhtpeshpdye 166
+                            ++  +       Y  +cs +++a++++k l+++nkkf+++++++ + + +++l  ++++++  qR+++Yp+L++ ++++t++  +dye
+  sp|Q6ZSZ5|ARHGI_HUMAN 538 FSGENGermkekYGVFCSGHNEAVSHYKLLLQQNKKFQNLIKKIGNFSIVRRLGVQECILLVTQRITKYPVLVERIIQNTEAGTEDYE 625
+                            877654688999**************************************************************************** PP
+
+                            HHHHHHHHHHHHHHHHH CS
+                 RhoGEF 167 alkkaleaikevasqiN 183
+                            +l +al+ ik++ sq++
+  sp|Q6ZSZ5|ARHGI_HUMAN 626 DLTQALNLIKDIISQVD 642
+                            *************9985 PP
+
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.0   5.5e-10   3.5e-06      10     104 ..     695     785 ..     676     786 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 5.5e-10
+                            ECSSSSTSEEEEEEEEETTEEEEESSC....TCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTSSSTEEEEEEESSHHHH CS
+                     PH  10 kgsgkkkswkkrwfvLkdsellyyknd....ksekdkepkgsislsncevvevvatedpkrkfcfelriverngsrtyllqasseeer 93 
+                             +sg   + k+  ++L +++ll+ +++       +  ++  +isl+++ v+ev      ++k +f +  + +++ + y +++ss+e+r
+  sp|Q6ZSZ5|ARHGI_HUMAN 695 TTSG---RLKDILAILLTDVLLLLQEKdqkyVFASVDSKPPVISLQKLIVREV----ANEEKAMFLISASLQGP-EMYEIYTSSKEDR 774
+                            3332...78898999999998888888899966777777889*********99....88889999997775566.************* PP
+
+                            HHHHHHHHHHH CS
+                     PH  94 keWikaiqsai 104
+                            ++W+++iq+a+
+  sp|Q6ZSZ5|ARHGI_HUMAN 775 NAWMAHIQRAV 785
+                            ********997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1361 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2034  (0.106053); expected 383.6 (0.02)
+Passed bias filter:                      691  (0.036029); expected 383.6 (0.02)
+Passed Vit filter:                       117  (0.00610042); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.80u 0.16s 00:00:00.96 Elapsed: 00:00:00.95
+# Mc/sec: 4630.77
+//
+[ok]

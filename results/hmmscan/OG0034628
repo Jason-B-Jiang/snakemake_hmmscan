@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034628.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034628
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A5WVU1|A5WVU1_DANRE  [L=232]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.4e-79  265.7   7.1    3.5e-79  265.1   7.1    1.2  1  CaKB            Calcium-activated potassium channel, beta sub
+    6.6e-16   57.7   0.3    1.4e-15   56.7   0.3    1.6  1  KcnmB2_inactiv  KCNMB2, ball and chain domain
+
+
+Domain annotation for each model (and alignments):
+>> CaKB  Calcium-activated potassium channel, beta subunit
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  265.1   7.1   3.6e-83   3.5e-79       2     195 .]      36     226 ..      35     226 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 265.1 bits;  conditional E-value: 3.6e-83
+                    CaKB   2 assagEdrailLGlamialsvlmyfvlGitvlkpylksvwteeanCtvleveileevvdcsfscgsdcrgvskypCLqvlvnlsesg 88 
+                             a++agEdrailLGl+m+++sv+myfv++it++++y++s+ ++e++Ctvl++++++e ++cs++cgsdc+++skypCLqv+v+l+++g
+  tr|A5WVU1|A5WVU1_DANRE  36 ALKAGEDRAILLGLSMVFSSVMMYFVICITMVRAYADSLLIDETTCTVLNSSLTKE-INCSYNCGSDCWRSSKYPCLQVYVSLNATG 121
+                             789*****************************************************.****************************** PP
+
+                    CaKB  89 kkalLhydeealelnpkCfYiPkcqrdkkeleeeveeikenlkkkkeqtftCyldpeekpedvllkrkydeevllhsllWPslmLlg 175
+                             +  lL+++ee+l+ +++CfY+Pkcq+d+++++  +++i+++lk++  q++ C++dp+e+++++llkr+y+++ llhsl+WPs+mL g
+  tr|A5WVU1|A5WVU1_DANRE 122 RIGLLSHNEEMLDVSSECFYVPKCQKDHTAMRVLIQNISDHLKMQ--QQVRCFHDPSEHQASILLKRIYGSASLLHSLFWPSCMLSG 206
+                             *********************************************..99************************************** PP
+
+                    CaKB 176 GvlivvlvkltqsLsvlaee 195
+                             G+li+++vkltq+Ls+l+e+
+  tr|A5WVU1|A5WVU1_DANRE 207 GTLIILMVKLTQYLSILCEQ 226
+                             ******************96 PP
+
+>> KcnmB2_inactiv  KCNMB2, ball and chain domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.7   0.3   1.4e-19   1.4e-15       1      31 []       1      29 [.       1      29 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 56.7 bits;  conditional E-value: 1.4e-19
+          KcnmB2_inactiv  1 MFlwvggrttqgfstsqRsIYQkiRehdLLD 31
+                            MF+++g+rttq+  t+qR+IY+++++h+L+D
+  tr|A5WVU1|A5WVU1_DANRE  1 MFFVKGVRTTQA--TQQRVIYKRLWGHELKD 29
+                            ************..****************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (232 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       827  (0.0431201); expected 383.6 (0.02)
+Passed bias filter:                      456  (0.023776); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.62
+# Mc/sec: 1207.79
+//
+[ok]

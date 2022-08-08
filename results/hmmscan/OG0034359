@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034359.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034359
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QKD7|A0A2R8QKD7_DANRE  [L=188]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-64  214.5   6.1      5e-64  214.0   6.1    1.2  1  TLE_N     Groucho/TLE N-terminal Q-rich domain
+
+
+Domain annotation for each model (and alignments):
+>> TLE_N  Groucho/TLE N-terminal Q-rich domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  214.0   6.1   2.6e-68     5e-64       1     116 []       6     120 ..       6     120 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 214.0 bits;  conditional E-value: 2.6e-68
+                           TLE_N   1 lkftvaetcdrikeefqflqaqyhsLklecekLasektemqRhyvmyyemsygLniemhkqteiakrlnaiiaqvlpfL 79 
+                                     lkft++++cdrik+efqflqaqyhsLklec+kLasek+emqRhy+myyemsygLniemhkq+ei+krln i+aqvlp+L
+  tr|A0A2R8QKD7|A0A2R8QKD7_DANRE   6 LKFTTSDSCDRIKDEFQFLQAQYHSLKLECDKLASEKSEMQRHYIMYYEMSYGLNIEMHKQAEIVKRLNGICAQVLPYL 84 
+                                     69***************************************************************************** PP
+
+                           TLE_N  80 sqehqqqvaqaverakqvtmaelnaiigqqqlqaqql 116
+                                     sqehqqqv+ a+erakqvt +e+n+ii+ qqlqa+ql
+  tr|A0A2R8QKD7|A0A2R8QKD7_DANRE  85 SQEHQQQVLGAIERAKQVTPPEMNSIIR-QQLQAHQL 120
+                                     ****************************.99**9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (188 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       966  (0.0503676); expected 383.6 (0.02)
+Passed bias filter:                      471  (0.0245581); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.21s 00:00:00.55 Elapsed: 00:00:00.52
+# Mc/sec: 1168.27
+//
+[ok]

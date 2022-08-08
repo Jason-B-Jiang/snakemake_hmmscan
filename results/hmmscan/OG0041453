@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041453.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041453
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_013237100.1  [L=121]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    8.7e-08   32.6   0.2    1.3e-07   32.0   0.2    1.2  1  EF-hand_7  EF-hand domain pair
+    5.3e-07   28.9   3.1     0.0072   15.9   0.3    2.5  2  EF-hand_5  EF hand
+    1.1e-06   27.8   1.1     0.0048   16.5   0.0    2.3  0  EF-hand_1  EF hand
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.0   0.2   2.1e-11   1.3e-07       6      69 ..      44     105 ..      43     106 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 32.0 bits;  conditional E-value: 2.1e-11
+       EF-hand_7   6 eaFkelDtdgdgyldkeeLlrllrkifqg.sgegkklsdeeleelfkefDldkdGvisfdEFlka 69 
+                     e+F+ lD + dg +d  e+l ++ + +q  ++ +kk+s  ++e++++  D +kd  isf EF++a
+  XP_013237100.1  44 EKFWNLDLNSDGIIDAMEMLTIISW-NQPlESDAKKIS--KMEDILRRADRNKDNAISFLEFEEA 105
+                     69****************8845554.444344444444..599*******************985 PP
+
+>> EF-hand_5  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.3   0.1   7.3e-06     0.047       8      23 ..      49      64 ..      44      66 .. 0.87
+   2 !   15.9   0.3   1.1e-06    0.0072       2      23 ..      83     104 ..      82     105 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 7.3e-06
+                    H-SS-SSCE-HHHHHH CS
+       EF-hand_5  8 iDlNgDGkIskeELkt 23
+                    +DlN DG I++ E  t
+  XP_013237100.1 49 LDLNSDGIIDAMEMLT 64
+                    8************877 PP
+
+  == domain 2  score: 15.9 bits;  conditional E-value: 1.1e-06
+                     HHHHHHH-SS-SSCE-HHHHHH CS
+       EF-hand_5   2 kdtFqaiDlNgDGkIskeELkt 23 
+                     +d  + +D+N+D  Is+ E+++
+  XP_013237100.1  83 EDILRRADRNKDNAISFLEFEE 104
+                     7889****************75 PP
+
+>> EF-hand_1  EF hand
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (121 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       655  (0.0341519); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.22s 00:00:00.55 Elapsed: 00:00:00.66
+# Mc/sec: 595.56
+//
+[ok]

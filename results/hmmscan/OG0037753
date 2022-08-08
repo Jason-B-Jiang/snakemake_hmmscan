@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037753.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037753
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651165.1  [L=206]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.7e-27   94.5  16.9      7e-14   52.0   2.6    2.7  2  BON          BON domain
+    1.8e-05   25.7   1.8       0.17   12.9   0.2    2.1  0  YggL_50S_bp  YggL 50S ribosome-binding protein
+
+
+Domain annotation for each model (and alignments):
+>> BON  BON domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   2.6   7.3e-18     7e-14       1      61 [.      45     106 ..      45     115 .. 0.96
+   2 !   50.2   4.0   2.7e-17   2.6e-13       1      63 [.     137     201 ..     137     206 .] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 7.3e-18
+                     EHHCCHHHHHHHHHHHCHTTGCCCEEEEETTCEEEECEEE.CHHHHHHHHHHHHCCTTEEEE CS
+             BON   1 dDaeiaakvkaalakdggldaadinVevenGvVtLsGtVd.seaekekAveiarnveGVkkV 61 
+                     +D++i++kvk+ l+ ++g++++di+Ve+++GvV Ls tV+ s+a+ke+Av+i+++++GV++V
+  XP_002651165.1  45 SDTWITTKVKSDLLTEKGIPGSDIKVETNKGVVSLSSTVAiSDAQKETAVAITKKIKGVTAV 106
+                     79***********************************************************9 PP
+
+  == domain 2  score: 50.2 bits;  conditional E-value: 2.7e-17
+                     EHHCCHHHHHHHHHHHCHTTGCCCEEEEETTCEEEECEEE.CHHHHHHHHHHHHCCTTEEEE.EE CS
+             BON   1 dDaeiaakvkaalakdggldaadinVevenGvVtLsGtVd.seaekekAveiarnveGVkkV.vn 63 
+                     +D++i++kvka l+ ++g++++di+Ve+++GvV Ls  V+ +ea+k++Av i+++++GVk+V  +
+  XP_002651165.1 137 SDTWITTKVKADLVTEKGIPGTDIKVETNKGVVSLSSSVAvTEAQKTTAVNITKKIKGVKAVsAD 201
+                     79************************************************************555 PP
+
+>> YggL_50S_bp  YggL 50S ribosome-binding protein
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (206 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       864  (0.0450493); expected 383.6 (0.02)
+Passed bias filter:                      332  (0.0173106); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.66
+# Mc/sec: 1016.04
+//
+[ok]

@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040980.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040980
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8IYQ7|THNS1_HUMAN  [L=743]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      3e-39  134.8   0.0    6.7e-39  133.7   0.0    1.6  1  SKI          Shikimate kinase
+    2.5e-13   50.1   0.0    8.5e-13   48.4   0.0    2.0  1  Thr_synth_N  Threonine synthase N terminus
+    7.8e-07   29.8   0.0    3.4e-06   27.7   0.0    2.2  0  AAA_18       AAA domain
+    0.00024   21.6   0.0     0.0018   18.8   0.0    2.4  0  AAA          ATPase family associated with various cellular a
+
+
+Domain annotation for each model (and alignments):
+>> SKI  Shikimate kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.7   0.0   1.4e-42   6.7e-39       1     157 [.      64     220 ..      64     221 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 133.7 bits;  conditional E-value: 1.4e-42
+                            TTSSHHHHHHHHHHHHTSEEEEHHH.HHHHHHTS-HHHHHHHHHHHHHHHHHHHHHHHHCCCSSEEEEE-TTGGGSHHHHHHHHHHSE CS
+                    SKI   1 mGaGKstvGkllAkklglefiDlDe.liekrtgmsiaeifeeegeegFrelEsevlkellaeeglViatGGGavlseenrellkekgi 87 
+                            +GaGK+tvG+++++klg+++iD+D+ ++ek+++ms++e +++ g+e+F e+E +++ +++a+ g+Vi++ G+++++++++++lk++gi
+  sp|Q8IYQ7|THNS1_HUMAN  64 PGAGKTTVGRIIGQKLGCCVIDVDDdILEKTWNMSVSEKLQDVGNEQFLEEEGKAVLNFSAS-GSVISLTGSNPMHDASMWHLKKNGI 150
+                            6**********************76477**********************************.************************* PP
+
+                            EEEEE--HHHHHHHHHHTTS.SGGGCSCHHHHHHHHHHHHHHHHHCC.SSCEEEECTSSHHHHHHHHHHHHH CS
+                    SKI  88 viyLdvsleellerlkadke.RPllqekskeeelleelaereplyee.aadivvdeseeskeevaeeileal 157
+                            ++yLdv+l +l+ rlk  k+ R++ q++ +  ++++ l+ r+++y++ ++++v++es++s+eeva+++l+a+
+  sp|Q8IYQ7|THNS1_HUMAN 151 IVYLDVPLLDLICRLKLMKTdRIVGQNSGT--SMKDLLKFRRQYYKKwYDARVFCESGASPEEVADKVLNAI 220
+                            ****************87777*****9999..99999998999999989********************987 PP
+
+>> Thr_synth_N  Threonine synthase N terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.4   0.0   1.8e-16   8.5e-13       9      79 .]     246     318 ..     230     318 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 48.4 bits;  conditional E-value: 1.8e-16
+            Thr_synth_N   9 aeklsfeeallkGlAeDgGLyvPe.eiPklsaeeleelrklsYaelafevlklfi.edeipeedLkeliekaY 79 
+                             ++  f+ea+++GlA+DgGL+vP+ e+Pkls  e+++l +++Y e a  +l++ i   +ip+++L e+ie aY
+  sp|Q8IYQ7|THNS1_HUMAN 246 VSAKFFSEAVIEGLASDGGLFVPAkEFPKLSCGEWKSLVGATYVERAQILLERCIhPADIPAARLGEMIETAY 318
+                            355669*****************758*****************************99***************9 PP
+
+>> AAA_18  AAA domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> AAA  ATPase family associated with various cellular activities (AAA)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (743 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       749  (0.0390531); expected 383.6 (0.02)
+Passed bias filter:                      627  (0.032692); expected 383.6 (0.02)
+Passed Vit filter:                        89  (0.00464049); expected 19.2 (0.001)
+Passed Fwd filter:                        18  (0.000938527); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.50u 0.21s 00:00:00.71 Elapsed: 00:00:00.75
+# Mc/sec: 3222.17
+//
+[ok]

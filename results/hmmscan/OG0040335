@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040335.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040335
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NQ87|HEYL_HUMAN  [L=328]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    8.3e-17   61.0   1.6    1.6e-16   60.1   1.6    1.5  1  HLH           Helix-loop-helix DNA-binding domain
+    5.4e-10   39.4   0.0    1.1e-09   38.4   0.0    1.5  1  Hairy_orange  Hairy Orange
+
+
+Domain annotation for each model (and alignments):
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.1   1.6   1.6e-20   1.6e-16       1      54 []      44      99 ..      44      99 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 60.1 bits;  conditional E-value: 1.6e-20
+                          HHHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS...-STHHHHHHHHHHHHHHHH CS
+                   HLH  1 rraahnerErrRRdriNsafeeLrellPsslppsk...KlsKaeiLekAveYIkhLq 54
+                          r++++ ++E+rRRdriNs+++eLr+l+P ++  ++   Kl+Kae+L+++v+++k+L+
+  sp|Q9NQ87|HEYL_HUMAN 44 RKKHRGIIEKRRRDRINSSLSELRRLVP-TAFEKQgssKLEKAEVLQMTVDHLKMLH 99
+                          6778889*********************.666666788****************995 PP
+
+>> Hairy_orange  Hairy Orange
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   0.0   1.2e-13   1.1e-09       3      40 .]     118     158 ..     116     158 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 1.2e-13
+          Hairy_orange   3 raGFqeCakEVsrfLaslegvdp...avkqrLlrHLqrcls 40 
+                           + GF+eC++EV r+L  leg ++   +v+ rLl+HL ++++
+  sp|Q9NQ87|HEYL_HUMAN 118 SIGFRECLTEVIRYLGVLEGPSSradPVRIRLLSHLNSYAA 158
+                           57******************9999*************9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (328 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       508  (0.0264873); expected 383.6 (0.02)
+Passed bias filter:                      359  (0.0187184); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.58
+# Mc/sec: 1838.16
+//
+[ok]

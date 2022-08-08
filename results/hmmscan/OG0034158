@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034158.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034158
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q1RM05|Q1RM05_DANRE  [L=578]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    9.5e-20   70.6   0.0    2.7e-19   69.1   0.0    1.8  1  Tissue_fac     Tissue factor
+    3.8e-09   36.9   0.3    1.3e-08   35.1   0.3    1.9  1  Interfer-bind  Interferon-alpha/beta receptor, fibronectin ty
+
+
+Domain annotation for each model (and alignments):
+>> Tissue_fac  Tissue factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.1   0.0   2.8e-23   2.7e-19       1     107 []       4     113 ..       4     113 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 69.1 bits;  conditional E-value: 2.8e-23
+                             XXXXXXXXXXXXXXXXXTCCSTCSSEEEEEEEETTEEEEEEEESTTSSTTEEEEEEEE...ETTTTCEEEEEEEEEESSSEEECTTT CS
+              Tissue_fac   1 llllllsllllalastastaelpaPqnvtfqsrnfkniLtWepgqnspesvvYtVqyk...mykseqwknvedCtniteteCDLtee 84 
+                             +l+++++lll++l   +++a+l +P+ +t+ + +fk   +W pgq++p+ + Yt+++    +++ ++w  +++Ct+i  ++C+L+ +
+  tr|Q1RM05|Q1RM05_DANRE   4 FLTCMFTLLLICL--IPCKATLSPPEVLTVGLLDFKATAEWLPGQGNPPGTRYTLEFIhaqNMSGGKWIGSPKCTDIGLLKCELNFD 88 
+                             6899999999996..999999*************************************99988999********************* PP
+
+                             HTT..TTSEEEEEEEEEETTEEEEE CS
+              Tissue_fac  85 tsd..ltetyyarVraasagstsew 107
+                                  l+++y++rV+a+ +g++s+w
+  tr|Q1RM05|Q1RM05_DANRE  89 KPPfdLHWNYFLRVKATFKGTSSNW 113
+                             99888*******************9 PP
+
+>> Interfer-bind  Interferon-alpha/beta receptor, fibronectin type III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   0.3   1.4e-12   1.3e-08       1     102 [.     126     222 ..     126     223 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 1.4e-12
+                             CBE-SSEEEEEEESSEEEEEEEESCECTSSTSCEHHHHSTT-EEEEEEEETTTC...EEEEEEEESSSEEEEES--TT-EEEEEEEE CS
+           Interfer-bind   1 telgpPevelesedkklnvtvkdpetlkegknlslrelyqslsYkvsywknssn...eekkelestnslvvlekLepetnYCvsVqa 84 
+                             t+l+pP+v++++++k+++++++       +   s ++    l Y +s+++ns     + + ++++++s +v++++  ++nYC+sV+a
+  tr|Q1RM05|Q1RM05_DANRE 126 TRLSPPDVKISTDQKSIQINFNHWL----E---SNTRTK-PLDYLLSLFENSPAgetKFVAVISTSKSPYVFHDVPSGKNYCISVSA 204
+                             799******************9998....2...223333.48899999999955323566788999999****************** PP
+
+                             EESSSTEEEEE-CEEEEE CS
+           Interfer-bind  85 esrksnkkserSevkCik 102
+                             ++++  k+ ++  +kCi 
+  tr|Q1RM05|Q1RM05_DANRE 205 SHHQASKNNNFNTTKCIF 222
+                             ****************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (578 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1094  (0.0570416); expected 383.6 (0.02)
+Passed bias filter:                      629  (0.0327963); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.22s 00:00:00.61 Elapsed: 00:00:00.72
+# Mc/sec: 2611.39
+//
+[ok]

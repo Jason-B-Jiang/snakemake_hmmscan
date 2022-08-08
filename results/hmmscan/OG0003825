@@ -1,0 +1,636 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003825.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003825
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAG0438435.1  [L=369]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.9e-15   55.7   0.0      7e-14   51.9   0.0    2.4  1  Lactamase_B_2  Beta-lactamase superfamily domain
+    2.2e-05   24.7   0.0    4.6e-05   23.6   0.0    1.5  1  Lactamase_B    Metallo-beta-lactamase superfamily
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.9   0.0   7.3e-18     7e-14      26     199 ..     142     333 ..     133     334 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 51.9 bits;  conditional E-value: 7.3e-18
+                    --..SEEEEE-SS--HHHHGGGGGGGG..G--EE..EEEEHHHHHHTTTTS-HHHHHTT...T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----T CS
+  Lactamase_B_2  26 delppidaVllthaHyDHlaglltlre..lrpkelplyaplgvlavlernfvylaleee...pavrvheldwgesfelgdggleitatparhkspr 116
+                    +++ +++ ++lth+H+D++ gl++l++     k+l+l+a +++ ++l + f y +  ++    +   ++  +++sf ++  +lei ++ + h+  +
+   KAG0438435.1 142 KQIFDLKTIILTHEHADAIGGLDSLKQtiPNSKKLDLLARKETIEYLFKTFEYYFERPNhqfSPGYFNPKIIDSSFVVN--DLEILPIDVFHGECP 235
+                    56668999*******************7533344*********************999966533334444488*****9..567777777777666 PP
+
+                    TTS--TTSSEEEEEE..TT--E...........................EEEESS-S---HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STS CS
+  Lactamase_B_2 117 rldrnagdtlGlvie..gpgkr...........................vyyigDtgyvpdeigerlggadllllditayeddemirhmgHltpee 183
+                            t G+v++  +++++                           ++yi D++ ++d    ++++ +ll++d+++++ d      gHl+ +e
+   KAG0438435.1 236 --------TNGYVFKqiKNDQNskflnnyddstkfydgqkhnsndyenkFAYISDCKRIDDF--SEIKNLKLLIIDCNTLDLDV----YGHLNFRE 317
+                    ........77777776633333567777777778888888999999999***********66..579***********999988....7******* PP
+
+                    HHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 184 aveaaadlgakrlvli 199
+                     +++++ +++k+++l+
+   KAG0438435.1 318 IIDIVKIVNPKKTILV 333
+                    ************9986 PP
+
+>> Lactamase_B  Metallo-beta-lactamase superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.6   0.0   4.8e-09   4.6e-05      40     112 ..     142     224 ..     131     236 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 23.6 bits;  conditional E-value: 4.8e-09
+                   SGGGGEEEEE-SBSSHHHHTTHHHHHHHHCHCEEEEEEHHHHHHHHHHHHHHHHHHCH..........THHHCCCCEEEECTT CS
+   Lactamase_B  40 lkpkdvdavilTHlHlDHiGglgglveatdvvvgkvaeeapalfgeeagdaasrlgap..........lagvdrlkpgvdeee 112
+                   ++++d++++ilTH H+D iGgl+ l+++ ++ +    ++ ++  +   ++ + +++ p          +++ d   +++d+e+
+  KAG0438435.1 142 KQIFDLKTIILTHEHADAIGGLDSLKQTIPNSKKLDLLARKETIEYLFKTFEYYFERPnhqfspgyfnPKIIDSSFVVNDLEI 224
+                   6789*************************999988888888888877777777777767766666555555555555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (369 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2077  (0.108296); expected 383.6 (0.02)
+Passed bias filter:                      581  (0.0302936); expected 383.6 (0.02)
+Passed Vit filter:                        92  (0.00479691); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.69
+# Mc/sec: 1725.02
+//
+Query:       EJW03092.1  [L=304]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.7e-18   67.0   0.0    6.4e-18   65.1   0.0    1.7  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.1   0.0   3.4e-22   6.4e-18      29     199 ..     109     271 ..      97     273 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 65.1 bits;  conditional E-value: 3.4e-22
+                    .SEEEEE-SS--HHHHGGGGGGGGG--EE....EEEEHHHHHHTTTTS-HHHHHTT......T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----T CS
+  Lactamase_B_2  29 ppidaVllthaHyDHlaglltlrelrpke..lplyaplgvlavlernfvylaleee......pavrvheldwgesfelgdggleitatparhkspr 116
+                     ++  Vllth H+D++ gl++l++++p++  lp+y ++ +l++l+  f yl+ ++       ++++   ++ ++  +++  ++ei ++ ++h+  +
+     EJW03092.1 109 SKLPSVLLTHCHADAILGLDSLKQMTPNNlnLPIYSDQPTLDYLDLCFGYLFHKNVysktisGPLKKINIKVDQINTIE--DVEIVPFYVEHGDSK 202
+                    56778*******************999999999*********************9999998888888888889988887..578999999999999 PP
+
+                    TTS--TTSSEEEEEETT--EEEEESS-S---.HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STSHHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 117 rldrnagdtlGlviegpgkrvyyigDtgyvp.deigerlggadllllditayeddemirhmgHltpeeaveaaadlgakrlvli 199
+                            +lG+ i+   +r++yi D+  ++ de+ +++ ++++l+l++t  +        gHl +++ +++++++++k+++li
+     EJW03092.1 203 --------CLGYKID---NRIVYISDCSSIDqDEVYKLIFNIETLILECTSIDILT----FGHLRLKDSIKIIDRIKPKKTYLI 271
+                    ........*******...8************9999*************99888866....8*********************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (304 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       683  (0.0356119); expected 383.6 (0.02)
+Passed bias filter:                      381  (0.0198655); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.15s 00:00:00.51 Elapsed: 00:00:00.75
+# Mc/sec: 1318.88
+//
+Query:       XP_013237809.1  [L=219]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.3e-06   28.1   0.1    1.6e-05   24.7   0.1    2.5  0  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (219 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       269  (0.0140258); expected 383.6 (0.02)
+Passed bias filter:                      252  (0.0131394); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.88
+# Mc/sec: 804.14
+//
+Query:       KRH95247.1  [L=320]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.7e-14   52.5   0.0    1.2e-13   51.1   0.0    1.6  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.1   0.0   6.5e-18   1.2e-13      33     199 ..     134     293 ..     110     294 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 51.1 bits;  conditional E-value: 6.5e-18
+                    EEE-SS--HHHHGGGGGGGGG--EE..EEEEHHHHHHTTTTS-HHHHHTT........T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----TTTS- CS
+  Lactamase_B_2  33 aVllthaHyDHlaglltlrelrpkelplyaplgvlavlernfvylaleee........pavrvheldwgesfelgdggleitatparhksprrldr 120
+                     ++lth H+D++ g++t   + +  +pl++++ +   l+++f y+++e+          +++ + l+ + +f  + g+++++ ++  h+  +    
+     KRH95247.1 134 DLILTHPHADAISGIDTYLMMNNGAMPLFCDKFTFTLLKESFKYFFREPSlkrvrsffTEEKSTILKDNLTF--KAGNMTFKSFEMLHGRCT---- 223
+                    469*****************98888*************************6555554434444444433333..555899999999999988.... PP
+
+                    -TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT..-SEEEEE-S-SSTTHHHHHHT---STSHHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 121 nagdtlGlviegpgkrvyyigDtgyvpdeigerlgg..adllllditayeddemirhmgHltpeeaveaaadlgakrlvli 199
+                        +++++ie    +++yi D+ ++++   e +++   + l++d+ a++  +     gHl++e+  + +a+++++ ++l+
+     KRH95247.1 224 ----AMAFLIE---GKALYISDCSEITENQLEYFRKlsLKFLFIDCLALSGYN----IGHLNLEDVKKYVARIKPEHVILV 293
+                    ....*******...7************99999999977788999999888866....9*******************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (320 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       789  (0.0411387); expected 383.6 (0.02)
+Passed bias filter:                      540  (0.0281558); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.75
+# Mc/sec: 1374.08
+//
+Query:       PJF19487.1  [L=357]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.8e-20   72.1   0.0    6.3e-20   71.7   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+    8.4e-06   26.0   0.4    3.2e-05   24.1   0.5    2.1  1  Lactamase_B    Metallo-beta-lactamase superfamily
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.7   0.0   6.5e-24   6.3e-20       1     199 [.     110     306 ..     110     308 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 71.7 bits;  conditional E-value: 6.5e-24
+                    SEEEES--TTHHHHHTSGG---SSS--..SEEEEE-SS--HHHHGGGGGGGG.....G--EE......EEEEHHHHHHTTTTS-HHHHHTT..... CS
+  Lactamase_B_2   1 rriLiDagpdlrqqalralqPvelrdelppidaVllthaHyDHlaglltlre.....lrpke....lplyaplgvlavlernfvylaleee..... 82 
+                    + iLiD+g  +  + +r l     r+ ++ +d+Vllth+H+D++ gl++lr+         +    +++y+++++ +v+++ f+yl+  +      
+     PJF19487.1 110 HSILIDCGKTFYTNTERML-----RAGVRVLDGVLLTHGHADAILGLDDLRHwaghfP---SiqetVNVYCDADTFEVVKKAFPYLVDRRLatggg 197
+                    579********99966665.....999*************************996550...344459********************99999**** PP
+
+                    ..T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT..-SEEEEE-S-SSTTHHHH CS
+  Lactamase_B_2  83 ..pavrvheldwgesfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlgg..adllllditayeddemir 174
+                      pa++ h+++ g   ++g  +le+ ++ + h+     d +   + G++++     + y  D   vp+e ++++ g   ++l++d+ + ++ +   
+     PJF19487.1 198 evPALMFHTIESGVLATIG--ELEVMPVRLLHGCHS--DGKDYFANGFRVG----GLSYFSDISGVPKESQQLVMGspTEVLIVDCLLENKSY--- 282
+                    ******************9..456666666666665..99999********....9*************99999887799*****87666655... PP
+
+                    HHT---STSHHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 175 hmgHltpeeaveaaadlgakrlvli 199
+                      +H  + ++  ++++l++k+ vl+
+     PJF19487.1 283 -LSHYCWPQTEPFIKELDPKTSVLV 306
+                    .689999999999999999988886 PP
+
+>> Lactamase_B  Metallo-beta-lactamase superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.5   3.3e-09   3.2e-05      16      68 ..     110     158 ..      93     231 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 3.3e-09
+                  CEEEES--SCCHHHHHHHHHHHHCSGGGGEEEEE-SBSSHHHHTTHHHHHHHH CS
+  Lactamase_B  16 gviLiDtGtsteaaraalelaalglkpkdvdavilTHlHlDHiGglgglveat 68 
+                  + iLiD+G +  ++ +++    l+ + + +d v+lTH+H+D i gl++l++ +
+   PJF19487.1 110 HSILIDCGKTFYTNTERM----LRAGVRVLDGVLLTHGHADAILGLDDLRHWA 158
+                  468**************9....***************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (357 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       278  (0.014495); expected 383.6 (0.02)
+Passed bias filter:                      270  (0.0140779); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.75
+# Mc/sec: 1547.37
+//
+Query:       PJF19968.1  [L=357]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.8e-20   72.1   0.0    6.3e-20   71.7   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+    8.4e-06   26.0   0.4    3.2e-05   24.1   0.5    2.1  1  Lactamase_B    Metallo-beta-lactamase superfamily
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.7   0.0   6.5e-24   6.3e-20       1     199 [.     110     306 ..     110     308 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 71.7 bits;  conditional E-value: 6.5e-24
+                    SEEEES--TTHHHHHTSGG---SSS--..SEEEEE-SS--HHHHGGGGGGGG.....G--EE......EEEEHHHHHHTTTTS-HHHHHTT..... CS
+  Lactamase_B_2   1 rriLiDagpdlrqqalralqPvelrdelppidaVllthaHyDHlaglltlre.....lrpke....lplyaplgvlavlernfvylaleee..... 82 
+                    + iLiD+g  +  + +r l     r+ ++ +d+Vllth+H+D++ gl++lr+         +    +++y+++++ +v+++ f+yl+  +      
+     PJF19968.1 110 HSILIDCGKTFYTNTERML-----RAGVRVLDGVLLTHGHADAILGLDDLRHwaghfP---SiqetVNVYCDADTFEVVKKAFPYLVDRRLatggg 197
+                    579********99966665.....999*************************996550...344459********************99999**** PP
+
+                    ..T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT..-SEEEEE-S-SSTTHHHH CS
+  Lactamase_B_2  83 ..pavrvheldwgesfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlgg..adllllditayeddemir 174
+                      pa++ h+++ g   ++g  +le+ ++ + h+     d +   + G++++     + y  D   vp+e ++++ g   ++l++d+ + ++ +   
+     PJF19968.1 198 evPALMFHTIESGVLATIG--ELEVMPVRLLHGCHS--DGKDYFANGFRVG----GLSYFSDISGVPKESQQLVMGspTEVLIVDCLLENKSY--- 282
+                    ******************9..456666666666665..99999********....9*************99999887799*****87666655... PP
+
+                    HHT---STSHHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 175 hmgHltpeeaveaaadlgakrlvli 199
+                      +H  + ++  ++++l++k+ vl+
+     PJF19968.1 283 -LSHYCWPQTEPFIKELDPKTSVLV 306
+                    .689999999999999999988886 PP
+
+>> Lactamase_B  Metallo-beta-lactamase superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.5   3.3e-09   3.2e-05      16      68 ..     110     158 ..      93     231 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 3.3e-09
+                  CEEEES--SCCHHHHHHHHHHHHCSGGGGEEEEE-SBSSHHHHTTHHHHHHHH CS
+  Lactamase_B  16 gviLiDtGtsteaaraalelaalglkpkdvdavilTHlHlDHiGglgglveat 68 
+                  + iLiD+G +  ++ +++    l+ + + +d v+lTH+H+D i gl++l++ +
+   PJF19968.1 110 HSILIDCGKTFYTNTERM----LRAGVRVLDGVLLTHGHADAILGLDDLRHWA 158
+                  468**************9....***************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (357 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       278  (0.014495); expected 383.6 (0.02)
+Passed bias filter:                      270  (0.0140779); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.14s 00:00:00.51 Elapsed: 00:00:00.51
+# Mc/sec: 2246.01
+//
+Query:       EPZ35368.1  [L=266]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.4e-20   73.0   0.0    2.9e-20   72.8   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.8   0.0   1.5e-24   2.9e-20       3     199 ..       2     210 ..       1     212 [. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 72.8 bits;  conditional E-value: 1.5e-24
+                    EEES--TTHHHHHTSGG---S..SS--..SEEEEE-SS--HHHHGGGGGGGG...G--EE..EEEEHHHHHHTTTTS-HHHHHTT.......T-EE CS
+  Lactamase_B_2   3 iLiDagpdlrqqalralqPve..lrdelppidaVllthaHyDHlaglltlre...lrpkelplyaplgvlavlernfvylaleee.......pavr 86 
+                    ++iD+g  +   a + l P     ++ +p id+V+lth H+D++ gl+ lr+     ++++ +y+++++ +++++ f+yl+ +e          ++
+     EPZ35368.1   2 FIIDCGKTFYDSAISILLPFLqaNKQFAPFIDGVVLTHPHADACFGLDELRQwtmVLQENAAVYCDQQTFSTIAQAFPYLVNKECatgggdvSDIS 97 
+                    579999997777333333333334556678***********************984445699******************999889****9999** PP
+
+                    EEEE-SSS-EE-TSTTEEEEEEEE-----T.......TTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT.-SEEEEE-S-SSTTHHHH CS
+  Lactamase_B_2  87 vheldwgesfelgdggleitatparhkspr.......rldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlgg.adllllditayeddemir 174
+                     + ++w+++fe+   g+++ ++p  h +         +++ ++  +l++ ++     + yi D+  ++++   +++g  ++l+ld+   + +++  
+     EPZ35368.1  98 FRMIEWNKTFEVC--GVDVLPLPGTHLAWVkvvehgiKNETEPFMCLSFHFK----GISYISDVSKISEQGLGEMKGtTKVLILDMLKGDSNSY-- 185
+                    ************5..6779999999988889997744444444466677776....9***********88555666659******764444443.. PP
+
+                    HHT---STSHHHHHTT-SSSEEEEE CS
+  Lactamase_B_2 175 hmgHltpeeaveaaadlgakrlvli 199
+                    h +H+t ++ +++++ ++++ ++l+
+     EPZ35368.1 186 HKSHFTFDQCIQVIETIKPEVTFLV 210
+                    9*******************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (266 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       568  (0.0296157); expected 383.6 (0.02)
+Passed bias filter:                      499  (0.026018); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.16s 00:00:00.51 Elapsed: 00:00:00.73
+# Mc/sec: 1174.37
+//
+Query:       sp|O74545|YCV6_SCHPO  [L=301]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.7e-31  108.3   0.0    4.4e-31  108.1   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.1   0.0   2.3e-35   4.4e-31       2     198 ..      67     265 ..      66     268 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 108.1 bits;  conditional E-value: 2.3e-35
+                           EEEES--TTHHHHHTSGG---SSS--..SEEEEE-SS--HHHHGGGGGGGG.....G--EE..EEEEHHHHHHTTTTS-HHHHHTT... CS
+         Lactamase_B_2   2 riLiDagpdlrqqalralqPvelrdelppidaVllthaHyDHlaglltlre.....lrpkelplyaplgvlavlernfvylaleee... 82 
+                           +iLiD+g  +   al+        ++++ +daV+lth+H+D+++g+++lre     l+p ++++y ++++++v+er+f+y++  ++   
+  sp|O74545|YCV6_SCHPO  67 NILIDCGKHFYVSALKHF----VEHKIRYLDAVILTHDHADAINGMDDLREwtlgfLQP-SVKIYLTERTYKVIERSFPYMVNAKNatg 150
+                           9********998844333....578999*************************995555.6********************999999** PP
+
+                           ....T-EEEEEE-SSS-EE-TSTTEEEEEEEE-----T..TTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT-SEEEEE-S CS
+         Lactamase_B_2  83 ....pavrvheldwgesfelgdggleitatparhkspr..rldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlggadlllldit 165
+                               p+   h + ++++f+l+d ++++t++p++h+     ++++++  ++G++++    ++ yi D++yvp+  +++++g +++++d+ 
+  sp|O74545|YCV6_SCHPO 151 ggsvPTFDFHVFSPDKPFKLDDIDISVTPLPVHHGVYFieGKESQTYFCMGFRVG----DMSYISDCNYVPPTTKKLMEGSNVVVVDAL 235
+                           *999999999999************************9989999999********....9***************************88 PP
+
+                           -SSTTHHHHHHT---STSHHHHHTT-S..SSEEEE CS
+         Lactamase_B_2 166 ayeddemirhmgHltpeeaveaaadlg..akrlvl 198
+                             e+      ++H++ ++a e++a l+  ++r+++
+  sp|O74545|YCV6_SCHPO 236 KHEP-----YPSHFSFKQAEEFIASLEhvPSRVLY 265
+                           6655.....47***********9999866666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (301 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       408  (0.0212733); expected 383.6 (0.02)
+Passed bias filter:                      352  (0.0183534); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.14s 00:00:00.50 Elapsed: 00:00:00.82
+# Mc/sec: 1183.07
+//
+Query:       KAF7682454.1  [L=266]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.9e-24   84.4   0.0      1e-23   84.1   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+    2.8e-05   24.3   0.0    4.8e-05   23.6   0.0    1.3  1  Lactamase_B    Metallo-beta-lactamase superfamily
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.1   0.0     1e-27     1e-23       3     199 ..      57     238 ..      56     240 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 84.1 bits;  conditional E-value: 1e-27
+                    EEES--TTHHHHHTSGG---SSS--..SEEEEE-SS--HHHHGGGGGGGGG--EE..EEEEHHHHHHTTTTS-HHHHHTT....T-EEEEEE-SSS CS
+  Lactamase_B_2   3 iLiDagpdlrqqalralqPvelrdelppidaVllthaHyDHlaglltlrelrpkelplyaplgvlavlernfvylaleee....pavrvheldwge 94 
+                    iLiD+g d+r+q +r+l   ++ ++ ++   Vllth H+D++ gl++l+++ ++  ply+++ +l+ l+ ++ y++++ +    ++ + ++++++ 
+   KAF7682454.1  57 ILIDCGKDFRKQYERYL---RKYNTHKKPPIVLLTHPHADAILGLDDLKQMLEEPSPLYGDKSTLDLLKLRLHYIFKKDHnnirAPDAFVPMEINA 149
+                    9***********66776...34556668999*******************555558************************9999888888998888 PP
+
+                    -EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STSHHHHHTT CS
+  Lactamase_B_2  95 sfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlggadllllditayeddemirhmgHltpeeaveaaad 190
+                     + l   gl i+++ + h++ +        +lG+ i     +++y+ D+  +++ ++  l + dll++++++ e +      gH++ e+  ++++ 
+   KAF7682454.1 150 GIPLTFDGLVIEPFYVIHGTMP--------CLGFKIN---SKIAYVSDCSSMDGLLE-NLMNLDLLIIECNTMELEM----LGHFNFENVKKIVEI 229
+                    8888777999***********9........*******...8************9977.7777*********777755....6************** PP
+
+                    -SSSEEEEE CS
+  Lactamase_B_2 191 lgakrlvli 199
+                    +++kr++l+
+   KAF7682454.1 230 VQPKRTILT 238
+                    *******98 PP
+
+>> Lactamase_B  Metallo-beta-lactamase superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.6   0.0     5e-09   4.8e-05       7      66 ..      46     103 ..      42     109 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 23.6 bits;  conditional E-value: 5e-09
+                   CEEEEEETTCEEEES--SCCHHHHHHHHHHHHCSGGGGEEEEE-SBSSHHHHTTHHHHHH CS
+   Lactamase_B   7 nsyliegeggviLiDtGtsteaaraalelaalglkpkdvdavilTHlHlDHiGglgglve 66 
+                    s li+++g  iLiD+G + +++ ++  + +++   k++  v+lTH+H+D i gl++l++
+  KAF7682454.1  46 TSLLIVHNGIDILIDCGKDFRKQYER--YLRKYNTHKKPPIVLLTHPHADAILGLDDLKQ 103
+                   678999*******************9..6999999********************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (266 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       643  (0.0335263); expected 383.6 (0.02)
+Passed bias filter:                      556  (0.02899); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.68
+# Mc/sec: 1262.22
+//
+Query:       KAF7683674.1  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.1e-18   65.7   0.0    5.2e-18   65.4   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+    3.4e-07   30.6   0.1      4e-07   30.3   0.1    1.2  1  Lactamase_B    Metallo-beta-lactamase superfamily
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.4   0.0   5.4e-22   5.2e-18       3     199 ..      52     233 ..      50     234 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 65.4 bits;  conditional E-value: 5.4e-22
+                    EEES--TTHHHH.HTSGG---SSS--..SEEEEE-SS--HHHHGGGGGGGGG--EE..EEEEHHHHHHTTTTS-HHHHHTT......T-EEEEEE- CS
+  Lactamase_B_2   3 iLiDagpdlrqq.alralqPvelrdelppidaVllthaHyDHlaglltlrelrpkelplyaplgvlavlernfvylaleee......pavrvheld 91 
+                    iLiD+g d+ +q + ++++     +     ++V++th H D++ gl  l++  +++ +l+ ++++l+ +++ f  ++ +e            +++ 
+   KAF7683674.1  52 ILIDCGKDFTAQyE-KYIRKY-NIRF--TPHYVIITHPHSDAILGLSVLKQHLNTQTKLLSDKQTLKCINETFNDIFEKESnktdiiYSFIPETII 143
+                    9***********43.343222.3333..5789*******************7677789*****************999999888876555556677 PP
+
+                    SSS-EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STSHHHH CS
+  Lactamase_B_2  92 wgesfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlggadllllditayeddemirhmgHltpeeavea 187
+                    ++ +++++  +l i+++ ++h+s          +lG+ i    +++ yi D++ ++ e +e +++ dll++d+++ e +      gHl+ ++   +
+   KAF7683674.1 144 PNIPITIN--DLIIEPFYVHHGSIL--------CLGFKIN---NKITYISDCNSFE-ECEEYFNNLDLLIIDCNTIESEV----KGHLNFQNIKNI 221
+                    99999999..577************........*******...8***********9.6688*************888855....8*********** PP
+
+                    HTT-SSSEEEEE CS
+  Lactamase_B_2 188 aadlgakrlvli 199
+                    + ++++kr++l+
+   KAF7683674.1 222 VCKYKPKRTILT 233
+                    *********997 PP
+
+>> Lactamase_B  Metallo-beta-lactamase superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.3   0.1   4.2e-11     4e-07       6      71 ..      40     103 ..      36     163 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 30.3 bits;  conditional E-value: 4.2e-11
+                   SCEEEEEETTCEEEES--SCCHHHHHHHHHHHHCSGGGGEEEEE-SBSSHHHHTTHHHHHHHHCHC CS
+   Lactamase_B   6 vnsyliegeggviLiDtGtsteaaraalelaalglkpkdvdavilTHlHlDHiGglgglveatdvv 71 
+                     s+li + g+ iLiD+G + +a+ ++  + +++   +++++vi+TH+H+D i gl  l+++ +  
+  KAF7683674.1  40 NTSMLIKHTGDDILIDCGKDFTAQYEK--YIRKYNIRFTPHYVIITHPHSDAILGLSVLKQHLNTQ 103
+                   6799**********************8..589999999*********************9998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1062  (0.0553731); expected 383.6 (0.02)
+Passed bias filter:                      545  (0.0284165); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.15s 00:00:00.53 Elapsed: 00:00:00.69
+# Mc/sec: 1222.74
+//
+Query:       ELQ74849.1  [L=256]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.6e-15   55.8   0.0      6e-15   55.4   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.4   0.0   3.1e-19     6e-15       3     199 ..      50     229 ..      48     230 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 55.4 bits;  conditional E-value: 3.1e-19
+                    EEES--TTHHHHHTSGG---S.SS--..SEEEEE-SS--HHHHGGGGGGGGG--EE..EEEEHHHHHHTTTTS-HHHHHTT.....T-EEEEEE-S CS
+  Lactamase_B_2   3 iLiDagpdlrqqalralqPve.lrdelppidaVllthaHyDHlaglltlrelrpkelplyaplgvlavlernfvylaleee.....pavrvheldw 92 
+                    iL+D+g  +  q +r+l   +   ++   i  +l+th H+D++ g++t   ++  + ++y ++ +l+ +++   y + ++      +  + + l+ 
+     ELQ74849.1  50 ILVDCGKHFYTQYNRYL---StYGNT--IIPELLITHPHADAIGGIDTYLMMCTGKKNVYSSKFTLDFIRKTNEYYFVKPGdpehrGYFHPNVLAH 140
+                    9***********88888...324455..9999*******************8877899*******************9999788887778888889 PP
+
+                    SS-EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STSHHHHH CS
+  Lactamase_B_2  93 gesfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlggadllllditayeddemirhmgHltpeeaveaa 188
+                    g+ +++g  g++++a+++ h+  +         l+++i+    +v+yi Dt  ++  i e+++  d+l++d+ + +++      gHl++++  + a
+     ELQ74849.1 141 GQITQIG--GIKVHAFEVDHGGIK--------SLAFLID---DKVLYISDTSDLH-PIPEEFYHRDVLIIDCLTIDQHV----RGHLNLQDVKRYA 218
+                    9999998..899************........9******...7*********999.67889999*******88777755....8************ PP
+
+                    TT-SSSEEEEE CS
+  Lactamase_B_2 189 adlgakrlvli 199
+                      l+++r++l+
+     ELQ74849.1 219 SILQPGRVILT 229
+                    *********97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (256 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       521  (0.0271651); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.52
+# Mc/sec: 1582.82
+//
+Query:       XP_008074038.1  [L=254]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.4e-14   54.2   0.0    1.8e-14   53.8   0.0    1.1  1  Lactamase_B_2  Beta-lactamase superfamily domain
+
+
+Domain annotation for each model (and alignments):
+>> Lactamase_B_2  Beta-lactamase superfamily domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.8   0.0   9.5e-19   1.8e-14       3     199 ..      48     227 ..      46     229 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 53.8 bits;  conditional E-value: 9.5e-19
+                     EEES--TTHHHHHTSGG---S.SS--..SEEEEE-SS--HHHHGGGGGGGGG--EE..EEEEHHHHHHTTTTS-HHHHHTT.....T-EEEEEE- CS
+   Lactamase_B_2   3 iLiDagpdlrqqalralqPve.lrdelppidaVllthaHyDHlaglltlrelrpkelplyaplgvlavlernfvylaleee.....pavrvheld 91 
+                     iLiD+g  +  q +++l   +  ++    i  +++th H+D++ g++t   ++  + ++y ++ +l++++++  y + ++      +    h+  
+  XP_008074038.1  48 ILIDCGKHFYTQYNQYL---SmYKN--TAIPELVITHPHADAIGGIDTYLMMCTGKKNVYSSKFTLDYIKKSNEYYFVKPGdaghrG--YFHPNV 135
+                     9***********66665...32344..59999*******************8877899********************999876433..334444 PP
+
+                     SSS-EE-TSTTEEEEEEEE-----TTTS--TTSSEEEEEETT--EEEEESS-S---HHHHHHHHT-SEEEEE-S-SSTTHHHHHHT---STSHHH CS
+   Lactamase_B_2  92 wgesfelgdggleitatparhksprrldrnagdtlGlviegpgkrvyyigDtgyvpdeigerlggadllllditayeddemirhmgHltpeeave 186
+                     +g++   +  g++++a+++ h+  +         l+++++    +++yi Dt  ++  i e+++  d+l++d+ + + +      gHl++++  +
+  XP_008074038.1 136 LGDKQIKEICGIKVQAFEVDHGGIK--------SLAFLLD---DKILYISDTSDLH-PIPEEFYHRDVLIIDCLTIDRHV----RGHLNLQDVKR 214
+                     44444445569**************........9******...7*********999.67889999*******77665544....8********** PP
+
+                     HHTT-SSSEEEEE CS
+   Lactamase_B_2 187 aaadlgakrlvli 199
+                      a+ l++k+++l+
+  XP_008074038.1 215 YADLLKPKKVILT 227
+                     **********997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (254 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       619  (0.0322749); expected 383.6 (0.02)
+Passed bias filter:                      500  (0.0260702); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.72
+# Mc/sec: 1140.73
+//
+[ok]

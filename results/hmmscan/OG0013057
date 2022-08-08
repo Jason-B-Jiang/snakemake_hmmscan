@@ -1,0 +1,260 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013057.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013057
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O01926|O01926_CAEEL  [L=266]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.1e-16   59.8   0.0    3.5e-16   59.1   0.0    1.4  1  Hydrolase_like  HAD-hyrolase-like
+    4.6e-14   52.4   0.0    7.2e-14   51.8   0.0    1.3  1  Hydrolase_6     Haloacid dehalogenase-like hydrolase
+    1.8e-06   28.3   0.0    9.5e-06   25.9   0.0    1.9  1  HAD_2           Haloacid dehalogenase-like hydrolase
+
+
+Domain annotation for each model (and alignments):
+>> Hydrolase_like  HAD-hyrolase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1   0.0   5.5e-20   3.5e-16       2      75 .]     183     255 ..     182     255 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 5.5e-20
+                             .STTSSHHHHHHHHHH---GGGEEEEES-TTTHHHHHHHCT-EEEEESSSSS-TTTHHHHHHHHT---SEEES- CS
+          Hydrolase_like   2 lGKPepgmydaalevlgsppeevlmiGDrlatDiagAneaGlksvLVltGvtrpedlekaahkptyvaddlaea 75 
+                             +GKP+++ +++ +++lg +pee++m+GD+l +D+ gA++ G++ v V+tG+ rp+  ek + +p+  ad l++a
+  tr|O01926|O01926_CAEEL 183 IGKPSRFYFEQGMNALGMKPEEIVMVGDDLMSDVGGAQACGMRGVQVRTGKWRPDF-EKMPVTPDLTADCLYDA 255
+                             6**************************************************99955.77889******999986 PP
+
+>> Hydrolase_6  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.8   0.0   1.1e-17   7.2e-14       1      85 [.      10      96 ..      10     123 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 51.8 bits;  conditional E-value: 1.1e-17
+                            EEEESTTTSEE.....TTEE-TTHHHHHHHHHHTT-EEEEEE---SS-HHHHHHHHHHTT----GGGEEEHHHHHHHHHHHHSXXXEEE CS
+             Hydrolase_6  1 vlfDidGvLwr.....gkkaipgaaealnalraagkkvvllTNnssrseeeyakkleklGvditeeqvvtsataaaeylkkrkadkkvl 84
+                            +l+Di GvL++     ++ a+p++aea+n+l ++  kv +l+N  ++s++++a +l++lG++++ee+v+t+a ++a+y +++  + +  
+  tr|O01926|O01926_CAEEL 10 FLLDITGVLYNsiyksDGVAVPKSAEAVNFLYQH-SKVKFLSNAKGNSNRNVARRLQRLGINVREEDVITPAPVVAQYCREN--KLRPH 95
+                            79********766666999************998.68******************************************993..33333 PP
+
+                            E CS
+             Hydrolase_6 85 v 85
+                            +
+  tr|O01926|O01926_CAEEL 96 L 96
+                            3 PP
+
+>> HAD_2  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.0   1.5e-09   9.5e-06     134     176 ..     184     227 ..     173     229 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 1.5e-09
+                   HAD_2 134 kKPdpevilkaleklklkkeeviyvGDsp.tDieaAkkagikvi 176
+                              KP+   +++ ++ l++k+ee+++vGD   +D+ +A++ g++ +
+  tr|O01926|O01926_CAEEL 184 GKPSRFYFEQGMNALGMKPEEIVMVGDDLmSDVGGAQACGMRGV 227
+                             6****************************************865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (266 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       445  (0.0232025); expected 383.6 (0.02)
+Passed bias filter:                      438  (0.0228375); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.69
+# Mc/sec: 1248.09
+//
+Query:       sp|A5PLK2|LHPP_DANRE  [L=270]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.1e-19   68.9   0.1    5.9e-18   64.8   0.0    2.2  1  Hydrolase_like  HAD-hyrolase-like
+    1.1e-14   54.5   0.0    1.7e-14   53.8   0.0    1.4  1  Hydrolase_6     Haloacid dehalogenase-like hydrolase
+    1.4e-08   35.1   0.0    1.3e-06   28.7   0.0    2.4  1  HAD_2           Haloacid dehalogenase-like hydrolase
+    3.3e-07   30.9   0.0      4e-06   27.4   0.0    2.4  1  Hydrolase       haloacid dehalogenase-like hydrolase
+
+
+Domain annotation for each model (and alignments):
+>> Hydrolase_like  HAD-hyrolase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.8   0.0   1.2e-21   5.9e-18       2      74 ..     189     261 ..     188     262 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 64.8 bits;  conditional E-value: 1.2e-21
+                           .STTSSHHHHHHHHHH---GGGEEEEES-TTTHHHHHHHCT-EEEEESSSSS-TTTHHHHHHHHT---SEEES CS
+        Hydrolase_like   2 lGKPepgmydaalevlgsppeevlmiGDrlatDiagAneaGlksvLVltGvtrpedlekaahkptyvaddlae 74 
+                           +GKP+ +++++ l++++++p+ev+m+GD+l +D+ gA+  G+k + V+tG++rp+d+ ++  ++++++ddl++
+  sp|A5PLK2|LHPP_DANRE 189 VGKPSSEFFKTVLNDMNLQPHEVVMVGDDLVNDVGGAQSCGMKGLQVRTGKYRPSDECDPSVRADAYVDDLSA 261
+                           6*******************************************************99999*********986 PP
+
+>> Hydrolase_6  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.8   0.0   3.5e-18   1.7e-14       1      83 [.      16     102 ..      16     138 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 53.8 bits;  conditional E-value: 3.5e-18
+                           EEEESTTTSEE....TTEE-TTHHHHHHHHHHTT-EEEEEE---SS-HHHHHHHHHHTT----GGGEEEHHHHHHHHHHHHSXXXEE CS
+           Hydrolase_6   1 vlfDidGvLwr....gkkaipgaaealnalraagkkvvllTNnssrseeeyakkleklGvditeeqvvtsataaaeylkkrkadkkv 83 
+                           v++D+ GvL++    g++ai g+ ea+++l ++g  + ++TN++++++e +++kl+ +G+di+ ++v+++a a++++l+kr+ +  +
+  sp|A5PLK2|LHPP_DANRE  16 VILDMCGVLYDsgegGGRAIHGSVEAVKRLMDSGLMLRFCTNETQNTRERFVQKLRVMGFDISVSHVFSPAPAVVQILQKRHLRPHL 102
+                           689*******88887999**************************************************************7653333 PP
+
+>> HAD_2  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.7   0.0   2.7e-10   1.3e-06     131     175 ..     184     232 ..     164     235 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 28.7 bits;  conditional E-value: 2.7e-10
+                 HAD_2 131 vekk...KPdpevilkaleklklkkeeviyvGDsp.tDieaAkkagikv 175
+                           v+ +   KP+ e ++++l+ ++l+++ev++vGD   +D+ +A+  g+k 
+  sp|A5PLK2|LHPP_DANRE 184 VQAEvvgKPSSEFFKTVLNDMNLQPHEVVMVGDDLvNDVGGAQSCGMKG 232
+                           44444459***************************************96 PP
+
+>> Hydrolase  haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.0   8.3e-10     4e-06     104     209 ..     118     228 ..      13     229 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 8.3e-10
+                           TTHHHHHHHHHHTHHBHTTHHHHHHHHHHTTE.EEEEEE...SSEHHHHHHHHHHTT..GGGESEEEEHHCESSTTTSHHHHHHHHHHH CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxx...xxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             Hydrolase 104 qaralavftiadplkvkpeaaeavasLkaagi.evvllt...gdnpetaeraanqlG..ddyfdaviasdietvakpspegkvaaireL 186
+                           +   + v+  a +++ ++ + ea++ L   g+ + vl +   g   +  + +   +G  +++++   ++  e+v+kps e ++ +++ +
+  sp|A5PLK2|LHPP_DANRE 118 SSPNCVVIGDAAEKFSYQNLNEAFRVLI--GLeKPVLFSlgrGRYYKETDGLKLDVGvyMKALEYACDVQAEVVGKPSSEFFKTVLNDM 204
+                           4467888888888888888888888888..8877888887656666666655556997666667777777888**************** PP
+
+                           TSTGGGEEEEESSHH.HHHHHHHT CS
+                           xxxxxxxxxxxxxxx.xxxxxxxx RF
+             Hydrolase 187 qgkpeevamVGDgvn.DaaalaaA 209
+                           + +p+ev+mVGD +  D+ +++  
+  sp|A5PLK2|LHPP_DANRE 205 NLQPHEVVMVGDDLVnDVGGAQSC 228
+                           ************976599887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (270 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       322  (0.0167892); expected 383.6 (0.02)
+Passed bias filter:                      313  (0.0163199); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.34u 0.18s 00:00:00.52 Elapsed: 00:00:00.56
+# Mc/sec: 1554.02
+//
+Query:       sp|Q9H008|LHPP_HUMAN  [L=270]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      1e-18   67.3   0.1    2.1e-18   66.3   0.1    1.5  1  Hydrolase_like  HAD-hyrolase-like
+      3e-17   62.6   0.0    7.9e-17   61.3   0.0    1.7  1  Hydrolase_6     Haloacid dehalogenase-like hydrolase
+    1.2e-09   38.9   0.1    3.6e-07   30.8   0.0    3.0  1  Hydrolase       haloacid dehalogenase-like hydrolase
+    3.2e-07   30.7   0.0    3.3e-06   27.4   0.0    2.1  1  HAD_2           Haloacid dehalogenase-like hydrolase
+
+
+Domain annotation for each model (and alignments):
+>> Hydrolase_like  HAD-hyrolase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.3   0.1   4.3e-22   2.1e-18       2      75 .]     187     260 ..     186     260 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 66.3 bits;  conditional E-value: 4.3e-22
+                           .STTSSHHHHHHHHHH---GGGEEEEES-TTTHHHHHHHCT-EEEEESSSSS-TTTHHHHHHHHT---SEEES- CS
+        Hydrolase_like   2 lGKPepgmydaalevlgsppeevlmiGDrlatDiagAneaGlksvLVltGvtrpedlekaahkptyvaddlaea 75 
+                           +GKP+p+++++al+++g++ ++ +miGD++  D+ gA++ G++ + V+tG++rp+d+ +++ k++ ++d+laea
+  sp|Q9H008|LHPP_HUMAN 187 VGKPSPEFFKSALQAIGVEAHQAVMIGDDIVGDVGGAQRCGMRALQVRTGKFRPSDEHHPEVKADGYVDNLAEA 260
+                           6**********************************************************************997 PP
+
+>> Hydrolase_6  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.3   0.0   1.7e-20   7.9e-17       1      97 [.      14     112 ..      14     116 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 61.3 bits;  conditional E-value: 1.7e-20
+                           EEEESTTTSEE....TTEE-TTHHHHHHHHHHTT-EEEEEE---SS-HHHHHHHHHHTT----GGGEEEHHHHHHHHHHHHSXXXEEEE CS
+           Hydrolase_6   1 vlfDidGvLwr....gkkaipgaaealnalraagkkvvllTNnssrseeeyakkleklGvditeeqvvtsataaaeylkkrkadkkvlv 85 
+                           vl+Di GvL++    g++ai g+ ea+ +l+++  kv ++TN+s++s++e++ +l++lG+di+e++v  +a aa ++lk+  ++ + ++
+  sp|Q9H008|LHPP_HUMAN  14 VLLDISGVLYDsgagGGTAIAGSVEAVARLKRSRLKVRFCTNESQKSRAELVGQLQRLGFDISEQEVTAPAPAACQILKE--QGLRPYL 100
+                           699*******8888899**************************************************************8..8899999 PP
+
+                           ESXHHHHHHHHH CS
+           Hydrolase_6  86 igeeglleelke 97 
+                           + ++g+++e+++
+  sp|Q9H008|LHPP_HUMAN 101 LIHDGVRSEFDQ 112
+                           999999998876 PP
+
+>> Hydrolase  haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8   0.0   7.6e-11   3.6e-07      94     209 ..      92     226 ..      25     227 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 7.6e-11
+                           HHHHHHHHHH..............TTHHHHHHHHHHTHHBHTTHHHHHHHHHHTTEEEEEEE...SSEHHHHHHHHHHTT..GGGESEE CS
+                           xxxxxxxxxx..............xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxx..xxxxxxx RF
+             Hydrolase  94 qsqgrtvall..............qaralavftiadplkvkpeaaeavasLkaagievvllt...gdnpetaeraanqlG..ddyfdav 163
+                            +qg   +ll              ++  + v++ a + + ++ +  a++ L +   + vl++   g   +    ++  +G  +++++  
+  sp|Q9H008|LHPP_HUMAN  92 KEQGLRPYLLihdgvrsefdqidtSNPNCVVIADAGESFSYQNMNNAFQVLMELEKP-VLISlgkGRYYKETSGLMLDVGpyMKALEYA 179
+                           33333333337777777777777777999***********************88885.5555444555566666666699655555666 PP
+
+                           EEHHCESSTTTSHHHHHHHHHHHTSTGGGEEEEESSHH.HHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxx RF
+             Hydrolase 164 iasdietvakpspegkvaaireLqgkpeevamVGDgvn.DaaalaaA 209
+                            ++  e+v+kpspe ++ a++ ++++ ++ +m+GD +  D+ ++++ 
+  sp|Q9H008|LHPP_HUMAN 180 CGIKAEVVGKPSPEFFKSALQAIGVEAHQAVMIGDDIVgDVGGAQRC 226
+                           6666666*****************************99998877765 PP
+
+>> HAD_2  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.0     7e-10   3.3e-06     134     177 ..     188     232 ..     166     233 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 7e-10
+                 HAD_2 134 kKPdpevilkaleklklkkeeviyvGDsp.tDieaAkkagikvia 177
+                            KP+pe ++ al+  ++++++++++GD +  D+ +A++ g++++ 
+  sp|Q9H008|LHPP_HUMAN 188 GKPSPEFFKSALQAIGVEAHQAVMIGDDIvGDVGGAQRCGMRALQ 232
+                           59***************************9***********9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (270 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       366  (0.0190834); expected 383.6 (0.02)
+Passed bias filter:                      345  (0.0179884); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.59
+# Mc/sec: 1473.60
+//
+[ok]

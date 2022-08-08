@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040602.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040602
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P28067|DMA_HUMAN  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.8e-20   72.5   0.1    2.5e-20   72.0   0.1    1.2  1  MHC_II_alpha  Class II histocompatibility antigen, alpha doma
+    1.6e-13   50.9   0.0    2.3e-13   50.4   0.0    1.3  1  C1-set        Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_II_alpha  Class II histocompatibility antigen, alpha domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.0   0.1   2.6e-24   2.5e-20       1      78 [.      41     115 ..      41     118 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 72.0 bits;  conditional E-value: 2.6e-24
+                          CEEEEEEEEEEEETTTEEEEEEEETTEEEEEEETTTTEEEESSHHHHHCEE--HHHHHHHHHHHHHHHHHHHHHTTS- CS
+         MHC_II_alpha   1 ehvaiygcsfyqsddpsgefmfefDgdElfyvDfkkketVwrlpeFadaasfdpqgalaniavckanLkilikrsnst 78 
+                          +h++++ + ++q+++ps ++++++D+d+lf++Df+++++V+rlpeFad+a+  +qg+ ++i ++k++++++i+++ ++
+  sp|P28067|DMA_HUMAN  41 NHTFLH-TVYCQDGSPSVGLSEAYDEDQLFFFDFSQNTRVPRLPEFADWAQ--EQGDAPAILFDKEFCEWMIQQIGPK 115
+                          699999.99***************************************888..8*******************99876 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.4   0.0   2.4e-17   2.3e-13       3      84 ..     131     207 ..     129     209 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 50.4 bits;  conditional E-value: 2.4e-17
+                          EEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEET CS
+               C1-set   3 vlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehe 84 
+                          v++ +p e  +k+ntL+C+v++ +pp ++v+W   +++v+  +  t  +  ++ ++q++s+L++tp   e +d ++C V+he
+  sp|P28067|DMA_HUMAN 131 VFTLKPLEF-GKPNTLVCFVSNLFPPMLTVNWHDHSVPVEG-FGPTFVSAVDGLSFQAFSYLNFTP---EPSDIFSCIVTHE 207
+                          788888899.**********************999999995.9999999999**************...************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       530  (0.0276344); expected 383.6 (0.02)
+Passed bias filter:                      464  (0.0241931); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.17s 00:00:00.51 Elapsed: 00:00:00.63
+# Mc/sec: 1341.69
+//
+[ok]

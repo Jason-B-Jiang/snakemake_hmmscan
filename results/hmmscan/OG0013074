@@ -1,0 +1,198 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013074.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013074
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54TR1|CFAD_DICDI  [L=531]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.6e-73  246.4   2.2    3.6e-73  246.4   2.2    1.7  1  Peptidase_C1   Papain family cysteine protease
+    4.3e-15   56.0   6.9    8.7e-15   55.0   6.9    1.6  1  Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_C1  Papain family cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  246.4   2.2   3.8e-77   3.6e-73       1     219 []     309     527 ..     309     527 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 246.4 bits;  conditional E-value: 3.8e-77
+                           STSCEECGGTTTGSG---B-TSSBTHHHHHHHHHHHHHHHHHHSSS---B-HHHHHHHST.CTSTGGGBB-HHHHHHHHHHHTCBEBTT CS
+          Peptidase_C1   1 lpesvDwrekggavtpvkdqgsCGsCWafsavgaledrlaiktkkklvslSeqelvdCsk.eenegCnGGlmenafeyikknggivtek 88 
+                           +p++vDwr+++  vtpvkdqg CGsCW+f+++g+le+ +++++ ++lvslSeq+lvdC   + ++gC GG+ ++af+y+++ g ++te+
+  sp|Q54TR1|CFAD_DICDI 309 IPSTVDWRNQN-CVTPVKDQGICGSCWTFGSTGSLEGTNCVTN-GELVSLSEQQLVDCAIlTGSQGCGGGFASSAFQYVMEIGSLATES 395
+                           699******86.89****************************9.8**************999999************************ PP
+
+                           TS--SSSTSSS-CTCGGGSEEBEESEEEEEESTBHHHHHHHHHHHSSEEEEEECTSHHHHTEESSEESSSSCET..SS-EEEEEEEEEE CS
+          Peptidase_C1  89 dypYkakeggkCkkkkkkekvakikgygkvkenseealkkalakngPvsvaidaseedfqlYksGvyketecsk..telnhavlivGyg 175
+                           +ypY  ++ g C+ ++ + + ++i+gy++v++ se+al++a+a++gPv++aidas +df++Y sGvy++ +c++  ++l+h vl++Gyg
+  sp|Q54TR1|CFAD_DICDI 396 NYPYLMQN-GLCRDRTVTPSGVSITGYVNVTSGSESALQNAIATTGPVAIAIDASVDDFRYYMSGVYNNPACKNglDDLDHEVLAIGYG 483
+                           ********.79****877778***************************************************999999*********** PP
+
+                           EETTEEEEEEE-SBTTTSTBTTEEEEESSSSTGGGTTSSEEEEE CS
+          Peptidase_C1 176 vengkkyWivkNsWgtdwgekGYiriargknnecgieseavapi 219
+                           + +g++y++vkNsW+t+wg++GY+ +ar+ nn cg++s+a++pi
+  sp|Q54TR1|CFAD_DICDI 484 TYQGQDYFLVKNSWSTNWGMDGYVYMARNDNNLCGVSSQATYPI 527
+                           *****************************************996 PP
+
+>> Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.0   6.9   9.1e-19   8.7e-15       1      58 []     225     281 ..     225     281 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 55.0 bits;  conditional E-value: 9.1e-19
+         Inhibitor_I29   1 FnswmdkygkkYrhsseinerfenFkeNlrqiqehNanknvtfklglNkFsDlsheEF 58 
+                           F++++ +y+k+Y++++e+ erf nFk   ++i++hN  k++++klg+N+++Dls++EF
+  sp|Q54TR1|CFAD_DICDI 225 FKEYKAQYNKEYSSQDEHDERFINFKAARKIIATHN-AKESSYKLGMNHYADLSNKEF 281
+                           99**********************************.********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (531 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       818  (0.0426508); expected 383.6 (0.02)
+Passed bias filter:                      534  (0.027843); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.23s 00:00:00.68 Elapsed: 00:00:00.66
+# Mc/sec: 2613.59
+//
+Query:       tr|Q9V3U6|Q9V3U6_DROME  [L=549]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.7e-71  239.2   2.8    1.8e-70  237.5   0.2    2.1  1  Peptidase_C1   Papain family cysteine protease
+    1.2e-13   51.3   2.6    2.7e-13   50.2   2.6    1.6  1  Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_C1  Papain family cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  237.5   0.2   1.9e-74   1.8e-70       1     217 [.     330     546 ..     330     548 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 237.5 bits;  conditional E-value: 1.9e-74
+                             STSCEECGGTTTGSG---B-TSSBTHHHHHHHHHHHHHHHHHHSSS---B-HHHHHHHST.CTSTGGGBB-HHHHHHHHHHHTCBEB CS
+            Peptidase_C1   1 lpesvDwrekggavtpvkdqgsCGsCWafsavgaledrlaiktkkklvslSeqelvdCsk.eenegCnGGlmenafeyikknggivt 86 
+                             +p+++Dwr  g avtpvkdq+ CGsCW+f+++g le+++++k++++lv+lS+q l+dCs  + n+gC+GG   ++++++ ++gg+ t
+  tr|Q9V3U6|Q9V3U6_DROME 330 IPDQYDWRLYG-AVTPVKDQSVCGSCWSFGTIGHLEGAFFLKNGGNLVRLSQQALIDCSWaYGNNGCDGGEDFRVYQWMLQSGGVPT 415
+                             69*******85.************************************************999************************ PP
+
+                             TTTS.--SSSTSSS-CTCGGGSEEBEESEEEEEESTBHHHHHHHHHHHSSEEEEEECTSHHHHTEESSEESSSSCET..SS-EEEEE CS
+            Peptidase_C1  87 ekdy.pYkakeggkCkkkkkkekvakikgygkvkenseealkkalakngPvsvaidaseedfqlYksGvyketecsk..telnhavl 170
+                             e++y pY +++ g C+ ++ +  va ikg+++v++n+ +a+k al k+gP+svaidas ++f++Y++Gvy+e +c++  + l+havl
+  tr|Q9V3U6|Q9V3U6_DROME 416 EEEYgPYLGQD-GYCHVNNVTL-VAPIKGFVNVTSNDPNAFKLALLKHGPLSVAIDASPKTFSFYSHGVYYEPTCKNdvDGLDHAVL 500
+                             ***********.7*****9874.5***************************************************998889****** PP
+
+                             EEEEEEETTEEEEEEE-SBTTTSTBTTEEEEESSSSTGGGTTSSEEE CS
+            Peptidase_C1 171 ivGygvengkkyWivkNsWgtdwgekGYiriargknnecgieseava 217
+                             +vGyg+ ng++yW+vkNsW+t wg++GYi ++ +kn +cg+ +++++
+  tr|Q9V3U6|Q9V3U6_DROME 501 AVGYGSINGEDYWLVKNSWSTYWGNDGYILMSAKKN-NCGVMTMPTY 546
+                             ********************************9988.****999887 PP
+
+>> Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.2   2.6   2.8e-17   2.7e-13       1      57 [.     245     300 ..     245     301 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 50.2 bits;  conditional E-value: 2.8e-17
+           Inhibitor_I29   1 FnswmdkygkkYrhsseinerfenFkeNlrqiqehNanknvtfklglNkFsDlsheE 57 
+                             F ++++k+g+ Y ++ e+++r ++F++Nlr+i++ N + + t++l +N+++D ++eE
+  tr|Q9V3U6|Q9V3U6_DROME 245 FHHFKRKHGVAYHSDTEHEHRKNIFRQNLRYIHSKN-RAKLTYTLAVNHLADKTEEE 300
+                             99**********999*********************.*******************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (549 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       375  (0.0195526); expected 383.6 (0.02)
+Passed bias filter:                      300  (0.0156421); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.16s 00:00:00.55 Elapsed: 00:00:00.63
+# Mc/sec: 2824.90
+//
+Query:       tr|F1R9W6|F1R9W6_DANRE  [L=546]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      7e-71  238.9   3.1    1.4e-70  237.9   3.1    1.5  1  Peptidase_C1   Papain family cysteine protease
+    1.1e-08   35.4   4.2    3.1e-08   34.0   4.2    1.8  1  Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_C1  Papain family cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  237.9   3.1   1.5e-74   1.4e-70       2     218 ..     328     543 ..     327     544 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 237.9 bits;  conditional E-value: 1.5e-74
+                             TSCEECGGTTTGSG---B-TSSBTHHHHHHHHHHHHHHHHHHSSS---B-HHHHHHHST.CTSTGGGBB-HHHHHHHHHHHTCBEBT CS
+            Peptidase_C1   2 pesvDwrekggavtpvkdqgsCGsCWafsavgaledrlaiktkkklvslSeqelvdCsk.eenegCnGGlmenafeyikknggivte 87 
+                             p+svDwr  g avtpvkdq+ CGsCW+f+++g+le++l++kt ++l+slS+q lvdC+    n+gC+GG  ++afe+i+k+ggi t 
+  tr|F1R9W6|F1R9W6_DANRE 328 PNSVDWRLYG-AVTPVKDQAVCGSCWSFATTGTLEGALFLKT-GQLTSLSQQMLVDCTWgFGNNGCDGGEEWRAFEWIMKHGGISTA 412
+                             99******85.*******************************.7**************9999************************* PP
+
+                             TTS.--SSSTSSS-CTCGGGSEEBEESEEEEEESTBHHHHHHHHHHHSSEEEEEECTSHHHHTEESSEESSSSCET..SS-EEEEEE CS
+            Peptidase_C1  88 kdy.pYkakeggkCkkkkkkekvakikgygkvkenseealkkalakngPvsvaidaseedfqlYksGvyketecsk..telnhavli 171
+                             ++y  Y + + g C+++k+++  a+ +gy++v++ +  alk+a+ k gPv+v+ida +++f++Y++Gvy+e ec++  ++l+havl+
+  tr|F1R9W6|F1R9W6_DANRE 413 ESYgAYMGMN-GLCHYDKTSMV-AQLTGYTNVTSGDILALKAAIFKFGPVAVSIDAAHRSFAFYSNGVYYEPECKNgiNDLDHAVLA 497
+                             ***99*****.79****98866.****************************************************9999******** PP
+
+                             EEEEEETTEEEEEEE-SBTTTSTBTTEEEEESSSSTGGGTTSSEEEE CS
+            Peptidase_C1 172 vGygvengkkyWivkNsWgtdwgekGYiriargknnecgieseavap 218
+                             vGyg  n++ yW+vkNsW++ wg++GYi ++ + n +cg++++a+++
+  tr|F1R9W6|F1R9W6_DANRE 498 VGYGIMNNESYWLVKNSWSSYWGNDGYILMSMKDN-NCGVATDAIYA 543
+                             *******************************9977.*******9997 PP
+
+>> Inhibitor_I29  Cathepsin propeptide inhibitor domain (I29)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.0   4.2   3.2e-12   3.1e-08       1      57 [.     243     298 ..     243     299 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 34.0 bits;  conditional E-value: 3.2e-12
+           Inhibitor_I29   1 FnswmdkygkkYrhsseinerfenFkeNlrqiqehNanknvtfklglNkFsDlsheE 57 
+                             F ++++k++++Y+++ e++er  nF  N r++++ N +   +f l++N+++D s++E
+  tr|F1R9W6|F1R9W6_DANRE 243 FGHYKEKFNRQYDNEMEHEEREHNFVHNIRYVHSMN-RAGLSFSLSVNHLADRSQKE 298
+                             89**********************************.*****************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (546 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       399  (0.020804); expected 383.6 (0.02)
+Passed bias filter:                      325  (0.0169456); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.18s 00:00:00.60 Elapsed: 00:00:00.63
+# Mc/sec: 2819.46
+//
+[ok]

@@ -1,0 +1,758 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003671.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003671
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|G5EDE5|RGMB_CAEEL  [L=408]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.9e-44  150.3   0.0    3.9e-44  150.3   0.0    1.8  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+    8.3e-44  149.8   8.1    1.7e-43  148.8   8.1    1.5  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.3   0.0   4.1e-48   3.9e-44       1     173 []     184     351 ..     184     351 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 150.3 bits;  conditional E-value: 4.1e-48
+                 RGM_C   1 ctdqkvYqAetde..lpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqL 87 
+                           ct + +Y+A++de  lp++FvdGt+ + ++  ++s+e+l+++ + +vei++++i+++i++R++g+yL+++vr+p  v+e+   +  ++L
+  sp|G5EDE5|RGMB_CAEEL 184 CTASLRYEASSDEegLPRGFVDGTTFQMTS--KHSVEVLWQDDN-YVEIALHFIHSSIHIRRQGPYLSVSVRAPTIVLETG-GDVAREL 268
+                           9999********99**********999885..589******999.******************************976554.4689*** PP
+
+                 RGM_C  88 CvkGCpkseridleallkekesqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvkalhp 173
+                           C++GC+ks+ri +e +++ ++  k++e+++++++v+++ Ae++C+++     ++fd+CvFDl+ tGd+++++ +++a +D+++l+p
+  sp|G5EDE5|RGMB_CAEEL 269 CWSGCRKSSRIPAELAVEMTK--KFAECYRRRVHVPKKVAEDRCKDI-GNIGVFFDACVFDLMFTGDDYLVHLSRAAESDFRRLAP 351
+                           ************888887765..9***********************.5558*******************************987 PP
+
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.8   8.1   1.8e-47   1.7e-43       1     170 []      22     181 ..      22     181 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 148.8 bits;  conditional E-value: 1.8e-47
+                 RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsssssease 89 
+                           c++e+C ++++++++ ++l  ++++e++C++l++y +C+++t+r C+g+l++hs++  +++++k+ +C+k++  ++ +      + + +
+  sp|G5EDE5|RGMB_CAEEL  22 CRVEECAAWFQKTKDYENL-VPKATERYCQVLQTYLKCMNDTQRYCHGNLRFHSSELIMRRHWKEFECEKWESCNDNS------HVKRK 103
+                           9***********9999996.5*************************************************88744444......45778 PP
+
+                 RGM_N  90 apeiCtyekslsksktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltviiks 170
+                             ++C ++     +++++ ++C+lFgdphl +F+ ++qtC+ eGa+pL+dn+y+ vqvTn +v+ ++l+t++tk+tv++++
+  sp|G5EDE5|RGMB_CAEEL 104 HVNTCYFNPP---PSNRKLKYCSLFGDPHLIMFNGSVQTCSEEGARPLVDNRYFLVQVTNRNVRGEALTTTVTKVTVLVRK 181
+                           999******8...88***************************************************************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (408 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       970  (0.0505762); expected 383.6 (0.02)
+Passed bias filter:                      582  (0.0303457); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.23s 00:00:00.66 Elapsed: 00:00:00.63
+# Mc/sec: 2085.51
+//
+Query:       tr|F1QSW2|F1QSW2_DANRE  [L=415]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.9e-68  228.0   0.9    1.2e-67  227.5   0.9    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    1.6e-51  174.3   0.0    1.3e-50  171.4   0.0    2.1  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  227.5   0.9   1.2e-71   1.2e-67       1     170 []      37     209 ..      37     209 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 227.5 bits;  conditional E-value: 1.2e-71
+                   RGM_N   1 ckiekCnseyvaatselr..lekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsssss 85 
+                             c+i++Cn+eyva+ s ++  +e+ +++ ++C alr+y+lC+rrtar+Crgdl yhsa+  i++l++q+nCs++gPt++++a    s+
+  tr|F1QSW2|F1QSW2_DANRE  37 CRIQRCNAEYVASFSPSGglQEEVHPDVDYCIALRAYSLCTRRTARACRGDLVYHSAVFRIKELFAQHNCSSDGPTSSAKAP---ST 120
+                             9**************9995333778999***********************************************9999986...55 PP
+
+                   RGM_N  86 easeapeiCtyeksls.k...sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltvii 168
+                             ++++  ++C+ye+++  +   +++k+y hCglFgdphlrtF+defqtC+veGawpLi+n+yl+vqvTn+pvvegs+atat+k+tvi+
+  tr|F1QSW2|F1QSW2_DANRE 121 SKPTVVDVCNYESRVLaSgpaAQQKKYGHCGLFGDPHLRTFRDEFQTCRVEGAWPLIHNRYLSVQVTNVPVVEGSSATATNKITVIF 207
+                             77899*********9854788999*************************************************************** PP
+
+                   RGM_N 169 ks 170
+                             ks
+  tr|F1QSW2|F1QSW2_DANRE 208 KS 209
+                             96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  171.4   0.0   1.3e-54   1.3e-50       1     173 []     213     380 ..     213     380 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 171.4 bits;  conditional E-value: 1.3e-54
+                   RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqL 87 
+                             ct+qkvYqA+t++lp+aF+dGt+sgg+ e   sl+i+e + g             + +RqvgryLt+a+r+pe++    ee+ +lqL
+  tr|F1QSW2|F1QSW2_DANRE 213 CTEQKVYQATTEDLPSAFQDGTRSGGKGE---SLWIVEGSGG-------------LGIRQVGRYLTFAIRMPEDL---AEENGGLQL 280
+                             9*************************955...9*******99.............89*****************4...57889**** PP
+
+                   RGM_C  88 CvkGCpkseridleallkeke..............sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftla 160
+                             C++GCp+se i+++ l+++++              +  e+++  s++  +le+A++kCre+l+ved+Yf+sCvFDllttGd++f++a
+  tr|F1QSW2|F1QSW2_DANRE 281 CLHGCPRSEVIKAHVLNRQQSlrpprlmggwygedDGGEVKSGLSSHIDMLERATTKCREMLQVEDVYFQSCVFDLLTTGDPEFSMA 367
+                             ************999999988************97777788888999999************************************* PP
+
+                   RGM_C 161 aksaleDvkalhp 173
+                             a+ aleD+kal p
+  tr|F1QSW2|F1QSW2_DANRE 368 AYGALEDLKALPP 380
+                             *********9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (415 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       619  (0.0322749); expected 383.6 (0.02)
+Passed bias filter:                      457  (0.0238281); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 2108.62
+//
+Query:       tr|Q1JQE7|Q1JQE7_DANRE  [L=410]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-62  210.3   0.1      4e-62  209.5   0.0    1.5  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    2.8e-47  160.5   0.3    3.7e-45  153.6   0.1    2.4  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.5   0.0   4.1e-66     4e-62       1     170 []      39     212 ..      39     212 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 209.5 bits;  conditional E-value: 4.1e-66
+                   RGM_N   1 ckiekCnseyvaatselr....lekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsss 83 
+                             c+i +Cns++vaat e++     +k+  ++ +Csalr+y+lC++rtar+Crgdlayhsa++giedl +q++C k+gPta+p++r   
+  tr|Q1JQE7|Q1JQE7_DANRE  39 CRILRCNSDFVAATLESGviggGNKEGVNTGYCSALRSYALCTQRTARACRGDLAYHSAVQGIEDLLIQYRCPKAGPTAQPQPRPL- 124
+                             9****************977654578899*****************************************************9843. PP
+
+                   RGM_N  84 sseaseapeiCtyeksls.k.sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltvii 168
+                               +a+ + + C yek +  + ++++ey hCg+Fgdph+rtF++efqtC+v+GawpLidn+yl++q+T+sp++e+s +t +t++tvi+
+  tr|Q1JQE7|Q1JQE7_DANRE 125 -PQAPLSGDGCFYEKGFIqReGRAPEYLHCGVFGDPHIRTFNEEFQTCAVQGAWPLIDNQYLYIQATSSPTRESSDTTILTEVTVIF 210
+                             .3679999*******9995479***************************************************************** PP
+
+                   RGM_N 169 ks 170
+                             ++
+  tr|Q1JQE7|Q1JQE7_DANRE 211 QN 212
+                             96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.6   0.1   3.9e-49   3.7e-45       1     171 [.     216     368 ..     216     370 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 153.6 bits;  conditional E-value: 3.9e-49
+                   RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqL 87 
+                             c++q+vYqA+  ++p aF+dG+ +gg+++g++sl+i++++pgrh ei a++igt iivRqvg+ L+l+vr p+ +ve+++ eqdlqL
+  tr|Q1JQE7|Q1JQE7_DANRE 216 CAEQQVYQAKLGNVPPAFADGSVTGGDRRGHQSLRIHSQDPGRHAEIWATHIGTMIIVRQVGQSLSLSVRSPRAIVESYTPEQDLQL 302
+                             9************************************************************************************** PP
+
+                   RGM_C  88 CvkGCpkseridleallkekesqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvkal 171
+                             Cv GCp s+r+++                   +a + + A ++C++  + +d+Yf++C+FD+ +tGd n +++a +aleD++a+
+  tr|Q1JQE7|Q1JQE7_DANRE 303 CVWGCPISQRLEML------------------HAHPFDPAYTHCSSLFPGRDVYFQACLFDVQVTGDVNSSASAVAALEDARAM 368
+                             ***********932..................3457789*****************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (410 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       603  (0.0314406); expected 383.6 (0.02)
+Passed bias filter:                      501  (0.0261223); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 2097.90
+//
+Query:       tr|A0A2R8PYW2|A0A2R8PYW2_DANRE  [L=431]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.7e-71  237.6   1.2    1.3e-70  237.1   1.2    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    2.3e-70  235.6   0.0    3.4e-70  235.1   0.0    1.3  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  237.1   1.2   1.4e-74   1.3e-70       1     169 [.      30     204 ..      30     205 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 237.1 bits;  conditional E-value: 1.4e-74
+                           RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakpra 79 
+                                     cki kCnse++a+ts+++     ++eefC+alr+y++Cvrrtar+Crgdlayhsa++giedlm+q+nCsk+gPt++pra
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE  30 CKILKCNSEFWASTSSSG-----PEEEFCTALRAYNSCVRRTARTCRGDLAYHSAQHGIEDLMSQHNCSKEGPTTQPRA 103
+                                     9*************9999.....89****************************************************** PP
+
+                           RGM_N  80 rss.........sss.easeapeiCtyeksls.ksktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqv 147
+                                     r+          ++    s++pe+C+ye+sl  ++++++y+hCg+FgdphlrtF+d+fqtCkveGawpLi+nkyl+vqv
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE 104 RTVpppvlsppqTDIhIPSDEPEVCHYERSLPhNAAPPNYTHCGFFGDPHLRTFNDDFQTCKVEGAWPLIHNKYLSVQV 182
+                                     9988999988753334567899********9966********************************************* PP
+
+                           RGM_N 148 Tnspvvegslatattkltviik 169
+                                     Tn+pvv gs+atat+klt+i+ 
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE 183 TNTPVVVGSSATATSKLTIIFN 204
+                                     ********************96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  235.1   0.0   3.6e-74   3.4e-70       1     173 []     209     386 ..     209     386 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 235.1 bits;  conditional E-value: 3.6e-74
+                           RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevveal 79 
+                                     c+dqk+Y+Aet++lpaaF dG+k+gge +ga++l+++ek pg+hveiqaryigtti+vR+vg+yLt+avr+peevv+++
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE 209 CVDQKTYRAETEDLPAAFIDGSKNGGEGHGANTLRVVEKVPGQHVEIQARYIGTTIVVRKVGHYLTFAVRMPEEVVNSV 287
+                                     9***************************************************************************999 PP
+
+                           RGM_C  80 ee..eqdlqLCvkGCpkseridleallkeke...sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttG 153
+                                     e+  +qdl+LC++GCp+++rid+++++++++      + ++ + ++ +t+++A +kC+e+l+vedlYf+sCvFDll++G
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE 288 EDqdNQDLYLCLHGCPANQRIDFRTFKARAAeshGVGRGRPGNPSHGFTYQSAMAKCKERLPVEDLYFQSCVFDLLSSG 366
+                                     987799********************9998844444567888999********************************** PP
+
+                           RGM_C 154 danftlaaksaleDvkalhp 173
+                                     d nftlaa+ a+eDvk+lh+
+  tr|A0A2R8PYW2|A0A2R8PYW2_DANRE 367 DINFTLAAYYAFEDVKMLHS 386
+                                     ******************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (431 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       396  (0.0206476); expected 383.6 (0.02)
+Passed bias filter:                      294  (0.0153293); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.14s 00:00:00.55 Elapsed: 00:00:00.55
+# Mc/sec: 2513.66
+//
+Query:       tr|F8W533|F8W533_DANRE  [L=38]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (38 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       745  (0.0388446); expected 383.6 (0.02)
+Passed bias filter:                      477  (0.024871); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.32u 0.18s 00:00:00.50 Elapsed: 00:00:00.49
+# Mc/sec: 250.78
+//
+Query:       tr|Q1LVM8|Q1LVM8_DANRE  [L=449]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.6e-71  237.5   1.2    1.4e-70  236.9   1.2    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    2.6e-70  235.5   0.0    3.8e-70  234.9   0.0    1.3  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  236.9   1.2   1.5e-74   1.4e-70       1     169 [.      48     222 ..      48     223 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 236.9 bits;  conditional E-value: 1.5e-74
+                   RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarss..... 82 
+                             cki kCnse++a+ts+++     ++eefC+alr+y++Cvrrtar+Crgdlayhsa++giedlm+q+nCsk+gPt++prar+      
+  tr|Q1LVM8|Q1LVM8_DANRE  48 CKILKCNSEFWASTSSSG-----PEEEFCTALRAYNSCVRRTARTCRGDLAYHSAQHGIEDLMSQHNCSKEGPTTQPRARTVpppvl 129
+                             9*************9999.....89******************************************************99889999 PP
+
+                   RGM_N  83 ....sss.easeapeiCtyeksls.ksktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattk 163
+                                 ++    s++pe+C+ye+sl  ++++++y+hCg+FgdphlrtF+d+fqtCkveGawpLi+nkyl+vqvTn+pvv gs+atat+k
+  tr|Q1LVM8|Q1LVM8_DANRE 130 sppqTDIhIPSDEPEVCHYERSLPhNAAPPNYTHCGFFGDPHLRTFNDDFQTCKVEGAWPLIHNKYLSVQVTNTPVVVGSSATATSK 216
+                             88753334567899********9966************************************************************* PP
+
+                   RGM_N 164 ltviik 169
+                             lt+i+ 
+  tr|Q1LVM8|Q1LVM8_DANRE 217 LTIIFN 222
+                             ****96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  234.9   0.0   3.9e-74   3.8e-70       1     173 []     227     404 ..     227     404 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 234.9 bits;  conditional E-value: 3.9e-74
+                   RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealee..eqdl 85 
+                             c+dqk+Y+Aet++lpaaF dG+k+gge +ga++l+++ek pg+hveiqaryigtti+vR+vg+yLt+avr+peevv+++e+  +qdl
+  tr|Q1LVM8|Q1LVM8_DANRE 227 CVDQKTYRAETEDLPAAFIDGSKNGGEGHGANTLRVVEKVPGQHVEIQARYIGTTIVVRKVGHYLTFAVRMPEEVVNSVEDqdNQDL 313
+                             9***************************************************************************999987799** PP
+
+                   RGM_C  86 qLCvkGCpkseridleallkeke...sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvk 169
+                             +LC++GCp+++rid+++++++++      + ++ + ++ +t+++A +kC+e+l+vedlYf+sCvFDll++Gd nftlaa+ a+eDvk
+  tr|Q1LVM8|Q1LVM8_DANRE 314 YLCLHGCPANQRIDFRTFKARAAeshGVGRGRPGNPSHGFTYQSAMAKCKERLPVEDLYFQSCVFDLLSSGDINFTLAAYYAFEDVK 400
+                             ******************9998844444567888999************************************************** PP
+
+                   RGM_C 170 alhp 173
+                             +lh+
+  tr|Q1LVM8|Q1LVM8_DANRE 401 MLHS 404
+                             **95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (449 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       436  (0.0227332); expected 383.6 (0.02)
+Passed bias filter:                      324  (0.0168935); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.15s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 2369.34
+//
+Query:       tr|A0A2R8QKU5|A0A2R8QKU5_DANRE  [L=433]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-71  237.6   1.2    1.3e-70  237.1   1.2    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    2.4e-70  235.6   0.0    3.5e-70  235.1   0.0    1.3  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  237.1   1.2   1.4e-74   1.3e-70       1     169 [.      32     206 ..      32     207 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 237.1 bits;  conditional E-value: 1.4e-74
+                           RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakpra 79 
+                                     cki kCnse++a+ts+++     ++eefC+alr+y++Cvrrtar+Crgdlayhsa++giedlm+q+nCsk+gPt++pra
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE  32 CKILKCNSEFWASTSSSG-----PEEEFCTALRAYNSCVRRTARTCRGDLAYHSAQHGIEDLMSQHNCSKEGPTTQPRA 105
+                                     9*************9999.....89****************************************************** PP
+
+                           RGM_N  80 rss.........sss.easeapeiCtyeksls.ksktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqv 147
+                                     r+          ++    s++pe+C+ye+sl  ++++++y+hCg+FgdphlrtF+d+fqtCkveGawpLi+nkyl+vqv
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE 106 RTVpppvlsppqTDIhIPSDEPEVCHYERSLPhNAAPPNYTHCGFFGDPHLRTFNDDFQTCKVEGAWPLIHNKYLSVQV 184
+                                     9988999988753334567899********9966********************************************* PP
+
+                           RGM_N 148 Tnspvvegslatattkltviik 169
+                                     Tn+pvv gs+atat+klt+i+ 
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE 185 TNTPVVVGSSATATSKLTIIFN 206
+                                     ********************96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  235.1   0.0   3.6e-74   3.5e-70       1     173 []     211     388 ..     211     388 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 235.1 bits;  conditional E-value: 3.6e-74
+                           RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevveal 79 
+                                     c+dqk+Y+Aet++lpaaF dG+k+gge +ga++l+++ek pg+hveiqaryigtti+vR+vg+yLt+avr+peevv+++
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE 211 CVDQKTYRAETEDLPAAFIDGSKNGGEGHGANTLRVVEKVPGQHVEIQARYIGTTIVVRKVGHYLTFAVRMPEEVVNSV 289
+                                     9***************************************************************************999 PP
+
+                           RGM_C  80 ee..eqdlqLCvkGCpkseridleallkeke...sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttG 153
+                                     e+  +qdl+LC++GCp+++rid+++++++++      + ++ + ++ +t+++A +kC+e+l+vedlYf+sCvFDll++G
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE 290 EDqdNQDLYLCLHGCPANQRIDFRTFKARAAeshGVGRGRPGNPSHGFTYQSAMAKCKERLPVEDLYFQSCVFDLLSSG 368
+                                     987799********************9998844444567888999********************************** PP
+
+                           RGM_C 154 danftlaaksaleDvkalhp 173
+                                     d nftlaa+ a+eDvk+lh+
+  tr|A0A2R8QKU5|A0A2R8QKU5_DANRE 369 DINFTLAAYYAFEDVKMLHS 388
+                                     ******************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (433 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       400  (0.0208561); expected 383.6 (0.02)
+Passed bias filter:                      296  (0.0154335); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 2612.15
+//
+Query:       tr|Q6IYD1|Q6IYD1_DANRE  [L=436]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-76  255.9   0.1    1.9e-76  255.5   0.1    1.2  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+    8.3e-62  208.4   0.8    1.4e-61  207.7   0.8    1.4  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  255.5   0.1     2e-80   1.9e-76       1     173 []     221     401 ..     221     401 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 255.5 bits;  conditional E-value: 2e-80
+                   RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqL 87 
+                             ctdqkvYqA td+lpaaFvdGt+sgg++e +rs++ilek+pgrhvei+a+yig+tii+Rq+gryLtlavr+pee+++a++e+qdlqL
+  tr|Q6IYD1|Q6IYD1_DANRE 221 CTDQKVYQAVTDDLPAAFVDGTISGGDSE-TRSIWILEKSPGRHVEIHAAYIGVTIIIRQQGRYLTLAVRMPEELAMAFDETQDLQL 306
+                             ***************************88.89******************************************************* PP
+
+                   RGM_C  88 CvkGCpkseridleallkeke.........sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksal 165
+                             C++GCp+serid+e +l+ ++         +q++ + ++++ ++tle+A+++Cr++lev+d+Yf+sCvFDllttGdanft+aa++al
+  tr|Q6IYD1|Q6IYD1_DANRE 307 CMNGCPTSERIDQEGHLQLPVlglqqagfqQQQQPRVEAQRGVFTLESASRRCRDQLEVKDIYFHSCVFDLLTTGDANFTTAAYNAL 393
+                             ********************9********88888899999*********************************************** PP
+
+                   RGM_C 166 eDvkalhp 173
+                             +D+++lhp
+  tr|Q6IYD1|Q6IYD1_DANRE 394 KDMETLHP 401
+                             *******8 PP
+
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  207.7   0.8   1.4e-65   1.4e-61       1     169 [.      45     216 ..      45     217 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 207.7 bits;  conditional E-value: 1.4e-65
+                   RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsssss.. 85 
+                             c+i+kC++++v+ ts+l+ + +  ++efC+alr+y+ C++rta+sCrg+l +hsa  gi+dlm+q+nCsk+gPt+++++  + +   
+  tr|Q6IYD1|Q6IYD1_DANRE  45 CRIQKCTTDFVSLTSHLNPSLDGFDTEFCKALRAYSACTQRTAKSCRGNLVFHSAMLGITDLMSQRNCSKDGPTSSTHPVIPIEPcn 131
+                             9*****************8899*******************************************************9988744411 PP
+
+                   RGM_N  86 .easeapeiCtyekslsksktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltviik 169
+                              ++ + +++ ++ + + ++ +  y  CglFgdphlrtFkd+fqtCkveGawpLidn+yl+vqvTn+pvv gs+atat+k+t+i+k
+  tr|Q6IYD1|Q6IYD1_DANRE 132 yHSRHHHHVSRFGTGVPEHPRLMYLFCGLFGDPHLRTFKDQFQTCKVEGAWPLIDNNYLSVQVTNVPVVYGSSATATNKITIIFK 216
+                             244444444444444444666778************************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (436 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       389  (0.0202826); expected 383.6 (0.02)
+Passed bias filter:                      318  (0.0165806); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.20s 00:00:00.60 Elapsed: 00:00:00.66
+# Mc/sec: 2140.32
+//
+Query:       tr|Q1LWZ7|Q1LWZ7_DANRE  [L=458]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.4e-68  227.8   0.9    1.5e-67  227.1   0.9    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    4.1e-62  208.8   0.0    6.3e-62  208.2   0.0    1.3  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  227.1   0.9   1.5e-71   1.5e-67       1     170 []      64     236 ..      64     236 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 227.1 bits;  conditional E-value: 1.5e-71
+                   RGM_N   1 ckiekCnseyvaatselr..lekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsssss 85 
+                             c+i++Cn+eyva+ s ++  +e+ +++ ++C alr+y+lC+rrtar+Crgdl yhsa+  i++l++q+nCs++gPt++++a    s+
+  tr|Q1LWZ7|Q1LWZ7_DANRE  64 CRIQRCNAEYVASFSPSGglQEEVHPDVDYCIALRAYSLCTRRTARACRGDLVYHSAVFRIKELFAQHNCSSDGPTSSAKAP---ST 147
+                             9**************9995333778999***********************************************9999986...55 PP
+
+                   RGM_N  86 easeapeiCtyeksls.k...sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltvii 168
+                             ++++  ++C+ye+++  +   +++k+y hCglFgdphlrtF+defqtC+veGawpLi+n+yl+vqvTn+pvvegs+atat+k+tvi+
+  tr|Q1LWZ7|Q1LWZ7_DANRE 148 SKPTVVDVCNYESRVLaSgpaAQQKKYGHCGLFGDPHLRTFRDEFQTCRVEGAWPLIHNRYLSVQVTNVPVVEGSSATATNKITVIF 234
+                             77899*********9854788999*************************************************************** PP
+
+                   RGM_N 169 ks 170
+                             ks
+  tr|Q1LWZ7|Q1LWZ7_DANRE 235 KS 236
+                             96 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.2   0.0   6.6e-66   6.3e-62       1     173 []     240     423 ..     240     423 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 208.2 bits;  conditional E-value: 6.6e-66
+                   RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgr...hveiqaryigttiivRqvgryLtlavrlpeevvealeeeqd 84 
+                             ct+qkvYqA+t++lp+aF+dGt+sgg+ e   sl+i+e + g    +v+i+ary+gt+iivRqvgryLt+a+r+pe++    ee+ +
+  tr|Q1LWZ7|Q1LWZ7_DANRE 240 CTEQKVYQATTEDLPSAFQDGTRSGGKGE---SLWIVEGSGGLgirQVKIHARYLGTSIIVRQVGRYLTFAIRMPEDL---AEENGG 320
+                             9*************************955...9******9985555*******************************4...57889* PP
+
+                   RGM_C  85 lqLCvkGCpkseridleallkeke..............sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanf 157
+                             lqLC++GCp+se i+++ l+++++              +  e+++  s++  +le+A++kCre+l+ved+Yf+sCvFDllttGd++f
+  tr|Q1LWZ7|Q1LWZ7_DANRE 321 LQLCLHGCPRSEVIKAHVLNRQQSlrpprlmggwygedDGGEVKSGLSSHIDMLERATTKCREMLQVEDVYFQSCVFDLLTTGDPEF 407
+                             ***************999999988************97777788888999999********************************** PP
+
+                   RGM_C 158 tlaaksaleDvkalhp 173
+                             ++aa+ aleD+kal p
+  tr|Q1LWZ7|Q1LWZ7_DANRE 408 SMAAYGALEDLKALPP 423
+                             ************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (458 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       486  (0.0253402); expected 383.6 (0.02)
+Passed bias filter:                      353  (0.0184055); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.57
+# Mc/sec: 2597.90
+//
+Query:       sp|Q6ZVN8|RGMC_HUMAN  [L=426]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-62  209.0   0.0    8.3e-62  208.4   0.0    1.3  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    5.3e-58  195.4   0.0    1.3e-57  194.1   0.0    1.6  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.4   0.0   8.7e-66   8.3e-62       1     170 []      37     226 ..      37     226 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 208.4 bits;  conditional E-value: 8.7e-66
+                 RGM_N   1 ckiekCnseyvaatselr...............lekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPt 74 
+                           cki +Cn+eyv++t +lr                     s   C+alr+y+lC+rrtar+Crgdla+hsa++giedlm+q+nCs++gPt
+  sp|Q6ZVN8|RGMC_HUMAN  37 CKILRCNAEYVSSTLSLRgggssgalrggggggRGGGVGSGGLCRALRSYALCTRRTARTCRGDLAFHSAVHGIEDLMIQHNCSRQGPT 125
+                           9****************************9986557889999*********************************************** PP
+
+                 RGM_N  75 akprarss..sss.easeapeiCtyeksls.k.sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegsla 158
+                           a+p +r +    + +  +ap++C+ye+++s   ++++ + hC+ Fgdph+r+F+++f+tC+v+GawpL+dn++l+vq+T+sp++ g++a
+  sp|Q6ZVN8|RGMC_HUMAN 126 APPPPRGPalPGAgSGLPAPDPCDYEGRFSrLhGRPPGFLHCASFGDPHVRSFHHHFHTCRVQGAWPLLDNDFLFVQATSSPMALGANA 214
+                           *****999875556999*************537******************************************************** PP
+
+                 RGM_N 159 tattkltviiks 170
+                           tat+klt+i+k+
+  sp|Q6ZVN8|RGMC_HUMAN 215 TATRKLTIIFKN 226
+                           **********97 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  194.1   0.0   1.3e-61   1.3e-57       1     173 []     230     389 ..     230     389 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 194.1 bits;  conditional E-value: 1.3e-61
+                 RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqLCv 89 
+                           c+dqkvYqAe+d+lp aF+dG+++gg++ g +sl+i++ +pg+hveiqa+yigttii+Rq++  L+++++++e+v++a+++eqdlqLCv
+  sp|Q6ZVN8|RGMC_HUMAN 230 CIDQKVYQAEVDNLPVAFEDGSINGGDRPGGSSLSIQTANPGNHVEIQAAYIGTTIIIRQTAGQLSFSIKVAEDVAMAFSAEQDLQLCV 318
+                           9**************************************************************************************** PP
+
+                 RGM_C  90 kGCpkseridleallkekesqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvkalhp 173
+                            GCp s+r++ +              ++++ a+t ++A++ C+e l+ved+Yf+sCvFD+l +Gd+nft+aa++aleD++a+ p
+  sp|Q6ZVN8|RGMC_HUMAN 319 GGCPPSQRLSRS-------------ERNRRGAITIDTARRLCKEGLPVEDAYFHSCVFDVLISGDPNFTVAAQAALEDARAFLP 389
+                           *********932.............3456789***********************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (426 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       498  (0.0259659); expected 383.6 (0.02)
+Passed bias filter:                      397  (0.0206997); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.60
+# Mc/sec: 2297.78
+//
+Query:       sp|Q6NW40|RGMB_HUMAN  [L=437]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.5e-72  240.5   0.0    1.1e-71  240.0   0.0    1.2  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+    1.1e-64  217.8   1.1    1.6e-64  217.2   1.1    1.2  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  240.0   0.0   1.1e-75   1.1e-71       1     173 []     226     400 ..     226     400 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 240.0 bits;  conditional E-value: 1.1e-75
+                 RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealeeeqdlqLCv 89 
+                           ctdqkvYqA td+lpaaFvdGt+sgg+++ a+sl+i+e+e+g++ve++aryigtt++vRqvgryLtla+r+pe++++++ee+qdlqLCv
+  sp|Q6NW40|RGMB_HUMAN 226 CTDQKVYQAVTDDLPAAFVDGTTSGGDSD-AKSLRIVERESGHYVEMHARYIGTTVFVRQVGRYLTLAIRMPEDLAMSYEESQDLQLCV 313
+                           ***************************98.899******************************************************** PP
+
+                 RGM_C  90 kGCpkseridleallkeke...sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvkalhp 173
+                           +GCp serid  + + ++    s  +++l ++   +tle+A+++C+e+++v+d+Yf+sCvFDllttGdanft+aa+saleDv+alhp
+  sp|Q6NW40|RGMB_HUMAN 314 NGCPLSERIDDGQGQVSAIlghSLPRTSLVQAWPGYTLETANTQCHEKMPVKDIYFQSCVFDLLTTGDANFTAAAHSALEDVEALHP 400
+                           **********8877766657778899999********************************************************98 PP
+
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  217.2   1.1   1.7e-68   1.6e-64       1     169 [.      54     221 ..      54     222 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 217.2 bits;  conditional E-value: 1.7e-68
+                 RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarsssssease 89 
+                           c+i+kC++++v+ ts+l+ + +  ++efC+alr+y+ C++rt+++Crg+l yhsa+ gi+dlm+q+nCsk+gPt++++++         
+  sp|Q6NW40|RGMB_HUMAN  54 CRIQKCTTDFVSLTSHLNSAVDGFDSEFCKALRAYAGCTQRTSKACRGNLVYHSAVLGISDLMSQRNCSKDGPTSSTNPE--------V 134
+                           9*****************999****************************************************9999986........4 PP
+
+                 RGM_N  90 apeiCtyeksls.k......sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltviik 169
+                           ++++C+y++++  +      +++++y  CglFgdphlrtFkd+fqtCkveGawpLidn+yl+vqvTn+pvv+gs+atat+k+t+i+k
+  sp|Q6NW40|RGMB_HUMAN 135 THDPCNYHSHAGaRehrrgdQNPPSYLFCGLFGDPHLRTFKDNFQTCKVEGAWPLIDNNYLSVQVTNVPVVPGSSATATNKITIIFK 221
+                           555555555433212334448999**************************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (437 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       392  (0.020439); expected 383.6 (0.02)
+Passed bias filter:                      304  (0.0158507); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.56
+# Mc/sec: 2540.51
+//
+Query:       sp|Q96B86|RGMA_HUMAN  [L=450]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-75  253.0   1.3    2.4e-75  252.5   1.3    1.2  1  RGM_N     Repulsive guidance molecule (RGM) N-terminus
+    3.5e-73  244.8   0.0    4.6e-73  244.4   0.0    1.2  1  RGM_C     Repulsive guidance molecule (RGM) C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> RGM_N  Repulsive guidance molecule (RGM) N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  252.5   1.3   2.5e-79   2.4e-75       1     170 []      48     222 ..      48     222 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 252.5 bits;  conditional E-value: 2.5e-79
+                 RGM_N   1 ckiekCnseyvaatselrlekkeeseefCsalreyelCvrrtarsCrgdlayhsakvgiedlmkqknCskvgPtakprarss....sss 85 
+                           cki kCnse+++ats +++  +++++efC+alr+y+lC+rrtar+Crgdlayhsa++giedlm+q+nCsk+gPt++pr r+      s+
+  sp|Q96B86|RGMA_HUMAN  48 CKILKCNSEFWSATSGSHAPASDDTPEFCAALRSYALCTRRTARTCRGDLAYHSAVHGIEDLMSQHNCSKDGPTSQPRLRTLppagDSQ 136
+                           9*****************99**********************************************************99988986666 PP
+
+                 RGM_N  86 easeapeiCtyekslsk.sktkeyrhCglFgdphlrtFkdefqtCkveGawpLidnkylavqvTnspvvegslatattkltviiks 170
+                           e+s++peiC+yeks++k s+t++y+hCglFgdphlrtF+d+fqtCkv+GawpLidn+yl vqvTn+pv +gs+atat+klt+i+k+
+  sp|Q96B86|RGMA_HUMAN 137 ERSDSPEICHYEKSFHKhSATPNYTHCGLFGDPHLRTFTDRFQTCKVQGAWPLIDNNYLNVQVTNTPVLPGSAATATSKLTIIFKN 222
+                           99**************55******************************************************************97 PP
+
+>> RGM_C  Repulsive guidance molecule (RGM) C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  244.4   0.0   4.8e-77   4.6e-73       1     173 []     226     406 ..     226     406 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 244.4 bits;  conditional E-value: 4.8e-77
+                 RGM_C   1 ctdqkvYqAetdelpaaFvdGtksggekegarsleilekepgrhveiqaryigttiivRqvgryLtlavrlpeevvealee..eqdlqL 87 
+                           c+dqkvYqAe+delpaaFvdG+k+gg+k+ga+sl+i+ek +g+hveiqa+yigtti+vRqvgryLt+avr+peevv+a+e+  +q+l+L
+  sp|Q96B86|RGMA_HUMAN 226 CVDQKVYQAEMDELPAAFVDGSKNGGDKHGANSLKITEKVSGQHVEIQAKYIGTTIVVRQVGRYLTFAVRMPEEVVNAVEDwdSQGLYL 314
+                           9*******************************************************************************99999**** PP
+
+                 RGM_C  88 CvkGCpkseridleallkeke......sqkeeelaeskkavtleeAeekCreslevedlYfdsCvFDllttGdanftlaaksaleDvka 170
+                           C++GCp +++id++a+++++e       ++ +++ ++++++++e+A +kC+e+l+vedlY+++CvFDllttGd nftlaa+ aleDvk+
+  sp|Q96B86|RGMA_HUMAN 315 CLRGCPLNQQIDFQAFHTNAEgtgarrLAAASPAPTAPETFPYETAVAKCKEKLPVEDLYYQACVFDLLTTGDVNFTLAAYYALEDVKM 403
+                           *******************9999998777788888999*************************************************** PP
+
+                 RGM_C 171 lhp 173
+                           lh+
+  sp|Q96B86|RGMA_HUMAN 404 LHS 406
+                           *95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (450 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       324  (0.0168935); expected 383.6 (0.02)
+Passed bias filter:                      286  (0.0149121); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 2467.37
+//
+[ok]

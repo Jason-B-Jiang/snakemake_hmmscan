@@ -1,0 +1,305 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0011342.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0011342
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F165|E7F165_DANRE  [L=750]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.8e-29  101.0   0.0    1.3e-28  100.1   0.0    1.5  1  OTU       OTU-like cysteine protease
+    5.8e-29   99.7  46.5    9.3e-08   31.9   0.1    6.0  3  zf-A20    A20-like zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> OTU  OTU-like cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.1   0.0   1.4e-32   1.3e-28       1     127 []     102     259 ..     102     259 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 100.1 bits;  conditional E-value: 1.4e-32
+                             --SS-HHHHHHHHCCCSS.S...HCCHHHHHHHHHCHHHHHH..........TSSHHCCHHHHCCHHH...............HHHH CS
+                     OTU   1 rgDGnCLlravsqqlwgvqd...slrkakvseLreklaeylr..........ehseelelfleeeeeg...............ylke 59 
+                             +gDGnCLl+a+sq+l gvqd   +lrka +  L+e++++ +           +++++          +               ++  
+  tr|E7F165|E7F165_DANRE 102 NGDGNCLLHAASQYLLGVQDtdlVLRKALHAVLKETDTTDFLtrfqtellhsQEFTQ----------TglrystlnweeewvkIVDM 178
+                             69***********************************99999555555544422222..........12221112222233325555 PP
+
+                             TTSTTHHHH.......HHHHHHHHHHCTS-EEE.....ETT.SSSSEEEE-TT-EEE--TTS-GGGS-SS-EEEEEETTEE CS
+                     OTU  60 iektaawgg.......eieifalahiLrrpIiV.....lks.esgeelvglkfegvylplekdkslclkypihlgylgeHy 127
+                             ++  + ++g       +i+if+l++iLrrpIiV     l+s +sg+ +++l+++g+ylpl++++  c+kypi+lgy+++H+
+  tr|E7F165|E7F165_DANRE 179 ASPVSSSNGlqfdsleDIHIFVLSNILRRPIIViadqvLRSmKSGSSFSPLNVGGIYLPLHWPPGECYKYPIVLGYDSQHF 259
+                             5555544449999999**********************77769*************************************9 PP
+
+>> zf-A20  A20-like zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.9   0.1   9.7e-12   9.3e-08       1      23 [.     386     409 ..     386     410 .. 0.96
+   2 !   27.7   1.1   2.1e-10     2e-06       1      23 [.     465     488 ..     465     489 .. 0.97
+   3 !   27.0   2.1   3.5e-10   3.4e-06       1      22 [.     719     741 ..     719     743 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 31.9 bits;  conditional E-value: 9.7e-12
+                  zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                             ++C+++ C Fy s+ t+++C++C+
+  tr|E7F165|E7F165_DANRE 386 IRCATPrCTFYVSVDTQPHCHECF 409
+                             59*********************9 PP
+
+  == domain 2  score: 27.7 bits;  conditional E-value: 2.1e-10
+                  zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                             ++C+++ C F  s++++glC +C+
+  tr|E7F165|E7F165_DANRE 465 MKCKTPgCLFTLSVEHDGLCERCF 488
+                             69*********************9 PP
+
+  == domain 3  score: 27.0 bits;  conditional E-value: 3.5e-10
+                  zf-A20   1 llCrng.CGFyGspateglCSkC 22 
+                             ++C+++ C++y + + +g+C++C
+  tr|E7F165|E7F165_DANRE 719 QRCKTQgCDHYANQEKQGYCNEC 741
+                             69********************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (750 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       794  (0.0413994); expected 383.6 (0.02)
+Passed bias filter:                      386  (0.0201262); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.18s 00:00:00.62 Elapsed: 00:00:00.80
+# Mc/sec: 3017.61
+//
+Query:       tr|A0A2R8QN12|A0A2R8QN12_DANRE  [L=730]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-29  101.1   0.0    1.3e-28  100.2   0.0    1.5  1  OTU       OTU-like cysteine protease
+    4.9e-29  100.0  46.5      9e-08   32.0   0.1    6.0  3  zf-A20    A20-like zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> OTU  OTU-like cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.2   0.0   1.3e-32   1.3e-28       1     127 []     102     259 ..     102     259 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 100.2 bits;  conditional E-value: 1.3e-32
+                                     --SS-HHHHHHHHCCCSS.S...HCCHHHHHHHHHCHHHHHH..........TSSHHCCHHHHCCHHH........... CS
+                             OTU   1 rgDGnCLlravsqqlwgvqd...slrkakvseLreklaeylr..........ehseelelfleeeeeg........... 55 
+                                     +gDGnCLl+a+sq+l gvqd   +lrka +  L+e++++ +           +++++          +           
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 102 NGDGNCLLHAASQYLLGVQDtdlVLRKALHAVLKETDTTDFLtrfqtellhsQEFTQ----------Tglrystlnwee 170
+                                     69***********************************99999555555544422222..........122211122222 PP
+
+                                     ....HHHHTTSTTHHHH.......HHHHHHHHHHCTS-EEE.....ETT.SSSSEEEE-TT-EEE--TTS-GGGS-SS- CS
+                             OTU  56 ....ylkeiektaawgg.......eieifalahiLrrpIiV.....lks.esgeelvglkfegvylplekdkslclkyp 117
+                                         ++  ++  + ++g       +i+if+l++iLrrpIiV     l+s +sg+ +++l+++g+ylpl++++  c+kyp
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 171 ewvkIVDMASPVSSSNGlqfdsleDIHIFVLSNILRRPIIViadqvLRSmKSGSSFSPLNVGGIYLPLHWPPGECYKYP 249
+                                     333255555555544449999999**********************77769**************************** PP
+
+                                     EEEEEETTEE CS
+                             OTU 118 ihlgylgeHy 127
+                                     i+lgy+++H+
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 250 IVLGYDSQHF 259
+                                     *********9 PP
+
+>> zf-A20  A20-like zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.0   0.1   9.4e-12     9e-08       1      23 [.     386     409 ..     386     410 .. 0.96
+   2 !   27.7   1.1     2e-10     2e-06       1      23 [.     459     482 ..     459     483 .. 0.97
+   3 !   27.0   2.1   3.4e-10   3.3e-06       1      22 [.     699     721 ..     699     723 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 32.0 bits;  conditional E-value: 9.4e-12
+                          zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                                     ++C+++ C Fy s+ t+++C++C+
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 386 IRCATPrCTFYVSVDTQPHCHECF 409
+                                     59*********************9 PP
+
+  == domain 2  score: 27.7 bits;  conditional E-value: 2e-10
+                          zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                                     ++C+++ C F  s++++glC +C+
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 459 MKCKTPgCLFTLSVEHDGLCERCF 482
+                                     69*********************9 PP
+
+  == domain 3  score: 27.0 bits;  conditional E-value: 3.4e-10
+                          zf-A20   1 llCrng.CGFyGspateglCSkC 22 
+                                     ++C+++ C++y + + +g+C++C
+  tr|A0A2R8QN12|A0A2R8QN12_DANRE 699 QRCKTQgCDHYANQEKQGYCNEC 721
+                                     69********************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (730 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       738  (0.0384796); expected 383.6 (0.02)
+Passed bias filter:                      359  (0.0187184); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.13s 00:00:00.61 Elapsed: 00:00:00.69
+# Mc/sec: 3443.61
+//
+Query:       tr|F1QG48|F1QG48_DANRE  [L=756]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-29  101.1   0.0    1.3e-28  100.1   0.0    1.6  1  OTU       OTU-like cysteine protease
+    6.1e-29   99.7  46.5    9.4e-08   31.9   0.1    6.0  3  zf-A20    A20-like zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> OTU  OTU-like cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.1   0.0   1.4e-32   1.3e-28       1     127 []      97     254 ..      97     254 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 100.1 bits;  conditional E-value: 1.4e-32
+                             --SS-HHHHHHHHCCCSS.S...HCCHHHHHHHHHCHHHHHH..........TSSHHCCHHHHCCHHH...............HHHH CS
+                     OTU   1 rgDGnCLlravsqqlwgvqd...slrkakvseLreklaeylr..........ehseelelfleeeeeg...............ylke 59 
+                             +gDGnCLl+a+sq+l gvqd   +lrka +  L+e++++ +           +++++          +               ++  
+  tr|F1QG48|F1QG48_DANRE  97 NGDGNCLLHAASQYLLGVQDtdlVLRKALHAVLKETDTTDFLtrfqtellhsQEFTQ----------TglrystlnweeewvkIVDM 173
+                             69***********************************99999555555544422222..........12221112222233325555 PP
+
+                             TTSTTHHHH.......HHHHHHHHHHCTS-EEE.....ETT.SSSSEEEE-TT-EEE--TTS-GGGS-SS-EEEEEETTEE CS
+                     OTU  60 iektaawgg.......eieifalahiLrrpIiV.....lks.esgeelvglkfegvylplekdkslclkypihlgylgeHy 127
+                             ++  + ++g       +i+if+l++iLrrpIiV     l+s +sg+ +++l+++g+ylpl++++  c+kypi+lgy+++H+
+  tr|F1QG48|F1QG48_DANRE 174 ASPVSSSNGlqfdsleDIHIFVLSNILRRPIIViadqvLRSmKSGSSFSPLNVGGIYLPLHWPPGECYKYPIVLGYDSQHF 254
+                             5555544449999999**********************77769*************************************9 PP
+
+>> zf-A20  A20-like zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.9   0.1   9.8e-12   9.4e-08       1      23 [.     380     403 ..     380     404 .. 0.96
+   2 !   27.6   1.1   2.1e-10     2e-06       1      23 [.     459     482 ..     459     483 .. 0.97
+   3 !   26.9   2.1   3.5e-10   3.4e-06       1      22 [.     725     747 ..     725     749 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 31.9 bits;  conditional E-value: 9.8e-12
+                  zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                             ++C+++ C Fy s+ t+++C++C+
+  tr|F1QG48|F1QG48_DANRE 380 IRCATPrCTFYVSVDTQPHCHECF 403
+                             59*********************9 PP
+
+  == domain 2  score: 27.6 bits;  conditional E-value: 2.1e-10
+                  zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                             ++C+++ C F  s++++glC +C+
+  tr|F1QG48|F1QG48_DANRE 459 MKCKTPgCLFTLSVEHDGLCERCF 482
+                             69*********************9 PP
+
+  == domain 3  score: 26.9 bits;  conditional E-value: 3.5e-10
+                  zf-A20   1 llCrng.CGFyGspateglCSkC 22 
+                             ++C+++ C++y + + +g+C++C
+  tr|F1QG48|F1QG48_DANRE 725 QRCKTQgCDHYANQEKQGYCNEC 747
+                             69********************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (756 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       924  (0.0481777); expected 383.6 (0.02)
+Passed bias filter:                      402  (0.0209604); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.14s 00:00:00.60 Elapsed: 00:00:00.63
+# Mc/sec: 3858.58
+//
+Query:       sp|P21580|TNAP3_HUMAN  [L=790]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-38  129.0  72.0    9.9e-08   31.8   8.4    7.6  4  zf-A20    A20-like zinc finger
+    9.5e-34  116.7   0.0    2.3e-33  115.5   0.0    1.7  1  OTU       OTU-like cysteine protease
+
+
+Domain annotation for each model (and alignments):
+>> zf-A20  A20-like zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.5   1.6   1.3e-11   1.2e-07       2      22 ..     386     407 ..     385     409 .. 0.96
+   2 !   26.1   4.7   6.4e-10   6.2e-06       1      24 []     476     500 ..     476     500 .. 0.95
+   3 !   30.2   2.4   3.5e-11   3.3e-07       1      23 [.     655     678 ..     655     679 .. 0.96
+   4 !   31.8   8.4     1e-11   9.9e-08       1      24 []     760     784 ..     760     784 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 31.5 bits;  conditional E-value: 1.3e-11
+                 zf-A20   2 lCrng.CGFyGspateglCSkC 22 
+                            +C ++ C+F++s++t++lC++C
+  sp|P21580|TNAP3_HUMAN 386 KCETPnCPFFMSVNTQPLCHEC 407
+                            9********************* PP
+
+  == domain 2  score: 26.1 bits;  conditional E-value: 6.4e-10
+                 zf-A20   1 llCrng.CGFyGspateglCSkCYk 24 
+                            ++Cr++ C+F  +++++g+C +C++
+  sp|P21580|TNAP3_HUMAN 476 MKCRSPgCPFTLNVQHNGFCERCHN 500
+                            69*********************85 PP
+
+  == domain 3  score: 30.2 bits;  conditional E-value: 3.5e-11
+                 zf-A20   1 llCrng.CGFyGspateglCSkCY 23 
+                            ++C ++ CG  Gs ++eg+C+kC+
+  sp|P21580|TNAP3_HUMAN 655 IPCLGReCGTLGSTMFEGYCQKCF 678
+                            59*********************9 PP
+
+  == domain 4  score: 31.8 bits;  conditional E-value: 1e-11
+                 zf-A20   1 llCrng.CGFyGspateglCSkCYk 24 
+                            ++Cr++ C+++G+++++g+C++C++
+  sp|P21580|TNAP3_HUMAN 760 QRCRAPaCDHFGNAKCNGYCNECFQ 784
+                            69**********************7 PP
+
+>> OTU  OTU-like cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.5   0.0   2.4e-37   2.3e-33       1     127 []      98     257 ..      98     257 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 115.5 bits;  conditional E-value: 2.4e-37
+                            --SS-HHHHHHHHCCCSS.S...HCCHHHHHHHHHCHHHHHH..........TSSHHCCHHHHCCHHH.....HHHHTTSTTHHHH.. CS
+                    OTU   1 rgDGnCLlravsqqlwgvqd...slrkakvseLreklaeylr..........ehseelelfleeeeeg.....ylkeiektaawgg.. 68 
+                            +gDGnCL++a+sq++wgvqd   +lrka +s+L+e+++++++          +++ e+ l++++++                      
+  sp|P21580|TNAP3_HUMAN  98 NGDGNCLMHATSQYMWGVQDtdlVLRKALFSTLKETDTRNFKfrwqleslksQEFVETGLCYDTRNWNdewdnL-----------Ikm 174
+                            69****************************************99999999999999999998887333444433...........044 PP
+
+                            ..................HHHHHHHHHHCTS-EEE.....ETT.SSSSEEEE-TT-EEE--TTS-GGGS-SS-EEEEEETTEE CS
+                    OTU  69 ..................eieifalahiLrrpIiV.....lks.esgeelvglkfegvylplekdkslclkypihlgylgeHy 127
+                                              ei+if+l++iLrrpIiV     l+s esg+++++lk++g+ylpl+++++ c++ypi+lgy+++H+
+  sp|P21580|TNAP3_HUMAN 175 astdtpmarsglqynsleEIHIFVLCNILRRPIIVisdkmLRSlESGSNFAPLKVGGIYLPLHWPAQECYRYPIVLGYDSHHF 257
+                            444444444556666666**********************9999**************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (790 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       840  (0.0437979); expected 383.6 (0.02)
+Passed bias filter:                      398  (0.0207519); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.17s 00:00:00.62 Elapsed: 00:00:00.71
+# Mc/sec: 3620.23
+//
+[ok]

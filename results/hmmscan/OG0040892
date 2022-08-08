@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040892.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040892
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NP84|TNR12_HUMAN  [L=129]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.8e-77  256.9   7.7    4.3e-77  256.7   7.7    1.0  1  stn_TNFRSF12A  Tumour necrosis factor receptor stn_TNFRSF12A_
+
+
+Domain annotation for each model (and alignments):
+>> stn_TNFRSF12A  Tumour necrosis factor receptor stn_TNFRSF12A_TNFR domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  256.7   7.7   2.2e-81   4.3e-77       1     129 []       1     129 []       1     129 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 256.7 bits;  conditional E-value: 2.2e-81
+          stn_TNFRSF12A   1 malgplrpllrllvlglglallraaagerapgaapcsrgsswsadldkcmdcascparprsdfclgcaaappasfrllwpilggalsl 88 
+                            ma g lr llrllvlgl+lallr+ age+apg+apcsrgsswsadldkcmdcasc arp+sdfclgcaaappa+frllwpilggalsl
+  sp|Q9NP84|TNR12_HUMAN   1 MARGSLRRLLRLLVLGLWLALLRSVAGEQAPGTAPCSRGSSWSADLDKCMDCASCRARPHSDFCLGCAAAPPAPFRLLWPILGGALSL 88 
+                            899************************************************************************************* PP
+
+          stn_TNFRSF12A  89 alvlgllsgflvwrrcrrrekfttpieetggegcpgvaliq 129
+                            ++vlgllsgflvwrrcrrrekfttpieetggegcp valiq
+  sp|Q9NP84|TNR12_HUMAN  89 TFVLGLLSGFLVWRRCRRREKFTTPIEETGGEGCPAVALIQ 129
+                            ****************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (129 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       684  (0.035664); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.31u 0.17s 00:00:00.48 Elapsed: 00:00:00.62
+# Mc/sec: 673.14
+//
+[ok]

@@ -1,0 +1,603 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0005272.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0005272
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O62461|SELD_CAEEL  [L=378]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-23   81.9   0.1    8.2e-23   81.3   0.1    1.3  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    2.6e-08   34.3   0.1    7.4e-08   32.8   0.0    1.8  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.3   0.1   8.6e-27   8.2e-23       2     152 ..     189     360 ..     188     364 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 81.3 bits;  conditional E-value: 8.6e-27
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHHT CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemapa 82 
+                           pGdvlilt+++G ++a+ s  +   +  + + +      + +++  +  +++ +++r++a l  k+++++ +DvTg+GLlg++ ++a+ 
+  sp|O62461|SELD_CAEEL 189 PGDVLILTKPIGGQVAVNSYEWIKKKNGKIE-ElnleipKIEKAFKQVCEQMSRLNRNAAKLlhKYDAHSSTDVTGFGLLGHAENLARV 276
+                           9*********999999965544333333333.24778997778888888889999999999999************************* PP
+
+                           TTEEEEEECGTHHHHHHHHHHHHHHHC..............STTTEEEEEEEHGGHHHHHHHHHHTTCCCEEEEEEEEESSSEE CS
+                AIRS_C  83 sgvgaeidldkvpifdelesplemlls..............ensggllvavppeeaeavlaileeeglpeaavIGevtageels 152
+                           ++  +e+ ++k+pi++   +  + +++              e+sggll+a ++e+a++ +a+l++     a++IG+vta+   s
+  sp|O62461|SELD_CAEEL 277 QKQPMEFIIEKLPIIEYMDEIADKMIAkggegfklyqgtsaETSGGLLIAMSEENAKKYIAELSSLDNAPAWIIGKVTAKTTDS 360
+                           **********9999998875566666667777777888999*************************9956*********97665 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.8   0.0   7.7e-12   7.4e-08       6      93 ..      78     165 ..      53     176 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 32.8 bits;  conditional E-value: 7.7e-12
+                           EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEEE CS
+                  AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdtsf 90 
+                           +v+t +++ p++ +p+ +    G+   a++lsD++amG   +  +l+ la+  +    + + ++  +++g+++a++e+g+++ GG+t +
+  sp|O62461|SELD_CAEEL  78 LVQTTDFFYPLIDDPYIM----GRVTCANVLSDLYAMGVSECdNMLMLLAVAIDLnekQRDIVVPLFIQGFKDAADEAGTKIRGGQTVR 162
+                           44555599********99....*****************999888888888555566556666778*********************99 PP
+
+                           ESS CS
+                  AIRS  91 sne 93 
+                            + 
+  sp|O62461|SELD_CAEEL 163 CPW 165
+                           875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (378 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       736  (0.0383753); expected 383.6 (0.02)
+Passed bias filter:                      693  (0.0361333); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.23s 00:00:00.67 Elapsed: 00:00:00.68
+# Mc/sec: 1795.13
+//
+Query:       sp|Q94497|SELD_DICDI  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-23   83.0   0.0    3.8e-23   82.4   0.0    1.2  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    1.2e-07   32.1   0.0      3e-07   30.9   0.0    1.7  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.4   0.0     4e-27   3.8e-23       2     150 ..     172     338 ..     171     342 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 82.4 bits;  conditional E-value: 4e-27
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           pGdvl+lt++lG+++ + ++++ l +++ ++++       + + +  +++ ++ +++r  a+l  k++++aa+DvTg+G+lg+  ++a+
+  sp|Q94497|SELD_DICDI 172 PGDVLVLTKPLGTQVCVNFHQW-LSKPERWEKIntitnaeECEQVFNYATLSMARLNRVGARLmkKYNAHAATDVTGFGILGHSTNLAQ 259
+                           9****************88866.*******999*****8766688899999************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHH.......HHHHHHHC.........STTTEEEEEEEHGGHHHHHHHHHHTTCCCEEEEEEEEESSS CS
+                AIRS_C  82 asgvgaeidldkvpifdele.......splemlls.........ensggllvavppeeaeavlaileeeglpeaavIGevtagee 150
+                            + + ++++++ +pi+++ +                        e+sggll++ ++e+aea+++++ e + + a++IG v+++ +
+  sp|Q94497|SELD_DICDI 260 NQLLPIRFEIHTLPIIKHMKkledhlnH------PfkllkgtsaETSGGLLISMSRENAEAFCKEIYEIEKQPAWIIGDVIDQSS 338
+                           ****************998755554443......0445555888******************99999988867********9875 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.9   0.0   3.1e-11     3e-07       5     102 ..      60     154 ..      40     159 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 30.9 bits;  conditional E-value: 3.1e-11
+                           EEEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEE CS
+                  AIRS   5 vvvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdts 89 
+                           v+++t +++ p++ +p+      G++a a++lsD++  G + +  +l+ la++ ++   + +w  + +++g+++ + ++g ++ GG+t 
+  sp|Q94497|SELD_DICDI  60 VMIQTTDFFFPLVDDPYFQ----GKIACANVLSDLYSFGIEDCdNMLMLLACSTDMtaeQRQWSSKLMIQGFNDQAICAGSKVSGGQTV 144
+                           4666777**********99....********************9999999998888999999*99***********************9 PP
+
+                           EESS.SEEEEEEE CS
+                  AIRS  90 fsnetskptisvt 102
+                            ++    p++ ++
+  sp|Q94497|SELD_DICDI 145 KNPW---PIVGGV 154
+                           9876...666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       438  (0.0228375); expected 383.6 (0.02)
+Passed bias filter:                      394  (0.0205433); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 1913.62
+//
+Query:       sp|O18373|SPS1_DROME  [L=398]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-31  109.4   0.1    2.8e-31  108.8   0.1    1.3  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    1.5e-09   38.3   0.9    2.8e-09   37.4   0.3    1.7  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.8   0.1   2.9e-35   2.8e-31       2     155 ..     215     386 ..     214     387 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 108.8 bits;  conditional E-value: 2.9e-35
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           +Gdvl+lt++lG+++a+  +++++++++ ++++       +v ++ +++++++ +++r +a+l  k+++++a+D+Tg+GLlg+++ +a+
+  sp|O18373|SPS1_DROME 215 VGDVLVLTKPLGTQVAV-NAHQWIDQPERWNRIklvvseeDVRKAYHRAMNSMARLNRVAARLmhKYNAHGATDITGFGLLGHAQTLAA 302
+                           7****************.88888********99******9999********************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHH..........HHHHHHHCSTTTEEEEEEEHGGHHHHHHHHHHTTCCCEEEEEEEEESSSEEEEE CS
+                AIRS_C  82 asgvgaeidldkvpifdele..........splemllsensggllvavppeeaeavlaileeeglpeaavIGevtageelsviv 155
+                           +++  + + ++++p++++ +            l+ + +e+sggll+++p+e+a+a ++ +e+++  +a++IG v++g++++ i+
+  sp|O18373|SPS1_DROME 303 HQKKDVSFVIHNLPVIAKMAavakacgnmfQLLQGHSAETSGGLLICLPREQAAAYCKDIEKQEGYQAWIIGIVEKGNKTARII 386
+                           ***********888877766666666777766777777***************99999999999889**********9988765 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4   0.3   2.9e-13   2.8e-09       2      97 ..      91     192 ..      87     202 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 2.9e-13
+                           SSEE.........EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHH CS
+                  AIRS   2 Daav.........vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacr 77 
+                           D++v         +v+t +++ p++ +p+ +    G++a a++lsD++amG + +  +l+ la++ ++   e + ++  ++rg+++ + 
+  sp|O18373|SPS1_DROME  91 DCSViplrhgglcLVQTTDFFYPIVDDPYMM----GKIACANVLSDLYAMGVTDCdNMLMLLAVSTKMtekERDVVIPLIMRGFKDSAL 175
+                           5664444444444455555************....********************999999999888877655666788********** PP
+
+                           HTT-EEEEEEEEEESS.SEE CS
+                  AIRS  78 elgvplvGGdtsfsnetskp 97 
+                           e+g+ ++GG+  +++    +
+  sp|O18373|SPS1_DROME 176 EAGTTVTGGQSVVNPW---C 192
+                           **********998765...3 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (398 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       606  (0.0315971); expected 383.6 (0.02)
+Passed bias filter:                      549  (0.0286251); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.60
+# Mc/sec: 2157.23
+//
+Query:       sp|Q7ZW38|SPS1_DANRE  [L=392]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.5e-31  107.3   0.1    1.3e-30  106.7   0.1    1.3  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    3.5e-10   40.3   0.2    7.4e-10   39.3   0.2    1.5  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.7   0.1   1.3e-34   1.3e-30       2     155 ..     193     367 ..     192     368 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 106.7 bits;  conditional E-value: 1.3e-34
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           pGdvl+lt++lG+++a+ + +++l+ +++++++       +v+l+  +++ ++ +++r +a l  +++++aa+D+Tg+G+lg+++++a+
+  sp|Q7ZW38|SPS1_DANRE 193 PGDVLVLTKPLGTQVAV-AVHQWLDIPEKWNKIklvvtqeDVELAYQEAMLNMARLNRTAAGLmhTFNAHAATDITGFGILGHAQNLAR 280
+                           9****************.88889********99******************************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHHHHHHHHHC...........STTTEEEEEEEHGGHHHHHHHHH..HTTC.CCEEEEEEEEESSSEEEEE CS
+                AIRS_C  82 asgvgaeidldkvpifdelesplemlls...........ensggllvavppeeaeavlaile..eegl.peaavIGevtageelsviv 155
+                           +++ ++ + ++++p++++ +  +++              e+sggll+++p+e+a++++a+++  ++g+ ++a++IG v++g++++ i+
+  sp|Q7ZW38|SPS1_DANRE 281 QQRTEVSFVIHNLPVLAKMAAVSKAC-GnmfglmhgtcpETSGGLLICLPREQAARFCAEIKspKYGEgHQAWIIGIVEKGNRTARII 367
+                           ***********999999875222222.136667788899***********************888999999***********998765 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.2   7.7e-14   7.4e-10       6      93 ..      82     169 ..      59     180 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 7.7e-14
+                           EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEEE CS
+                  AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdtsf 90 
+                           +v+t +   p++ +p+ +    G++a a++lsD++amG + +  +l+ l ++++    e ++++  v++g+++a +e+g++++GG+t  
+  sp|Q7ZW38|SPS1_DANRE  82 LVQTTDYIYPIVDDPYMM----GRIACANVLSDLYAMGVTECdNMLMLLGVSNKLtekERDKVMPLVIQGFKDASEEAGTSVTGGQTVI 166
+                           3444449999999***99....********************99999****888788766777888*********************98 PP
+
+                           ESS CS
+                  AIRS  91 sne 93 
+                           ++ 
+  sp|Q7ZW38|SPS1_DANRE 167 NPW 169
+                           764 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (392 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       542  (0.0282601); expected 383.6 (0.02)
+Passed bias filter:                      517  (0.0269566); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.62
+# Mc/sec: 2057.90
+//
+Query:       sp|Q66I14|SPS3_DANRE  [L=447]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-26   92.8   1.1    3.4e-25   89.1   1.1    2.2  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    6.4e-10   39.5   0.1    1.4e-09   38.4   0.1    1.5  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.1   1.1   3.6e-29   3.4e-25       2     150 ..     229     409 ..     228     415 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 89.1 bits;  conditional E-value: 3.6e-29
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           pGdvl+lt++lG+++a+  ++++l+ +++++++       +v+ +  +++ ++  ++r +aal  k++++aa+D+Tg+G++g++ ++a+
+  sp|Q66I14|SPS3_DANRE 229 PGDVLVLTKPLGTQVAV-NAHQWLDIPEKWNKIklvisreEVEQAYQEAMLNMATLNRTAAALmhKFNAHAATDITGFGIIGHARNLAK 316
+                           9****************.88888********99*****9988888888888************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHH......HHHHHHHC..........STTTEEEEEEEHGGHHHHHHHHH.............HTTC...CC CS
+                AIRS_C  82 asgvgaeidldkvpifdele......splemlls..........ensggllvavppeeaeavlaile.............eegl...pe 138
+                           +++  + + ++++pi+++ +                        e+sggll+++p+e+a++++a+++                +   ++
+  sp|Q66I14|SPS3_DANRE 317 QQKNDVAFVIHNLPIISKMAaiskagG------NlfgllqgtssETSGGLLICLPREQAARFCAEMKssrmgllgagqdgG--VgdgQQ 397
+                           ***********9999999875444440......35555666667**********************944444444433221..122345 PP
+
+                           EEEEEEEEESSS CS
+                AIRS_C 139 aavIGevtagee 150
+                           a++IG v++g++
+  sp|Q66I14|SPS3_DANRE 398 AWIIGIVEKGNR 409
+                           666666666655 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   0.1   1.4e-13   1.4e-09       6      92 ..     118     204 ..      87     215 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 1.4e-13
+                           EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEEE CS
+                  AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdtsf 90 
+                           +v+t +++ p++ +p+ +    G++a a++lsD++amG + +  +l+ l++++++   e + +l  +++g+++a++e g++++GG+t  
+  sp|Q66I14|SPS3_DANRE 118 LVQTTDFFYPLVEDPYMM----GRIACANVLSDLYAMGITECdNMLMLLSVSQKMnekERDLVLPLMMKGFRDAAEEGGTSVTGGQTVI 202
+                           4455559999999***99....********************999999***888877655566888*********************98 PP
+
+                           ES CS
+                  AIRS  91 sn 92 
+                           ++
+  sp|Q66I14|SPS3_DANRE 203 NP 204
+                           76 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (447 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       409  (0.0213254); expected 383.6 (0.02)
+Passed bias filter:                      374  (0.0195005); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.16s 00:00:00.56 Elapsed: 00:00:00.69
+# Mc/sec: 2095.51
+//
+Query:       tr|A0A6I8MWV8|A0A6I8MWV8_DANRE  [L=344]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-26   93.9   1.2    1.9e-25   89.9   1.2    2.2  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    4.7e-10   39.9   0.0    1.1e-09   38.7   0.0    1.6  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.9   1.2     2e-29   1.9e-25       2     150 ..     126     306 ..     125     312 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 89.9 bits;  conditional E-value: 2e-29
+                                     TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTH CS
+                          AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggG 71 
+                                     pGdvl+lt++lG+++a+  ++++l+ +++++++       +v+ +  +++ ++  ++r +aal  k++++aa+D+Tg+G
+  tr|A0A6I8MWV8|A0A6I8MWV8_DANRE 126 PGDVLVLTKPLGTQVAV-NAHQWLDIPEKWNKIklvisreEVEQAYQEAMLNMATLNRTAAALmhKFNAHAATDITGFG 203
+                                     9****************.88888********99*****9988888888888**************************** PP
+
+                                     HHHHHHHHHHTTTEEEEEECGTHHHHHHHH......HHHHHHHC..........STTTEEEEEEEHGGHHHHHHHHH.. CS
+                          AIRS_C  72 Llgalaemapasgvgaeidldkvpifdele......splemlls..........ensggllvavppeeaeavlaile.. 132
+                                     ++g++ ++a++++  + + ++++pi+++ +                        e+sggll+++p+e+a++++a+++  
+  tr|A0A6I8MWV8|A0A6I8MWV8_DANRE 204 IIGHARNLAKQQKNDVAFVIHNLPIISKMAaiskagG------NlfgllqgtssETSGGLLICLPREQAARFCAEMKss 276
+                                     *********************9999999875444440......35555666667**********************944 PP
+
+                                     ...........HTTC...CCEEEEEEEEESSS CS
+                          AIRS_C 133 ...........eegl...peaavIGevtagee 150
+                                                   +   ++a++IG v++g++
+  tr|A0A6I8MWV8|A0A6I8MWV8_DANRE 277 rmgllgagqdgG--VgdgQQAWIIGIVEKGNR 306
+                                     444444443221..122345666666666665 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.7   0.0   1.2e-13   1.1e-09       6      92 ..      15     101 ..       2     112 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 38.7 bits;  conditional E-value: 1.2e-13
+                                     EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT CS
+                            AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelg 80 
+                                     +v+t +++ p++ +p+ +    G++a a++lsD++amG + +  +l+ l++++++   e + +l  +++g+++a++e g
+  tr|A0A6I8MWV8|A0A6I8MWV8_DANRE  15 LVQTTDFFYPLVEDPYMM----GRIACANVLSDLYAMGITECdNMLMLLSVSQKMnekERDLVLPLMMKGFRDAAEEGG 89 
+                                     4445559999999***99....********************999999***888877655566888************* PP
+
+                                     -EEEEEEEEEES CS
+                            AIRS  81 vplvGGdtsfsn 92 
+                                     ++++GG+t  ++
+  tr|A0A6I8MWV8|A0A6I8MWV8_DANRE  90 TSVTGGQTVINP 101
+                                     ********9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (344 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       448  (0.0233589); expected 383.6 (0.02)
+Passed bias filter:                      395  (0.0205954); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.60
+# Mc/sec: 1862.24
+//
+Query:       tr|A0A2R8RHI2|A0A2R8RHI2_DANRE  [L=359]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-26   93.7   1.2      2e-25   89.8   1.2    2.2  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    4.8e-10   39.9   0.1    1.1e-09   38.7   0.1    1.6  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.8   1.2   2.1e-29     2e-25       2     150 ..     141     321 ..     140     327 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 89.8 bits;  conditional E-value: 2.1e-29
+                                     TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTH CS
+                          AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggG 71 
+                                     pGdvl+lt++lG+++a+  ++++l+ +++++++       +v+ +  +++ ++  ++r +aal  k++++aa+D+Tg+G
+  tr|A0A2R8RHI2|A0A2R8RHI2_DANRE 141 PGDVLVLTKPLGTQVAV-NAHQWLDIPEKWNKIklvisreEVEQAYQEAMLNMATLNRTAAALmhKFNAHAATDITGFG 218
+                                     9****************.88888********99*****9988888888888**************************** PP
+
+                                     HHHHHHHHHHTTTEEEEEECGTHHHHHHHH......HHHHHHHC..........STTTEEEEEEEHGGHHHHHHHHH.. CS
+                          AIRS_C  72 Llgalaemapasgvgaeidldkvpifdele......splemlls..........ensggllvavppeeaeavlaile.. 132
+                                     ++g++ ++a++++  + + ++++pi+++ +                        e+sggll+++p+e+a++++a+++  
+  tr|A0A2R8RHI2|A0A2R8RHI2_DANRE 219 IIGHARNLAKQQKNDVAFVIHNLPIISKMAaiskagG------NlfgllqgtssETSGGLLICLPREQAARFCAEMKss 291
+                                     *********************9999999875444440......35555666667**********************944 PP
+
+                                     ...........HTTC...CCEEEEEEEEESSS CS
+                          AIRS_C 133 ...........eegl...peaavIGevtagee 150
+                                                   +   ++a++IG v++g++
+  tr|A0A2R8RHI2|A0A2R8RHI2_DANRE 292 rmgllgagqdgG--VgdgQQAWIIGIVEKGNR 321
+                                     444444443221..122345666666666665 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.7   0.1   1.2e-13   1.1e-09       6      92 ..      30     116 ..      16     127 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 38.7 bits;  conditional E-value: 1.2e-13
+                                     EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT CS
+                            AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelg 80 
+                                     +v+t +++ p++ +p+ +    G++a a++lsD++amG + +  +l+ l++++++   e + +l  +++g+++a++e g
+  tr|A0A2R8RHI2|A0A2R8RHI2_DANRE  30 LVQTTDFFYPLVEDPYMM----GRIACANVLSDLYAMGITECdNMLMLLSVSQKMnekERDLVLPLMMKGFRDAAEEGG 104
+                                     4455559999999***99....********************999999***888877655566888************* PP
+
+                                     -EEEEEEEEEES CS
+                            AIRS  81 vplvGGdtsfsn 92 
+                                     ++++GG+t  ++
+  tr|A0A2R8RHI2|A0A2R8RHI2_DANRE 105 TSVTGGQTVINP 116
+                                     ********9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (359 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       480  (0.0250274); expected 383.6 (0.02)
+Passed bias filter:                      427  (0.0222639); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.63
+# Mc/sec: 1846.62
+//
+Query:       sp|P49903|SPS1_HUMAN  [L=392]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-31  109.3   0.1      3e-31  108.7   0.1    1.3  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    6.2e-11   42.7   0.2    1.4e-10   41.6   0.2    1.6  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.7   0.1   3.2e-35     3e-31       2     155 ..     193     367 ..     192     368 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 108.7 bits;  conditional E-value: 3.2e-35
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           pGdvl+lt++lG+++a+ + +++l+ +++++++       +v+l+  ++++++ +++r +a l  +++++aa+D+Tg+G+lg+++++a+
+  sp|P49903|SPS1_HUMAN 193 PGDVLVLTKPLGTQVAV-AVHQWLDIPEKWNKIklvvtqeDVELAYQEAMMNMARLNRTAAGLmhTFNAHAATDITGFGILGHAQNLAK 280
+                           9****************.88889********99******************************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHHHHHHHHHC...........STTTEEEEEEEHGGHHHHHHHHH..HTTC.CCEEEEEEEEESSSEEEEE CS
+                AIRS_C  82 asgvgaeidldkvpifdelesplemlls...........ensggllvavppeeaeavlaile..eegl.peaavIGevtageelsviv 155
+                           +++ ++ + ++++p++++ +  +++              e+sggll+++p+e+a++++a+++  ++g+ ++a++IG v++g++++ i+
+  sp|P49903|SPS1_HUMAN 281 QQRNEVSFVIHNLPVLAKMAAVSKAC-GnmfglmhgtcpETSGGLLICLPREQAARFCAEIKspKYGEgHQAWIIGIVEKGNRTARII 367
+                           ***********999999875222222.136667788899***********************888999999***********998765 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.6   0.2   1.4e-14   1.4e-10       6      93 ..      82     169 ..      59     180 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 41.6 bits;  conditional E-value: 1.4e-14
+                           EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEEE CS
+                  AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdtsf 90 
+                           +v+t +   p++ +p+ +    G++a a++lsD++amG + +  +l+ l +++++   e ++++  +++g+++a++e+g++++GG+t  
+  sp|P49903|SPS1_HUMAN  82 LVQTTDYIYPIVDDPYMM----GRIACANVLSDLYAMGVTECdNMLMLLGVSNKMtdrERDKVMPLIIQGFKDAAEEAGTSVTGGQTVL 166
+                           3444449999999***99....********************9*9******888899877777999*********************99 PP
+
+                           ESS CS
+                  AIRS  91 sne 93 
+                           ++ 
+  sp|P49903|SPS1_HUMAN 167 NPW 169
+                           764 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (392 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       550  (0.0286772); expected 383.6 (0.02)
+Passed bias filter:                      516  (0.0269044); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.69
+# Mc/sec: 1846.94
+//
+Query:       sp|Q99611|SPS2_HUMAN  [L=448]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-28   99.7   0.1      3e-28   99.0   0.1    1.3  1  AIRS_C    AIR synthase related protein, C-terminal domain
+    1.3e-10   41.7   0.1    3.3e-10   40.4   0.1    1.7  1  AIRS      AIR synthase related protein, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> AIRS_C  AIR synthase related protein, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.0   0.1   3.1e-32     3e-28       2     155 ..     244     417 ..     243     418 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 99.0 bits;  conditional E-value: 3.1e-32
+                           TTEEEEEEETSSCTCCHHHHHHHCHHHCTSHTT.......TSEHHHHHHHHHHHHHHHHHHHH..HTTECEEEE--TTHHHHHHHHHHH CS
+                AIRS_C   2 pGdvliltgslGlggagtslkrklledsgldds.......avqlgdvlleptliyvkralaal..kglvkaahDvTggGLlgalaemap 81 
+                           +Gdvl+lt++lG+++a+  ++++l++++ +++        +v+l+  +++ ++  ++r +a l  +++++aa+D+Tg+G+lg+ +++a+
+  sp|Q99611|SPS2_HUMAN 244 VGDVLVLTKPLGTQVAV-NAHQWLDNPERWNKVkmvvsreEVELAYQEAMFNMATLNRTAAGLmhTFNAHAATDITGFGILGHSQNLAK 331
+                           7****************.88888*******988******9999********************************************** PP
+
+                           TTTEEEEEECGTHHHHHHHH........HHHHHHHC.......STTTEEEEEEEHGGHHHHHHHHH..HTTC.CCEEEEEEEEESSSEE CS
+                AIRS_C  82 asgvgaeidldkvpifdele........splemlls.......ensggllvavppeeaeavlaile..eegl.peaavIGevtageels 152
+                           +++ ++ + ++++pi+++ +        +              e+sggll+++p+e+a++++++++  ++g+ ++a+++G v++g++++
+  sp|Q99611|SPS2_HUMAN 332 QQRNEVSFVIHNLPIIAKMAavskasgrF------GllqgtsaETSGGLLICLPREQAARFCSEIKssKYGEgHQAWIVGIVEKGNRTA 414
+                           ****************9986764443331......26666778********************999778899999***********998 PP
+
+                           EEE CS
+                AIRS_C 153 viv 155
+                            i+
+  sp|Q99611|SPS2_HUMAN 415 RII 417
+                           765 PP
+
+>> AIRS  AIR synthase related protein, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   0.1   3.5e-14   3.3e-10       6      93 ..     133     220 ..      98     231 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 3.5e-14
+                           EEEEEEEE.EECCTCCCCTCCHHHHHHHHHHHHHHTTTEEEE.EEEEEEEECTTT...CHHHHHHHHHHHHHHHHHHTT-EEEEEEEEE CS
+                  AIRS   6 vvttdsvnrpvlvepvhfpediGakavavnlsDiaamGArPl.aildslalpesp...eeewqleevvrglaeacrelgvplvGGdtsf 90 
+                           +v+t +++ p++ +p+ +    G++a a++lsD++amG + +  +l+ l++++s+   e e++   +v+g+++a++e g++++GG+t +
+  sp|Q99611|SPS2_HUMAN 133 LVQTTDFFYPLVEDPYMM----GRIACANVLSDLYAMGITECdNMLMLLSVSQSMseeEREKVTPLMVKGFRDAAEEGGTAVTGGQTVV 217
+                           4455559999999***99....********************99999****88887755555556699*******************99 PP
+
+                           ESS CS
+                  AIRS  91 sne 93 
+                           ++ 
+  sp|Q99611|SPS2_HUMAN 218 NPW 220
+                           764 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (448 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       374  (0.0195005); expected 383.6 (0.02)
+Passed bias filter:                      339  (0.0176756); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.62
+# Mc/sec: 2341.23
+//
+[ok]

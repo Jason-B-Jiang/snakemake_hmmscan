@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050055.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050055
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O94261|CENPH_SCHPO  [L=220]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      7e-15   55.5   0.6    1.2e-14   54.7   0.6    1.3  1  CENP-H    Centromere protein H (CENP-H)
+
+
+Domain annotation for each model (and alignments):
+>> CENP-H  Centromere protein H (CENP-H)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.7   0.6   6.3e-19   1.2e-14       3     114 ..     103     207 ..     101     208 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.7 bits;  conditional E-value: 6.3e-19
+                 CENP-H   3 plierrdelssallklsselrelqeeltevekeslrlkrknrelaaellelakekesrreeedeklkaelekleaelkksrqrwrvvk 90 
+                            + ++++++ls++ lk++s+++ ++ee+++ ++++ ++   +++ +++ lel + kes+        ++++e + a+lk +r+rw++v+
+  sp|O94261|CENPH_SCHPO 103 SPLNETEHLSEENLKIESSITFTSEEIEKEKENIKSVLLPSVQSISSSLELYASKESDY-------RSSIEGVLADLKLARARWEIVR 183
+                            67899*******************************************99998888776.......99******************** PP
+
+                 CENP-H  91 gvasaiivgSgVdWaeDekLrelV 114
+                            +v++ ++++Sg+ ++e++kL  ++
+  sp|O94261|CENPH_SCHPO 184 NVTQILLLESGISFLENKKLAYIM 207
+                            *********************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (220 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       659  (0.0343605); expected 383.6 (0.02)
+Passed bias filter:                      371  (0.0193441); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.18s 00:00:00.50 Elapsed: 00:00:00.55
+# Mc/sec: 1287.75
+//
+[ok]

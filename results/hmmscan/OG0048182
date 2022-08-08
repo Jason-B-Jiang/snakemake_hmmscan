@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048182.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048182
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ36596.1  [L=884]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.7e-27   96.5   8.2    6.3e-27   94.7   5.2    2.5  1  Chromate_transp  Chromate transporter
+    2.7e-26   92.4   0.4    2.7e-25   89.1   0.0    2.6  1  p450             Cytochrome P450
+
+
+Domain annotation for each model (and alignments):
+>> Chromate_transp  Chromate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.7   5.2   6.6e-31   6.3e-27       2     154 ..     411     576 ..     410     611 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 94.7 bits;  conditional E-value: 6.6e-31
+  Chromate_transp   2 elflfflkiGllifGGgyavipllreevverkgwlteeefldglalaqalPGPiavnvatfvGylil.gllGallatlgfflPsfllilllapl 94 
+                      +lfl f+kiG+ ++GG++++i ll++e+v++++w+++++f +++ + q+lPG  ++ ++  +Gyl + g  Ga++a ++ +lP++ll++ ++++
+       EPZ36596.1 411 RLFLMFFKIGFNSYGGPVGQIGLLYNEFVKERKWMDKNQFNRVFNFLQLLPGCESIGLCGHLGYL-RrGKKGAIIAAFAYILPGLLLMATFSYI 503
+                      59****************************999********************************.66**********************9999 PP
+
+  Chromate_transp  95 leklrk....npvvkaaleglnaavvgliaaaalslakk..........lallaflllllfklspilvillaal 154
+                        ++++    +++v++a++ + a+v++l +++ l+++            +++   ++ ++f+ +p ++i+ +++
+       EPZ36596.1 504 SLNHQNflmdSKFVQNAFDSIMAVVAALALKSSLEIFFDnieiirtskfISI-QSMVKAIFETNPAYIIISGGI 576
+                      9987666666899*********************553334555666775333.333444455666656655554 PP
+
+>> p450  Cytochrome P450
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.1   0.0   2.9e-29   2.7e-25     267     441 ..     161     350 ..     143     362 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 89.1 bits;  conditional E-value: 2.9e-29
+                 HHHHHHHHHHHHHHHHHHHHHHHHHSHHHHHHHHHHHHHHTCTTS........T-HHHHCTT-HHHHHHHHHHHHHSCSSSTEEEEECSSCEEETT... CS
+        p450 267 vlellfaGvdTtsstlswaLyeLaknPevqeklreEidevlgdkr........eptyddlqklpyldavikEtLRlhpvvplllpRevtkdvvirg... 354
+                 +  ++fa+v +   ++s  L++L ++Pe + ++ +E++  ++  +        ++  + + + p+l+a + Et R+ ++     pR v +d++++    
+  EPZ36596.1 161 IHSVIFAAVSNQYVVISLYLINLSQYPEWKVRIENELEPLINYLKdndlanveQLPLNIIDNTPLLEAGVLETIRMNSFGF--APRLVEEDTEVPLfeh 257
+                 567899********************************9996555577999999999999999**************9998..99*******9974444 PP
+
+                 ..EEE-TT-EEEEEHHHHHT-TTTSSSTTS--GGGGBTTTS....CTCSSCTS--TTEEGGGS-TTHHHHHHHHHHHHHHHHHHEEEEESTTT CS
+        p450 355 ..ylipkGtevivnlyalhrdpevfpnPeeFdpeRFldekg....nskrksfaflPFGaGpRnCiGerlArmelklflatlLqnFevelqpet 441
+                     ipk+++v+++++ +h d ++ +nP+ F+peRF ++ +    ++ ++   fl+FGaG++ C G+++A++++kl+ ++++++ +++++ e 
+  EPZ36596.1 258 enIIIPKNSIVFTSHGLVHLDGNINKNPDIFNPERFIENGKcigsITASHRGTFLGFGAGRHPCTGMKFAMLQIKLVTSLIMSHWDIKFDAEC 350
+                 5599*********************************9988****7789************************************99986554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (884 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       896  (0.0467178); expected 383.6 (0.02)
+Passed bias filter:                      440  (0.0229418); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.19s 00:00:00.71 Elapsed: 00:00:00.74
+# Mc/sec: 3848.30
+//
+[ok]

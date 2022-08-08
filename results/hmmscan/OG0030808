@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030808.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030808
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54EQ3|Q54EQ3_DICDI  [L=608]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    9.4e-09   35.2   0.0    1.7e-06   27.9   0.0    3.7  1  Mito_carr  Mitochondrial carrier protein
+    7.6e-08   31.7   0.0       0.13   11.2   0.0    2.9  0  Otopetrin  Otopetrin
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9   0.0   1.8e-10   1.7e-06       9      78 ..     235     304 ..     229     311 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 1.8e-10
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHH.HHHHHHHHHHHGGGTTHHHHHHHHHHH CS
+               Mito_carr   9 llaGglagavatlvttPldvvKtrlqtqkksskkkksaaildv.lkkiykeeGlrglyrGllpnllrvapa 78 
+                             l++G+l+ ++   +t Pldv+ trl ++k   ++++++++ d+ ++ + k+eG+r+ly G+ + +l++  +
+  tr|Q54EQ3|Q54EQ3_DICDI 235 LISGSLS-LLKYALTLPLDVIMTRLIVHKFYRSNNTRNNLNDCtFSGVCKNEGIRALYTGWEVIVLKSLLE 304
+                             6666665.566789********************99999999857999*************9999987766 PP
+
+>> Otopetrin  Otopetrin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (608 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      6818  (0.355493); expected 383.6 (0.02)
+Passed bias filter:                     1496  (0.078002); expected 383.6 (0.02)
+Passed Vit filter:                      1112  (0.0579801); expected 19.2 (0.001)
+Passed Fwd filter:                       356  (0.018562); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 2.85u 0.42s 00:00:03.27 Elapsed: 00:00:02.06
+# Mc/sec: 957.70
+//
+[ok]

@@ -1,0 +1,189 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0010514.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0010514
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P13231|HATA_DICDI  [L=118]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-17   62.1   6.5    2.4e-06   27.8   0.6    2.5  3  Fascin    Fascin domain
+    3.1e-06   27.1   0.1    0.00022   21.1   0.1    2.5  0  FRG1      FRG1-like domain
+    3.5e-05   23.9   0.1    0.00027   21.0   0.0    1.9  1  FGF       Fibroblast growth factor
+
+
+Domain annotation for each model (and alignments):
+>> Fascin  Fascin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.8   0.6   3.7e-10   2.4e-06      39      95 ..       5      60 ..       2      63 .. 0.87
+   2 !   25.0   0.0   2.9e-09   1.9e-05      38      78 ..      43      83 ..      42      86 .. 0.93
+   3 !   23.2   0.1     1e-08   6.5e-05      23      70 ..      70     114 ..      61     117 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 27.8 bits;  conditional E-value: 3.7e-10
+                          EEEETTSEEEEE-TTSBEEEEES.S--GGGEEEEEEETCEEEEEETTSCEEEECTTTE CS
+                Fascin 39 aLrshngkYlsldkdGrvvaeae.tkeedtlFelefrgrwallresngryLgigkegl 95
+                          a++sh g +ls  ++G+ v + + +++++t F +e +g++++l+   g+yL+ig+ ++
+  sp|P13231|HATA_DICDI  5 AFKSHHGHFLS--AEGEAVKTHHgHHDHHTHFHVENHGGKVALKTHCGKYLSIGDHKQ 60
+                          49*********..8887777666589**************************887766 PP
+
+  == domain 2  score: 25.0 bits;  conditional E-value: 2.9e-09
+                          EEEEETTSEEEEE-TTSBEEEEESS--GGGEEEEEEETCEE CS
+                Fascin 38 vaLrshngkYlsldkdGrvvaeaetkeedtlFelefrgrwa 78
+                          vaL++h+gkYls+ ++ +v+++ + +  ++lF le +g+++
+  sp|P13231|HATA_DICDI 43 VALKTHCGKYLSIGDHKQVYLSHHLHGDHSLFHLEHHGGKV 83
+                          78***********************************8876 PP
+
+  == domain 3  score: 23.2 bits;  conditional E-value: 1e-08
+                           GGGEEEEEEETTEEEEEEEETTSEEEEE-TTSBEEEEESS--GGGEEE CS
+                Fascin  23 kkqlftLefdeesyavaLrshngkYlsldkdGrvvaeaetkeedtlFe 70 
+                           +++lf+Le   ++ +  ++ h + Y+s+d++G v  +++ +++dt Fe
+  sp|P13231|HATA_DICDI  70 DHSLFHLEHHGGKVS--IKGHHHHYISADHHGHVSTKEH-HDHDTTFE 114
+                           679*****6666666..*****************99999.7****997 PP
+
+>> FRG1  FRG1-like domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> FGF  Fibroblast growth factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.0   0.0   4.2e-08   0.00027      10      79 ..      50     117 ..      43     118 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 21.0 bits;  conditional E-value: 4.2e-08
+                   FGF  10 gfhlqilpdgkvdgtkeesskysileiesvavgvvrikgvesgrYlamnkkGklyasesfnseckfleel 79 
+                           g++l i  +++v  +++ +  +s++++e    g v+ikg + ++Y++ +++G++ ++e+  +++ f e +
+  sp|P13231|HATA_DICDI  50 GKYLSIGDHKQVYLSHHLHGDHSLFHLEHH-GGKVSIKGHH-HHYISADHHGHVSTKEHHDHDTTFEEII 117
+                           899************************976.69******75.68**********************9975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (118 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       530  (0.0276344); expected 383.6 (0.02)
+Passed bias filter:                      226  (0.0117837); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.52
+# Mc/sec: 734.93
+//
+Query:       sp|Q54DM0|HATC_DICDI  [L=119]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-11   42.5   5.1    0.00022   21.5   0.1    3.0  0  Fascin    Fascin domain
+    7.5e-09   35.7   0.1     0.0024   18.0   0.1    2.0  0  FGF       Fibroblast growth factor
+
+
+Domain annotation for each model (and alignments):
+>> Fascin  Fascin domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> FGF  Fibroblast growth factor
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (119 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       810  (0.0422337); expected 383.6 (0.02)
+Passed bias filter:                      300  (0.0156421); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.30u 0.17s 00:00:00.47 Elapsed: 00:00:00.46
+# Mc/sec: 827.97
+//
+Query:       sp|P42526|HATB_DICDI  [L=118]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-17   64.3  10.9    1.4e-08   35.0   1.0    2.6  2  Fascin    Fascin domain
+    0.00011   22.3   0.2    0.00047   20.2   0.0    1.8  0  FGF       Fibroblast growth factor
+
+
+Domain annotation for each model (and alignments):
+>> Fascin  Fascin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.7     2e-10   1.9e-06      39      95 ..       5      60 ..       2      65 .. 0.84
+   2 !   35.0   1.0   1.5e-12   1.4e-08      20      96 ..      27     101 ..      20     105 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 2e-10
+                          EEEETTSEEEEE-TTSBEEEEESS--GGGEEEEEEETCEEEEEETTSCEEEECTTTE CS
+                Fascin 39 aLrshngkYlsldkdGrvvaeaetkeedtlFelefrgrwallresngryLgigkegl 95
+                          a+++hng Yls+++d  v     +++++t F +e +g +++lr   g+y++ig+ ++
+  sp|P42526|HATB_DICDI  5 AFKAHNGHYLSAEHD-HVKTHHGHHDHHTHFHIENHGSKVALRTHCGKYVSIGDHKQ 60
+                          499********6655.666666668**************************887766 PP
+
+  == domain 2  score: 35.0 bits;  conditional E-value: 1.5e-12
+                           SSSGGGEEEEEEETTEEEEEEEETTSEEEEE-TTSBEEEEESS--GGGEEEEEEETCEEEEEETTSCEEEECTTTEE CS
+                Fascin  20 sekkkqlftLefdeesyavaLrshngkYlsldkdGrvvaeaetkeedtlFelefrgrwallresngryLgigkeglL 96 
+                             ++++ f++e  + +++vaLr+h+gkY+s+ ++ +v+++ + +  ++lF le + +++  +  + +y+++++ g +
+  sp|P42526|HATB_DICDI  27 HHDHHTHFHIE--NHGSKVALRTHCGKYVSIGDHKQVYLSHHLHGDHSLFHLEHHHGKVSIKGHHHHYISVDGHGHV 101
+                           55566666666..7777778***********************************88888889*******8777766 PP
+
+>> FGF  Fibroblast growth factor
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (118 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       593  (0.0309192); expected 383.6 (0.02)
+Passed bias filter:                      196  (0.0102195); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.30u 0.16s 00:00:00.46 Elapsed: 00:00:00.45
+# Mc/sec: 837.58
+//
+Query:       tr|Q54T50|Q54T50_DICDI  [L=107]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (107 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1023  (0.0533396); expected 383.6 (0.02)
+Passed bias filter:                      293  (0.0152771); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.29u 0.16s 00:00:00.44 Elapsed: 00:00:00.63
+# Mc/sec: 550.52
+//
+[ok]

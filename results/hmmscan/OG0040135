@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040135.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040135
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P26441|CNTF_HUMAN  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     1e-109  364.4   0.1   1.2e-109  364.3   0.1    1.0  1  CNTF      Ciliary neurotrophic factor
+
+
+Domain annotation for each model (and alignments):
+>> CNTF  Ciliary neurotrophic factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  364.3   0.1    6e-114  1.2e-109       1     193 [.       1     193 [.       1     194 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 364.3 bits;  conditional E-value: 6e-114
+                           XXXXXXXXXX-THHHHHHHHHHHHHHHHHHHHHHHHHHHHHCT---------------------TT--HHHHHHHHHHHHHHHHHHHHH CS
+                  CNTF   1 mafaesssltlrrrdlcsrsiwlarkirsdltalldsyvekqGldknvsldavdGvPtasverWselteaerlqenlaayrafrvllar 89 
+                           maf+e+s+lt++rrdlcsrsiwlarkirsdltal++syv++qGl+kn++ld++dG+P+as+++Wselteaerlqenl+ayr+f+vllar
+  sp|P26441|CNTF_HUMAN   1 MAFTEHSPLTPHRRDLCSRSIWLARKIRSDLTALTESYVKHQGLNKNINLDSADGMPVASTDQWSELTEAERLQENLQAYRTFHVLLAR 89 
+                           9**************************************************************************************** PP
+
+                           HHHHHHCTTSTT-HHHHHHHHHHHHHHHHHHHHHHHHHHHTT------STT----.-----HHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  CNTF  90 lledqreqlteteadlhqaiaavllqvaafayqleellallerkiPaeeadgpPl.pgelslfekklwGlkvlqelsqWtvrsvrdlrl 177
+                           lledq++++t+te d+hqai+++llqvaafayq+eel++lle+kiP++eadg+P+ +g+++lfekklwGlkvlqelsqWtvrs++dlr+
+  sp|P26441|CNTF_HUMAN  90 LLEDQQVHFTPTEGDFHQAIHTLLLQVAAFAYQIEELMILLEYKIPRNEADGMPInVGDGGLFEKKLWGLKVLQELSQWTVRSIHDLRF 178
+                           *******************************************************9********************************* PP
+
+                           HHTT.TTS--XXXXXX CS
+                  CNTF 178 iskkgqagvpargsre 193
+                           is++ q+g+pargs++
+  sp|P26441|CNTF_HUMAN 179 ISSH-QTGIPARGSHY 193
+                           ***9.********997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       557  (0.0290422); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.44u 0.26s 00:00:00.70 Elapsed: 00:00:00.63
+# Mc/sec: 1029.53
+//
+[ok]

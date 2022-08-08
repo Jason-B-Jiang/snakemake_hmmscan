@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031169.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031169
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54LX4|Q54LX4_DICDI  [L=410]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.6e-19   68.7   0.0    2.2e-12   47.0   0.0    2.8  1  FAD_binding_3  FAD binding domain
+    1.3e-05   25.4   0.0    2.8e-05   24.4   0.0    1.6  1  NAD_binding_8  NAD(P)-binding Rossmann-like domain
+
+
+Domain annotation for each model (and alignments):
+>> FAD_binding_3  FAD binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.0   0.0   2.3e-16   2.2e-12     152     343 ..     159     383 ..     146     389 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 47.0 bits;  conditional E-value: 2.3e-16
+                             EEEEEEEEE---TT-HHHHHHTGGEEEEEEEEEEEEEEEEEEC-SCCCTTC....CEEEEECCTTEE.................... CS
+           FAD_binding_3 152 tvrakYlvGaDGgrStvrktlgiefegeetvyeagvldvlfdadlsdivep....lvlilsaesrgv.................... 214
+                              ++ + +vGaDG++S+v k+l  + ++++t  ++ + ++ ++  + d+       +    ++ ++g+                    
+  tr|Q54LX4|Q54LX4_DICDI 159 SFEGDLIVGADGVNSKVKKQLIPQCKTFDTNGRFIFGKTEISNHILDTLPAsameWITTVNDAEKGLmifmepikfkpinsklpdgc 245
+                             477899****************9******999998888888886555555567553333455555556****************988 PP
+
+                             .EEEECCETEEEEEE..EEECC--GGGSCCCHHHHHHHHHHHHHHTTSSCEEEEEEEEEEEEEEEEE.........SSSEET.TEEE CS
+           FAD_binding_3 215 .mviPlentlerfyv..qvearaekeersekfteeevkarlreivgektldveieevsawtvaqrva.........ekyrkg.rvfl 288
+                               + P       +++  q++a ++ +e+  k++++++k++   +v   + + +   +s++++++ +           +++ + +v l
+  tr|Q54LX4|Q54LX4_DICDI 246 sKFSPETTDYIYWVLlgQAQAFEKSDEELFKMSPSQLKEHQLHLVRNWDPRFQEIIKSSFDNKSCYLgvtssfpdiYQWETNeNVTL 332
+                             66666655333333322456667777777788999999999999998888887777888888887642222222224666667**** PP
+
+                             -GGGTEEE-STTSHHHHHHHHHHHHHHHHHHHHHTTSS-GGGGHHHHHHHHHHHH CS
+           FAD_binding_3 289 aGDAaHihpPtgGqGlNtaiqDavnLawkLaavlkGeAkeelLdtYeeerravaq 343
+                             +GDA+H ++PtgG G Nta+qD   L  ++   lk    +e L++Ye++ r  a+
+  tr|Q54LX4|Q54LX4_DICDI 333 IGDAVHNMSPTGGAGANTALQDCPILLDAIKNGLK----KEDLNQYEAKMRLNAK 383
+                             **********************9988888777777....7778888888776665 PP
+
+>> NAD_binding_8  NAD(P)-binding Rossmann-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   0.0   2.9e-09   2.8e-05       1      42 [.       7      43 ..       7      71 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 2.9e-09
+                            EE--SHHHHHHHHHHHCCTEEEEEE-SSSSSSGGG-EECETT CS
+           NAD_binding_8  1 IVGaGlaGlaaAalLakagfdvlllekrdrlGGraasyevpg 42
+                            I+G+G++Gla+A+ L+++g++  ++e+ + +      ++++g
+  tr|Q54LX4|Q54LX4_DICDI  7 IIGGGISGLALAQGLSNNGIKFKIFERDEAI-----NFRDQG 43
+                            9**************************9877.....444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (410 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       550  (0.0286772); expected 383.6 (0.02)
+Passed bias filter:                      509  (0.0265394); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.24s 00:00:00.65 Elapsed: 00:00:00.66
+# Mc/sec: 2001.07
+//
+[ok]

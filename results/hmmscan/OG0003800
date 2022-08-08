@@ -1,0 +1,639 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003800.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003800
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54P01|Q54P01_DICDI  [L=760]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-33  113.2  24.8    5.6e-19   68.2  10.8    4.4  2  WSC       WSC domain
+    8.2e-16   59.1   0.7    8.2e-16   59.1   0.7    2.8  1  CAP       Cysteine-rich secretory protein family
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.2  10.8   5.9e-23   5.6e-19       1      82 []     513     592 ..     513     592 .. 0.96
+   2 !   59.7   6.0   2.7e-20   2.5e-16       1      82 []     603     690 ..     603     690 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 68.2 bits;  conditional E-value: 5.9e-23
+                     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+                             ++GC++d    + +l  ++  + +mt++kC ++C+++gykyag+e g++CyCgns+ +  + +++s+Cn +C Gd+s++CGg
+  tr|Q54P01|Q54P01_DICDI 513 FIGCFNDD--ISHDLPFNEIFSINMTNDKCESYCTKNGYKYAGTELGTQCYCGNSYGHYGKANKESDCNFKCGGDKSKICGG 592
+                             68****99..67888888999************************************************************8 PP
+
+  == domain 2  score: 59.7 bits;  conditional E-value: 2.7e-20
+                     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassss........CnasCsGdssqt 79 
+                             y GC++   e+   +++ sas+ +mtve C+a+C +++y +agl+ g+ C+Cgn++  ++++++++         Cn++C+G++++ 
+  tr|Q54P01|Q54P01_DICDI 603 YNGCFS--YEPLIGHFSISASSPNMTVEGCRAHCFKNHYLIAGLSRGNLCFCGNDTIFEQQPQTENPsrpksiptCNSKCTGSNKEN 687
+                             89****..56999******************************************99999999887789999*************** PP
+
+                     WSC  80 CGg 82 
+                             CGg
+  tr|Q54P01|Q54P01_DICDI 688 CGG 690
+                             **8 PP
+
+>> CAP  Cysteine-rich secretory protein family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1   0.7   8.6e-20   8.2e-16      12     126 .]      71     197 ..      40     197 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 8.6e-20
+                             T----EE-HHHHHHHHHHHHHHHHH.T---S-GGG--HHHHHHTT-T......EEEEEES--CCCHHHHH.HTSHH........... CS
+                     CAP  12 glppLkwdatLekaAqdhardcaashsdsssspeggdllkyaenagk......eniaaaseaaedavdsW.ysepgtynkgketegs 91 
+                              +ppL +  +L ++A +hard++ ++++s+ s++g+d  +++ ++++      eniaa+++++  + ++W ++  ++  +++ t+ +
+  tr|Q54P01|Q54P01_DICDI  71 SVPPLFFEFSLGASALAHARDMSINNCFSHESCDGTDSDTRINEYYHcdeihgENIAAGYDSPLITNNQWvCDDGTNDPYSNPTCAQ 157
+                             5789999999*****************************************988****************88888888888888888 PP
+
+                             .......HHHHHT-SS--EEEEEEEEBTTS-E..EEEEEE CS
+                     CAP  92 .....ighftnllwpkstkvGcavatcgngsftfivvcny 126
+                                   gh++n+++p+++ +G++++  ++ +++ ++++++
+  tr|Q54P01|Q54P01_DICDI 158 dasgsDGHRANIMNPNFKAIGVGFSFTSDSTYHSYWTQDF 197
+                             **************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (760 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2133  (0.111215); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                       113  (0.00589186); expected 19.2 (0.001)
+Passed Fwd filter:                        30  (0.00156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.73u 0.25s 00:00:00.98 Elapsed: 00:00:00.93
+# Mc/sec: 2661.74
+//
+Query:       sp|Q9VXV9|WCSD_DROME  [L=317]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    9.5e-07   29.5   0.0    4.1e-06   27.4   0.0    1.9  1  Sulfotransfer_3  Sulfotransferase family
+    1.3e-06   28.2   0.2    3.6e-05   23.5   0.2    2.1  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> Sulfotransfer_3  Sulfotransferase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.0   4.3e-10   4.1e-06     124     215 ..     169     265 ..     141     267 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.3e-10
+       Sulfotransfer_3 124 PdAkfihlvRdpvdtvissyvslfgktresys...ekdlr.eie.daleewsrayerllaaraelpperllevrYedlvadpegtlrri 207
+                           P  k i lvRdp  ++i+ + + +g +    s   +k+ + ++  ++++   +++e ++  +a+   + +  v Y+dlv + e +lr+i
+  sp|Q9VXV9|WCSD_DROME 169 PFSKAILLVRDPEKAIIAEFNRQSGGHIGFASpdrYKRTKgKYWqQFVSNKLKGWEMMNLSWARNFTGSIKVVFYDDLVHHTERELRSI 257
+                           66789*******9999999999988887777744444444556555566667799*********99*********************** PP
+
+       Sulfotransfer_3 208 yeflglpw 215
+                           ++fl+ p 
+  sp|Q9VXV9|WCSD_DROME 258 LDFLQFPI 265
+                           ****9886 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.2   3.7e-09   3.6e-05      85     204 ..     155     271 ..     104     300 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 3.7e-09
+                           .EEEE...GGGS.CHHHHTT-EEEEEE--HHHHHHHHHHHHHHBT.......TSTTT-S.-HHHHHHHHHTTHSTTC-HHHHHHHHHHH CS
+       Sulfotransfer_1  85 rllktHlplkllpkslldsnlKiiylvRnpkdvavSryhfsrslk.......klkepet.pfeeffdlflegrvvcgsyfdhvkewlkl 165
+                            l+kt    +   ++ + +  K i+lvR+p  +++  ++ +   +               +  +++++f ++++   + ++ +   + +
+  sp|Q9VXV9|WCSD_DROME 155 LLVKT----HEWGSKAWAPFSKAILLVRDPEKAIIAEFNRQSGGHigfaspdR----YKrTKGKYWQQFVSNKL---KGWEMMNLSWAR 232
+                           56666....344456799999**************999999888887754331....22233367777774444...447888888999 PP
+
+                           TTTTTEEEEEHHHHHHHHHHHHHHHHHHTT--..HHHHH CS
+       Sulfotransfer_1 166 rkkgnvlflrYEdlkkdpakeikkiaeFlGiplteeele 204
+                              g + +++Y+dl   +++e++ i++Fl  p++e+ ++
+  sp|Q9VXV9|WCSD_DROME 233 NFTGSIKVVFYDDLVHHTERELRSILDFLQFPINEQLMR 271
+                           99******************************7765543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (317 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       443  (0.0230982); expected 383.6 (0.02)
+Passed bias filter:                      409  (0.0213254); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.62
+# Mc/sec: 1661.51
+//
+Query:       sp|A2BGL3|WSCD2_DANRE  [L=572]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.7e-34  117.3  16.5      2e-19   69.6   7.7    2.3  2  WSC              WSC domain
+    3.4e-05   23.5   0.1    8.5e-05   22.3   0.1    1.5  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.6   7.7   2.1e-23     2e-19       1      82 []     137     216 ..     137     216 .. 0.96
+   2 !   53.0   1.5   3.3e-18   3.1e-14       1      81 [.     240     320 ..     240     321 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 69.6 bits;  conditional E-value: 2.1e-23
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+                            y+GCy d +++r+l g s  ++++mtv +C++ C+++gy yagle g eCyCg++++a +v++  s+Cn++C+G++s++CGg
+  sp|A2BGL3|WSCD2_DANRE 137 YIGCYVDDTQKRALRGVSFLDYKKMTVFRCQDNCAERGYLYAGLEFGAECYCGHKIQAPNVSE--SECNMECKGEKSNLCGG 216
+                            99******9999999999****************************************99888..45**************8 PP
+
+  == domain 2  score: 53.0 bits;  conditional E-value: 3.3e-18
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassss..CnasCsGdssqtCG 81 
+                            + GC++   ++ +l  p+sa  ++m+v+kC+++C++k++++a+l  g++C+Cg  +p  + ++++++  C  +C+G++ + CG
+  sp|A2BGL3|WSCD2_DANRE 240 FKGCFRRP-DNVTLALPASAVMQNMSVDKCVDMCTEKEFSLAALA-GDKCHCGFPTPLFNLHEHEDEelCLHRCTGEDFESCG 320
+                            68****77.9***********************************.66*****9999998777766678*************9 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   0.1   8.9e-09   8.5e-05     131     203 ..     450     514 ..     405     519 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 8.9e-09
+                            STTT-S-HHHHHHHHHTTHSTTC.-HHHHHHHHHHHTTTTTEEEEEHHHHHHHHHHHHHHHHHHTT--..HHHH CS
+        Sulfotransfer_1 131 lkepetpfeeffdlflegrvvcg.syfdhvkewlklrkkgnvlflrYEdlkkdpakeikkiaeFlGiplteeel 203
+                             ++++  + ef+        +++ ++++h + wlk+ kk  v ++++Edlk+d+ +++k +  FlG++++e++l
+  sp|A2BGL3|WSCD2_DANRE 450 AHWRGKEWPEFV-------KNYApWWASHTLDWLKYGKK--VQVVHFEDLKRDLFSQLKGMVIFLGLEVSEDRL 514
+                            444444444443.......34440466899999998766..5569***********************999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (572 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       396  (0.0206476); expected 383.6 (0.02)
+Passed bias filter:                      309  (0.0161114); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.18s 00:00:00.60 Elapsed: 00:00:00.60
+# Mc/sec: 3068.61
+//
+Query:       tr|E7F082|E7F082_DANRE  [L=568]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.7e-21   74.9  19.3    3.1e-14   53.0   9.1    2.4  1  WSC              WSC domain
+    1.2e-07   31.6   0.2    1.2e-06   28.3   0.1    2.5  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.0   9.1   3.2e-18   3.1e-14       1      82 []     134     213 ..     134     213 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 53.0 bits;  conditional E-value: 3.2e-18
+                     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+                             y+GC+ +++++++l g+  ++  +mt   C+++C+++g++yagle gseC+Cgn + a +++   ++Cn  C G++ + CGg
+  tr|E7F082|E7F082_DANRE 134 YIGCFINNETEHALGGTILYDFRKMTSTLCQDTCSESGFRYAGLEFGSECHCGNRVCARRARG--EDCNLDCRGEKGSPCGG 213
+                             99****998788888888***************************************988777..45**************8 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.1   1.3e-10   1.2e-06     108     204 ..     418     511 ..     411     555 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 1.3e-10
+                             EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHHHHHHHHHH CS
+         Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfeeffdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkkdpakeikk 189
+                             i+l+Rnp   +   ++ + + +       ++++  ++ef+      +   +++++h++ wl+ +  +++l++++Edl+kd   +ik 
+  tr|E7F082|E7F082_DANRE 418 ILLMRNPYRSLMAEFNRKCAGHlgyasHAHWRSKEWSEFV------DSYSSWWVSHALAWLRFA--HRLLVVHFEDLQKDVVPQIKT 496
+                             6777777777776666665555444433333333344443......333466777777777665..68******************* PP
+
+                             HHHHTT--..HHHHH CS
+         Sulfotransfer_1 190 iaeFlGiplteeele 204
+                             +  Fl+i++ ee+l 
+  tr|E7F082|E7F082_DANRE 497 VTAFLNISIPEERLL 511
+                             ********9999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (568 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       578  (0.0301371); expected 383.6 (0.02)
+Passed bias filter:                      394  (0.0205433); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.62
+# Mc/sec: 2944.41
+//
+Query:       tr|A0A2R8PY57|A0A2R8PY57_DANRE  [L=319]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      2e-06   27.6   0.0    1.4e-05   24.8   0.0    1.9  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.8   0.0   7.3e-10   1.4e-05     108     203 ..     169     261 ..     166     265 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 24.8 bits;  conditional E-value: 7.3e-10
+                                     EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHH CS
+                 Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfeeffdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkk 181
+                                     i+l+Rnp   +   ++ + + +     ++++++  + ef+          +++++hv+ wl+    +++l+++YEdl++
+  tr|A0A2R8PY57|A0A2R8PY57_DANRE 169 ILLIRNPYRSLMAEFNRKCAGHlgyasDQHWKGKEWPEFV------GSYASWWASHVLDWLRFG--KQLLVVHYEDLQQ 239
+                                     7777888777777777776666544444444444444553......2333566789****9875..79*********** PP
+
+                                     HHHHHHHHHHHHTT--..HHHH CS
+                 Sulfotransfer_1 182 dpakeikkiaeFlGiplteeel 203
+                                      +  +++ i +Fl+ +++ee l
+  tr|A0A2R8PY57|A0A2R8PY57_DANRE 240 SLVPTLRSITSFLNTSVSEEHL 261
+                                     ****************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (319 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       522  (0.0272173); expected 383.6 (0.02)
+Passed bias filter:                      469  (0.0244538); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.18s 00:00:00.60 Elapsed: 00:00:00.56
+# Mc/sec: 1837.40
+//
+Query:       tr|E7F3K8|E7F3K8_DANRE  [L=375]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      4e-10   39.8   8.6    1.8e-08   34.5   0.5    2.5  1  WSC              WSC domain
+    3.1e-06   27.0   0.0    1.8e-05   24.5   0.0    1.9  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.5   0.5   1.9e-12   1.8e-08       1      77 [.      44     120 ..      44     124 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 34.5 bits;  conditional E-value: 1.9e-12
+                     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassss..CnasCsGdss 77 
+                             y GC+++  +++++ + ++a + ++t + C+++C ++++++a +++  +C+Cg  +p+ + +++ ++  C ++ s+ s+
+  tr|E7F3K8|E7F3K8_DANRE  44 YRGCFKKP-DNTTAASLAHAVQPNLTSQWCIQTCMDQEFPLALVRKP-DCFCGFATPRFTLHEPLKEelCAVENSSLST 120
+                             89****88.8899999999**************************88.**********998887776678877666655 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.0   1.9e-09   1.8e-05     108     203 ..     225     317 ..     222     323 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 1.9e-09
+                             EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHHHHHHHHHH CS
+         Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfeeffdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkkdpakeikk 189
+                             i+l+Rnp   +   ++ + + +     ++++++  + ef+          +++++hv+ wl+    +++l+++YEdl++ +  +++ 
+  tr|E7F3K8|E7F3K8_DANRE 225 ILLIRNPYRSLMAEFNRKCAGHlgyasDQHWKGKEWPEFV------GSYASWWASHVLDWLRFG--KQLLVVHYEDLQQSLVPTLRS 303
+                             6777788777777777776666544444444444444553......2333566789****9875..79******************* PP
+
+                             HHHHTT--..HHHH CS
+         Sulfotransfer_1 190 iaeFlGiplteeel 203
+                             i +Fl+ +++ee l
+  tr|E7F3K8|E7F3K8_DANRE 304 ITSFLNTSVSEEHL 317
+                             ********999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (375 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       482  (0.0251317); expected 383.6 (0.02)
+Passed bias filter:                      385  (0.020074); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.56
+# Mc/sec: 2156.85
+//
+Query:       tr|F1Q6N1|F1Q6N1_DANRE  [L=234]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (234 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       537  (0.0279994); expected 383.6 (0.02)
+Passed bias filter:                      457  (0.0238281); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.51
+# Mc/sec: 1484.41
+//
+Query:       tr|E9QD45|E9QD45_DANRE  [L=552]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.8e-19   69.8  15.8    2.9e-14   53.1   9.1    2.4  1  WSC              WSC domain
+    1.1e-07   31.7   0.2    1.2e-06   28.3   0.1    2.5  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.1   9.1   3.1e-18   2.9e-14       1      82 []     134     213 ..     134     213 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 53.1 bits;  conditional E-value: 3.1e-18
+                     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+                             y+GC+ +++++++l g+  ++  +mt   C+++C+++g++yagle gseC+Cgn + a +++   ++Cn  C G++ + CGg
+  tr|E9QD45|E9QD45_DANRE 134 YIGCFINNETEHALGGTILYDFRKMTSTLCQDTCSESGFRYAGLEFGSECHCGNRVCARRARG--EDCNLDCRGEKGSPCGG 213
+                             99****998788888888***************************************988777..45**************8 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.1   1.2e-10   1.2e-06     108     204 ..     402     495 ..     384     508 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 1.2e-10
+                             EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHHHHHHHHHH CS
+         Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfeeffdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkkdpakeikk 189
+                             i+l+Rnp   +   ++ + + +       ++++  ++ef+      +   +++++h++ wl+ +  +++l++++Edl+kd   +ik 
+  tr|E9QD45|E9QD45_DANRE 402 ILLMRNPYRSLMAEFNRKCAGHlgyasHAHWRSKEWSEFV------DSYSSWWVSHALAWLRFA--HRLLVVHFEDLQKDVVPQIKT 480
+                             6777777777776666665555444433333333344443......333466777777777665..68******************* PP
+
+                             HHHHTT--..HHHHH CS
+         Sulfotransfer_1 190 iaeFlGiplteeele 204
+                             +  Fl+i++ ee+l 
+  tr|E9QD45|E9QD45_DANRE 481 VTAFLNISIPEERLL 495
+                             ********9999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (552 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       546  (0.0284686); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.71
+# Mc/sec: 2514.23
+//
+Query:       tr|A0A2R8PXJ4|A0A2R8PXJ4_DANRE  [L=548]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    7.3e-17   61.4  16.2    2.9e-14   53.1   9.1    2.5  1  WSC              WSC domain
+    1.1e-07   31.8   0.2    1.2e-06   28.3   0.1    2.5  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.1   9.1     3e-18   2.9e-14       1      82 []     122     201 ..     122     201 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 53.1 bits;  conditional E-value: 3e-18
+                             WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqt 79 
+                                     y+GC+ +++++++l g+  ++  +mt   C+++C+++g++yagle gseC+Cgn + a +++   ++Cn  C G++ + 
+  tr|A0A2R8PXJ4|A0A2R8PXJ4_DANRE 122 YIGCFINNETEHALGGTILYDFRKMTSTLCQDTCSESGFRYAGLEFGSECHCGNRVCARRARG--EDCNLDCRGEKGSP 198
+                                     99****998788888888***************************************988777..45************ PP
+
+                             WSC  80 CGg 82 
+                                     CGg
+  tr|A0A2R8PXJ4|A0A2R8PXJ4_DANRE 199 CGG 201
+                                     **8 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.1   1.2e-10   1.2e-06     108     204 ..     398     491 ..     380     504 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 1.2e-10
+                                     EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHH CS
+                 Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfeeffdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkk 181
+                                     i+l+Rnp   +   ++ + + +       ++++  ++ef+      +   +++++h++ wl+ +  +++l++++Edl+k
+  tr|A0A2R8PXJ4|A0A2R8PXJ4_DANRE 398 ILLMRNPYRSLMAEFNRKCAGHlgyasHAHWRSKEWSEFV------DSYSSWWVSHALAWLRFA--HRLLVVHFEDLQK 468
+                                     6777777777776666665555444433333333344443......333466777777777665..68*********** PP
+
+                                     HHHHHHHHHHHHTT--..HHHHH CS
+                 Sulfotransfer_1 182 dpakeikkiaeFlGiplteeele 204
+                                     d   +ik +  Fl+i++ ee+l 
+  tr|A0A2R8PXJ4|A0A2R8PXJ4_DANRE 469 DVVPQIKTVTAFLNISIPEERLL 491
+                                     ****************9999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (548 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       575  (0.0299807); expected 383.6 (0.02)
+Passed bias filter:                      376  (0.0196048); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.60
+# Mc/sec: 2951.19
+//
+Query:       sp|Q658N2|WSCD1_HUMAN  [L=575]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.5e-30  105.3  13.3    3.5e-18   65.7   6.6    2.3  2  WSC              WSC domain
+    1.3e-06   28.2   0.1    2.6e-06   27.2   0.1    1.4  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.7   6.6   3.6e-22   3.5e-18       1      81 [.     145     223 ..     145     224 .. 0.94
+   2 !   43.7   0.5   2.6e-15   2.5e-11       1      76 [.     248     319 ..     248     330 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 65.7 bits;  conditional E-value: 3.6e-22
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCG 81 
+                            y+GC++d  ++r+l g+  ++  +mtv++C+++C++++y yagle g eCyCgn lpa +v    ++Cn +C+G++ ++CG
+  sp|Q658N2|WSCD1_HUMAN 145 YIGCFSDDGHERTLKGAVFYDLRKMTVSHCQDACAERSYVYAGLEAGAECYCGNRLPAVSVGL--EECNHECKGEKGSVCG 223
+                            99******8888888888****************************************88888..45*************9 PP
+
+  == domain 2  score: 43.7 bits;  conditional E-value: 2.6e-15
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGds 76 
+                            y GC++   e+ ++ +pss  ++++tv++C+ fC++k++++a+l+ + eCyC+  +p+ + +++ +s  ++C  d+
+  sp|Q658N2|WSCD1_HUMAN 248 YRGCFRLP-ENITHAFPSSLIQANVTVGTCSGFCSQKEFPLAILRGW-ECYCAYPTPRFNLRDAMDS--SVCGQDP 319
+                            89****77.9***********************************88.************9999985..6665555 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.2   0.1   2.7e-10   2.6e-06     108     203 ..     425     517 ..     416     525 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 27.2 bits;  conditional E-value: 2.7e-10
+                            EEEE--HHHHHHHHHHHHHHBT.....TSTTT-S-HH.....HHHHHHHTTHSTTC-HHHHHHHHHHHTTTTTEEEEEHHHHHHHHHH CS
+        Sulfotransfer_1 108 iylvRnpkdvavSryhfsrslk.....klkepetpfe.....effdlflegrvvcgsyfdhvkewlklrkkgnvlflrYEdlkkdpak 185
+                            i+l+Rnp   +v  ++ + + +     +       ++     +f       +   +++++hv+ wlk+   +++l+++YE+l++ +  
+  sp|Q658N2|WSCD1_HUMAN 425 ILLIRNPYRSLVAEFNRKCAGHlgyaaD-----RNWKskewpDF------VNSYASWWSSHVLDWLKYG--KRLLVVHYEELRRSLVP 499
+                            8899999999999999887777443331.....33333212244......3666788899999999875..79*************** PP
+
+                            HHHHHHHHTT--..HHHH CS
+        Sulfotransfer_1 186 eikkiaeFlGiplteeel 203
+                            +++++  Fl+++++ee+l
+  sp|Q658N2|WSCD1_HUMAN 500 TLREMVAFLNVSVSEERL 517
+                            **************9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (575 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       428  (0.0223161); expected 383.6 (0.02)
+Passed bias filter:                      350  (0.0182491); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.62
+# Mc/sec: 3006.11
+//
+Query:       sp|Q2TBF2|WSCD2_HUMAN  [L=565]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-31  106.7  16.8    1.3e-17   63.8   7.6    2.3  2  WSC       WSC domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.8   7.6   6.7e-22   1.3e-17       1      82 []     130     209 ..     130     209 .. 0.96
+   2 !   48.4   1.8   4.5e-17   8.6e-13       1      81 [.     233     313 ..     233     314 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 63.8 bits;  conditional E-value: 6.7e-22
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+                            y+GCy d ++sr+l g s  ++++mt+ +C++ C+++gy y gle g eCyCg++++a++v++  ++C+++C+G+  ++CGg
+  sp|Q2TBF2|WSCD2_HUMAN 130 YIGCYLDDTQSRALRGVSFFDYKKMTIFRCQDNCAERGYLYGGLEFGAECYCGHKIQATNVSE--AECDMECKGERGSVCGG 209
+                            99******9999999999****************************************99988..45**************8 PP
+
+  == domain 2  score: 48.4 bits;  conditional E-value: 4.5e-17
+                    WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassss..CnasCsGdssqtCG 81 
+                            + GC++   ++ +l  p +a   +m+v+kC++fC++k+y++a+l   + C+Cg  + +   ++ +++  C ++Cs ++ + CG
+  sp|Q2TBF2|WSCD2_HUMAN 233 FRGCFRRP-DNLSLALPVTAAMLNMSVDKCVDFCTEKEYPLAALAG-TACHCGFPTTRFPLHDREDEqlCAQKCSAEEFESCG 313
+                            68****77.999*********************************5.5********9999887777778*************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (565 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       399  (0.020804); expected 383.6 (0.02)
+Passed bias filter:                      290  (0.0151207); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.45u 0.17s 00:00:00.62 Elapsed: 00:00:00.63
+# Mc/sec: 2903.66
+//
+Query:       P54867  [L=378]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-13   49.5  15.4    3.8e-13   49.5  15.4    2.9  1  WSC       WSC domain
+
+
+Domain annotation for each model (and alignments):
+>> WSC  WSC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5  15.4     2e-17   3.8e-13       1      82 []      24     100 ..      24     100 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 2e-17
+     WSC   1 ylGCytdssesrrllgpssasdstmtvekCaafCkakgykyagledgseCyCgnslpaaavkassssCnasCsGdssqtCGg 82 
+             y+ C+++     ++ +++ +s+++++ ++C + C+akg +y++l + seCyCg++ p++++++sss Cn+ C G+ss++CGg
+  P54867  24 YVNCFSSL----PSDFSKADSYNWQSSSHCNSECSAKGASYFALYNHSECYCGDTNPSGSESTSSS-CNTYCFGYSSEMCGG 100
+             77888855....88899999**************************************99999776.**************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (378 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2550  (0.132958); expected 383.6 (0.02)
+Passed bias filter:                      775  (0.0404088); expected 383.6 (0.02)
+Passed Vit filter:                       236  (0.0123051); expected 19.2 (0.001)
+Passed Fwd filter:                        63  (0.00328484); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.86u 0.26s 00:00:01.12 Elapsed: 00:00:00.89
+# Mc/sec: 1381.79
+//
+[ok]

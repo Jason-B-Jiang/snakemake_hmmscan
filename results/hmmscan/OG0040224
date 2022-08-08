@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040224.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040224
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P43489|TNR4_HUMAN  [L=277]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.2e-19   68.8  34.1    1.3e-07   32.1   7.5    3.4  3  TNFR_c6   TNFR/NGFR cysteine-rich region
+
+
+Domain annotation for each model (and alignments):
+>> TNFR_c6  TNFR/NGFR cysteine-rich region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4  10.8   1.4e-08   0.00028       1      39 []      31      64 ..      31      64 .. 0.86
+   2 !   32.1   7.5   6.5e-12   1.3e-07       1      39 []      67     107 ..      67     107 .. 0.94
+   3 !   26.6   0.9   3.3e-10   6.4e-06       1      39 []     128     166 ..     128     166 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.4e-08
+                          --TTCEEBTTCTCSEEEEE-B-TTEEECC--BTTC--EE CS
+               TNFR_c6  1 CpegtYtdsenseeClpCtrCppgqvvlrpCtptsdtvC 39
+                          C  +tY   +n++ C  C++C+pg ++++ C+++++tvC
+  sp|P43489|TNR4_HUMAN 31 CVGDTY--PSNDR-C--CHECRPGNGMVSRCSRSQNTVC 64
+                          566788..44556.*..********************** PP
+
+  == domain 2  score: 32.1 bits;  conditional E-value: 6.5e-12
+                           --TTCEEBTTCTCSEEEEE-B..-TTEEECC--BTTC--EE CS
+               TNFR_c6   1 CpegtYtdsenseeClpCtrC..ppgqvvlrpCtptsdtvC 39 
+                           C +g+Y d  +s+ C+pCt C  ++g + ++ Ct+t+dtvC
+  sp|P43489|TNR4_HUMAN  67 CGPGFYNDVVSSKPCKPCTWCnlRSGSERKQLCTATQDTVC 107
+                           9*****99999889*******7777**************** PP
+
+  == domain 3  score: 26.6 bits;  conditional E-value: 3.3e-10
+                           --TTCEEBTTCTCSEEEEE-B.-TTEEECC--BTTC--EE CS
+               TNFR_c6   1 CpegtYtdsenseeClpCtrC.ppgqvvlrpCtptsdtvC 39 
+                           Cp+g+++   n+  C+p+t C  +g+ +l+p + +sd+ C
+  sp|P43489|TNR4_HUMAN 128 CPPGHFSPGDNQA-CKPWTNCtLAGKHTLQPASNSSDAIC 166
+                           ************9.*******555**************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (277 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       596  (0.0310757); expected 383.6 (0.02)
+Passed bias filter:                      245  (0.0127744); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.23s 00:00:00.62 Elapsed: 00:00:00.58
+# Mc/sec: 1542.59
+//
+[ok]

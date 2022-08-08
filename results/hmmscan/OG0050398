@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050398.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050398
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O94580|WSS2_SCHPO  [L=282]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.3e-41  142.1   2.9      1e-40  140.0   2.9    1.7  1  WLM        WLM domain
+    8.8e-12   44.7   0.1    1.9e-11   43.6   0.1    1.6  1  ubiquitin  Ubiquitin family
+
+
+Domain annotation for each model (and alignments):
+>> WLM  WLM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.0   2.9   1.1e-44     1e-40      11     153 ..     118     260 ..     107     277 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 140.0 bits;  conditional E-value: 1.1e-44
+                   WLM  11 kkpekeaalellkriakd..vqpimkkhkfkVglLtElaPkean.....lLGlNvnkGekieLrLRtdkddkeflpyesimgtllHELa 92 
+                           + p+k++al++l+r+++d  ++ im +h+++V lL+E++P+e++     +LGlN n+G++ieLrLRtd + ++f++y++++ tl+HEL+
+  sp|O94580|WSS2_SCHPO 118 DYPHKDRALRYLERLRDDtgIKKIMDSHRWTVPLLSEMDPAEHTrhdskTLGLNHNQGAHIELRLRTDRY-DGFRDYKTVKSTLIHELT 205
+                           589****************************************99*************************.9***************** PP
+
+                   WLM  93 HnvygpHdakFyallkeLekeveelkakGlkegflkeGkrlggkevrnksaeeeeekeale 153
+                           Hnv+g+Hd++F++l  +L+ke+++++         k+G  ++++++++ ++ +++e+++++
+  sp|O94580|WSS2_SCHPO 206 HNVHGEHDSSFWELFRQLTKEADAADL------LGKPGSYVSDRASYTPQQDNDDEDQKNH 260
+                           ***************************......6899999999999988664444433333 PP
+
+>> ubiquitin  Ubiquitin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   0.1     2e-15   1.9e-11       6      71 ..       7      70 ..       2      71 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 2e-15
+                          TTSEEEEEEEETTSBHHHHHHHHHHHHTSSGGGEEEEETTEEE-TTSBHGGHTTSTTEEEEEEESS CS
+             ubiquitin  6 ldgkkitleveesdtveelKekiaekegipaeqqrLiysGkvLeddqtleeygiqdgstihlvlrq 71
+                          ++g+ i l+++e+dtv+  Kek+ ++ ++ ++ ++L+y+G + +dd++l+++ ++++s+i++++rq
+  sp|O94580|WSS2_SCHPO  7 CRGNVIALSFNENDTVLDAKEKLGQEIDVSPSLIKLLYKGNL-SDDSHLQDV-VKNESKIMCLIRQ 70
+                          6899************************************98.*********.***********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (282 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       547  (0.0285208); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.63
+# Mc/sec: 1453.51
+//
+[ok]

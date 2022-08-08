@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035812.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035812
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QEQ9|A0A2R8QEQ9_DANRE  [L=76]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    8.1e-10   38.9  12.6      1e-09   38.6  12.6    1.1  1  FXa_inhibition  Coagulation Factor Xa inhibitory site
+    1.1e-07   32.0  13.3    1.4e-07   31.7  13.3    1.1  1  EGF_CA          Calcium-binding EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> FXa_inhibition  Coagulation Factor Xa inhibitory site
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6  12.6   1.1e-13     1e-09       1      36 []       8      43 ..       8      43 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 1.1e-13
+                                    TTTCCCCSSSEEEEETTCEEEE--TTEEE-TTSS-E CS
+                  FXa_inhibition  1 CsdnNggCshlClptpggytCsCpegykLaeDgrtC 36
+                                    C++ NggC+ lC +t g++ C Cp g +L eDg+tC
+  tr|A0A2R8QEQ9|A0A2R8QEQ9_DANRE  8 CEETNGGCEALCCNTIGSFYCKCPAGQELKEDGKTC 43
+                                    ************************************ PP
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7  13.3   1.4e-11   1.4e-07       1      42 []       4      43 ..       4      43 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 1.4e-11
+                          EGF_CA  1 DvdECasgthnCpentvCvNteGsfeCvCeegyennedetkC 42
+                                    Dv+EC++ +  C+  + C Nt+Gsf+C+C++g e +ed+++C
+  tr|A0A2R8QEQ9|A0A2R8QEQ9_DANRE  4 DVNECEETNGGCE--ALCCNTIGSFYCKCPAGQELKEDGKTC 43
+                                    9***********9..9*************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (76 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       519  (0.0270608); expected 383.6 (0.02)
+Passed bias filter:                      203  (0.0105845); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.26u 0.21s 00:00:00.47 Elapsed: 00:00:00.61
+# Mc/sec: 400.98
+//
+[ok]

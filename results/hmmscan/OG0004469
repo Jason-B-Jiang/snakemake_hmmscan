@@ -1,0 +1,923 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004469.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004469
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|G5EBU3|MMPC_CAEEL  [L=579]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.4e-51  173.0   0.1    6.4e-51  172.4   0.1    1.2  1  Peptidase_M10  Matrixin
+    2.6e-06   27.6   0.1      8e-06   26.1   0.1    1.8  1  PG_binding_1   Putative peptidoglycan binding domain
+    0.00018   21.5   0.7        1.7    8.7   0.0    4.1  0  Hemopexin      Hemopexin
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  172.4   0.1     1e-54   6.4e-51       1     159 []     139     304 ..     139     304 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 172.4 bits;  conditional E-value: 1e-54
+                           STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEE.SSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtev.kkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdi 88 
+                           kw+k++lty+i + ++dl++++vr+ai++A++ ws+vtpl+F+ev   +++diki+Fg ++h+d++pfdg+ggvlaha +p    +g  
+  sp|G5EBU3|MMPC_CAEEL 139 KWSKTRLTYSIESWSSDLSKDDVRRAISEAYGLWSKVTPLEFSEVpAGSTSDIKIRFGVRNHNDPWPFDGEGGVLAHATMP---ESGMF 224
+                           7********************************************99999*******************************...99*** PP
+
+                           EEETTS-EESSTS.....SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT..S-TTT-....SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxx....xxxxxxxxxxxxxxx RF
+         Peptidase_M10  89 hfdddeqWtlgeekv...eqgvslflVaaHEiGHalGLeHssdkdalmyplyk..veekkv....rlskdDvkgiqelYg 159
+                           hfddde+Wt++++ +   +++++l+ Va+HE GH+lGLeHs+d++a+m+p+y+  ++++ +    +l++dD+++iq++Yg
+  sp|G5EBU3|MMPC_CAEEL 225 HFDDDENWTYKDARKihnNEATDLLAVAIHEGGHTLGLEHSRDENAIMAPFYQktTDSSGNyvypNLKSDDISAIQAIYG 304
+                           **********665433448999*******************************6433333367889*************8 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.1   1.3e-09     8e-06       7      57 .]      56     117 ..      54     117 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 1.3e-09
+                           HHHHHHHHTT--......-SSSS........SB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1   7 elqryLsrlGyl......sgpad........gtfgpateeaVrefQqffgLpvtGildpaTlaaL 57 
+                            ++ yL+ +Gy       +                +  ++a+r+fQ+f g+  tG ld+aT a++
+  sp|G5EBU3|MMPC_CAEEL  56 KARSYLQTFGYVppsnslQ---SrngmagdiQSAEQVFKSAIRKFQEFAGIAKTGFLDAATKAKM 117
+                           5778999999985544330...0334444467788889*************************99 PP
+
+>> Hemopexin  Hemopexin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (579 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       570  (0.02972); expected 383.6 (0.02)
+Passed bias filter:                      420  (0.021899); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.90
+# Mc/sec: 2074.50
+//
+Query:       tr|A0A0R4ICX2|A0A0R4ICX2_DANRE  [L=466]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.6e-63  212.7   0.1    5.7e-63  211.6   0.0    1.7  1  Peptidase_M10  Matrixin
+    1.3e-33  114.8   0.0      1e-12   47.8   0.0    3.5  3  Hemopexin      Hemopexin
+    2.6e-10   40.4   0.1    5.9e-10   39.3   0.1    1.7  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.6   0.0     9e-67   5.7e-63       1     159 []     108     261 ..     108     261 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 211.6 bits;  conditional E-value: 9e-67
+                                     STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBS CS
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+                   Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafa 79 
+                                     kw+++n+t+riln+tpdl+++ v++a+r+A++vws+vtpl+Ft++ +g+adi+i+Fg++ehgd +pfdg++g+laha++
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 108 KWKTTNVTFRILNYTPDLKKKVVDRAVRKALNVWSKVTPLRFTKTFDGTADIMISFGTKEHGDFNPFDGPEGLLAHAYP 186
+                                     7****************************************************************************** PP
+
+                                     SSSTTTTEEEEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCTS-TTT-SS-HHHHHHHHHHH CS
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+                   Peptidase_M10  80 pgeglggdihfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplykveekkvrlskdDvkgiqelY 158
+                                     pg g+ggd+hfd+de+Wt +     ++++lflVaaHE+GHalG++Hssd+++lmyp+y+  +k + ls+dD++giq+lY
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 187 PGIGIGGDTHFDEDETWTED----YHAFNLFLVAAHEFGHALGMAHSSDPGSLMYPVYS-YAKGFPLSEDDIEGIQSLY 260
+                                     ******************88....589*******************************9.889**************** PP
+
+                                     T CS
+                                     x RF
+                   Peptidase_M10 159 g 159
+                                     g
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 261 G 261
+                                     8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.7   0.0   2.8e-14   1.8e-10       1      44 [.     285     326 ..     285     327 .. 0.93
+   2 !   22.5   0.0   1.4e-08   8.8e-05       1      44 [.     329     371 ..     329     372 .. 0.98
+   3 !   47.8   0.0   1.6e-16     1e-12       1      44 [.     377     423 ..     377     424 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 40.7 bits;  conditional E-value: 2.8e-14
+                                     -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+                       Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                                     +DA++elr g+t +Fk+++YWr++p+ ++  + +li++ wp +p
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 285 FDAITELR-GETIIFKDRFYWRLHPN-MPEPEQTLIKNTWPEIP 326
+                                     8*******.*****************.66666***********9 PP
+
+  == domain 2  score: 22.5 bits;  conditional E-value: 1.4e-08
+                                     -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+                       Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                                     +DAA+e +    + +F+G k W ++++++ +gypk i+++  glp
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 329 VDAAYENPErDVVIIFSGIKMWALNGYTLVDGYPKYIHKL--GLP 371
+                                     8***************************************..999 PP
+
+  == domain 3  score: 47.8 bits;  conditional E-value: 1.6e-16
+                                     -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTST CS
+                       Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpglp 44 
+                                     iDAA+ +rd gkt +F +  YW fd+q  +++ gyp++i d++pg++
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 377 IDAAVNIRDtGKTLLFVDEEYWSFDEQtgTMDTGYPRSIEDDFPGIG 423
+                                     8********************************************97 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.1   9.3e-14   5.9e-10       6      57 .]      34      87 ..      29      87 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 9.3e-14
+                                    HHHHHHHHHTT--.-S.SSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+                    PG_binding_1  6 kelqryLsrlGyl.sg.padgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                                     ++++yL+r++    g    g+  + +++++re+Q+ff+L+vtG+ld +T++ +
+  tr|A0A0R4ICX2|A0A0R4ICX2_DANRE 34 VLAKKYLQRFYGMpAGlQRPGKSSDLMQQKIREMQEFFKLEVTGKLDDKTVELM 87
+                                    5799******4444334444*******************************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (466 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       390  (0.0203347); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.63
+# Mc/sec: 2374.26
+//
+Query:       sp|P08254|MMP3_HUMAN  [L=477]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.4e-64  216.8   0.0    2.5e-64  216.0   0.0    1.4  1  Peptidase_M10  Matrixin
+    4.8e-52  173.8   5.8    9.5e-16   57.6   0.3    4.5  4  Hemopexin      Hemopexin
+    2.4e-10   40.5   0.1    6.5e-10   39.2   0.0    1.8  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.0   0.0   3.9e-68   2.5e-64       1     159 []     108     264 ..     108     264 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 216.0 bits;  conditional E-value: 3.9e-68
+                           STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdih 89 
+                           kw+k++ltyri+n+tpdl++++v++a+++A+kvw+evtpl+F+++++geadi+i+F+ +ehgd ypfdg+g+vlaha+apg+g++gd+h
+  sp|P08254|MMP3_HUMAN 108 KWRKTHLTYRIVNYTPDLPKDAVDSAVEKALKVWEEVTPLTFSRLYEGEADIMISFAVREHGDFYPFDGPGNVLAHAYAPGPGINGDAH 196
+                           7**************************************************************************************** PP
+
+                           EETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT..S-TTT-SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10  90 fdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk..veekkvrlskdDvkgiqelYg 159
+                           fdddeqWt +    ++g++lflVaaHEiGH+lGL Hs +++almyply+  ++ +++rls+dD++giq+lYg
+  sp|P08254|MMP3_HUMAN 197 FDDDEQWTKD----TTGTNLFLVAAHEIGHSLGLFHSANTEALMYPLYHslTDLTRFRLSQDDINGIQSLYG 264
+                           ********98....58*********************************9888899***************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.4   0.0   1.7e-14   1.1e-10       1      45 []     296     338 ..     296     338 .. 0.98
+   2 !   41.2   0.0   1.9e-14   1.2e-10       1      45 []     340     383 ..     340     383 .. 0.98
+   3 !   57.6   0.3   1.5e-19   9.5e-16       1      43 [.     388     433 ..     388     435 .. 0.97
+   4 !   33.7   0.1   4.2e-12   2.7e-08       1      45 []     437     477 .]     437     477 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 41.4 bits;  conditional E-value: 1.7e-14
+                           -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                           +DA+ +lr g++ +Fk++++Wr + +k+ep+  +lis++wp+lp+
+  sp|P08254|MMP3_HUMAN 296 FDAVSTLR-GEILIFKDRHFWRKSLRKLEPE-LHLISSFWPSLPS 338
+                           8*******.**********************.9**********97 PP
+
+  == domain 2  score: 41.2 bits;  conditional E-value: 1.9e-14
+                           -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                           +DAA+e  +   +++FkG+++W  ++++v+ gyp++i+++  g+p+
+  sp|P08254|MMP3_HUMAN 340 VDAAYEVTSkDLVFIFKGNQFWAIRGNEVRAGYPRGIHTL--GFPP 383
+                           8***************************************..**95 PP
+
+  == domain 3  score: 57.6 bits;  conditional E-value: 1.5e-19
+                           -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTS CS
+             Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpgl 43 
+                           iDAA +++  +ktYFF  dkYWrfd++  ++epg+pk+i++++pg+
+  sp|P08254|MMP3_HUMAN 388 IDAAISDKEkNKTYFFVEDKYWRFDEKrnSMEPGFPKQIAEDFPGI 433
+                           8********************************************9 PP
+
+  == domain 4  score: 33.7 bits;  conditional E-value: 4.2e-12
+                           -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                           iDA+fe+  g++YFF G+ + +fdp+   +++ +l s+s  +l+c
+  sp|P08254|MMP3_HUMAN 437 IDAVFEEF-GFFYFFTGSSQLEFDPN-AKKVTHTLKSNS--WLNC 477
+                           8*******.*****************.9***********..9998 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.2   0.0     1e-13   6.5e-10       6      57 .]      32      87 ..      27      87 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 39.2 bits;  conditional E-value: 1e-13
+                          HHHHHHHHHTT---SSSS......SB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1  6 kelqryLsrlGylsgpad......gtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           ++q+yL++++ l  ++d       +    +++++re+Q+f gL+vtG+ld +Tl+++
+  sp|P08254|MMP3_HUMAN 32 NLVQKYLENYYDL--KKDvkqfvrRKDSGPVVKKIREMQKFLGLEVTGKLDSDTLEVM 87
+                          679*******544..444446777777777899***********************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (477 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       502  (0.0261745); expected 383.6 (0.02)
+Passed bias filter:                      459  (0.0239324); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.16s 00:00:00.56 Elapsed: 00:00:00.77
+# Mc/sec: 2013.23
+//
+Query:       sp|P22894|MMP8_HUMAN  [L=467]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.9e-62  209.9   0.0    3.2e-62  209.2   0.0    1.4  1  Peptidase_M10  Matrixin
+    1.2e-47  159.7  18.3    4.3e-15   55.5   1.7    4.4  3  Hemopexin      Hemopexin
+    1.8e-12   47.4   0.2    3.8e-12   46.3   0.2    1.6  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.2   0.0     5e-66   3.2e-62       1     159 []     107     262 ..     107     262 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 209.2 bits;  conditional E-value: 5e-66
+                           STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdih 89 
+                           kwe++nltyri n+tp+l+e+ev++ai++Af+ ws ++pl Ft++++geadi+i F++++hgd+ pfdg++g+lahaf pg+g+ggd+h
+  sp|P22894|MMP8_HUMAN 107 KWERTNLTYRIRNYTPQLSEAEVERAIKDAFELWSVASPLIFTRISQGEADINIAFYQRDHGDNSPFDGPNGILAHAFQPGQGIGGDAH 195
+                           7**************************************************************************************** PP
+
+                           EETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10  90 fdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                           fd++e+Wt  +    ++++lflVaaHE+GH+lGL+Hssd++almyp y   e+++++l +dD++giq++Yg
+  sp|P22894|MMP8_HUMAN 196 FDAEETWTNTS----ANYNLFLVAAHEFGHSLGLAHSSDPGALMYPNYAfRETSNYSLPQDDIDGIQAIYG 262
+                           ********885....78********************************999999***************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.3   0.2   2.4e-16   1.5e-12       1      44 [.     285     326 ..     285     327 .. 0.98
+   2 !   46.6   0.6     4e-16   2.6e-12       1      45 []     329     372 ..     329     372 .. 0.98
+   3 !   55.5   1.7   6.8e-19   4.3e-15       1      45 []     377     422 ..     377     422 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 47.3 bits;  conditional E-value: 2.4e-16
+                           -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                           +DA+++lr g++ FFk++++Wr +pq +++++ + is +wp+lp
+  sp|P22894|MMP8_HUMAN 285 FDAITTLR-GEILFFKDRYFWRRHPQ-LQRVEMNFISLFWPSLP 326
+                           8*******.*****************.****************9 PP
+
+  == domain 2  score: 46.6 bits;  conditional E-value: 4e-16
+                           -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                           i+AA+e+ d   +++FkG++YW ++++ + +gypk is++  g+p+
+  sp|P22894|MMP8_HUMAN 329 IQAAYEDFDrDLIFLFKGNQYWALSGYDILQGYPKDISNY--GFPS 372
+                           79**************************************..**96 PP
+
+  == domain 3  score: 55.5 bits;  conditional E-value: 6.8e-19
+                           -SEEEEETTTEEEEEETTEEEEEETT..EETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpq..kvepgypklisdswpglpc 45 
+                           iDAA+ +r  ktYFF +d++Wr+d+q   +epgypk+is  +pg+++
+  sp|P22894|MMP8_HUMAN 377 IDAAVFYR-SKTYFFVNDQFWRYDNQrqFMEPGYPKSISGAFPGIES 422
+                           8*******.***********************************986 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.3   0.2   5.9e-16   3.8e-12       3      57 .]      28      86 ..      26      86 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 46.3 bits;  conditional E-value: 5.9e-16
+                          HHHHHHHHHHHHTT--....-SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1  3 edvkelqryLsrlGyl....sgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           ++k++q+yL++++ l     ++  ++  +  +e+++e+Q+ffgL+vtG+++++Tl+++
+  sp|P22894|MMP8_HUMAN 28 KNTKTVQDYLEKFYQLpsnqYQSTRKNGTNVIVEKLKEMQRFFGLNVTGKPNEETLDMM 86
+                          57899********888765444777999999**************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (467 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       579  (0.0301893); expected 383.6 (0.02)
+Passed bias filter:                      521  (0.0271651); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.70
+# Mc/sec: 2166.46
+//
+Query:       sp|O60882|MMP20_HUMAN  [L=483]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.5e-63  213.5   0.0    2.3e-63  212.9   0.0    1.3  1  Peptidase_M10  Matrixin
+    1.4e-35  121.1   5.2    4.3e-09   36.3   0.1    4.5  3  Hemopexin      Hemopexin
+    1.3e-08   35.0   0.9    3.1e-08   33.8   0.1    2.0  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  212.9   0.0   3.6e-67   2.3e-63       1     159 []     116     271 ..     116     271 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 212.9 bits;  conditional E-value: 3.6e-67
+                            STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdi 88 
+                            kw+k++ltyri+++tp++++ ev+ka++ A+++ws+++pl+F ++++geadi+i+F++g+hgd+ypfdg+ g+lahafapgeglggd+
+  sp|O60882|MMP20_HUMAN 116 KWKKNTLTYRISKYTPSMSSVEVDKAVEMALQAWSSAVPLSFVRINSGEADIMISFENGDHGDSYPFDGPRGTLAHAFAPGEGLGGDT 203
+                            7*************************************************************************************** PP
+
+                            EEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  89 hfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                            hfd++e+Wt+g    ++g++lf+VaaHE+GHalGL+Hs+d++almyp+yk  +   ++l kdDvkgiq+lYg
+  sp|O60882|MMP20_HUMAN 204 HFDNAEKWTMG----TNGFNLFTVAAHEFGHALGLAHSTDPSALMYPTYKyKNPYGFHLPKDDVKGIQALYG 271
+                            ***********....58*********************************98999****************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.6   0.8   1.1e-12   7.1e-09       1      44 [.     347     388 ..     347     389 .. 0.97
+   2 !   36.3   0.1   6.8e-13   4.3e-09       1      43 [.     394     439 ..     394     441 .. 0.95
+   3 !   30.1   0.0   5.8e-11   3.7e-07       1      45 []     443     483 .]     443     483 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 35.6 bits;  conditional E-value: 1.1e-12
+                            -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            +DAA+e    g +YFFkG +YW  ++  +++g p+ i d+  g+p
+  sp|O60882|MMP20_HUMAN 347 VDAAYEVAErGTAYFFKGPHYWITRGF-QMQGPPRTIYDF--GFP 388
+                            8**************************.89999*******..**9 PP
+
+  == domain 2  score: 36.3 bits;  conditional E-value: 6.8e-13
+                            -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTS CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpgl 43 
+                            iDAA+ lr  +kt FF Gd Y+ +d++  k+e+ ypk+  + + g 
+  sp|O60882|MMP20_HUMAN 394 IDAAVYLREpQKTLFFVGDEYYSYDERkrKMEKDYPKNTEEEFSGV 439
+                            8*************************************99998876 PP
+
+  == domain 3  score: 30.1 bits;  conditional E-value: 5.8e-11
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            iDAA+el+ g++YFF+G k +++d++  e++     s+s  +++c
+  sp|O60882|MMP20_HUMAN 443 IDAAVELN-GYIYFFSGPKTYKYDTE-KEDVVSVVKSSS--WIGC 483
+                            8*******.*****************.788888888888..8887 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.8   0.1   4.9e-12   3.1e-08       3      56 ..      36      94 ..      35      95 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 33.8 bits;  conditional E-value: 4.9e-12
+                           HHHHHHHHHHHHTT--.....-SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHH CS
+           PG_binding_1  3 edvkelqryLsrlGyl.....sgpadgtfgpateeaVrefQqffgLpvtGildpaTlaa 56
+                           ++ +++q+yL +++ +      g+   +  +++ ++++e Q ffgL+vtG+ld+ T+++
+  sp|O60882|MMP20_HUMAN 36 NNYRLAQAYLDKYYTNkeghqIGEMVARGSNSMIRKIKELQAFFGLQVTGKLDQTTMNV 94
+                           67899********88885553336669*****************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (483 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       422  (0.0220032); expected 383.6 (0.02)
+Passed bias filter:                      381  (0.0198655); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.67
+# Mc/sec: 2328.02
+//
+Query:       sp|P03956|MMP1_HUMAN  [L=469]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.8e-62  210.0   0.3    4.5e-62  208.7   0.1    1.8  1  Peptidase_M10  Matrixin
+    4.2e-47  157.9  17.5    2.8e-17   62.5   0.1    4.4  4  Hemopexin      Hemopexin
+    2.1e-13   50.4   0.7    4.2e-13   49.4   0.3    1.8  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.7   0.1   7.1e-66   4.5e-62       1     159 []     108     261 ..     108     261 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 208.7 bits;  conditional E-value: 7.1e-66
+                           STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdih 89 
+                           +we+++ltyri n+tpdl++++v++ai++Af+ ws+vtpl+Ft+v++g+adi+i+F rg+h d+ pfdg+gg lahaf pg+g+ggd+h
+  sp|P03956|MMP1_HUMAN 108 RWEQTHLTYRIENYTPDLPRADVDHAIEKAFQLWSNVTPLTFTKVSEGQADIMISFVRGDHRDNSPFDGPGGNLAHAFQPGPGIGGDAH 196
+                           6**************************************************************************************** PP
+
+                           EETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCTS-TTT-SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10  90 fdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplykveekkvrlskdDvkgiqelYg 159
+                           fd+de+Wt +     ++++l  VaaHE+GH+lGL+Hs+d +almyp y+  + +v+l +dD++giq++Yg
+  sp|P03956|MMP1_HUMAN 197 FDEDERWTNN----FREYNLHRVAAHELGHSLGLSHSTDIGALMYPSYT-FSGDVQLAQDDIDGIQAIYG 261
+                           ********87....689*******************************9.889****************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.2   0.4     7e-13   4.5e-09       1      44 [.     284     325 ..     284     326 .. 0.97
+   2 !   42.4   0.9     8e-15   5.1e-11       2      44 ..     329     371 ..     328     372 .. 0.96
+   3 !   62.5   0.1   4.5e-21   2.8e-17       1      45 []     377     424 ..     377     424 .. 0.99
+   4 !   27.2   0.7   4.5e-10   2.9e-06       1      43 [.     426     464 ..     426     466 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 36.2 bits;  conditional E-value: 7e-13
+                           -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                           +DA++++r g+++FFk+++Y r +p   + ++ + is +wp lp
+  sp|P03956|MMP1_HUMAN 284 FDAITTIR-GEVMFFKDRFYMRTNPF-YPEVELNFISVFWPQLP 325
+                           8*******.*****************.999*************9 PP
+
+  == domain 2  score: 42.4 bits;  conditional E-value: 8e-15
+                           SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+             Hemopexin   2 DAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            AA+e  d  ++ FFkG+kYW +++q+v  gypk i +s+ g+p
+  sp|P03956|MMP1_HUMAN 329 EAAYEFADrDEVRFFKGNKYWAVQGQNVLHGYPKDIYSSF-GFP 371
+                           599999999******************************9.*99 PP
+
+  == domain 3  score: 62.5 bits;  conditional E-value: 4.5e-21
+                           -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTSTS CS
+             Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpglpc 45 
+                           iDAA+++++ gktYFF  +kYWr+d++  +++pgypk i++++pg+++
+  sp|P03956|MMP1_HUMAN 377 IDAALSEENtGKTYFFVANKYWRYDEYkrSMDPGYPKMIAHDFPGIGH 424
+                           8*********************************************97 PP
+
+  == domain 4  score: 27.2 bits;  conditional E-value: 4.5e-10
+                           -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTS CS
+             Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpgl 43 
+                           +DA+f+   g++YFF G+++++fdp+   +    + ++s  ++
+  sp|P03956|MMP1_HUMAN 426 VDAVFMKD-GFFYFFHGTRQYKFDPK-TKRILTLQKANS--WF 464
+                           8*******.****************9.455555555555..55 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.4   0.3   6.5e-17   4.2e-13       2      57 .]      28      87 ..      27      87 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 49.4 bits;  conditional E-value: 6.5e-17
+                          SHHHHHHHHHHHHTT--....-SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1  2 gedvkelqryLsrlGyl....sgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                          ++dv ++q+yL++++ l    ++ +  ++   ++e+++++Q+ffgL+vtG++d++Tl+++
+  sp|P03956|MMP1_HUMAN 28 EQDVDLVQKYLEKYYNLkndgRQVEKRRNSGPVVEKLKQMQEFFGLKVTGKPDAETLKVM 87
+                          68************777865444666999999**************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (469 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       442  (0.023046); expected 383.6 (0.02)
+Passed bias filter:                      402  (0.0209604); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.64
+# Mc/sec: 2365.29
+//
+Query:       sp|Q9H306|MMP27_HUMAN  [L=513]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.7e-57  193.8   0.0    2.7e-57  193.1   0.0    1.3  1  Peptidase_M10  Matrixin
+    9.1e-31  105.7  11.1    1.5e-09   37.8   0.0    4.4  3  Hemopexin      Hemopexin
+    5.5e-14   52.2   0.0    1.1e-13   51.2   0.0    1.6  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  193.1   0.0   4.3e-61   2.7e-57       2     159 .]     106     261 ..     105     261 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 193.1 bits;  conditional E-value: 4.3e-61
+                            TSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSS.SSS-BSSSSESEEEBSSSSTTTTEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   2 wekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgd.gypfdgkggvlahafapgeglggdi 88 
+                            w+k nltyri n+tpd+ +++v++ai++ ++vws+vtplkFt+++kg adi+i F ++ hg  ++ fdg+ gvl+haf+pg+glggd+
+  sp|Q9H306|MMP27_HUMAN 106 WRKYNLTYRIINYTPDMARAAVDEAIQEGLEVWSKVTPLKFTKISKGIADIMIAFRTRVHGRcPRYFDGPLGVLGHAFPPGPGLGGDT 193
+                            9999*********************************************************9999*********************** PP
+
+                            EEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  89 hfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                            hfd+de+Wt +     +g++lflVaaHE+GHalGL+Hs+d++alm+p y  ++ +k+ ls+dD++giq++Yg
+  sp|Q9H306|MMP27_HUMAN 194 HFDEDENWTKD----GAGFNLFLVAAHEFGHALGLSHSNDQTALMFPNYVsLDPRKYPLSQDDINGIQSIYG 261
+                            *********88....58********************************99********************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.4   2.4e-10   1.6e-06       1      44 [.     285     326 ..     285     327 .. 0.97
+   2 !   29.3   0.0   9.9e-11   6.3e-07       2      44 ..     330     370 ..     329     371 .. 0.97
+   3 !   37.8   0.0   2.3e-13   1.5e-09       1      43 [.     376     421 ..     376     422 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 2.4e-10
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            +DA+++ r  +++FFkG++ Wr  +  + +++ +li+++wp+lp
+  sp|Q9H306|MMP27_HUMAN 285 FDAITTFR-REVMFFKGRHLWRIYYD-ITDVEFELIASFWPSLP 326
+                            8*******.***************99.99**************9 PP
+
+  == domain 2  score: 29.3 bits;  conditional E-value: 9.9e-11
+                            SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   2 DAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            +AA+e ++ k+  Fk+  +W  +++ v p ypk+i+++  g+p
+  sp|Q9H306|MMP27_HUMAN 330 QAAYENPRDKILVFKDENFWMIRGYAVLPDYPKSIHTL--GFP 370
+                            7*************************************..**9 PP
+
+  == domain 3  score: 37.8 bits;  conditional E-value: 2.3e-13
+                            -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTS CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpgl 43 
+                            iDAA++++   ktYFF G + Wrfd+   ++++g+p ++ +++pg+
+  sp|Q9H306|MMP27_HUMAN 376 IDAAVCDKTtRKTYFFVGIWCWRFDEMtqTMDKGFPQRVVKHFPGI 421
+                            8*************************9******************8 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.2   0.0   1.8e-17   1.1e-13       2      57 .]      27      86 ..      26      86 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 51.2 bits;  conditional E-value: 1.8e-17
+                           SHHHHHHHHHHHHTT--..-S..SSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+           PG_binding_1  2 gedvkelqryLsrlGyl..sg..padgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           +e+++++q+yL++++ l  +g   +++++++   +++re+Q ffgL+vtG+ld +Tl+++
+  sp|Q9H306|MMP27_HUMAN 27 EENMQLAQAYLNQFYSLeiEGnhLVQSKNRSLIDDKIREMQAFFGLTVTGKLDSNTLEIM 86
+                           6899**********777662255889********************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (513 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       556  (0.02899); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.17s 00:00:00.62 Elapsed: 00:00:00.67
+# Mc/sec: 2473.03
+//
+Query:       sp|P09238|MMP10_HUMAN  [L=476]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.3e-63  211.1   0.3    1.6e-62  210.1   0.0    1.6  1  Peptidase_M10  Matrixin
+      5e-48  160.9  13.4    2.1e-15   56.5   0.3    4.5  4  Hemopexin      Hemopexin
+      1e-10   41.7   0.3    2.6e-10   40.4   0.3    1.7  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.1   0.0   2.5e-66   1.6e-62       1     159 []     107     263 ..     107     263 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 210.1 bits;  conditional E-value: 2.5e-66
+                            STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdi 88 
+                            kw+k++ltyri+n+tpdl++++v++ai++A+kvw+evtpl+F+++++geadi+i+F+ +ehgd y+fdg+g+ laha++pg+gl gdi
+  sp|P09238|MMP10_HUMAN 107 KWRKTHLTYRIVNYTPDLPRDAVDSAIEKALKVWEEVTPLTFSRLYEGEADIMISFAVKEHGDFYSFDGPGHSLAHAYPPGPGLYGDI 194
+                            7*************************************************************************************** PP
+
+                            EEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT..S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  89 hfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk..veekkvrlskdDvkgiqelYg 159
+                            hfddde+Wt +     +g++lflVaaHE+GH+lGL Hs +++almyply+  +e  ++rls+dDv+giq+lYg
+  sp|P09238|MMP10_HUMAN 195 HFDDDEKWTED----ASGTNLFLVAAHELGHSLGLFHSANTEALMYPLYNsfTELAQFRLSQDDVNGIQSLYG 263
+                            *********88....58*********************************988899****************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.4   1.3   7.1e-14   4.5e-10       1      45 []     295     337 ..     295     337 .. 0.97
+   2 !   40.9   0.0   2.4e-14   1.6e-10       1      45 []     339     382 ..     339     382 .. 0.97
+   3 !   56.5   0.3   3.3e-19   2.1e-15       1      44 [.     387     433 ..     387     434 .. 0.97
+   4 !   30.6   0.1     4e-11   2.5e-07       1      45 []     436     476 .]     436     476 .] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 39.4 bits;  conditional E-value: 7.1e-14
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            +DA+ +lr g++ FFk++++Wr + +++ep+  +lis +wp+lp+
+  sp|P09238|MMP10_HUMAN 295 FDAISTLR-GEYLFFKDRYFWRRSHWNPEPE-FHLISAFWPSLPS 337
+                            8*******.**********************.5**********97 PP
+
+  == domain 2  score: 40.9 bits;  conditional E-value: 2.4e-14
+                            -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            +DAA+e ++   +++FkG+ +W  ++++v+ gyp++i+++  g+p+
+  sp|P09238|MMP10_HUMAN 339 LDAAYEVNSrDTVFIFKGNEFWAIRGNEVQAGYPRGIHTL--GFPP 382
+                            5***************************************..**95 PP
+
+  == domain 3  score: 56.5 bits;  conditional E-value: 3.3e-19
+                            -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpglp 44 
+                            iDAA++++  +ktYFF  dkYWrfd++  ++e+g+p+li+d++pg +
+  sp|P09238|MMP10_HUMAN 387 IDAAVSDKEkKKTYFFAADKYWRFDENsqSMEQGFPRLIADDFPGVE 433
+                            8********************************************86 PP
+
+  == domain 4  score: 30.6 bits;  conditional E-value: 4e-11
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            +DA+++   g++YFF+G+ +++fdp+  ++++  l s+s  +l c
+  sp|P09238|MMP10_HUMAN 436 VDAVLQAF-GFFYFFSGSSQFEFDPN-ARMVTHILKSNS--WLHC 476
+                            8*******.*****************.9***********..8877 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   0.3   4.1e-14   2.6e-10       7      57 .]      33      86 ..      29      86 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 4.1e-14
+                           HHHHHHHHTT---SSSS.....SB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+           PG_binding_1  7 elqryLsrlGylsgpad.....gtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           ++q+yL++++ l  ++d      +  +  +++++ +Q+f gL+vtG+ld++Tl+++
+  sp|P09238|MMP10_HUMAN 33 LAQQYLEKYYNL--EKDvkqfrRKDSNLIVKKIQGMQKFLGLEVTGKLDTDTLEVM 86
+                           69*******776..3333356699999***************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (476 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       550  (0.0286772); expected 383.6 (0.02)
+Passed bias filter:                      499  (0.026018); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.21s 00:00:00.64 Elapsed: 00:00:00.64
+# Mc/sec: 2396.41
+//
+Query:       sp|P39900|MMP12_HUMAN  [L=470]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.1e-62  208.8   0.1      1e-61  207.5   0.1    1.7  1  Peptidase_M10  Matrixin
+      5e-49  164.1  18.0      2e-15   56.5   1.6    4.5  4  Hemopexin      Hemopexin
+    1.8e-14   53.7   0.0    3.2e-14   53.0   0.0    1.4  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  207.5   0.1   1.6e-65     1e-61       2     159 .]     109     263 ..     108     263 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 207.5 bits;  conditional E-value: 1.6e-65
+                            TSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   2 wekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdih 89 
+                            w+k+ +tyri n+tpd+++e+v+ air+Af+vws+vtplkF+++++g adi + F+rg hgd + fdgkgg+lahaf pg+g+ggd+h
+  sp|P39900|MMP12_HUMAN 109 WRKHYITYRINNYTPDMNREDVDYAIRKAFQVWSNVTPLKFSKINTGMADILVVFARGAHGDFHAFDGKGGILAHAFGPGSGIGGDAH 196
+                            999************************************************************************************* PP
+
+                            EETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  90 fdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                            fd+de Wt+++     g++lfl a+HEiGH+lGL Hssd++a+m+p+yk v+ +++rls dD++giq+lYg
+  sp|P39900|MMP12_HUMAN 197 FDEDEFWTTHS----GGTNLFLTAVHEIGHSLGLGHSSDPKAVMFPTYKyVDINTFRLSADDIRGIQSLYG 263
+                            ********995....69*****************************************************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.3   0.1   6.7e-13   4.3e-09       1      45 []     288     330 ..     288     330 .. 0.95
+   2 !   47.1   0.1   2.7e-16   1.8e-12       1      44 [.     332     374 ..     332     375 .. 0.97
+   3 !   56.5   1.6   3.2e-19     2e-15       1      44 [.     380     426 ..     380     427 .. 0.98
+   4 !   33.8   1.4   4.1e-12   2.6e-08       1      45 []     429     470 .]     429     470 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 36.3 bits;  conditional E-value: 6.7e-13
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            +DA+++ + +k++FFk++++W   ++  ++   +lis++wp lp+
+  sp|P39900|MMP12_HUMAN 288 FDAVTTVG-NKIFFFKDRFFWLKVSE-RPKTSVNLISSLWPTLPS 330
+                            8*******.*****************.67777***********96 PP
+
+  == domain 2  score: 47.1 bits;  conditional E-value: 2.7e-16
+                            -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            i AA+e+++ + +++Fk+dkYW  ++ ++ep ypk+i+++  g+p
+  sp|P39900|MMP12_HUMAN 332 IEAAYEIEArNQVFLFKDDKYWLISNLRPEPNYPKSIHSF--GFP 374
+                            78**************************************..**9 PP
+
+  == domain 3  score: 56.5 bits;  conditional E-value: 3.2e-19
+                            -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpglp 44 
+                            iDAA+  ++  +tYFF +++YWr+d++   ++pgypkli++ ++g++
+  sp|P39900|MMP12_HUMAN 380 IDAAVFNPRfYRTYFFVDNQYWRYDERrqMMDPGYPKLITKNFQGIG 426
+                            8********************************************98 PP
+
+  == domain 4  score: 33.8 bits;  conditional E-value: 4.1e-12
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTSTS CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglpc 45 
+                            iDA+f ++++++YFF+G+ ++++d+  +++ + +l s+s  +++c
+  sp|P39900|MMP12_HUMAN 429 IDAVFYSKNKYYYFFQGSNQFEYDFL-LQRITKTLKSNS--WFGC 470
+                            8*************************.************..9998 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.0   0.0     5e-18   3.2e-14       2      57 .]      27      87 ..      26      87 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 53.0 bits;  conditional E-value: 5e-18
+                           SHHHHHHHHHHHHTT--.....-SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+           PG_binding_1  2 gedvkelqryLsrlGyl.....sgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           +++v + +ryL++++ l     + ++ ++ g+ ++e+++e+Q+f gL+vtG+ld++Tl+++
+  sp|P39900|MMP12_HUMAN 27 KNNVLFGERYLEKFYGLeinklPVTKMKYSGNLMKEKIQEMQHFLGLKVTGQLDTSTLEMM 87
+                           6899**********6665654333666********************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (470 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       380  (0.0198133); expected 383.6 (0.02)
+Passed bias filter:                      318  (0.0165806); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.16s 00:00:00.59 Elapsed: 00:00:00.66
+# Mc/sec: 2308.82
+//
+Query:       sp|P45452|MMP13_HUMAN  [L=471]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.8e-66  222.4   0.1    4.2e-66  221.8   0.1    1.3  1  Peptidase_M10  Matrixin
+    7.2e-46  154.0   1.5      5e-12   45.6   0.0    4.3  4  Hemopexin      Hemopexin
+    1.4e-11   44.5   0.0    2.5e-11   43.7   0.0    1.4  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  221.8   0.1   6.5e-70   4.2e-66       1     159 []     112     267 ..     112     267 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 221.8 bits;  conditional E-value: 6.5e-70
+                            STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdi 88 
+                            kw+k nltyri+n+tpd++++ev+ka+++Afkvws+vtpl+Ft++++g adi+i+Fg +ehgd ypfdg+ g+lahaf+pg+++ggd+
+  sp|P45452|MMP13_HUMAN 112 KWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDA 199
+                            79************************************************************************************** PP
+
+                            EEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  89 hfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                            hfddde+Wt +    ++g++lflVaaHE+GH+lGL+Hs+d++alm+p+y+ + ++++ l +dDv+giq+lYg
+  sp|P45452|MMP13_HUMAN 200 HFDDDETWTSS----SKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTyTGKSHFMLPDDDVQGIQSLYG 267
+                            *********98....58*********************************999******************8 PP
+
+>> Hemopexin  Hemopexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.2   0.0   3.9e-14   2.5e-10       1      44 [.     290     331 ..     290     332 .. 0.94
+   2 !   41.7   0.0   1.3e-14   8.4e-11       1      44 [.     334     376 ..     334     377 .. 0.98
+   3 !   45.6   0.0   7.9e-16     5e-12       1      44 [.     382     428 ..     382     429 .. 0.97
+   4 !   22.8   0.1   1.1e-08   7.1e-05       1      38 [.     431     466 ..     431     471 .] 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 40.2 bits;  conditional E-value: 3.9e-14
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            +DA+++lr g+t++Fk++++Wr++pq+v+ +   l +++wp lp
+  sp|P45452|MMP13_HUMAN 290 LDAITSLR-GETMIFKDRFFWRLHPQQVDAE-LFLTKSFWPELP 331
+                            59******.*****************77777.***********9 PP
+
+  == domain 2  score: 41.7 bits;  conditional E-value: 1.3e-14
+                            -SEEEEETT.TEEEEEETTEEEEEETTEETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpqkvepgypklisdswpglp 44 
+                            iDAA+e+++   +++F+G+k+W ++++ +  gypk+is++  glp
+  sp|P45452|MMP13_HUMAN 334 IDAAYEHPShDLIFIFRGRKFWALNGYDILEGYPKKISEL--GLP 376
+                            8***************************************..*99 PP
+
+  == domain 3  score: 45.6 bits;  conditional E-value: 7.9e-16
+                            -SEEEEETT.TEEEEEETTEEEEEETT..EETTTECEEHHHHSTTST CS
+              Hemopexin   1 iDAAfelrd.gktYFFkGdkYWrfdpq..kvepgypklisdswpglp 44 
+                            i AA+  +d gkt +F+G+++Wr+d++   +++ yp+li +++pg++
+  sp|P45452|MMP13_HUMAN 382 ISAAVHFEDtGKTLLFSGNQVWRYDDTnhIMDKDYPRLIEEDFPGIG 428
+                            789******************************************97 PP
+
+  == domain 4  score: 22.8 bits;  conditional E-value: 1.1e-08
+                            -SEEEEETTTEEEEEETTEEEEEETTEETTTECEEHHH CS
+              Hemopexin   1 iDAAfelrdgktYFFkGdkYWrfdpqkvepgypklisd 38 
+                            +DA++e + g++YFF G  +++++ + +++  +   ++
+  sp|P45452|MMP13_HUMAN 431 VDAVYEKN-GYIYFFNGPIQFEYSIW-SNRIVRVMPAN 466
+                            8*******.****************9.55555555444 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.7   0.0   3.9e-15   2.5e-11       2      57 .]      33      91 ..      32      91 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 43.7 bits;  conditional E-value: 3.9e-15
+                           SHHHHHHHHHHHHTT--...-SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+           PG_binding_1  2 gedvkelqryLsrlGyl...sgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           +ed+++++ryL++++      g    +  ++++e +re+Q+ffgL+vtG+ld +Tl+++
+  sp|P45452|MMP13_HUMAN 33 EEDLQFAERYLRSYYHPtnlAGILKENAASSMTERLREMQSFFGLEVTGKLDDNTLDVM 91
+                           699***********6657766677799*****************************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (471 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       418  (0.0217947); expected 383.6 (0.02)
+Passed bias filter:                      404  (0.0210647); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.15s 00:00:00.56 Elapsed: 00:00:00.63
+# Mc/sec: 2433.24
+//
+[ok]

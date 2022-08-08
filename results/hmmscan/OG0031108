@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031108.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031108
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54B62|Q54B62_DICDI  [L=505]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.8e-13   48.7  20.0     0.0077   16.5   0.1    6.4  0  PPR_2     PPR repeat family
+    1.7e-10   40.5  10.7      0.068   13.5   0.3    6.0  3  PPR       PPR repeat
+
+
+Domain annotation for each model (and alignments):
+>> PPR_2  PPR repeat family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> PPR  PPR repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.4   0.1   1.6e-05      0.15       6      30 ..      85     109 ..      81     110 .. 0.92
+   2 !   13.5   0.3   7.1e-06     0.068       6      25 ..     122     141 ..     118     141 .. 0.92
+   3 !   12.1   0.1   2.1e-05       0.2       5      28 ..     153     176 ..     152     179 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.4 bits;  conditional E-value: 1.6e-05
+                     PPR   6 lIsgycknGkleeAlelfkeMkekG 30 
+                             ++sg+  ++k+e+A+++f+e++e++
+  tr|Q54B62|Q54B62_DICDI  85 VLSGFYESRKFEKAIKYFEEIRENN 109
+                             789*******************986 PP
+
+  == domain 2  score: 13.5 bits;  conditional E-value: 7.1e-06
+                     PPR   6 lIsgycknGkleeAlelfke 25 
+                             ++++y+k++k+e++lel++e
+  tr|Q54B62|Q54B62_DICDI 122 IMKCYAKCNKMEKCLELYNE 141
+                             799***************98 PP
+
+  == domain 3  score: 12.1 bits;  conditional E-value: 2.1e-05
+                     PPR   5 slIsgycknGkleeAlelfkeMke 28 
+                             +lI+gy    ++eeA+++f++ ++
+  tr|Q54B62|Q54B62_DICDI 153 VLIKGYLDQSNFEEAMKWFEKCQQ 176
+                             69******************9776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (505 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1340  (0.0698681); expected 383.6 (0.02)
+Passed bias filter:                      469  (0.0244538); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.69
+# Mc/sec: 2377.79
+//
+[ok]

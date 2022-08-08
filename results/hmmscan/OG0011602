@@ -1,0 +1,210 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0011602.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0011602
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QVJ1|F1QVJ1_DANRE  [L=345]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.7e-11   42.1   0.4    7.6e-06   26.5   0.1    2.4  1  Ank_4     Ankyrin repeats (many copies)
+    1.4e-09   38.5   0.0    2.7e-09   37.6   0.0    1.5  1  Ank_2     Ankyrin repeats (3 copies)
+    4.5e-07   29.8   0.0       0.22   12.3   0.0    3.5  0  Ank_3     Ankyrin repeat
+    1.2e-06   28.8   0.1     0.0032   17.9   0.0    2.7  1  Ank       Ankyrin repeat
+
+
+Domain annotation for each model (and alignments):
+>> Ank_4  Ankyrin repeats (many copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.1   1.6e-09   7.6e-06       3      55 .]     193     250 ..     193     250 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 1.6e-09
+                   Ank_4   3 taLhyaaisgrlel.vrlLl.....ekgadinaqdnrsGetalhiAakrgnveilklLl 55 
+                             taLh++a+ gr e+ ++lL         +++n +  + G+talh Aa+++++ ++k L+
+  tr|F1QVJ1|F1QVJ1_DANRE 193 TALHWLAKNGRDETlLQLLRhaekeGLSVNVNLR-GSGGMTALHVAAMHEQYMVVKVLV 250
+                             79************66677788433334668888.888**************9999985 PP
+
+>> Ank_2  Ankyrin repeats (3 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.6   0.0   5.6e-13   2.7e-09       4      81 ..     163     259 ..     160     261 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 37.6 bits;  conditional E-value: 5.6e-13
+                   Ank_2   4 Aakngnl.elvklLlegadpn....k...ngktaLhyAakngnleivklLleh.........ad...ndgrtpLhyAarsghleivk 70 
+                              a +gn+  ++++L    dp+    k    g taLh+ akng  e++  Ll h         ++   + g+t+Lh+Aa + ++ +vk
+  tr|F1QVJ1|F1QVJ1_DANRE 163 SAVDGNYdTMLEFLA--EDPSllskKdfiSGFTALHWLAKNGRDETLLQLLRHaekeglsvnVNlrgSGGMTALHVAAMHEQYMVVK 247
+                             445554526888888..5555554325779************999998888877778888553366788************9***** PP
+
+                   Ank_2  71 lLlek.gadinl 81 
+                             +L+    a+i++
+  tr|F1QVJ1|F1QVJ1_DANRE 248 VLVGAfSANIDV 259
+                             ***545667665 PP
+
+>> Ank_3  Ankyrin repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Ank  Ankyrin repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.9   0.0   6.6e-07    0.0032       2      32 ..     230     261 ..     229     262 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 17.9 bits;  conditional E-value: 6.6e-07
+                             SCBHHHHHH...HHTTHHHHHHHHHTT...TSTTSBT CS
+                     Ank   2 GnTPLHlAa...tngkkriiklLLhsG...Adlnald 32 
+                             G+T+LH+Aa   +     ++k L+  G   A+++  d
+  tr|F1QVJ1|F1QVJ1_DANRE 230 GMTALHVAAmheQ---YMVVKVLV--GafsANIDVMD 261
+                             9********5554...55******..75568998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (345 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       565  (0.0294593); expected 383.6 (0.02)
+Passed bias filter:                      381  (0.0198655); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.35u 0.20s 00:00:00.55 Elapsed: 00:00:00.62
+# Mc/sec: 1809.44
+//
+Query:       tr|A0A0R4IMZ4|A0A0R4IMZ4_DANRE  [L=356]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-10   41.8   0.4    7.9e-06   26.4   0.1    2.4  1  Ank_4     Ankyrin repeats (many copies)
+    1.5e-09   38.4   0.0    2.8e-09   37.5   0.0    1.5  1  Ank_2     Ankyrin repeats (3 copies)
+    5.1e-07   29.6   0.0       0.23   12.2   0.0    3.5  0  Ank_3     Ankyrin repeat
+    1.3e-06   28.7   0.1     0.0033   17.9   0.0    2.7  1  Ank       Ankyrin repeat
+
+
+Domain annotation for each model (and alignments):
+>> Ank_4  Ankyrin repeats (many copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.4   0.1   1.7e-09   7.9e-06       3      55 .]     204     261 ..     204     261 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 26.4 bits;  conditional E-value: 1.7e-09
+                           Ank_4   3 taLhyaaisgrlel.vrlLl.....ekgadinaqdnrsGetalhiAakrgnveilklLl 55 
+                                     taLh++a+ gr e+ ++lL         +++n +  + G+talh Aa+++++ ++k L+
+  tr|A0A0R4IMZ4|A0A0R4IMZ4_DANRE 204 TALHWLAKNGRDETlLQLLRhaekeGLSVNVNLR-GSGGMTALHVAAMHEQYMVVKVLV 261
+                                     79************66677788433334668888.888**************9999985 PP
+
+>> Ank_2  Ankyrin repeats (3 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5   0.0   5.9e-13   2.8e-09       4      81 ..     174     270 ..     171     272 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 5.9e-13
+                           Ank_2   4 Aakngnl.elvklLlegadpn....k...ngktaLhyAakngnleivklLleh.........ad...ndgrtpLhyAar 62 
+                                      a +gn+  ++++L    dp+    k    g taLh+ akng  e++  Ll h         ++   + g+t+Lh+Aa 
+  tr|A0A0R4IMZ4|A0A0R4IMZ4_DANRE 174 SAVDGNYdTMLEFLA--EDPSllskKdfiSGFTALHWLAKNGRDETLLQLLRHaekeglsvnVNlrgSGGMTALHVAAM 250
+                                     445554526888888..5555554325779************999998888877778888553366788********** PP
+
+                           Ank_2  63 sghleivklLlek.gadinl 81 
+                                     + ++ +vk+L+    a+i++
+  tr|A0A0R4IMZ4|A0A0R4IMZ4_DANRE 251 HEQYMVVKVLVGAfSANIDV 270
+                                     **9********545667665 PP
+
+>> Ank_3  Ankyrin repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Ank  Ankyrin repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.9   0.0   6.9e-07    0.0033       2      32 ..     241     272 ..     240     273 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 17.9 bits;  conditional E-value: 6.9e-07
+                                     SCBHHHHHH...HHTTHHHHHHHHHTT...TSTTSBT CS
+                             Ank   2 GnTPLHlAa...tngkkriiklLLhsG...Adlnald 32 
+                                     G+T+LH+Aa   +     ++k L+  G   A+++  d
+  tr|A0A0R4IMZ4|A0A0R4IMZ4_DANRE 241 GMTALHVAAmheQ---YMVVKVLV--GafsANIDVMD 272
+                                     9********5554...55******..75568998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (356 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       557  (0.0290422); expected 383.6 (0.02)
+Passed bias filter:                      385  (0.020074); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 2146.41
+//
+Query:       tr|A0A0R4IUJ9|A0A0R4IUJ9_DANRE  [L=176]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (176 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       450  (0.0234632); expected 383.6 (0.02)
+Passed bias filter:                      263  (0.0137129); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.55
+# Mc/sec: 1025.60
+//
+Query:       tr|A0A0R4IZU5|A0A0R4IZU5_DANRE  [L=202]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (202 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       562  (0.0293029); expected 383.6 (0.02)
+Passed bias filter:                      375  (0.0195526); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.29u 0.18s 00:00:00.47 Elapsed: 00:00:00.49
+# Mc/sec: 1329.89
+//
+[ok]

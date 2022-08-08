@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037968.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037968
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       ENBRE01_3454  [L=81]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.1e-08   35.2   0.3    1.2e-08   35.1   0.3    1.0  1  HGTP_anticodon   Anticodon binding domain
+    2.5e-06   27.3   0.0    2.6e-06   27.2   0.0    1.0  1  HGTP_anticodon2  Anticodon binding domain of tRNAs
+
+
+Domain annotation for each model (and alignments):
+>> HGTP_anticodon  Anticodon binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   0.3   1.2e-12   1.2e-08      20      93 ..       3      77 ..       1      78 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 1.2e-12
+                    HHHHHHHTTTSEEEEES.SSSTHHHHHHHHHHTT-SEEEEE-HHHHHHTEEEEEETTTCEEEEEETTHHHHHHHH CS
+  HGTP_anticodon 20 klaeeLraagirveldd.ssesigkkireadllgipfavvvGekelekgtvtvrdrdtreqervsldelveklke 93
+                    ++ +eL++  +++e    +  +++ +++++++ ++++ v++Ge+e  +g+v v + +++e+ ++++++lv+++++
+    ENBRE01_3454  3 QILRELWDVRVSAETFSgKRVNFKDQMEQCKKGNFRYGVFIGENEQANGIVRVINTESGEEKQIKRESLVAYIQS 77
+                    7789***********999******************************************************995 PP
+
+>> HGTP_anticodon2  Anticodon binding domain of tRNAs
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.2   0.0   2.7e-10   2.6e-06      23     101 ..       2      77 ..       1      80 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 27.2 bits;  conditional E-value: 2.7e-10
+  HGTP_anticodon2  23 vellqeLWahnIsAdlaldasksledlvskarddgvswiviikqqnkskskekplkvkslekkedvdldldelvswlkq 101
+                      +++l+eLW   +sA+    +++   d ++++++ + ++ v+i ++++++     ++v ++e++e+  ++ + lv+++++
+     ENBRE01_3454   2 MQILRELWDVRVSAETFSGKRVNFKDQMEQCKKGNFRYGVFIGENEQAN---GIVRVINTESGEEKQIKRESLVAYIQS 77 
+                      78**************999*************************55444...56**********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (81 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       771  (0.0402002); expected 383.6 (0.02)
+Passed bias filter:                      516  (0.0269044); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.69
+# Mc/sec: 377.27
+//
+[ok]

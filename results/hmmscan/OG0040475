@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040475.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040475
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A5PL33|KRBA1_HUMAN  [L=1030]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      3e-46  154.9 113.4    1.9e-18   65.9   6.7    9.8  6  KRBA1     KRBA1 family repeat
+
+
+Domain annotation for each model (and alignments):
+>> KRBA1  KRBA1 family repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.2   6.2    0.0019        37      10      42 ..     109     141 ..     101     143 .. 0.82
+   2 !   65.9   6.7     1e-22   1.9e-18       1      44 []     195     237 ..     195     237 .. 0.96
+   3 !   17.5   0.1   1.3e-07    0.0026       5      32 ..     260     287 ..     255     292 .. 0.80
+   4 !   53.3  13.6   8.9e-19   1.7e-14       1      44 []     371     415 ..     371     415 .. 0.99
+   5 !   41.4   3.3   4.7e-15   9.1e-11       5      31 ..     491     517 ..     489     529 .. 0.83
+   6 !   30.9   9.3   8.6e-12   1.6e-07       6      44 .]     604     642 ..     602     642 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.0019
+                  KRBA1  10 gsSPLqGLinCLKeIlvpgPqhpqaatslsppp 42 
+                            ++ PL GL +CL + +++ P++ +++t++s ++
+  sp|A5PL33|KRBA1_HUMAN 109 EPCPLRGLLSCLPDGPTSQPHLATTPTDSSCSS 141
+                            678*********************888887666 PP
+
+  == domain 2  score: 65.9 bits;  conditional E-value: 1e-22
+                  KRBA1   1 GpealgaspgsSPLqGLinCLKeIlvpgPqhpqaatslspppqP 44 
+                            G++ +g+spg+SPLqGLinCLKeIlvpgP hp++++s  +pp+P
+  sp|A5PL33|KRBA1_HUMAN 195 GTSEAGISPGNSPLQGLINCLKEILVPGPRHPETSPSF-LPPLP 237
+                            78889*********************************.99998 PP
+
+  == domain 3  score: 17.5 bits;  conditional E-value: 1.3e-07
+                  KRBA1   5 lgaspgsSPLqGLinCLKeIlvpgPqhp 32 
+                            ++a++g  PLqGL  CLKe++     hp
+  sp|A5PL33|KRBA1_HUMAN 260 TEAVSGDCPLQGLLHCLKELPEAQDRHP 287
+                            4778899*************97655555 PP
+
+  == domain 4  score: 53.3 bits;  conditional E-value: 8.9e-19
+                  KRBA1   1 GpealgaspgsSPLqGLinCLKeIlvpgPqhpq.aatslspppqP 44 
+                            Gpea++as++sSPL++L++CLK+I+++g++++q ++ts+s++pqP
+  sp|A5PL33|KRBA1_HUMAN 371 GPEAQAASASSSPLEALEACLKGIPPNGSSPSQlPPTSCSQNPQP 415
+                            9*******************************************9 PP
+
+  == domain 5  score: 41.4 bits;  conditional E-value: 4.7e-15
+                  KRBA1   5 lgaspgsSPLqGLinCLKeIlvpgPqh 31 
+                             g++pgsSPLqGL+nCLKeI+vp   +
+  sp|A5PL33|KRBA1_HUMAN 491 KGSPPGSSPLQGLENCLKEIPVPVLRP 517
+                            4999******************95554 PP
+
+  == domain 6  score: 30.9 bits;  conditional E-value: 8.6e-12
+                  KRBA1   6 gaspgsSPLqGLinCLKeIlvpgPqhpqaatslspppqP 44 
+                            g+ p++SPL++L++ L++Il+ +P ++ ++ ++sp+p+P
+  sp|A5PL33|KRBA1_HUMAN 604 GSAPKPSPLHCLESALRGILPVRPLRFACVGGPSPSPSP 642
+                            789**********************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1030 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       453  (0.0236196); expected 383.6 (0.02)
+Passed bias filter:                      274  (0.0142865); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.50u 0.21s 00:00:00.71 Elapsed: 00:00:00.77
+# Mc/sec: 4321.71
+//
+[ok]

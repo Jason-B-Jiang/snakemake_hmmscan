@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034261.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034261
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E9QCC5|E9QCC5_DANRE  [L=310]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-14   54.0   0.0      4e-14   52.7   0.0    1.6  1  DSPc      Dual specificity phosphatase, catalytic domain
+    3.5e-08   33.2   0.0    6.9e-08   32.3   0.0    1.4  1  CBM_20    Starch binding domain
+
+
+Domain annotation for each model (and alignments):
+>> DSPc  Dual specificity phosphatase, catalytic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.7   0.0   4.1e-18     4e-14       9     117 ..     158     286 ..     146     293 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 52.7 bits;  conditional E-value: 4.1e-18
+                             HCHHHHHHHTCSEEEEESSSSSEC....................ECCTTTTSEEEEECCESSTTSCGGGGHHHHHHHHHHHHHTT-E CS
+                    DSPc   9 aslallsklgitlvinvtkevpna....................nalkkseieklripvedehetkiskyleeavefidkakqkgkk 75 
+                             ++l+l+++lg+t+v+n ++e +                      +++ +s+  ++++p +d +++   + l++av  +  + ++g++
+  tr|E9QCC5|E9QCC5_DANRE 158 VTLKLKQELGVTAVMNFQTEWDVInnshgcrrdlsqpmtpetmmHLYRDSGLSYIWMPTQDMSTEGRIQMLPQAVFLLFGLLENGHS 244
+                             337788999999999999887755678999999999999*9999999**************************************** PP
+
+                             EEEEESSSSSHHHHHHHHHHHHHHTSCHHHHHHHHHHHSTT- CS
+                    DSPc  76 vlVHCqaGisRSatliiaYlmktknlslneayeflkerrpai 117
+                             v+VHC+aG+ RS + ++  lm+ ++++l++  +fl  rr a+
+  tr|E9QCC5|E9QCC5_DANRE 245 VYVHCNAGVGRSTAAVCGLLMYVFGWKLRKVQYFLTARRAAV 286
+                             *************************************99765 PP
+
+>> CBM_20  Starch binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   0.0   7.2e-12   6.9e-08      17      82 ..      18      88 ..       4      99 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 7.2e-12
+                  CBM_20 17 svyivGsiseLGnWnpkkaiklsasee...ssyplWsttvslpa..gtkieYKyikvesdgsvtWes.genr 82
+                            +v++ Gs +e+G W++++a+k+++s+     +  lW+++v l++     +++K+ik+ + g+ +We  g+++
+  tr|E9QCC5|E9QCC5_DANRE 18 EVFVLGSRPEMGLWDTERAVKMNPSQGrscREPCLWTGDVLLSEplTDPLWFKFIKRVD-GDFIWEGsGPHH 88
+                            79***********************9876455669***99776643779******9865.59****845554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (310 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       413  (0.021534); expected 383.6 (0.02)
+Passed bias filter:                      364  (0.0189791); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.70
+# Mc/sec: 1442.38
+//
+[ok]

@@ -1,0 +1,82 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031322.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031322
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54T29|Q54T29_DICDI  [L=420]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-54  180.2   0.3    2.3e-14   53.4   0.0    4.8  4  Vault     Major Vault Protein repeat domain
+      7e-25   87.4   0.2    2.5e-22   79.2   0.0    2.6  1  Vault_2   Major Vault Protein repeat domain
+
+
+Domain annotation for each model (and alignments):
+>> Vault  Major Vault Protein repeat domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.5   0.0   1.4e-15   1.3e-11       1      43 []     113     155 ..     113     155 .. 0.97
+   2 !   37.4   0.0   2.3e-13   2.2e-09       2      41 ..     168     207 ..     167     209 .. 0.91
+   3 !   39.1   0.0   6.5e-14   6.3e-10       1      42 [.     221     263 ..     221     264 .. 0.90
+   4 !   53.4   0.0   2.4e-18   2.3e-14       1      43 []     326     374 ..     326     374 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 44.5 bits;  conditional E-value: 1.4e-15
+                   Vault   1 yVLseneALhLrAledFtdtegeveRkaGdeWlvrGPgeYiPp 43 
+                             +V+ +neA++++Al dF dte+++   aGdeWl++GP +Y P+
+  tr|Q54T29|Q54T29_DICDI 113 TVILNNEAIVIKALVDFLDTETSKLISAGDEWLMYGPATYKPR 155
+                             5999******************9******************98 PP
+
+  == domain 2  score: 37.4 bits;  conditional E-value: 2.3e-13
+                   Vault   2 VLseneALhLrAledFtdtegeveRkaGdeWlv..rGPgeYi 41 
+                             ++++++AL++ A++dF+d+  +++Rk+GdeWl+  +GP  Yi
+  tr|Q54T29|Q54T29_DICDI 168 IVKPHNALKIMATNDFKDKVYKQQRKSGDEWLMtvEGP--YI 207
+                             89****************9999***********77777..77 PP
+
+  == domain 3  score: 39.1 bits;  conditional E-value: 6.5e-14
+                   Vault   1 yVLseneALhLrAledFtdtegeveRkaGdeWlv..rGPgeYiP 42 
+                             yVL++n+ +h+ A+++F+d++g veRk Gd+Wl+   ++  +iP
+  tr|Q54T29|Q54T29_DICDI 221 YVLDDNNSIHVAANRKFVDSNG-VERKKGDKWLLtkQDTTLFIP 263
+                             8*********************.**********97666666666 PP
+
+  == domain 4  score: 53.4 bits;  conditional E-value: 2.4e-18
+                   Vault   1 yVLseneALhLrAledFtd..tege......veRkaGdeWlvrGPgeYiPp 43 
+                             y+L++++A+ +++le+F++  +  +      v+Rk+G+++lv+GP+eY+Pp
+  tr|Q54T29|Q54T29_DICDI 326 YILEPEDAVYVKVLEEFEEsvR--SgntlknVTRKSGTKYLVYGPCEYVPP 374
+                             8******************554..4458999*******************8 PP
+
+>> Vault_2  Major Vault Protein repeat domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.2   0.0   2.6e-26   2.5e-22       1      61 []      48     109 ..      48     109 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 79.2 bits;  conditional E-value: 2.6e-26
+                 Vault_2   1 mitlpprsYCvvanPverdekks.pvldklGqaklkkGdkevRlaqedpFpLyPGEkLegdi 61 
+                             m+++ +++YC+++ Pv+rd+ k+ +++dk+Gqaklk+G +e+R++  +pFpLyPGE + g+i
+  tr|Q54T29|Q54T29_DICDI  48 MHVIQNNEYCIIESPVIRDQDKKtVLVDKYGQAKLKHGSREIRFESGEPFPLYPGESMIGKI 109
+                             9******************98876999*******************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (420 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       718  (0.0374368); expected 383.6 (0.02)
+Passed bias filter:                      507  (0.0264352); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.64
+# Mc/sec: 2129.11
+//
+[ok]

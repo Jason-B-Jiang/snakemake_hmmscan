@@ -1,0 +1,123 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0023523.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0023523
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ31290.1  [L=397]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.3e-35  123.1   0.0    5.4e-35  121.1   0.0    1.8  1  AstE_AspA  Succinylglutamate desuccinylase / Aspartoacylase f
+    8.8e-09   35.9   6.2    1.1e-06   29.0   0.8    2.1  1  SPX        SPX domain
+
+
+Domain annotation for each model (and alignments):
+>> AstE_AspA  Succinylglutamate desuccinylase / Aspartoacylase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.1   0.0   5.6e-39   5.4e-35       1     289 [.     125     382 ..     125     384 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 121.1 bits;  conditional E-value: 5.6e-39
+                 SS-EEEEEE-SSTT-HHHHHHHHHHHHHHHCCSESSSEEEEEESSHHHHHTTSS-SS..S-CCCSTSCCCHHSSTCHHHHHHHHHHHHHHHC.TTTTSG CS
+   AstE_AspA   1 agpkvlisAGiHGnElaGvellrqllkkleaadilgeitlvplaNppAiaqgsRyipdredLNRaFpgralgssldeayrateaerladalfaaalera 99 
+                 +gp+v i+A++HGnEl+G+ l+++l  +++  d++g ++ vp+aN+p+    +R + d +dLNR+ pg+ +g         t+a+ +a ++ +    ++
+  EPZ31290.1 125 QGPTVGITAALHGNELNGIPLIHRLFTEIKCSDLHGIVVAVPIANVPGYLCSQRGFSDGSDLNRLMPGKKNG---------TAAQVYAYHFMKRIVSKF 214
+                 59**********************************************************************.........***********8888*** PP
+
+                 EEEEEEEEESSSBSSSSEEEE---SSHHHHHHHHHHTTTSEEEEEESS--SSHHHHHHHHCSSEEEEEEEEC-T-TTCCHCTTCHHHHHHHHHHHHTHH CS
+   AstE_AspA 100 divlDLHtgtrgmkhlliaeadiaeaqlqslallaalgieavlllhekeaagfsegsaeelgalaftlELGkagrlgaedisktakgvlavlaligvia 198
+                  + +DLHt+ +g+ ++l+++ad  +               ++  +h+k+++g+++g+a +lg++++t+E G    +++   +++  gv ++l  + +i 
+  EPZ31290.1 215 NYLIDLHTASKGRMNSLYVRADMLDP-------------LII--VHNKSPDGSLRGAAIQLGIPSITVEIGDPSKFQKRFVKNALIGVSNILCNLKMIP 298
+                 *******************9999666.............234..6****************************************************** PP
+
+                 TT.SSCC-EEEEEEEEEEE--STTTSSBSEEETTCCSS-TT-TBTEEECTTEEEEECTSTEEEE-SSSCEEEESTTTCGCTTSCECEEEEE CS
+   AstE_AspA 199 eqesavepaklyrvlreldeprdiraeeaGlvefavnlgddveagellakgllldelggeevelrapqdgvivfineaalvekgaalvkva 289
+                 ++   ++++ +  v++   +  +i++e +G+ +   ++ + v+ ge++  + + + +g+ e ++ ap+dg+i+   + + + +g+ +++++
+  EPZ31290.1 299 QE---PDLPDFDPVVCA--RSYWIFSECGGILSVIPDVNTWVKRGEVI--AFIHSVFGNLEKTYYAPEDGIIIGKSADPVCSTGSRVLHLG 382
+                 **...788888888886..667888***********************..999999999999**********************9998875 PP
+
+>> SPX  SPX domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0   0.8   1.1e-10   1.1e-06       1      31 [.       1      31 [.       1      34 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 1.1e-10
+         SPX  1 MKFakeLeenlvPEWrdkYldYkqLKKlIkk 31
+                MKFak+L+   +P W d Y++Yk LK +Ik+
+  EPZ31290.1  1 MKFAKQLSLRSIPKWADDYINYKELKGKIKE 31
+                ******************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (397 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       457  (0.0238281); expected 383.6 (0.02)
+Passed bias filter:                      439  (0.0228896); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.18s 00:00:00.59 Elapsed: 00:00:00.61
+# Mc/sec: 2099.40
+//
+Query:       EPZ32313.1  [L=324]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    8.2e-32  110.6   0.0    9.9e-32  110.4   0.0    1.0  1  AstE_AspA  Succinylglutamate desuccinylase / Aspartoacylase f
+
+
+Domain annotation for each model (and alignments):
+>> AstE_AspA  Succinylglutamate desuccinylase / Aspartoacylase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.4   0.0   5.2e-36   9.9e-32       3     288 ..      32     306 ..      30     308 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 110.4 bits;  conditional E-value: 5.2e-36
+                 -EEEEEE-SSTT-HHHHHHHHHHHHHHHCCSESSSEEEEEESSHHHHHTTSS-SS..S-CCCSTSCCCHHSSTCHHHHHHHHHHHHHHHC.TTTTSGEE CS
+   AstE_AspA   3 pkvlisAGiHGnElaGvellrqllkkleaadilgeitlvplaNppAiaqgsRyipdredLNRaFpgralgssldeayrateaerladalfaaaleradi 101
+                 p++ ++A++HGnEl+Gv+ +++l+ +++ +++ g+i+ +p +N+p+  + +R + d++dLNR Fpg+  g            + +a +l ++   +  +
+  EPZ32313.1  32 PTLGLTAAVHGNELNGVFCIHRLMAEIDCENLNGTIVAIPCVNVPGYLAYTREFIDKRDLNREFPGNEMG---------MPSQIYAYHLMTKIVSHLNV 121
+                 8899************************************************9999**************.........***********9999***** PP
+
+                 EEEEEEESSSBSSSSEEEE---SSHHHH.......HHHHHHTTTSEEEEEESS--SSHHHHHHHHCSSEEEEEEEEC-T-TTCCHCTTCHHHHHHHHHH CS
+   AstE_AspA 102 vlDLHtgtrgmkhlliaeadiaeaqlqs.......lallaalgieavlllhekeaagfsegsaeelgalaftlELGkagrlgaedisktakgvlavlal 193
+                  +DLHt+  g+ ++ +++a+  ++ + +       +++++ + + ++l  h+ +++g+++ +a   g+  +t+E G  ++++++  s    g+l++l +
+  EPZ32313.1 122 LIDLHTASFGRMNSFYVRANLHDEAVSHvnnslafFKMAKLMCPQIIL--HNNGQDGTLREAASTRGVKVITVEIGNPQTIQKTYTSWCYSGLLNILHY 218
+                 ************************99999***8877777777777777..************************************************* PP
+
+                 HHTHHTT.SSCC-EEEEEEEEEEE--STTTSSBSEEETTCCSS-TT-TBTEEECTTEEEEECTSTEEEE-SSSCEEEESTTTCGCTTSCECEEEE CS
+   AstE_AspA 194 igviaeqesavepaklyrvlreldeprdiraeeaGlvefavnlgddveagellakgllldelggeevelrapqdgvivfineaalvekgaalvkv 288
+                  g+ + +        l  +    ++  ++    +G+ e   +++  v++gel+  +++ d +g+   e+ ap + +i+   +++ + +g+ ++++
+  EPZ32313.1 219 FGMRSHP-----GKDLNHQPIICSHGYWMYTRTGGVLEVYPKVSVFVDKGELI--ATIRDIFGNIVDEYYAPCKSIIIGKSSNPVAMSGDRIAHI 306
+                 *****99.....234444455556777888889********************..999****9999************************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (324 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       426  (0.0222118); expected 383.6 (0.02)
+Passed bias filter:                      401  (0.0209083); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.57
+# Mc/sec: 1828.30
+//
+[ok]

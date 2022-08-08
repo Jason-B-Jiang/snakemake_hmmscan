@@ -1,0 +1,77 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034186.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034186
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F1W3|E7F1W3_DANRE  [L=852]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-55  184.5  11.1    2.7e-15   56.7   1.3    5.4  3  Cadherin  Cadherin domain
+
+
+Domain annotation for each model (and alignments):
+>> Cadherin  Cadherin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.7   1.3   1.4e-19   2.7e-15       1      93 []     164     263 ..     164     263 .. 0.94
+   2 !   41.3   0.1   8.5e-15   1.6e-10       4      76 ..     280     356 ..     278     368 .. 0.90
+   3 !   55.6   0.2   3.1e-19     6e-15       2      92 ..     414     506 ..     413     507 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 56.7 bits;  conditional E-value: 1.4e-19
+                             EEEEEETTS-TCCEEEEECECCCS..TSTTTSEEEEEEECTT...TTSEEEETTTTE..EEESSTC-TTTSSEEEEEEEEEECTGCC CS
+                Cadherin   1 ysasvpEnapvgtevltvtatdaD..lgpnsrirysilegne...ggkFridtetgd..lsttkpLdrEsqgeYeLtveatDesgsp 80 
+                             y+++v E++  gtevltv a+d+D  ++ n++++y+i +  +   +  F i +++ +  ++ +  Ld+E+ ++Y++ vea+D++ ++
+  tr|E7F1W3|E7F1W3_DANRE 164 YEVTVDESQAQGTEVLTVLAHDNDnpTTSNGTFTYTIKSVTPkteNVEFYIRQHKESgsIYFKGCLDYEKAQKYTILVEAKDNGDKK 250
+                             7899***********************************999999999***87665555************************889* PP
+
+                             EEEEEEEEEEEEE CS
+                Cadherin  81 plsstttvtvtVl 93 
+                             +lsst tv ++++
+  tr|E7F1W3|E7F1W3_DANRE 251 QLSSTSTVIINIQ 263
+                             ***********96 PP
+
+  == domain 2  score: 41.3 bits;  conditional E-value: 8.5e-15
+                             EEETTS-TCCEEEEECECCCS..TSTTTSEEEEEEECTTTTSEEEETTTTE....EEESSTC-TTTSSEEEEEEEEEEC CS
+                Cadherin   4 svpEnapvgtevltvtatdaD..lgpnsrirysilegneggkFridtetgd....lsttkpLdrEsqgeYeLtveatDe 76 
+                             +v+E+++ g evl++++td+D    + + ++y+i +++ ++ F+i+t++ +    l+++k+ d+E+q   ++++ +++e
+  tr|E7F1W3|E7F1W3_DANRE 280 KVKERET-GVEVLRLQVTDKDkpGSKAWIAKYTINGDK-ENLFKIETDPVTnegiLTVVKAMDYEEQTHQNISIIVQNE 356
+                             7999966.*************98888888899988888.9********99999************************98 PP
+
+  == domain 3  score: 55.6 bits;  conditional E-value: 3.1e-19
+                             EEEEETTS-TCCEEEEECECCCSTSTTTSEEEEEEECTTTTSEEEETTTTEEEESSTC-TTTS....SEEEEEEEEEECTGCCEEEE CS
+                Cadherin   2 sasvpEnapvgtevltvtatdaDlgpnsrirysilegneggkFridtetgdlsttkpLdrEsq....geYeLtveatDesgspplss 84 
+                             ++ v En+ +gt+++t+ a+d D g +++ + ++ +++ +++ ++d+ tg+++t+k LdrEs     ++Y+++v+a D  g p+l++
+  tr|E7F1W3|E7F1W3_DANRE 414 NVPVLENTAIGTSLTTFIAKDTD-GSHANTFKFVKGEDLDNWVTVDPVTGQVTTAKVLDRESPfvinDTYKVIVYAVDD-GVPQLTG 498
+                             56789******************.99***9999999999****************************************.9****** PP
+
+                             EEEEEEEE CS
+                Cadherin  85 tttvtvtV 92 
+                             t+t+ ++V
+  tr|E7F1W3|E7F1W3_DANRE 499 TGTLFIHV 506
+                             ****9998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (852 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1183  (0.061682); expected 383.6 (0.02)
+Passed bias filter:                      757  (0.0394703); expected 383.6 (0.02)
+Passed Vit filter:                        69  (0.00359768); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.54u 0.19s 00:00:00.73 Elapsed: 00:00:00.75
+# Mc/sec: 3684.29
+//
+[ok]

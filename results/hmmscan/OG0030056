@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030056.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030056
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55FA8|Q55FA8_DICDI  [L=818]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    6.3e-30  104.3   2.1    1.5e-29  103.1   2.1    1.6  1  Glyco_transf_10  Glycosyltransferase family 10 (fucosyltransf
+    2.7e-20   73.1   0.0    1.1e-19   71.1   0.0    2.1  1  Laminin_G_3      Concanavalin A-like lectin/glucanases superf
+
+
+Domain annotation for each model (and alignments):
+>> Glyco_transf_10  Glycosyltransferase family 10 (fucosyltransferase) C-term
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.1   2.1   1.5e-33   1.5e-29       1     169 [.     354     543 ..     354     557 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 103.1 bits;  conditional E-value: 1.5e-33
+         Glyco_transf_10   1 lskkkklvawvvsncktks..kRekyvkeLkkhlevdvyGkcgklk.............elsekeleelikkykFYLafEnsickDY 72 
+                             ++k++++++++ snc      +R+++vkeL+k ++++  G+c + +              ++ +  +e+ kk kF + fEn + ++Y
+  tr|Q55FA8|Q55FA8_DICDI 354 WDKRNNSAIFISSNCVDGLslSRTNLVKELSKIIKIESLGNCLNDNtvnikskeelgsiYSRIEYNMEIYKKAKFVICFENENSTNY 440
+                             5789999********8765579**********************999*****9999997666777778899**************** PP
+
+         Glyco_transf_10  73 iTeKlwnalkrgavPvvlgpsranyerfvppdsfihvddFkspkelaeyLkkldkneeaYleYfeWrkkykvkklskeeeka..... 154
+                             +TeK+++al +ga+P+ +g   +n++++vp+ s i+ ++F++++e+ e++k++ + +  Y++Yf+W+++ + ++l+++  ++     
+  tr|Q55FA8|Q55FA8_DICDI 441 VTEKVYTALYAGAIPIWMG--AKNIDQYVPTGSIINGNEFNNINEIGEHIKSIIDGKIDYKRYFKWKDDNDNQSLESKVIDKlkrci 525
+                             *******************..9**********************************************9666554443333345677 PP
+
+         Glyco_transf_10 155 ...kelCklCeklkekke 169
+                                +  Ck+Ce++ ++ e
+  tr|Q55FA8|Q55FA8_DICDI 526 ntvDMKCKICETIYKSIE 543
+                             778888****99987655 PP
+
+>> Laminin_G_3  Concanavalin A-like lectin/glucanases superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.1   0.0   1.1e-23   1.1e-19      15     152 .]     597     742 ..     581     742 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 71.1 bits;  conditional E-value: 1.1e-23
+             Laminin_G_3  15 p.tssfTvsaWvkpdslpqaaqaiissssdg..rgfelgl..dgsgqlrfavnagngaeesvtsgasvpageWvHvavtyd...... 90 
+                             + ++ +T+ aWvkp+  ++ +++i  ++++g  +g+++ +   ++g+   ++ ag+   + ++s +s+p + W+Hvav+++      
+  tr|Q55FA8|Q55FA8_DICDI 597 NlDDHYTLMAWVKPSTFSD-QRIID-KNHAGtiSGYNFDIqkTSGGRGVARLCAGT---ACFESFKSIPNDLWSHVAVVFScnnldv 678
+                             44778*************9.55555.444446999999995345557778888886...799999****************999988 PP
+
+             Laminin_G_3  91 .ggtlrlYvNGvevgsatltggllaatsgplviGrds..ggddpfdGlidevriydralsaaeIa 152
+                              ++ +++Y+NGv  ++ ++  + ++ ++ plviG++     ++ + G id++ i++  l++++I+
+  tr|Q55FA8|Q55FA8_DICDI 679 qKNRVTFYINGVFNAEFDNFKP-TKINDFPLVIGKSGkkTESTSYHGMIDDIMIFNISLTSDDIK 742
+                             7777************988887.4569*********964459*********************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (818 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1920  (0.100109); expected 383.6 (0.02)
+Passed bias filter:                      536  (0.0279472); expected 383.6 (0.02)
+Passed Vit filter:                        97  (0.00505762); expected 19.2 (0.001)
+Passed Fwd filter:                        18  (0.000938527); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.24s 00:00:00.83 Elapsed: 00:00:00.73
+# Mc/sec: 3617.36
+//
+[ok]

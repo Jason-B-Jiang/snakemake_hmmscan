@@ -1,0 +1,677 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004791.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004791
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VB52|Q9VB52_DROME  [L=1477]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-76  252.8   3.8    1.8e-25   89.1   0.0    3.6  3  MBT       mbt repeat
+    3.9e-19   68.5   0.0    9.7e-19   67.2   0.0    1.7  1  SAM_PNT   Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.1   0.0   1.9e-29   1.8e-25       1      69 []     854     922 ..     854     922 .. 0.99
+   2 !   79.4   0.2     2e-26   1.9e-22       1      66 [.     964    1029 ..     964    1032 .. 0.94
+   3 !   83.7   0.1   9.1e-28   8.7e-24       1      68 [.    1066    1133 ..    1066    1134 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 89.1 bits;  conditional E-value: 1.9e-29
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgyk 69 
+                             mkLEa+dp+n+sl+cv ++v+v g+rl+++fdg++++ydfw++ads+difP GWc ++   Lq+Pk+y+
+  tr|Q9VB52|Q9VB52_DROME 854 MKLEAIDPENCSLFCVCSIVEVRGYRLKLSFDGYSSMYDFWVNADSQDIFPPGWCDETARVLQAPKDYN 922
+                             9******************************************************************96 PP
+
+  == domain 2  score: 79.4 bits;  conditional E-value: 2e-26
+                     MBT    1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPk 66  
+                              m LEa d ++  +icvAtV+++l+ r++v+fdgwdd+yd w++++sp+i+P+GW e  +  + pP+
+  tr|Q9VB52|Q9VB52_DROME  964 MHLEAEDLNDTGKICVATVTDILDERIRVHFDGWDDCYDLWVHITSPYIHPCGWHEGRQQLIVPPD 1029
+                              99****************************************************998887777775 PP
+
+  == domain 3  score: 83.7 bits;  conditional E-value: 9.1e-28
+                     MBT    1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68  
+                              mkLE+vd++np li++AtVv   g+r+++++d w+ +y fw+  dspd++P+GWce ++++L+ P+gy
+  tr|Q9VB52|Q9VB52_DROME 1066 MKLEVVDQRNPCLIRPATVVTRKGYRVQLHLDCWPTEYYFWLEDDSPDLHPIGWCEATSHELETPPGY 1133
+                              9*****************************************************************99 PP
+
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.2   0.0     1e-22   9.7e-19       2      83 ..    1279    1366 ..    1278    1367 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 67.2 bits;  conditional E-value: 1e-22
+                              CCHHHCSCTTTSSS.....SGGG--HHHHHHHHHHHHHHTT-SS-HGGGCTS-HHHHHHS-HHHHHHHSCH..CCHHHHHHHHHH CS
+                 SAM_PNT    2 sslekeqkrlaipa.....dPqeWtkehVleWlewavkefdlakidfskfdmsGkeLcsltkeefleaapl..laGdiLyehLqn 79  
+                              ++++++q ++a++      +P +Wt+++V+e++e+a++++d+ak+ f++ d++G++L++l+++e++++++l  +++ +Ly+++ n
+  tr|Q9VB52|Q9VB52_DROME 1279 PNYRLWQLNSAFKLddvrtNPLHWTSWDVCEYIERALDSTDIAKVIFEQ-DIDGRALLMLGRKELDTYLKLkvGPAVKLYSLILN 1362
+                              7899999999999999999******************************.*******************99777889******** PP
+
+                              HHHH CS
+                 SAM_PNT   80 lrke 83  
+                              lr++
+  tr|Q9VB52|Q9VB52_DROME 1363 LRIA 1366
+                              *986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1477 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1373  (0.0715887); expected 383.6 (0.02)
+Passed bias filter:                      474  (0.0247145); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.70u 0.23s 00:00:00.93 Elapsed: 00:00:00.82
+# Mc/sec: 5851.90
+//
+Query:       tr|F1QZN5|F1QZN5_DANRE  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       266  (0.0138693); expected 383.6 (0.02)
+Passed bias filter:                      239  (0.0124615); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.62
+# Mc/sec: 1048.16
+//
+Query:       tr|X1WB99|X1WB99_DANRE  [L=724]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-95  311.8   5.0    1.4e-31  108.7   0.1    3.5  3  MBT       mbt repeat
+    1.9e-14   53.9   0.0    3.2e-14   53.2   0.0    1.4  1  SAM_1     SAM domain (Sterile alpha motif)
+    4.8e-12   45.9   9.1    1.2e-11   44.7   9.1    1.7  1  zf-C2HC   Zinc finger, C2HC type
+    5.7e-05   23.2   0.0     0.0001   22.4   0.0    1.5  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.5   0.1   2.1e-32     1e-28       1      68 [.     183     250 ..     183     251 .. 0.98
+   2 !  108.7   0.1   2.8e-35   1.4e-31       1      68 [.     290     357 ..     290     358 .. 0.99
+   3 !  104.2   0.1     7e-34   3.4e-30       1      65 [.     394     458 ..     394     461 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 99.5 bits;  conditional E-value: 2.1e-32
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             m+LE +dp++ps++cv t+++v g+r++++fd+ +d+ydfw++ +spdi+PvGWcek+g+kL+pPkg 
+  tr|X1WB99|X1WB99_DANRE 183 MRLEGIDPEHPSMYCVLTIAEVSGHRIRLHFDHFSDCYDFWVNSNSPDIHPVGWCEKTGHKLHPPKGV 250
+                             9*****************************************************************96 PP
+
+  == domain 2  score: 108.7 bits;  conditional E-value: 2.8e-35
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             mkLEav++k+p+ icvAtV+++++ r+lv+fd+w++syd+wcda+sp+i+PvGWc++ng +L+ P+gy
+  tr|X1WB99|X1WB99_DANRE 290 MKLEAVCRKDPTFICVATVTDMVDSRFLVHFDNWEESYDYWCDATSPYIHPVGWCQENGRTLSTPPGY 357
+                             9******************************************************************9 PP
+
+  == domain 3  score: 104.2 bits;  conditional E-value: 7e-34
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpP 65 
+                             mkLE+vd++np li+vAtV+++ ++rl+++fdgw+d+yd+w+dadspd++P GWc+k+g++LqpP
+  tr|X1WB99|X1WB99_DANRE 394 MKLEVVDKRNPVLIRVATVADTDDHRLWIHFDGWTDEYDYWIDADSPDVHPAGWCAKTGHPLQPP 458
+                             9***************************************************************9 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.2   0.0   6.8e-18   3.2e-14       2      64 .]     651     714 ..     650     714 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 53.2 bits;  conditional E-value: 6.8e-18
+                             CTTHSSHHHHHHHT.TSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1   2 kwsvedVgeWLesi.glgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                             +ws ++V+++++ + g+++ + +Fr++ idg+a+lllt+ dL+k l ++l G+++kI+++I ++k
+  tr|X1WB99|X1WB99_DANRE 651 SWSIDEVIQFIQGLpGCKEQVRTFRDEQIDGEAFLLLTQVDLVKiLSIKL-GPALKIYNSILMFK 714
+                             7***********************************************88.**********9987 PP
+
+>> zf-C2HC  Zinc finger, C2HC type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.7   9.1   2.4e-15   1.2e-11       1      29 []     472     501 ..     472     501 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 44.7 bits;  conditional E-value: 2.4e-15
+                 zf-C2HC   1 kCPTpGCdGsGHvkG.kyatHrslsgCPla 29 
+                             +CPT GC+G+GH+kG +y+ H+s+ gCP++
+  tr|X1WB99|X1WB99_DANRE 472 GCPTAGCRGVGHIKGaRYSGHHSAVGCPYS 501
+                             5****************************7 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.4   0.0   2.2e-08    0.0001       1      62 [.     649     710 ..     649     714 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 22.4 bits;  conditional E-value: 2.2e-08
+                             GGGHHHHHHHHHHHHT.TTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHH CS
+                   SAM_2   1 veswsledvaeWLrsi.gleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkki 62 
+                             v sws ++v ++ + + g+++ +  Frd +i+g e+ l lt+ dL ++   ++g+ +ki ++i
+  tr|X1WB99|X1WB99_DANRE 649 VASWSIDEVIQFIQGLpGCKEQVRTFRDEQIDG-EAFLLLTQVDLVKILSIKLGPALKIYNSI 710
+                             569*************999**************.***********766666888889998887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (724 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       583  (0.0303978); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.51u 0.19s 00:00:00.70 Elapsed: 00:00:00.72
+# Mc/sec: 3251.08
+//
+Query:       tr|E9QEN5|E9QEN5_DANRE  [L=119]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (119 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       518  (0.0270087); expected 383.6 (0.02)
+Passed bias filter:                      285  (0.01486); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.35u 0.19s 00:00:00.54 Elapsed: 00:00:00.57
+# Mc/sec: 676.19
+//
+Query:       tr|F1QZ79|F1QZ79_DANRE  [L=493]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-95  314.0   5.9    7.9e-32  109.5   0.1    3.3  3  MBT       mbt repeat
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.7   0.1   2.2e-33   4.3e-29       1      68 [.     208     275 ..     208     276 .. 0.98
+   2 !  109.5   0.1   4.1e-36   7.9e-32       1      68 [.     315     382 ..     315     383 .. 0.99
+   3 !  105.7   0.3     6e-35   1.2e-30       1      67 [.     419     485 ..     419     487 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 100.7 bits;  conditional E-value: 2.2e-33
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             m+LE +dp++ps++cv t+++v g+r++++fd+ +d+ydfw++ +spdi+PvGWcek+g+kL+pPkg+
+  tr|F1QZ79|F1QZ79_DANRE 208 MRLEGIDPEHPSMYCVLTIAEVSGHRIRLHFDHFSDCYDFWVNSNSPDIHPVGWCEKTGHKLHPPKGM 275
+                             9*****************************************************************97 PP
+
+  == domain 2  score: 109.5 bits;  conditional E-value: 4.1e-36
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             mkLEav++k+p+ icvAtV+++++ r+lv+fd+w++syd+wcda+sp+i+PvGWc++ng +L+ P+gy
+  tr|F1QZ79|F1QZ79_DANRE 315 MKLEAVCRKDPTFICVATVTDMVDSRFLVHFDNWEESYDYWCDATSPYIHPVGWCQENGRTLSTPPGY 382
+                             9******************************************************************9 PP
+
+  == domain 3  score: 105.7 bits;  conditional E-value: 6e-35
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkg 67 
+                             mkLE+vd++np li+vAtV+++ ++rl+++fdgw+d+yd+w+dadspd++P GWc+k+g++LqpP  
+  tr|F1QZ79|F1QZ79_DANRE 419 MKLEVVDKRNPVLIRVATVADTDDHRLWIHFDGWTDEYDYWIDADSPDVHPAGWCAKTGHPLQPPIT 485
+                             9****************************************************************66 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (493 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       709  (0.0369675); expected 383.6 (0.02)
+Passed bias filter:                      496  (0.0258616); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.60
+# Mc/sec: 2665.40
+//
+Query:       tr|F1QG75|F1QG75_DANRE  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-88  290.9   4.9    1.7e-31  108.4   0.1    3.3  3  MBT       mbt repeat
+    1.9e-14   53.6  10.6    1.9e-14   53.6  10.6    3.0  1  zf-C2HC   Zinc finger, C2HC type
+      3e-12   46.9   0.0    5.5e-12   46.1   0.0    1.5  1  SAM_1     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   0.1     2e-29   1.3e-25       1      68 [.       8      75 ..       8      76 .. 0.98
+   2 !  108.4   0.1   2.6e-35   1.7e-31       1      68 [.     115     182 ..     115     183 .. 0.99
+   3 !   93.9   0.1   9.1e-31   5.8e-27       1      66 [.     219     284 ..     219     285 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 2e-29
+                     MBT  1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68
+                            mkLE +dp++ps++ v tV++v+g+rl+++fdg++d++dfw++a+  di+P GWce++ +kL+ Pkg 
+  tr|F1QG75|F1QG75_DANRE  8 MKLEGIDPQHPSMYFVLTVAEVCGYRLRLHFDGYSDCHDFWVNANCADIHPAGWCESTAHKLHTPKGC 75
+                            9*****************************************************************96 PP
+
+  == domain 2  score: 108.4 bits;  conditional E-value: 2.6e-35
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             mkLEavd++npslicvAtV++ + +r+lv+fd+wdd+yd+wcd +sp+i+P+GWc + g +L+pP++y
+  tr|F1QG75|F1QG75_DANRE 115 MKLEAVDRMNPSLICVATVTDRVADRFLVHFDNWDDTYDYWCDSSSPYIHPIGWCHERGLPLTPPQDY 182
+                             9******************************************************************9 PP
+
+  == domain 3  score: 93.9 bits;  conditional E-value: 9.1e-31
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPk 66 
+                             mkLEavd++ p li+vAtV++v  +r++++fdgw++ yd w+d d+pdi+P GWce++g++L+pP+
+  tr|F1QG75|F1QG75_DANRE 219 MKLEAVDKRCPGLIRVATVQEVDTYRIKIHFDGWSHLYDEWMDSDHPDIHPAGWCESTGHPLKPPP 284
+                             9****************************************************************6 PP
+
+>> zf-C2HC  Zinc finger, C2HC type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.6  10.6     3e-18   1.9e-14       1      29 []     319     347 ..     319     347 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 53.6 bits;  conditional E-value: 3e-18
+                 zf-C2HC   1 kCPTpGCdGsGHvkGkyatHrslsgCPla 29 
+                             kCPTpGCdGsGHv+G+++ H++lsgCPla
+  tr|F1QG75|F1QG75_DANRE 319 KCPTPGCDGSGHVTGRFTAHHCLSGCPLA 347
+                             7**************************98 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   0.0   8.6e-16   5.5e-12       2      64 .]     447     510 ..     446     510 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 8.6e-16
+                             CTTHSSHHHHHHHT.TSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1   2 kwsvedVgeWLesi.glgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                             +w+ e+V  + + + g+++ +  F++++idg+ +lllt++d++k ++++l G+++kI +aI ++k
+  tr|F1QG75|F1QG75_DANRE 447 TWTIEEVFGFVNNLiGCEEQARIFKDEMIDGESFLLLTQNDIVKiMNIKL-GPALKIHNAILMFK 510
+                             7************55*****************************999988.**********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       509  (0.0265394); expected 383.6 (0.02)
+Passed bias filter:                      417  (0.0217425); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.19s 00:00:00.64 Elapsed: 00:00:00.54
+# Mc/sec: 3111.78
+//
+Query:       tr|E9QEX7|E9QEX7_DANRE  [L=786]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.1e-84  276.4   3.2    2.3e-29  101.5   0.1    3.3  3  MBT       mbt repeat
+      2e-14   53.9   0.0    3.6e-14   53.0   0.0    1.5  1  SAM_1     SAM domain (Sterile alpha motif)
+    6.9e-11   42.2   9.1    6.9e-11   42.2   9.1    2.0  1  zf-C2HC   Zinc finger, C2HC type
+    4.8e-06   26.7   0.0    8.2e-06   25.9   0.0    1.4  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.0   0.1   1.3e-26   6.1e-23       1      68 [.     269     336 ..     269     337 .. 0.98
+   2 !   93.3   0.1   1.8e-30   8.7e-27       1      69 []     376     444 ..     376     444 .. 0.99
+   3 !  101.5   0.1   4.9e-33   2.3e-29       2      68 ..     481     547 ..     480     548 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 81.0 bits;  conditional E-value: 1.3e-26
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             mkLE +dp +p l+cv tV++v g+r++++fdg++++ydfw++ads d+ P GWcek++ kL  Pkg 
+  tr|E9QEX7|E9QEX7_DANRE 269 MKLEGLDPCHPALFCVLTVAEVQGYRIRLHFDGYPECYDFWVNADSWDVKPPGWCEKTSLKLLLPKGC 336
+                             9****************************************************************985 PP
+
+  == domain 2  score: 93.3 bits;  conditional E-value: 1.8e-30
+                     MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgyk 69 
+                             mkLEavd+kn s icvAt++  +++rll+++d+ dd++d+wcda+sp+i+PvG+ce+ + +L+ P +yk
+  tr|E9QEX7|E9QEX7_DANRE 376 MKLEAVDRKNLSDICVATIAAAVDNRLLIHIDHCDDTHDYWCDASSPYIHPVGYCEEVKLTLTTPAEYK 444
+                             9*****************************************************************996 PP
+
+  == domain 3  score: 101.5 bits;  conditional E-value: 4.9e-33
+                     MBT   2 kLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                             kLEavd++np li+vAt+ ++ ++r++++fdgw+d+yd+w+dadsp+++PvGWc+k+g++Lq+P+g 
+  tr|E9QEX7|E9QEX7_DANRE 481 KLEAVDKRNPMLIRVATISDTEEHRIKIHFDGWSDEYDYWLDADSPELHPVGWCQKTGHPLQHPNGT 547
+                             9***************************************************************985 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.0   0.0   7.6e-18   3.6e-14       1      64 []     717     781 ..     717     781 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 53.0 bits;  conditional E-value: 7.6e-18
+                             CCTTHSSHHHHHHHT.TSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1   1 skwsvedVgeWLesi.glgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                             skw+ e+V+ + + + g+ +++ +Fr++ idg+a+lllt++d++k l ++l G+++kI+++I +Lk
+  tr|E9QEX7|E9QEX7_DANRE 717 SKWNTEEVASFVRGLpGCREHAPTFRKEQIDGEAFLLLTQSDIVKiLSIKL-GPALKIYNSILMLK 781
+                             68***********************************************88.************98 PP
+
+>> zf-C2HC  Zinc finger, C2HC type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.2   9.1   1.4e-14   6.9e-11       1      29 []     557     586 ..     557     586 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 42.2 bits;  conditional E-value: 1.4e-14
+                 zf-C2HC   1 kCPTpGCdGsGHvkG.kyatHrslsgCPla 29 
+                             +CPTpGC+G+GH++G +y tH+++ +CP++
+  tr|E9QEX7|E9QEX7_DANRE 557 GCPTPGCNGVGHIRGpRYGTHYTAVSCPYS 586
+                             5****************************7 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.0   1.7e-09   8.2e-06       2      65 ..     717     780 ..     716     781 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 1.7e-09
+                             GGHHHHHHHHHHHHT.TTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                   SAM_2   2 eswsledvaeWLrsi.gleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                             + w++e+va+++r + g++++++ Fr+ +i+g e+ l lt++d  ++   ++g+ +ki ++i  l
+  tr|E9QEX7|E9QEX7_DANRE 717 SKWNTEEVASFVRGLpGCREHAPTFRKEQIDG-EAFLLLTQSDIVKILSIKLGPALKIYNSILML 780
+                             66*************999**************.***********766666999999999998755 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (786 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       947  (0.0493769); expected 383.6 (0.02)
+Passed bias filter:                      589  (0.0307107); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.52u 0.21s 00:00:00.73 Elapsed: 00:00:00.67
+# Mc/sec: 3811.66
+//
+Query:       sp|Q9Y468|LMBL1_HUMAN  [L=840]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.2e-96  314.8   1.8    4.5e-33  113.5   0.2    3.4  3  MBT       mbt repeat
+    2.1e-14   53.5  10.4    2.1e-14   53.5  10.4    2.6  1  zf-C2HC   Zinc finger, C2HC type
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.7   0.0   7.7e-32   7.4e-28       1      69 []     310     378 ..     310     378 .. 0.99
+   2 !  113.5   0.2   4.7e-37   4.5e-33       1      68 [.     417     484 ..     417     485 .. 0.99
+   3 !  102.5   0.0   1.2e-33   1.2e-29       1      67 [.     521     587 ..     521     589 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.7 bits;  conditional E-value: 7.7e-32
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgyk 69 
+                            mkLE +dp++ps++ + tV++v+g+rl+++fdg+++++dfw++a+spdi+P GW ek+g+kLqpPkgyk
+  sp|Q9Y468|LMBL1_HUMAN 310 MKLEGIDPQHPSMYFILTVAEVCGYRLRLHFDGYSECHDFWVNANSPDIHPAGWFEKTGHKLQPPKGYK 378
+                            9******************************************************************97 PP
+
+  == domain 2  score: 113.5 bits;  conditional E-value: 4.7e-37
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                            mkLEavd++npsl+cvA+V++v++ r+lv+fd+wdd+yd+wcd +sp+i+PvGWc+k+g++L+pP++y
+  sp|Q9Y468|LMBL1_HUMAN 417 MKLEAVDRMNPSLVCVASVTDVVDSRFLVHFDNWDDTYDYWCDPSSPYIHPVGWCQKQGKPLTPPQDY 484
+                            9******************************************************************9 PP
+
+  == domain 3  score: 102.5 bits;  conditional E-value: 1.2e-33
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkg 67 
+                            mkLEavd++np li+vA+V +v ++r++++fdgw++ ydfw+dad+pdi+P GWc+k+g++LqpP g
+  sp|Q9Y468|LMBL1_HUMAN 521 MKLEAVDRRNPALIRVASVEDVEDHRIKIHFDGWSHGYDFWIDADHPDIHPAGWCSKTGHPLQPPLG 587
+                            9****************************************************************87 PP
+
+>> zf-C2HC  Zinc finger, C2HC type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.5  10.4   2.2e-18   2.1e-14       1      29 []     621     649 ..     621     649 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 53.5 bits;  conditional E-value: 2.2e-18
+                zf-C2HC   1 kCPTpGCdGsGHvkGkyatHrslsgCPla 29 
+                            kCPTpGCdGsGHv+Gk++ H++lsgCPla
+  sp|Q9Y468|LMBL1_HUMAN 621 KCPTPGCDGSGHVTGKFTAHHCLSGCPLA 649
+                            7**************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (840 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       862  (0.044945); expected 383.6 (0.02)
+Passed bias filter:                      529  (0.0275823); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.73
+# Mc/sec: 3736.27
+//
+Query:       sp|Q96JM7|LMBL3_HUMAN  [L=780]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-95  313.9   7.1    4.4e-31  107.1   0.3    3.5  3  MBT       mbt repeat
+    1.6e-14   54.2   0.0    2.8e-14   53.4   0.0    1.4  1  SAM_1     SAM domain (Sterile alpha motif)
+    7.8e-06   26.0   0.0    1.3e-05   25.3   0.0    1.4  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.7   0.1   8.1e-34   5.2e-30       1      69 []     268     336 ..     268     336 .. 0.99
+   2 !  107.1   0.3   6.9e-35   4.4e-31       1      68 [.     375     442 ..     375     443 .. 0.99
+   3 !  105.9   0.2   1.6e-34     1e-30       1      66 [.     479     544 ..     479     546 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 103.7 bits;  conditional E-value: 8.1e-34
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgyk 69 
+                            mkLE vdp+++s +cv tV++v+g+r++++fdg++d+ydfw++ad  di+PvGWcek+g+kL+pPkgyk
+  sp|Q96JM7|LMBL3_HUMAN 268 MKLEGVDPEHQSVYCVLTVAEVCGYRIKLHFDGYSDCYDFWVNADALDIHPVGWCEKTGHKLHPPKGYK 336
+                            9******************************************************************97 PP
+
+  == domain 2  score: 107.1 bits;  conditional E-value: 6.9e-35
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                            mkLEavd+knps icvAtV++++++r+lv+fd+wd+syd+wc a+sp i+PvGWc+++  +L  P+gy
+  sp|Q96JM7|LMBL3_HUMAN 375 MKLEAVDKKNPSFICVATVTDMVDNRFLVHFDNWDESYDYWCEASSPHIHPVGWCKEHRRTLITPPGY 442
+                            9******************************************************************9 PP
+
+  == domain 3  score: 105.9 bits;  conditional E-value: 1.6e-34
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPk 66 
+                            mkLE+vd++np  i+vAtV+++ ++r++v+fdgw+++yd+w+dadspdi+PvGWc+k+g++LqpP 
+  sp|Q96JM7|LMBL3_HUMAN 479 MKLEVVDKRNPMFIRVATVADTDDHRVKVHFDGWNNCYDYWIDADSPDIHPVGWCSKTGHPLQPPL 544
+                            9****************************************************************6 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.4   0.0   4.4e-18   2.8e-14       1      64 []     706     770 ..     706     770 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 53.4 bits;  conditional E-value: 4.4e-18
+                            CCTTHSSHHHHHHHT.TSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                  SAM_1   1 skwsvedVgeWLesi.glgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                            skws ++V+e+++s+ g++++ + F+++ idg+a+ll+t+ d++k + ++l G+++kI ++I ++k
+  sp|Q96JM7|LMBL3_HUMAN 706 SKWSTDEVSEFIQSLpGCEEHGKVFKDEQIDGEAFLLMTQTDIVKiMSIKL-GPALKIFNSILMFK 770
+                            68*******************************************999977.**********9987 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   0.0   2.1e-09   1.3e-05       2      63 ..     706     767 ..     705     770 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 2.1e-09
+                            GGHHHHHHHHHHHHT.TTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHH CS
+                  SAM_2   2 eswsledvaeWLrsi.gleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiq 63 
+                            + ws+++v+e+ +s+ g+e++ + F+d +i+g e+ l +t+ d  ++   ++g+ +ki+++i 
+  sp|Q96JM7|LMBL3_HUMAN 706 SKWSTDEVSEFIQSLpGCEEHGKVFKDEQIDG-EAFLLMTQTDIVKIMSIKLGPALKIFNSIL 767
+                            66*************999**************.***********76666699999****9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (780 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1112  (0.0579801); expected 383.6 (0.02)
+Passed bias filter:                      552  (0.0287815); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.53u 0.20s 00:00:00.73 Elapsed: 00:00:00.69
+# Mc/sec: 3670.02
+//
+Query:       sp|Q8NA19|LMBL4_HUMAN  [L=623]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.4e-94  308.6   5.3    6.5e-32  109.7   0.2    3.4  3  MBT       mbt repeat
+    4.5e-15   55.9   0.0    7.7e-15   55.2   0.0    1.4  1  SAM_1     SAM domain (Sterile alpha motif)
+    7.1e-13   48.6   9.9    1.7e-12   47.4   9.9    1.7  1  zf-C2HC   Zinc finger, C2HC type
+    7.7e-07   29.2   0.0    1.4e-06   28.4   0.0    1.5  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> MBT  mbt repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.8   0.0   1.5e-31   7.2e-28       1      69 []      88     156 ..      88     156 .. 0.99
+   2 !  109.7   0.2   1.4e-35   6.5e-32       1      68 [.     196     263 ..     196     264 .. 0.99
+   3 !  103.3   0.3   1.4e-33   6.8e-30       1      67 [.     300     366 ..     300     368 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.8 bits;  conditional E-value: 1.5e-31
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgyk 69 
+                            m+LE +dp++ps +cv +V++v+g+rl+++fdg+ ++ydfw +a+spdi+PvGWcek++++L+ Pkgy+
+  sp|Q8NA19|LMBL4_HUMAN  88 MRLEGIDPRHPSVFCVLSVAEVCGYRLRLHFDGYLSCYDFWTNAGSPDIHPVGWCEKTKHELHIPKGYR 156
+                            9******************************************************************96 PP
+
+  == domain 2  score: 109.7 bits;  conditional E-value: 1.4e-35
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkgy 68 
+                            mkLEavd+knpsl+cvAt+++++++rllv+fd+wddsyd+wcd++sp++ PvGWc++ng +L +P+gy
+  sp|Q8NA19|LMBL4_HUMAN 196 MKLEAVDRKNPSLVCVATIADIVEDRLLVHFDNWDDSYDYWCDVNSPYVQPVGWCQENGRTLIAPQGY 263
+                            9******************************************************************9 PP
+
+  == domain 3  score: 103.3 bits;  conditional E-value: 1.4e-33
+                    MBT   1 mkLEavdpknpslicvAtVvkvlgrrllvrfdgwddsydfwcdadspdifPvGWcekngikLqpPkg 67 
+                            mkLE+vd++np+li+vAt+v+v ++r++v+fdgwd++yd+w+ adspdi+P+GWc ++g++L+ P+ 
+  sp|Q8NA19|LMBL4_HUMAN 300 MKLEVVDKRNPRLIRVATIVDVDDQRVKVHFDGWDHKYDYWVEADSPDIHPIGWCDVTGHPLEVPQR 366
+                            9****************************************************************86 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.2   0.0   1.6e-18   7.7e-15       2      64 .]     542     605 ..     541     605 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 55.2 bits;  conditional E-value: 1.6e-18
+                            CTTHSSHHHHHHHT.TSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                  SAM_1   2 kwsvedVgeWLesi.glgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                             w+v++V+e+ +s+ g++++++ F+++ idg+a+lllt+ d++k ++++l G+++kI+++I +++
+  sp|Q8NA19|LMBL4_HUMAN 542 RWTVDEVAEFVQSLlGCEEHAKCFKKEQIDGKAFLLLTQTDIVKvMKIKL-GPALKIYNSILMFR 605
+                            6************77*****************************9***88.**********9975 PP
+
+>> zf-C2HC  Zinc finger, C2HC type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.4   9.9   3.5e-16   1.7e-12       2      29 .]     379     407 ..     378     407 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 47.4 bits;  conditional E-value: 3.5e-16
+                zf-C2HC   2 CPTpGCdGsGHvkG.kyatHrslsgCPla 29 
+                            CPTpGC+G+GH++G +y+ H+s++gCP++
+  sp|Q8NA19|LMBL4_HUMAN 379 CPTPGCRGIGHIRGpRYSGHHSAFGCPYS 407
+                            ****************************7 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.4   0.0     3e-10   1.4e-06       3      63 ..     542     602 ..     540     605 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 28.4 bits;  conditional E-value: 3e-10
+                            GHHHHHHHHHHHHT.TTGGGHHHHHHTTCSHHHHHTTSCHHHH.HHTTHHHHHHHHHHHHHHH CS
+                  SAM_2   3 swsledvaeWLrsi.gleqytdnFrdagitgaelllrlteedL.krlGitsvghrkkilkkiq 63 
+                             w++++vae+++s+ g+e++++ F++ +i+g ++ l lt+ d  k ++i ++g+ +ki ++i 
+  sp|Q8NA19|LMBL4_HUMAN 542 RWTVDEVAEFVQSLlGCEEHAKCFKKEQIDG-KAFLLLTQTDIvKVMKI-KLGPALKIYNSIL 602
+                            6***********888****************.***********66****.99999**999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (623 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       613  (0.031962); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.46u 0.16s 00:00:00.62 Elapsed: 00:00:00.69
+# Mc/sec: 2929.72
+//
+[ok]

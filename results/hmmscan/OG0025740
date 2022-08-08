@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025740.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025740
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|G5EGM1|MMPA_CAEEL  [L=521]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.9e-21   75.6   0.2    8.5e-21   74.5   0.1    1.6  1  Peptidase_M10  Matrixin
+    1.4e-10   41.0   7.7     0.0052   16.8   1.8    4.4  0  Hemopexin      Hemopexin
+    1.3e-09   38.2   0.2    2.4e-09   37.3   0.2    1.4  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.5   0.1   1.3e-24   8.5e-21       1     159 []     102     257 ..     102     257 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 74.5 bits;  conditional E-value: 1.3e-24
+                           STSSSEEEEEE..SSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSS.SSS-BSSSSESEEEBSSSSTTTT CS
+                           xxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyri..lnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgd.gypfdgkggvlahafapgeglgg 86 
+                           kw++k +ty    ++++++++ ++ r+++++A ++wse ++++  e + ++  + i+ gr++h     +fd   ++lahaf+p   ++g
+  sp|G5EGM1|MMPA_CAEEL 102 KWKEKIITYGCkaVGTSTRISLDDLRRTMHQAASQWSELADVEIVESSVKNPMMVISAGRENHYPcTVRFD--TKTLAHAFFP---TNG 185
+                           7999988886511566777********************************************98778999..679*******...*** PP
+
+                           EEEEETTS-EESSTS..SSSEE.HHHHHHHHHHHHTTBES-SSTTSTTSSSCTS-TTT-SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10  87 dihfdddeqWtlgeekveqgvs.lflVaaHEiGHalGLeHssdkdalmyplykveekkvrlskdDvkgiqelYg 159
+                           +ih++d  q+++ + +++ g++ l++V+aHE+GHalG +Hs d d++m+++ +   +k + ++ D   +++ Yg
+  sp|G5EGM1|MMPA_CAEEL 186 QIHINDRVQFAMTNYTERMGANsLYSVVAHEMGHALGFSHSPDIDSVMFAYDT--PRKWKFTSMDKYNMRSYYG 257
+                           ************888777776559************************98765..5788888888888888886 PP
+
+>> Hemopexin  Hemopexin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.3   0.2   3.8e-13   2.4e-09      10      57 .]      28      75 ..      27      75 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 37.3 bits;  conditional E-value: 3.8e-13
+                          HHHHHTT---SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1 10 ryLsrlGylsgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                          ++L+++Gyl+   +    +++ +a++++Q+  gL+ tG+ld+ T++++
+  sp|G5EGM1|MMPA_CAEEL 28 KFLQKYGYLTSGDNQLSSESLSDALKNMQRMAGLEETGELDERTIQMM 75
+                          58*******88888********************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (521 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1503  (0.078367); expected 383.6 (0.02)
+Passed bias filter:                      872  (0.0454664); expected 383.6 (0.02)
+Passed Vit filter:                       114  (0.005944); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.47u 0.23s 00:00:00.70 Elapsed: 00:00:00.74
+# Mc/sec: 2271.18
+//
+[ok]

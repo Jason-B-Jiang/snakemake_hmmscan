@@ -1,0 +1,70 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034331.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034331
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E9QGE4|E9QGE4_DANRE  [L=800]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-07   30.9  27.0     0.0022   18.4   3.0    3.8  2  zf-C2H2   Zinc finger, C2H2 type
+    1.9e-06   28.6   1.1    6.7e-06   26.9   0.2    2.4  1  ELM2      ELM2 domain
+
+
+Domain annotation for each model (and alignments):
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.5   4.5   9.4e-07     0.009       2      23 .]      74      95 ..      74      95 .. 0.97
+   2 !   18.4   3.0   2.3e-07    0.0022       1      23 []     101     123 ..     101     123 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 16.5 bits;  conditional E-value: 9.4e-07
+                            EETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2  2 kCpdCgksFkrksnLkrHirtH 23
+                            kC++C k Fk+ s+Lk+H+ +H
+  tr|E9QGE4|E9QGE4_DANRE 74 KCHVCRKEFKSTSSLKTHLLSH 95
+                            7******************999 PP
+
+  == domain 2  score: 18.4 bits;  conditional E-value: 2.3e-07
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             ++C++C + Fk+ ++L +H+++H
+  tr|E9QGE4|E9QGE4_DANRE 101 HVCEVCQRAFKHHEELISHMMIH 123
+                             79*******************99 PP
+
+>> ELM2  ELM2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.9   0.2     7e-10   6.7e-06       1      41 [.     619     657 ..     619     667 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 26.9 bits;  conditional E-value: 7e-10
+                    ELM2   1 IrVGskYQAeiPdlmepsereakeeeeeealvWdPnhnlnd 41 
+                             I++Gs++QAeiP+++++    ++e+ +++  vW P ++l++
+  tr|E9QGE4|E9QGE4_DANRE 619 INIGSQFQAEIPPVRDSIYLLYEEHPAQL--VWAPWKDLST 657
+                             9**************************99..****888775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (800 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       771  (0.0402002); expected 383.6 (0.02)
+Passed bias filter:                      409  (0.0213254); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.49u 0.20s 00:00:00.69 Elapsed: 00:00:00.74
+# Mc/sec: 3482.68
+//
+[ok]

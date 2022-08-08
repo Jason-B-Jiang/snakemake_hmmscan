@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033888.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033888
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|E7FAG6|AMR1A_DANRE  [L=1315]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.5e-08   33.0   4.2    0.00088   20.1   0.4    4.8  1  WD40         WD domain, G-beta repeat
+    2.1e-07   31.2   0.0      0.064   13.6   0.0    4.3  0  ANAPC4_WD40  Anaphase-promoting complex subunit 4 WD40 domain
+
+
+Domain annotation for each model (and alignments):
+>> WD40  WD domain, G-beta repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1   0.4   9.1e-08   0.00088       1      38 []      84     123 ..      84     123 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 9.1e-08
+                            TEEEEEEESS.SSEEEEEEETTSSE.......EEEEETTSEEEEEE CS
+                   WD40   1 gqclrtltGH.ssvtslafspdgaw.......lasGsdDgtvriWd 38 
+                            g+c+++l GH    ++l      ++       +asG+ Dg vriWd
+  sp|E7FAG6|AMR1A_DANRE  84 GKCVHSLVGHrRTPWCL------TFhpiipglIASGCLDGEVRIWD 123
+                            79********8446899......666666666789999*******9 PP
+
+>> ANAPC4_WD40  Anaphase-promoting complex subunit 4 WD40 domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1315 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       619  (0.0322749); expected 383.6 (0.02)
+Passed bias filter:                      379  (0.0197612); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.22s 00:00:00.81 Elapsed: 00:00:00.80
+# Mc/sec: 5352.95
+//
+[ok]

@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034380.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034380
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R250|F1R250_DANRE  [L=205]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.4e-19   70.6   1.4    1.8e-19   70.3   1.4    1.1  1  Pkinase         Protein kinase domain
+      2e-10   40.5   0.9    2.6e-10   40.1   0.9    1.1  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.3   1.4   1.8e-23   1.8e-19       1      86 [.     108     192 ..     108     202 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 70.3 bits;  conditional E-value: 1.8e-23
+                             EEEEEEEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHHHHHHHHHHHHHHHSCTTB--EEEEEEESSEEEEEEE--TTEBHH CS
+                 Pkinase   1 yekleklGeGsfGkVykaveketgkivAvKkikkekakkkkekkvlrEikilkklkhpnivrlyevfeekdelylvleyveggela 86 
+                             y++ + +G G+f++V ++ve+++g+++A+K+i+k+k + k++  +++E++il+k+khpniv l+e + + +ely+v+e+v+ ++l+
+  tr|F1R250|F1R250_DANRE 108 YKVGRMIGDGNFAVVRECVERSSGREYALKIINKSKCRGKEH-MIQNEVSILRKVKHPNIVLLIEEMDTYSELYMVMELVKVKQLT 192
+                             788999********************************9886.9*************************************99876 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   0.9   2.7e-14   2.6e-10       2      88 ..     109     191 ..     108     198 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 2.7e-14
+                             EEEEEEEEESSEEEEEEEEETTTTSTEEEEEEEEESTTSSHHHHHHHHHHHHHHHTS-BTTB--EEEEEESSSSEEEEEE--TTEBH CS
+          PK_Tyr_Ser-Thr   2 elgkklGeGafGeVvegtlkgekekkevkVavKtlkeeaeeeekeefleeakimkklkhpnivkllgvctkeepllivteyvegGdL 88 
+                             ++g+ +G G+f+ V e+  +    ++  + a+K++++++ + +++++++e++i++k+khpniv l+  +   ++l++v+e+v+  +L
+  tr|F1R250|F1R250_DANRE 109 KVGRMIGDGNFAVVRECVER----SSGREYALKIINKSKCRGKEHMIQNEVSILRKVKHPNIVLLIEEMDTYSELYMVMELVKVKQL 191
+                             57899************999....888999*****99999998999999*********************************98877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (205 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       630  (0.0328484); expected 383.6 (0.02)
+Passed bias filter:                      395  (0.0205954); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.77
+# Mc/sec: 866.33
+//
+[ok]

@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047319.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047319
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ32843.1  [L=392]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-13   49.1   0.5    7.8e-13   48.5   0.5    1.2  1  Pkinase   Protein kinase domain
+    2.4e-08   33.5   0.1    3.9e-08   32.8   0.1    1.3  1  ABC1      ABC1 atypical kinase-like domain
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.5   0.5   8.1e-17   7.8e-13       6     153 ..     205     357 ..     202     379 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 48.5 bits;  conditional E-value: 8.1e-17
+                 EEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHH..HHHHHHHHHHHHHSCTTB--EEEEEEE...SSEEEEEEE--TTEBHHHHHHHHSS--HHH CS
+     Pkinase   6 klGeGsfGkVykaveketgkivAvKkikkekakkkke..kkvlrEikilkklkhpnivrlyevfee...kdelylvleyveggeladllerkgslseee 99 
+                 +lG+G+f++V ++  ++ g+++A+K++  +++  k e   ++ r  + + +++ + + +l +++++   +++ ++++++v+g ++++l    ++++ ++
+  EPZ32843.1 205 QLGRGKFSVVREVE-SRFGEKFALKIVTLNRDFPKAEnkARYSRIARKMFETEVNSLSELSRFCQStklEEYGFILMNIVRGLNIDELDF--MNMDVKK 300
+                 79******999987.89*************99998873322223233333333666666666666666599999*******988777764..789999* PP
+
+                 HHHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEE.T..TTEEEE-SGTTSEESSSSCC CS
+     Pkinase 100 akkiakqilegleylHsegvvHrDlKpeNiLid.e..kgelKitDFGlakelesssk 153
+                 +++i + +++ +e +H+ g vH Dl p NiL+d +  k+el+i+DFG +k+ ++s++
+  EPZ32843.1 301 IENIKNLLVNRIEEIHKLGKVHSDLHPGNILVDvSmpKAELQIIDFGGVKKGTESNR 357
+                 *********************************6434556*******9999887764 PP
+
+>> ABC1  ABC1 atypical kinase-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.8   0.1   4.1e-12   3.9e-08     144     222 ..     277     357 ..     250     369 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 32.8 bits;  conditional E-value: 4.1e-12
+        ABC1 144 vLtmeyvdGikvddlealeeagisrkeiaeklvelfleqifedgffhaDphpGNllvrkdg...elvllDfGlvgeldektr 222
+                 ++ m+ v G ++d+l+ ++ + +++ e +++l+   +e+i + g +h+D hpGN+lv+ +    el ++DfG v++ +e+ r
+  EPZ32843.1 277 FILMNIVRGLNIDELDFMN-MDVKKIENIKNLLVNRIEEIHKLGKVHSDLHPGNILVDVSMpkaELQIIDFGGVKKGTESNR 357
+                 78899**********9999.55555555666777789*********************666677********9998877766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (392 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1078  (0.0562073); expected 383.6 (0.02)
+Passed bias filter:                      622  (0.0324313); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.49u 0.26s 00:00:00.75 Elapsed: 00:00:00.52
+# Mc/sec: 2434.33
+//
+[ok]

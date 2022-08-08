@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032154.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032154
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E8NH57|E8NH57_DROME  [L=178]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      6e-82  275.4   0.0    6.8e-82  275.2   0.0    1.0  1  Biopterin_H  Biopterin-dependent aromatic amino acid hydroxyl
+
+
+Domain annotation for each model (and alignments):
+>> Biopterin_H  Biopterin-dependent aromatic amino acid hydroxylase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  275.2   0.0   3.5e-86   6.8e-82     158     330 ..       1     173 [.       1     174 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 275.2 bits;  conditional E-value: 3.5e-86
+             Biopterin_H 158 lytpePdvvhellGhvplladkefaqfsqeiglaslGasdeeieklatlywftvefglckqngelkaygagllssfgelkyalsdkp 244
+                             +ytpePdv+hel+Ghvpl+ad++faqfsqeiglaslGa+d+ iekl+t++wftve+g+c+q+gelkaygagllss+gel+y+l+dkp
+  tr|E8NH57|E8NH57_DROME   1 MYTPEPDVCHELMGHVPLFADPAFAQFSQEIGLASLGAPDDYIEKLSTIFWFTVEYGVCRQEGELKAYGAGLLSSYGELEYCLTDKP 87 
+                             7************************************************************************************** PP
+
+             Biopterin_H 245 evkpfdpektavqeyqiteyqpvyfvaesfedakeklrkfaktlkrpfsvrydpytqsvevldskeklkkllkelkeelkllakal 330
+                             + k+f+pe+t v++y+it++qp+y+va+sfe akek  kfa+++ rpf vry++ytqsvevldsk ++++l++++++e+++l++a+
+  tr|E8NH57|E8NH57_DROME  88 QLKDFEPEVTGVTKYPITQFQPLYYVADSFETAKEKTIKFANSIPRPFGVRYNAYTQSVEVLDSKPQISNLMDNINSEFQILQNAV 173
+                             **********************************************************************************9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (178 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       362  (0.0188748); expected 383.6 (0.02)
+Passed bias filter:                      330  (0.0172063); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.54
+# Mc/sec: 1062.22
+//
+[ok]

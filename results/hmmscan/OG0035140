@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035140.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035140
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A5H1ZRI4|A0A5H1ZRI4_DANRE  [L=573]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      9e-53  178.6   2.1    1.3e-52  178.1   2.1    1.2  1  PCIF1_WW  Phosphorylated CTD interacting factor 1 WW domain
+    3.5e-10   39.9   0.4    7.6e-10   38.8   0.4    1.6  1  WW        WW domain
+
+
+Domain annotation for each model (and alignments):
+>> PCIF1_WW  Phosphorylated CTD interacting factor 1 WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  178.1   2.1   1.3e-56   1.3e-52       1     124 [.     451     573 .]     451     573 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 178.1 bits;  conditional E-value: 1.3e-56
+                        PCIF1_WW   1 kLkkLyessseeddkkleaflarlfalllrYqtllGeeeeegaglqaalpeevfevLkkelgvsvecFASPlncyfeqy 79 
+                                     kL+ Ly+ +s+ dd+++e+fl+r+++l++rYq+++G+  +eg+glq +lp  vfe+L+k++gv++ecFASPlncyf+q+
+  tr|A0A5H1ZRI4|A0A5H1ZRI4_DANRE 451 KLELLYR-YSCIDDPRFEKFLSRVWCLIKRYQVMFGSGVNEGSGLQGSLPVPVFEALNKQFGVTFECFASPLNCYFKQF 528
+                                     89*****.*********************************************************************** PP
+
+                        PCIF1_WW  80 csafpdtDayFGsrGsffdfkpesgsfeanPPfveevmeamaehi 124
+                                     csafpd+D++FGsrG+f++f+p+sgsfeanPPf+ee+m+am++h+
+  tr|A0A5H1ZRI4|A0A5H1ZRI4_DANRE 529 CSAFPDIDGFFGSRGPFLSFSPASGSFEANPPFCEELMDAMVTHF 573
+                                     ******************************************986 PP
+
+>> WW  WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.8   0.4     8e-14   7.6e-10       3      31 .]      47      75 ..      45      75 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 38.8 bits;  conditional E-value: 8e-14
+                                    TTEEEEE-TTTT-EEEEETTT--EESS-- CS
+                              WW  3 pGWeeqwdpesGrvYYyNheTgetqWekP 31
+                                    +GW ++w+++ +r+YY+N +T+++ We P
+  tr|A0A5H1ZRI4|A0A5H1ZRI4_DANRE 47 AGWSKCWSKRENRPYYFNRFTNQSLWEMP 75
+                                    7**************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (573 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       521  (0.0271651); expected 383.6 (0.02)
+Passed bias filter:                      424  (0.0221075); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.69
+# Mc/sec: 2705.45
+//
+[ok]

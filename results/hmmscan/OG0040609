@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040609.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040609
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NPF7|IL23A_HUMAN  [L=189]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-98  326.7   1.2    2.8e-98  326.5   1.2    1.0  1  IL23      Interleukin 23 subunit alpha
+
+
+Domain annotation for each model (and alignments):
+>> IL23  Interleukin 23 subunit alpha
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.5   1.2  1.5e-102   2.8e-98       1     158 []      28     184 ..      28     184 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 326.5 bits;  conditional E-value: 1.5e-102
+                   IL23   1 pawaqcqqlsqklcalawsahaevghlelpreegdeettddvpriqcedgcdpqglkdnsqlclqrirrglvfyekllgsdifkgeps 88 
+                            paw+qcqqlsqklc+lawsah+ vgh++l reegdeett+dvp+iqc+dgcdpqgl+dnsq+clqri++gl+fyekllgsdif+geps
+  sp|Q9NPF7|IL23A_HUMAN  28 PAWTQCQQLSQKLCTLAWSAHPLVGHMDL-REEGDEETTNDVPHIQCGDGCDPQGLRDNSQFCLQRIHQGLIFYEKLLGSDIFTGEPS 114
+                            79**************************9.********************************************************** PP
+
+                   IL23  89 llpdgpveqlhasllglsqllqpedhswetqqvpslspsqpwqrlllrlkilrslqafvavaarvfahga 158
+                            llpd+pv+qlhasllglsqllqpe+h+wetqq+pslspsqpwqrlllr+kilrslqafvavaarvfahga
+  sp|Q9NPF7|IL23A_HUMAN 115 LLPDSPVGQLHASLLGLSQLLQPEGHHWETQQIPSLSPSQPWQRLLLRFKILRSLQAFVAVAARVFAHGA 184
+                            *********************************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (189 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       300  (0.0156421); expected 383.6 (0.02)
+Passed bias filter:                      258  (0.0134522); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.19s 00:00:00.49 Elapsed: 00:00:00.75
+# Mc/sec: 817.33
+//
+[ok]

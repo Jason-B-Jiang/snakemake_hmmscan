@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0027744.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0027744
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9GYM8|Q9GYM8_CAEEL  [L=695]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.5e-16   60.5  14.4    1.5e-16   60.5  14.4    1.6  1  Ion_trans    Ion transport protein
+      1e-06   28.7   9.0      1e-06   28.7   9.0    2.8  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> Ion_trans  Ion transport protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.5  14.4   1.6e-20   1.5e-16       4     220 ..      96     318 ..      93     324 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 60.5 bits;  conditional E-value: 1.6e-20
+                             HHHHHHHHHHHHHHHHHSCSSSSTHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCH.......HHHHHHCTSHHHHHHHHHHHHHHH CS
+               Ion_trans   4 felfilllillncvflaletyfpedelektileilelvftaiftlemllkilalgl.......likkrYlrdpwnilDflvvlpsll 83 
+                             +++fi+ l++ n+++ a    +++  +  +i ++le++ +++f+le+++++++ +         +++ Yl ++  ++D+l++  ++l
+  tr|Q9GYM8|Q9GYM8_CAEEL  96 YHFFIFGLVIANIILGAATNDNDS--TVSKIHFFLEIFMIVFFILEFAVRLWSVRAdakyrtkYGRLYYLFHTVTLIDILIIPATIL 180
+                             789**************9444444..4449***********************9999999*9*9*********************** PP
+
+                             HHHHHC..HHHHHHHHHHHHGGGGGGGHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTCCCSCTS.HHSSSS CS
+               Ion_trans  84 slvlse..esllllsvlrlfrvlrllklisrleglrtlvtalirsvkdllnvlllllvvlfifaligvqlfkgklrekne.caktwe 167
+                              lv +      + l  lr++++lrl+++ +++ +++ l +++i    +l+ + +++lvv++  a i++      l +  + + ++  
+  tr|Q9GYM8|Q9GYM8_CAEEL 181 LLVFKGhdVDGSTLDTLRFIQILRLFHVDRQMATWKLLRKMIILGKWQLMATYYITLVVGLSLATIVYSTE--ALAQGIQdNGYGLI 265
+                             99555556679********************************************************9999..44433225667788 PP
+
+                             SSTTTSSSSSSHHHHHHHHHHHHTTSSHHHHHHHHHHHTHHHHHHHHHHHHHH CS
+               Ion_trans 168 npnngntnFdnfftallwlfrlmttegwgdilyatldekskvaliyfvifiil 220
+                              p+  n +F ++ ++++++ ++  t+g+gdi+++    k  v+++ f++f+ +
+  tr|Q9GYM8|Q9GYM8_CAEEL 266 VPEGTNATFPTMAHSWWFTAVTVMTVGYGDIYPVGALTKFLVCVLGFIAFCTF 318
+                             88888999*******************************77777777777754 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.7   9.0     1e-10     1e-06       4      69 ..     238     321 ..     235     327 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 28.7 bits;  conditional E-value: 1e-10
+                             HHTCHHHHHHHHC.........................T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   4 llvlifgavfysl.....................eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaav 69 
+                             ++ l +++++ys                             +  ++ +F+ vt+ TvGYGdi+p +++++++++v++++ ++ f a+
+  tr|Q9GYM8|Q9GYM8_CAEEL 238 VVGLSLATIVYSTealaqgiqdngyglivpegtnA---TFPTMAHSWWFTAVTVMTVGYGDIYPVGALTKFLVCVLGFIAFCTFQAA 321
+                             55566666666666777777777777777764322...33488899*******************9999**********99998665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (695 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1003  (0.0522968); expected 383.6 (0.02)
+Passed bias filter:                      433  (0.0225768); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.21s 00:00:00.64 Elapsed: 00:00:00.72
+# Mc/sec: 3112.65
+//
+[ok]

@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026066.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026066
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q93243|NAS37_CAEEL  [L=765]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-69  231.5   0.0    1.4e-68  230.4   0.0    1.6  1  Astacin   Astacin (Peptidase family M12A)
+    9.4e-07   29.0  12.0    2.8e-06   27.5  12.0    1.9  1  TSP_1     Thrombospondin type 1 domain
+
+
+Domain annotation for each model (and alignments):
+>> Astacin  Astacin (Peptidase family M12A)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  230.4   0.0   1.5e-72   1.4e-68       2     190 ..     123     308 ..     122     309 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 230.4 bits;  conditional E-value: 1.5e-72
+                            S-GCCEEEEEE-TTS-HHHHHHHHHHHHHHHHHSS-EEEE-S.SSSCEEEEES-SSCCE-SS--SSEEEEEE-TTS-SHHHHHHHHHH CS
+                Astacin   2 kwpeakipYeldesleekeraaikkaleeyekktCirfkereaseenylkvtkaegClSevGraggkqevslgkgCeklgiivHElmH 89 
+                             wp+ +i+Ye+ +  ee++r++i++a++++e++ C++fke+   +++ l++++++gC+S+vGr+gg+q vs+g gC++lgi++HE++H
+  sp|Q93243|NAS37_CAEEL 123 FWPNLTISYEFYGG-EETWRQLIRSAIRHVEQNVCFKFKENG-GDRDGLRYYRGNGCWSNVGRVGGRQLVSIGYGCDSLGIVSHETLH 208
+                            6************9.9**************************.9******************************************** PP
+
+                            HHTB--GGGSTTGGGTEEE-GGGB-TT-GGGC----CCCEE-TT----TT-TTS--TTTTBSSTTS-SEEESSGCCTTTTT--SS--H CS
+                Astacin  90 alGffHeqsRtdrdeyvsinkeniekgqeenfekvdskevdslgvpYdygSimhYakkafskngaleTivpkkeelqktiGqreklse 177
+                            alG++HeqsR drd+++si+ ++i++g+e+nf+k++++++d+lg+pYd+gS+mhY++k+f+ +++++Ti++++ ++q+tiGqr+ ls+
+  sp|Q93243|NAS37_CAEEL 209 ALGLWHEQSRDDRDNFISIVADKITRGTEGNFAKRTAANSDNLGQPYDLGSVMHYGAKSFAYDWSSDTIKTRDWRYQNTIGQRDGLSF 296
+                            **************************************************************************************** PP
+
+                            HHHHHHHHHTT-S CS
+                Astacin 178 vDikkinklYkCk 190
+                             D k+in++Y C+
+  sp|Q93243|NAS37_CAEEL 297 KDAKMINTRY-CS 308
+                            **********.97 PP
+
+>> TSP_1  Thrombospondin type 1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5  12.0   2.9e-10   2.8e-06       1      49 []     580     626 ..     580     626 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 2.9e-10
+                            TSCCCSSS-SSSSS.EEEEEEEECSETTSTTSS-BSSTSEEEEEEESSSC CS
+                  TSP_1   1 spwseWspCsvTCg.kGsqvRqRtckspqkggeqCtgdaaetqaCkmqkC 49 
+                            s+w+eWs+Cs +Cg  G+++R R c +    ++ C+g   + + C+++ C
+  sp|Q93243|NAS37_CAEEL 580 SAWGEWSACSQPCGgCGTKTRVRACYGG---NQVCPGSNLDRESCNAHAC 626
+                            89************89**********99...******************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (765 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       724  (0.0377496); expected 383.6 (0.02)
+Passed bias filter:                      430  (0.0224204); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.21s 00:00:00.66 Elapsed: 00:00:00.78
+# Mc/sec: 3173.62
+//
+[ok]

@@ -1,0 +1,140 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0020745.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0020745
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R3T4|F1R3T4_DANRE  [L=393]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.4e-21   74.0   0.1    1.1e-20   73.0   0.1    1.6  1  GalKase_gal_bdg  Galactokinase galactose-binding signature
+    1.8e-14   54.0   0.0    4.8e-14   52.6   0.0    1.7  1  GHMP_kinases_C   GHMP kinases C terminal
+      4e-12   46.3   0.3    9.1e-12   45.1   0.3    1.7  1  GHMP_kinases_N   GHMP kinases N terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> GalKase_gal_bdg  Galactokinase galactose-binding signature
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.0   0.1   1.8e-24   1.1e-20       3      50 .]      21      68 ..      19      68 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 73.0 bits;  conditional E-value: 1.8e-24
+                            HHHHHSS-S..EEEEEEEEEEEE-TT-CCCT-EEEEEEEEEEEEEEEEE CS
+         GalKase_gal_bdg  3 Feelfgkepe.fvarAPGRvnLiGEHtDYngGfVlpaAidldtvvavsp 50
+                            ++ +fg++ + + ++APGRvnLiGEHtDYn+GfVlp+A+++ tv++ s+
+  tr|F1R3T4|F1R3T4_DANRE 21 YRGTFGED-AnVAVCAPGRVNLIGEHTDYNEGFVLPMALPMVTVMVGSK 68
+                            6779***9.44**********************************9886 PP
+
+>> GHMP_kinases_C  GHMP kinases C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.6   0.0   7.5e-18   4.8e-14       1      77 [.     292     371 ..     292     375 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 52.6 bits;  conditional E-value: 7.5e-18
+          GHMP_kinases_C   1 llealergdlellgellnlsqrselkavvgilnpeleellealselG.algaklsGaGgGptvfalf...kdkdeaeqvar 77 
+                             ++eal++gd++++g+l+ +s++s l++ +++++pel+el++a++e++ ++g++++G G+G++ ++l     ++++++ +++
+  tr|F1R3T4|F1R3T4_DANRE 292 AAEALKQGDYKEFGRLMVESHNS-LRDNYEVSCPELDELVSAALEVDgVFGSRMTGGGFGGCTVTLLqahATESAVKHIQE 371
+                             579*******************9.6668***************99999******************955555555555544 PP
+
+>> GHMP_kinases_N  GHMP kinases N terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.1   0.3   1.4e-15   9.1e-12       2      65 ..     128     194 ..     127     195 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 45.1 bits;  conditional E-value: 1.4e-15
+                             EEEEESSHTTSSSCHHHHHHHHHHHHHHHHTTECHHH...HHHHHHHHHHHHHHHHHSHHHHHHHHS CS
+          GHMP_kinases_N   2 ivikseiPvgaGLGSSAAlavalvaAllallglslee...aklaleaerlaqggngsggDvaasvyG 65 
+                              vi s +P+g GL+SSA+l va+ + l +l+  + +    a  +++ae+  + + ++++D+++sv+G
+  tr|F1R3T4|F1R3T4_DANRE 128 AVIASSVPLGGGLSSSASLEVAVYTFLQQLCPDDGDQiakAVACQQAEHTHAAVPCGIMDQFVSVLG 194
+                             5789***************************544222445777999998888799***********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (393 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       552  (0.0287815); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.64
+# Mc/sec: 1992.02
+//
+Query:       sp|P51570|GALK1_HUMAN  [L=392]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      2e-22   78.6   0.0    3.7e-22   77.7   0.0    1.5  1  GalKase_gal_bdg  Galactokinase galactose-binding signature
+    1.1e-14   54.6   0.0      4e-14   52.9   0.0    1.9  1  GHMP_kinases_C   GHMP kinases C terminal
+    7.5e-13   48.6   0.6    1.7e-12   47.5   0.6    1.7  1  GHMP_kinases_N   GHMP kinases N terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> GalKase_gal_bdg  Galactokinase galactose-binding signature
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.7   0.0   5.8e-26   3.7e-22       2      50 .]      19      67 ..      18      67 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 77.7 bits;  conditional E-value: 5.8e-26
+                           HHHHHHSS-S.EEEEEEEEEEEE-TT-CCCT-EEEEEEEEEEEEEEEEE CS
+        GalKase_gal_bdg  2 kFeelfgkepefvarAPGRvnLiGEHtDYngGfVlpaAidldtvvavsp 50
+                           +F+e+fg+epe  ++APGRvnLiGEHtDYn+G Vlp+A++l tv++ sp
+  sp|P51570|GALK1_HUMAN 19 AFREEFGAEPELAVSAPGRVNLIGEHTDYNQGLVLPMALELMTVLVGSP 67
+                           7********66*********************************99886 PP
+
+>> GHMP_kinases_C  GHMP kinases C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.9   0.0   6.3e-18     4e-14       2      83 ..     292     372 ..     291     373 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 52.9 bits;  conditional E-value: 6.3e-18
+         GHMP_kinases_C   2 lealergdlellgellnlsqrselkavvgilnpeleellealselG.algaklsGaGgGptvfalfkdkdeaeqvaralaeef 83 
+                            ++al+rgd++++g+l+ +s+rs l++ +++++pel++l+ea++++  ++g++++G G+G++ ++l  + ++a  + r ++e++
+  sp|P51570|GALK1_HUMAN 292 AAALRRGDYRAFGRLMVESHRS-LRDDYEVSCPELDQLVEAALAVPgVYGSRMTGGGFGGCTVTLL-EASAAPHAMRHIQEHY 372
+                            6899*****************9.6779***************66555******************9.7777777777777665 PP
+
+>> GHMP_kinases_N  GHMP kinases N terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.5   0.6   2.7e-16   1.7e-12       3      65 ..     128     193 ..     126     194 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 47.5 bits;  conditional E-value: 2.7e-16
+                            EEEESSHTTSSSCHHHHHHHHHHHHHHHHTTEC.HHH...HHHHHHHHHHHHHHHHHSHHHHHHHHS CS
+         GHMP_kinases_N   3 vikseiPvgaGLGSSAAlavalvaAllallgls.lee...aklaleaerlaqggngsggDvaasvyG 65 
+                            v+ s +P+g GL+SSA+l va+ + l +l+  s       a+ +++ae+ ++g  ++++D++ s++G
+  sp|P51570|GALK1_HUMAN 128 VVVSSVPLGGGLSSSASLEVATYTFLQQLCPDSgT-IaarAQVCQQAEHSFAGMPCGIMDQFISLMG 193
+                            789***************************65532.1457*************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (392 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       429  (0.0223682); expected 383.6 (0.02)
+Passed bias filter:                      358  (0.0186662); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.52
+# Mc/sec: 2449.33
+//
+[ok]

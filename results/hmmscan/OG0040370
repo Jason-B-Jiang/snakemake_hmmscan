@@ -1,0 +1,87 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040370.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040370
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8NCD3|HJURP_HUMAN  [L=748]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    9.1e-59  197.0   6.0    9.1e-59  197.0   6.0    2.4  1  HJURP_mid  Holliday junction recognition protein-associated r
+    3.5e-50  168.0   2.7      5e-24   84.2   0.1    3.3  2  HJURP_C    Holliday junction regulator protein family C-termi
+    7.1e-10   38.6   0.0    1.9e-09   37.2   0.0    1.8  1  Scm3       Centromere protein Scm3
+
+
+Domain annotation for each model (and alignments):
+>> HJURP_mid  Holliday junction recognition protein-associated repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  197.0   6.0   1.4e-62   9.1e-59       1     115 []     271     385 ..     271     385 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 197.0 bits;  conditional E-value: 1.4e-62
+              HJURP_mid   1 msRLLsakpsciistktfiaqnwssrrRhklksrmnrtyckgarrsqrssrerlsplsePekeagvlrDcknlldvsgrktglkleka 88 
+                            msRLLs+kps+iistktfi+qnw+srrRh++ksrmn+tyckgarrsqrss+e+  p+seP k +g+lrDckn+ldvs+rktglkleka
+  sp|Q8NCD3|HJURP_HUMAN 271 MSRLLSTKPSSIISTKTFIMQNWNSRRRHRYKSRMNKTYCKGARRSQRSSKENFIPCSEPVKGTGALRDCKNVLDVSCRKTGLKLEKA 358
+                            9*************************************************************************************** PP
+
+              HJURP_mid  89 llevnkpqvhkldPsWkelqvlpkkls 115
+                            +levn+pq+hkldPsWke +v+p+k+s
+  sp|Q8NCD3|HJURP_HUMAN 359 FLEVNRPQIHKLDPSWKERKVTPSKYS 385
+                            *************************96 PP
+
+>> HJURP_C  Holliday junction regulator protein family C-terminal repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.2   0.0   3.3e-27   2.1e-23       1      63 []     409     470 ..     409     470 .. 0.99
+   2 !   84.2   0.1   7.9e-28     5e-24       1      63 []     554     613 ..     554     613 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 82.2 bits;  conditional E-value: 3.3e-27
+                HJURP_C   1 kkiSPekdisrprieltprtenkYreIkeeFDkLhqkyclsspkqqsnaklpvsvpVsnykag 63 
+                            ++iSP+k++srp i  ++++en++reI+++FD+Lh++ycls+++q+++++lp+s+++++y++g
+  sp|Q8NCD3|HJURP_HUMAN 409 WLISPVKIVSRPTI-RQGHGENRQREIEIRFDQLHREYCLSPRNQPRRMCLPDSWAMNMYRGG 470
+                            99************.**********************************************96 PP
+
+  == domain 2  score: 84.2 bits;  conditional E-value: 7.9e-28
+                HJURP_C   1 kkiSPekdisrprieltprtenkYreIkeeFDkLhqkyclsspkqqsnaklpvsvpVsnykag 63 
+                            k++SP+k+ s+p+ e +++++n+Y+eIkeeFDkLhqkycl+sp    ++++p +++Vs +ka+
+  sp|Q8NCD3|HJURP_HUMAN 554 KSVSPSKTLSVPDKEVPGHGRNRYDEIKEEFDKLHQKYCLKSPG---QMTVPLCIGVSTDKAS 613
+                            789***************************************88...*************995 PP
+
+>> Scm3  Centromere protein Scm3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.2   0.0     3e-13   1.9e-09       2      53 ..      19      74 ..      18      75 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 37.2 bits;  conditional E-value: 3e-13
+                           HHHHHHHHHHHHHHHHHHHHHHHSG..GGSS--B-TTT-S......B-XXXXXXXXXX CS
+                   Scm3  2 allreeslerLkkrwesifeKYeridfedqgDEIDlatge......ivvDnGhlrelk 53
+                            ++ ++s++r+++r+++++eKY++ +fed  +++++at +      ++++ G+l + +
+  sp|Q8NCD3|HJURP_HUMAN 19 LQKLRASRRRFQRRMQRLIEKYNQ-PFED-TPVVQMATLTyetpqgLRIWGGRLIKER 74
+                           5899********************.9***.******777777899*********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (748 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       604  (0.0314928); expected 383.6 (0.02)
+Passed bias filter:                      462  (0.0240888); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.80
+# Mc/sec: 3031.17
+//
+[ok]

@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029956.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029956
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54P99|Q54P99_DICDI  [L=605]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-35  121.0   0.0    1.2e-21   77.1   0.0    2.9  2  PLDc_2    PLD-like domain
+    9.8e-10   38.3   0.6    3.9e-05   23.7   0.1    3.0  1  PLDc      Phospholipase D Active site motif
+
+
+Domain annotation for each model (and alignments):
+>> PLDc_2  PLD-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.7   0.0   2.2e-14   2.1e-10       4     111 ..      76     188 ..      73     204 .. 0.82
+   2 !   77.1   0.0   1.2e-25   1.2e-21       4     132 ..     445     569 ..     442     570 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 40.7 bits;  conditional E-value: 2.2e-14
+                  PLDc_2   4 liksAkksidiatyyfesdrei....ldaliaaakrGvkvriildskkddagaveeaslkelkellleagvevrvfek.....al.. 79 
+                             +iksAk+si++ ty++e+ + i    ++ l +a++rGv+v+   ds + ++g+    s   + e+ + +gv++++f++      l  
+  tr|Q54P99|Q54P99_DICDI  76 CIKSAKESIYLETYTIEP-DLIgnktIELLTEAQRRGVQVKFAYDS-IGSSGL----SDFDIYEM-RVSGVDIYQFNPveissILpy 155
+                             79**************32.2225555999****************9.333333....34556677.789******994344441166 PP
+
+                  PLDc_2  80 .gslHaKfylidgktvivGSaNltkrglslnlE 111
+                               ++H+K++++d+k+ + G++N++ ++ s+n++
+  tr|Q54P99|Q54P99_DICDI 156 tLRNHRKIIVVDEKYGFCGGMNISGKYASSNMD 188
+                             789***********************9999986 PP
+
+  == domain 2  score: 77.1 bits;  conditional E-value: 1.2e-25
+                  PLDc_2   4 liksAkksidiatyyfesdreildaliaaakrGvkvriildskkddagaveeaslkelkellleagvevrvfekalgslHaKfylid 90 
+                             +++++ +++++ t+yf ++r++ +a+++aakrGv+v+ii+ +k d + + + as+  +  +l  +++++++ e+   +lHaK++ id
+  tr|Q54P99|Q54P99_DICDI 445 ALNKSYDHCYFTTPYFLPPRKLRKAIVNAAKRGVDVKIITAGKSDVPWF-RNASRYIYPLFLKHEKIKIYELES--ITLHAKTLSID 528
+                             689999************************************6666555.559999999999******999886..347******** PP
+
+                  PLDc_2  91 gktvivGSaNltkrglslnlElnvviedkelakeleeeFdrl 132
+                             g + ++GS+Nl++++ ++nlE+n+ + ++ ++k le++F+++
+  tr|Q54P99|Q54P99_DICDI 529 GMYSTIGSYNLDTWS-QRNLEANLAFFSPNVVKVLEDQFKND 569
+                             ***************.6**********************986 PP
+
+>> PLDc  Phospholipase D Active site motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.7   0.1   4.1e-09   3.9e-05       2      26 ..     156     180 ..     155     182 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 23.7 bits;  conditional E-value: 4.1e-09
+                             TBEE---EEEETTTEEEEE---SSH CS
+                    PLDc   2 mgthHqKivivDdrvafvGgaNLcd 26 
+                               ++H+Ki++vD+++ f Gg+N+ +
+  tr|Q54P99|Q54P99_DICDI 156 TLRNHRKIIVVDEKYGFCGGMNISG 180
+                             679*******************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (605 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1641  (0.0855623); expected 383.6 (0.02)
+Passed bias filter:                      424  (0.0221075); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.74
+# Mc/sec: 2652.53
+//
+[ok]

@@ -1,0 +1,1391 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0001911.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0001911
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       OIR58059.1  [L=263]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-43  148.7   0.0    2.5e-43  148.6   0.0    1.1  1  KTI12     Chromatin associated protein KTI12
+    5.3e-09   36.5   0.0      9e-09   35.7   0.0    1.3  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.6   0.0   2.6e-47   2.5e-43       1     179 [.       1     176 [.       1     243 [. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 148.6 bits;  conditional E-value: 2.6e-47
+                 E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSS...S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S--.-SHHHHHHHHHHHHH CS
+       KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekds...ykdsakekalRsslrsavkrdLskekvVIvDsln.yikgfRYeLyciaka 95 
+                 MpLvvl+GlPssGK+t+a+e++ +++e+ ++v + +d+ +g+ +     y+d++kek++ +   s++kr+L +e+vVI D +  y+ g RY+Ly +ak+
+  OIR58059.1   1 MPLVVLCGLPSSGKTTAAREIEAYFQERTKTVLLTEDDMFGGGETRgtvYTDAEKEKKVLGVFLSKIKRSLDRETVVIADGMCfYTAGVRYQLYQMAKE 99 
+                 *****************************************66665568********************************974789************ PP
+
+                 TT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SS CS
+       KTI12  96 akttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnq 179
+                  +t++c+ y+ +p dv++++n+       y++ l+++L  R+eeP+ ++rWD+P f     + +  l+ + k ++  +k+++  
+  OIR58059.1 100 HRTKHCLGYIPTPVDVARERNSG------YSESLFEELSFRFEEPSVSARWDRPCFRFG-RDTAAVLEAMEKEILGGTKKQAPG 176
+                 ****************9988754......7777************************99.888889999999996665443322 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.7   0.0   9.4e-13     9e-09       1     116 [.       3     121 ..       3     131 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 35.7 bits;  conditional E-value: 9.4e-13
+      AAA_33   1 lvllvGlpGsGKttlaerl...lkklg.avrlssdtlrrrlfgtdqqsktdytrvldr..lyrilnelaekalsagrnvildatnls.reerarfvnla 92 
+                 lv+l+Glp sGKtt a+++   +++++ +v+l++d+    +fg ++ + t yt+++++  +  +    +++ l ++  vi+d   +  +  r ++ ++a
+  OIR58059.1   3 LVVLCGLPSSGKTTAAREIeayFQERTkTVLLTEDD----MFGGGETRGTVYTDAEKEkkVLGVFLSKIKRSLDRETVVIADGMCFYtAGVRYQLYQMA 97 
+                 79***************97555777778*******8....77777778888888665544666665777666777777888776555268888****** PP
+
+      AAA_33  93 relgvpirivvletseetlkeRla 116
+                 +e+  ++ + ++ t+ ++++eR+ 
+  OIR58059.1  98 KEHRTKHCLGYIPTPVDVARERNS 121
+                 **********************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (263 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       595  (0.0310235); expected 383.6 (0.02)
+Passed bias filter:                      573  (0.0298764); expected 383.6 (0.02)
+Passed Vit filter:                        59  (0.00307628); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.65
+# Mc/sec: 1301.13
+//
+Query:       tr|Q7YTI4|Q7YTI4_CAEEL  [L=302]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.7e-101  337.9   0.1   5.3e-101  337.7   0.1    1.0  1  KTI12     Chromatin associated protein KTI12
+    8.9e-09   35.7   0.0    1.9e-08   34.7   0.0    1.5  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  337.7   0.1  5.5e-105  5.3e-101       1     272 []       1     298 [.       1     298 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 337.7 bits;  conditional E-value: 5.5e-105
+                             E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH..TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHH CS
+                   KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslg.iekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfR 86 
+                             MpL+++tG+PssGKst++++Lak++ee++++  +i+de +g +++++y+ s+kek+lRs++rs+v+++L+k+kv+I+D+lnyikg+R
+  tr|Q7YTI4|Q7YTI4_CAEEL   1 MPLIIVTGHPSSGKSTVVDRLAKKFEEKGKDYLIIRDEDYGgFDRKNYEFSNKEKDLRSWIRSQVQQNLTKNKVIICDALNYIKGYR 87 
+                             ****************************************989******************************************** PP
+
+                             HHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE...TTS---H......... CS
+                   KTI12  87 YeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvls..aeeklpl......... 162
+                             YeL+ +ak++ktt+cvv +  p ++++++ne+++e e+y+ke++d+L++Rye Pd+k rW++Plf+v++  ae+++p+         
+  tr|Q7YTI4|Q7YTI4_CAEEL  88 YELFLAAKMSKTTYCVVECSPPVATCHWLNEQKPEVERYPKEIIDQLMMRYERPDTKLRWEKPLFEVKIgtAEKATPVdfdedmaid 174
+                             ********************************************************************987778888899******* PP
+
+                             .............HHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................ CS
+                   KTI12 163 .............deilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpak..k 234
+                                          dei++++++ ++l++nq+t++ pla++nfl+eLd++t+++v+ +l+aq++av++++lt+pg++   +  +    
+  tr|Q7YTI4|Q7YTI4_CAEEL 175 lehpaprfasifeDEIVEWICNGTELTENQSTQTVPLAPTNFLHELDRSTQDVVTVLLNAQRTAVRGQNLTIPGATDGANTIKFmkL 261
+                             *************************************************************************98887777666556 PP
+
+                             ..HHHHHHHHHHHHHHHT.TSSS--HHHHHHHHHHHHH CS
+                   KTI12 235 ltlaeLsrlrrqFvklnkaklenvdeekiaklFvdyLn 272
+                              tl+eL+rlr+qFv+++k k+  +d+eki++ Fvd+Ln
+  tr|Q7YTI4|Q7YTI4_CAEEL 262 RTLPELNRLRHQFVNMSK-KDPTTDKEKIITGFVDFLN 298
+                             9*****************.9*****************9 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.7   0.0   1.9e-12   1.9e-08       1     143 []       3     141 ..       3     141 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 34.7 bits;  conditional E-value: 1.9e-12
+                  AAA_33   1 lvllvGlpGsGKttlaerllkklg.....avrlssdtlrr.rlfgtdqqsktdytrvldrlyrilnelaekalsagrnvildatnls 81 
+                             l+++ G+p sGK+t++ rl+kk       + +++  ++     ++ +  +k      +++l+ +++ +++++l++++ +i da n  
+  tr|Q7YTI4|Q7YTI4_CAEEL   3 LIIVTGHPSSGKSTVVDRLAKKFEekgkdYLIIRDEDYGGfDRKNYEFSNK------EKDLRSWIRSQVQQNLTKNKVIICDALNYI 83 
+                             799****************99877778887778777755545555555444......467889999999****************** PP
+
+                  AAA_33  82 reerarfvnlarelgvpirivvletseetlkeRlakRadngdsrsevpeealdrqkarferp 143
+                             +  r +++ +a+ ++    +v ++++ +t+   ++++ + +    + p+e +d+ ++r+erp
+  tr|Q7YTI4|Q7YTI4_CAEEL  84 KGYRYELFLAAKMSKTTYCVVECSPPVATCHWLNEQKPEVE----RYPKEIIDQLMMRYERP 141
+                             ************99999999**********99999999973....58*************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (302 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       763  (0.0397831); expected 383.6 (0.02)
+Passed bias filter:                      622  (0.0324313); expected 383.6 (0.02)
+Passed Vit filter:                       104  (0.0054226); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.74
+# Mc/sec: 1324.52
+//
+Query:       tr|Q86H29|Q86H29_DICDI  [L=273]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.7e-96  321.5   0.1    5.2e-96  321.4   0.1    1.0  1  KTI12     Chromatin associated protein KTI12
+    7.9e-11   42.4   0.0    2.5e-10   40.8   0.0    1.8  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  321.4   0.1  5.5e-100   5.2e-96       1     272 []       1     269 [.       1     269 [. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 321.4 bits;  conditional E-value: 5.5e-100
+                             E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHH CS
+                   KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekds.ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfR 86 
+                             MpL+vl+G P+sGK+trakeL +++++ +++v++i++esl i+k++ ykds +ek++R+sl+ a +r+Lsk++vVI Dslnyikg+R
+  tr|Q86H29|Q86H29_DICDI   1 MPLIVLSGPPCSGKTTRAKELYEHFTNLGKKVIIINEESLLINKNEgYKDSLTEKMTRGSLKGATDRNLSKDTVVISDSLNYIKGYR 87 
+                             *********************************************99**************************************** PP
+
+                             HHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHH CS
+                   KTI12  87 YeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekk 173
+                             YeLycia+aa t+l v+y+ +p+d + kwn+er+++  y+++lld+L++R+e P+ knrWDsPlft++ ++++lp++ ++k+l+e +
+  tr|Q86H29|Q86H29_DICDI  88 YELYCIARAAGTRLLVLYCNTPRDLAKKWNQERDQSVAYSEKLLDELTNRFEVPNPKNRWDSPLFTLE-PQHTLPHELLFKTLFEVQ 173
+                             ********************************************************************.****************** PP
+
+                             TS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT.TSSS--H CS
+                   KTI12 174 klkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnkaklenvde 260
+                             +l+pn at+s++l++anf++eL+++t+ei + i +a++s++++d +++pg+++++ +++k l+l eL++ rrqF k+ +  l++ + 
+  tr|Q86H29|Q86H29_DICDI 174 ELRPNYATQSQSLSPANFVHELETKTQEITSVISDALQSSMVGDYIKVPGTEKRVVIHSK-LNLVELRNQRRQFYKFAQ--LHPPQP 257
+                             ************************************************************.******************..9999** PP
+
+                             HHHHHHHHHHHH CS
+                   KTI12 261 ekiaklFvdyLn 272
+                             + ia+ Fvd+Ln
+  tr|Q86H29|Q86H29_DICDI 258 HLIADSFVDFLN 269
+                             ***********9 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.8   0.0   2.6e-14   2.5e-10       1     143 []       3     141 ..       3     141 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 40.8 bits;  conditional E-value: 2.6e-14
+                  AAA_33   1 lvllvGlpGsGKttlaerllkklg.....avrlssdtlrrrlfgtdqqsktdytrvldrlyrilnelaekalsagrnvildatnlsr 82 
+                             l++l G+p+sGKtt a++l++  +     ++++++  l+ +  +  ++s+t+     + ++  l++   ++ls+   vi d+ n  +
+  tr|Q86H29|Q86H29_DICDI   3 LIVLSGPPCSGKTTRAKELYEHFTnlgkkVIIINEESLLINKNEGYKDSLTE-----KMTRGSLKGATDRNLSKDTVVISDSLNYIK 84 
+                             7999**************9876666669888899998777666555666654.....56788998888888888888999999999* PP
+
+                  AAA_33  83 eerarfvnlarelgvpirivvletseetlkeRlakRadngdsrsevpeealdrqkarferp 143
+                               r ++  +ar +g + ++++++t+++++k+++++R ++        e+ ld+  +rfe+p
+  tr|Q86H29|Q86H29_DICDI  85 GYRYELYCIARAAGTRLLVLYCNTPRDLAKKWNQERDQS----VAYSEKLLDELTNRFEVP 141
+                             ************************************997....567889999999998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (273 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       572  (0.0298243); expected 383.6 (0.02)
+Passed bias filter:                      457  (0.0238281); expected 383.6 (0.02)
+Passed Vit filter:                        65  (0.00338912); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.68
+# Mc/sec: 1294.37
+//
+Query:       tr|O46079|O46079_DROME  [L=299]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-93  312.7   0.0    2.5e-93  312.6   0.0    1.0  1  KTI12     Chromatin associated protein KTI12
+    4.4e-06   27.0   0.0      9e-06   26.0   0.0    1.6  0  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  312.6   0.0   2.6e-97   2.5e-93       1     272 []       1     293 [.       1     293 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 312.6 bits;  conditional E-value: 2.6e-97
+                             E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.....TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---S CS
+                   KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslg....iekds.ykdsakekalRsslrsavkrdLskekvVIvDslnyi 82 
+                             MpLvv+tGlP+sGKstra++L++++ e++r+v++i+++       + k+s   ds+kek +Rs+l+s+++r+L++e++VI+D+ nyi
+  tr|O46079|O46079_DROME   1 MPLVVITGLPASGKSTRARQLRDHFVERGRKVHLISENEAVpkagFGKNShTGDSQKEKVVRSDLKSEASRHLNQEDLVILDAGNYI 87 
+                             ***********************************965544488877777256********************************** PP
+
+                             HHHHHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S...................S-HHHHHHHHHH---TTSS-GGGS-SEE CS
+                   KTI12  83 kgfRYeLyciakaakttlcvvyvvapldvlvkwneereekee.................yekelldaLiqRyeePdsknrWDsPlft 152
+                             kg+RYeLyc++k ++tt+c+v++++p+++++++n++r+ ++e                 y++e++daL+qRyeeP+s+nrWDsPl+ 
+  tr|O46079|O46079_DROME  88 KGYRYELYCMSKVSRTTQCTVFTCIPQEEAWTFNSQRTAPDElpgdservqpvdnsdvpYTRETFDALCQRYEEPQSNNRWDSPLVV 174
+                             ****************************************99********************************************* PP
+
+                             EE.TTS---HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHH CS
+                   KTI12 153 vlsaeeklpldeilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlae 239
+                             vl ++++l+++ i+kal+e+++l+pnq+t+++pl ++n+l eLdk++++i+keil  + +++a+++l++pgs++ ++++++ ++  +
+  tr|O46079|O46079_DROME 175 VL-PKDTLDMEAIYKALYESQPLPPNQSTYNAPLGTTNYLFELDKIVQAIIKEILG-AVKIKAFGQLRIPGSRNPVKVATS-MNALQ 258
+                             **.*****************************************************.7889********************.***** PP
+
+                             HHHHHHHHHHHHT...TSSS--HHHHHHHHHHHHH CS
+                   KTI12 240 LsrlrrqFvklnk..aklenvdeekiaklFvdyLn 272
+                             L+rlr++F++ ++  ++++++ +e++ +lFv+++n
+  tr|O46079|O46079_DROME 259 LNRLRQKFITSTChaSQTSPTPLEQVPHLFVQFIN 293
+                             ***********99778899999***********98 PP
+
+>> AAA_33  AAA domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (299 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       583  (0.0303978); expected 383.6 (0.02)
+Passed bias filter:                      506  (0.026383); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.20s 00:00:00.62 Elapsed: 00:00:00.63
+# Mc/sec: 1532.50
+//
+Query:       sp|Q0P457|KTI12_DANRE  [L=275]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.7e-105  350.1   0.1   9.8e-105  350.0   0.1    1.0  1  KTI12     Chromatin associated protein KTI12
+    1.3e-08   35.2   0.0    3.1e-08   34.0   0.0    1.6  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  350.0   0.1    1e-108  9.8e-105       1     272 []       1     271 [.       1     271 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 350.0 bits;  conditional E-value: 1e-108
+                            E.EEEEE--TTSSHHHHHHHHHHHHHH.TT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHH CS
+                  KTI12   1 MpLvvltGlPssGKstrakeLakalee.ekrsvvviddeslgiekds.ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfR 86 
+                            MpL++++G+P+sGK++ra+eL++++++ ++r+v+++ de  gi+k+s y+ds+kek+lR++lr++v+r+++k+++VI+Dslnyikg+R
+  sp|Q0P457|KTI12_DANRE   1 MPLILMCGYPCSGKTRRAQELRDYFTQnTGRKVHIVGDEDQGIDKNSvYADSQKEKNLRGALRAEVERKVNKDDIVILDSLNYIKGYR 88 
+                            *************************98799********************************************************** PP
+
+                            HHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHT CS
+                  KTI12  87 YeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkk 174
+                            YeL+c+ k+ +t++c+vy ++++d + +wn+ re  ++y++e+ldaLi R+e+Pds+nrWDsPlft++ ++++lp++ i++al+++k+
+  sp|Q0P457|KTI12_DANRE  89 YELFCLIKHTQTPHCLVYSLTSADLSSEWNKDREADSQYTQEILDALILRFEAPDSRNRWDSPLFTIQ-QDDSLPFEAICDALFKRKA 175
+                            ********************************************************************.9****************** PP
+
+                            S--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT.TSSS--HHH CS
+                  KTI12 175 lkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnkaklenvdeek 262
+                            ++pnq+t s+pl+++nfl+eLdk+t++++ ++le qk++v++d +++pg++e++el+++ l++ eL++lrrqF++++k+    ++  +
+  sp|Q0P457|KTI12_DANRE 176 PPPNQSTKSQPLSSTNFLYELDKVTQDVLMAVLESQKTSVPGDLISIPGATEKIELTRS-LNMVELRKLRRQFISYTKM-HPTENIGQ 261
+                            ***********************************************************.******************5.556899** PP
+
+                            HHHHHHHHHH CS
+                  KTI12 263 iaklFvdyLn 272
+                            ia++Fv+yLn
+  sp|Q0P457|KTI12_DANRE 262 IANMFVQYLN 271
+                            *********9 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.0   0.0   3.2e-12   3.1e-08       1     143 []       3     142 ..       3     142 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 34.0 bits;  conditional E-value: 3.2e-12
+                 AAA_33   1 lvllvGlpGsGKttlaerl...lkklg..avrlssdt...lrrrlfgtdqqsktdytrvldrlyrilnelaekalsagrnvildatnl 80 
+                            l+l++G+p+sGKt  a++l   + +++   v++  d+   +       d++s     + +++l+ +l++ +e++  +   vild+ n 
+  sp|Q0P457|KTI12_DANRE   3 LILMCGYPCSGKTRRAQELrdyFTQNTgrKVHIVGDEdqgI-------DKNSVYADSQKEKNLRGALRAEVERKVNKDDIVILDSLNY 83 
+                            79****************96663344447666666652222.......22222233344578999**9999999999999******** PP
+
+                 AAA_33  81 sreerarfvnlarelgvpirivvletseetlkeRlakRadngdsrsevpeealdrqkarferp 143
+                             +  r +++ l ++   p+ +v+  ts ++  e+++ R+++    s+ ++e ld+   rfe+p
+  sp|Q0P457|KTI12_DANRE  84 IKGYRYELFCLIKHTQTPHCLVYSLTSADLSSEWNKDREAD----SQYTQEILDALILRFEAP 142
+                            ****************************************6....679999999999999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (275 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       486  (0.0253402); expected 383.6 (0.02)
+Passed bias filter:                      375  (0.0195526); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.68
+# Mc/sec: 1302.17
+//
+Query:       tr|A0A2R8S0B3|A0A2R8S0B3_DANRE  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-83  281.0   0.1    1.1e-61  208.8   0.1    2.0  2  KTI12     Chromatin associated protein KTI12
+    2.1e-06   28.0   0.0     0.0085   16.4   0.0    2.5  0  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.6   0.0   3.8e-24   3.7e-20       1      66 [.       1      68 [.       1      68 [. 0.98
+   2 !  208.8   0.1   1.2e-65   1.1e-61      86     272 .]      68     255 ..      67     255 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.6 bits;  conditional E-value: 3.8e-24
+                                    E.EEEEE--TTSSHHHHHHHHHHHHHH.TT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHH CS
+                           KTI12  1 MpLvvltGlPssGKstrakeLakalee.ekrsvvviddeslgiekds.ykdsakekalRsslrsavkr 66
+                                    MpL++++G+P+sGK++ra+eL++++++ ++r+v+++ de  gi+k+s y+ds+kek+lR++lr++v+r
+  tr|A0A2R8S0B3|A0A2R8S0B3_DANRE  1 MPLILMCGYPCSGKTRRAQELRDYFTQnTGRKVHIVGDEDQGIDKNSvYADSQKEKNLRGALRAEVER 68
+                                    *************************98799************************************98 PP
+
+  == domain 2  score: 208.8 bits;  conditional E-value: 1.2e-65
+                                     HHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHH CS
+                           KTI12  86 RYeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklplde 164
+                                     RYeL+c+ k+ +t++c+vy ++++d + +wn+ re  ++y++e+ldaLi R+e+Pds+nrWDsPlft++ ++++lp++ 
+  tr|A0A2R8S0B3|A0A2R8S0B3_DANRE  68 RYELFCLIKHTQTPHCLVYSLTSADLSSEWNKDREADSQYTQEILDALILRFEAPDSRNRWDSPLFTIQ-QDDSLPFEA 145
+                                     9********************************************************************.9******** PP
+
+                                     HHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH...................HHHH CS
+                           KTI12 165 ilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpak...kltlaeL 240
+                                     i++al+++k+++pnq+t s+pl+++nfl+eLdk+t++++ ++le qk++v++d +++pg++e++++       l++ eL
+  tr|A0A2R8S0B3|A0A2R8S0B3_DANRE 146 ICDALFKRKAPPPNQSTKSQPLSSTNFLYELDKVTQDVLMAVLESQKTSVPGDLISIPGATEKISFIFAsvcVLNMVEL 224
+                                     *****************************************************************987767889***** PP
+
+                                     HHHHHHHHHHHT.TSSS--HHHHHHHHHHHHH CS
+                           KTI12 241 srlrrqFvklnkaklenvdeekiaklFvdyLn 272
+                                     ++lrrqF++++k+    ++  +ia++Fv+yLn
+  tr|A0A2R8S0B3|A0A2R8S0B3_DANRE 225 RKLRRQFISYTKM-HPTENIGQIANMFVQYLN 255
+                                     ************5.556899***********9 PP
+
+>> AAA_33  AAA domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       651  (0.0339434); expected 383.6 (0.02)
+Passed bias filter:                      532  (0.0277387); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.20s 00:00:00.63 Elapsed: 00:00:00.60
+# Mc/sec: 1401.03
+//
+Query:       tr|A0A2R8QLA8|A0A2R8QLA8_DANRE  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.1e-102  343.3   0.0   1.2e-102  343.1   0.0    1.0  1  KTI12     Chromatin associated protein KTI12
+    1.4e-08   35.1   0.0    3.2e-08   33.9   0.0    1.6  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  343.1   0.0  1.2e-106  1.2e-102       1     272 []       1     275 [.       1     275 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 343.1 bits;  conditional E-value: 1.2e-106
+                                     E.EEEEE--TTSSHHHHHHHHHHHHHH.TT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE- CS
+                           KTI12   1 MpLvvltGlPssGKstrakeLakalee.ekrsvvviddeslgiekds.ykdsakekalRsslrsavkrdLskekvVIvD 77 
+                                     MpL++++G+P+sGK++ra+eL++++++ ++r+v+++ de  gi+k+s y+ds+kek+lR++lr++v+r+++k+++VI+D
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE   1 MPLILMCGYPCSGKTRRAQELRDYFTQnTGRKVHIVGDEDQGIDKNSvYADSQKEKNLRGALRAEVERKVNKDDIVILD 79 
+                                     *************************98799************************************************* PP
+
+                                     S---SHHHHHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.T CS
+                           KTI12  78 slnyikgfRYeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsa 156
+                                     slnyikg+RYeL+c+ k+ +t++c+vy ++++d + +wn+ re  ++y++e+ldaLi R+e+Pds+nrWDsPlft++ +
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE  80 SLNYIKGYRYELFCLIKHTQTPHCLVYSLTSADLSSEWNKDREADSQYTQEILDALILRFEAPDSRNRWDSPLFTIQ-Q 157
+                                     *****************************************************************************.* PP
+
+                                     TS---HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH............... CS
+                           KTI12 157 eeklpldeilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpak.. 233
+                                     +++lp++ i++al+++k+++pnq+t s+pl+++nfl+eLdk+t++++ ++le qk++v++d +++pg++e++++     
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE 158 DDPLPFEAICDALFKRKAPPPNQSTKSQPLSSTNFLYELDKVTQDVLMAVLESQKTSVPGDLISIPGATEKISFIFAsv 236
+                                     *************************************************************************987767 PP
+
+                                     ....HHHHHHHHHHHHHHHT.TSSS--HHHHHHHHHHHHH CS
+                           KTI12 234 .kltlaeLsrlrrqFvklnkaklenvdeekiaklFvdyLn 272
+                                       l++ eL++lrrqF++++k+    ++  +ia++Fv+yLn
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE 237 cVLNMVELRKLRRQFISYTKM-HPTENIGQIANMFVQYLN 275
+                                     889*****************5.556899***********9 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.9   0.0   3.3e-12   3.2e-08       1     143 []       3     142 ..       3     142 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 33.9 bits;  conditional E-value: 3.3e-12
+                          AAA_33   1 lvllvGlpGsGKttlaerl...lkklg..avrlssdt...lrrrlfgtdqqsktdytrvldrlyrilnelaekalsagr 71 
+                                     l+l++G+p+sGKt  a++l   + +++   v++  d+   +       d++s     + +++l+ +l++ +e++  +  
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE   3 LILMCGYPCSGKTRRAQELrdyFTQNTgrKVHIVGDEdqgI-------DKNSVYADSQKEKNLRGALRAEVERKVNKDD 74 
+                                     79****************96663344447666666652222.......22222233344578999**999999999999 PP
+
+                          AAA_33  72 nvildatnlsreerarfvnlarelgvpirivvletseetlkeRlakRadngdsrsevpeealdrqkarferp 143
+                                      vild+ n  +  r +++ l ++   p+ +v+  ts ++  e+++ R+++    s+ ++e ld+   rfe+p
+  tr|A0A2R8QLA8|A0A2R8QLA8_DANRE  75 IVILDSLNYIKGYRYELFCLIKHTQTPHCLVYSLTSADLSSEWNKDREAD----SQYTQEILDALILRFEAP 142
+                                     9************************************************6....679999999999999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       482  (0.0251317); expected 383.6 (0.02)
+Passed bias filter:                      377  (0.0196569); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.65
+# Mc/sec: 1384.94
+//
+Query:       EJW03607.1  [L=275]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (275 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       863  (0.0449971); expected 383.6 (0.02)
+Passed bias filter:                      295  (0.0153814); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.39u 0.16s 00:00:00.55 Elapsed: 00:00:00.70
+# Mc/sec: 1272.13
+//
+Query:       sp|Q96EK9|KTI12_HUMAN  [L=354]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.1e-109  364.3   0.0   4.9e-109  364.1   0.0    1.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  364.1   0.0  2.6e-113  4.9e-109       1     272 []       1     350 [.       1     350 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 364.1 bits;  conditional E-value: 2.6e-113
+                            E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSS..S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHH CS
+                  KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekds..ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfR 86 
+                            MpLvv++GlP+sGKs+ra+eL+ al++e+r+v+v+dd+++ +++d+  y dsa+ekalR++lr++v+r+Ls+++vVI+DslnyikgfR
+  sp|Q96EK9|KTI12_HUMAN   1 MPLVVFCGLPYSGKSRRAEELRVALAAEGRAVYVVDDAAVLGAEDPavYGDSAREKALRGALRASVERRLSRHDVVILDSLNYIKGFR 88 
+                            *********************************************9****************************************** PP
+
+                            HHHHHHHHHTT-EEEEEEEE--.................HHHHHHHHHHTT-S................................... CS
+                  KTI12  87 YeLyciakaakttlcvvyvvap.................ldvlvkwneereekee................................. 124
+                            YeLyc+a+aa+t+lc+vy+v+p                 ++v+v+w+   ee  +                                 
+  sp|Q96EK9|KTI12_HUMAN  89 YELYCLARAARTPLCLVYCVRPggpiagpqvaganenpgRNVSVSWRPRAEEDGRaqaagssvlrelhtadsvvngsaqadvpkeler 176
+                            **********************************************94444443345678**************************** PP
+
+                            ...........................S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT--- CS
+                  KTI12 125 ...........................yekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskp 185
+                                                       y++ell+aL+ R+e+Pds+nrWD+Plft++++ee+lpl+ i++al+e+++++p+q+t+s+p
+  sp|Q96EK9|KTI12_HUMAN 177 eesgaaespalvtpdseksakhgsgafYSPELLEALTLRFEAPDSRNRWDRPLFTLVGLEEPLPLAGIRSALFENRAPPPHQSTQSQP 264
+                            **************************************************************************************** PP
+
+                            ----HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT.TSSS--HHHHHHHHHHHHH CS
+                  KTI12 186 laeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnkaklenvdeekiaklFvdyLn 272
+                            la+++fl++Ld++ts++++ ++eaqksav++d ltlpg++e+l+++++ lt+aeLsrlrrqF++++k++++n++++++a++F++yL+
+  sp|Q96EK9|KTI12_HUMAN 265 LASGSFLHQLDQVTSQVLAGLMEAQKSAVPGDLLTLPGTTEHLRFTRP-LTMAELSRLRRQFISYTKMHPNNENLPQLANMFLQYLS 350
+                            ************************************************.************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (354 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       339  (0.0176756); expected 383.6 (0.02)
+Passed bias filter:                      299  (0.01559); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 1896.02
+//
+Query:       XP_013236683.1  [L=273]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-52  178.1   0.3      2e-51  175.1   0.3    1.9  1  KTI12     Chromatin associated protein KTI12
+    3.6e-10   40.3   0.0    5.7e-10   39.6   0.0    1.3  1  AAA_33    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.1   0.3   2.1e-55     2e-51       1     217 [.       1     228 [.       1     272 [. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 175.1 bits;  conditional E-value: 2.1e-55
+                     E.EEEEE--TTSSHHHHHHHHHHHHHH......TT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHH CS
+           KTI12   1 MpLvvltGlPssGKstrakeLakalee......ekrsvvviddeslgiekds.ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYe 88 
+                     M+Lv ltG+P+sGK+trake++  l +      ++ sv ++++  +g + +s   d ++ek++R+sl sa++++L+k+++VIvDs n  k++RY+
+  XP_013236683.1   1 MALVCLTGYPCSGKTTRAKEIEGLLFNseqikaNNMSVRLLSESDFGYNPEStPLDFRSEKSVRESLLSAIEQRLTKNTIVIVDSSNELKSMRYQ 95 
+                     9*********************999888899999*************8877746699************************************** PP
+
+                     HHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S....S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHH...HHHHTS--S CS
+           KTI12  89 Lyciakaakttlcvvyvvapldvlvkwneereek..eeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkal...iekkklkpn 178
+                     + c ak +  ++ v+++ ++++++  wn +r  +   +y + ++++Li+Rye P+ ++rWDsPl  v  ++++ p+ eil a+    +++ +kp+
+  XP_013236683.1  96 MSCSAKTMGVPHLVIQISTSEANCSVWNVKRRSEslPSYADSIFKELINRYEFPNPAVRWDSPLWIVN-PQDAFPISEILAAIldaRKNTSKKPH 189
+                     ****************************5555441146******************************.**************777778889*** PP
+
+                     SSTT-------HHHHHHHHHHHHHHHHHHH....HTT-- CS
+           KTI12 179 qatlskplaeanflqeLdketseivkeileaqksavaid 217
+                       t+ k  +++++lq +d ++++ v+e+ ea +++++  
+  XP_013236683.1 190 APTQPKLRQSGSYLQSVDIIINTSVQELEEAFNRNEKER 228
+                     *******************99999999988766665543 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.6   0.0   5.9e-14   5.7e-10       1     141 [.       3     147 ..       3     149 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 39.6 bits;  conditional E-value: 5.9e-14
+          AAA_33   1 lvllvGlpGsGKttlaerllkklg.avrlssdtlrrrlfg.....tdqqsktdytrvldrlyrilnelaekalsagrnvildatnlsreerarfv 89 
+                     lv l G+p+sGKtt a+++   l   + +  ++++ rl          +s+    r ++++++ l   +e++l+++  vi+d+ n  ++ r ++ 
+  XP_013236683.1   3 LVCLTGYPCSGKTTRAKEIEGLLFnSEQIKANNMSVRLLSesdfgYNPESTPLDFRSEKSVRESLLSAIEQRLTKNTIVIVDSSNELKSMRYQMS 97 
+                     78999*************986666778888888555555444433666666667888899*********************************** PP
+
+          AAA_33  90 nlarelgvpirivvletseetlkeRlakRadng.dsrsevpeealdrqkarfe 141
+                       a+ +gvp++++ ++tse+ +  ++ kR  ++        ++ +++  +r+e
+  XP_013236683.1  98 CSAKTMGVPHLVIQISTSEANCSVWNVKRRSESlP---SYADSIFKELINRYE 147
+                     *****************************997532...234555555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (273 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       602  (0.0313885); expected 383.6 (0.02)
+Passed bias filter:                      446  (0.0232546); expected 383.6 (0.02)
+Passed Vit filter:                        62  (0.0032327); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.66
+# Mc/sec: 1342.62
+//
+Query:       QXFS01000086.1_7  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-36  126.8   0.5    1.3e-36  126.6   0.5    1.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.6   0.5   6.8e-41   1.3e-36       6     208 ..       2     198 ..       1     246 [. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 126.6 bits;  conditional E-value: 6.8e-41
+                       EE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSS....S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHH CS
+             KTI12   6 ltGlPssGKstrakeLakaleeekrsvvviddeslgiekds....ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciak 94 
+                       l+GlP sGK+t  ++++++  e++ + +++++es+ ++ ++    y d+ kek++Rs+  s+++r L k++ VI D lny+kg RY+L  +++
+  QXFS01000086.1_7   2 LCGLPGSGKTTTGARIRDEAIENGEKAILVSEESFLGADNTldivYSDTVKEKTMRSAFLSEIRRVLRKDTYVIADGLNYMKGERYQLNMVSR 94 
+                       8***********************************999988999************************************************ PP
+
+                       HTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT----- CS
+             KTI12  95 aakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskpla 187
+                       ++kt  c+v+v ++++ + k     e  ++y++ ++ +L+ R+eeP  +n+ + P f  + ++ ++ ++ei++al  kk  kp+++   k++ 
+  QXFS01000086.1_7  95 QSKTSSCLVFVSTDENISYK-----E--TRYNESVFCDLLYRFEEPTGTNKFEAPYFRNS-KDTPVAFKEIYDALNPKKYSKPSKK--PKKEI 177
+                       ***********998887654.....2..248899************************99.9*************99998888765..45556 PP
+
+                       --HHHHHHHHHHHHHHHHHHH CS
+             KTI12 188 eanflqeLdketseivkeile 208
+                         + +  Ld+ +++iv+ + +
+  QXFS01000086.1_7 178 VDSEIGCLDSRINHIVNIVNS 198
+                       667788899999888876554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       813  (0.0423901); expected 383.6 (0.02)
+Passed bias filter:                      511  (0.0266437); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.71
+# Mc/sec: 1180.38
+//
+Query:       EHY65417.1  [L=276]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-16   59.0   0.3    6.5e-16   58.7   0.3    1.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.7   0.3   3.4e-20   6.5e-16       1     215 [.       1     235 [.       1     271 [. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 58.7 bits;  conditional E-value: 3.4e-20
+                 E.EEEEE--TTSSHHH.HHHHHHHHHHH.........TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHH CS
+       KTI12   1 MpLvvltGlPssGKst.rakeLakalee.........ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeL 89 
+                 MpL +l+GlPs  K   + + L++ +++         e+ +   id+  + i+++   d++ke    + +rs ++ +Lsk  +V + +  +ikg RYe+
+  EHY65417.1   1 MPLFILSGLPSRAKKDlFCDILQQVIRKystnsgedaEGAQEKTIDSVLVVIQNSVSVDAKKE---TATMRSIIQNNLSKRVLVAIYAPLHIKGLRYEI 96 
+                 **********98876527888999999999998888877777777777777776664455555...46789999************************* PP
+
+                 HHHHHHTT-EEEEEEEE--................HHHHHHHHHHTT-S.............S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS--- CS
+       KTI12  90 yciakaakttlcvvyvvap................ldvlvkwneereekee...........yekelldaLiqRyeePdsknrWDsPlftvlsaeeklp 161
+                    ak++ + ++ vy+ a+                +              +            + e +  + + +e+P ++ +WD P f  +sa+ k+ 
+  EHY65417.1  97 SSTAKNMGIDMAHVYCSAEyqaegeislpemegvlQ--------------GkgsvldistktEKTEEFSVVSRIFETPRRTDKWDAPCFIADSANIKVC 181
+                 *******************66555555554333221..............122333333333357888999999******************9666655 PP
+
+                 H....HHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT CS
+       KTI12 162 l....deilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksava 215
+                      d+++  l +  k++ ++++l+  + ++++lq     ++ei++ +le+ +++++
+  EHY65417.1 182 AetagDKVWALLQNVVKPRTSSKKLTGGTLNTKYLQS----VKEIINRVLEEKRKSTE 235
+                 5333377777777777666666666666666666665....56666666665555544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (276 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       662  (0.0345169); expected 383.6 (0.02)
+Passed bias filter:                      460  (0.0239846); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.59
+# Mc/sec: 1502.68
+//
+Query:       NECID01_1198  [L=276]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.2e-10   38.5   0.3      2e-09   37.4   0.3    1.7  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4   0.3     1e-13     2e-09       1     217 [.       1     236 [.       1     270 [. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 1e-13
+                   E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHTT CS
+         KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaak 97 
+                   MpL+ l+G+ s  K+ +  +L + l+e  ++v ++ ++ +g+e          k+  + lrs v+ +L k+ +V + +  ++k+ RYe++ iak++ 
+  NECID01_1198   1 MPLLALSGVSSLKKTEMFLHLVNRLKED-YKVLLVVQKDVGVE---------IKEEVATLRSLVQNRLRKDVLVAICAPLHMKSLRYEIFSIAKNMG 87 
+                   8999999999999999999999999875.55555555555533.........333447899*************99999****************** PP
+
+                   -EEEEEEEE--HHHHHHHHHHTT-S..................................S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---H CS
+         KTI12  98 ttlcvvyvvapldvlvkwneereekee................................yekelldaLiqRyeePdsknrWDsPlftvlsaeeklpl 162
+                   ++++ +    +++ + + +e+r+e+ +                                 e e    L + +e+  ++ +WD P+f   +   +   
+  NECID01_1198  88 IEYAHIVH--NESSIQTEEENRKES-GagagagddnrtnksgffedmgslfetieiasrGEVESTSVLRRIFEAARRNDKWDCPVFCTTESCLSEGA 181
+                   ***85543..333333333333333.3467899999999999*************9988777788888889***************98853333333 PP
+
+                   HHHHHHHHHHHTS--SSSTT----.---HHHHHHHHHHHHHHHHHHH....HTT-- CS
+         KTI12 163 deilkaliekkklkpnqatlskpl.aeanflqeLdketseivkeileaqksavaid 217
+                     ++ka ++k ++  +++t  +p+     +l++ +k+  e   +i +aq+s+  i+
+  NECID01_1198 182 LGLVKASLQKAQKVRTSSTKIMPQhLDPTYLDKAKKQMDEA-MHIYKAQESSLDIS 236
+                   34444444444444444444444313444444444444443.34555566665555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (276 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       644  (0.0335784); expected 383.6 (0.02)
+Passed bias filter:                      432  (0.0225246); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.72
+# Mc/sec: 1245.40
+//
+Query:       OAG31541.1  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-16   59.9   0.0    6.1e-15   55.5   0.0    2.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   0.0   3.2e-19   6.1e-15       1     204 [.       1     204 [.       1     217 [. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 3.2e-19
+                 E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHTT-E CS
+       KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaaktt 99 
+                 MpL++++GlPs GK  +   L +    +  +v vi ++++g++        +e+   s+++s v+ +Ls++++V v +  +ik+ RYeL  ia + k t
+  OAG31541.1   1 MPLLIVSGLPSPGKKAFFLSLLDL-VGKSAQVLVIAQNAVGVS-------VREEV--SRIKSLVSNRLSTDTLVAVYAPLHIKSLRYELSSIACNLKMT 89 
+                 ********************9875.566778999999999954.......44444..5699*******************************9998887 PP
+
+                 EEEEEEE--.........HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT----.-- CS
+       KTI12 100 lcvvyvvap.........ldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskpl.ae 188
+                 ++ v+   +         +d  ++ +e    + + ++e +  + + +e+P  + +WD P+ft +s++     +e ++ +++  +++ ++ t   p    
+  OAG31541.1  90 MVHVFYRGEhlpggevqrSDLPRETDEMALVAPKGPSESFAIVQKVFETPRASDKWDAPVFTAMSPDAFGVAAEKVSLVLSTAQKRRTSCTKLIPRtID 188
+                 665555544666666665555555556666666699****999999******************96666555555555555555555544444443144 PP
+
+                 -HHHHHHHHHHHHHHH CS
+       KTI12 189 anflqeLdketseivk 204
+                 + +l + ++++ +i++
+  OAG31541.1 189 QGYLTKTKEAIDAIIS 204
+                 4455444444444443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       613  (0.031962); expected 383.6 (0.02)
+Passed bias filter:                      511  (0.0266437); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.52
+# Mc/sec: 1588.50
+//
+Query:       NEFER01_0857  [L=254]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.7e-14   52.6   0.1    2.5e-13   50.2   0.1    2.0  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.2   0.1   1.3e-17   2.5e-13      50     209 ..      42     210 ..       1     248 [. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 50.2 bits;  conditional E-value: 1.3e-17
+                   GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHTT-EEEEEEEE--...............HHHHHHHH..HHTT-S..S-HHH CS
+         KTI12  50 sakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaakttlcvvyvvap...............ldvlvkwn..eereekeeyekel 129
+                   s +e+   s++r+av+ +Ls + + I+ +  ++k+ RYe+  ia++   t++ ++   p               +      +    r e+ e e+e 
+  NEFER01_0857  42 STREEL--SRIRAAVQNKLSPNMLMILYAPLHMKSIRYEISSIARNTGSTFAHIHYSGPyadngeildddllmlP------EhaIVRIEP-EGEAES 129
+                   344443..5699***********************************************8888888874433332......233333333.347799 PP
+
+                   HHHHHHH---TTSS-GGGS-SEEEE..TTS---HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH. CS
+         KTI12 130 ldaLiqRyeePdsknrWDsPlftvls.aeeklpldeilkaliekkklkpnqatlskplaeanflqeLdketseivkeilea 209
+                   +  L + +e+P  + +WD P    ++   e+  l+++  al + kk++ +++++   l+ +++l+++++e+  +++e+ ++
+  NEFER01_0857 130 FSVLQRIFESPRAADKWDTPCCVFSKpGAEAYALERMTAALSQGKKQRVSSSKIIPLLSDTKYLEKIKEEIDGVIEEYKQK 210
+                   *********************999997889999******************************************998773 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (254 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       861  (0.0448929); expected 383.6 (0.02)
+Passed bias filter:                      655  (0.0341519); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 1491.99
+//
+Query:       NEHOM01_0865  [L=265]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-17   62.8   0.0    7.2e-17   61.8   0.0    1.5  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.8   0.0   3.8e-21   7.2e-17       1     249 [.       1     259 [.       1     263 [. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 61.8 bits;  conditional E-value: 3.8e-21
+                   E.EEEEE--TTSSHHHHHHHHHHHHHHTT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHTT CS
+         KTI12   1 MpLvvltGlPssGKstrakeLakaleeekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaak 97 
+                   MpL++++G+Ps  K  +   L ++++ +++s vv+ +e +g+++       +e    s l++av+ +Ls + +V v +  ++k+ RYeL  +a++++
+  NEHOM01_0865   1 MPLLIVSGMPSLAKKELFLGLVETFS-REYSLVVVGQERIGVDSR------EEV---SVLKAAVQNKLSMDVLVAVYAPLHMKSLRYELASLARNCS 87 
+                   ************************98.57999*********6544......344...56999*********************************** PP
+
+                   -EEEEEEEE--HHHHHHHHHHTT-S.....................S-HHHHHHHHHH---TTSS-GGGS-SEEEE....TTS---HHHHHHHHHHH CS
+         KTI12  98 ttlcvvyvvapldvlvkwneereekee...................yekelldaLiqRyeePdsknrWDsPlftvls...aeeklpldeilkaliek 172
+                     ++ vy   +  +  +++e + +++                     eke +  + + +e+P +  rWD+P +tv       +++  +e+++++ + 
+  NEHOM01_0865  88 MDMAHVYYRGEFGEGGELKELEVQQAClqgsaglglgwefirvdpnGEKESVVVMQRIFEKPRDGDRWDRPCLTVGLvdeRMKAVVAEEVASVIKKT 184
+                   ********99955555554444444334455566666666666666789999999999*****************9843333444558888888777 PP
+
+                   HTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHH CS
+         KTI12 173 kklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvk 249
+                   kk++ +  +l  +l  a++l +++++++++++e  +  k+ v+ +  +  ++    +++ +  +l+e++r+ r++++
+  NEHOM01_0865 185 KKKRVSATKLIPQLDDAKYLTKVKEVINQVMDEWKQ--KEVVPLGVSRQAERDFLASIKMNPPQLPEVNRIFREYLE 259
+                   777777777777778899998888777777777655..788888888877887777888778899*****9999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (265 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1100  (0.0573544); expected 383.6 (0.02)
+Passed bias filter:                      782  (0.0407738); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.20s 00:00:00.60 Elapsed: 00:00:00.67
+# Mc/sec: 1270.73
+//
+Query:       OAG33075.1  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-14   53.1   0.1    4.5e-14   52.6   0.1    1.2  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.6   0.1   2.4e-18   4.5e-14       1     205 [.       1     233 [.       1     261 [. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 52.6 bits;  conditional E-value: 2.4e-18
+                 E.EEEEE--TTSSHHH.HHHHHHHHHHH.............TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHH CS
+       KTI12   1 MpLvvltGlPssGKst.rakeLakalee.............ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgf 85 
+                 MpL +l+GlPs  K   + + La+ +++              + +   id+  +   ++s+  +ake++  +++rs ++ +Lsk  +V + +  +ikg 
+  OAG33075.1   1 MPLFILSGLPSIEKKDlFCNILAQLVRKytvekteedpldmPGEALPTIDSVLVV-LQNSVSVNAKEET--AKMRSIIQNKLSKRVLVAIYAPLHIKGL 96 
+                 9**********98876155666666666888898888877666666666655554.5666666666666..57899*********************** PP
+
+                 HHHHHHHHHHTT-EEEEEEEE--HHHHHHHH......HHTT-S...............S-HHHHHHHHHH---TTSS-GGGS-SEEEE.....TTS--- CS
+       KTI12  86 RYeLyciakaakttlcvvyvvapldvlvkwn......eereekee.............yekelldaLiqRyeePdsknrWDsPlftvls....aeeklp 161
+                 RYe+   ak++ +  + +y+ a +++  +                              + e +  + + +e P ++ +WD P f  +     + ++ +
+  OAG33075.1  97 RYEIASTAKNMGIDTAHIYCSAGYNEGGEISveeiegI------LgvhgtaadistktDKTEEFSVVSRIFEVPRRADKWDAPCFIADDanikICNDSS 189
+                 ***********************666666553233330......13333444444443457889999999****************9985555556667 PP
+
+                 HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHH CS
+       KTI12 162 ldeilkaliekkklkpnqatlskplaeanflqeLdketseivke 205
+                 l++++  l +  k++ ++++l  +  ++++lq+++++++++++e
+  OAG33075.1 190 LEKVWCLLHNVVKPRTSSKKLMGAPLNTKYLQNVKEVVNKVLEE 233
+                 78888888888888888888888888889998888777777654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       577  (0.030085); expected 383.6 (0.02)
+Passed bias filter:                      420  (0.021899); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.14s 00:00:00.48 Elapsed: 00:00:00.56
+# Mc/sec: 1605.56
+//
+Query:       NEMAJ01_1201  [L=275]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-17   62.3   0.0    9.4e-17   61.4   0.0    1.5  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.4   0.0   4.9e-21   9.4e-17       1     205 [.       1     228 [.       1     270 [. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 61.4 bits;  conditional E-value: 4.9e-21
+                   E.EEEEE--TTSSHHHHHHHHHH.HHHH......TT--E.EEE-THHHH..TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHH CS
+         KTI12   1 MpLvvltGlPssGKstrakeLak.alee......ekrsv.vviddeslg.iekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYe 88 
+                   MpL +l+GlPs  K  + + L    l        e  s+      +s+  + ++s+  sake+++R  lrs ++ +Lsk  +V++ +  +ikg RYe
+  NEMAJ01_1201   1 MPLFMLSGLPSPQKKALFESLLAgVLGRykqeetE-ESCaERAGVDSVLvVLQNSVGVSAKEETAR--LRSVIQNRLSKRVLVVIYAPLHIKGLRYE 94 
+                   9**********999776665543033335554431.2220222333433488999********998..89*************************** PP
+
+                   HHHHHHHTT-EEEEEEEE--.......HHHHHHHHHHTT-S...............S-HHHHHHHHHH---TTSS-GGGS-SEEEE.....TTS--- CS
+         KTI12  89 Lyciakaakttlcvvyvvap.......ldvlvkwneereekee.............yekelldaLiqRyeePdsknrWDsPlftvls....aeeklp 161
+                   +  +ak++ +  + +y++         +        +  e+                  e +  + + +e+P ++ +WDsP ft +        ++ 
+  NEMAJ01_1201  95 IASVAKNMGIDAAHIYCASAygeggdiS-------AKSVEAVFgsacsaceihvggGAVEDFAVVSRVFEKPRKADKWDSPCFTADAgnidVCAEVA 184
+                   ********************55555551.......444444334445555555555567788889999******************97766667788 PP
+
+                   HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHH CS
+         KTI12 162 ldeilkaliekkklkpnqatlskplaeanflqeLdketseivke 205
+                   l+++++ l +  k + +++ l  +  ++++ q ++++  ++++e
+  NEMAJ01_1201 185 LEKVWSILHKTVKARTSSKRLVSSPMSTQYFQRVKECMDAVLEE 228
+                   89999999999999999999999999999999999998888876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (275 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       537  (0.0279994); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.15s 00:00:00.52 Elapsed: 00:00:00.61
+# Mc/sec: 1459.79
+//
+Query:       NEMIN01_0243  [L=285]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.5e-17   61.6   0.5      1e-16   61.3   0.5    1.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.3   0.5   5.4e-21     1e-16      44     217 ..      62     246 ..      28     278 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 61.3 bits;  conditional E-value: 5.4e-21
+                   TSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S...............S-H CS
+         KTI12  44 kdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaakttlcvvyvvapldvlvkwneereekee.............yek 127
+                   ++ +  +a+e++  +++rs ++ +Lsk  +V + +  +ikg RYe+   ak++ +  + vy++a +++  + + e+ e+ +              + 
+  NEMIN01_0243  62 QNAVGVNAREET--AKMRSIIQNKLSKRVLVLIYAPLHIKGLRYEISSTAKNMGIDTAHVYCAAGYQEGGEIRAEEVENMHreecsavevhaggEKT 156
+                   555555555555..56899**********************************************7777777755554444466777788888889* PP
+
+                   HHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT-- CS
+         KTI12 128 elldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaid 217
+                   e+++ + + +e+P ++ +WD P f v+  + ++  +  l++ +   +++    t sk+l  +    e  ++++ei++++le+ k++ +i 
+  NEMIN01_0243 157 ETFEVVSRIFEKPRKTDKWDTPCFVVDAENINMCAQAALEKACAVMQKSVRPRTSSKKLIAGPLNTEYLQKVKEIISSVLEEKKKTRNIP 246
+                   ***************************999999999999998888888889999999998888888888999999999999777776654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (285 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       635  (0.0331091); expected 383.6 (0.02)
+Passed bias filter:                      428  (0.0223161); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.64
+# Mc/sec: 1446.69
+//
+Query:       NEOKW01_1301  [L=285]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.3e-11   41.8   0.7    1.2e-10   41.4   0.7    1.2  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.4   0.7   6.3e-15   1.2e-10       7     251 ..       2     276 ..       1     284 [. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 41.4 bits;  conditional E-value: 6.3e-15
+                   E--TTSS.HHHHHHHHHHHHHHTT--EEEE-THHHH........TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHH CS
+         KTI12   7 tGlPssG.KstrakeLakaleeekrsvvviddeslg.......iekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciaka 95 
+                   +GlPs   Ks + + L+   ee k++ ++ d+ s         + ++++ +s ke+  R  l++    +L+ ++ + v +  +ik+ RYeL  ia  
+  NEOKW01_1301   2 SGLPSEAkKSAFIDILQGIAEEYKQNRQIADNTSNStistlliVIQNHVGESVKEEVSR--LKAVLLNRLNSTTTICVYAPLHIKSLRYELSSIALG 96 
+                   78888652678888888888887777777776555455666656677788888888866..6778889999999999999***************** PP
+
+                   TT-EEEEEEEE--HHHHHHHHHHTT-S..............................S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHH CS
+         KTI12  96 akttlcvvyvvapldvlvkwneereekee............................yekelldaLiqRyeePdsknrWDsPlftvlsaeeklplde 164
+                    kt  + vy + ++d   +    + ek+                              + e +d + + +e+P  + +WD P ft+     +++ + 
+  NEOKW01_1301  97 LKTDIAHVYSKYTYDSNGTITIDEIEKSLnslnspasedpnsypqlkieillidqknTKIESYDVIQRIFESPRPNDKWDIPCFTLAA--PNTSAAA 191
+                   **********99966655555333333223466777778888999999999999988888999999999******************6..3334444 PP
+
+                   HHHHH..HHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHH CS
+         KTI12 165 ilkal..iekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvkln 251
+                   + k+l  ++k++ + ++++   p a     +   ++++eiv+ +l   k+ ++   l+   + es  l++ + t + +s+++r F ++ 
+  NEOKW01_1301 192 LSKVLpvLDKRAVPRTSSKKIIPIARDPLYH---QKVKEIVDDVLA-TKKVSRYIPLKTSRQIESGFLQSVRTTPPPVSEIKRIFTEYL 276
+                   5555544677888888888888888777766...588889999888.444444444554555555555555667788888888887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (285 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       630  (0.0328484); expected 383.6 (0.02)
+Passed bias filter:                      452  (0.0235674); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.50
+# Mc/sec: 1831.82
+//
+Query:       XP_013058438.1  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-14   53.0   0.0    4.4e-14   52.7   0.0    1.1  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.7   0.0   2.3e-18   4.4e-14       1     205 [.       1     233 [.       1     267 [. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 52.7 bits;  conditional E-value: 2.3e-18
+                     E.EEEEE--TTSSHHHH.HHHHHHHHHH.............TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S--- CS
+           KTI12   1 MpLvvltGlPssGKstr.akeLakalee.............ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslny 81 
+                     MpL +l+GlPs  K  +  + La+  ++             ++ +   id+  + + ++s+  +ake+++  ++rs ++ +Lsk  +V + +  +
+  XP_013058438.1   1 MPLFILSGLPSIEKKDLfCNILAQLARKytmektggdpvdvSGEALSTIDSVLV-VLQNSVGVNAKEETA--KMRSIIQNKLSKRVLVAIYAPLH 92 
+                     ***********9987651444555555588899866665554444444444333.567778888888875..6899******************* PP
+
+                     SHHHHHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S...............S-HHHHHHHHHH---TTSS-GGGS-SEEEE.....TTS- CS
+           KTI12  82 ikgfRYeLyciakaakttlcvvyvvapldvlvkwneereekee.............yekelldaLiqRyeePdsknrWDsPlftvls....aeek 159
+                     ikg RYe+   ak++ +  + +y+ a +++  +   e+ e                 + e +  + + +e P +  +WD P f  +     + ++
+  XP_013058438.1  93 IKGLRYEIASTAKNMGIDTAHIYCSAGYNEGGEISVEEIEGILgvsgtaadistktGKTEEFSVVSRIFEIPRRVDKWDAPCFIADDanikMCND 187
+                     ***************************77766666333332223444555555555678889999999*****************9844444455 PP
+
+                     --HHHHHHHHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHH CS
+           KTI12 160 lpldeilkaliekkklkpnqatlskplaeanflqeLdketseivke 205
+                       l++++  l +  k++ ++++l  +  ++++lq+++++++++++e
+  XP_013058438.1 188 SALERVWCLLHNVVKPRTSSKKLMGAPLNTKYLQNVKEVVNKVLEE 233
+                     5667777777777777777777777778888888877777777665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       539  (0.0281037); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.62
+# Mc/sec: 1461.64
+//
+Query:       PJF18502.1  [L=713]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    8.6e-78  261.6   0.0    1.3e-77  261.0   0.0    1.3  1  KTI12            Chromatin associated protein KTI12
+    3.5e-11   43.5   0.1    9.7e-11   42.1   0.1    1.7  1  AAA_33           AAA domain
+    2.9e-06   26.2   0.8    0.00019   20.3   0.2    2.2  0  Nucleopor_Nup85  Nup85 Nucleoporin
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  261.0   0.0   2.1e-81   1.3e-77       1     271 [.     447     708 ..     447     709 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 261.0 bits;  conditional E-value: 2.1e-81
+                 E.EEEEE--TTSSHHHHHHHHHHHHHH..TT--EEEE-THHHH.TTSS.S--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHHT CS
+       KTI12   1 MpLvvltGlPssGKstrakeLakalee..ekrsvvviddeslgiekds.ykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciakaa 96 
+                 MpLv++tGlP+sGK+trak+La++l+   ++++v v+++e lg ++ + y+++ +ek++R+s +s ++r+++++++VI D lnyikg+RY+Lycia+aa
+  PJF18502.1 447 MPLVIVTGLPCSGKTTRAKQLAEYLATriQDKTVEVLSEEDLGAHRATeYASATAEKKARGSFISTIERRVTRTNIVIADGLNYIKGYRYQLYCIARAA 545
+                 **************************9999*************888777************************************************** PP
+
+                 T-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT-------HHHHHH CS
+       KTI12  97 kttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskplaeanflqeL 195
+                 +t++cv+++va +++++ +n+       y++e++++L+ RyeeP++++rWDsPlftv+  e++++ d+++ +l    + +p+ +t  k ++++ fl  L
+  PJF18502.1 546 STPHCVLHCVAREETCRARNT----V--YPAEIFEELLLRYEEPSNQARWDSPLFTVD-EEDQTDWDNLAAVLAGTVARPPSMSTAVKTENSGAFLVSL 637
+                 ****************98875....3..9999**************************.9*************************************** PP
+
+                 HHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT.TSSS--HHHHHHHHHHHH CS
+       KTI12 196 dketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnkaklenvdeekiaklFvdyL 271
+                 d++t+e+v++i+  +++  + + ++  + s  + ++++      L+rlrrqF+++n+  l++  +++i+ lFv+yL
+  PJF18502.1 638 DRITQEVVEQIMARIRQVGVPTSIRFGEDS--IAIQKN-YMSGDLQRLRRQFIHMNR--LHQAGTDNIQSLFVNYL 708
+                 *************99999999999988777..777777.55789*************..****************9 PP
+
+>> AAA_33  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.1   0.1   1.5e-14   9.7e-11       1     116 [.     449     566 ..     449     573 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 42.1 bits;  conditional E-value: 1.5e-14
+      AAA_33   1 lvllvGlpGsGKttlaerllkklg.......avrlssdtlrrrlfgtdqqsktdytrvldrlyrilnelaekalsagrnvildatnlsreerarfvnla 92 
+                 lv++ Glp+sGKtt a++l++ l+       +++ls+ +l  +++ t+      +++++++++     ++e++ ++ + vi+d  n  +  r ++  +a
+  PJF18502.1 449 LVIVTGLPCSGKTTRAKQLAEYLAtriqdktVEVLSEEDL-GAHRATE----YASATAEKKARGSFISTIERRVTRTNIVIADGLNYIKGYRYQLYCIA 542
+                 79*****************977766666665666666663.3333333....34445667788888899999999************************ PP
+
+      AAA_33  93 relgvpirivvletseetlkeRla 116
+                 r ++ p+ ++++ + eet+++R+ 
+  PJF18502.1 543 RAASTPHCVLHCVAREETCRARNT 566
+                 **********************96 PP
+
+>> Nucleopor_Nup85  Nup85 Nucleoporin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (713 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       576  (0.0300328); expected 383.6 (0.02)
+Passed bias filter:                      530  (0.0276344); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.20s 00:00:00.68 Elapsed: 00:00:00.81
+# Mc/sec: 2851.27
+//
+Query:       EPZ32514.1  [L=290]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-76  256.1   2.5    4.7e-76  255.9   2.5    1.0  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  255.9   2.5   2.5e-80   4.7e-76       1     272 []       1     286 [.       1     286 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 255.9 bits;  conditional E-value: 2.5e-80
+                 E.EEEEE--TTSSHHHHHHHHHHHHHH.........TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHH CS
+       KTI12   1 MpLvvltGlPssGKstrakeLakalee.........ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLy 90 
+                 MpLv++tG+P sGK++ra++L+k + e         +  +vv++++e l+i+kd y++s++ek++R++l  av+r L+k+++VI+Ds+nyikg RY++y
+  EPZ32514.1   1 MPLVIITGFPKSGKTKRAEQLKKWVLEnkgkfvwgqNLDKVVLLNEEFLNINKDLYNNSNDEKKVRGALVGAVERYLNKKTLVICDSMNYIKGIRYQMY 99 
+                 ***********************988889*****9777789999999**************************************************** PP
+
+                 HHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHHHHHHHHTS--SSSTT---.... CS
+       KTI12  91 ciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilkaliekkklkpnqatlskp.... 185
+                 cia+++ t +cvv+++++++++ k+n+  +    y++e+l++Li+RyeeP++ nrWD+Plf v+ ++ ++p+++i+k+l+ek+++ pn +t+s +    
+  EPZ32514.1 100 CIARSIGTLQCVVHICTSSENCSKFNSIDN-T--YDNETLKNLISRYEEPNEFNRWDKPLFNVQVDDLDIPCEKIMKCLFEKEAPLPNLSTISVSsiff 195
+                 **************************8776.4..9********************************************************99752332 PP
+
+                 ...----HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT..TSSS--HHHHHHHHHHHHH CS
+       KTI12 186 ...laeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnk.aklenvdeekiaklFvdyLn 272
+                    ++  + ++++d+++++  k++le +k    i+k++++++s  + l  +++tl e++r+++qF+kl +   ++n+d +   + Fv+yLn
+  EPZ32514.1 196 iekKPAMDNVKNIDQTIQKATKTVLERLKDDPLIQKIDIENASIPVLLNGNRVTLIEMKRHQHQFMKLYNhLLTSNMDDQTALNSFVEYLN 286
+                 222678899**********************************************************8874678999999**********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (290 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1024  (0.0533917); expected 383.6 (0.02)
+Passed bias filter:                      509  (0.0265394); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.58
+# Mc/sec: 1612.66
+//
+Query:       P34253  [L=313]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.5e-101  337.2   0.0   8.7e-101  337.0   0.0    1.0  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  337.0   0.0  4.5e-105  8.7e-101       1     272 []       1     309 [.       1     309 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 337.0 bits;  conditional E-value: 4.5e-105
+             E.EEEEE--TTSSHHHHHHHHHHHHHH........TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S---SHHHHHHHHHHHHH CS
+   KTI12   1 MpLvvltGlPssGKstrakeLakalee........ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDslnyikgfRYeLyciaka 95 
+             MpLv++tG+P+sGK+t+ak+L + l++        +k+s+++++deslgi++++y +s++e++lRs+++savkrdLsk+k+VIvDslnyikgfRY+L+c++k+
+  P34253   1 MPLVLFTGYPCSGKTTLAKHLVQLLQSkidatpslSKYSITYHSDESLGIKHSDYITSQDERKLRSEIISAVKRDLSKNKIVIVDSLNYIKGFRYQLHCEVKN 103
+             ******************************************************************************************************* PP
+
+             TT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE...TTS---HHHHHHHH...............HHHHTS--SSST CS
+   KTI12  96 akttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvls..aeeklpldeilkal...............iekkklkpnqat 181
+              +tt+cv+++++p++++++wn+  + ++ +e+ell++LiqRyeeP+s+nrWDsPlf++l+  ++ +  +d+i+k++               ++k  +kpn+at
+  P34253 104 LSTTFCVIQTLCPPETIFEWNKTSN-PNPWEPELLNQLIQRYEEPNSSNRWDSPLFAILTpqDNITDYIDDICKVVfqtsksaknsghndpLSKGLQKPNSAT 205
+             *********************6554.335******************************987888899***********************9999******** PP
+
+             T-------HHHHHHHHHHHHHHHHHHH....HTT--HHH...............................HHHHHHHHHHHHHHHT.TSSS--HHHHHHHHHH CS
+   KTI12 182 lskplaeanflqeLdketseivkeileaqksavaidklt..............lpgsseslelpak.kltlaeLsrlrrqFvklnkaklenvdeekiaklFvd 269
+             + kp++++nf+q+Ld ets+i+k+i++++ks ++i+ ++              +++ + +++lp    +tla+L+rl+rqF+++nk  l+++d+++i +lF+d
+  P34253 206 VLKPASQSNFIQVLDIETSKIIKTIMNHIKSLTSIGGVSngtrvivsegitdiNDDGCFFVDLPIGnVVTLAQLQRLKRQFINFNK--LRDIDQDRIGPLFAD 306
+             ****************************************************999**********989******************..*************** PP
+
+             HHH CS
+   KTI12 270 yLn 272
+             yLn
+  P34253 307 YLN 309
+             **9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (313 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       880  (0.0458835); expected 383.6 (0.02)
+Passed bias filter:                      669  (0.0348819); expected 383.6 (0.02)
+Passed Vit filter:                        83  (0.00432765); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.19s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 1613.61
+//
+Query:       sp|Q9P7V4|KTI12_SCHPO  [L=281]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.9e-102  342.5   1.8   2.1e-102  342.3   1.8    1.0  1  KTI12     Chromatin associated protein KTI12
+
+
+Domain annotation for each model (and alignments):
+>> KTI12  Chromatin associated protein KTI12
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  342.3   1.8  1.1e-106  2.1e-102       1     272 []       1     274 [.       1     274 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 342.3 bits;  conditional E-value: 1.1e-106
+                            E.EEEEE--TTSSHHHHHHHHHHHHHH.........TT--EEEE-THHHH.TTSSS--GGGHHHHHHHHHHHHHHHHTT.SEEEE-S- CS
+                  KTI12   1 MpLvvltGlPssGKstrakeLakalee.........ekrsvvviddeslgiekdsykdsakekalRsslrsavkrdLskekvVIvDsl 79 
+                            MpL++++G+PssGK+tr++eL+kale+         ++++v++i+desl+iek++y++s++eka+R+ l+sav+r+Lsk+++VI+D+l
+  sp|Q9P7V4|KTI12_SCHPO   1 MPLIIVSGYPSSGKTTRSNELKKALEDrihqnidntKDYRVIIINDESLNIEKETYRESKNEKAARGLLYSAVQRELSKSTFVICDAL 88 
+                            **************************************************************************************** PP
+
+                            --SHHHHHHHHHHHHHTT-EEEEEEEE--HHHHHHHHHHTT-S..S-HHHHHHHHHH---TTSS-GGGS-SEEEE.TTS---HHHHHH CS
+                  KTI12  80 nyikgfRYeLyciakaakttlcvvyvvapldvlvkwneereekeeyekelldaLiqRyeePdsknrWDsPlftvlsaeeklpldeilk 167
+                            nyikgfRY+Lyc++k++ tt+cv++v++p+d ++k+n+++e++  y++++l++L+ RyeeP+ ++rWDsPlftvl+++ ++p+d+i++
+  sp|Q9P7V4|KTI12_SCHPO  89 NYIKGFRYQLYCESKSMYTTHCVIHVAVPQDLCRKFNSNKEQP--YPDDVLEQLMFRYEEPNGMTRWDSPLFTVLHDDASCPIDDIWS 174
+                            *******************************************..******************************************* PP
+
+                            HHHHHHTS--SSSTT-------HHHHHHHHHHHHHHHHHHH....HTT--HHH................HHHHHHHHHHHHHHHT.TS CS
+                  KTI12 168 aliekkklkpnqatlskplaeanflqeLdketseivkeileaqksavaidkltlpgsseslelpakkltlaeLsrlrrqFvklnkakl 255
+                            +li++k+ kpnqat+ kp ae n+l+eLdk+t++++  il+   +++ ++ +t+pgs++++ lp+ +++l+ L+rlrrqF+++n+  +
+  sp|Q9P7V4|KTI12_SCHPO 175 VLIHNKNVKPNQATMVKPPAEVNYLYELDKTTQDVIMLILD---NSNDTSLITVPGSKLQIALPSVTVSLPLLQRLRRQFIQINR--Q 257
+                            *****************************************...89999************************************..9 PP
+
+                            SS--HHHHHHHHHHHHH CS
+                  KTI12 256 envdeekiaklFvdyLn 272
+                            ++++++ ++++Fv++Ln
+  sp|Q9P7V4|KTI12_SCHPO 258 QSYNTNVLKEMFVEFLN 274
+                            9***************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (281 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       773  (0.0403045); expected 383.6 (0.02)
+Passed bias filter:                      503  (0.0262266); expected 383.6 (0.02)
+Passed Vit filter:                        67  (0.0034934); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.66
+# Mc/sec: 1371.82
+//
+[ok]

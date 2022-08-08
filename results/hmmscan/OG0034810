@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034810.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034810
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QS77|A0A2R8QS77_DANRE  [L=313]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-31  107.7  11.1    6.6e-29  101.0   2.0    3.3  1  VBS       Vinculin Binding Site
+    8.6e-06   26.0   1.3      0.066   13.5   0.2    3.3  0  GIT1_C    G protein-coupled receptor kinase-interacting prote
+
+
+Domain annotation for each model (and alignments):
+>> VBS  Vinculin Binding Site
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.0   2.0   6.9e-33   6.6e-29       1      65 [.     243     307 ..     243     312 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 101.0 bits;  conditional E-value: 6.9e-33
+                                     HHHHHHHHHHHHHHHHHHHHHHHHHHCCC-CCCHHHHHHHHHHHHHHHHHHHHHHHCCSSSHHHH CS
+                             VBS   1 tfvdyqttmvrsakaiavtaqelvtksvtdPeelaqlasqltsdygqlavqsklasalaeseeig 65 
+                                     +fv+yqttmvr++kaiav+aqe++tksv++Pe+l++lasq+t+dy+qlavq++lasa+ae+ee++
+  tr|A0A2R8QS77|A0A2R8QS77_DANRE 243 SFVEYQTTMVRYSKAIAVSAQEMITKSVSSPEDLCSLASQVTADYSQLAVQGRLASATAEPEEVT 307
+                                     7**************************************************************96 PP
+
+>> GIT1_C  G protein-coupled receptor kinase-interacting protein 1 C term
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (313 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       888  (0.0463006); expected 383.6 (0.02)
+Passed bias filter:                      570  (0.02972); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.21s 00:00:00.67 Elapsed: 00:00:00.65
+# Mc/sec: 1567.51
+//
+[ok]

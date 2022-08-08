@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030773.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030773
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55EQ1|Q55EQ1_DICDI  [L=186]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    7.4e-06   26.5  10.2    1.7e-05   25.3  10.2    1.7  1  PSI           Plexin repeat
+    0.00014   21.9   0.6    0.00029   20.8   0.6    1.5  0  Orthoreo_P10  Orthoreovirus membrane fusion protein p10
+
+
+Domain annotation for each model (and alignments):
+>> PSI  Plexin repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3  10.2   1.8e-09   1.7e-05       2      35 ..      50      84 ..      49     100 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 1.8e-09
+                            GGGSSSHHHHHHCTCTTEEEETTTTEEEECTTS...T CS
+                     PSI  2 CsgyttCssCleardpgCgWCsdegrCieeskc...e 35
+                            C +yt+C++C e  d gC WC +eg C+e++ +   +
+  tr|Q55EQ1|Q55EQ1_DICDI 50 CGEYTSCGDCRE--DKGCVWCGSEGICTEGTFYgtkP 84
+                            ***********9..56*************44334442 PP
+
+>> Orthoreo_P10  Orthoreovirus membrane fusion protein p10
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (186 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1138  (0.0593357); expected 383.6 (0.02)
+Passed bias filter:                      522  (0.0272173); expected 383.6 (0.02)
+Passed Vit filter:                        69  (0.00359768); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.23s 00:00:00.62 Elapsed: 00:00:00.56
+# Mc/sec: 1072.95
+//
+[ok]

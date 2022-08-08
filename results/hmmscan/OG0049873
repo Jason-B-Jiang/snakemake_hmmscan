@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049873.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049873
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O74412|CBF12_SCHPO  [L=963]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      5e-38  130.1   0.0    9.8e-38  129.2   0.0    1.5  1  BTD           Beta-trefoil DNA-binding domain
+    3.8e-28   99.1   0.0    1.5e-27   97.1   0.0    2.1  1  LAG1-DNAbind  LAG1, DNA binding
+
+
+Domain annotation for each model (and alignments):
+>> BTD  Beta-trefoil DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.2   0.0     1e-41   9.8e-38       1     123 []     690     825 ..     690     825 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.2 bits;  conditional E-value: 1e-41
+                    BTD   1 eeeafaasstkWgaFtih.llddekgeqeeftvr.dgficygsvvklvcsvtGvalPrliirKvdkqkviLda...eepvsqLhkcaf 83 
+                            e++++a++++ W++F+i+ +++ +kg++++++++ ++++c+++v++lv+++tGv++P+li++K+d++kv+L++   +e++++L+k+af
+  sp|O74412|CBF12_SCHPO 690 EGAGLAMANNLWEPFYIFsVDELNKGNNSNPSDSrSKVLCSNMVIILVSKITGVQSPPLILKKHDNWKVSLSSrapSEAINCLSKLAF 777
+                            67899*************99999*******99877**************************************99************* PP
+
+                    BTD  84 qlkdte.rlylclsqekiiqfqasei.pkden......revlndgaaW 123
+                            q+++t+ +ly++++q+++i+f+++e+ ++d+n      ++vl+++a+W
+  sp|O74412|CBF12_SCHPO 778 QCHETKrFLYIDEKQSSEISFTSGELeYSDPNdptkatHSVLPWSAMW 825
+                            ****99899*****************999999999**9********** PP
+
+>> LAG1-DNAbind  LAG1, DNA binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.1   0.0   1.6e-31   1.5e-27       3     151 ..     475     629 ..     473     630 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 97.1 bits;  conditional E-value: 1.6e-31
+           LAG1-DNAbind   3 ilhakvAQKSYGtEkRflcPpPiviLlGksWksk.........etskskeaelaapeltisssgedeeeesqviesitvlgkvseqea 81 
+                             ++++++QKSYGtE+R+lcPp +++LlG++W ++         +t ++k++++ a+++ +++++ +  + +++i+  t++ ++ ++++
+  sp|O74412|CBF12_SCHPO 475 LCMPSLCQKSYGTERRYLCPPIVLYLLGTTWLNNvtdnlkisaQTLEDKDNPKFAKNIFYYNADGALISPETDIAKSTYQLTNYNENT 562
+                            5789*****************************9********99999999************************************** PP
+
+           LAG1-DNAbind  82 qelklvldgkaaaktlyis.dkdekrkevellvkllapsgeeaelaigsfeskpikviSkpskkrqslkne 151
+                            +  ++ ++g+a++kt+y++ + +++    ++ ++l ++s+++    +  +e+ ++ viSkps+kr+ +k +
+  sp|O74412|CBF12_SCHPO 563 NFDSFPVWGNALLKTIYYTgQGKNDGFGRSTFLQLSVQSKTK----YFKLENLRLGVISKPSQKRALMKVS 629
+                            *******************55666778889999999999766....9*********************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (963 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       554  (0.0288858); expected 383.6 (0.02)
+Passed bias filter:                      286  (0.0149121); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.16s 00:00:00.61 Elapsed: 00:00:00.80
+# Mc/sec: 3895.64
+//
+[ok]

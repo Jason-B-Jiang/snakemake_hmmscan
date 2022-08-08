@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034368.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034368
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F8W590|F8W590_DANRE  [L=240]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.7e-49  167.6   1.1    1.9e-38  132.2   0.1    2.1  2  ATP-grasp_2  ATP-grasp domain
+    3.4e-07   30.0   0.1    4.3e-05   23.1   0.0    2.4  0  ATP-grasp_5  ATP-grasp domain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-grasp_2  ATP-grasp domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.2   0.1     2e-42   1.9e-38       2     118 ..      55     178 ..      54     180 .. 0.98
+   2 !   36.0   0.1   5.9e-13   5.6e-09     161     202 .]     178     219 ..     175     219 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 132.2 bits;  conditional E-value: 2e-42
+                             E-HHHHHHHHHCTT----SEEEESSHHHHHHHHHHHTSSSEEEEE--SSSTCCCT.......TCEEEESSHHHHHHHHHCCTTSEEE CS
+             ATP-grasp_2   2 lhEyqakeilkkygikvpegevaesaeeaeeiakklgekelvvKaQvlaGGRGKa.......gGvklvkskeeakevakellgkelv 81 
+                             lhEy +  +lk+ gi+vp+g+va++++ea ++ak++g+k+lv+KaQvlaGGRGK+       gGv++v+s+eea+++ ++++gk+l 
+  tr|F8W590|F8W590_DANRE  55 LHEYMSIGLLKEAGISVPAGMVASTPDEAYTAAKQIGSKDLVIKAQVLAGGRGKGtfegglkGGVRIVYSPEEARDISSKMIGKKLF 141
+                             9************************************************************************************** PP
+
+                             -TTS-TT-EEE--EEEEE---ECEEEEEEEEEETTTT CS
+             ATP-grasp_2  82 tkqtdkeGkkvekvlveeavdikkElYlsivlDrask 118
+                             tkqt+++G+++++v+v+e+   ++E+Y++i+++r+ +
+  tr|F8W590|F8W590_DANRE 142 TKQTGEAGRICNQVFVCERRYPRREYYFAITMERSYQ 178
+                             **********************************976 PP
+
+  == domain 2  score: 36.0 bits;  conditional E-value: 5.9e-13
+                             HHHHHCT--CHHHHHHHHHHHHHHHHHHHTTEEEEEEEEEEE CS
+             ATP-grasp_2 161 eiakklglekelvkkaadiikkLyklfvekdatlvEiNPLve 202
+                             ++a+k+g++  l+++aa+ + kLy++f+++da++vEiNP+ve
+  tr|F8W590|F8W590_DANRE 178 QVAEKMGFPPALINEAAENMLKLYDVFIKYDASMVEINPMVE 219
+                             799*************************************95 PP
+
+>> ATP-grasp_5  ATP-grasp domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (240 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       384  (0.0200219); expected 383.6 (0.02)
+Passed bias filter:                      343  (0.0178841); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.23s 00:00:00.59 Elapsed: 00:00:00.64
+# Mc/sec: 1221.42
+//
+[ok]

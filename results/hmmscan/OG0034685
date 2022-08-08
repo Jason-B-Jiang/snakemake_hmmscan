@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034685.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034685
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7FDI6|E7FDI6_DANRE  [L=160]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.4e-16   61.4   0.4    1.9e-16   60.9   0.4    1.2  1  Calc_CGRP_IAPP  Calcitonin / CGRP / IAPP family
+
+
+Domain annotation for each model (and alignments):
+>> Calc_CGRP_IAPP  Calcitonin / CGRP / IAPP family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.9   0.4   9.8e-21   1.9e-16       1     130 []       1     130 [.       1     130 [. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 60.9 bits;  conditional E-value: 9.8e-21
+          Calc_CGRP_IAPP   1 MkllkvslllllsilllvqagslqAaplrsalessatlseeeselkkrvslLlaalvkklvqlkaeseleqeqvr.eved..sslak 84 
+                             Mk++ + ++l   ++l + ++s+++a+               + l++ + +L++ + ++    ++++    +q + ++e+   ++ +
+  tr|E7FDI6|E7FDI6_DANRE   1 MKSMLQKAFLW--CMLTALLPSITSAKPLN-----------TDGLRRFSVWLQSRVKRE--RSESDMTDLLTQRNcDTESlvPQHRN 72 
+                             78888888887..77777788887776655...........344444444444443333..11111122222222455554324455 PP
+
+          Calc_CGRP_IAPP  85 irqKR.............gCnlgTCvvhrLahkLyrlgdkvkdnfaptn.vgpqgyGrrr 130
+                              r+KR             gCnl+TC vh+Lah L+ +    k+n apt+ +g++gyGrrr
+  tr|E7FDI6|E7FDI6_DANRE  73 ARVKRtdpaysikrveraGCNLATCSVHELAHLLNIM--HAKTNNAPTDkIGSNGYGRRR 130
+                             566666666666666668*******************..899*****************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (160 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       473  (0.0246624); expected 383.6 (0.02)
+Passed bias filter:                      389  (0.0202826); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.57
+# Mc/sec: 905.57
+//
+[ok]

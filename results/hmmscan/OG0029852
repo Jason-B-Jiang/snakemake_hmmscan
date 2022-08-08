@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029852.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029852
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q8T866|Q8T866_DICDI  [L=401]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.8e-14   51.6   0.8    1.8e-13   50.0   0.8    1.9  1  S4               S4 domain
+    4.5e-11   43.2   0.0    1.7e-10   41.3   0.0    2.1  1  PseudoU_synth_2  RNA pseudouridylate synthase
+
+
+Domain annotation for each model (and alignments):
+>> S4  S4 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.0   0.8   1.9e-17   1.8e-13       1      48 []     138     184 ..     138     184 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 50.0 bits;  conditional E-value: 1.9e-17
+                             EEHHHHHHHTTSSSSHHHHHHHHHTTTEEETTEEE--TT-EE-TTCEE CS
+                      S4   1 rRLdkvlarlglassrreArqlIehGrVlVNGkvvkdpsyrVkpgDvi 48 
+                             +R++k+lar+g+as rr+A++lI +GrV+VNGk++k     Vkp D+i
+  tr|Q8T866|Q8T866_DICDI 138 ERIQKILARAGIAS-RRKAEELIIDGRVKVNGKIIKMEEILVKPHDII 184
+                             6************9.*******************************97 PP
+
+>> PseudoU_synth_2  RNA pseudouridylate synthase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.3   0.0   1.8e-14   1.7e-10      38     158 ..     230     330 ..     176     332 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 41.3 bits;  conditional E-value: 1.8e-14
+         PseudoU_synth_2  38 kkelklvhRLDkatsGllllAksseaanklakafeerkvrKkYlalvfgapeeeegaikkkiskdtekqegarrkaeeldgkkavty 124
+                              ++l  v+RLD+ t+Gl+l+++++e+a+ l+   +++ + ++Y + +f    + ++++k+++ k               +    +  
+  tr|Q8T866|Q8T866_DICDI 230 IDHLISVGRLDYYTEGLILFTNDGELARYLTL--PQNLFFRVYKVRIF---GKFTDEMKFSLAK---------------GMVINEVF 296
+                             578999************************99..*************9...5667777778877...............99999999 PP
+
+         PseudoU_synth_2 125 lkvlksgsseksakvslveleletGrkhQiRvhl 158
+                             +++++ +++++   +++++++l++G+k++iR  l
+  tr|Q8T866|Q8T866_DICDI 297 YRPVSVQVESETDSNTWLRITLQEGKKREIRTLL 330
+                             999999999999*******************877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (401 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       940  (0.0490119); expected 383.6 (0.02)
+Passed bias filter:                      484  (0.0252359); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.24s 00:00:00.61 Elapsed: 00:00:00.64
+# Mc/sec: 2022.04
+//
+[ok]

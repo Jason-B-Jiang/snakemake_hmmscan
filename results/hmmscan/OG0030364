@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030364.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030364
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86AC7|Q86AC7_DICDI  [L=391]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-17   61.8  22.0    9.8e-10   38.4   1.6    4.2  2  PEX11     Peroxisomal biogenesis factor 11 (PEX11)
+
+
+Domain annotation for each model (and alignments):
+>> PEX11  Peroxisomal biogenesis factor 11 (PEX11)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.8   0.0   7.1e-10   1.4e-05       2      35 ..       8      41 ..       7      64 .. 0.88
+   2 !   38.4   1.6   5.1e-14   9.8e-10      68     223 .]     155     324 ..     136     324 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 24.8 bits;  conditional E-value: 7.1e-10
+                   PEX11  2 dklvkflaqtqgrDKllRalqYasrllayllerk 35
+                            dk+++++++ +grDK+++++qY+s+ll++ + +k
+  tr|Q86AC7|Q86AC7_DICDI  8 DKIISVFNSLDGRDKVFKFIQYFSQLLHHFVDKK 41
+                            6899***********************8877665 PP
+
+  == domain 2  score: 38.4 bits;  conditional E-value: 5.1e-14
+                   PEX11  68 lqaaaklldnkledpvlrllavlrnlgyalYlllDhvlwlkklgllkvknak..klsrlssrfwlfglvlslvrdlyelrllqekek 152
+                             l++++++  ++ + ++l++l+++ ++   +  l D + w +++++++v+++    + ++s+++w+++lv+ ++r +y l     ++ 
+  tr|Q86AC7|Q86AC7_DICDI 155 LNTLKSF--TNISTSFLNTLELIDHSFNFISELNDIIFWGTRIKIFQVTDKFmdLVCKVSNFVWVYSLVVFIIRIIYGLINTIIQIL 239
+                             3444433..4455678999999999999999999***************99777899***********9999988887766666666 PP
+
+                   PEX11 153 klkkek..........kekeereeek.........laavlkkrpallldlvknllDllialnelgilklsdgvvGlaGliSSllgll 220
+                             klk+++          +e+ee    +         l  ++++r++++ +l++  + + +++ ++     +dg++G +G +S+ ++l+
+  tr|Q86AC7|Q86AC7_DICDI 240 KLKNKNkinkekqqkiEEEEE----DeeykenketLIILRNNRTNEIKSLISAIAEFGLCICSIYE-IENDGYIGGCGALSAFISLQ 321
+                             665544555444455533333....134458889999************************99933.4589**************** PP
+
+                   PEX11 221 qlw 223
+                             ++w
+  tr|Q86AC7|Q86AC7_DICDI 322 EIW 324
+                             *99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (391 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4883  (0.254601); expected 383.6 (0.02)
+Passed bias filter:                      882  (0.0459878); expected 383.6 (0.02)
+Passed Vit filter:                       188  (0.00980239); expected 19.2 (0.001)
+Passed Fwd filter:                        72  (0.00375411); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.69u 0.27s 00:00:00.96 Elapsed: 00:00:00.89
+# Mc/sec: 1422.45
+//
+[ok]

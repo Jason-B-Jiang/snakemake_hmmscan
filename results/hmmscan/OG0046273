@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046273.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046273
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF16703.1  [L=333]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-18   66.9   0.0    2.3e-18   66.7   0.0    1.1  1  Rogdi_lz  Rogdi leucine zipper containing protein
+    3.5e-06   27.1   0.5    8.1e-06   25.9   0.5    1.6  1  Cmc1      Cytochrome c oxidase biogenesis protein Cmc1 like
+
+
+Domain annotation for each model (and alignments):
+>> Rogdi_lz  Rogdi leucine zipper containing protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.7   0.0   2.4e-22   2.3e-18      39     221 ..      33     200 ..      25     313 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 66.7 bits;  conditional E-value: 2.4e-22
+    Rogdi_lz  39 lSsprsetvKGvvtRvGtrivkgdislrlrtlpk..sltlklnptkpivLaqLttlrtlltqaldlLdvtlstgdelsksaaflasqLrllleslseAk 135
+                 l+ +r++ +KG+vt++G ri k++i+l+l+t++k  ++ ++l+p++   L+q++t+ tl++ a++ +    s++++    ++ +a+ L+ + + +++A 
+  PJF16703.1  33 LTFHRTDVLKGFVTLDGPRISKAEIQLHLPTWNKghPVPVHLHPDHTTILPQISTCGTLIELAIQSIV---SAKEDY---SELVATALEDAERYCRQAL 125
+                 7889***************************************************************9...333444...5679*************** PP
+
+    Rogdi_lz 136 alLkgppepelafpengwttrsaashfsPplppnlslelyiqeaelvldlrvLepvtappwkei.tgksfgdkladal.gtarrlehd 221
+                  +L+++ +    fp   +      +++    p++l++ + +q+a +v   +v  p+ a++  ++  + s++ + ++ l g   +  hd
+  PJF16703.1 126 GTLENSDN---SFPM--V------QAVFTGAPEDLTVSFGVQNARIVAAAYVSSPLFATS--SLsGNSSLRGASRSSLiGYPLNNSHD 200
+                 ******99...6999..4......4445556****************9999988888876..23244566666666655334444444 PP
+
+>> Cmc1  Cytochrome c oxidase biogenesis protein Cmc1 like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.5   8.4e-10   8.1e-06      10      70 .]     244     305 ..     239     305 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 8.4e-10
+        Cmc1  10 rkeCaelvkalaeChkd.erllkvvgkCneekeamkkClreyrtderlkdaekdriikkrle 70 
+                  k C++ v+++ +C +  +    ++g C e+  +m+kCl e++  +r+++a  ++ +k++l+
+  PJF16703.1 244 SKMCEDKVAEFFTCRRVqGLAGMAAGLCGELMADMNKCLDEETAIRRRENAISAKARKAKLQ 305
+                 589*************9445566789********************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (333 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       690  (0.0359768); expected 383.6 (0.02)
+Passed bias filter:                      556  (0.02899); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.22s 00:00:00.59 Elapsed: 00:00:00.94
+# Mc/sec: 1150.28
+//
+[ok]

@@ -1,0 +1,134 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0024012.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0024012
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9Y7P6|MUG72_SCHPO  [L=574]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-29  102.3   0.0      3e-29  101.7   0.0    1.2  1  ApbA      Ketopantoate reductase PanE/ApbA
+    2.4e-23   82.8   0.0      4e-23   82.1   0.0    1.4  1  ApbA_C    Ketopantoate reductase PanE/ApbA C terminal
+
+
+Domain annotation for each model (and alignments):
+>> ApbA  Ketopantoate reductase PanE/ApbA
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.7   0.0   3.1e-33     3e-29       1     142 [.      11     158 ..      11     171 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 101.7 bits;  conditional E-value: 3.1e-33
+                            EEEESSSHHHHHHHHHHHH.CTHCEEEE-SSHHHHHHHHHCEEEEETT.CEEEEEECEEECCC..SCCCSS-ESEEEE-SSGGGHHHH CS
+                   ApbA   1 iailGaGaiGsllaakLak.agadvtlilrsrrlealkknGlrltseg.geeilrppvalsae..eksedepidllivtvKayqteea 84 
+                            i+ +G++ai+++++++L++ +++++tli+r+r +e++ ++G+r++s+  g+++++p+v+++++     + ep+d+++v++K ++++++
+  sp|Q9Y7P6|MUG72_SCHPO  11 ILSVGSNAISAFISWRLSEsKACHTTLIWRNR-CESVLSEGIRIRSSVfGSTKWKPDVVAPTVeqLAMNSEPFDYIFVCLKILPSVYN 97 
+                            789*****************************.******************************99566778***************** PP
+
+                            HHH.HGGGEECEEEEEEESSS...SSHHHHHCTTSTTSEEEEEEEE-EEEEECTTEEEEES- CS
+                   ApbA  85 lee.ikplldpntvvlllqNG...lgheeelkealpkprvlggvtthgatregpgevhhagk 142
+                            l++ ik++++p  ++++++N+   +g+e+el++a+p+++vl++v + +++++gp +++h++ 
+  sp|Q9Y7P6|MUG72_SCHPO  98 LDTaIKEVVTPG-HTCIVLNTtgiVGAEKELQHAFPNNPVLSFVLPDQFAQRGPLQFEHTTF 158
+                            ***********9.*******999************************************984 PP
+
+>> ApbA_C  Ketopantoate reductase PanE/ApbA C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.1   0.0   4.2e-27     4e-23       2     124 ..     207     332 ..     206     333 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 82.1 bits;  conditional E-value: 4.2e-27
+                 ApbA_C   2 irltrweKllinaainpltalldckn.gelldspelralvralmkEavavaeaegvelseer...leeavaavlektaanksSMlqDv 85 
+                            i++++we  +  +++ pl+ + d +n + +++ + ++++++ lm+Ea  +a+a+g+e+++e+   l+ ++ + + +t++  s  +qD+
+  sp|Q9Y7P6|MUG72_SCHPO 207 IQKKQWETGVGHMCFYPLSIINDEPNlALMYRLKSFAKVIDGLMDEAFSIAQAQGCEFEPEKldvLKRHIVNRMLATPR-PSYPYQDY 293
+                            899***********************55666**************************9999622344555555544444.8889**** PP
+
+                 ApbA_C  86 eagrktEidyinGavvklAeklgvetPvnellyelvkak 124
+                             a+r++E+ +++G++v++A++lgv++P++e+l++l  ak
+  sp|Q9Y7P6|MUG72_SCHPO 294 IAHRPLEVAVLLGYPVEIAKELGVSVPRMETLLALFDAK 332
+                            **********************************98776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (574 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       315  (0.0164242); expected 383.6 (0.02)
+Passed bias filter:                      267  (0.0139215); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.63
+# Mc/sec: 2930.23
+//
+Query:       sp|Q09894|YAI7_SCHPO  [L=561]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-10   40.4   0.0    3.5e-10   39.8   0.0    1.3  1  ApbA      Ketopantoate reductase PanE/ApbA
+    6.7e-06   26.5   0.0    1.3e-05   25.6   0.0    1.4  1  ApbA_C    Ketopantoate reductase PanE/ApbA C terminal
+
+
+Domain annotation for each model (and alignments):
+>> ApbA  Ketopantoate reductase PanE/ApbA
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.8   0.0   3.7e-14   3.5e-10       1     135 [.      12     153 ..      12     169 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 39.8 bits;  conditional E-value: 3.7e-14
+                           EEEESSSHHHHHHHHHHHH.CTHC...EEEE-SSHHHHHHHHHCEEEEETT.CEEEEEECEEECCC..SCCCSS-ESEEEE-SSGGGHH CS
+                  ApbA   1 iailGaGaiGsllaakLak.agad...vtlilrsrrlealkknGlrltseg.geeilrppvalsae..eksedepidllivtvKayqte 82 
+                           i+ +G+ +i +ll+++L++ +  +   +++ ++ +   + ++n ++++s++ g ++ rp+  ls+    +s+ ep+d+++v++K  +  
+  sp|Q09894|YAI7_SCHPO  12 ILCVGSPSITTLLGWRLQQsSVVTcqeTIMFFNAP---EPSTNVFTIQSKKfGTRKYRPTYRLSKLeeVTSDSEPFDYVFVSIKPNSRN 97 
+                           7789*************984443366666666666...578999*****************999999878999**************** PP
+
+                           HHHHH.HGGGEECEEEEEEESSS...SSHHHHHCTTSTTSEEEEEEEE-EEEEECTT CS
+                  ApbA  83 ealee.ikplldpntvvlllqNG...lgheeelkealpkprvlggvtthgatregpg 135
+                            +l++ ++p+++ + +++++ N    +g+ee+l+ ++p++++++ +t   + +++  
+  sp|Q09894|YAI7_SCHPO  98 FQLSNiLEPVITAK-HTCIVYNStgaIGVEEALQRQYPENPIFSLITHTPVSQRSVD 153
+                           *****889999998.99*****9889*********************9999887755 PP
+
+>> ApbA_C  Ketopantoate reductase PanE/ApbA C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.0   1.3e-09   1.3e-05      10     124 ..     205     318 ..     197     319 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 1.3e-09
+                ApbA_C  10 llinaainpltalldckn.gelldspelralvralmkEavavaeaegvelseerleeavaavlektaanksSMlqDveagrktEidyin 97 
+                           l+   ++ plt+l++ +n  +ll+ p +++l + +++E+    + +g +l+ ++l ++ +++l +++ n     + ++ +r++Ei + +
+  sp|Q09894|YAI7_SCHPO 205 LALPLSLYPLTVLTQNPNlPKLLERPDINDLHQGILQELDSLCNCLGSSLDVKKLSKQRETLLSHMQVNPA--FREYRSNRPVEIVQYL 291
+                           66667899**********9****************************99****999999999999888754..899************* PP
+
+                ApbA_C  98 GavvklAeklgvetPvnellyelvkak 124
+                            + + lA k  +++P+++++ +l++ +
+  sp|Q09894|YAI7_SCHPO 292 HYCIDLATKQSLQVPRLRTISALISSI 318
+                           ***********************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (561 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       367  (0.0191355); expected 383.6 (0.02)
+Passed bias filter:                      285  (0.01486); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.18s 00:00:00.60 Elapsed: 00:00:00.57
+# Mc/sec: 3166.32
+//
+[ok]

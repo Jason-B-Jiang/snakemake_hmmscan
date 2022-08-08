@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034003.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034003
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5XTN5|Q5XTN5_DANRE  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.9e-55  182.9   5.8      8e-27   93.3   0.4    2.0  2  Crystall  Beta/Gamma crystallin
+    1.7e-06   28.2   1.4      0.013   15.7   0.1    3.1  0  IL4_i_Ig  Interleukin-4 inducing immunoglobulin-binding domai
+
+
+Domain annotation for each model (and alignments):
+>> Crystall  Beta/Gamma crystallin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   92.6   0.8   1.4e-30   1.3e-26       1      82 []       3      81 ..       3      81 .. 0.98
+   2 !   93.3   0.4   8.3e-31     8e-27       1      82 []      89     169 ..      89     169 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 92.6 bits;  conditional E-value: 1.4e-30
+                            EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEEE CS
+                Crystall  1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrpi 82
+                            kiv+ye++nfqGrs+e+s+dcp+l++  f s+++S++V++G++++Y+++nf+G+q++l++geY d++++g  +d+i+S+r i
+  tr|Q5XTN5|Q5XTN5_DANRE  3 KIVFYEDRNFQGRSYETSSDCPELSQ--FLSRCSSCRVENGCFMIYDRSNFMGNQFFLRRGEYADCKRMGL-SDSIRSCRTI 81
+                            79************************..9999*************************************96.9*******87 PP
+
+  == domain 2  score: 93.3 bits;  conditional E-value: 8.3e-31
+                             EEEEEEECCCEEEEEEESSTBSTHHHHTSTTC-SEEEEEESEEEEEEETTTEEEEEEE-SEEESSCCCCTGSSSBS-EEEEE CS
+                Crystall   1 kivlyekenfqGrsvelsedcpslqergfeskvrSikVlsGaWvlYekpnfrGrqylleegeYrdlsdwgasndriqSlrpi 82 
+                             ++++yekenf G s+el+edc+s ++r+  s++rS++V++G+W+lYe+p++r r+ +l++geYr+++d+g  + r++Slr+i
+  tr|Q5XTN5|Q5XTN5_DANRE  89 RMRIYEKENFGGMSYELTEDCESTADRFRLSEMRSCHVMDGHWLLYEQPHYRSRMLYLRPGEYRSFRDMGI-SFRFSSLRRI 169
+                             699******************************************************************97.9*******98 PP
+
+>> IL4_i_Ig  Interleukin-4 inducing immunoglobulin-binding domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       381  (0.0198655); expected 383.6 (0.02)
+Passed bias filter:                      252  (0.0131394); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.21s 00:00:00.55 Elapsed: 00:00:00.63
+# Mc/sec: 893.97
+//
+[ok]

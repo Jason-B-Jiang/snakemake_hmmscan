@@ -1,0 +1,400 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0006240.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0006240
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VLU3|Q9VLU3_DROME  [L=278]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      3e-31  107.3   0.0    4.6e-31  106.7   0.0    1.3  1  FR47             FR47-like protein
+    1.1e-05   25.5   0.0      2e-05   24.6   0.0    1.4  1  Acetyltransf_10  Acetyltransferase (GNAT) domain
+    0.00016   22.0   0.0    0.00029   21.1   0.0    1.5  1  Acetyltransf_1   Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.7   0.0   7.2e-35   4.6e-31       1      85 [.     193     276 ..     193     277 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 106.7 bits;  conditional E-value: 7.2e-35
+                             EEEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEE CS
+                    FR47   1 vlGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetew 85 
+                             +lG y+ ++g+l+aw+lr+++g+lg lqvl++h+r Glgs+lvk++ak+i+++g++vl+ vv++Ntps++++eklGf++i++t+w
+  tr|Q9VLU3|Q9VLU3_DROME 193 NLGAYD-DKGKLVAWCLRLPIGSLGLLQVLESHKRLGLGSLLVKSMAKKISAAGDQVLAPVVTKNTPSRSMFEKLGFRAIDNTYW 276
+                             689999.9***************************************************************************** PP
+
+>> Acetyltransf_10  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.6   0.0   3.1e-09     2e-05      38     112 ..     199     273 ..     183     277 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 24.6 bits;  conditional E-value: 3.1e-09
+         Acetyltransf_10  38 esgklvGvialrdrshisllfVdkeyrgqGigkaLlkaleeeaekqeiklkeltvnaspyavpfYeklGFkatge 112
+                             ++gklv  +     + + ll V +++++ G+g  L+k + ++++ ++ ++ +  v+ ++ ++ ++eklGF+a+++
+  tr|Q9VLU3|Q9VLU3_DROME 199 DKGKLVAWCLRLPIGSLGLLQVLESHKRLGLGSLLVKSMAKKISAAGDQVLAPVVTKNTPSRSMFEKLGFRAIDN 273
+                             4566666663344457899******************************99*********************986 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.1   0.0   4.6e-08   0.00029      42     117 .]     201     268 ..     159     268 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 21.1 bits;  conditional E-value: 4.6e-08
+                             TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHTTCSEEEEEEETTEHHHHHHHHHTTE CS
+          Acetyltransf_1  42 geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeerareegikkivlaveedndaairlYeklGF 117
+                             g+l++++  l+i         +  l V +++ + GlGs+L++ +++ + +  ++ + + v   n++++ ++eklGF
+  tr|Q9VLU3|Q9VLU3_DROME 201 GKLVAWCLRLPIGS-------LGLLQVLESHKRLGLGSLLVKSMAK-KISAAGDQVLAPVVTKNTPSRSMFEKLGF 268
+                             55555554444444.......5667799*****************9.5555566635566667************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (278 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       427  (0.0222639); expected 383.6 (0.02)
+Passed bias filter:                      383  (0.0199698); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.63
+# Mc/sec: 1425.51
+//
+Query:       tr|Q9VJ99|Q9VJ99_DROME  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.2e-13   48.6   0.0      1e-12   47.9   0.0    1.3  1  FR47      FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.9   0.0   5.4e-17     1e-12      18      86 .]     181     249 ..     170     249 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 47.9 bits;  conditional E-value: 5.4e-17
+                             E-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEEE CS
+                    FR47  18 rkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetewv 86 
+                               ++g l  lqv+ + +rrG+g+++vk+ a++ a  g + +  vv++N++s  l++klGf+  +++ w+
+  tr|Q9VJ99|Q9VJ99_DROME 181 LAPDGLLAVLQVKTTYKRRGFGQLIVKEFARQEALLGRDTITEVVPENKASLGLFTKLGFKINDQCHWL 249
+                             56889*************************************************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       423  (0.0220554); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.13s 00:00:00.46 Elapsed: 00:00:00.86
+# Mc/sec: 976.12
+//
+Query:       tr|Q9VJ98|Q9VJ98_DROME  [L=287]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.7e-34  115.8   0.0    1.1e-33  115.2   0.0    1.3  1  FR47      FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.2   0.0   5.5e-38   1.1e-33       1      86 []     187     272 ..     187     272 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 115.2 bits;  conditional E-value: 5.5e-38
+                             EEEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEEE CS
+                    FR47   1 vlGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetewv 86 
+                             ++Gly+++++el+aw++r++gg+lgalqv+++h+rrG+gs++++++a+++a +g++v+++v++sN+ps+++++klGf++i++++w+
+  tr|Q9VJ98|Q9VJ98_DROME 187 SVGLYQEDTQELVAWCIRLQGGYLGALQVKDTHKRRGFGSVVTREIAYRLAVQGHDVMALVGPSNKPSSEMFSKLGFQVIDQCYWL 272
+                             69***********************************************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (287 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       487  (0.0253924); expected 383.6 (0.02)
+Passed bias filter:                      451  (0.0235153); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.61
+# Mc/sec: 1514.25
+//
+Query:       tr|Q9VR51|Q9VR51_DROME  [L=304]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-44  149.4   0.1      9e-44  148.6   0.1    1.4  1  DUF5645   Domain of unknown function (DUF5645)
+      2e-29  101.5   0.1    3.2e-29  100.8   0.1    1.3  1  FR47      FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> DUF5645  Domain of unknown function (DUF5645)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.6   0.1   9.4e-48     9e-44       1     125 []       9     138 ..       9     138 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 148.6 bits;  conditional E-value: 9.4e-48
+                 DUF5645   1 iLrplndeeldeLlelyesklpesikqyllllnqlrwkakL...nekkkeqvsirfrktfythrkg.krengTfvaisededqsvvv 83 
+                             iLrpl+d+e+deLl+ly+ k++  +++ylll+nq++w+++L   ++ +++ ++i++rk+fythr+g +r+ gT+v++++d +qsv++
+  tr|Q9VR51|Q9VR51_DROME   9 ILRPLSDSEVDELLDLYKVKFGIRNFHYLLLYNQRKWDRQLseaQIPRNDLNHISLRKQFYTHRRGnFRTWGTYVSLHRDIVQSVSF 95 
+                             8****************************************999999**************************************** PP
+
+                 DUF5645  84 ftleesl.teLeecLekTklIkwkkkplftnvdekiaeavkel 125
+                             f++++    eL ecLe+T+lI+w +++l+tnvd +++++vkel
+  tr|Q9VR51|Q9VR51_DROME  96 FSWQPDGaAELWECLEQTQLIEWTQGALLTNVDLGFCNRVKEL 138
+                             ****87559*******************************985 PP
+
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.8   0.1   3.3e-33   3.2e-29       1      86 []     211     297 ..     211     297 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 100.8 bits;  conditional E-value: 3.3e-33
+                             EEEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHH.S-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEEE CS
+                    FR47   1 vlGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiae.rgktvllvvvasNtpsirlyeklGfekieetewv 86 
+                             +lG++r+++gel+awi+++d++ lg+lqvlp+++rrGlg++l++a+++eia+ +++t+++++va+N++s++l++++G++k+  +ew+
+  tr|Q9VR51|Q9VR51_DROME 211 SLGICRSDTGELIAWIFQNDFSGLGMLQVLPKAERRGLGGLLAAAMSREIARgEEITLTAWIVATNWRSEALLKRIGYQKDLVNEWI 297
+                             69***********************************************************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (304 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       415  (0.0216383); expected 383.6 (0.02)
+Passed bias filter:                      380  (0.0198133); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.14s 00:00:00.49 Elapsed: 00:00:00.47
+# Mc/sec: 2066.01
+//
+Query:       tr|X2JDI9|X2JDI9_DROME  [L=272]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.9e-31  107.4   0.0    4.4e-31  106.8   0.0    1.3  1  FR47             FR47-like protein
+    9.8e-06   25.6   0.0    1.9e-05   24.7   0.0    1.4  1  Acetyltransf_10  Acetyltransferase (GNAT) domain
+    0.00013   22.2   0.0    0.00022   21.5   0.0    1.5  1  Acetyltransf_1   Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.8   0.0   6.9e-35   4.4e-31       1      85 [.     187     270 ..     187     271 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 106.8 bits;  conditional E-value: 6.9e-35
+                             EEEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEE CS
+                    FR47   1 vlGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetew 85 
+                             +lG y+ ++g+l+aw+lr+++g+lg lqvl++h+r Glgs+lvk++ak+i+++g++vl+ vv++Ntps++++eklGf++i++t+w
+  tr|X2JDI9|X2JDI9_DROME 187 NLGAYD-DKGKLVAWCLRLPIGSLGLLQVLESHKRLGLGSLLVKSMAKKISAAGDQVLAPVVTKNTPSRSMFEKLGFRAIDNTYW 270
+                             689999.9***************************************************************************** PP
+
+>> Acetyltransf_10  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   0.0     3e-09   1.9e-05      38     112 ..     193     267 ..     177     271 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 3e-09
+         Acetyltransf_10  38 esgklvGvialrdrshisllfVdkeyrgqGigkaLlkaleeeaekqeiklkeltvnaspyavpfYeklGFkatge 112
+                             ++gklv  +     + + ll V +++++ G+g  L+k + ++++ ++ ++ +  v+ ++ ++ ++eklGF+a+++
+  tr|X2JDI9|X2JDI9_DROME 193 DKGKLVAWCLRLPIGSLGLLQVLESHKRLGLGSLLVKSMAKKISAAGDQVLAPVVTKNTPSRSMFEKLGFRAIDN 267
+                             4566666663344457899******************************99*********************986 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.5   0.0   3.4e-08   0.00022      42     117 .]     195     262 ..     137     262 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 21.5 bits;  conditional E-value: 3.4e-08
+                             TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHTTCSEEEEEEETTEHHHHHHHHHTTE CS
+          Acetyltransf_1  42 geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeerareegikkivlaveedndaairlYeklGF 117
+                             g+l++++  l+i         +  l V +++ + GlGs+L++ +++ + +  ++ + + v   n++++ ++eklGF
+  tr|X2JDI9|X2JDI9_DROME 195 GKLVAWCLRLPIGS-------LGLLQVLESHKRLGLGSLLVKSMAK-KISAAGDQVLAPVVTKNTPSRSMFEKLGF 262
+                             55666665555544.......6678899*****************9.5555566635566667************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (272 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       451  (0.0235153); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.15s 00:00:00.48 Elapsed: 00:00:00.77
+# Mc/sec: 1148.00
+//
+Query:       tr|Q9VJA0|Q9VJA0_DROME  [L=293]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.7e-31  106.0   0.0    1.4e-30  105.2   0.0    1.4  1  FR47      FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.2   0.0   7.1e-35   1.4e-30       1      85 [.     189     276 ..     189     277 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 105.2 bits;  conditional E-value: 7.1e-35
+                             EEEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHH.S-S-EEEEEETT-HHHHHHHHHHT-EEE..EEEE CS
+                    FR47   1 vlGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiae.rgktvllvvvasNtpsirlyeklGfeki..eete 84 
+                             ++Gly+kelg+l+aw+lr+++g+lgal+vlp+h+rrGlg ++++a++k+ia+  +++++++v+++N++++r++ekl+f++i  e+++
+  tr|Q9VJA0|Q9VJA0_DROME 189 NVGLYEKELGSLCAWCLRLQSGFLGALEVLPTHQRRGLGLVVAAAISKAIATdLQQDITALVNINNSAACRVFEKLNFRLIqdEHYY 275
+                             69**************************************************9****************************877777 PP
+
+                             E CS
+                    FR47  85 w 85 
+                             w
+  tr|Q9VJA0|Q9VJA0_DROME 276 W 276
+                             7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (293 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       566  (0.0295114); expected 383.6 (0.02)
+Passed bias filter:                      473  (0.0246624); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.64
+# Mc/sec: 1479.47
+//
+Query:       tr|Q2PDV0|Q2PDV0_DROME  [L=278]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.4e-21   74.5   0.0    8.7e-21   73.8   0.0    1.3  1  FR47            FR47-like protein
+    4.7e-08   33.4   0.0    7.6e-08   32.7   0.0    1.4  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.8   0.0   9.1e-25   8.7e-21       2      85 ..     189     271 ..     188     272 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 73.8 bits;  conditional E-value: 9.1e-25
+                             EEEEETTT--EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEE CS
+                    FR47   2 lGlyrkelgelaawilrkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetew 85 
+                             +G+++ + ge  aw+lr++ g+l+ l vl +hrr+Glgs+ v+ +a+ei  +g +vl+ vv++N+ s++++eklGf+ i++ +w
+  tr|Q2PDV0|Q2PDV0_DROME 189 VGVFD-NQGEPLAWCLRSPHGSLSNLHVLSSHRRMGLGSLAVRFMANEIKLKGSEVLATVVPENEGSQKMFEKLGFNNINKLYW 271
+                             78888.789999*********************************************************************999 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.7   0.0   7.9e-12   7.6e-08      55     117 .]     199     263 ..     151     263 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 32.7 bits;  conditional E-value: 7.9e-12
+                             T...TSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHTTCSEEEEEEETTEHHHHHHHHHTTE CS
+          Acetyltransf_1  55 d...ekggvayieslaVspeyrgkGlGsaLlealeerareegikkivlaveedndaairlYeklGF 117
+                                 ++ +++ +  l+V +++r++GlGs+ ++ ++ + + +g +   ++v + n+++++++eklGF
+  tr|Q2PDV0|Q2PDV0_DROME 199 LawcLRSPHGSLSNLHVLSSHRRMGLGSLAVRFMANEIKLKGSEV-LATVVPENEGSQKMFEKLGF 263
+                             04445566799************************9999998855.4456666************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (278 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       378  (0.0197091); expected 383.6 (0.02)
+Passed bias filter:                      346  (0.0180406); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.15s 00:00:00.47 Elapsed: 00:00:00.54
+# Mc/sec: 1662.24
+//
+Query:       tr|M9PDC1|M9PDC1_DROME  [L=257]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.1e-13   48.6   0.0      1e-12   47.9   0.0    1.3  1  FR47      FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.9   0.0   5.4e-17     1e-12      18      86 .]     180     248 ..     169     248 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 47.9 bits;  conditional E-value: 5.4e-17
+                             E-TTSSEEEEEE-GGG-SSSHHHHHHHHHHHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEEEEEEEE CS
+                    FR47  18 rkdggelgalqvlpehrrrGlgsrlvkalakeiaergktvllvvvasNtpsirlyeklGfekieetewv 86 
+                               ++g l  lqv+ + +rrG+g+++vk+ a++ a  g + +  vv++N++s  l++klGf+  +++ w+
+  tr|M9PDC1|M9PDC1_DROME 180 LAPDGLLAVLQVKTTYKRRGFGQLIVKEFARQEALLGRDTITEVVPENKASLGLFTKLGFKINDQCHWL 248
+                             56889*************************************************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (257 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       406  (0.021169); expected 383.6 (0.02)
+Passed bias filter:                      370  (0.0192919); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.15s 00:00:00.48 Elapsed: 00:00:00.50
+# Mc/sec: 1664.89
+//
+[ok]

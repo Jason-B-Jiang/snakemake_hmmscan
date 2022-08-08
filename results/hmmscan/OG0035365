@@ -1,0 +1,70 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035365.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035365
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R2I2|F1R2I2_DANRE  [L=718]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.4e-22   79.4   7.0      2e-08   34.1   0.0    3.6  2  Homeodomain  Homeodomain
+    4.9e-14   52.1   2.0    0.00018   21.4   0.0    3.8  1  Homeobox_KN  Homeobox KN domain
+
+
+Domain annotation for each model (and alignments):
+>> Homeodomain  Homeodomain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.1   0.0   2.1e-12     2e-08      10      55 ..     205     250 ..     197     250 .. 0.92
+   2 !   25.3   1.0   1.1e-09   1.1e-05       8      57 .]     430     479 ..     428     479 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 34.1 bits;  conditional E-value: 2.1e-12
+                             HHHHHHHHHHHHSSS-SHHHHHHHHHHHTS-HHHHHHHHHHHHHHH CS
+             Homeodomain  10 eqleeLeklFeenrypsaeereeLAaklgLeerqVkvWFqNrRake 55 
+                             + + eL ++F++ +yp+++e   LA+k+ L+ +qVk WF  +R ++
+  tr|F1R2I2|F1R2I2_DANRE 205 DAVSELVEAFNSFPYPTSQEASALARKCALPPDQVKAWFMMQRVRY 250
+                             67889**************************************985 PP
+
+  == domain 2  score: 25.3 bits;  conditional E-value: 1.1e-09
+                             -HHHHHHHHHHHHHSSS-SHHHHHHHHHHHTS-HHHHHHHHHHHHHHHHH CS
+             Homeodomain   8 tkeqleeLeklFeenrypsaeereeLAaklgLeerqVkvWFqNrRakekk 57 
+                             +k ql +L + F +++ ps  e ++L + +gL+ r ++ WF   R + +k
+  tr|F1R2I2|F1R2I2_DANRE 430 SKAQLMALRRSFVNKSWPSDGEVQRLQKMTGLSRREIRKWFADSRYQLRK 479
+                             689******************************************99887 PP
+
+>> Homeobox_KN  Homeobox KN domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.0   1.9e-08   0.00018       8      40 .]     217     249 ..     212     249 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.9e-08
+             Homeobox_KN   8 nPYPseedKeeLlketglsvkqisnWFINaRrR 40 
+                              PYP+ ++   L++++ l   q++ WF  +R R
+  tr|F1R2I2|F1R2I2_DANRE 217 FPYPTSQEASALARKCALPPDQVKAWFMMQRVR 249
+                             5*****************************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (718 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       859  (0.0447886); expected 383.6 (0.02)
+Passed bias filter:                      516  (0.0269044); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.24s 00:00:00.75 Elapsed: 00:00:00.70
+# Mc/sec: 3320.23
+//
+[ok]

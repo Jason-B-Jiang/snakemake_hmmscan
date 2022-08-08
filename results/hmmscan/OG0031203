@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031203.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031203
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54IL0|Q54IL0_DICDI  [L=599]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.6e-17   61.7   3.2    8.6e-17   61.7   3.2    4.9  1  DUSP         DUSP domain
+    4.5e-09   36.3   0.0      1e-08   35.1   0.0    1.6  1  Ubiquitin_3  Ubiquitin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> DUSP  DUSP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.7   3.2     9e-21   8.6e-17       1      92 [.     377     481 ..     377     482 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 61.7 bits;  conditional E-value: 9e-21
+                             T-EEEEEEHHHHHHHHHHHTTSTTSCT...................TTCGCT--SB-GGGGB.........TTTCBSTT--CTTTEE CS
+                    DUSP   1 gqkyyliskkWleqwksyvsydavtee...................kesgskpgpIdnsdllkkappltk.engrlkpnlqegrdye 67 
+                             g+ ++l++ +W++ w +++s+++++++                   +++++k +pI n+++l       + +  +l p +  g+++ 
+  tr|Q54IL0|Q54IL0_DICDI 377 GDIWFLVEINWIKDWVDFISNNKNNKNnnededdddddddsdfnnnNNNNNKLKPISNEKIL-------LnDRLTLLPGVVRGEHFQ 456
+                             689****************999999888889999999999998876555557**********.......3399************** PP
+
+                             EEEHHHHHHHHHHCTT----EEEEE CS
+                    DUSP  68 ivpeevwkfLvqwYgggpeikrkvi 92 
+                             iv+++vw+f++++Ygggp+i+r vi
+  tr|Q54IL0|Q54IL0_DICDI 457 IVSKSVWEFIINKYGGGPSIPRVVI 481
+                             **********************998 PP
+
+>> Ubiquitin_3  Ubiquitin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   0.0   1.1e-12     1e-08      11      87 ..     505     581 ..     497     582 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 1.1e-12
+                             .CCEEEEEEE-TTSBHHHHHHHHHHHTT-.TS-EEEEEEETTTEEEE---TTSBTTTTT--TTEEEEEEE--TTS--T CS
+             Ubiquitin_3  11 alqspvtkkfrktDtvdfiekelkkllsi.eketRLWkkgssegrelLtkpditvqeaglyegqvllleeknedGnWp 87 
+                              l+++ t   +k Dt+dfi +   kl+ i + + R+W+ ++ + +  L k  i + e++l+e+q++lleek  dGn+ 
+  tr|Q54IL0|Q54IL0_DICDI 505 NLKDVKTIYCQKNDTIDFIKNRGCKLFNIsKDNVRVWDYYNLNKHCIL-KGSISLSESNLIESQHILLEEKLSDGNFM 581
+                             577777888899*****************55678********987665.789***********************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (599 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2840  (0.148079); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        93  (0.00484905); expected 19.2 (0.001)
+Passed Fwd filter:                        41  (0.00213775); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.81u 0.26s 00:00:01.07 Elapsed: 00:00:00.92
+# Mc/sec: 2114.18
+//
+[ok]

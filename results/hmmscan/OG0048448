@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048448.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048448
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P32578  [L=815]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.5e-20   71.5   0.2    5.5e-20   71.5   0.2    3.0  1  AMPKBI     5'-AMP-activated protein kinase beta subunit, inte
+    1.5e-07   31.6   0.0    6.2e-07   29.6   0.0    2.0  1  AMPK1_CBM  Glycogen recognition site of AMP-activated protein
+
+
+Domain annotation for each model (and alignments):
+>> AMPKBI  5'-AMP-activated protein kinase beta subunit, interaction domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.5   0.2   5.8e-24   5.5e-20       5      75 .]     728     803 ..     725     803 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 71.5 bits;  conditional E-value: 5.8e-24
+  AMPKBI   5 ppklPphLekvllnk.....ssdsaassaddssvlpiPnhvvLnHLltssikngvlavgcttRYkkKyvTtvlYkP 75 
+              p lP +L++ +ln      +++s+++ +d+ ++  i  hv+LnHLltssi++++++v+cttRY++K++T+v+Y+P
+  P32578 728 VPDLPIYLNSSYLNRilnqsNQNSESHERDEGAINHIIPHVNLNHLLTSSIRDEIISVACTTRYEGKFITQVVYAP 803
+             477**********99888763333333333333333345***********************************99 PP
+
+>> AMPK1_CBM  Glycogen recognition site of AMP-activated protein kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.6   0.0   6.4e-11   6.2e-07      27      80 ..     505     561 ..     498     565 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 29.6 bits;  conditional E-value: 6.4e-11
+  AMPK1_CBM  27 ipLk...ksekdfsvilkLpeGthqykFiVDgewrvdpdlptatdeeGnlnNvievk 80 
+                i++     +++ f+  l Lp G ++++F ++g +++++ lptatd+eGn++N+ ev 
+     P32578 505 IRMVyddVHKEWFVPDLFLPAGIYRLQFSINGILTHSNFLPTATDSEGNFVNWFEVL 561
+                556555345578888899************************************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (815 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1108  (0.0577715); expected 383.6 (0.02)
+Passed bias filter:                      365  (0.0190312); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.24s 00:00:00.72 Elapsed: 00:00:00.75
+# Mc/sec: 3507.55
+//
+[ok]

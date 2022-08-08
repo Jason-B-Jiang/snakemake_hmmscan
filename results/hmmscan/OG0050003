@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050003.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050003
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O13916|HCN1_SCHPO  [L=80]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.5e-11   43.2   1.8    6.7e-11   43.0   1.8    1.3  1  ANAPC_CDC26  Anaphase-promoting complex APC subunit CDC26
+
+
+Domain annotation for each model (and alignments):
+>> ANAPC_CDC26  Anaphase-promoting complex APC subunit CDC26
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.0   1.8   3.5e-15   6.7e-11       1      45 [.       1      45 [.       1      77 [. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 43.0 bits;  conditional E-value: 3.5e-15
+           ANAPC_CDC26  1 MLRRkPTtItLtseDiaeyederqrqkeqaaqqqrssasastssa 45
+                          MLRR+PT+I++t+eD+ +y++e++rq    +++ +++ ++++ s+
+  sp|O13916|HCN1_SCHPO  1 MLRRNPTAIQITAEDVLAYDEEKLRQTLDSESTTEEALQKNEEST 45
+                          **********************99999988888877777665443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (80 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1288  (0.0671568); expected 383.6 (0.02)
+Passed bias filter:                      625  (0.0325877); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.56
+# Mc/sec: 457.47
+//
+[ok]

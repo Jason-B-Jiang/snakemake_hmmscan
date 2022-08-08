@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034082.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034082
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QHD9|F1QHD9_DANRE  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.6e-28   96.5   2.9      3e-13   49.5   0.1    2.2  2  Hormone_2  Peptide hormone
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_2  Peptide hormone
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.1   1.6e-17     3e-13       1      28 []      76     103 ..      76     103 .. 0.98
+   2 !   47.6   0.3   6.1e-17   1.2e-12       1      28 []     120     147 ..     120     147 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 1.6e-17
+               Hormone_2   1 HADGtFtsdYskvLdqlaAkkflqwLmn 28 
+                             HADG+Fts Ysk+L+ql+Ak++l++L++
+  tr|F1QHD9|F1QHD9_DANRE  76 HADGLFTSGYSKLLGQLSAKEYLESLLA 103
+                             **************************96 PP
+
+  == domain 2  score: 47.6 bits;  conditional E-value: 6.1e-17
+               Hormone_2   1 HADGtFtsdYskvLdqlaAkkflqwLmn 28 
+                             H+D++Ft++Ys++++q+aAkk+l+++++
+  tr|F1QHD9|F1QHD9_DANRE 120 HSDAVFTDNYSRYRKQMAAKKYLNSVLA 147
+                             *************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       436  (0.0227332); expected 383.6 (0.02)
+Passed bias filter:                      361  (0.0188227); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.22s 00:00:00.60 Elapsed: 00:00:00.61
+# Mc/sec: 802.93
+//
+[ok]

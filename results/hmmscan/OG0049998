@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049998.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049998
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O94691|JMJ3_SCHPO  [L=752]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-29  101.3   0.0      9e-29  100.3   0.0    1.6  1  JmjC      JmjC domain, hydroxylase
+      7e-07   29.0   0.2    1.8e-06   27.7   0.2    1.8  1  JmjN      jmjN domain
+
+
+Domain annotation for each model (and alignments):
+>> JmjC  JmjC domain, hydroxylase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.3   0.0   9.3e-33     9e-29       2     113 ..     201     315 ..     200     316 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 100.3 bits;  conditional E-value: 9.3e-33
+                           EEEE-TT-EEEEE--GGG-EEEEEEEEES-EEEEEE-GGGHHHHHHHHHHH...HHCCSTTGCCTTTCEE-HHHHHHTT---EEEEE-T CS
+                  JmjC   2 lylgmpksttpwhiedqglySinylhfgapkvWyiipeekkeklekvlskk...nskeqpdllrhkstlispkqlekegipvyrfvqkp 87 
+                           l++g++k+t pw++e+ +l++++++ +g++ +Wy+ip++++e+++k++ k    ++++++d+l h++ l++p++l+++gi +y++v k+
+  sp|O94691|JMJ3_SCHPO 201 LFAGKWKTTLPWRVESPELHAVQVHLGGSSLQWYVIPSAHSESFKKLAGKLaqdEHWRCSDFLLHQNILFPPSTLVQNGIVTYSTVLKQ 289
+                           789******************************************77766666689********************************* PP
+
+                           T-EEEE-TT-EEEEEESSSEEEEEEE CS
+                  JmjC  88 gefVfvfpgayHsvfnlgfniaeavn 113
+                           +e++++fpg++Hs+f+lg+++  ++ 
+  sp|O94691|JMJ3_SCHPO 290 DELLITFPGTHHSAFCLGDAVLRRFV 315
+                           *******************9987665 PP
+
+>> JmjN  jmjN domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.2   1.9e-10   1.8e-06       1      33 [.      35      67 ..      35      68 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 1.9e-10
+                          -EE---HHHHC-HHHHHHHHHHHHCCCSEEEE- CS
+                  JmjN  1 PvFyPTeeEFkdplkYiekieplgekyGIcKIv 33
+                          Pv +P   EF d   +i+++e lg+kyG +K+v
+  sp|O94691|JMJ3_SCHPO 35 PVVEPKISEFVDMESFIRRVERLGKKYGAIKVV 67
+                          9*******************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (752 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       422  (0.0220032); expected 383.6 (0.02)
+Passed bias filter:                      328  (0.017102); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.22s 00:00:00.68 Elapsed: 00:00:00.78
+# Mc/sec: 3110.64
+//
+[ok]

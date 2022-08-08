@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030144.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030144
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54F31|Q54F31_DICDI  [L=938]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-11   44.6   0.2    2.7e-06   27.7   0.0    2.9  1  BTB       BTB/POZ domain
+    2.1e-11   43.9   0.9    6.1e-08   32.8   0.1    2.5  1  BACK      BTB And C-terminal Kelch
+
+
+Domain annotation for each model (and alignments):
+>> BTB  BTB/POZ domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.0   2.8e-10   2.7e-06       4      49 ..     213     260 ..     210     272 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 2.8e-10
+                             HHHHTTTS-EEEEETTTEEEEE-HHHHHHHBHHHHHHHTST...TSTTE CS
+                     BTB   4 lresgelcDvtlvvgdgkefkahkavLaarSpyFkalftsk...eiees 49 
+                             +++s  ++Dvt+ ++ ++++  hk++La +S++F++ f ++   ei+++
+  tr|Q54F31|Q54F31_DICDI 213 FLKSSYFSDVTIIAN-ERKYFLHKVILAHSSQFFSDHFDQQepiEINNN 260
+                             567778*********.7***********************975543333 PP
+
+>> BACK  BTB And C-terminal Kelch
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.8   0.1   6.3e-12   6.1e-08      35     100 ..     571     637 ..     563     639 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 32.8 bits;  conditional E-value: 6.3e-12
+                             GGGGGS-HHHHHHHHSSS----SSTT-HHHHHHHHHHHH-X....XXXXXXXXXXXXXXXXXXXXXX CS
+                    BACK  35 eeFleLsleqllellssdeLnvesEeevfeavlkWlkhdqee.rkehlaelLskvRlpllspeylke 100
+                              e+l+L+l+ ++ l+++++L+v++E+ v+++vlk+++++ ++  ++ + +l++ vR+pl s ++l+e
+  tr|Q54F31|Q54F31_DICDI 571 PELLSLPLNIMIRLMKQNNLSVSNESIVYKTVLKYIQYNRSNlLEKDICSLFEVVRFPLFSYQQLEE 637
+                             799************************************98735899****************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (938 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2491  (0.129882); expected 383.6 (0.02)
+Passed bias filter:                      397  (0.0206997); expected 383.6 (0.02)
+Passed Vit filter:                       121  (0.00630898); expected 19.2 (0.001)
+Passed Fwd filter:                        55  (0.00286772); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.01u 0.27s 00:00:01.28 Elapsed: 00:00:00.86
+# Mc/sec: 3517.68
+//
+[ok]

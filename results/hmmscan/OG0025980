@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025980.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025980
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q19829|TTM2_CAEEL  [L=358]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.8e-11   43.3   0.1    5.5e-09   36.3   0.0    3.0  1  Arrestin_N  Arrestin (or S-antigen), N-terminal domain
+      2e-09   38.1   0.9     0.0011   19.5   0.4    2.8  0  Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Arrestin_N  Arrestin (or S-antigen), N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.3   0.0   5.7e-13   5.5e-09       3     127 ..       9     157 ..       7     174 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 36.3 bits;  conditional E-value: 5.7e-13
+                           EEES-SEEEEETT--EEEEEEE-CTTCTT.CEEEEEEEEEEEESSSSTTTT........................CCCEEEEEEEEEEE CS
+            Arrestin_N   3 ieldkpkevyspgetvtGkvlleteeekkaravkielrgkartkweesesa........................gktfrkdltykkke 67 
+                           + ld  ++ y+pg+t++G+v+ e+  ++++ +v+ +l+g++++ ++   +                            ++ ++ +  ++
+  sp|Q19829|TTM2_CAEEL   9 VLLD--RPFYQPGQTIQGHVVCEPHHPLEIDCVEGRLHGEIQYFQQLPPNHnrngsplppsktrvlidekaqlwkY--QTVSEMLGLDV 93 
+                           5556..678**********************************998666667789************998887442..33333333332 PP
+
+                           EE..STSSSSS.SSSSHHHHHHHH-TTEEEEEE---TTS--SE..CSGEEEEEEEEEEEEECCC CS
+            Arrestin_N  68 ey..latekslwgskkdsqekLpaGehafpFsfelPknlpsSf..eGkhgsirYevkvtldrpw 127
+                            y   + ++   +s++ s+++L + + +fp ++elP+ +p+Sf   G++ sir+++++ l ++ 
+  sp|Q19829|TTM2_CAEEL  94 FYdeNQNRHFSSESASASSSSLFTTAATFPIQIELPHFAPPSFycPGSPVSIRFTLEIQLYNQG 157
+                           230023344444555666777**********************999**********99987765 PP
+
+>> Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (358 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       428  (0.0223161); expected 383.6 (0.02)
+Passed bias filter:                      348  (0.0181448); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.68
+# Mc/sec: 1695.07
+//
+[ok]

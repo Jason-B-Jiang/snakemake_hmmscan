@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049994.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049994
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O94356|MEU6_SCHPO  [L=651]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-19   69.8   1.1    5.1e-19   68.7   0.1    2.3  1  PH_6      Pleckstrin homology domain
+    1.2e-05   25.9   0.1    4.9e-05   23.9   0.0    2.1  0  PH        PH domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_6  Pleckstrin homology domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.7   0.1   5.3e-23   5.1e-19       2     111 ..     144     258 ..     143     259 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 68.7 bits;  conditional E-value: 5.3e-23
+                  PH_6   2 flytKkffwfgt.davepkalssllks...ekeaesaedaheviawAsetGkGLLffskkedkaspsgvinLadasevaadgeqkFhlt 86 
+                           ++y+K+f++ ++ + +ep+ +s+ +++   +   +sa+d+ + ia A++   GLLf+sk++  + psg+inL+da+ +++   +kF++ 
+  sp|O94356|MEU6_SCHPO 144 HYYKKHFHGTLQgNPTEPSLASEQMHDsdaDSLFQSANDHLNRIAKATQDCRGLLFYSKSQSTSVPSGIINLTDAVSIEPGTGNKFTIN 232
+                           69********99778**9999998887655556789999*************************************************9 PP
+
+                  PH_6  87 a.kGkkhtFkasstaeRdnWvaqlke 111
+                             +Gk  t +a +++ ++ W++ lk+
+  sp|O94356|MEU6_SCHPO 233 FnNGKSETLEALDPESKNTWITDLKN 258
+                           889*******************9986 PP
+
+>> PH  PH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (651 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1363  (0.0710673); expected 383.6 (0.02)
+Passed bias filter:                      554  (0.0288858); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.22s 00:00:00.72 Elapsed: 00:00:00.72
+# Mc/sec: 2929.94
+//
+[ok]

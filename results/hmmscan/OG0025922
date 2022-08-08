@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025922.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025922
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q19907|TWK12_CAEEL  [L=713]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.4e-31  108.4  15.0    2.3e-16   59.6   9.5    2.4  2  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.6   0.2   3.7e-18   7.1e-14      15      71 ..     106     160 ..      92     166 .. 0.85
+   2 !   59.6   9.5   1.2e-20   2.3e-16       1      78 [.     248     323 ..     248     324 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 51.6 bits;  conditional E-value: 3.7e-18
+                            HC....T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2  15 sleegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavls 71 
+                            ++ee+   w+++ a++++   +tT+GYG  + +td gr++ti+y+l+G+++f+++l+
+  sp|Q19907|TWK12_CAEEL 106 LSEET--PWTWTGAMFYAGQLYTTIGYGYPTTKTDEGRICTIFYALFGIPCFLMYLK 160
+                            44445..36********************9***999******************996 PP
+
+  == domain 2  score: 59.6 bits;  conditional E-value: 1.2e-20
+                            HHHHHTCHHHHHHHHC....T.---HHHHHHHHHHHHTTS--SSSSTT.----HHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   1 ivlllvlifgavfysleegwe.gwsfldalYFsfvtltTvGYGdivpl.tdagrlftivyillGlalfaavlsvlgevlr 78 
+                            i+l+++++f+a+++++   we +w f++a+YF++v+++TvG Gd+  +  d+ ++f++++il+Glal++++++++++++ 
+  sp|Q19907|TWK12_CAEEL 248 IMLIIWICFSASMFCI---WEdTWVFSSAVYFFIVSISTVGLGDMLFRtPDM-MVFNFLLILVGLALLSMCFELITDRVA 323
+                            699*************...99999************************5566.**********************99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (713 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       859  (0.0447886); expected 383.6 (0.02)
+Passed bias filter:                      547  (0.0285208); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.50u 0.23s 00:00:00.73 Elapsed: 00:00:00.68
+# Mc/sec: 3400.75
+//
+[ok]

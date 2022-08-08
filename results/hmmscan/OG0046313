@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046313.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046313
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF16979.1  [L=915]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.2e-33  115.3   2.3    2.7e-19   69.7   0.0    5.2  1  Pkinase         Protein kinase domain
+    1.5e-14   54.0   0.1    2.6e-06   27.0   0.0    3.7  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.7   0.0   2.8e-23   2.7e-19     164     264 .]     605     707 ..     592     707 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 69.7 bits;  conditional E-value: 2.8e-23
+                 S-HHHHTTSCBSHHHHHHHHHHHHHHHHHSS-STTTSSHHHHHHHHHHT..HHHHHHHCT.SHH...HHHTTS-HHHHHHHHHHT-SSGCCSTTHHHHH CS
+     Pkinase 164 lAPEvlkeneyskkvDvWslGvilyelltgkppfsgekgkekvekeldq..lekilkilg.etkeklpeakeiseeakdllkkllkkdpkkRltaeell 259
+                  APE+l++++y++k+D+Ws+G i++e+l+gkpp+++ ++    +k +dq  +  +++  + ++ +  ++++eis+e+++llk+llkk+p++R+++ee  
+  PJF16979.1 605 TAPEILRYEKYDAKADLWSIGAIMFEMLYGKPPYRAANH-ILLQKLIDQspVPPMARYAEtTNASGNHRRSEISDECIHLLKNLLKKNPMERMSFEEFF 702
+                 7**********************************5555.55777777756555666666455666788899*************************** PP
+
+                 TSGGG CS
+     Pkinase 260 qhpyl 264
+                  h+y+
+  PJF16979.1 703 THQYF 707
+                 ****8 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.0   0.0   2.7e-10   2.6e-06     172     255 ..     605     701 ..     600     704 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 27.0 bits;  conditional E-value: 2.7e-10
+                     S-HHHHHHSEESHHHHHHHHHHHHHHHHTTSSGT..............TTTSHHHHHHHHHHTTEES-BBTTSBHHHHHHHHHHT-SSGGGS--H CS
+  PK_Tyr_Ser-Thr 172 mapEslkekkftsksDvWsfGvllwEiftlgesp..............ypglsneevlekleegkrlekpekcpeelyelmkqcweedpeeRptf 252
+                     +apE+l+++k+  k+D Ws G +++E++  g+ p               + + ++  ++  ++    ++ +++++e  +l+k+ ++++p eR +f
+      PJF16979.1 605 TAPEILRYEKYDAKADLWSIGAIMFEMLY-GKPPyraanhillqklidQSPVPPMARYAETTNASGNHRRSEISDECIHLLKNLLKKNPMERMSF 698
+                     7**************************98.****5666655555544333333333444444555566777788999999999999999999999 PP
+
+                     HHH CS
+  PK_Tyr_Ser-Thr 253 kel 255
+                     +e 
+      PJF16979.1 699 EEF 701
+                     875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (915 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       382  (0.0199176); expected 383.6 (0.02)
+Passed bias filter:                      346  (0.0180406); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.21s 00:00:00.72 Elapsed: 00:00:00.83
+# Mc/sec: 3587.72
+//
+[ok]

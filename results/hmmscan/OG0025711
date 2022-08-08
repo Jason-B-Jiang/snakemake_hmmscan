@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025711.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025711
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q22227|MIG5_CAEEL  [L=672]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-20   71.2   0.4    9.4e-20   70.3   0.4    1.5  1  DIX       DIX domain
+    2.8e-16   59.4   0.0    5.3e-16   58.5   0.0    1.5  1  DEP       Domain found in Dishevelled, Egl-10, and Pleckstrin
+    6.7e-11   42.5   0.0    1.2e-10   41.6   0.0    1.5  1  PDZ       PDZ domain
+
+
+Domain annotation for each model (and alignments):
+>> DIX  DIX domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.3   0.4   1.5e-23   9.4e-20       1      73 [.      11      84 ..      11      88 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 70.3 bits;  conditional E-value: 1.5e-23
+                   DIX  1 etkvvYylddeevpyrikiskpggqiTLkdfKellpkkgnyryffktldeefgv.VkeeitdDsdiL.Plfegki 73
+                          ++kv+Yyldde++py++ i++++g  TL++fK+ ++k+  y+y+ k+ld+++++ Vk+e+t+Dsd+L  + +g +
+  sp|Q22227|MIG5_CAEEL 11 QIKVFYYLDDETTPYVSVIEAREGVATLGNFKNSFTKR-GYKYYAKELDPDIQReVKVELTTDSDRLrKSQNGFY 84
+                          58************************************.8************888************88888765 PP
+
+>> DEP  Domain found in Dishevelled, Egl-10, and Pleckstrin (DEP)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.5   0.0   8.3e-20   5.3e-16       1      72 []     430     499 ..     430     499 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 58.5 bits;  conditional E-value: 8.3e-20
+                           SSSSCEEEETTEEESSEECHHHHHHHHHHHTS.SSSHHHHHHHHHHHHHTTSEEESSSSCCC--SSSSSEEEE CS
+                   DEP   1 gvklkdrrkhlktyencftGseavdWLldnld.vedreeAvalgqlLldkgliehvedkhqeFkdskqafYqf 72 
+                           g+ +k+r++ + +++ +f+G+++vdWL+d++  + +r++A  ++++Ll+ gli+hv  k + F ++  ++Y f
+  sp|Q22227|MIG5_CAEEL 430 GLAVKNRKWLKILVPMSFIGRDLVDWLVDHMAdIHNRKKARIYAARLLAAGLIRHVVSKLT-FTEK--CYYVF 499
+                           6789********************************************************9.*999..78876 PP
+
+>> PDZ  PDZ domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.6   0.0   1.9e-14   1.2e-10      12      81 ..     237     305 ..     226     306 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 41.6 bits;  conditional E-value: 1.9e-14
+                           SSEEEEEETTSSSSSSEEEEEECTTSHHHHHT.SSTTEEEEEETTEETTTSHHHHHHHHHHTTTS...EEEEEE CS
+                   PDZ  12 lGfslkggsdqrgdkgifvsevlpggaaeadg.lkvGDkIlsvNgvdvenvsheeavqaikgskg...kvtLti 81 
+                           lG+s+   +      +ifvse+ p ga e+dg ++vGD+Il+vN v++e++s  +av  ++++ +   ++tL i
+  sp|Q22227|MIG5_CAEEL 237 LGLSVCTID-----GHIFVSEIAPEGAVEKDGrVNVGDQILQVNRVSFEELSGPQAVRSLREAASskrPITLYI 305
+                           555555533.....48*********************************************9998888888877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (672 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       790  (0.0411909); expected 383.6 (0.02)
+Passed bias filter:                      593  (0.0309192); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.50u 0.21s 00:00:00.71 Elapsed: 00:00:00.64
+# Mc/sec: 3403.29
+//
+[ok]

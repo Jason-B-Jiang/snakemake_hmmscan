@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034160.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034160
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0JMP3|A0JMP3_DANRE  [L=271]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.7e-17   63.3   6.9    1.1e-16   62.1   6.9    1.7  1  BORG_CEP  Cdc42 effector
+    3.1e-06   27.6   0.0    6.7e-06   26.5   0.0    1.6  1  PBD       P21-Rho-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> BORG_CEP  Cdc42 effector
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.1   6.9   1.2e-20   1.1e-16       1     130 []     105     262 ..     105     262 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 62.1 bits;  conditional E-value: 1.2e-20
+                BORG_CEP   1 vlKnAiSLPti.ggsqaltlpllspppkpPrepksaesspekksleedallesadvfssekssasaesaskeeke..........se 76 
+                             +lK++iS+P++ + +q         ppkpPr +  ++++p +++++++ + +++ ++s ++    + ++     +            
+  tr|A0JMP3|A0JMP3_DANRE 105 LLKTTISMPVFmAPVQP--------PPKPPRLHLDEQPTPVHHQQQNHHHSPQQRSMSVCEGGIGKCHEL----TlsasipvlphMM 179
+                             69*********777776........9*****888888888887766555555555444444444322221....1234455666633 PP
+
+                BORG_CEP  77 kssgslsdssslssn.............................kekeeseesllkiagSllsLeLDLGPSiLddVLsimDks 130
+                              s  sls+ ss +s+                             + ++   ++ +++++Sl++L+LDLGPSiL+dVL+imD++
+  tr|A0JMP3|A0JMP3_DANRE 180 PSTSSLSEASSDDSMsegcgpldpkrglsldsdaglsnedlrseHCESPAVSPSVSRSESLMGLDLDLGPSILEDVLRIMDRY 262
+                             34444444444444455555566666666666666665554333444445555****************************85 PP
+
+>> PBD  P21-Rho-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.0     7e-10   6.7e-06       1      37 [.      30      69 ..      30      88 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 7e-10
+                            -B---.EEEEEEEEEEEETTTTEEE..S--CCHCCCHHHT CS
+                     PBD  1 eIStP.tnfkHtvHVGwdgdsgnft..glppewkkllkss 37
+                            +IS+P ++++H +HVG dg+ ++f+  g++  +   l+++
+  tr|A0JMP3|A0JMP3_DANRE 30 MISPPlGDVRHSAHVGPDGEGDMFGdvGFLRGKLDMLPGL 69
+                            8***********************9999998887777766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (271 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       285  (0.01486); expected 383.6 (0.02)
+Passed bias filter:                      173  (0.00902028); expected 383.6 (0.02)
+Passed Vit filter:                         9  (0.000469263); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.53
+# Mc/sec: 1653.55
+//
+[ok]

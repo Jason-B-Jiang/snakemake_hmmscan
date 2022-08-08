@@ -1,0 +1,785 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003688.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003688
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9BKR0|NAT9_CAEEL  [L=202]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    9.3e-23   81.5   0.0    1.2e-22   81.2   0.0    1.1  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+      3e-07   30.8   0.0    4.2e-07   30.3   0.0    1.3  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.2   0.0   1.2e-26   1.2e-22       3     138 .]      15     164 ..      13     164 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 81.2 bits;  conditional E-value: 1.2e-26
+        Acetyltransf_3   3 lLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl.kdtg.....viGsvglrdleeedee.... 80 
+                           +L+p+++ ++++++++++++e++r  ++e+l+l+e++e++++ w+++  e+++++++ + +++g     ++G+v+l+     ++e    
+  sp|Q9BKR0|NAT9_CAEEL  15 ILVPYEPCHVAKYHKWMENEEIRRLtGSEQLSLDEEYEMQKT-WRND--EDKLTFIVLEmNESGeevdhMLGDVNLFISTSPSTEnpsd 100
+                           89**********************87777************6.9874..688999997775554567778****999555555556889 PP
+
+        Acetyltransf_3  81 ....aelgymlaps.fwgkGyateavralleyafeelglerlvavidkeNeaSirvle.klGfe 138
+                               +e++ m+a++  +gkG++ eavr ++ +a+e+l++e+++++i  +N+ S  +++ klGf+
+  sp|Q9BKR0|NAT9_CAEEL 101 dvitGEVEVMIAEPrGRGKGIGEEAVRVIIAWAYENLKIEQFCVKITDDNTPSLSLFKkKLGFK 164
+                           99**********66599****************************************7358885 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.3   0.0   4.4e-11   4.2e-07      17     117 .]      47     163 ..      27     163 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 30.3 bits;  conditional E-value: 4.4e-11
+                           HHHHHHHHHHHHHSTTE.EEEEEEET......TEEEEEEEEEEEET.......TSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHH CS
+        Acetyltransf_1  17 edaseeefeesfsleae.gllvaeed......geliGfisllkipd.......ekggvayieslaVspeyrgkGlGsaLlealeerare 91 
+                            d+++e+++ +  +e++ +++v e +      +  +G + l++ +         +  ++++e +   p  rgkG+G + ++ ++ +a e
+  sp|Q9BKR0|NAT9_CAEEL  47 LDEEYEMQKTWRNDEDKlTFIVLEMNesgeevDHMLGDVNLFISTSpstenpsDDVITGEVEVMIAEPRGRGKGIGEEAVRVIIAWAYE 135
+                           4445555555555566655555444455544444777777777777888887777778888888889999******************* PP
+
+                           T.TCSEEEE.EEETTEHHHHHHHHH.TTE CS
+        Acetyltransf_1  92 e.gikkivl.aveedndaairlYek.lGF 117
+                           +  i+  ++  +++dn+++  l++k lGF
+  sp|Q9BKR0|NAT9_CAEEL 136 NlKIEQ-FCvKITDDNTPSLSLFKKkLGF 163
+                           *99999.77799999********988**9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (202 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       624  (0.0325356); expected 383.6 (0.02)
+Passed bias filter:                      451  (0.0235153); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.22s 00:00:00.59 Elapsed: 00:00:00.66
+# Mc/sec: 996.04
+//
+Query:       sp|Q86II5|NAT9_DICDI  [L=212]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.2e-17   65.0   0.1    1.6e-17   64.6   0.1    1.2  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+      8e-06   26.2   0.0    1.2e-05   25.6   0.0    1.4  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+    1.2e-05   25.3   0.0    2.1e-05   24.5   0.0    1.4  1  FR47            FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.6   0.1   2.4e-21   1.6e-17       2     138 .]      14     170 ..      13     170 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 64.6 bits;  conditional E-value: 2.4e-21
+        Acetyltransf_3   2 LlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaiv...........lkdtg..........viGs 68 
+                           ++L+p++++++e++ ++++ +e+++   +e+lt ee+ e +e++++   ++++ +++i                +          +iG+
+  sp|Q86II5|NAT9_DICDI  14 VILVPYKKKHVEKYWKWMQSEEIREQtASEELTIEEEFENQESWFK---DDHKITFIILdkdlllenekdS---NgysnendiksMIGD 96 
+                           79********************998656669999999888886443...3577888886444433333220...133344456669*** PP
+
+        Acetyltransf_3  69 vglr.dleeedeeaelgymlaps.fwgkGyateavralleyafeel..glerlvavidkeNeaSirvleklGfe 138
+                           v+++ +  e++++ael+ m+a++ +++kG+a+ea + ++ y  e+l   +++ +++i ++N+ Si+ ++++ f+
+  sp|Q86II5|NAT9_DICDI  97 VNIFfNQYEDEGTAELEVMIAEPtSRRKGLAREAISIIMGYGIEHLstITKKYIVKIGESNQPSIQMFKSMNFK 170
+                           *766355555566********666*******************999766678*****************99886 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.0   1.9e-09   1.2e-05      23     117 .]      52     169 ..      24     169 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 1.9e-09
+                           H.HHHHHHSTTE.EEEEEEET..................TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHH CS
+        Acetyltransf_1  23 e.feesfsleae.gllvaeed..................geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeerare 91 
+                           e +e +f ++++ ++++  +d                     iG + ++ ++ e++g+a++e +   p+ r+kGl+++ +  ++ +  e
+  sp|Q86II5|NAT9_DICDI  52 EnQESWFKDDHKiTFIILDKDlllenekdsngysnendiKSMIGDVNIFFNQYEDEGTAELEVMIAEPTSRRKGLAREAISIIMGYGIE 140
+                           134444555555333333333555555556666554334448888888888889*********************************99 PP
+
+                           T..TC.SEEEEEEETTEHHHHHHHHH.TTE CS
+        Acetyltransf_1  92 e..gi.kkivlaveedndaairlYek.lGF 117
+                           +   i kk  + + e+n+++i ++ k + F
+  sp|Q86II5|NAT9_DICDI 141 HlsTItKKYIVKIGESNQPSIQMF-KsMNF 169
+                           998887775559************.55887 PP
+
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.0   3.3e-09   2.1e-05      22      80 ..     110     172 ..      95     178 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 3.3e-09
+                           SSEEEEEE-GGG-SSSHHHHHHHHH....HHHHHHS-S-EEEEEETT-HHHHHHHHHHT-EEE CS
+                  FR47  22 gelgalqvlpehrrrGlgsrlvkal....akeiaergktvllvvvasNtpsirlyeklGfeki 80 
+                            el  +  +p+ rr+Gl++  ++ +    ++++++  k+ ++ +++sN+psi+++++++f++i
+  sp|Q86II5|NAT9_DICDI 110 AELEVMIAEPTSRRKGLAREAISIImgygIEHLSTITKKYIVKIGESNQPSIQMFKSMNFKQI 172
+                           68999999***********99888744445888889999*********************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (212 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1185  (0.0617863); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.57
+# Mc/sec: 1201.03
+//
+Query:       sp|Q9V9V9|NAT9_DROME  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.5e-24   86.2   0.1    4.1e-24   85.9   0.1    1.1  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+      7e-07   29.1   0.7    2.3e-06   27.4   0.7    1.7  1  Acetyltransf_8  Acetyltransferase (GNAT) domain
+    2.7e-05   24.5   0.0    4.3e-05   23.8   0.0    1.4  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.9   0.1   6.5e-28   4.1e-24       1     134 [.      13     159 ..      13     163 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 85.9 bits;  conditional E-value: 6.5e-28
+        Acetyltransf_3   1 RLlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl.....kdtg....viGsvglrdleeede 79 
+                           R++L+p++++++++++e++s++++++   +e+ltlee++e++++ w+e+  ++++++++ +     +d++    ++G+ +l+  ++ d 
+  sp|Q9V9V9|NAT9_DROME  13 RVILVPYEARHVPKYHEWMSNETLRELtASEELTLEEEHEMQRS-WRED--SDKLTFIVLDaetysRDQDeiaaMVGDTNLFLHQDPDS 98 
+                           99***********************986777*********9996.9875..588999997655665444468878*******8888777 PP
+
+        Acetyltransf_3  80 e...aelgymlaps.fwgkGyateavralleyafeel..glerlvavidkeNeaSirvlek 134
+                           +   ae ++m+a++ ++gkG+++ea+  +l+ya +++  +l++++++id +N aS  ++++
+  sp|Q9V9V9|NAT9_DROME  99 QiptAEAEIMIAEPyARGKGFGREAMLLMLKYAQSQPqlKLDKFEVKIDMDNAASLHLFKS 159
+                           79**********8889*****************8777346679***************997 PP
+
+>> Acetyltransf_8  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.7   3.6e-10   2.3e-06       4     144 ..      22     169 ..      20     170 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 3.6e-10
+                           GGHHHHHHHCTSCCCHHHH.-----HHHHHHHHHHHC.STTEEEEEEEETTEEEEEEEEEEGGGCGGGGCS...........---TT-E CS
+        Acetyltransf_8   4 aDlellhrWmnrprvaeww.eeagtleevrellakldadphsepliglldgepvgyfeiYwakedelaeyy...........daepgdr 80 
+                           ++++  h+Wm+++ ++e    e+ tlee++e+++  ++d +  ++i+l        +e+Y  ++de+a++            d +  + 
+  sp|Q9V9V9|NAT9_DROME  22 RHVPKYHEWMSNETLRELTaSEELTLEEEHEMQRSWREDSDKLTFIVLD-------AETYSRDQDEIAAMVgdtnlflhqdpDSQIPTA 103
+                           789999***********993555688**********9888888888765.......68999999999888888889999988889999* PP
+
+                           EEEEEESSHHHCTTTCHHHHHHHHHHHHHCCT..T--EEEE--BTT-HHHHHHHHHTT-EEEEEEE CS
+        Acetyltransf_8  81 GiHlligeaeargkglttallralvhylfadp..rtrrvvvEPdvrNerairllekaGfrkekevd 144
+                              ++i+e+ argkg++++ +  +++y+ ++p  + ++  v  d +N+++++l+++  f++ ++v+
+  sp|Q9V9V9|NAT9_DROME 104 EAEIMIAEPYARGKGFGREAMLLMLKYAQSQPqlKLDKFEVKIDMDNAASLHLFKSFMFVETRRVE 169
+                           *****************************9886688899999999**************9999886 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.8   0.0   6.7e-09   4.3e-05      18     114 ..      48     158 ..      26     162 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 23.8 bits;  conditional E-value: 6.7e-09
+                           HHHHHHHHHHHHSTTE.EEEEEEET.......TEEEEEE.....EEEEEET.TSTTEEEEEEEEESGGG.TTSSHHHHHHHHHHHHHHH CS
+        Acetyltransf_1  18 daseeefeesfsleae.gllvaeed.......geliGfi.....sllkipd.ekggvayieslaVspey.rgkGlGsaLlealeerare 91 
+                           ++++e+++ + ++ ++ +++v ++        +e+++++      l++  d  ++  ++  ++++++ y rgkG G++ +  ++++a +
+  sp|Q9V9V9|NAT9_DROME  48 EEEHEMQRSWREDSDKlTFIV-LDAetysrdqDEIAAMVgdtnlFLHQ--DpDSQIPTAEAEIMIAEPYaRGKGFGREAMLLMLKYAQS 133
+                           222222445544455544444.33335666678899999666432333..25344446666888888888******************* PP
+
+                           T...TCSEEEEEEETTEHHHHHHHHH CS
+        Acetyltransf_1  92 e...gikkivlaveedndaairlYek 114
+                           +    ++k ++ +++dn a+ +l+ k
+  sp|Q9V9V9|NAT9_DROME 134 QpqlKLDKFEVKIDMDNAASLHLF-K 158
+                           **766699999************9.5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       634  (0.033057); expected 383.6 (0.02)
+Passed bias filter:                      436  (0.0227332); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.61
+# Mc/sec: 1053.75
+//
+Query:       tr|A0A0B4KHX9|A0A0B4KHX9_DROME  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.5e-24   86.2   0.1    4.1e-24   85.9   0.1    1.1  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+      7e-07   29.1   0.7    2.3e-06   27.4   0.7    1.7  1  Acetyltransf_8  Acetyltransferase (GNAT) domain
+    2.7e-05   24.5   0.0    4.3e-05   23.8   0.0    1.4  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.9   0.1   6.5e-28   4.1e-24       1     134 [.      13     159 ..      13     163 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 85.9 bits;  conditional E-value: 6.5e-28
+                  Acetyltransf_3   1 RLlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl.....kdtg....viGsv 69 
+                                     R++L+p++++++++++e++s++++++   +e+ltlee++e++++ w+e+  ++++++++ +     +d++    ++G+ 
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME  13 RVILVPYEARHVPKYHEWMSNETLRELtASEELTLEEEHEMQRS-WRED--SDKLTFIVLDaetysRDQDeiaaMVGDT 88 
+                                     99***********************986777*********9996.9875..588999997655665444468878**** PP
+
+                  Acetyltransf_3  70 glrdleeedee...aelgymlaps.fwgkGyateavralleyafeel..glerlvavidkeNeaSirvlek 134
+                                     +l+  ++ d +   ae ++m+a++ ++gkG+++ea+  +l+ya +++  +l++++++id +N aS  ++++
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME  89 NLFLHQDPDSQiptAEAEIMIAEPyARGKGFGREAMLLMLKYAQSQPqlKLDKFEVKIDMDNAASLHLFKS 159
+                                     ***888877779**********8889*****************8777346679***************997 PP
+
+>> Acetyltransf_8  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.7   3.6e-10   2.3e-06       4     144 ..      22     169 ..      20     170 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 3.6e-10
+                                     GGHHHHHHHCTSCCCHHHH.-----HHHHHHHHHHHC.STTEEEEEEEETTEEEEEEEEEEGGGCGGGGCS........ CS
+                  Acetyltransf_8   4 aDlellhrWmnrprvaeww.eeagtleevrellakldadphsepliglldgepvgyfeiYwakedelaeyy........ 73 
+                                     ++++  h+Wm+++ ++e    e+ tlee++e+++  ++d +  ++i+l        +e+Y  ++de+a++         
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME  22 RHVPKYHEWMSNETLRELTaSEELTLEEEHEMQRSWREDSDKLTFIVLD-------AETYSRDQDEIAAMVgdtnlflh 93 
+                                     789999***********993555688**********9888888888765.......68999999999888888889999 PP
+
+                                     ...---TT-EEEEEEESSHHHCTTTCHHHHHHHHHHHHHCCT..T--EEEE--BTT-HHHHHHHHHTT-EEEEEEE CS
+                  Acetyltransf_8  74 ...daepgdrGiHlligeaeargkglttallralvhylfadp..rtrrvvvEPdvrNerairllekaGfrkekevd 144
+                                        d +  +    ++i+e+ argkg++++ +  +++y+ ++p  + ++  v  d +N+++++l+++  f++ ++v+
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME  94 qdpDSQIPTAEAEIMIAEPYARGKGFGREAMLLMLKYAQSQPqlKLDKFEVKIDMDNAASLHLFKSFMFVETRRVE 169
+                                     988889999******************************9886688899999999**************9999886 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.8   0.0   6.7e-09   4.3e-05      18     114 ..      48     158 ..      26     162 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 23.8 bits;  conditional E-value: 6.7e-09
+                                     HHHHHHHHHHHHSTTE.EEEEEEET.......TEEEEEE.....EEEEEET.TSTTEEEEEEEEESGGG.TTSSHHHHH CS
+                  Acetyltransf_1  18 daseeefeesfsleae.gllvaeed.......geliGfi.....sllkipd.ekggvayieslaVspey.rgkGlGsaL 81 
+                                     ++++e+++ + ++ ++ +++v ++        +e+++++      l++  d  ++  ++  ++++++ y rgkG G++ 
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME  48 EEEHEMQRSWREDSDKlTFIV-LDAetysrdqDEIAAMVgdtnlFLHQ--DpDSQIPTAEAEIMIAEPYaRGKGFGREA 123
+                                     222222445544455544444.33335666678899999666432333..25344446666888888888********* PP
+
+                                     HHHHHHHHHHT...TCSEEEEEEETTEHHHHHHHHH CS
+                  Acetyltransf_1  82 lealeeraree...gikkivlaveedndaairlYek 114
+                                     +  ++++a ++    ++k ++ +++dn a+ +l+ k
+  tr|A0A0B4KHX9|A0A0B4KHX9_DROME 124 MLLMLKYAQSQpqlKLDKFEVKIDMDNAASLHLF-K 158
+                                     ************766699999************9.5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       634  (0.033057); expected 383.6 (0.02)
+Passed bias filter:                      436  (0.0227332); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.64
+# Mc/sec: 1016.78
+//
+Query:       tr|F1R8Q4|F1R8Q4_DANRE  [L=213]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.3e-24   86.8   0.0    3.9e-24   86.0   0.0    1.4  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+    1.5e-06   28.5   0.0    2.1e-06   28.1   0.0    1.2  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.0   0.0     4e-28   3.9e-24       2     138 .]      14     160 ..      13     160 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 86.0 bits;  conditional E-value: 4e-28
+          Acetyltransf_3   2 LlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl.........kdtg...viGsvglrdle 75 
+                             ++L+p+ +e+++++++++  p++++   +epltle++++++++ w+e  ++++++++i +         +  +   ++G+v+++  +
+  tr|F1R8Q4|F1R8Q4_DANRE  14 VVLVPYNAEHVPRYHQWMCSPDLQKLtASEPLTLEQEYDMQTS-WRE--DDDKCTFIILDkqkwadasvP--EqecMVGDVNIFLTD 95 
+                             78***********************86777************6.987..568899***754444333332..04458********** PP
+
+          Acetyltransf_3  76 eedee.aelgymla.psfwgkGyateavralleyafeelglerlvavidkeNeaSirvleklGfe 138
+                             ++d + ael++m+a p ++gkG+++e++r+++ y  ++lg+++++++i  +N+ Si+ ++k +f+
+  tr|F1R8Q4|F1R8Q4_DANRE  96 PSDPSlAELEIMIAvPCYRGKGIGKEVTRMMMCYGIHKLGIRKFEVKIGLDNKISIAMFKKFHFK 160
+                             *9988*********777*********************************************997 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.0   2.2e-10   2.1e-06      18     117 .]      47     159 ..      30     159 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 2.2e-10
+                             HHHHHH.HHHHHHSTTEEEEEEEET...........TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHT CS
+          Acetyltransf_1  18 daseee.feesfsleaegllvaeed...........geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeeraree 92 
+                              ++e++ +  + ++++++++++++            +  +G + ++  ++ ++  a++e +   p yrgkG+G++  + ++ +  ++
+  tr|F1R8Q4|F1R8Q4_DANRE  47 LEQEYDmQTSWREDDDKCTFIILDKqkwadasvpeqECMVGDVNIFLTDPSDPSLAELEIMIAVPCYRGKGIGKEVTRMMMCYGIHK 133
+                             33344424444444555777766666778888887788************999********************************** PP
+
+                             .TCSEEEEEEETTEHHHHHHHHHTTE CS
+          Acetyltransf_1  93 .gikkivlaveedndaairlYeklGF 117
+                              gi+k ++ +  dn+ +i++++k+ F
+  tr|F1R8Q4|F1R8Q4_DANRE 134 lGIRKFEVKIGLDNKISIAMFKKFHF 159
+                             *********************88988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (213 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       337  (0.0175713); expected 383.6 (0.02)
+Passed bias filter:                      292  (0.015225); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.14s 00:00:00.48 Elapsed: 00:00:00.55
+# Mc/sec: 1248.56
+//
+Query:       tr|A0A2R8QS84|A0A2R8QS84_DANRE  [L=67]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (67 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       324  (0.0168935); expected 383.6 (0.02)
+Passed bias filter:                      217  (0.0113145); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.31u 0.18s 00:00:00.49 Elapsed: 00:00:00.52
+# Mc/sec: 418.66
+//
+Query:       tr|U3JAT8|U3JAT8_DANRE  [L=71]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (71 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       363  (0.018927); expected 383.6 (0.02)
+Passed bias filter:                      300  (0.0156421); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.17s 00:00:00.51 Elapsed: 00:00:00.57
+# Mc/sec: 401.84
+//
+Query:       tr|A0A2R8QBM1|A0A2R8QBM1_DANRE  [L=242]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.3e-24   86.2   0.0    5.6e-24   85.5   0.0    1.4  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+      2e-06   28.1   0.0    2.9e-06   27.6   0.0    1.2  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.5   0.0   5.9e-28   5.6e-24       2     138 .]      43     189 ..      42     189 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 85.5 bits;  conditional E-value: 5.9e-28
+                  Acetyltransf_3   2 LlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl.........kdtg...viG 67 
+                                     ++L+p+ +e+++++++++  p++++   +epltle++++++++ w+e  ++++++++i +         +  +   ++G
+  tr|A0A2R8QBM1|A0A2R8QBM1_DANRE  43 VVLVPYNAEHVPRYHQWMCSPDLQKLtASEPLTLEQEYDMQTS-WRE--DDDKCTFIILDkqkwadasvP--EqecMVG 116
+                                     78***********************86777************6.987..568899***754444333332..04458** PP
+
+                  Acetyltransf_3  68 svglrdleeedee.aelgymla.psfwgkGyateavralleyafeelglerlvavidkeNeaSirvleklGfe 138
+                                     +v+++  +++d + ael++m+a p ++gkG+++e++r+++ y  ++lg+++++++i  +N+ Si+ ++k +f+
+  tr|A0A2R8QBM1|A0A2R8QBM1_DANRE 117 DVNIFLTDPSDPSlAELEIMIAvPCYRGKGIGKEVTRMMMCYGIHKLGIRKFEVKIGLDNKISIAMFKKFHFK 189
+                                     *********9988*********777*********************************************997 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.0     3e-10   2.9e-06      18     117 .]      76     188 ..      59     188 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 3e-10
+                                     HHHHHH.HHHHHHSTTEEEEEEEET...........TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHH CS
+                  Acetyltransf_1  18 daseee.feesfsleaegllvaeed...........geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlea 84 
+                                      ++e++ +  + ++++++++++++            +  +G + ++  ++ ++  a++e +   p yrgkG+G++  + 
+  tr|A0A2R8QBM1|A0A2R8QBM1_DANRE  76 LEQEYDmQTSWREDDDKCTFIILDKqkwadasvpeqECMVGDVNIFLTDPSDPSLAELEIMIAVPCYRGKGIGKEVTRM 154
+                                     33344424444444555777766666777888887788************999************************** PP
+
+                                     HHHHHHHT.TCSEEEEEEETTEHHHHHHHHHTTE CS
+                  Acetyltransf_1  85 leeraree.gikkivlaveedndaairlYeklGF 117
+                                     ++ +  ++ gi+k ++ +  dn+ +i++++k+ F
+  tr|A0A2R8QBM1|A0A2R8QBM1_DANRE 155 MMCYGIHKlGIRKFEVKIGLDNKISIAMFKKFHF 188
+                                     *****************************88988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (242 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       462  (0.0240888); expected 383.6 (0.02)
+Passed bias filter:                      379  (0.0197612); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.20s 00:00:00.62 Elapsed: 00:00:00.69
+# Mc/sec: 1138.10
+//
+Query:       sp|Q9BTE0|NAT9_HUMAN  [L=207]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.4e-26   93.9   0.0    1.8e-26   93.6   0.0    1.1  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+    5.6e-08   33.1   0.0      8e-08   32.6   0.0    1.2  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+    4.8e-08   33.0   0.0    7.2e-08   32.4   0.0    1.3  1  FR47            FR47-like protein
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.6   0.0   2.7e-30   1.8e-26       2     138 .]      14     162 ..      13     162 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 93.6 bits;  conditional E-value: 2.7e-30
+        Acetyltransf_3   2 LlLrplteeDleal.felrsdpevmry.lpepltleeaeewlerawaeeseeegygwaivl........kdtg.....viGsvglrdle 75 
+                           ++L+p+t+e+++   +e+++ +e++r   +epltle++++++ + w+e+   +++++++ +                 ++G+v+l+  +
+  sp|Q9BTE0|NAT9_HUMAN  14 VVLVPYTSEHVPSRyHEWMKSEELQRLtASEPLTLEQEYAMQCS-WQED--ADKCTFIVLDaekwqaqpG--AteescMVGDVNLFLTD 97 
+                           78**********98689*********86777***********96.9874..6889999975555544331..1344558********** PP
+
+        Acetyltransf_3  76 eedee.aelgymla.psfwgkGyateavralleyafeelglerlvavidkeNeaSirvleklGfe 138
+                            ed + +e++ m+a ps++gkG++teav a+l y  ++lgl++++a+i + Ne Sir ++kl+fe
+  sp|Q9BTE0|NAT9_HUMAN  98 LEDLTlGEIEVMIAePSCRGKGLGTEAVLAMLSYGVTTLGLTKFEAKIGQGNEPSIRMFQKLHFE 162
+                           999889********666**********************************************97 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.6   0.0   1.2e-11     8e-08      13     117 .]      43     161 ..      28     161 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 32.6 bits;  conditional E-value: 1.2e-11
+                           HCHHHHHHHHH.HHHHHHSTTEEEEEEEET............TEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHH CS
+        Acetyltransf_1  13 fppnedaseee.feesfsleaegllvaeed............geliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeer 88 
+                            +p   ++e++ ++ + ++ +++++++++                +G + l+  + e+   ++ie +   p++rgkGlG++ + a++ +
+  sp|Q9BTE0|NAT9_HUMAN  43 SEPLTLEQEYAmQCSWQEDADKCTFIVLDAekwqaqpgateeSCMVGDVNLFLTDLEDLTLGEIEVMIAEPSCRGKGLGTEAVLAMLSY 131
+                           44444444444466666666667777555545666666653344999999999999999****************************** PP
+
+                           HHHT.TCSEEEEEEETTEHHHHHHHHHTTE CS
+        Acetyltransf_1  89 aree.gikkivlaveedndaairlYeklGF 117
+                                g++k ++ + + n+++ir+++kl F
+  sp|Q9BTE0|NAT9_HUMAN 132 GVTTlGLTKFEAKIGQGNEPSIRMFQKLHF 161
+                           *************************99988 PP
+
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.4   0.0   1.1e-11   7.2e-08      12      81 ..      94     165 ..      86     170 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 32.4 bits;  conditional E-value: 1.1e-11
+                           EEEEEEE-TTSSEEEEEE-GGG-SSSHHHHHHHHH.HHHHHHS-S-EE.EEEETT-HHHHHHHHHHT-EEEE CS
+                  FR47  12 laawilrkdggelgalqvlpehrrrGlgsrlvkal.akeiaergktvl.lvvvasNtpsirlyeklGfekie 81 
+                             + +  +  ge+  +  +p+ r++Glg+  v a+ ++++ + g t + + ++++N+psir+++kl fe+  
+  sp|Q9BTE0|NAT9_HUMAN  94 FLTDLEDLTLGEIEVMIAEPSCRGKGLGTEAVLAMlSYGVTTLGLTKFeAKIGQGNEPSIRMFQKLHFEQVA 165
+                           5667778889******************98777653899***998877599*****************9874 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (207 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       595  (0.0310235); expected 383.6 (0.02)
+Passed bias filter:                      500  (0.0260702); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.55
+# Mc/sec: 1211.67
+//
+Query:       XP_013239412.1  [L=386]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.1e-26   92.4   0.0    3.6e-26   91.7   0.0    1.3  1  Polysacc_deac_1  Polysaccharide deacetylase
+    3.1e-09   37.7   0.0    0.00015   22.6   0.0    2.3  0  Acetyltransf_3   Acetyltransferase (GNAT) domain
+
+
+Domain annotation for each model (and alignments):
+>> Polysacc_deac_1  Polysaccharide deacetylase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.7   0.0   3.7e-30   3.6e-26       6     104 ..     250     351 ..     246     367 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 91.7 bits;  conditional E-value: 3.7e-30
+                      STEEEEEEEESSHCHHHHHHHHHHHCT--EEEEE-HHHHHH-..HHHHHHHHHTTEEEEE--SS--EGGGSHHHHHHHHHHHHHHHHHHHHS-. CS
+  Polysacc_deac_1   6 kksvaLTFDdgpsentprildlLkkykvkatfFligsnveey..pdevkemvesGheignHtwshpnlsnltkeqlrkdieraqealkkatgk. 96 
+                      +++++LTFDdgps++t+ ild+L+ y+vk tfF+igsn+++      +k++v++Gh +g+Htwshp+l++ ++e++ ++++++ + + +  g  
+   XP_013239412.1 250 PQAISLTFDDGPSSFTDGILDILRDYGVKGTFFVIGSNINTSssRATIKRIVAEGHVLGSHTWSHPDLTTIPDEEIIDEMKKTSDMIFASAGTi 343
+                      689***********************************9998778899*************************************998877776 PP
+
+                      ---EEE-G CS
+  Polysacc_deac_1  97 rprlfrpP 104
+                      ++ + r P
+   XP_013239412.1 344 CFPTRRCP 351
+                      76666555 PP
+
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (386 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       543  (0.0283122); expected 383.6 (0.02)
+Passed bias filter:                      369  (0.0192398); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 2078.03
+//
+Query:       PJF18969.1  [L=162]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.9e-20   72.4   0.4    2.7e-19   70.3   0.4    1.8  1  Acetyltransf_3  Acetyltransferase (GNAT) domain
+    7.7e-12   45.6   0.0    9.5e-12   45.3   0.0    1.1  1  Acetyltransf_1  Acetyltransferase (GNAT) family
+    1.4e-08   34.6   0.2    5.3e-06   26.3   0.0    2.1  0  Acetyltransf_8  Acetyltransferase (GNAT) domain
+      4e-07   30.0   0.0    6.3e-07   29.4   0.0    1.2  1  FR47            FR47-like protein
+    4.8e-07   30.0   0.0    5.9e-07   29.7   0.0    1.1  1  Acetyltransf_4  Acetyltransferase (GNAT) domain
+    4.4e-06   27.0   0.1      6e-06   26.6   0.1    1.2  0  Acetyltransf_7  Acetyltransferase (GNAT) domain
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.3   0.4   8.4e-23   2.7e-19       4     138 .]       7     126 ..       5     126 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 70.3 bits;  conditional E-value: 8.4e-23
+  Acetyltransf_3   4 LrplteeDlealfelrsdpevmrylpepltleeaeewlerawaeeseeegygwaivl.kdtgviGsvglrdleeedeeaelgymla.psfwgkGy 96 
+                     L p+ +e+++ + ++++dpe+++ +        a+e ++  ++      +y ++ ++ +++++iG++ l+ ++e +  ae+ +m+a p+++++Gy
+      PJF18969.1   7 LIPYAKEHVPLMNKWLQDPEMQQLV--------ATEAIT--LE-----ADYVFQAEVeQNGDIIGDIDLYFFPEGE--AEINIMIAsPEWRRHGY 84 
+                     789999**999999******88632........233444..33.....345555544244448******9777764..********4446677** PP
+
+  Acetyltransf_3  97 ateavralleyafeelglerlvavidkeNeaSirvleklGfe 138
+                     a+ea+  +++ya +++++++++a+i ++NeaS r +e+ Gf+
+      PJF18969.1  85 ASEALTLAMQYAIQRTKTRKFIAKIGQKNEASLRFFERHGFQ 126
+                     *****************************************6 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.3   0.0     3e-15   9.5e-12      31     117 .]      39     125 ..      11     125 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 45.3 bits;  conditional E-value: 3e-15
+                     TTEEEEE..EEETTEEEEEEEEEEEETTSTTEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHT.TCSEEEEEEETTEHHHHHHHHHTTE CS
+  Acetyltransf_1  31 eaegllv..aeedgeliGfisllkipdekggvayieslaVspeyrgkGlGsaLlealeeraree.gikkivlaveedndaairlYeklGF 117
+                     ea++ +   +e +g +iG i l+  p+   g+a+i+ +  spe+r++G++s+ l+ ++++a ++   +k  + + + n+a+ r++e++GF
+      PJF18969.1  39 EADYVFQaeVEQNGDIIGDIDLYFFPE---GEAEINIMIASPEWRRHGYASEALTLAMQYAIQRtKTRKFIAKIGQKNEASLRFFERHGF 125
+                     3333333458888**************...**********************************5559977799999************9 PP
+
+>> Acetyltransf_8  Acetyltransferase (GNAT) domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.0     2e-10   6.3e-07      22      80 ..      68     128 ..      60     134 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 2e-10
+                 SSEEEEEE-GGG-SSSHHH.HHHHHHHHHHHH.S-S-EEEEEETT-HHHHHHHHHHT-EEE CS
+        FR47  22 gelgalqvlpehrrrGlgs.rlvkalakeiae.rgktvllvvvasNtpsirlyeklGfeki 80 
+                  e+  +   pe rr G++s  l+ a+ ++i + +  + ++ ++++N++s r++e+ Gf++ 
+  PJF18969.1  68 AEINIMIASPEWRRHGYASeALTLAMQYAIQRtKTRKFIAKIGQKNEASLRFFERHGFQLT 128
+                 67889999**********8459*********98999999********************87 PP
+
+>> Acetyltransf_4  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.7   0.0   1.8e-10   5.9e-07      47     139 ..      39     130 ..      15     138 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 29.7 bits;  conditional E-value: 1.8e-10
+  Acetyltransf_4  47 eekivflvae..sdkliGyatlrqfkaakekkaelsvyvvrrdnndegiareliaaiikylrknqnirnleaeiasnninaivflkalGFelvgi 139
+                     e  +vf ++   ++++iG   l  f +  e+ ae+ + ++    +  g+a+e +++ ++y+ ++   r++ a+i  +n+++  f++++GF+l++ 
+      PJF18969.1  39 EADYVFQAEVeqNGDIIGDIDLY-FFP--EGEAEINIMIASPEWRRHGYASEALTLAMQYAIQRTKTRKFIAKIGQKNEASLRFFERHGFQLTQV 130
+                     4478887664569*********9.444..699********8889***********************************************9986 PP
+
+>> Acetyltransf_7  Acetyltransferase (GNAT) domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (162 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       594  (0.0309714); expected 383.6 (0.02)
+Passed bias filter:                      528  (0.0275301); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 889.59
+//
+Query:       sp|Q9USR6|NAT9_SCHPO  [L=216]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.9e-20   72.7   0.0    6.8e-20   72.2   0.0    1.2  1  Acetyltransf_3   Acetyltransferase (GNAT) domain
+    9.8e-09   35.2   0.0      2e-08   34.2   0.0    1.5  1  FR47             FR47-like protein
+      8e-06   26.2   0.0    1.2e-05   25.6   0.0    1.6  1  Acetyltransf_1   Acetyltransferase (GNAT) family
+    1.4e-05   25.1   0.1    3.3e-05   23.9   0.1    1.7  1  Acetyltransf_10  Acetyltransferase (GNAT) domain
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_3  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.2   0.0   1.4e-23   6.8e-20       2     137 ..      14     196 ..      13     197 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 72.2 bits;  conditional E-value: 1.4e-23
+        Acetyltransf_3   2 LlLrplteeDlealfelrsdpevmry.lpepltleeaeewlerawaeeseeegygwaiv.......lkdtg..............viGs 68 
+                           L+L+p+++ ++ +++++++++e+++   +epltl+e+++++++ w ++  e+++++++        +   +              +iG+
+  sp|Q9USR6|NAT9_SCHPO  14 LILVPYQKCHVLKYHNWMKNEELQELtCSEPLTLDEEYQMQAS-WSTD--EDKLTFIVLlnendeaK---KpsildhvkahsvesMIGD 96 
+                           99***********************87888************6.8764..57788888633333330...0334444445556669*** PP
+
+        Acetyltransf_3  69 vglrdleeedee.........................aelgymlaps.fwgkGyateavralleya.....feelglerlvavidkeNe 126
+                           v+++  ee  +                          +el++m+a++  ++kGy+t  v a+l+y+      ++ ++ + ++++  +N+
+  sp|Q9USR6|NAT9_SCHPO  97 VNMFLTEEYADGieefddspsdanatnatkesevhivGELELMIAEPqNRRKGYGTKIVDAFLHYVessgiAKNKQILKYRVKVGSQNK 185
+                           ****88777666888999***************************5549999**************4444335558999********** PP
+
+        Acetyltransf_3 127 aSirvleklGf 137
+                            Sir+++klGf
+  sp|Q9USR6|NAT9_SCHPO 186 PSIRLFKKLGF 196
+                           **********9 PP
+
+>> FR47  FR47-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   0.0   4.2e-12     2e-08      20      81 ..     132     200 ..     119     205 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 4.2e-12
+                           TTSSEEEEEE-GGG-SSSHHHHHHHHHHH.....HHHHS-S..-EEEEEETT-HHHHHHHHHHT-EEEE CS
+                  FR47  20 dggelgalqvlpehrrrGlgsrlvkalak.....eiaergk..tvllvvvasNtpsirlyeklGfekie 81 
+                            +gel  +  +p+ rr+G+g+++v a  +     +ia++ +  +  + v+ +N+psirl++klGf + +
+  sp|Q9USR6|NAT9_SCHPO 132 IVGELELMIAEPQNRRKGYGTKIVDAFLHyvessGIAKNKQilKYRVKVGSQNKPSIRLFKKLGFSQVK 200
+                           479***********************976111115555333123468899***************9874 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.0   2.5e-09   1.2e-05      59     117 .]     132     196 ..      30     196 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 2.5e-09
+                           TEEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHTTC.SEE.EE....EEETTEHHHHHHHHHTTE CS
+        Acetyltransf_1  59 gvayieslaVspeyrgkGlGsaLlealeerareegi.kki.vl....aveedndaairlYeklGF 117
+                            v+++e +   p+ r+kG+G++ ++a ++++++ gi k    l     v + n+++irl++klGF
+  sp|Q9USR6|NAT9_SCHPO 132 IVGELELMIAEPQNRRKGYGTKIVDAFLHYVESSGIaKNKqILkyrvKVGSQNKPSIRLFKKLGF 196
+                           46677777888999**************999999886443244777899999********88**9 PP
+
+>> Acetyltransf_10  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.9   0.1   6.8e-09   3.3e-05      53     125 ..     135     214 ..     119     216 .] 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 23.9 bits;  conditional E-value: 6.8e-09
+       Acetyltransf_10  53 hisllfVdkeyrgqGigkaLlkaleeeae......kqeiklkeltvnasp.yavpfYeklGFkatgeeqeedGirfvpMe 125
+                            ++l++ +++ r++G g+++++a ++++e      +++i + +++v +++  ++++++klGF +++ + ++d++++  M+
+  sp|Q9USR6|NAT9_SCHPO 135 ELELMIAEPQNRRKGYGTKIVDAFLHYVEssgiakNKQILKYRVKVGSQNkPSIRLFKKLGFSQVKYNAYFDHVELELMR 214
+                           57888899************999999887222221444555689****************************99987776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (216 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       501  (0.0261223); expected 383.6 (0.02)
+Passed bias filter:                      345  (0.0179884); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.59
+# Mc/sec: 1184.61
+//
+[ok]

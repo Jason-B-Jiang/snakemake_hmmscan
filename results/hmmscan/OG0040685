@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040685.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040685
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O75426|FBX24_HUMAN  [L=580]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.3e-10   41.1   0.1      4e-10   39.5   0.1    2.0  1  F-box-like  F-box-like
+    1.3e-08   34.6   1.9    7.9e-08   32.1   0.0    3.3  1  F-box       F-box domain
+    6.6e-07   29.9   0.1    6.6e-07   29.9   0.1    2.2  1  RCC1        Regulator of chromosome condensation (RCC1) repea
+
+
+Domain annotation for each model (and alignments):
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.5   0.1   6.3e-14     4e-10       5      48 .]      43      85 ..      39      85 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 39.5 bits;  conditional E-value: 6.3e-14
+             F-box-like  5 PdEiLlqIFsyLppsdLlrlalVCrrWrrvaldtplLWrrlvlr 48
+                           P+E+  +I s+Lp +dL++l ++Cr++++v++ +  +Wrr+++r
+  sp|O75426|FBX24_HUMAN 43 PPELVEHIISFLPVRDLVALGQTCRYFHEVCDGE-GVWRRICRR 85
+                           ******************************9776.*******86 PP
+
+>> F-box  F-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.1   0.0   1.2e-11   7.9e-08       4      42 ..      42      80 ..      39      81 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 32.1 bits;  conditional E-value: 1.2e-11
+                           SHHHHHHHHHTTS-HHHHHHHTTT-HHHHHHHTSHHHHH CS
+                  F-box  4 LPsevlrhILerLpfsdllalrrVSkgwrilidddrlwc 42
+                            P+e+++hI+++Lp +dl+al ++++ ++  +d+   w+
+  sp|O75426|FBX24_HUMAN 42 FPPELVEHIISFLPVRDLVALGQTCRYFHEVCDGEGVWR 80
+                           6*********************************99997 PP
+
+>> RCC1  Regulator of chromosome condensation (RCC1) repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.1     1e-10   6.6e-07       2      50 .]     376     422 ..     376     422 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 1e-10
+                            TEEEEEE--GGGTTSSSS---EEEEEE-GGGTTS-EEEEEEETTEEEEE CS
+                   RCC1   2 GrVysWGrndyGqLGlgttesvlvPtkveglsgnrvvqvacGadhtval 50 
+                            Gr++  G+n yGqLG+g++ ++ +Pt+v  l+  r +   cG +h+++l
+  sp|O75426|FBX24_HUMAN 376 GRIFMQGNNRYGQLGTGDKMDRGEPTQVCYLQ--RPITLWCGLNHSLVL 422
+                            99*****************9999********9..************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (580 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       528  (0.0275301); expected 383.6 (0.02)
+Passed bias filter:                      422  (0.0220032); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.17s 00:00:00.60 Elapsed: 00:00:00.71
+# Mc/sec: 2640.16
+//
+[ok]

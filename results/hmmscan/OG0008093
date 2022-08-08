@@ -1,0 +1,432 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008093.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008093
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5TZ63|Q5TZ63_DANRE  [L=1008]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-16   59.1  13.2    5.7e-16   59.1  13.2    2.7  1  EMI       EMI domain
+    2.5e-14   53.7   0.1    2.9e-13   50.2   0.0    2.7  1  C1q       C1q domain
+    4.2e-08   32.9  20.2    1.3e-07   31.4  20.2    1.8  1  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1  13.2   8.9e-20   5.7e-16       1      68 []      54     123 ..      54     123 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 8.9e-20
+                     EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqgerkCs...tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                             rn+Cay    +v++++++g+e+yv+p+y++    C++  +Cs    yrt  +p+y+++yk+v+e+ew+CC+G+sg
+  tr|Q5TZ63|Q5TZ63_DANRE  54 RNWCAYvvtrTVSCVMEDGVETYVKPEYQR----CAWG-QCShvvLYRTYRKPRYKVAYKVVSEMEWKCCHGYSG 123
+                             8***************************88....****.**********************************96 PP
+
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.2   0.0   4.5e-17   2.9e-13       2     127 .]     867    1000 ..     866    1000 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 50.2 bits;  conditional E-value: 4.5e-17
+                              EEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEET.............TEEEE CS
+                     C1q    2 FsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvkn.............keevl 73  
+                              Fsa++t+ +++s    +++F+kv++N+++ay+p+tG Ft+pv+G Y+Fs  ++ +++ ++   l k               e   
+  tr|Q5TZ63|Q5TZ63_DANRE  867 FSAALTRPQASSG---TIIFNKVFINERKAYNPKTGVFTAPVRGRYFFSAVLTGHKNVKIEAVLSKSnfgiargdsagyqPEGLE 948 
+                              9999998888887...8**********************************9944444443334443355654443332211111 PP
+
+                              EEEEE-SSSSEEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                     C1q   74 svydeekkssldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                              + ++e+ ++  +    ++vl L++gd++ + l    g l+++ e  ++FsG Ll
+  tr|Q5TZ63|Q5TZ63_DANRE  949 KPMAEARHTPGSLVIFNIVLPLQEGDTICIDLV--TGKLAHSVEPLTIFSGMLL 1000
+                              1222222222455666789**************..889999999*******997 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.4  20.2     2e-11   1.3e-07       4      47 ..     815     858 ..     812     862 .. 0.40
+
+  Alignments for each domain:
+  == domain 1  score: 31.4 bits;  conditional E-value: 2e-11
+                             XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS----------- CS
+                Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGa 47 
+                             G+pG pGp+G++G++G+pG++G+ G++Gp+G+ Gp G++G+pG+
+  tr|Q5TZ63|Q5TZ63_DANRE 815 GPPGLPGPQGEKGSKGPPGPRGPLGKEGPQGRVGPVGPPGPPGK 858
+                             33444444444444444444444444444444444444444333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1008 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1807  (0.0942176); expected 383.6 (0.02)
+Passed bias filter:                      891  (0.0464571); expected 383.6 (0.02)
+Passed Vit filter:                       133  (0.00693467); expected 19.2 (0.001)
+Passed Fwd filter:                        90  (0.00469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.24u 0.28s 00:00:01.52 Elapsed: 00:00:01.19
+# Mc/sec: 2743.84
+//
+Query:       tr|F1Q9G3|F1Q9G3_DANRE  [L=1059]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-18   66.6  12.5    6.2e-18   65.4  12.5    1.7  1  EMI       EMI domain
+    7.3e-14   52.2   0.1      5e-13   49.5   0.1    2.3  1  C1q       C1q domain
+    3.2e-10   39.7  19.5    3.2e-10   39.7  19.5    2.9  1  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.4  12.5   9.7e-22   6.2e-18       1      68 []      51     121 ..      51     121 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 65.4 bits;  conditional E-value: 9.7e-22
+                     EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqgerkCs...tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                             rn+Cay    +v+++v++g+e+yv+p y+p    C++  +C     yrt +rp+y+++yk+vte+ew+CC+G+sg
+  tr|F1Q9G3|F1Q9G3_DANRE  51 RNWCAYvvtkTVSCVVEDGVETYVKPDYQP----CSWGVQCArvvVYRTYMRPRYKVAYKMVTEMEWKCCHGYSG 121
+                             8***************************99....********9999***************************96 PP
+
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.1   7.9e-17     5e-13       2     127 .]     919    1053 ..     918    1053 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 7.9e-17
+                              EEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEET..............TEEE CS
+                     C1q    2 FsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvkn..............keev 72  
+                              Fsa++t+ + +     +++Fdk++vN+g+ y+++tG+Ft+pv+G Y+Fs  ++ ++++++   l +               +  +
+  tr|F1Q9G3|F1Q9G3_DANRE  919 FSAALTNPMVTAG---TIIFDKTFVNEGNFYNSRTGMFTAPVEGKYFFSAILTGHKNEKIEAVLSRSnygmarvdsagyqpEGLE 1000
+                              9999999999998...8**********************************9966666665555555355544433333221111 PP
+
+                              EEEEEE-SSSS..........EEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                     C1q   73 lsvydeekkss..........ldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                                        +           + a  +++l L+ gd+V + l    g l+++ e  ++FsG Ll
+  tr|F1Q9G3|F1Q9G3_DANRE 1001 ----------NkpmaeakptpGSLAVFNIILPLQMGDTVCIDLV--MGKLAHSVEPLTIFSGMLL 1053
+                              ..........1222222233356777889***************..888999999*******997 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.7  19.5   4.9e-14   3.2e-10       6      57 ..     860     911 ..     857     914 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 39.7 bits;  conditional E-value: 4.9e-14
+                             XXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB-- CS
+                Collagen   6 pGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGap 57 
+                             +G pGppGp+G+rG +G++G++G++Gp+G +G pG++G+pG +Ge+G aGa+
+  tr|F1Q9G3|F1Q9G3_DANRE 860 TGLPGPPGPQGERGFSGPQGPPGNDGPPGIQGLPGPRGPPGLRGERGMAGAD 911
+                             5888999999999999999999999999999999999999999999999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1059 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1796  (0.0936441); expected 383.6 (0.02)
+Passed bias filter:                     1188  (0.0619427); expected 383.6 (0.02)
+Passed Vit filter:                       193  (0.0100631); expected 19.2 (0.001)
+Passed Fwd filter:                       127  (0.00662183); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.45u 0.25s 00:00:01.70 Elapsed: 00:00:01.31
+# Mc/sec: 2617.45
+//
+Query:       tr|F8W4C7|F8W4C7_DANRE  [L=1053]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-18   66.7  12.5    6.2e-18   65.4  12.5    1.7  1  EMI       EMI domain
+    7.2e-14   52.2   0.1      5e-13   49.5   0.1    2.3  1  C1q       C1q domain
+    1.4e-08   34.4  17.3    1.4e-08   34.4  17.3    2.9  1  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.4  12.5   9.7e-22   6.2e-18       1      68 []      51     121 ..      51     121 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 65.4 bits;  conditional E-value: 9.7e-22
+                     EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqgerkCs...tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                             rn+Cay    +v+++v++g+e+yv+p y+p    C++  +C     yrt +rp+y+++yk+vte+ew+CC+G+sg
+  tr|F8W4C7|F8W4C7_DANRE  51 RNWCAYvvtkTVSCVVEDGVETYVKPDYQP----CSWGVQCArvvVYRTYMRPRYKVAYKMVTEMEWKCCHGYSG 121
+                             8***************************99....********9999***************************96 PP
+
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.1   7.8e-17     5e-13       2     127 .]     913    1047 ..     912    1047 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 7.8e-17
+                              EEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEET..............TEEE CS
+                     C1q    2 FsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvkn..............keev 72  
+                              Fsa++t+ + +     +++Fdk++vN+g+ y+++tG+Ft+pv+G Y+Fs  ++ ++++++   l +               +  +
+  tr|F8W4C7|F8W4C7_DANRE  913 FSAALTNPMVTAG---TIIFDKTFVNEGNFYNSRTGMFTAPVEGKYFFSAILTGHKNEKIEAVLSRSnygmarvdsagyqpEGLE 994 
+                              9999999999998...8**********************************9966666665555555355544433333221111 PP
+
+                              EEEEEE-SSSS..........EEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                     C1q   73 lsvydeekkss..........ldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                                        +           + a  +++l L+ gd+V + l    g l+++ e  ++FsG Ll
+  tr|F8W4C7|F8W4C7_DANRE  995 ----------NkpmaeakptpGSLAVFNIILPLQMGDTVCIDLV--MGKLAHSVEPLTIFSGMLL 1047
+                              ..........1222222233356777889***************..888999999*******997 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.4  17.3   2.2e-12   1.4e-08       7      50 ..     861     904 ..     856     908 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 34.4 bits;  conditional E-value: 2.2e-12
+                             XXXXXXXXXXXX-----XXXXEEEE-TTSS-------------- CS
+                Collagen   7 GepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGe 50 
+                             G pGppGp+G+rG +G++G++G++Gp+G +G pG++G+pG +G 
+  tr|F8W4C7|F8W4C7_DANRE 861 GLPGPPGPQGERGFSGPQGPPGNDGPPGIQGLPGPRGPPGMAGA 904
+                             66666666666666666666666666666666666666666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1053 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1793  (0.0934877); expected 383.6 (0.02)
+Passed bias filter:                     1179  (0.0614735); expected 383.6 (0.02)
+Passed Vit filter:                       193  (0.0100631); expected 19.2 (0.001)
+Passed Fwd filter:                       127  (0.00662183); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.47u 0.23s 00:00:01.70 Elapsed: 00:00:01.09
+# Mc/sec: 3138.87
+//
+Query:       tr|A0A2R8QNB5|A0A2R8QNB5_DANRE  [L=1018]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-14   52.3   0.1    4.8e-13   49.5   0.1    2.4  1  C1q       C1q domain
+      3e-10   39.8  19.5      3e-10   39.8  19.5    2.9  1  Collagen  Collagen triple helix repeat (20 copies)
+    1.2e-09   38.8   2.8    3.3e-09   37.4   2.8    1.7  1  EMI       EMI domain
+
+
+Domain annotation for each model (and alignments):
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.1   7.5e-17   4.8e-13       2     127 .]     878    1012 ..     877    1012 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 7.5e-17
+                                      EEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEET.......... CS
+                             C1q    2 FsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvkn.......... 68  
+                                      Fsa++t+ + +     +++Fdk++vN+g+ y+++tG+Ft+pv+G Y+Fs  ++ ++++++   l +           
+  tr|A0A2R8QNB5|A0A2R8QNB5_DANRE  878 FSAALTNPMVTAG---TIIFDKTFVNEGNFYNSRTGMFTAPVEGKYFFSAILTGHKNEKIEAVLSRSnygmarvdsa 951 
+                                      9999999999998...8**********************************99666666655555553555444333 PP
+
+                                      ....TEEEEEEEEE-SSSS..........EEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                             C1q   69 ....keevlsvydeekkss..........ldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                                          +  +          +           + a  +++l L+ gd+V + l    g l+++ e  ++FsG Ll
+  tr|A0A2R8QNB5|A0A2R8QNB5_DANRE  952 gyqpEGLE----------NkpmaeakptpGSLAVFNIILPLQMGDTVCIDLV--MGKLAHSVEPLTIFSGMLL 1012
+                                      33221111..........1222222233356777889***************..888999999*******997 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.8  19.5   4.7e-14     3e-10       6      57 ..     819     870 ..     816     873 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 39.8 bits;  conditional E-value: 4.7e-14
+                                     XXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB-- CS
+                        Collagen   6 pGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGap 57 
+                                     +G pGppGp+G+rG +G++G++G++Gp+G +G pG++G+pG +Ge+G aGa+
+  tr|A0A2R8QNB5|A0A2R8QNB5_DANRE 819 TGLPGPPGPQGERGFSGPQGPPGNDGPPGIQGLPGPRGPPGLRGERGMAGAD 870
+                                     5888999999999999999999999999999999999999999999999886 PP
+
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4   2.8   5.2e-13   3.3e-09      39      68 .]      51      80 ..      23      80 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 5.2e-13
+                             EMI 39 tyrtvyrpayrqvyktvtelewrCCpGwsg 68
+                                    +yrt +rp+y+++yk+vte+ew+CC+G+sg
+  tr|A0A2R8QNB5|A0A2R8QNB5_DANRE 51 SYRTYMRPRYKVAYKMVTEMEWKCCHGYSG 80
+                                    8***************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1018 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1720  (0.0896814); expected 383.6 (0.02)
+Passed bias filter:                     1130  (0.0589186); expected 383.6 (0.02)
+Passed Vit filter:                       186  (0.00969811); expected 19.2 (0.001)
+Passed Fwd filter:                       125  (0.00651755); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.45u 0.20s 00:00:01.65 Elapsed: 00:00:01.34
+# Mc/sec: 2459.77
+//
+Query:       tr|F1QC17|F1QC17_DANRE  [L=1014]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-16   59.1  13.2    5.7e-16   59.1  13.2    2.7  1  EMI       EMI domain
+    2.6e-14   53.6   0.1    2.9e-13   50.2   0.0    2.7  1  C1q       C1q domain
+    2.4e-09   36.9  23.5    7.3e-09   35.4  23.5    1.8  1  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1  13.2   8.9e-20   5.7e-16       1      68 []      54     123 ..      54     123 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 8.9e-20
+                     EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqgerkCs...tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                             rn+Cay    +v++++++g+e+yv+p+y++    C++  +Cs    yrt  +p+y+++yk+v+e+ew+CC+G+sg
+  tr|F1QC17|F1QC17_DANRE  54 RNWCAYvvtrTVSCVMEDGVETYVKPEYQR----CAWG-QCShvvLYRTYRKPRYKVAYKVVSEMEWKCCHGYSG 123
+                             8***************************88....****.**********************************96 PP
+
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.2   0.0   4.5e-17   2.9e-13       2     127 .]     873    1006 ..     872    1006 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 50.2 bits;  conditional E-value: 4.5e-17
+                              EEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEET.............TEEEE CS
+                     C1q    2 FsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvkn.............keevl 73  
+                              Fsa++t+ +++s    +++F+kv++N+++ay+p+tG Ft+pv+G Y+Fs  ++ +++ ++   l k               e   
+  tr|F1QC17|F1QC17_DANRE  873 FSAALTRPQASSG---TIIFNKVFINERKAYNPKTGVFTAPVRGRYFFSAVLTGHKNVKIEAVLSKSnfgiargdsagyqPEGLE 954 
+                              9999998888887...8**********************************9944444443334443355654443332211111 PP
+
+                              EEEEE-SSSSEEEEEEEEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                     C1q   74 svydeekkssldvasgsvvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                              + ++e+ ++  +    ++vl L++gd++ + l    g l+++ e  ++FsG Ll
+  tr|F1QC17|F1QC17_DANRE  955 KPMAEARHTPGSLVIFNIVLPLQEGDTICIDLV--TGKLAHSVEPLTIFSGMLL 1006
+                              1222222222455666789**************..889999999*******997 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.4  23.5   1.1e-12   7.3e-09       4      54 ..     815     865 ..     813     868 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 35.4 bits;  conditional E-value: 1.1e-12
+                             XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------B CS
+                Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGea 54 
+                             G+pG pGp+G++G++G+pG++G+ G++Gp+G+ Gp G++G +G++G++G++
+  tr|F1QC17|F1QC17_DANRE 815 GPPGLPGPQGEKGSKGPPGPRGPLGKEGPQGRVGPVGPPGLRGEQGPPGKD 865
+                             556666666666666666666666666666666666666666666666554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1014 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1807  (0.0942176); expected 383.6 (0.02)
+Passed bias filter:                      895  (0.0466656); expected 383.6 (0.02)
+Passed Vit filter:                       135  (0.00703895); expected 19.2 (0.001)
+Passed Fwd filter:                        90  (0.00469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.25u 0.19s 00:00:01.44 Elapsed: 00:00:01.09
+# Mc/sec: 3030.11
+//
+Query:       sp|Q9Y6C2|EMIL1_HUMAN  [L=1016]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.4e-16   59.5  10.0    8.2e-16   58.6  10.0    1.5  1  EMI       EMI domain
+    5.1e-11   43.0   0.0      3e-10   40.5   0.0    2.0  1  C1q       C1q domain
+    1.3e-08   34.5  28.4    1.3e-08   34.5  28.4    2.9  1  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> EMI  EMI domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6  10.0   1.3e-19   8.2e-16       1      68 []      57     126 ..      57     126 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 1.3e-19
+                    EMI   1 rnvCay....evevavvtgtesyvqpvykpyltlCqge.rkCs...tyrtvyrpayrqvyktvtelewrCCpGwsg 68 
+                            rn+Cay    +v++++++g+e+yv+    +  + C++  ++C+   +yr ++rp+yr++yktvt +ewrCC+G+ g
+  sp|Q9Y6C2|EMIL1_HUMAN  57 RNWCAYvvtrTVSCVLEDGVETYVK----Y--QPCAWGqPQCPqsiMYRRFLRPRYRVAYKTVTDMEWRCCQGYGG 126
+                            8*****5555555555555555554....3..55****************************************75 PP
+
+>> C1q  C1q domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.5   0.0   4.7e-14     3e-10       1     127 []     872    1007 ..     872    1007 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 40.5 bits;  conditional E-value: 4.7e-14
+                             EEEEEESSCCETSTSSEBE---EEEEEETS-EETTTTEEE-SSSEEEEEEEEEETTCSSEEEEEEEETTEEEEEEEEE-SSSS... CS
+                    C1q    1 AFsasrteklsasesrkvvaFdkvlvNigeaydpatGkFtcpvpGvYyFsysvstvdekslvvklvknkeevlsvydeekkss... 83  
+                             AFsa+++   s++    +v Fd+vl+N g+ ydp+tG Ft+p+ G Y++s  ++ + ++++   l + ++ v++v +   + +   
+  sp|Q9Y6C2|EMIL1_HUMAN  872 AFSAALSLPRSEPG---TVPFDRVLLNDGGYYDPETGVFTAPLAGRYLLSAVLTGHRHEKVEAVLSRSNQGVARVDSGGYEPEgle 954 
+                             89999998888887...8***********************************966666666556666555555433222222223 PP
+
+                             .....EEEEEE......EEEEEE-TT-EEEEEEEEEEEEB--TTSSSEEEEEEEE CS
+                    C1q   84 .....ldvasg......svvleLekgdeVwlqlakengllsaesekdstFsGfLl 127 
+                                  +++ s       s++l L+ gd+V + l    g l+++ e  ++FsG Ll
+  sp|Q9Y6C2|EMIL1_HUMAN  955 nkpvaESQPSPgtlgvfSLILPLQAGDTVCVDLV--MGQLAHSEEPLTIFSGALL 1007
+                             33443222222233333789**************..6777777789******886 PP
+
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.5  28.4   2.1e-12   1.3e-08       4      57 ..     814     867 ..     812     870 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 34.5 bits;  conditional E-value: 2.1e-12
+                            XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB-- CS
+               Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGap 57 
+                            G++Ge+GppGppG +G+pG+aG++G++G+ G++Gp G++G++G++G +G+++ap
+  sp|Q9Y6C2|EMIL1_HUMAN 814 GPAGEAGPPGPPGLQGPPGPAGPPGSPGKDGQEGPIGPPGPQGEQGVEGAPAAP 867
+                            566666666666666666666666666666666666666666666666666554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1016 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1006  (0.0524532); expected 383.6 (0.02)
+Passed bias filter:                      794  (0.0413994); expected 383.6 (0.02)
+Passed Vit filter:                       125  (0.00651755); expected 19.2 (0.001)
+Passed Fwd filter:                        46  (0.00239846); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.72u 0.18s 00:00:00.89 Elapsed: 00:00:00.91
+# Mc/sec: 3615.23
+//
+[ok]

@@ -1,0 +1,81 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035607.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035607
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QX23|F1QX23_DANRE  [L=453]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.8e-20   72.3   0.1    7.9e-20   71.2   0.1    1.5  1  BTB        BTB/POZ domain
+    1.8e-09   37.6  28.0     0.0047   17.4   3.1    4.7  2  zf-C2H2    Zinc finger, C2H2 type
+    2.8e-07   30.9  23.1      0.047   14.6   2.6    4.9  0  zf-C2H2_4  C2H2-type zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> BTB  BTB/POZ domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.2   0.1   1.2e-23   7.9e-20       1      99 [.      14     113 ..      14     122 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 71.2 bits;  conditional E-value: 1.2e-23
+                             HHHHHHHTTTS-EEEEETTTEEEEE-HHHHHHHBHHHHHHHTSTTSTTESCEEEEETTSGHHHHHHHHHHHHHSEEEC-.....TGG CS
+                     BTB   1 lnelresgelcDvtlvvgdgkefkahkavLaarSpyFkalftskeieessvseielddvepeafealLefiYtgeleik.....see 82 
+                             ln++re g lcD+t+++g +  fkahkavLaa S+yF++lf ++   es+ ++++ +d+++++f  lL+ +Ytg+++ +     + e
+  tr|F1QX23|F1QX23_DANRE  14 LNAQREFGFLCDCTVAIG-DVLFKAHKAVLAAFSNYFRMLFIHQ---ESDCVRLKPSDIQADIFSYLLNLMYTGKFTAQpidpiRLE 96 
+                             799***************.6************************...555569***********************99866666666 PP
+
+                             CHHHHHHHHHHHTBHHH CS
+                     BTB  83 nleelLaaadllqiprl 99 
+                             + +++L+a  llq  +l
+  tr|F1QX23|F1QX23_DANRE  97 QGVKFLHAYPLLQEASL 113
+                             66666666666666555 PP
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   3.1   7.3e-07    0.0047       1      23 []     209     231 ..     209     231 .. 0.98
+   2 !   16.9   1.6     1e-06    0.0066       1      23 []     306     328 ..     306     328 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 7.3e-07
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             y+C++Cg +F+++  Lk H+++H
+  tr|F1QX23|F1QX23_DANRE 209 YTCNYCGVRFNQRCKLKEHLQVH 231
+                             9********************99 PP
+
+  == domain 2  score: 16.9 bits;  conditional E-value: 1e-06
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             ++Cp C ++F +ks+ + H+ +H
+  tr|F1QX23|F1QX23_DANRE 306 FECPTCARKFIQKSHWREHMYIH 328
+                             89******************998 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (453 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       717  (0.0373846); expected 383.6 (0.02)
+Passed bias filter:                      375  (0.0195526); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                        34  (0.00177277); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.22s 00:00:00.68 Elapsed: 00:00:00.64
+# Mc/sec: 2289.69
+//
+[ok]

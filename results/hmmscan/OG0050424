@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050424.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050424
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9P7F1|YKK5_SCHPO  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.4e-20   70.5  33.4    1.5e-10   40.9  10.5    3.0  2  CBM_1     Fungal cellulose binding domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_1  Fungal cellulose binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.0  11.1   6.6e-14   1.3e-09       2      29 .]      30      57 ..      29      57 .. 0.98
+   2 !   40.9  10.5   7.8e-15   1.5e-10       1      29 []      72     100 ..      72     100 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 38.0 bits;  conditional E-value: 6.6e-14
+                 CBM_1  2 wgQCGGigWtGpTtCvsgatCtyqNpyY 29
+                          +g CGGi + GpT+Cv g+ C y Np+Y
+  sp|Q9P7F1|YKK5_SCHPO 30 YGTCGGIYYDGPTCCVVGSSCIYSNPWY 57
+                          9*************************** PP
+
+  == domain 2  score: 40.9 bits;  conditional E-value: 7.8e-15
+                 CBM_1   1 lwgQCGGigWtGpTtCvsgatCtyqNpyY 29 
+                           l++QCGGi+++GpT+C++g+ C y  pyY
+  sp|Q9P7F1|YKK5_SCHPO  72 LYQQCGGINYNGPTCCEPGSECIYNGPYY 100
+                           7***************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1236  (0.0644455); expected 383.6 (0.02)
+Passed bias filter:                      398  (0.0207519); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.62
+# Mc/sec: 1034.59
+//
+[ok]

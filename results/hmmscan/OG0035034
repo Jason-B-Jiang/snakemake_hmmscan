@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035034.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035034
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R605|F1R605_DANRE  [L=520]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.5e-49  168.3   0.2    2.6e-49  167.5   0.2    1.4  1  Guanylate_kin   Guanylate kinase
+    1.9e-20   72.7   2.6    5.6e-20   71.2   2.6    1.9  1  VGCC_beta4Aa_N  Voltage gated calcium channel subunit beta do
+
+
+Domain annotation for each model (and alignments):
+>> Guanylate_kin  Guanylate kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.5   0.2   2.7e-53   2.6e-49       1     182 []     270     453 ..     270     453 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 167.5 bits;  conditional E-value: 2.7e-53
+                             SSSEEEEESTTTSS...HHHHHHHHHHHSTTTE.E.E--EEESS---TTS-TTTSEEE--HHHHHHHHHTTTEEEEEE.ETT.EEEE CS
+           Guanylate_kin   1 krrpvvlvgpsgaG...ksslkkaLlselpekf.g.vsvshtTrdprkgevdGkdYyFvskeemekdiskneflEaae.fsg.nlyg 80 
+                             ++rp++lvgps++G   +++++kaL++ l++kf g +s++++T+d++            +k+++ +++sk+ ++E+++ +s+  l++
+  tr|F1R605|F1R605_DANRE 270 SMRPIILVGPSLKGyevTDMMQKALFDFLKHKFeGrISITRVTADISL-----------AKRSVLNNPSKHTIIERSStRSSlDLLA 345
+                             58*******************************879************...........******************96433368** PP
+
+                             EEHHHHHHHHHTTSE...EEEE--.CHHHHHHHHTTTTEEEEEEEESSHHHHHHHHTTSSSSHHHHHHHHHHHHHHHHGGG.C.SSE CS
+           Guanylate_kin  81 tsveaieevlekgki...viLDvd.iqavkqlrkaelspiivFikppslkelqrrlksrgkeqeeklakrlaaaekelqey.e.fdv 161
+                             +++++ie+++e +++   v+LD+d i++++ql+k++l+piiv+ik+ s+k+lqr++ksrgk+q+++l++++ aa k +q+  e fd+
+  tr|F1R605|F1R605_DANRE 346 EVQSEIERIFELARTlqlVALDADtINHPSQLAKTSLAPIIVYIKIASPKVLQRLIKSRGKSQAKHLNVQMVAADKLAQCPpElFDI 432
+                             *************************************************************************************** PP
+
+                             EEEESSHHHHHHHHHHHHHHH CS
+           Guanylate_kin 162 vivnddleealkklkelleae 182
+                             ++++++le+a+++l+e+lea+
+  tr|F1R605|F1R605_DANRE 433 ILDENQLEDACEHLAEYLEAY 453
+                             ******************985 PP
+
+>> VGCC_beta4Aa_N  Voltage gated calcium channel subunit beta domain 4Aa N terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.2   2.6   5.8e-24   5.6e-20       1      41 []      61     102 ..      61     102 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 71.2 bits;  conditional E-value: 5.8e-24
+          VGCC_beta4Aa_N   1 GSadSntSrpS.SdlSleedrEalRreaErqAllqLekAksK 41 
+                             GSadS+tSrpS Sd+Sleed EalR+ea rqAl+ LekAk+K
+  tr|F1R605|F1R605_DANRE  61 GSADSYTSRPSdSDVSLEEDPEALRKEADRQALATLEKAKTK 102
+                             9****************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (520 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       765  (0.0398874); expected 383.6 (0.02)
+Passed bias filter:                      537  (0.0279994); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.68
+# Mc/sec: 2475.12
+//
+[ok]

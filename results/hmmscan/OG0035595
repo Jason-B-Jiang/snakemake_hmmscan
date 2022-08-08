@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035595.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035595
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WH14|X1WH14_DANRE  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-59  198.4  41.8    5.3e-18   65.0   1.5    5.5  4  Cys_rich_FGFR  Cysteine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> Cys_rich_FGFR  Cysteine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.5   6.4   1.4e-15   2.8e-11       2      56 ..      26      78 ..      25      80 .. 0.96
+   2 !   65.0   1.5   2.8e-22   5.3e-18       1      56 [.      83     145 ..      83     147 .. 0.94
+   3 !   47.4   3.0   8.7e-17   1.7e-12       2      54 ..     151     206 ..     150     209 .. 0.95
+   4 !   51.0   0.5   6.5e-18   1.3e-13       2      57 ..     213     268 ..     212     269 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 43.5 bits;  conditional E-value: 1.4e-15
+           Cys_rich_FGFR  2 eCkqallklqeevaeDykldpkLqkaCksdiekfCsdiaegegqvleCLeehled 56
+                             C+q +++lqe +++D +ld +L++ Ck++i +fCsd  ++   +l+CL++++++
+  tr|X1WH14|X1WH14_DANRE 26 HCHQKVFRLQETEMMDPELDFQLMRVCKQMIRRFCSD--TDAKNLLQCLKQNKNS 78
+                            5******************************99****..99***********987 PP
+
+  == domain 2  score: 65.0 bits;  conditional E-value: 2.8e-22
+           Cys_rich_FGFR   1 eeCkqallklqeevaeDykldpkLqkaCksdiekfCsdi.......aegegqvleCLeehled 56 
+                             ++Ckq+++k+q  +++Dy+l+p+L kaCk di kfC++i        e egqv++CL+ +  d
+  tr|X1WH14|X1WH14_DANRE  83 PKCKQMITKRQITQNTDYRLNPVLRKACKADIPKFCQNIlnnarddNELEGQVISCLKLKYAD 145
+                             69**********************************9988899999************88665 PP
+
+  == domain 3  score: 47.4 bits;  conditional E-value: 8.7e-17
+           Cys_rich_FGFR   2 eCkqallklqeevaeDykldpkLqkaCksdiekfCsdi...aegegqvleCLeehl 54 
+                             +C++++  + +e+a Dy+ldp+Lq  C ++i + C+++   +e+ gqv eCL+ +l
+  tr|X1WH14|X1WH14_DANRE 151 DCEAQISVILQESALDYRLDPQLQLQCSEEIPRLCAEEvaaQEQTGQVEECLKVNL 206
+                             8**********************************998899***********9875 PP
+
+  == domain 4  score: 51.0 bits;  conditional E-value: 6.5e-18
+           Cys_rich_FGFR   2 eCkqallklqeevaeDykldpkLqkaCksdiekfCsdiaegegqvleCLeehlede 57 
+                              Ck+++l++ +e++ D+ +dp+L +aC  di++ C++i++g+g+ ++CL+e+l+d+
+  tr|X1WH14|X1WH14_DANRE 213 GCKKEVLNILKESKADIFVDPVLHTACALDIKHQCAAIPPGKGRQMSCLMEALQDK 268
+                             5***************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       973  (0.0507326); expected 383.6 (0.02)
+Passed bias filter:                      513  (0.026748); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.58
+# Mc/sec: 1921.26
+//
+[ok]

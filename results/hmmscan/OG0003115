@@ -1,0 +1,805 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003115.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003115
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q21480|ATG2_CAEEL  [L=2290]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.2e-16   60.1   0.1    2.2e-16   60.1   0.1    2.3  1  Chorein_N  N-terminal region of Chorein or VPS13
+    1.7e-11   44.3   0.0    1.1e-10   41.8   0.0    2.4  1  ATG_C      Autophagy-related protein C terminal domain
+    2.7e-11   43.6   0.1    5.9e-11   42.6   0.1    1.5  1  VPS13_C    Vacuolar-sorting-associated 13 protein C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.1   0.1   3.4e-20   2.2e-16       4      88 ..      10      99 ..       8     112 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 60.1 bits;  conditional E-value: 3.4e-20
+                          HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGG.G...--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEEEEEE CS
+             Chorein_N  4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdk.l...elPievksGvigklrlkiPwsnlkskpvvieiedvylla 88
+                          +++ +l+ry+g ++ +nl+ dql+++l +G ++L nl ++ +a+ + +   ++P+++++G++gk++++iPw +l+++p ++ ied++l+ 
+  sp|Q21480|ATG2_CAEEL 10 WCKVMLQRYMGAWLdNNLSVDQLSLELANGCLELDNLDINTKAVSNgFlqcNIPLKLIDGYLGKIKIEIPWLSLMTDPTRMCIEDLQLTF 99
+                          67889*********9*****************************998567788**********************************987 PP
+
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.8   0.0   1.6e-14   1.1e-10       6      95 ..    2192    2279 ..    2187    2280 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 41.8 bits;  conditional E-value: 1.6e-14
+                 ATG_C    6 nqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenrkese 92  
+                              P+d+r+ lq Ay  l +g +++++++  +++e  ++++ +++++++++ + +++l P+++at+ + ++l G+rn+l p++ ++++
+  sp|Q21480|ATG2_CAEEL 2192 MNPTDVRHSLQLAYGILYDGYHQTRDDLELAAQE--DRASGNSVVRSAFRYAVPTFLGPIVMATQVTYQLLGGLRNQLRPDTYQDER 2276
+                            68*************************9877777..5667889******************************************** PP
+
+                 ATG_C   93 dKY 95  
+                             K+
+  sp|Q21480|ATG2_CAEEL 2277 RKW 2279
+                            **9 PP
+
+>> VPS13_C  Vacuolar-sorting-associated 13 protein C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.6   0.1   9.2e-15   5.9e-11       3     171 ..    2015    2170 ..    2013    2172 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 42.6 bits;  conditional E-value: 9.2e-15
+               VPS13_C    3 YfeklhlqpiklhlsfslsekknkeeskekeqsalslllsslgvtltniedapikLnalelenvflsleqliekikkhYsqqllkql 89  
+                            +f+++ ++p ++++ +  + k++ + +k       +  l  l ++++++++ pi+L+++  +  +l + + +++ +  +s  ll+++
+  sp|Q21480|ATG2_CAEEL 2015 FFKQFVFSP-SVNIYVDYQGKRKITMEK-------AGALVGLLMAFGQLNQMPINLRKIDTRTGLLGTGRCMQHAIGEWSGDLLTNM 2093
+                            666777766.455555555555554422.......34478899******************************************** PP
+
+               VPS13_C   90 ykilgsldvlGNPvglfnnissGvkdlfyePiqglvkgpeelgeglakGaksLvkktvfgvadsvskitgsvskglaaltmD 171 
+                             +++ s +    P+  + +i+ Gv dlf  P+  + k+  ++++g+++G+ s+  ++ +g+++ ++++tg v+  la +tm 
+  sp|Q21480|ATG2_CAEEL 2094 PSVIASYG----PISPLVQIGRGVVDLFLMPVAEFRKDDGNVMKGVQRGVGSFSVSSAAGIVGMAQTVTGFVQ-SLAEMTMK 2170
+                            ******96....999999****************************************************985.68999996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2290 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1241  (0.0647062); expected 383.6 (0.02)
+Passed bias filter:                      677  (0.035299); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.89u 0.29s 00:00:01.18 Elapsed: 00:00:00.87
+# Mc/sec: 8543.55
+//
+Query:       tr|Q54T12|Q54T12_DICDI  [L=1751]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.1e-13   49.2   0.0    3.3e-12   46.6   0.0    2.4  1  ATG_C      Autophagy-related protein C terminal domain
+    4.2e-11   43.1   4.6    4.2e-11   43.1   4.6    6.4  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6   0.0   3.4e-16   3.3e-12       2      96 .]    1622    1713 ..    1621    1713 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 3.4e-16
+                   ATG_C    2 slyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpe 86  
+                              s +++qPe+l+eG ++++s++  g+++  + +++  +   +s+g  ++++++++avP ++++P+ g+++ ++ + lG+rnsld +
+  tr|Q54T12|Q54T12_DICDI 1622 SIWTSQPENLTEGAKKGMSKIFGGFYNGVKGVIDPFS---QSTGPINFLNNMFWAVPGLLVNPILGISDGITFFSLGLRNSLDYT 1703
+                              7789***************************996544...689****************************************** PP
+
+                   ATG_C   87 nrkesedKYk 96  
+                              +++ +++K+k
+  tr|Q54T12|Q54T12_DICDI 1704 KIEMERKKFK 1713
+                              ********98 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.1   4.6   4.4e-15   4.2e-11       2     112 ..      25     139 ..      24     144 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 43.1 bits;  conditional E-value: 4.4e-15
+                             HHHHHHHHHHHHHHHB.TT--GGC-EE-T.TT--EEEEEEEB-TTTTGG.G.--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEE CS
+               Chorein_N   2 eslvakllnryLgryv.enldrdqlkvsl.wsGevvLenlkLkkealdk.l.elPievksGvigklrlkiPwsnlkskpvvieiedv 84 
+                             ++++++l+n+ +++ + + +++++++  +  s +v+L+n+ +++e l+  l +lP+++   ++++++l+iP+ ++++kp++i+i+++
+  tr|Q54T12|Q54T12_DICDI  25 NKILRSLINKHIKSLLvNPIQKSEFETRIlESHNVKLKNVVFDQEKLKPkLvGLPFSFGMIKVAEIELTIPLDDIYNKPLSIKINGL 111
+                             68999*********99899**********5567**************9875699********************************* PP
+
+                             EEEEEE---X.XXXXXXXXXXXXXXXXX CS
+               Chorein_N  85 yllaeprseseeedeeeeekreqaakkk 112
+                             ++ + p + + ++++++++++++++k++
+  tr|Q54T12|Q54T12_DICDI 112 EIEIMPVDINFNNNNNNNNSNNNNNKNN 139
+                             ****998888888777777777776654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1751 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4906  (0.255801); expected 383.6 (0.02)
+Passed bias filter:                      823  (0.0429115); expected 383.6 (0.02)
+Passed Vit filter:                       547  (0.0285208); expected 19.2 (0.001)
+Passed Fwd filter:                       257  (0.0134001); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 3.63u 0.40s 00:00:04.03 Elapsed: 00:00:02.51
+# Mc/sec: 2272.71
+//
+Query:       tr|Q8MMZ9|Q8MMZ9_DICDI  [L=2625]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    8.7e-36  122.2   1.3    2.7e-35  120.6   0.2    2.6  1  ATG_C      Autophagy-related protein C terminal domain
+    6.6e-15   55.3   0.1    6.6e-15   55.3   0.1    6.9  1  ATG2_CAD   Autophagy-related protein 2 CAD motif
+    6.2e-12   45.8   0.1    6.2e-12   45.8   0.1    6.7  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.6   0.2   4.2e-39   2.7e-35       1      96 []    2530    2625 .]    2530    2625 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 120.6 bits;  conditional E-value: 4.2e-39
+                   ATG_C    1 vslyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldp 85  
+                              +s+ ++qP+d +eG+q+Ay+s++++lksaa+ti+a+p++++++kg+kg +k++v+avP+a++rP+ig+te vsktllGvrn++dp
+  tr|Q8MMZ9|Q8MMZ9_DICDI 2530 ISKFSDQPNDTKEGIQHAYESVSRELKSAAHTIIAIPMKEYHQKGTKGYVKSIVQAVPIAIIRPMIGITEGVSKTLLGVRNQIDP 2614
+                              5899********************************************************************************* PP
+
+                   ATG_C   86 enrkesedKYk 96  
+                              +++ e+++KYk
+  tr|Q8MMZ9|Q8MMZ9_DICDI 2615 NKKLEMDNKYK 2625
+                              **********8 PP
+
+>> ATG2_CAD  Autophagy-related protein 2 CAD motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.3   0.1     1e-18   6.6e-15       2     139 ..    1553    1683 ..    1552    1690 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 55.3 bits;  conditional E-value: 1e-18
+                ATG2_CAD    2 lklrDcvigLnPl.rlksklllvltkaeldvslgkdeqfsiklslrkaslllIDdvknlkeksskkskkrssssssslvsylskr 85  
+                              +++ D++i  +P+ +l+s+++l++++++l++  +      +++  ++  +++ Dd++ l+     ++ +++ssss+s+++y++ +
+  tr|Q8MMZ9|Q8MMZ9_DICDI 1553 INFVDTSISYTPSdNLSSAAVLFFSDVKLKIPTSG----FFSCIGQNSYIYVMDDIQFLNL----NKPNSKSSSSNSILNYWKYL 1629
+                              6799********74799**********99998754....899***************6663....333456899*********** PP
+
+                ATG2_CAD   86 GyvsigsissakvgvtvnedkdgeklvdvevnddllvLelCADStqtLiqllnd 139 
+                              Gyv++ +++ +++ +t ++d+d+  +++++ n +ll ++ C+DS+  L ql+n+
+  tr|Q8MMZ9|Q8MMZ9_DICDI 1630 GYVPVVHLDYIEFDITNSSDNDHYPSLKIDYNHNLLSINACSDSFYILNQLINN 1683
+                              ********************9*******************************97 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.8   0.1   9.7e-16   6.2e-12       5      97 ..       7     103 ..       4     123 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 45.8 bits;  conditional E-value: 9.7e-16
+                             HHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGG.G.--.SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEEEEE CS
+               Chorein_N   5 vakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdk.l.el.PievksGvigklrlkiPwsnlkskpvvieiedvyll 87 
+                             ++ l +++ g+y+  +l++dq+k+++ +G+++L+nl+L+ + ++k l ++ P+ + sG+ig+l+  iP+++l+  p + +i++++l+
+  tr|Q8MMZ9|Q8MMZ9_DICDI   7 AKFLFKKICGEYFmYELEKDQFKIAFKKGTINLNNLELNIKKINKdLyGVsPLMLASGYIGNLTTMIPYTSLLDTPSEFNISNLELT 93 
+                             78899********9******************************9875446************************************ PP
+
+                             EEE---X.XX CS
+               Chorein_N  88 aeprseseee 97 
+                              + +++ e++
+  tr|Q8MMZ9|Q8MMZ9_DICDI  94 FVSSNDYEKY 103
+                             *888877665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2625 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5677  (0.296001); expected 383.6 (0.02)
+Passed bias filter:                      937  (0.0488555); expected 383.6 (0.02)
+Passed Vit filter:                       607  (0.0316492); expected 19.2 (0.001)
+Passed Fwd filter:                       215  (0.0112102); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 4.82u 0.42s 00:00:05.24 Elapsed: 00:00:03.65
+# Mc/sec: 2341.52
+//
+Query:       tr|Q9VZX7|Q9VZX7_DROME  [L=1906]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.4e-24   84.7   0.1      1e-23   83.5   0.1    1.7  1  ATG_C      Autophagy-related protein C terminal domain
+    9.7e-21   74.2   0.0    6.3e-20   71.5   0.0    2.5  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.5   0.1   1.1e-27     1e-23       3      96 .]    1809    1902 ..    1807    1902 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 83.5 bits;  conditional E-value: 1.1e-27
+                   ATG_C    3 lyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpen 87  
+                              +++ +P+dlreG+++Ay+ +++g+++ a+t++++++ ++++kg +ga++avv+++P +v+ Pa++at+a++++l G++ sl pe+
+  tr|Q9VZX7|Q9VZX7_DROME 1809 RRQGRPKDLREGVANAYTIVREGINESANTLIEAAITEHDQKGYSGAVGAVVRQIPQLVVCPAVLATQATTNILGGAKSSLIPEA 1893
+                              78899******************************************************************************** PP
+
+                   ATG_C   88 rkesedKYk 96  
+                              + e++dK+k
+  tr|Q9VZX7|Q9VZX7_DROME 1894 KLEARDKWK 1902
+                              ********8 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.5   0.0   6.6e-24   6.3e-20       4     112 ..      14     127 ..      12     131 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 71.5 bits;  conditional E-value: 6.6e-24
+                             HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGGG....--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEEE CS
+               Chorein_N   4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdkl....elPievksGvigklrlkiPwsnlkskpvvieiedvy 85 
+                             +++ ll+ryLg+++ +nl+ +qlkv+l++G++v e++ Lk +a+++l    +  +ev+sG+ig+l++ +Pw+ l+++  ++ei+++ 
+  tr|Q9VZX7|Q9VZX7_DROME  14 MCRYLLQRYLGQFFeNNLNLEQLKVDLYNGKAVVEDIFLKVNAFNDLfedqGWAFEVVSGHIGRLTVVVPWNALMTNDSSLEIHNLT 100
+                             67899*********99******************************86744446********************************* PP
+
+                             EEEEE---X.XXXXXXXXXXXXXXXXX CS
+               Chorein_N  86 llaeprseseeedeeeeekreqaakkk 112
+                             ++++p ++ ++ +++ e+++++ + + 
+  tr|Q9VZX7|Q9VZX7_DROME 101 ITLRPVTRYQSGTTMLESMWSSVSSSM 127
+                             *****9998888777677666655555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1906 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       581  (0.0302936); expected 383.6 (0.02)
+Passed bias filter:                      461  (0.0240367); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.72u 0.21s 00:00:00.93 Elapsed: 00:00:00.84
+# Mc/sec: 7344.93
+//
+Query:       tr|X1WFB6|X1WFB6_DANRE  [L=322]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    7.8e-18   64.8   0.0    2.2e-17   63.3   0.0    1.7  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.3   0.0   1.1e-21   2.2e-17       4      93 ..      13     107 ..      11     127 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 63.3 bits;  conditional E-value: 1.1e-21
+                             HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGG.G...--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEEE CS
+               Chorein_N   4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdk.l...elPievksGvigklrlkiPwsnlkskpvvieiedvy 85 
+                              ++ ll+ryLg+++ e+l+ dql+++l++G+++L ++ L+k  l++ l   + P+ev +G+i+ ++l++Pw +l+++++ +e+ +++
+  tr|X1WFB6|X1WFB6_DANRE  13 ACRYLLHRYLGNFLqEKLSLDQLSLDLYQGTGSLAQVPLDKWSLNEiLesvDAPFEVSEGFIQAISLTVPWASLLQDNCALEVRGLE 99 
+                             56789***********************************9777774454477********************************** PP
+
+                             EEEEE--- CS
+               Chorein_N  86 llaeprse 93 
+                             ++ +pr +
+  tr|X1WFB6|X1WFB6_DANRE 100 MVFRPRPR 107
+                             **998865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (322 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       402  (0.0209604); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.16s 00:00:00.51 Elapsed: 00:00:00.58
+# Mc/sec: 1808.58
+//
+Query:       tr|A0A0R4IKT5|A0A0R4IKT5_DANRE  [L=2022]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.1e-26   90.9   0.0    1.3e-25   89.6   0.0    1.7  1  ATG_C      Autophagy-related protein C terminal domain
+    7.7e-17   61.6   0.0    2.7e-16   59.8   0.0    1.9  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   0.0   1.3e-29   1.3e-25       3      96 .]    1923    2016 ..    1921    2016 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 1.3e-29
+                           ATG_C    3 lyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGv 79  
+                                      +++ qP+dlreG+++Ay+++++g+  +aqt+++v+++ +e+kg  ga+++v++++P++v+rP+i a+ea+s++l G+
+  tr|A0A0R4IKT5|A0A0R4IKT5_DANRE 1923 RRTPQPADLREGVAKAYDTVREGVIDTAQTLCDVASRGHEQKGLPGAVGGVLRQIPPTVVRPLIVASEATSNLLGGM 1999
+                                      5678************************************************************************* PP
+
+                           ATG_C   80 rnsldpenrkesedKYk 96  
+                                      rn+++p++rke+  K++
+  tr|A0A0R4IKT5|A0A0R4IKT5_DANRE 2000 RNQIKPDARKEDFLKWR 2016
+                                      ***********999996 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.8   0.0   2.9e-20   2.7e-16       4      94 ..      16     111 ..      14     131 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 59.8 bits;  conditional E-value: 2.9e-20
+                                     HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGGG....--SEEEEEEEEEEEEEE--TTTTTTS-- CS
+                       Chorein_N   4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdkl....elPievksGvigklrlkiPwsnlkskpv 77 
+                                      ++ ll++yLg ++ e l+ dql+++l++G++v+++++L+  a+++l    + P+e+++G+++++ ++iPw  l ++ +
+  tr|A0A0R4IKT5|A0A0R4IKT5_DANRE  16 ACRYLLQHYLGHFLeERLSLDQLSLDLYNGSGVIREINLDVWAVNELldslGAPLEIVEGFVNSIAVTIPWAALVTEHC 94 
+                                     56789*********999**********************97666654342277************************** PP
+
+                                     EEEEEEEEEEEEE---X CS
+                       Chorein_N  78 vieiedvyllaeprses 94 
+                                     ++ei +++++++p+ ++
+  tr|A0A0R4IKT5|A0A0R4IKT5_DANRE  95 TLEITGLQITCRPKYRT 111
+                                     ***********998665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2022 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       539  (0.0281037); expected 383.6 (0.02)
+Passed bias filter:                      407  (0.0212211); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.72u 0.19s 00:00:00.90 Elapsed: 00:00:00.77
+# Mc/sec: 8533.68
+//
+Query:       tr|A0A0R4IXX7|A0A0R4IXX7_DANRE  [L=2005]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      5e-26   90.9   0.0    1.2e-25   89.6   0.0    1.7  1  ATG_C      Autophagy-related protein C terminal domain
+    7.5e-17   61.6   0.0    2.7e-16   59.8   0.0    2.0  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   0.0   1.3e-29   1.2e-25       3      96 .]    1906    1999 ..    1904    1999 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 1.3e-29
+                           ATG_C    3 lyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGv 79  
+                                      +++ qP+dlreG+++Ay+++++g+  +aqt+++v+++ +e+kg  ga+++v++++P++v+rP+i a+ea+s++l G+
+  tr|A0A0R4IXX7|A0A0R4IXX7_DANRE 1906 RRTPQPADLREGVAKAYDTVREGVIDTAQTLCDVASRGHEQKGLPGAVGGVLRQIPPTVVRPLIVASEATSNLLGGM 1982
+                                      5678************************************************************************* PP
+
+                           ATG_C   80 rnsldpenrkesedKYk 96  
+                                      rn+++p++rke+  K++
+  tr|A0A0R4IXX7|A0A0R4IXX7_DANRE 1983 RNQIKPDARKEDFLKWR 1999
+                                      ***********999996 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.8   0.0   2.8e-20   2.7e-16       4      94 ..      16     111 ..      14     131 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 59.8 bits;  conditional E-value: 2.8e-20
+                                     HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGGG....--SEEEEEEEEEEEEEE--TTTTTTS-- CS
+                       Chorein_N   4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdkl....elPievksGvigklrlkiPwsnlkskpv 77 
+                                      ++ ll++yLg ++ e l+ dql+++l++G++v+++++L+  a+++l    + P+e+++G+++++ ++iPw  l ++ +
+  tr|A0A0R4IXX7|A0A0R4IXX7_DANRE  16 ACRYLLQHYLGHFLeERLSLDQLSLDLYNGSGVIREINLDVWAVNELldslGAPLEIVEGFVNSIAVTIPWAALVTEHC 94 
+                                     56789*********999**********************97666654342277************************** PP
+
+                                     EEEEEEEEEEEEE---X CS
+                       Chorein_N  78 vieiedvyllaeprses 94 
+                                     ++ei +++++++p+ ++
+  tr|A0A0R4IXX7|A0A0R4IXX7_DANRE  95 TLEITGLQITCRPKYRT 111
+                                     ***********998665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2005 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       539  (0.0281037); expected 383.6 (0.02)
+Passed bias filter:                      401  (0.0209083); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.69u 0.19s 00:00:00.87 Elapsed: 00:00:00.81
+# Mc/sec: 8006.21
+//
+Query:       sp|Q96BY7|ATG2B_HUMAN  [L=2078]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      5e-29  100.5   0.1    1.4e-28   99.1   0.1    1.8  1  ATG_C      Autophagy-related protein C terminal domain
+      1e-16   61.1   0.0    4.4e-16   59.1   0.0    2.0  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.1   0.1   1.4e-32   1.4e-28       3      96 .]    1981    2074 ..    1979    2074 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 99.1 bits;  conditional E-value: 1.4e-32
+                  ATG_C    3 lyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenr 88  
+                             + a+qP dlreG+++Ays +++g++ +aqti +++ +++es+g++ga+++v++++P+av++P+i atea+s++l G+rn++ p+ r
+  sp|Q96BY7|ATG2B_HUMAN 1981 RLAHQPVDLREGVAKAYSVVKEGITDTAQTIYETAAREHESRGVTGAVGEVLRQIPPAVVKPLIVATEATSNVLGGMRNQIRPDVR 2066
+                             6899********************************************************************************** PP
+
+                  ATG_C   89 kesedKYk 96  
+                             +++++K++
+  sp|Q96BY7|ATG2B_HUMAN 2067 QDESQKWR 2074
+                             *******6 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1   0.0   4.6e-20   4.4e-16       4      94 ..      13     108 ..      11     127 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 4.6e-20
+                            HHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGG.G...--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEEEE CS
+              Chorein_N   4 lvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdk.l...elPievksGvigklrlkiPwsnlkskpvvieiedvyl 86 
+                             ++ ll+ryLg ++ e+l+ +ql+++l++G+++L ++ L+k +l++ l   + P+ev++G+i++++l++Pw +l+++++ +e+ ++++
+  sp|Q96BY7|ATG2B_HUMAN  13 ACRYLLQRYLGHFLqEKLSLEQLSLDLYQGTGSLAQVPLDKWCLNEiLesaDAPLEVTEGFIQSISLSVPWGSLLQDNCALEVRGLEM 100
+                            56789************************************999995566677*********************************** PP
+
+                            EEEE---X CS
+              Chorein_N  87 laeprses 94 
+                            + +pr + 
+  sp|Q96BY7|ATG2B_HUMAN 101 VFRPRPRP 108
+                            **998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2078 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       561  (0.0292507); expected 383.6 (0.02)
+Passed bias filter:                      498  (0.0259659); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.76u 0.23s 00:00:00.99 Elapsed: 00:00:00.69
+# Mc/sec: 9681.09
+//
+Query:       sp|Q2TAZ0|ATG2A_HUMAN  [L=1938]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.2e-27   95.2   0.0    5.3e-27   94.0   0.0    1.7  1  ATG_C      Autophagy-related protein C terminal domain
+    1.7e-18   67.0   0.0    2.4e-17   63.2   0.0    2.5  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.0   0.0   5.5e-31   5.3e-27       3      96 .]    1839    1932 ..    1837    1932 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 94.0 bits;  conditional E-value: 5.5e-31
+                  ATG_C    3 lyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenr 88  
+                             ++ +qP+dlreG+++Ay+++++g+  +aqti++v+++ +e+kg +ga+++v++++P++v++P+i+atea+s++l G+rn++ p+++
+  sp|Q2TAZ0|ATG2A_HUMAN 1839 RRGQQPADLREGVAKAYDTVREGILDTAQTICDVASRGHEQKGLTGAVGGVIRQLPPTVVKPLILATEATSSLLGGMRNQIVPDAH 1924
+                             5789********************************************************************************** PP
+
+                  ATG_C   89 kesedKYk 96  
+                             k++  K++
+  sp|Q2TAZ0|ATG2A_HUMAN 1925 KDHALKWR 1932
+                             ****9996 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.2   0.0   2.5e-21   2.4e-17       2      94 ..      14     111 ..      14     131 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 63.2 bits;  conditional E-value: 2.5e-21
+                            HHHHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-....TTTTGGG--SEEEEEEEEEEEEEE--TTTTTTS--EEEEEEE CS
+              Chorein_N   2 eslvakllnryLgryv.enldrdqlkvslwsGevvLenlkLk....kealdklelPievksGvigklrlkiPwsnlkskpvvieiedv 84 
+                            e++++ ll++yLg ++ e l+ dql+++l++G+v L++++L+    +e+l+++e P+e+++G++g++++ +Pw  l+++ ++++++++
+  sp|Q2TAZ0|ATG2A_HUMAN  14 ERVCRYLLHHYLGHFFqEHLSLDQLSLDLYKGSVALRDIHLEiwsvNEVLESMESPLELVEGFVGSIEVAVPWAALLTDHCTVRVSGL 101
+                            678999**********99***********************85555799999999********************************* PP
+
+                            EEEEEE---X CS
+              Chorein_N  85 yllaeprses 94 
+                            +l+++pr   
+  sp|Q2TAZ0|ATG2A_HUMAN 102 QLTLQPRRGP 111
+                            *****99765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1938 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       369  (0.0192398); expected 383.6 (0.02)
+Passed bias filter:                      315  (0.0164242); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.18s 00:00:00.83 Elapsed: 00:00:00.84
+# Mc/sec: 7467.47
+//
+Query:       XP_013238086.1  [L=1514]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1514 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       559  (0.0291465); expected 383.6 (0.02)
+Passed bias filter:                      394  (0.0205433); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.59u 0.20s 00:00:00.79 Elapsed: 00:00:00.77
+# Mc/sec: 6385.47
+//
+Query:       PJF16974.1  [L=239]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-15   57.7   0.1    3.5e-15   56.1   0.0    1.8  1  ATG_C     Autophagy-related protein C terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.1   0.0   1.8e-19   3.5e-15       2      60 ..     172     230 ..     171     232 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 56.1 bits;  conditional E-value: 1.8e-19
+       ATG_C   2 slyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPva 60 
+                 s+y+  P+d++eGl +Ay sl+ g++saaqt++avp++v+e++g +ga+kav++a+P+a
+  PJF16974.1 172 SKYSAPPSDATEGLLSAYGSLSTGIRSAAQTVIAVPIQVYERRGPGGAVKAVLRAMPIA 230
+                 89********************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (239 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       330  (0.0172063); expected 383.6 (0.02)
+Passed bias filter:                      317  (0.0165285); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 1440.52
+//
+Query:       EPZ36472.1  [L=1262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-18   67.3   0.2    2.3e-18   66.3   0.2    1.5  1  ATG_C     Autophagy-related protein C terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.3   0.2   1.2e-22   2.3e-18       2      96 .]    1167    1255 ..    1166    1255 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 66.3 bits;  conditional E-value: 1.2e-22
+       ATG_C    2 slyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenrkesedKYk 96  
+                  s+ a+ P+++ +G+ qAy+sl+kg+k+a + +lavp+        + ++k v+k++Pv+vl+Paig+t+av k+llG+r s+dp+++ +++ KYk
+  EPZ36472.1 1167 SKFASPPQNALQGFIQAYKSLSKGMKEASSIVLAVPQT------DSVSLKLVLKSLPVVVLKPAIGITQAVGKALLGIRGSIDPQSIARMKIKYK 1255
+                  88999*******************************98......455899********************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1262 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       859  (0.0447886); expected 383.6 (0.02)
+Passed bias filter:                      416  (0.0216904); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.20s 00:00:00.78 Elapsed: 00:00:00.65
+# Mc/sec: 6320.87
+//
+Query:       P53855  [L=1592]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-31  108.1   0.2    5.2e-31  106.9   0.2    1.7  1  ATG_C     Autophagy-related protein C terminal domain
+    1.9e-27   96.0   0.2    1.9e-27   96.0   0.2    2.4  1  ATG2_CAD  Autophagy-related protein 2 CAD motif
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.9   0.2   5.4e-35   5.2e-31       1      96 []    1489    1586 ..    1489    1586 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 106.9 bits;  conditional E-value: 5.4e-35
+   ATG_C    1 vslyanqPedlreGlqqAysslekglksaaqtilavptevaes..kgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenrkesedKYk 96  
+              vslya+qP dl  Gl++Aysslek++++a++++++++ +++++  +g ++aa  v++a+Pva++rP+igateavsktl+G+ n++d+++ ++ +dKYk
+  P53855 1489 VSLYADQPLDLPTGLKEAYSSLEKHMHIAYDAVWRAKGQMKDDkrGGPSAAAVYVARAAPVAIIRPLIGATEAVSKTLQGIANQVDKTHNEQINDKYK 1586
+              699*********************************88888776689999999********************************************8 PP
+
+>> ATG2_CAD  Autophagy-related protein 2 CAD motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.0   0.2     2e-31   1.9e-27       2     154 .]     785     921 ..     784     921 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 96.0 bits;  conditional E-value: 2e-31
+  ATG2_CAD   2 lklrDcvigLnPlrlksklllvltkaeldvslgkdeqfsiklslrkaslllIDdvknlkeksskkskkrssssssslvsylskrGyvsigsissakvgvtv 102
+               lk  Dc+++L+P rlks +++vl++++  +s       ++kl  +  +l+lIDd++n k +++        +++ sl+++++ +G+  ig+i+++++ +++
+    P53855 785 LKCLDCSLILHPFRLKSVMVIVLDNLTTGGSS---FIPQAKLLSKANTLFLIDDYQNFKIQKD--------KNWPSLINFYAGQGFSAIGKIDTLNFLINK 874
+               7889***********************99988...56799999*************9994444........48**************************99 PP
+
+  ATG2_CAD 103 nedkdgeklvdvevnddllvLelCADStqtLiqllndLkpPltppkeeKykt 154
+               ++      ++ ++ + +++ L+lCADS+qt+ ql++dLk+P t+p+eeK++t
+    P53855 875 SDG-----ALLLDCKIEQVGLSLCADSFQTFCQLCIDLKYPQTFPDEEKFRT 921
+               999.....899999999*********************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1592 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       781  (0.0407216); expected 383.6 (0.02)
+Passed bias filter:                      437  (0.0227853); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.18s 00:00:00.81 Elapsed: 00:00:00.76
+# Mc/sec: 6784.65
+//
+Query:       sp|O94649|ATG2_SCHPO  [L=1646]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    6.4e-31  106.6   0.1    1.5e-30  105.4   0.1    1.7  1  ATG_C      Autophagy-related protein C terminal domain
+    1.2e-18   67.5   2.0    1.2e-18   67.5   2.0    3.2  1  ATG2_CAD   Autophagy-related protein 2 CAD motif
+    3.2e-10   40.2   1.8    7.1e-09   35.9   0.3    3.1  1  Chorein_N  N-terminal region of Chorein or VPS13
+
+
+Domain annotation for each model (and alignments):
+>> ATG_C  Autophagy-related protein C terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.4   0.1   2.3e-34   1.5e-30       2      96 .]    1549    1643 ..    1548    1643 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 105.4 bits;  conditional E-value: 2.3e-34
+                 ATG_C    2 slyanqPedlreGlqqAysslekglksaaqtilavptevaeskgakgaakavvkavPvavlrPaigateavsktllGvrnsldpenr 88  
+                            s ya+qPe++++Gl+q+ys+l++gl  a++t++ +p+e + +k+ +g+a++v ++vP +vl+P+igateavsktllG++nsl+p++r
+  sp|O94649|ATG2_SCHPO 1549 SYYAEQPETIEQGLRQGYSGLKQGLLGAKSTLMGLPRETRSHKSLGGVAQTVGRKVPLIVLQPMIGATEAVSKTLLGLSNSLQPQRR 1635
+                            89************************************************************************************* PP
+
+                 ATG_C   89 kesedKYk 96  
+                            +++++KYk
+  sp|O94649|ATG2_SCHPO 1636 QDMREKYK 1643
+                            *******8 PP
+
+>> ATG2_CAD  Autophagy-related protein 2 CAD motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.5   2.0   1.8e-22   1.2e-18       2     142 ..     857    1007 ..     856    1013 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 67.5 bits;  conditional E-value: 1.8e-22
+              ATG2_CAD    2 lklrDcvigLnPlrlksklllvltkaeldvslgkd.eqfsiklslrkaslllIDdvkn.........lkeksskkskk......... 69  
+                            l lr+++igLnP++l++klll l++++++++     + ++i++  ++  +++ID++++         l         k         
+  sp|O94649|ATG2_SCHPO  857 LDLRESIIGLNPRTLEAKLLLYLKSLDVEIDALVAsNPLNIRIMAAETVVYIIDKLNQsvlegktsvL---------Kreilnsslh 934 
+                            689***************************987777*********************54443333322.........1356777777 PP
+
+              ATG2_CAD   70 .rssssssslvsylskrGyvsigsissakvgvtvnedkdgeklvdvevnddllvLelCADStqtLiqllndLkp 142 
+                                s + ++  +++++Gyv+i++++++++++ vn++ +g  ++ + v++ + ++++CADSt+ Li++l+dL  
+  sp|O94649|ATG2_SCHPO  935 fPGLSIKDTIEFVVKSLGYVEISQLKNLTLSLVVNAE-EGVFSTLITVDNLDAQVQSCADSTELLIKVLSDLGS 1007
+                            777777888888999**********************.99999****************************975 PP
+
+>> Chorein_N  N-terminal region of Chorein or VPS13
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.9   0.3   1.1e-12   7.1e-09       3      95 ..      26     121 ..      25     136 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 35.9 bits;  conditional E-value: 1.1e-12
+                           HHHHHHHHHHHHHHB.TT--GGC-EE-TTT--EEEEEEEB-TTTTGG.G--S.EEEEEEEEEEEEEE--TTTTTTS--EEEEEEEEEEE CS
+             Chorein_N   3 slvakllnryLgryv.enldrdqlkvslwsGevvLenlkLkkealdk.lelP.ievksGvigklrlkiPwsnlkskpvvieiedvylla 88 
+                           +l+a  l +++g+ + en++++++++ + +G + L nl+L+ + l+  ++lP i++++G++ +l l++ ++++ + +v++e+++++l +
+  sp|O94649|ATG2_SCHPO  26 RLLAFALRKLIGSILlENVQPEDIDILFSKGVLMLSNLQLNCSFLNAvVSLPmINFTKGTLRRLILRLNVTDIVNLNVELEVNGLSLEI 114
+                           688999********99*******************************77***********************************99988 PP
+
+                           EE---X. CS
+             Chorein_N  89 eprsese 95 
+                           e    +e
+  sp|O94649|ATG2_SCHPO 115 ELVPPDE 121
+                           5444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1646 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       656  (0.0342041); expected 383.6 (0.02)
+Passed bias filter:                      423  (0.0220554); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.65u 0.23s 00:00:00.88 Elapsed: 00:00:00.56
+# Mc/sec: 9447.52
+//
+[ok]

@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050130.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050130
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9USP3|PPR6_SCHPO  [L=443]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-26   91.6   1.2    6.1e-26   90.4   0.2    2.2  1  PPR_3     Pentatricopeptide repeat domain
+    7.3e-22   77.5   0.4    1.6e-21   76.4   0.1    1.8  1  ATP13     Mitochondrial ATPase expression
+
+
+Domain annotation for each model (and alignments):
+>> PPR_3  Pentatricopeptide repeat domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.4   0.2   6.4e-30   6.1e-26       2      63 .]     118     179 ..     117     179 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 90.4 bits;  conditional E-value: 6.4e-30
+                 PPR_3   2 ilremerkgikldvvtYthLLtayanagnkklalevlermkkkgikPtvvtyNailgviggr 63 
+                           il++++r gi++++v+Yth+L++++++gnk++++++++r+k+k+i+P+v+++Nailgvigg+
+  sp|Q9USP3|PPR6_SCHPO 118 ILQDADRLGIQFNIVDYTHILRVAMYTGNKHILEYIVARVKEKRIRPSVDYFNAILGVIGGN 179
+                           9***********************************************************97 PP
+
+>> ATP13  Mitochondrial ATPase expression
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.4   0.1   1.7e-25   1.6e-21       2     110 ..     222     324 ..     221     330 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 76.4 bits;  conditional E-value: 1.7e-25
+                 ATP13   2 ellstvilslgrsgqlelieklikkvWgiidesgkleeketkvksdsplyPtselLkaivssfsynneiesAlklvdkfskkYpeielk 90 
+                           ++++ +++ l+r+g++++i +li++vWg i+e+++     +kv+  ++++Pt++++++i+s+++y ++++sA++l  k++++Y+ i+++
+  sp|Q9USP3|PPR6_SCHPO 222 TTYDYLMVGLSRDGKIREIYDLIDTVWG-INENSS----SKKVDCGNVTFPTHHTVFSIISALGYLGDVSSAVSLSRKLTSVYK-INFP 304
+                           57899***********************.787774....579999***************************************.**** PP
+
+                 ATP13  91 kefWeellewaiiltskked 110
+                           +  W+ +++w+i++ ++++ 
+  sp|Q9USP3|PPR6_SCHPO 305 ELAWRYIIYWSIASLQFRAP 324
+                           **************999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (443 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       762  (0.039731); expected 383.6 (0.02)
+Passed bias filter:                      541  (0.0282079); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.22s 00:00:00.64 Elapsed: 00:00:00.72
+# Mc/sec: 1989.88
+//
+[ok]

@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046235.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046235
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF16500.1  [L=648]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.1e-11   44.2   0.0      5e-11   43.0   0.0    1.6  1  HMG_box    HMG (high mobility group) box
+    1.8e-06   28.5   0.0    4.1e-06   27.4   0.0    1.6  1  HMG_box_2  HMG-box domain
+
+
+Domain annotation for each model (and alignments):
+>> HMG_box  HMG (high mobility group) box
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.0   0.0   5.2e-15     5e-11       1      51 [.     595     645 ..     595     647 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 43.0 bits;  conditional E-value: 5.2e-15
+                 --SS-HHHHHHHHHHHHHHHHHSTTS-HHHHHHHHHHHHHHSHHHHHHHHH CS
+     HMG_box   1 pkRplsafflfskeqraklkaenPelknaeiskklgekWkalseeeKkkYe 51 
+                 +k+p+  f+ ++ ++r +lka nP+++ ++++++l+++W+als+ +++kY 
+  PJF16500.1 595 VKKPVPPFISYCAHHRNELKARNPNISATDVTRILSQQWRALSATQQQKYA 645
+                 59************************************************5 PP
+
+>> HMG_box_2  HMG-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   0.0   4.3e-10   4.1e-06      11      55 ..     602     645 ..     595     647 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.3e-10
+                 HHHHHHTTHHHHHHHT---SSHHHHTGGGHHHHHHS-HHHHHHHH CS
+   HMG_box_2  11 YalfvqemipelkrkGnpviglaevsklcsekWkalseeeKekYe 55 
+                 ++ +    ++elk++ np i   +v++ +s++W+als+ +++kY+
+  PJF16500.1 602 FISYCAHHRNELKAR-NPNISATDVTRILSQQWRALSATQQQKYA 645
+                 6779999********.****************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (648 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1278  (0.0666354); expected 383.6 (0.02)
+Passed bias filter:                      624  (0.0325356); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.20s 00:00:00.63 Elapsed: 00:00:00.73
+# Mc/sec: 2861.90
+//
+[ok]

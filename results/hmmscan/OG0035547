@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035547.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035547
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7EXK0|E7EXK0_DANRE  [L=220]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.5e-42  141.7   0.6    1.5e-21   75.9   0.2    3.3  2  Spin-Ssty  Spin/Ssty Family
+
+
+Domain annotation for each model (and alignments):
+>> Spin-Ssty  Spin/Ssty Family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.0   0.0   2.7e-24   5.2e-20       1      50 []      26      74 ..      26      74 .. 0.98
+   2 !   75.9   0.2   7.9e-26   1.5e-21       1      49 [.     104     152 ..     104     153 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 71.0 bits;  conditional E-value: 2.7e-24
+               Spin-Ssty  1 vGkrvehtweegdgsksqwkGtVLdQvpvnpslylikYdkddhiYvyeLl 50
+                            +G+r++h+w e+ g  ++wkGtVLd+++vn+sl+++kYd++d++Y++eL+
+  tr|E7EXK0|E7EXK0_DANRE 26 LGRRIQHSWREK-GALTKWKGTVLDRLSVNSSLFMVKYDGFDCVYGIELF 74
+                            59**********.***********************************96 PP
+
+  == domain 2  score: 75.9 bits;  conditional E-value: 7.9e-26
+               Spin-Ssty   1 vGkrvehtweegdgsksqwkGtVLdQvpvnpslylikYdkddhiYvyeL 49 
+                             vGk+veh +e++dg k +w+G+VL+++p++  +y+i+Y+kd+++Y+y+L
+  tr|E7EXK0|E7EXK0_DANRE 104 VGKAVEHLFEKEDGEKNEWRGMVLSRAPIMTNWYYITYEKDPVLYMYQL 152
+                             9***********************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (220 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       671  (0.0349862); expected 383.6 (0.02)
+Passed bias filter:                      325  (0.0169456); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 1379.91
+//
+[ok]

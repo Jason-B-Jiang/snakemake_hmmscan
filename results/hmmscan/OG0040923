@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040923.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040923
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P14209|CD99_HUMAN  [L=185]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-27   95.2   2.5    6.4e-25   88.5   0.3    2.1  1  CD99L2    CD99 antigen like protein 2
+
+
+Domain annotation for each model (and alignments):
+>> CD99L2  CD99 antigen like protein 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.5   0.3   3.3e-29   6.4e-25      31     167 ..      38     176 ..      36     181 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 88.5 bits;  conditional E-value: 3.3e-29
+                CD99L2  31 kkP.akkkppaeaddldLsDAlvdeendikekgkkkg.........sasggggfsdddledvaeggdykPDkgkgggrsgskdkeeddd 109
+                           kkP a +k+p+++dd+dL DA+vd end   + ++ +           s +g+fsd dl d ++gg+     gkgg  +g++       
+  sp|P14209|CD99_HUMAN  38 KKPtAIPKKPSAGDDFDLGDAVVDGEND-DPRPPNPPkpmpnpnpnHPSSSGSFSDADLADGVSGGE-----GKGGSDGGGSH-----R 115
+                           677455777899**********888877.3333433345666666578999**********999994.....33433334433.....2 PP
+
+                CD99L2 110 egsdetaetGtiAgivsalamAlvGAvssYisYqkKKlCFsi...qqglnaeyvkgenlea 167
+                           ++ +e  + G i giv+a+ +A+ GA+ss+i+YqkKKlCF+    q+ ++ e+ +  n e 
+  sp|P14209|CD99_HUMAN 116 KEGEEADAPGVIPGIVGAVVVAVAGAISSFIAYQKKKLCFKEnaeQGEVDMESHRNANAEP 176
+                           344556667*******************************852224445666666655555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (185 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       571  (0.0297721); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 1091.97
+//
+[ok]

@@ -1,0 +1,418 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0009028.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0009028
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O61735|CLOCK_DROME  [L=1027]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-17   63.4   0.0    1.9e-17   63.4   0.0    5.4  1  PAS_11    PAS domain
+    1.2e-14   54.5   7.2      3e-13   50.0   0.1    3.5  1  PAS_3     PAS fold
+    2.4e-07   30.7   0.7    6.7e-07   29.3   0.7    1.8  1  HLH       Helix-loop-helix DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> PAS_11  PAS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.4   0.0     3e-21   1.9e-17       2     110 ..     265     369 ..     264     372 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 63.4 bits;  conditional E-value: 3e-21
+                 PAS_11   2 eqfttkldidgkIisvDtsalraefklglekeelvgrsiydLvhpqdlstvkshlrevisssgqatellyRLrlsqgkfvsvktkskl 89 
+                            ++ft+k+++++k++ +D    ra+ + g++  e+ g+s yd  h +dl  +   ++e   ++g++ + +yR+ ++ +++++++t  ++
+  sp|O61735|CLOCK_DROME 265 NEFTSKHSMEWKFLFLDH---RAPPIIGYMPFEVLGTSGYDYYHFDDLDSIVACHEELR-QTGEGKSCYYRFLTKGQQWIWLQTDYYV 348
+                            79****************...**************************************.**************************** PP
+
+                 PAS_11  90 fknqksneqdfimathtllre 110
+                             + q ++++d++++th +++ 
+  sp|O61735|CLOCK_DROME 349 SYHQFNSKPDYVVCTHKVVSY 369
+                            *****************9985 PP
+
+>> PAS_3  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.0   0.1   4.7e-17     3e-13       2      89 .]     278     364 ..     277     364 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 50.0 bits;  conditional E-value: 4.7e-17
+                  PAS_3   2 iyvserveeilGyspeellgkveswldlvhpeDrervrealqealkkgepyegeyRirrkdGeyrwveararvi.rdengkpvrvigv 88 
+                            ++++ r   i+Gy p e+lg+  s +d+ h +D++ + ++++e+ ++ge  +++yR+++k  +++w+++ ++v  ++ n+kp++v+++
+  sp|O61735|CLOCK_DROME 278 LFLDHRAPPIIGYMPFEVLGT--SGYDYYHFDDLDSIVACHEELRQTGEGKSCYYRFLTKGQQWIWLQTDYYVSyHQFNSKPDYVVCT 363
+                            677888889************..**************************99***********************9***********99 PP
+
+                  PAS_3  89 a 89 
+                            +
+  sp|O61735|CLOCK_DROME 364 H 364
+                            6 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.3   0.7     1e-10   6.7e-07       2      52 ..      17      64 ..      16      66 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 29.3 bits;  conditional E-value: 1e-10
+                           HHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHHH CS
+                    HLH  2 raahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIkh 52
+                           r+++n  E++RRd+ Ns  + L  l+    ++s+K++K+++L+ ++ ++k 
+  sp|O61735|CLOCK_DROME 17 RKSRNLSEKKRRDQFNSLVNDLSALIS---TSSRKMDKSTVLKSTIAFLKN 64
+                           899************************...9***************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1027 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      6566  (0.342354); expected 383.6 (0.02)
+Passed bias filter:                     1279  (0.0666875); expected 383.6 (0.02)
+Passed Vit filter:                       850  (0.0443193); expected 19.2 (0.001)
+Passed Fwd filter:                       292  (0.015225); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 2.73u 0.42s 00:00:03.15 Elapsed: 00:00:02.16
+# Mc/sec: 1546.83
+//
+Query:       tr|B3DH92|B3DH92_DANRE  [L=820]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.9e-21   74.8   0.0    3.6e-20   72.2   0.0    2.5  1  PAS_11    PAS domain
+      6e-16   58.6   0.2    2.9e-14   53.2   0.1    2.6  1  PAS_3     PAS fold
+    3.1e-12   46.4   1.9    8.5e-12   45.0   1.9    1.8  1  HLH       Helix-loop-helix DNA-binding domain
+    4.3e-06   26.8   1.1    0.00083   19.4   0.0    3.8  0  PAS       PAS fold
+
+
+Domain annotation for each model (and alignments):
+>> PAS_11  PAS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.2   0.0   7.6e-24   3.6e-20       2     110 ..     263     367 ..     262     370 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.2 bits;  conditional E-value: 7.6e-24
+                  PAS_11   2 eqfttkldidgkIisvDtsalraefklglekeelvgrsiydLvhpqdlstvkshlrevisssgqatellyRLrlsqgkfvsvktksk 88 
+                             e+ft+++++++k++ +D    ra+ + g++  e+ g+s yd  h +dl+ +++ +++ + + g++ + +yR+ ++ +++++++t+ +
+  tr|B3DH92|B3DH92_DANRE 263 EEFTSRHSLEWKFLLLDH---RAPPIIGYMPFEVLGTSGYDYYHVDDLHSLAKCHEHLM-QFGKGKSCYYRFLTKGQQWIWLQTNYY 345
+                             89****************...**************************************.*************************** PP
+
+                  PAS_11  89 lfknqksneqdfimathtllre 110
+                             + + q+++ ++fi++tht+++ 
+  tr|B3DH92|B3DH92_DANRE 346 ITYHQWNSRPEFIVCTHTVVSY 367
+                             *******************985 PP
+
+>> PAS_3  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.2   0.1     6e-18   2.9e-14       6      89 .]     280     362 ..     275     362 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 53.2 bits;  conditional E-value: 6e-18
+                   PAS_3   6 erveeilGyspeellgkveswldlvhpeDrervrealqealkkgepyegeyRirrkdGeyrwveararvi.rdengkpvrvigva 89 
+                              r   i+Gy p e+lg+  s +d+ h +D+  + ++++++++ g+  +++yR+++k  +++w+++ ++++ +++n++p ++++++
+  tr|B3DH92|B3DH92_DANRE 280 HRAPPIIGYMPFEVLGT--SGYDYYHVDDLHSLAKCHEHLMQFGKGKSCYYRFLTKGQQWIWLQTNYYITyHQWNSRPEFIVCTH 362
+                             5666799**********..***********************99988***********************************996 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.0   1.9   1.8e-15   8.5e-12       1      52 [.      25      73 ..      25      75 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 45.0 bits;  conditional E-value: 1.8e-15
+                            HHHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHHH CS
+                     HLH  1 rraahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIkh 52
+                            +r+++n+ E++RRd+ N  ++eL ++lP   ++ +K++K++iL+k+++Y+++
+  tr|B3DH92|B3DH92_DANRE 25 KRVSRNKSEKKRRDQFNVLIKELGTMLP---GNTRKMDKSTILQKSIDYLRK 73
+                            799*************************...9*****************985 PP
+
+>> PAS  PAS fold
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (820 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3058  (0.159445); expected 383.6 (0.02)
+Passed bias filter:                      594  (0.0309714); expected 383.6 (0.02)
+Passed Vit filter:                        93  (0.00484905); expected 19.2 (0.001)
+Passed Fwd filter:                        26  (0.00135565); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.77u 0.29s 00:00:01.06 Elapsed: 00:00:00.76
+# Mc/sec: 3512.83
+//
+Query:       tr|Q5RIV1|Q5RIV1_DANRE  [L=892]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-20   72.9   0.0    2.2e-20   72.9   0.0    4.3  1  PAS_11    PAS domain
+    2.1e-18   66.4   0.3    1.9e-15   57.0   0.2    3.1  1  PAS_3     PAS fold
+    6.2e-11   42.2   1.4    1.6e-10   40.9   1.4    1.8  1  HLH       Helix-loop-helix DNA-binding domain
+    3.8e-07   30.2  15.4    4.8e-07   29.9   0.0    4.7  1  PAS       PAS fold
+
+
+Domain annotation for each model (and alignments):
+>> PAS_11  PAS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.9   0.0   4.6e-24   2.2e-20       2     110 ..     265     369 ..     264     372 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.9 bits;  conditional E-value: 4.6e-24
+                  PAS_11   2 eqfttkldidgkIisvDtsalraefklglekeelvgrsiydLvhpqdlstvkshlrevisssgqatellyRLrlsqgkfvsvktksk 88 
+                             e+ft+++++++k++ +D    ra+ + g+   e+ g+s yd  h +dl+t+++ +++ + + g++ + +yR+ ++ +++++++t  +
+  tr|Q5RIV1|Q5RIV1_DANRE 265 EEFTSRHSLEWKFLFLDH---RAPPIIGYLPFEVLGTSGYDYYHVDDLETLAKCHEHLM-QYGKGKSCYYRFLTKGQQWIWLQTHYY 347
+                             89****************...**************************************.*************************** PP
+
+                  PAS_11  89 lfknqksneqdfimathtllre 110
+                             + + q+++ ++fi++tht+++ 
+  tr|Q5RIV1|Q5RIV1_DANRE 348 ITYHQWNSRPEFIVCTHTVVSY 369
+                             *******************985 PP
+
+>> PAS_3  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.0   0.2     4e-19   1.9e-15       2      89 .]     278     364 ..     277     364 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 57.0 bits;  conditional E-value: 4e-19
+                   PAS_3   2 iyvserveeilGyspeellgkveswldlvhpeDrervrealqealkkgepyegeyRirrkdGeyrwveararvi.rdengkpvrvig 87 
+                             ++++ r   i+Gy p e+lg+  s +d+ h +D+e + ++++++++ g+  +++yR+++k  +++w++++++++ +++n++p ++++
+  tr|Q5RIV1|Q5RIV1_DANRE 278 LFLDHRAPPIIGYLPFEVLGT--SGYDYYHVDDLETLAKCHEHLMQYGKGKSCYYRFLTKGQQWIWLQTHYYITyHQWNSRPEFIVC 362
+                             677888889************..**************************88***********************************9 PP
+
+                   PAS_3  88 va 89 
+                             ++
+  tr|Q5RIV1|Q5RIV1_DANRE 363 TH 364
+                             96 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.9   1.4   3.4e-14   1.6e-10       1      52 [.      26      74 ..      26      76 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 40.9 bits;  conditional E-value: 3.4e-14
+                            HHHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHHH CS
+                     HLH  1 rraahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIkh 52
+                            +r+++n  E++RRd+ N  ++eL ++lP   ++ +K++K++iL+k+++++++
+  tr|Q5RIV1|Q5RIV1_DANRE 26 KRVSRNRSEKKRRDQFNVLIKELGTMLP---GNTRKMDKSTILQKSIDFLRK 74
+                            799*************************...9****************9986 PP
+
+>> PAS  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.0     1e-10   4.8e-07       2      70 ..     101     169 ..     100     179 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 1e-10
+                             HHHHHHHHSSSEEEEEETTSBEEEECHHHHHHHSSTHHHCTTSBGGGGBSTTHHHHHHHHHHHHHHHTT CS
+                     PAS   2 dlraileslpdpifvvDedgrilyvNaaaeellGlsreevlgkslldliheeddaelaelleqlleqge 70 
+                             + + +le+l+ + +++  dg+i+yv+++ ++ll   +++++ ++ll +++  +++e++++l++++++ge
+  tr|Q5RIV1|Q5RIV1_DANRE 101 FTQLMLEALDGFFLAIMTDGNIIYVSESVTSLLEHLPSDLVDQNLLNFLPLGEHSEVYKALSTHMLEGE 169
+                             5689*************************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (892 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5635  (0.293811); expected 383.6 (0.02)
+Passed bias filter:                      856  (0.0446321); expected 383.6 (0.02)
+Passed Vit filter:                       422  (0.0220032); expected 19.2 (0.001)
+Passed Fwd filter:                       144  (0.00750821); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 2.05u 0.26s 00:00:02.30 Elapsed: 00:00:01.69
+# Mc/sec: 1713.47
+//
+Query:       sp|O15516|CLOCK_HUMAN  [L=846]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.4e-23   81.6   1.2    4.9e-20   71.8   0.0    3.6  1  PAS_11    PAS domain
+    2.3e-18   66.4   0.3    9.4e-16   58.0   0.2    2.8  1  PAS_3     PAS fold
+    9.7e-11   41.6   0.8    2.4e-10   40.3   0.8    1.7  1  HLH       Helix-loop-helix DNA-binding domain
+    1.8e-10   40.9   0.8    9.7e-08   32.1   0.0    3.8  1  PAS       PAS fold
+
+
+Domain annotation for each model (and alignments):
+>> PAS_11  PAS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.8   0.0     1e-23   4.9e-20       2     110 ..     274     378 ..     273     381 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 71.8 bits;  conditional E-value: 1e-23
+                 PAS_11   2 eqfttkldidgkIisvDtsalraefklglekeelvgrsiydLvhpqdlstvkshlrevisssgqatellyRLrlsqgkfvsvktkskl 89 
+                            e+ft+++++++k++ +D    ra+ + g+   e+ g+s yd  h +dl+++++ +++ + + g++ + +yR+ ++ +++++++t  ++
+  sp|O15516|CLOCK_HUMAN 274 EEFTSRHSLEWKFLFLDH---RAPPIIGYLPFEVLGTSGYDYYHVDDLENLAKCHEHLM-QYGKGKSCYYRFLTKGQQWIWLQTHYYI 357
+                            89****************...**************************************.**************************** PP
+
+                 PAS_11  90 fknqksneqdfimathtllre 110
+                             + q+++ ++fi++tht+++ 
+  sp|O15516|CLOCK_HUMAN 358 TYHQWNSRPEFIVCTHTVVSY 378
+                            ******************985 PP
+
+>> PAS_3  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.0   0.2     2e-19   9.4e-16       2      89 .]     287     373 ..     286     373 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 58.0 bits;  conditional E-value: 2e-19
+                  PAS_3   2 iyvserveeilGyspeellgkveswldlvhpeDrervrealqealkkgepyegeyRirrkdGeyrwveararvi.rdengkpvrvigv 88 
+                            ++++ r   i+Gy p e+lg+  s +d+ h +D+e++ ++++++++ g+  +++yR+++k  +++w++++++++ +++n++p +++++
+  sp|O15516|CLOCK_HUMAN 287 LFLDHRAPPIIGYLPFEVLGT--SGYDYYHVDDLENLAKCHEHLMQYGKGKSCYYRFLTKGQQWIWLQTHYYITyHQWNSRPEFIVCT 372
+                            677888889************..**************************88***********************************99 PP
+
+                  PAS_3  89 a 89 
+                            +
+  sp|O15516|CLOCK_HUMAN 373 H 373
+                            6 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.3   0.8     5e-14   2.4e-10       1      52 [.      35      83 ..      35      85 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 40.3 bits;  conditional E-value: 5e-14
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHHH CS
+                    HLH  1 rraahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIkh 52
+                           +r+++n+ E++RRd+ N  ++eL ++lP   ++ +K++K+++L+k+++++++
+  sp|O15516|CLOCK_HUMAN 35 KRVSRNKSEKKRRDQFNVLIKELGSMLP---GNARKMDKSTVLQKSIDFLRK 83
+                           799*************************...9****************9986 PP
+
+>> PAS  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.1   0.0     2e-11   9.7e-08       2      68 ..     110     176 ..     109     188 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 32.1 bits;  conditional E-value: 2e-11
+                            HHHHHHHHSSSEEEEEETTSBEEEECHHHHHHHSSTHHHCTTSBGGGGBSTTHHHHHHHHHHHHHHH CS
+                    PAS   2 dlraileslpdpifvvDedgrilyvNaaaeellGlsreevlgkslldliheeddaelaelleqlleq 68 
+                            + + +le+l+ + +++  dg i+yv+++ ++ll   +++++ +s++ +i+e +++e++++l+++l++
+  sp|O15516|CLOCK_HUMAN 110 FTQLMLEALDGFFLAIMTDGSIIYVSESVTSLLEHLPSDLVDQSIFNFIPEGEHSEVYKILSTHLLE 176
+                            5689**********************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (846 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2477  (0.129152); expected 383.6 (0.02)
+Passed bias filter:                      612  (0.0319099); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.63u 0.17s 00:00:00.80 Elapsed: 00:00:00.83
+# Mc/sec: 3306.17
+//
+Query:       sp|Q99743|NPAS2_HUMAN  [L=824]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-21   76.7   0.0    1.3e-19   70.4   0.0    2.6  1  PAS_11    PAS domain
+    1.5e-17   63.7   0.1    5.7e-15   55.5   0.1    2.6  1  PAS_3     PAS fold
+    8.7e-15   54.8   0.0    2.7e-11   43.6   0.0    2.6  1  PAS       PAS fold
+    1.1e-09   38.3   0.6    2.1e-09   37.3   0.6    1.5  1  HLH       Helix-loop-helix DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> PAS_11  PAS domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.4   0.0   2.8e-23   1.3e-19       2     109 ..     249     352 ..     248     356 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 70.4 bits;  conditional E-value: 2.8e-23
+                 PAS_11   2 eqfttkldidgkIisvDtsalraefklglekeelvgrsiydLvhpqdlstvkshlrevisssgqatellyRLrlsqgkfvsvktkskl 89 
+                            e+ft+++++++k++ +D    ra+ + g+   e+ g+s yd  h +dl+ +++ +++ + + g++ + +yR+ ++ +++++++t  ++
+  sp|Q99743|NPAS2_HUMAN 249 EEFTSRHSLEWKFLFLDH---RAPPIIGYLPFEVLGTSGYDYYHIDDLELLARCHQHLM-QFGKGKSCCYRFLTKGQQWIWLQTHYYI 332
+                            89****************...**************************************.**************************** PP
+
+                 PAS_11  90 fknqksneqdfimathtllr 109
+                             + q++++++fi++th++++
+  sp|Q99743|NPAS2_HUMAN 333 TYHQWNSKPEFIVCTHSVVS 352
+                            ******************97 PP
+
+>> PAS_3  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   0.1   1.2e-18   5.7e-15       2      89 .]     262     348 ..     261     348 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 1.2e-18
+                  PAS_3   2 iyvserveeilGyspeellgkveswldlvhpeDrervrealqealkkgepyegeyRirrkdGeyrwveararvi.rdengkpvrvigv 88 
+                            ++++ r   i+Gy p e+lg+  s +d+ h +D+e + +++q++++ g+  ++ yR+++k  +++w++++++++ +++n+kp +++++
+  sp|Q99743|NPAS2_HUMAN 262 LFLDHRAPPIIGYLPFEVLGT--SGYDYYHIDDLELLARCHQHLMQFGKGKSCCYRFLTKGQQWIWLQTHYYITyHQWNSKPEFIVCT 347
+                            677888889************..************************9988***********************************99 PP
+
+                  PAS_3  89 a 89 
+                            +
+  sp|Q99743|NPAS2_HUMAN 348 H 348
+                            6 PP
+
+>> PAS  PAS fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   0.0   5.6e-15   2.7e-11       2      73 ..      85     156 ..      84     176 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 5.6e-15
+                            HHHHHHHHSSSEEEEEETTSBEEEECHHHHHHHSSTHHHCTTSBGGGGBSTTHHHHHHHHHHHHHHHTT-EC CS
+                    PAS   2 dlraileslpdpifvvDedgrilyvNaaaeellGlsreevlgkslldliheeddaelaelleqlleqgeesr 73 
+                            + + +le+l+ +i++v  dg i+yv+++++ llG  +++v+ ++ll +++e++++e++++l+ +++++ +++
+  sp|Q99743|NPAS2_HUMAN  85 FTQLMLEALDGFIIAVTTDGSIIYVSDSITPLLGHLPSDVMDQNLLNFLPEQEHSEVYKILSSHMLVTDSPS 156
+                            5689************************************************************99988766 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.3   0.6   4.3e-13   2.1e-09       1      51 [.      10      57 ..      10      60 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 37.3 bits;  conditional E-value: 4.3e-13
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHH CS
+                    HLH  1 rraahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIk 51
+                           +ra++n+ E++RRd+ N  ++eL ++lP   ++ +K++K ++Lek++ +++
+  sp|Q99743|NPAS2_HUMAN 10 KRASRNKSEKKRRDQFNVLIKELSSMLP---GNTRKMDKTTVLEKVIGFLQ 57
+                           79**************************...9**************98877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (824 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1142  (0.0595443); expected 383.6 (0.02)
+Passed bias filter:                      581  (0.0302936); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.50u 0.16s 00:00:00.66 Elapsed: 00:00:00.68
+# Mc/sec: 3932.38
+//
+[ok]

@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040267.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040267
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9UBU3|GHRL_HUMAN  [L=117]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    9.3e-34  115.2   0.3    1.2e-33  114.8   0.3    1.2  1  Motilin_assoc    Motilin/ghrelin-associated peptide
+    2.7e-14   52.9   5.9    3.9e-14   52.4   5.9    1.2  1  Motilin_ghrelin  Motilin/ghrelin
+
+
+Domain annotation for each model (and alignments):
+>> Motilin_assoc  Motilin/ghrelin-associated peptide
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.8   0.3   1.3e-37   1.2e-33       2      59 .]      58     115 ..      57     115 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 114.8 bits;  conditional E-value: 1.3e-37
+         Motilin_assoc   2 rpedkseaekaedeleikfnaPfdiGiklsgaqyqqhgqaLeKlLqdilkeeaeeapa 59 
+                           rped+++ae+aedele++fnaPfd+Giklsg qyqqh+qaL+K+Lqdil+eea+eapa
+  sp|Q9UBU3|GHRL_HUMAN  58 RPEDGGQAEGAEDELEVRFNAPFDVGIKLSGVQYQQHSQALGKFLQDILWEEAKEAPA 115
+                           8*******************************************************98 PP
+
+>> Motilin_ghrelin  Motilin/ghrelin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.4   5.9     4e-18   3.9e-14       1      28 []      24      51 ..      24      51 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 52.4 bits;  conditional E-value: 4e-18
+       Motilin_ghrelin  1 gsSFlSPEyqriQqrkrnKkpkasLhvR 28
+                          gsSFlSPE+qr Qqrk++Kkp+a+L++R
+  sp|Q9UBU3|GHRL_HUMAN 24 GSSFLSPEHQRVQQRKESKKPPAKLQPR 51
+                          9**************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (117 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       361  (0.0188227); expected 383.6 (0.02)
+Passed bias filter:                      299  (0.01559); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.18s 00:00:00.51 Elapsed: 00:00:00.55
+# Mc/sec: 691.12
+//
+[ok]

@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029082.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029082
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54HT7|ADCF_DICDI  [L=1030]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.8e-10   39.6   4.1    6.8e-10   39.6   4.1    5.0  1  Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+    2.8e-06   27.5   3.6     0.0023   18.1   0.1    3.6  0  Arrestin_N  Arrestin (or S-antigen), N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.6   4.1   7.1e-14   6.8e-10       2     133 ..     827    1009 ..     826    1012 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 39.6 bits;  conditional E-value: 7.1e-14
+                            ---EEEEEEES-SEEETT--EEEEEEEEE-SSSEEEEEEEEEEEEEEEESS...SEEEEEEEEEE.EEE---B-TTEE.EEEEEEE. CS
+            Arrestin_C    2 dgkvslevslpkkayvpGetipvtvkidndskkkvkkikvslvqhvdvcafnrasnkkeknvvak.sdnvkvtvaakdkletevtlk 87  
+                            +g++sl+v l ++ ++  e+ip+++ki+n s++++  i +s+ +  ++  +     kk kn  +k +++ + +++++++  t +tl 
+  sp|Q54HT7|ADCF_DICDI  827 SGQISLKVALKRTIFFANEKIPINIKIENASSRSIDYILISIKKIQNISLS---LIKKSKNNNEKqQQQIEKDNDEQQPNITDLTL- 909 
+                            799***************************************999999999...88888888888888888888889988888888. PP
+
+                            --...................................--B-----...........................S---EEEEEEEEEEE CS
+            Arrestin_C   88 iP...................................eeltpssa...........................rnvelikvsYylkvk 112 
+                             P                                   +      +                           +n+ lik +Y + ++
+  sp|Q54HT7|ADCF_DICDI  910 SPssssflsnssntsssknnnnnnnnlifkkctfktsQ------RfngvdahcnfsdtilfdtneikgfnqtTNGTLIKCHYNIVIQ 990 
+                            77787777776666666666666665555655555550......05555555555555555555555555557************** PP
+
+                            EEEESSSEEEEEEEEEEEEEB CS
+            Arrestin_C  113 ltlsgssggelslelPivlgs 133 
+                              ++  +++++ + +Pi  g 
+  sp|Q54HT7|ADCF_DICDI  991 CFVK--RAFNVVCRIPILFGA 1009
+                            ****..899*******98665 PP
+
+>> Arrestin_N  Arrestin (or S-antigen), N-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1030 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3583  (0.186819); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.77u 0.24s 00:00:01.01 Elapsed: 00:00:00.83
+# Mc/sec: 4028.72
+//
+[ok]

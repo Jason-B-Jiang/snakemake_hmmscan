@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037285.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037285
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EJW04853.1  [L=209]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.8e-34  116.9   0.0    8.7e-34  116.3   0.0    1.3  1  Peptidase_C39    Peptidase C39 family
+    9.6e-07   28.9   0.0    1.6e-06   28.2   0.0    1.3  1  Peptidase_C70    Papain-like cysteine protease AvrRpt2
+    1.5e-05   25.7   0.1    0.00053   20.7   0.1    2.4  0  Peptidase_C39_2  Peptidase_C39 like family
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_C39  Peptidase C39 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.3   0.0   1.4e-37   8.7e-34       2     124 ..      18     139 ..      17     147 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 116.3 bits;  conditional E-value: 1.4e-37
+  Peptidase_C39   2 vkivlqveeedcGlaalamilkyygsevsleeLrelagtdeeGlslsgLkkaakklglkakaikadlkel.kelklpaIahwdgklkHfvvvekik 96 
+                    +++ +q + +dcG+ +l m++kyyg+ +s e Lrel++++ eG+s++g++ aa+k+g+k+ +   d k+l k+++lp+ +hw+++  Hfv+v++i+
+     EJW04853.1  18 FPFYKQFDRTDCGPTCLRMLAKYYGKVYSSEFLRELCNITSEGVSVLGITDAAEKIGFKTLVATIDYKTLeKQAPLPCMVHWRQR--HFVIVYRID 111
+                    78899******************************************************************************99..********* PP
+
+  Peptidase_C39  97 kkkvliadPakgkiklskeefekewtgv 124
+                    k+kv++adP  g i ++ke+f   w+++
+     EJW04853.1 112 KEKVYVADPDYGYIVYEKEKFIHAWQNT 139
+                    *************************975 PP
+
+>> Peptidase_C70  Papain-like cysteine protease AvrRpt2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.2   0.0   2.4e-10   1.6e-06       6     128 ..      17     123 ..      12     132 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.2 bits;  conditional E-value: 2.4e-10
+  Peptidase_C70   6 dvpyelqqavtgCWaaslsmiasyleqksidkselaalvpklslateglngeeeialaeklglenvpeppqsyeieklvklLraygPlivaiaepg 101
+                    + p+  q   t C++++l m+a y++  ++  se  + + +   + eg++      +aek+g++   ++ +        k L+++ Pl + +++ +
+     EJW04853.1  17 KFPFYKQFDRTDCGPTCLRMLAKYYG--KVYSSEFLRELCN--ITSEGVSVLGITDAAEKIGFKTLVATID-------YKTLEKQAPLPCMVHWRQ 101
+                    567778888999**************..6677777777666..7789999999**********77766765.......799*************99 PP
+
+  Peptidase_C70 102 dvvgHvivltGidedgapvtinDPesg 128
+                        H+ +++ id+++  v++ DP+ g
+     EJW04853.1 102 ---RHFVIVYRIDKEK--VYVADPDYG 123
+                    ...8************..******976 PP
+
+>> Peptidase_C39_2  Peptidase_C39 like family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (209 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       712  (0.0371239); expected 383.6 (0.02)
+Passed bias filter:                      526  (0.0274258); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 1209.75
+//
+[ok]

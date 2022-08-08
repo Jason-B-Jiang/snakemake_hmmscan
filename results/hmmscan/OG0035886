@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035886.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035886
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R2E6|F1R2E6_DANRE  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.8e-23   82.9   1.6      7e-17   62.4   1.0    2.2  1  Neur_chan_memb  Neurotransmitter-gated ion-channel transmembr
+
+
+Domain annotation for each model (and alignments):
+>> Neur_chan_memb  Neurotransmitter-gated ion-channel transmembrane region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.4   1.0   3.6e-21     7e-17      30      86 ..       2      57 ..       1      90 [. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 62.4 bits;  conditional E-value: 3.6e-21
+                            HHHHHHHHHHHHHHHCCCHHHHCCS-HHHCHHHHHHHHHHHHHHHHHHHHHHHCHST CS
+          Neur_chan_memb 30 IsvlLslTvfllliteilPktSlvipLigkYLlftmvfvtlsivetvfVlnvhhrsp 86
+                            ++++L++T+++++++++lPk+++++++++ +++++++fv+++++e+++V+++++r  
+  tr|F1R2E6|F1R2E6_DANRE  2 VTTVLTMTTLSISARNSLPKVAYATAMDW-FIAVCYAFVFSALIEFATVNYFTKRGY 57
+                            89***************************.***********************9975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       675  (0.0351947); expected 383.6 (0.02)
+Passed bias filter:                      443  (0.0230982); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.21s 00:00:00.53 Elapsed: 00:00:00.64
+# Mc/sec: 876.77
+//
+[ok]

@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030264.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030264
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q75JM9|Q75JM9_DICDI  [L=2230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-13   51.2  14.5    1.1e-13   51.2  14.5    2.7  1  zf-UBR    Putative zinc finger in N-recognin (UBR box)
+    1.8e-11   43.7   0.9    1.8e-11   43.7   0.9    4.3  1  PRT6_C    Proteolysis_6 C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> zf-UBR  Putative zinc finger in N-recognin (UBR box)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.2  14.5   1.1e-17   1.1e-13       2      70 .]     167     236 ..     166     236 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 51.2 bits;  conditional E-value: 1.1e-17
+                  zf-UBR   2 CskvfkkgevvyrCltCsldetaviCeeCfkeskH..egHelvelstkrnggvCdCGdeeawkkegfCklh 70 
+                             C+ +++k+++++rC++C+++et++iC +C+++s H  egH +  ++ +  gg+CdCG+++++k +gfC++h
+  tr|Q75JM9|Q75JM9_DICDI 167 CQFEWTKKTWFFRCKDCAQTETSCICISCMENSIHikEGHAF-MIEESGLGGCCDCGNPDSFKPSGFCTKH 236
+                             999*********************************999**9.89999888************999***98 PP
+
+>> PRT6_C  Proteolysis_6 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.7   0.9   1.9e-15   1.8e-11     218     400 ..    1991    2165 ..    1940    2206 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 43.7 bits;  conditional E-value: 1.9e-15
+                  PRT6_C  218 ldsldqekeslyklvkkyalpFLRkaalllhvlyg.vdfpselsess............eadelerLtelLrLpsldellsssed 289 
+                              +++++ ++e+  + ++++++pF Rka+l+ h+ y  v  +s++++++            + +++++L + L Lps+ +l+     
+  tr|Q75JM9|Q75JM9_DICDI 1991 HENYSLSNEGEIETIETILTPFIRKAYLFHHYCYLlVNHKSTNPSNQdtintfsglsieSFSNVKELIKKLGLPSIVDLV----- 2070
+                              34444444777789*****************9998333333333333444455544444444555555555555555555..... PP
+
+                  PRT6_C  290 etlrslvsgWcrhlavfskes..ssplsssillshpai.feLvgLPkdydtLleeaikrrCptcgkdpsdpalCLlCGeivcsqs 371 
+                                         ++    + +   +s+++   l   p    + ++LP+d  ++l + i + C++   d+    +CL+C +ivc+  
+  tr|Q75JM9|Q75JM9_DICDI 2071 ----------NSDEFSKRGTInpPSTQNLISLHTLPSYlPRFIDLPNDHIEFLISNITKSCKRK-CDLLPKGVCLFCSTIVCFNG 2144
+                              ..........444211111111122223335556676679*********999999999999764.45666789************ PP
+
+                  PRT6_C  372 vCCqeeekkkvgecnqHmrkCgggiGiFl 400 
+                               CC++e        + H+  C  + G+Fl
+  tr|Q75JM9|Q75JM9_DICDI 2145 DCCEDEF-------KDHVTFCSYQ-GLFL 2165
+                              ***9965.......6777777643.6666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2230 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5180  (0.270087); expected 383.6 (0.02)
+Passed bias filter:                      903  (0.0470827); expected 383.6 (0.02)
+Passed Vit filter:                       597  (0.0311278); expected 19.2 (0.001)
+Passed Fwd filter:                       249  (0.012983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 4.20u 0.38s 00:00:04.58 Elapsed: 00:00:03.34
+# Mc/sec: 2170.95
+//
+[ok]

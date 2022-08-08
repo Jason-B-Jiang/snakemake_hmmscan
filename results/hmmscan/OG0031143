@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031143.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031143
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54B63|Q54B63_DICDI  [L=328]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-07   31.4   0.0    3.7e-07   30.6   0.0    1.5  1  SAM_1     SAM domain (Sterile alpha motif)
+    2.8e-05   24.2   0.0      5e-05   23.4   0.0    1.5  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.6   0.0   3.9e-11   3.7e-07       2      64 .]      28      90 ..      27      90 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 30.6 bits;  conditional E-value: 3.9e-11
+                            CTTHSSHHHH.HHHTTSGGGHHHHHTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1  2 kwsvedVgeW.LesiglgqYidlFrageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                             wsv dV +W +++    +Y+d +r+++idg+aL +lt +d++++++  +G+++++ + I++Lk
+  tr|Q54B63|Q54B63_DICDI 28 LWSVTDVYNWsIQARQGTHYADILRDNFIDGRALINLTYEDIVNMKI-PVGPARNLFKDIEDLK 90
+                            69********55656669*****************************.88***********998 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.4   0.0   5.3e-09     5e-05       2      66 .]      27      90 ..      26      90 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 23.4 bits;  conditional E-value: 5.3e-09
+                            GGHHHHHHHHH.HHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                   SAM_2  2 eswsledvaeW.LrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                            e ws+ dv +W  ++ +  +y+d++rd+ i+g ++l +lt ed   ++i  vg+ + ++k i++lk
+  tr|Q54B63|Q54B63_DICDI 27 ELWSVTDVYNWsIQARQGTHYADILRDNFIDG-RALINLTYEDIVNMKI-PVGPARNLFKDIEDLK 90
+                            689999999994457788**************.****************.89999********997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (328 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2222  (0.115856); expected 383.6 (0.02)
+Passed bias filter:                      561  (0.0292507); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.26s 00:00:00.72 Elapsed: 00:00:00.62
+# Mc/sec: 1708.26
+//
+[ok]

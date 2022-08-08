@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032845.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032845
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VHR5|Q9VHR5_DROME  [L=642]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-27   94.1   0.2    3.3e-14   53.1   0.0    2.7  2  TUDOR     Tudor domain
+    1.7e-06   28.1  16.4    5.1e-06   26.5  16.4    1.9  1  zf-MYND   MYND finger
+
+
+Domain annotation for each model (and alignments):
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.1   0.0   3.4e-18   3.3e-14       4     122 .]     135     250 ..     132     250 .. 0.96
+   2 !   38.2   0.0   1.3e-13   1.3e-09       5     115 ..     477     586 ..     473     592 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 53.1 bits;  conditional E-value: 3.4e-18
+                             CGEEEEEEEEEEETTEEEE..EEGGHHHHHHHHHHHHHHHHTSSCCTCSSS--TT-EEEEEETTTTEEEEEEEEEECTTTEEEEEET CS
+                   TUDOR   4 dktinvvvsaiespskfyi..qpkeqskkleklteelqeyyaskkkaellapkvgegcvavfsedgkwyRAkiteslddqkveVlfi 88 
+                             ++   v+++++ s +++yi   ++++++++++++++++++ +  ++     +++  + +++++++g + RAk+ +++ ++  +++++
+  tr|Q9VHR5|Q9VHR5_DROME 135 PSGAMVYITDFISSNRCYIrdASESAERAFDEVCKKVNTIATLLPR----IKNPPPNRLCLVHFNGMYVRAKM-CKKLREVSHLFLV 216
+                             67789*****************************************....9999999****************.************* PP
+
+                             TTSBEEEEEGGGEEE--GGGCSS-BSSEEEEETT CS
+                   TUDOR  89 DyGntetvpvsdlrelpeeleelppqaikcrLag 122
+                             D G  ++ p+ d++ +++el+ lp+ ++ ++L++
+  tr|Q9VHR5|Q9VHR5_DROME 217 DLGIKHSGPFFDFKDINDELKALPCSSQLVQLKN 250
+                             ******************************9985 PP
+
+  == domain 2  score: 38.2 bits;  conditional E-value: 1.3e-13
+                             GEEEEEEEEEEETTEEEE..EEGGHHHHHHHHHHHHHHHHTSSCCTCSSS--TT-EEEEEETTTTEEEEEEE....EEECTTTEEEE CS
+                   TUDOR   5 ktinvvvsaiespskfyi..qpkeqskkleklteelqeyyaskkkaellapkvgegcvavfsedgkwyRAki....teslddqkveV 85 
+                             + i+ +v++ ++ ++ ++   ++ ++++++ l++ l+e+  + +     +p v e ++a+f  +g wyR+k+     +++++ k++V
+  tr|Q9VHR5|Q9VHR5_DROME 477 EGIDLIVVDSTKKNRGIFgaFDSTYASEFSALHSRLSEITDCEPY----KPVVREYVLARF--EGSWYRGKVeqiiVVPRQQTKYRV 557
+                             556677777777777777667777788888888888888887777....777777666665..6*********999999******** PP
+
+                             EETTTSBEEEEEGGGEEE--GGGCSS-BSS CS
+                   TUDOR  86 lfiDyGntetvpvsdlrelpeeleelppqa 115
+                             +++Dy n+e ++  d+r++p +++  p+  
+  tr|Q9VHR5|Q9VHR5_DROME 558 MYLDYTNVEDITEMDIRRYPLDFTA-PCAT 586
+                             ***********************98.6644 PP
+
+>> zf-MYND  MYND finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5  16.4   5.4e-10   5.1e-06       1      40 []      20      55 ..      20      55 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 5.4e-10
+                            -TTT--.B-SC-EE-TTTS-SEESSHHHHHHCHHHHCCCH CS
+                 zf-MYND  1 CavCgkaealkllkCagCksvfYCskeCqradwksHkteC 40
+                            C +C + +a++   C++C   fYCsk Cqr+dw +H+  C
+  tr|Q9VHR5|Q9VHR5_DROME 20 CVHCAN-AAER--VCQRC-GDFYCSKHCQRQDWLRHRYIC 55
+                            99****.9999..*****.77*****************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (642 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       779  (0.0406173); expected 383.6 (0.02)
+Passed bias filter:                      479  (0.0249752); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.23s 00:00:00.66 Elapsed: 00:00:00.68
+# Mc/sec: 3065.61
+//
+[ok]

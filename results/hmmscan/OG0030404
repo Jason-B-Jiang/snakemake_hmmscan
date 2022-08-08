@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030404.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030404
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54DC1|Q54DC1_DICDI  [L=237]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.2e-11   42.9   0.0      6e-11   42.4   0.0    1.2  1  DDE_Tnp_4  DDE superfamily endonuclease
+    1.1e-06   28.6   0.0    2.3e-06   27.5   0.0    1.5  1  DDE_Tnp_1  Transposase DDE domain
+
+
+Domain annotation for each model (and alignments):
+>> DDE_Tnp_4  DDE superfamily endonuclease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.4   0.0   6.3e-15     6e-11       1     141 [.      86     221 ..      86     233 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 42.4 bits;  conditional E-value: 6.3e-15
+               DDE_Tnp_4   1 iDgteipiqrpsnleeraqtysnykkkntlkvlvvvdpdgkiifvskgypGsvsDkeilensgllkalkeavkpgdvilaDkgFkls 87 
+                             iD+t+ pi rp+    ++++y + ++++ l v+++vd     i+     +G+  D+ +++ sg  + +    k++ vilaD+g++ +
+  tr|Q54DC1|Q54DC1_DICDI  86 IDCTTSPICRPHP--GQREFYRGDQGYHFLGVQLIVDITKFLIVDVIIGKGRNNDSGLANISGTTDLVL---KNKLVILADRGYSKN 167
+                             8***********7..9*********************9988888555579*****************77...577************ PP
+
+               DDE_Tnp_4  88 ekllvpykk..kkkkqlspeevefnreiasarihvervigrlkgrFkilrsrlrik 141
+                             + +++p      +++   +  +ef   ++++r  ve++++r+k     ++++++++
+  tr|Q54DC1|Q54DC1_DICDI 168 K-FVTPNSLdlIEGEPTEELVTEFRDFVSKNRSCVENANQRFK-SLDLFNKPIKSR 221
+                             *.667775477677777777799999*****************.767777776665 PP
+
+>> DDE_Tnp_1  Transposase DDE domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.0   2.4e-10   2.3e-06       4      91 ..      81     169 ..      78     173 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 2.4e-10
+               DDE_Tnp_1   4 revlivDattvrvpgtkedarwgykggkykygyklhiavdtrsglilsvvitpgnvhdskglkq..lldelrprkgklvlaDaGYas 88 
+                              ++ ++D tt ++++++  +r+ y g+++++ + ++++vd    li++v i  g+++ds  ++   + d + + ++ ++laD+GY++
+  tr|Q54DC1|Q54DC1_DICDI  81 NTIYAIDCTTSPICRPHPGQREFYRGDQGYHFLGVQLIVDITKFLIVDVIIGKGRNNDSGLANIsgTTDLVLK-NKLVILADRGYSK 166
+                             57899**********************************************************9999999998.99*********98 PP
+
+               DDE_Tnp_1  89 ael 91 
+                             +++
+  tr|Q54DC1|Q54DC1_DICDI 167 NKF 169
+                             765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (237 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       357  (0.0186141); expected 383.6 (0.02)
+Passed bias filter:                      321  (0.0167371); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.21s 00:00:00.55 Elapsed: 00:00:00.57
+# Mc/sec: 1336.15
+//
+[ok]

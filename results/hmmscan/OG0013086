@@ -1,0 +1,213 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013086.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013086
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q86AV9|PLDG_DICDI  [L=948]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.7e-24   83.6  10.7    2.1e-07   30.7   0.2    5.4  2  FG-GAP       FG-GAP repeat
+    5.9e-20   72.1   0.3    1.3e-19   71.0   0.3    1.6  1  Zn_dep_PLPC  Zinc dependent phospholipase C
+    7.6e-09   36.1  10.9      0.001   19.7   3.0    4.5  0  FG-GAP_3     FG-GAP-like repeat
+
+
+Domain annotation for each model (and alignments):
+>> FG-GAP  FG-GAP repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.9   0.1   9.4e-09     6e-05       9      26 ..     473     492 ..     471     507 .. 0.87
+   2 !   30.7   0.2   3.3e-11   2.1e-07       1      35 []     541     579 ..     541     579 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 22.9 bits;  conditional E-value: 9.4e-09
+                           STTSSSS-EEEEEETTC..E CS
+                FG-GAP   9 DlNGDGytDLavGAPge..v 26 
+                           DlNGDG++DL++++Pg+  +
+  sp|Q86AV9|PLDG_DICDI 473 DLNGDGFDDLIISSPGFgvP 492
+                           9***************9641 PP
+
+  == domain 2  score: 30.7 bits;  conditional E-value: 3.3e-11
+                           TTSSEEEESTTSSSS-EEEEEETTC....EECTBEEEEE CS
+                FG-GAP   1 fGssvavgDlNGDGytDLavGAPge....vggaGaVyvl 35 
+                           fG+ + v D+N DG +D+++GAP +     ++ G +y++
+  sp|Q86AV9|PLDG_DICDI 541 FGWNIDVLDFNLDGIFDIIIGAPSSsnanLQYLGMIYIY 579
+                           9***************************889******97 PP
+
+>> Zn_dep_PLPC  Zinc dependent phospholipase C
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.0   0.3     2e-23   1.3e-19       1     151 [.      29     189 ..      29     216 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 71.0 bits;  conditional E-value: 2e-23
+                           HHHHHHHHHHH..HH....HHH-.HHHTHHHHHHHHHGGGG..-TTGGG--BTTTB-HHHHS-HHHHHHHHHHHHHHHHHC........ CS
+           Zn_dep_PLPC   1 tHltlashala..vlpalkkrrk.lklnkaalllGsvaPDleylftsshsykthtagllgedhhweetgkfllllikklrely...kse 83 
+                           tH t+a++a +  +++++ + +k +++n++++ +G+ +PD++y++ +  ++ +          hw   ++fl+++ k+l e+y   +s 
+  sp|Q86AV9|PLDG_DICDI  29 THNTVARRAYNfsSFDGFEQYQKyVSENFDVFDAGAAFPDFGYDC-GGLANESEA-------AHW---PPFLRAATKYLLETYpqpWSL 106
+                           8**********987776776666999*****************88.777777777.......888...********************* PP
+
+                           T-HHHHHHHHHHHHHHHHHHTSH..............HTT--TTT-THHHHHHHHHHHHGGGG.......--S--SS-TTSHH CS
+           Zn_dep_PLPC  84 gslklaafllGvlsHyvaDvftH.......g..stlgeneipsyrllqHgsyelgldflllkyv......krdaaeaktllls 151
+                             ++la fllGv sH++aD+++H       g  + ++ + +++ + l+Hg+ + g++f l +++      ++++ ++ + +++
+  sp|Q86AV9|PLDG_DICDI 107 DGIRLAVFLLGVTSHQIADISWHsiggiqqGliRAMAGQDFNGTYELAHGNADEGGEFELAYNYdlswlsDKWYVPITDIKNI 189
+                           **************************9998357999999*******************9999999988885555444444333 PP
+
+>> FG-GAP_3  FG-GAP-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (948 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1185  (0.0617863); expected 383.6 (0.02)
+Passed bias filter:                      497  (0.0259138); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.54u 0.19s 00:00:00.73 Elapsed: 00:00:00.83
+# Mc/sec: 3712.61
+//
+Query:       sp|P80108|PHLD_HUMAN  [L=840]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.3e-33  114.4  22.4    1.6e-10   40.7   2.4    6.0  3  FG-GAP       FG-GAP repeat
+    6.3e-25   88.3   1.3    1.1e-24   87.5   1.3    1.4  1  Zn_dep_PLPC  Zinc dependent phospholipase C
+    1.4e-10   41.7  10.0    6.8e-06   26.7   0.2    4.3  0  FG-GAP_3     FG-GAP-like repeat
+
+
+Domain annotation for each model (and alignments):
+>> FG-GAP  FG-GAP repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.1   0.1   5.7e-12   3.7e-08       2      34 ..     382     418 ..     381     419 .. 0.88
+   2 !   40.7   2.4   2.6e-14   1.6e-10       1      35 []     450     488 ..     450     488 .. 0.98
+   3 !   29.8   0.4   6.3e-11     4e-07       2      27 ..     514     542 ..     513     550 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 33.1 bits;  conditional E-value: 5.7e-12
+                           TSSEEEESTTSSSS-EEEEEETTC......EECTBEEEE CS
+                FG-GAP   2 GssvavgDlNGDGytDLavGAPge......vggaGaVyv 34 
+                           G++ +++DlN DG+ DL+vGAPg+          G+Vy+
+  sp|P80108|PHLD_HUMAN 382 GWAMTSADLNQDGHGDLVVGAPGYsrpghiH--IGRVYL 418
+                           9***********************9888765..778886 PP
+
+  == domain 2  score: 40.7 bits;  conditional E-value: 2.6e-14
+                           TTSSEEEESTTSSSS-EEEEEETTC....EECTBEEEEE CS
+                FG-GAP   1 fGssvavgDlNGDGytDLavGAPge....vggaGaVyvl 35 
+                           fGs++av D+N DG +DLavGAP       ++ GaVyv+
+  sp|P80108|PHLD_HUMAN 450 FGSALAVLDFNVDGVPDLAVGAPSVgseqLTYKGAVYVY 488
+                           9***************************99********8 PP
+
+  == domain 3  score: 29.8 bits;  conditional E-value: 6.3e-11
+                           TSSEEEESTTSSSS-EEEEEETTC...EE CS
+                FG-GAP   2 GssvavgDlNGDGytDLavGAPge...vg 27 
+                           G+++ ++D+NGD  +DL++G+P++   + 
+  sp|P80108|PHLD_HUMAN 514 GWTLLAADVNGDSEPDLVIGSPFApggGK 542
+                           9***********************65434 PP
+
+>> Zn_dep_PLPC  Zinc dependent phospholipase C
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.5   1.3   1.8e-28   1.1e-24       1     169 [.      28     210 ..      28     219 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 87.5 bits;  conditional E-value: 1.8e-28
+                           HHHHHHHHHHH..HH....HHH-..HHHTHHHHHHHHHGGGG..-TTGGG--BTTT..B-HHHHS-HHHHHHHHHHHHHHHHHC..... CS
+           Zn_dep_PLPC   1 tHltlashala..vlpalkkrrk..lklnkaalllGsvaPDleylftsshsyktht..agllgedhhweetgkfllllikklrely... 80 
+                           tH  ++++al+  +l++++ + +  l ++++a+++G v+PD++y        ++++   +++ e++hw    +fl++ ++++re+y   
+  sp|P80108|PHLD_HUMAN  28 THVEIGHRALEflQLHNGRVNYRelLLEHQDAYQAGIVFPDCFY------PSICKGgkFHDVSESTHW---TPFLNASVHYIRENYplp 107
+                           8**********665655555555**99*****************......999999888999999***...*************99*** PP
+
+                           ...T-HHHHHHHHHHHHHHHHHHTSH.............HTT--TTT-THHHHHHHHHHHHGGGG.......--S--SS-TTSHHHHHH CS
+           Zn_dep_PLPC  81 ksegslklaafllGvlsHyvaDvftH......g..stlgeneipsyrllqHgsyelgldflllkyv......krdaaeaktlllskkdk 155
+                           +++   kl+afl+G+ sH++aDv++H      g  +t+g+  + + + ++H++ ++g+d+l  +++      +r++ ++k+ll+++++ 
+  sp|P80108|PHLD_HUMAN 108 WEKDTEKLVAFLFGITSHMAADVSWHslgleqGflRTMGAIDFHGSYSEAHSAGDFGGDVLSQFEFnfnylaRRWYVPVKDLLGIYEKL 196
+                           9**9************************9998479*************************999999**989888888888888888888 PP
+
+                           HC-S-HHHHHHHHH CS
+           Zn_dep_PLPC 156 lsnkaleeliketl 169
+                           +  k ++e + + +
+  sp|P80108|PHLD_HUMAN 197 YGRKVITENVIVDC 210
+                           87777777776665 PP
+
+>> FG-GAP_3  FG-GAP-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (840 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       407  (0.0212211); expected 383.6 (0.02)
+Passed bias filter:                      393  (0.0204912); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.50u 0.15s 00:00:00.65 Elapsed: 00:00:00.80
+# Mc/sec: 3384.97
+//
+Query:       P47014  [L=750]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.7e-25   89.0   0.5    6.3e-25   88.3   0.5    1.3  1  Zn_dep_PLPC  Zinc dependent phospholipase C
+
+
+Domain annotation for each model (and alignments):
+>> Zn_dep_PLPC  Zinc dependent phospholipase C
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.3   0.5   3.3e-29   6.3e-25       2     177 ..      31     232 ..      30     234 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 88.3 bits;  conditional E-value: 3.3e-29
+                  HHHHHHHHHH.HH....HHH-HHHTHHHHHHHHHGGGG..-TTGGG--BTTT..B-HHHHS-HHHHHHHHHHHHHHHHHC............T-HHHH CS
+  Zn_dep_PLPC   2 Hltlashala.vlpalkkrrklklnkaalllGsvaPDleylftsshsyktht..agllgedhhweetgkfllllikklrely.......ksegslkla 89 
+                  Hl+ +++ +  +l         +++ ++l++Gs++PD+ y      s+ + +  +++++e +hw   ++fl  ++++++++y          gsl l 
+       P47014  31 HLFYLTRGAPlSL--------KENYYPWLKAGSFFPDALY------SCAPSNkdWSDFAEFTHW---PNFLMIAVSYWQQKYgqndrlrGTHGSLALK 111
+                  5555555555233........4799***************......******9***********...*************8888888896667***** PP
+
+                  HHHHHHHHHHHHHHTSH................HTT--TTT-THHHHHHHHHHHHGGGG.......................--S--SS-TTSHHHHH CS
+  Zn_dep_PLPC  90 afllGvlsHyvaDvftH.........g..stlgeneipsyrllqHgsyelgldflllkyv......................krdaaeaktlllskkd 154
+                  +fl+Gv++H+++Dv++H         g  + l e+e+ ++   +H++++++++fl l++v                      + d +e+ ++++  k+
+       P47014 112 SFLIGVFTHQIVDVSWHslvtdyrmhGllRVLSETEFDGDIETAHTFLDVMGEFLTLNNVirdsnnnenwdfltrsdwklprEEDLMEIIRNAGLSKE 209
+                  ***********************99856899***************************************************99************** PP
+
+                  HHC-S-HHHHHHHHHHHHHHHHH CS
+  Zn_dep_PLPC 155 klsnkaleeliketlsaylkeak 177
+                  kls+++le ++k++++a ++e +
+       P47014 210 KLSYAELEFCVKRGMAAAISEGY 232
+                  *****************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (750 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       400  (0.0208561); expected 383.6 (0.02)
+Passed bias filter:                      364  (0.0189791); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.47u 0.16s 00:00:00.63 Elapsed: 00:00:00.64
+# Mc/sec: 3777.48
+//
+[ok]

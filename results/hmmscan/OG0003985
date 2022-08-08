@@ -1,0 +1,541 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003985.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003985
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P52012|PPIL2_CAEEL  [L=523]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.3e-48  164.0   0.1    1.2e-47  162.1   0.1    2.0  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+    2.3e-07   30.6   0.4    2.3e-07   30.6   0.4    2.7  1  Rtf2           Rtf2 RING-finger
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.1   0.1   1.3e-51   1.2e-47       1     158 []     281     433 ..     281     433 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 162.1 bits;  conditional E-value: 1.3e-51
+          Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklkh 86 
+                            +v+l t+  G++++eLf+ k+Pk++enF+ ++ +g+y++++fhR+ik+fm+qgGdptg++  g++       i  +++ dE+ s  +h
+  sp|P52012|PPIL2_CAEEL 281 FVRLVTN-FGPLNLELFAPKVPKACENFITHCSNGYYNNTKFHRLIKNFMLQGGDPTGTGHGGES-------IwdKPFSDEFISGFSH 360
+                            5889996.**************************************************9775543.......3335799****98899 PP
+
+          Pro_isomerase  87 .krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde..ekpkenvkivsaev 158
+                              rG+l+ma++g   n+ngsqFfIt+ +++ ld+k+t+FG++v G+d++ +iek+et+e  + p   v+i++aev
+  sp|P52012|PPIL2_CAEEL 361 dARGVLSMANKG--SNTNGSQFFITFRPCKYLDRKHTIFGRLVGGQDTLTTIEKLETEEgtDVPMVSVVIMRAEV 433
+                            799*******98..5****************************************999999999999**999986 PP
+
+>> Rtf2  Rtf2 RING-finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.6   0.4   2.4e-11   2.3e-07      34     239 ..      42     234 ..      24     257 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 30.6 bits;  conditional E-value: 2.4e-11
+                   Rtf2  34 wklCaLsqepLkkPivadrlGkLYnkdavleaLldkskekslskaashikglkdvvelkltknpafeeskkdatkdtkeapfiCpltg 121
+                             ++C+Ls  p + P+ + r G+++   a++ +L +     + + + +     kd+++lk+ k +                +f Cp+t 
+  sp|P52012|PPIL2_CAEEL  42 INHCSLSLLPFEDPV-CARSGEIFDLTAIVPYLKKHG---KNPCTGKP-LVAKDLIHLKFDKGE--------------DGKFRCPVTF 110
+                            679999999999996.557899999999999987664...34443333.357999999998885..............457******* PP
+
+                   Rtf2 122 lemngktkfvalrkCGcVfsekalkevk.....sevClvCgkeykeedviplnptke.elellkarleeekak...kkkkkkakkkkk 200
+                            + + ++ + +a+ ++G V+s++a++e+        + l    +++ +d+i l   +  e+  +++ l+  k+    +++ kk+k+  k
+  sp|P52012|PPIL2_CAEEL 111 RTFTDHSHILAIATSGNVYSHEAVQELNlkrnhL-KDLLTDVPFTRADIIDLQDPNHlEKFNMEQFLHV-KLDlktSEEIKKEKDAMK 196
+                            ***************************7645531.2478999**********98888566666666543.333112233333444444 PP
+
+                   Rtf2 201 akakgskaeaeaaskssseasesskagkkkekkkekkkr 239
+                            + +     +++a ++   ++  ++   kk ++++ +++ 
+  sp|P52012|PPIL2_CAEEL 197 DPKFYIRRMNNACKSVL-DQLDKEYVPKKSSTETDETAD 234
+                            43333333333322222.222222222222222222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (523 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1129  (0.0588665); expected 383.6 (0.02)
+Passed bias filter:                      627  (0.032692); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.67
+# Mc/sec: 2536.42
+//
+Query:       tr|B0G146|B0G146_DICDI  [L=614]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.9e-46  157.3   0.0    3.9e-46  157.3   0.0    2.5  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+      6e-07   29.2   9.0      6e-07   29.2   9.0    3.7  1  Rtf2           Rtf2 RING-finger
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.3   0.0   4.1e-50   3.9e-46       1     156 [.     339     490 ..     339     492 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 157.3 bits;  conditional E-value: 4.1e-50
+           Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesireipdEvt.sklkh 86 
+                             +++l+t+ lG+++i+L+ d aPk++enFl l ++g+y+g+tfhR+ik+fm+qgGdp+g+++ g+  +  g   ++++dE++    ++
+  tr|B0G146|B0G146_DICDI 339 YLQLKTN-LGDLNIQLHCDLAPKACENFLSLSENGYYNGVTFHRLIKNFMIQGGDPSGTGSGGQ--SVWG---KPFKDEFSpLLKYN 419
+                             57899*7.**************************************************977444..2333...489****9556677 PP
+
+           Pro_isomerase  87 krGalamartgkapnsngsqFfItl.keaphldgkytvFGkVveGmdvvekiekvetde..ekpkenvkivsa 156
+                             +rG+l ma++g   n+ngsqFfItl ++ phl +k+t+FGkVv G++v++++e v+t+e  ++p +++ki+ +
+  tr|B0G146|B0G146_DICDI 420 ERGLLCMANSG--TNTNGSQFFITLrSDLPHLERKHTIFGKVVGGLEVLKTMEMVKTNEsdDRPNHTIKINAI 490
+                             **********8..6*********99688***************************9999999*******9876 PP
+
+>> Rtf2  Rtf2 RING-finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   9.0   6.3e-11     6e-07      27     259 ..      31     246 ..      13     249 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 6.3e-11
+                    Rtf2  27 eeekearwklCaLsqepLkkPivadrlGkLYnkdavleaLldkskekslskaashikglkdvvelkltknpafeeskkdatkdtkea 113
+                             ++ +   + +C+Ls ++L  P+ + + G+L+    ++ ++ +      +    ++   +kd   + ++kn+              + 
+  tr|B0G146|B0G146_DICDI  31 NAFRPLPFYCCSLSLQHLDDPM-SNENGNLFDLVYLMPYIKKHG----KDPITNKPSTMKDYFPITFSKNE--------------ND 98 
+                             4555556778888888888885.566688887666666655443....33444455567888888888775..............56 PP
+
+                    Rtf2 114 pfiCpltglemngktkfvalrkCGcVfsekalkevk....sevClvCgkeykeedviplnptkeelellkarleeekak....kkkk 192
+                             ++ Cp+ ++ + + t+ v +++ G V+s +a+ ++     +   l   k+++++d+i++   ++ ++  k+++ + +        +k
+  tr|B0G146|B0G146_DICDI  99 EYHCPILNKVFTDFTHIVCIKTTGNVYSYEAVNKLNieakNWIDLLSDKPFTKNDIITIQDPENRAN--KNNISNFHFVkegiDFSK 183
+                             7********************************99765433347899************87766333..333333333301122222 PP
+
+                    Rtf2 193 kkakkkkkakakgskaeaeaaskssseasesskagkkkekkkekkkrslaekneksevykslftssk 259
+                               ++++ ++++++++++++++++    +++++++++++++++ + k++ +e+ +++e+ + +f++ k
+  tr|B0G146|B0G146_DICDI 184 TYDQNSISNNNNNNNNNNNNNNN----NNNNNNNNNNNNNNNYNIKNEDNENVNTNEATSRIFKEMK 246
+                             22223333333333322222222....2233334444444444444444455555566666666555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (614 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3687  (0.192242); expected 383.6 (0.02)
+Passed bias filter:                      474  (0.0247145); expected 383.6 (0.02)
+Passed Vit filter:                       113  (0.00589186); expected 19.2 (0.001)
+Passed Fwd filter:                        24  (0.00125137); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.19s 00:00:00.80 Elapsed: 00:00:00.87
+# Mc/sec: 2281.11
+//
+Query:       tr|Q7K231|Q7K231_DROME  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.1e-51  173.8   0.1    6.2e-50  169.6   0.0    2.2  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+    1.2e-06   28.2   3.5    1.2e-06   28.2   3.5    2.5  1  Rtf2           Rtf2 RING-finger
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  169.6   0.0   6.5e-54   6.2e-50       1     156 [.     281     430 ..     281     432 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 169.6 bits;  conditional E-value: 6.5e-54
+           Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklk 85 
+                             +v+l+t+ lG++++eLf d++P ++ nF+k++ +g+y+++ fhR i++f+vqgGdptg+++ g+       si  ++++dE++++l 
+  tr|Q7K231|Q7K231_DROME 281 YVRLNTN-LGPLNLELFCDQTPRACDNFIKHCANGYYNNVMFHRSIRNFIVQGGDPTGSGSGGE-------SIwgKKFEDEFKPNLT 359
+                             6899**7.**************************************************977444.......3333579*****9999 PP
+
+           Pro_isomerase  86 h.krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde.ekpkenvkivsa 156
+                             h  rG+l+ma++g  pn+ngsqFfIt   ++hldgk+t+FGk+v G+d+++k+e++e+d+ ++p e++ i+s 
+  tr|Q7K231|Q7K231_DROME 360 HtGRGVLSMANSG--PNTNGSQFFITYRSCKHLDGKHTIFGKLVGGLDTLQKMENIEVDNkDRPIEDIIIESS 430
+                             98*********98..9**************************************************9999876 PP
+
+>> Rtf2  Rtf2 RING-finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.2   3.5   1.2e-10   1.2e-06      19     256 ..      25     251 ..      16     255 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 28.2 bits;  conditional E-value: 1.2e-10
+                    Rtf2  19 kkkekvdkeeekear..wklCaLsqepLkkPivadrlGkLYnkdavleaLldkskekslskaashikglkdvvelkltknpafeesk 103
+                             kk e+++++ +k +r  +++C ++  p + P  +d  G+ + ++a+l++L   +     +    +    k++v+l+++ n       
+  tr|Q7K231|Q7K231_DROME  25 KKVESLENDHVKFKRlpFEHCCITMAPYEMPY-CDLQGNVFEYEAILKFLKTFKV----NPITGQKMDSKSLVKLNFHRNA------ 100
+                             7888888777776665589************5.7888*************88854....33333334569*********96...... PP
+
+                    Rtf2 104 kdatkdtkeapfiCpltglemngktkfvalrkCGcVfsekalkevk....sevClvCgkeykeedviplnptke.elellkarleee 185
+                                     + ++ Cp   + ++ + + va+ + G V+  +a+ ++     + + lv  ++++ +d+i++   +  e+  +++  + +
+  tr|Q7K231|Q7K231_DROME 101 --------NDEYHCPALFKPFSKNSHIVAVATTGNVYCWEAIDQLNiktkNWKDLVDDTPFQRKDIITIQDPQKlEKYDISTFYHIK 179
+                             ........456********************************996544433357999***********976665777776666544 PP
+
+                    Rtf2 186 kakkkkkkkakkkkkakakgskaeaeaaskss.seasesskagkkkekkkekkkrslaekneksevykslft 256
+                             k  +    +++++ k+ a+g+ ++ + ++k++ ++ +++ +  ++++++ ++++ + ++ +  + ++++ ft
+  tr|Q7K231|Q7K231_DROME 180 KNLRVLTEEEQQERKNPASGRIKTMNLETKETlEQLQQDYQPAEEEASTSKRTADKFNAAHYSTGAVAASFT 251
+                             444333333344444444444444444333330333333344444444444444444444444455555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1646  (0.085823); expected 383.6 (0.02)
+Passed bias filter:                      652  (0.0339955); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.19s 00:00:00.61 Elapsed: 00:00:00.65
+# Mc/sec: 2565.95
+//
+Query:       tr|F1Q4S2|F1Q4S2_DANRE  [L=470]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    6.4e-29  101.3   0.0    2.6e-28   99.3   0.0    2.0  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.3   0.0   1.4e-32   2.6e-28      30     157 ..     251     372 ..     246     373 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 99.3 bits;  conditional E-value: 1.4e-32
+           Pro_isomerase  30 klvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklkh.krGalamartgkapnsngsqFfItlke 113
+                             ++vk++ y  l+  +   +  +qgGdptg+++ g+ +         ++++dE++++l+h  rG+l+ma++g  pn+n+sqFfIt+  
+  tr|F1Q4S2|F1Q4S2_DANRE 251 QYVKKKGYVRLHTNK--GDLNIQGGDPTGTGTGGE-S------FwgKPFKDEFRPNLSHtGRGILSMANSG--PNTNKSQFFITFRS 326
+                             566666666554444..5678********977444.2......223589*****999998*********98..9************* PP
+
+           Pro_isomerase 114 aphldgkytvFGkVveGmdvvekiekvetde..ekpkenvkivsae 157
+                             +  ld+k+ vFG+Vv G++++ ++e+ve+d   +kpk+++ki s+ 
+  tr|F1Q4S2|F1Q4S2_DANRE 327 CAYLDRKHSVFGRVVGGLETLSAMENVESDPktDKPKSEIKILSTS 372
+                             ***************************999999*********9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (470 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       987  (0.0514625); expected 383.6 (0.02)
+Passed bias filter:                      518  (0.0270087); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.15s 00:00:00.55 Elapsed: 00:00:00.61
+# Mc/sec: 2504.01
+//
+Query:       tr|A2BGH2|A2BGH2_DANRE  [L=524]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.3e-51  175.1   0.0    4.5e-51  173.3   0.0    1.9  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.3   0.0   2.3e-55   4.5e-51       1     157 [.     281     432 ..     281     433 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 173.3 bits;  conditional E-value: 2.3e-55
+           Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklk 85 
+                             +v+l+t+ +G++++eL+ dk+Pk+ enF+kl+k+g+ydg++fhR i++fm+qgGdptg+++ g+ +         ++++dE++++l+
+  tr|A2BGH2|A2BGH2_DANRE 281 YVRLHTN-KGDLNVELHCDKVPKAGENFIKLCKKGYYDGTVFHRSIRNFMIQGGDPTGTGTGGE-S------FwgKPFKDEFRPNLS 359
+                             699***7.**************************************************977444.2......223589*****9999 PP
+
+           Pro_isomerase  86 h.krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde..ekpkenvkivsae 157
+                             h  rG+l+ma++g  pn+n+sqFfIt+  +  ld+k+ vFG+Vv G++++ ++e+ve+d   +kpk+++ki s+ 
+  tr|A2BGH2|A2BGH2_DANRE 360 HtGRGILSMANSG--PNTNKSQFFITFRSCAYLDRKHSVFGRVVGGLETLSAMENVESDPktDKPKSEIKILSTS 432
+                             98*********98..9****************************************999999*********9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (524 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1195  (0.0623077); expected 383.6 (0.02)
+Passed bias filter:                      650  (0.0338912); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.48u 0.16s 00:00:00.64 Elapsed: 00:00:00.65
+# Mc/sec: 2602.82
+//
+Query:       tr|A0A0R4IDT0|A0A0R4IDT0_DANRE  [L=502]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.1e-51  175.3   0.0    4.1e-51  173.4   0.0    1.9  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.4   0.0   2.2e-55   4.1e-51       1     157 [.     259     410 ..     259     411 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 173.4 bits;  conditional E-value: 2.2e-55
+                   Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reip 77 
+                                     +v+l+t+ +G++++eL+ dk+Pk+ enF+kl+k+g+ydg++fhR i++fm+qgGdptg+++ g+ +         ++++
+  tr|A0A0R4IDT0|A0A0R4IDT0_DANRE 259 YVRLHTN-KGDLNVELHCDKVPKAGENFIKLCKKGYYDGTVFHRSIRNFMIQGGDPTGTGTGGE-S------FwgKPFK 329
+                                     699***7.**************************************************977444.2......223589* PP
+
+                   Pro_isomerase  78 dEvtsklkh.krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde..ekpkenvki 153
+                                     dE++++l+h  rG+l+ma++g  pn+n+sqFfIt+  +  ld+k+ vFG+Vv G++++ ++e+ve+d   +kpk+++ki
+  tr|A0A0R4IDT0|A0A0R4IDT0_DANRE 330 DEFRPNLSHtGRGILSMANSG--PNTNKSQFFITFRSCAYLDRKHSVFGRVVGGLETLSAMENVESDPktDKPKSEIKI 406
+                                     ****999998*********98..9****************************************999999********* PP
+
+                   Pro_isomerase 154 vsae 157
+                                      s+ 
+  tr|A0A0R4IDT0|A0A0R4IDT0_DANRE 407 LSTS 410
+                                     9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (502 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1133  (0.059075); expected 383.6 (0.02)
+Passed bias filter:                      599  (0.0312321); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.46u 0.15s 00:00:00.61 Elapsed: 00:00:00.76
+# Mc/sec: 2149.26
+//
+Query:       tr|A0A0R4IXC7|A0A0R4IXC7_DANRE  [L=464]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.1e-25   88.2   0.0    6.3e-24   85.1   0.0    2.5  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.1   0.0   3.3e-28   6.3e-24      74     157 ..     282     366 ..     255     367 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 85.1 bits;  conditional E-value: 3.3e-28
+                   Pro_isomerase  74 reipdEvtsklkh.krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde..ekpke 149
+                                     ++++dE++++l+h  rG+l+ma++g  pn+n+sqFfIt+  +  ld+k+ vFG+Vv G++++ ++e+ve+d   +kpk+
+  tr|A0A0R4IXC7|A0A0R4IXC7_DANRE 282 KPFKDEFRPNLSHtGRGILSMANSG--PNTNKSQFFITFRSCAYLDRKHSVFGRVVGGLETLSAMENVESDPktDKPKS 358
+                                     79******999998*********98..9****************************************999999***** PP
+
+                   Pro_isomerase 150 nvkivsae 157
+                                     ++ki s+ 
+  tr|A0A0R4IXC7|A0A0R4IXC7_DANRE 359 EIKILSTS 366
+                                     ****9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (464 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       971  (0.0506283); expected 383.6 (0.02)
+Passed bias filter:                      490  (0.0255488); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.66
+# Mc/sec: 2286.37
+//
+Query:       sp|Q13356|PPIL2_HUMAN  [L=520]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.8e-53  179.7   0.2    1.1e-51  175.3   0.0    2.2  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.3   0.0   5.7e-56   1.1e-51       1     157 [.     281     432 ..     281     433 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 175.3 bits;  conditional E-value: 5.7e-56
+          Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklkh 86 
+                            +v+l+t+ +G++++eL+ d +Pkt+enF++l+k+++ydg++fhR i++f++qgGdptg+++ g++       +  ++++dE++++l+h
+  sp|Q13356|PPIL2_HUMAN 281 YVRLHTN-KGDLNLELHCDLTPKTCENFIRLCKKHYYDGTIFHRSIRNFVIQGGDPTGTGTGGES-------YwgKPFKDEFRPNLSH 360
+                            699***7.**************************************************9774442.......222589*****99999 PP
+
+          Pro_isomerase  87 .krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde..ekpkenvkivsae 157
+                              rG+l+ma++g  pnsn+sqFfIt+  +  ld+k+t+FG+Vv G+dv+ ++e+ve+d   ++pke+++i  ++
+  sp|Q13356|PPIL2_HUMAN 361 tGRGILSMANSG--PNSNRSQFFITFRSCAYLDKKHTIFGRVVGGFDVLTAMENVESDPktDRPKEEIRIDATT 432
+                            8*********98..9****************************************999999*********8776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (520 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       887  (0.0462485); expected 383.6 (0.02)
+Passed bias filter:                      589  (0.0307107); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.72
+# Mc/sec: 2341.33
+//
+Query:       PJF18782.1  [L=599]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.9e-47  160.2   0.0    2.6e-46  157.8   0.0    2.2  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.8   0.0   1.4e-50   2.6e-46       3     156 ..     406     553 ..     404     555 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 157.8 bits;  conditional E-value: 1.4e-50
+  Pro_isomerase   3 dletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesireipdEvtsklkh.krGalamartg 97 
+                     ++t+ lG++++eL+  ++P t+ nFl l ++g+yd+++fhR+i+gf++qgGdp+g++  g++++++     ++++E+ s+l+h +rG+l+ma++g
+     PJF18782.1 406 VIRTN-LGDLHLELYCPRVPRTCYNFLTLSRRGYYDDCRFHRLIPGFVIQGGDPSGTGGGGKSCWNK-----PFANEIVSTLSHsSRGILSMANKG 495
+                    58996.**************************************************98867655554.....589****99999999*******97 PP
+
+  Pro_isomerase  98 kapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde.ekpkenvkivsa 156
+                      p+sngsqFfIt+++a+hld+ + vFGkVv G dv++k+e++ td+ ++p++ ++i+s+
+     PJF18782.1 496 --PHSNGSQFFITFDAATHLDRLHPVFGKVVGGWDVLDKMEATATDSaARPTKAITIQSV 553
+                    ..9****************************************99999*********998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (599 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       590  (0.0307628); expected 383.6 (0.02)
+Passed bias filter:                      348  (0.0181448); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.15s 00:00:00.55 Elapsed: 00:00:00.63
+# Mc/sec: 3094.86
+//
+Query:       EPZ34503.1  [L=496]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.5e-49  168.3   0.1    3.1e-49  167.3   0.1    1.5  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+      3e-06   27.4   0.6      0.012   15.8   0.0    3.7  0  U-box          U-box domain
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.3   0.1   3.2e-53   3.1e-49       1     155 [.     260     408 ..     260     411 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 167.3 bits;  conditional E-value: 3.2e-53
+  Pro_isomerase   1 lvdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesireipdEvtsklkh.krGalamar 95 
+                    +v+l t+ lG+++ieL+++k+Pkt+ nFl l ++ +y++++fhR i++fm+qgGdptg+++ g++ +k+      ++dE++++lkh +rG+l+ma+
+     EPZ34503.1 260 YVRLITN-LGELNIELYSEKVPKTCYNFLMLLRSDYYKNVKFHRSIRNFMIQGGDPTGTGRGGESFWKK-----SFKDEFHDTLKHdSRGILSMAN 349
+                    6889996.**************************************************98866543444.....599*********999******* PP
+
+  Pro_isomerase  96 tgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde.ekpkenvkivs 155
+                    +g  +++ngsqFfIt+++a+hldgk+ +FGkVv Gm+ + k+e+++td+ ++p++++ i++
+     EPZ34503.1 350 SG--KDTNGSQFFITFGNASHLDGKHSIFGKVVGGMESLSKMEDIPTDSnDRPTSDIFIKD 408
+                    *8..6**************************************************998876 PP
+
+>> U-box  U-box domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (496 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1159  (0.0604307); expected 383.6 (0.02)
+Passed bias filter:                      609  (0.0317535); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.22s 00:00:00.69 Elapsed: 00:00:00.59
+# Mc/sec: 2728.04
+//
+Query:       sp|Q09928|PPIL2_SCHPO  [L=516]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.8e-48  163.2   0.0    1.1e-47  162.3   0.0    1.5  1  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.3   0.0   5.7e-52   1.1e-47       2     155 ..     278     425 ..     277     428 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 162.3 bits;  conditional E-value: 5.7e-52
+          Pro_isomerase   2 vdletsslGritieLfedkaPktaenFlklvkegfydgltfhRvikgfmvqgGdptgkteagtgekkdgesi..reipdEvtsklkh. 86 
+                            +++ t+ +G+i+ieL++d aP ++ nF++l+k+g+y++++fhR i +fm+qgGdp+g+++ g+       si  ++++dE+ + lkh 
+  sp|Q09928|PPIL2_SCHPO 278 ARIVTN-HGEINIELHTDYAPHAVYNFVQLAKQGYYRNTIFHRNIARFMIQGGDPSGTGRGGQ-------SIwgKPFKDEFCNPLKHd 357
+                            678896.**************************************************977443.......333458******999998 PP
+
+          Pro_isomerase  87 krGalamartgkapnsngsqFfItlkeaphldgkytvFGkVveGmdvvekiekvetde.ekpkenvkivs 155
+                            +rG+++ma++g  +n+ngsqFfI  ++a+hld+k+t+FG+Vv G++v++++ekv+t++ + pk ++k+++
+  sp|Q09928|PPIL2_SCHPO 358 DRGIISMANRG--KNTNGSQFFILYGPAKHLDNKHTIFGRVVGGLNVLDALEKVPTNSnDHPKLPIKLED 425
+                            99*******98..6******************************************99999999888765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (516 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1407  (0.0733615); expected 383.6 (0.02)
+Passed bias filter:                      581  (0.0302936); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.47u 0.19s 00:00:00.65 Elapsed: 00:00:00.67
+# Mc/sec: 2472.99
+//
+[ok]

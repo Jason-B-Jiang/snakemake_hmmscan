@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040555.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040555
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P37840|SYUA_HUMAN  [L=140]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      5e-55  185.5  17.7    5.7e-55  185.3  17.7    1.0  1  Synuclein  Synuclein
+
+
+Domain annotation for each model (and alignments):
+>> Synuclein  Synuclein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  185.3  17.7     3e-59   5.7e-55       1     133 [.       1     130 [.       1     131 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 185.3 bits;  conditional E-value: 3e-59
+             Synuclein   1 mDvfkkGlsiAkeGvvaaaEktkqGvteAAektkeGvlyvGsktkegvvqsvtsvaektkeqasavgeavvtsvnavaqktvegaenia 89 
+                           mDvf+kGls+AkeGvvaaaEktkqGv+eAA ktkeGvlyvGsktkegvv++v++vaektkeq+++vg+avvt+v+avaqktvega++ia
+  sp|P37840|SYUA_HUMAN   1 MDVFMKGLSKAKEGVVAAAEKTKQGVAEAAGKTKEGVLYVGSKTKEGVVHGVATVAEKTKEQVTNVGGAVVTGVTAVAQKTVEGAGSIA 89 
+                           9**************************************************************************************** PP
+
+             Synuclein  90 vatGlvkkedlvkelpeeegeease.vedealseeeeesaeetee 133
+                           +atG+vkk++l    ++eeg+ ++  +ed+++ ++++e++e+++e
+  sp|P37840|SYUA_HUMAN  90 AATGFVKKDQLG---KNEEGAPQEGiLEDMPV-DPDNEAYEMPSE 130
+                           *********999...77888887775777776.999*****9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (140 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       633  (0.0330048); expected 383.6 (0.02)
+Passed bias filter:                      295  (0.0153814); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.18s 00:00:00.52 Elapsed: 00:00:00.75
+# Mc/sec: 603.31
+//
+[ok]

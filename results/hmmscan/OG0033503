@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033503.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033503
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q95U06|Q95U06_DROME  [L=385]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.8e-07   29.7   1.4    8.8e-07   29.7   1.4    3.0  1  Hmw_CFAP97     Hemingway/CFA97
+      6e-05   23.4   0.0     0.0004   20.7   0.0    2.2  0  Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans iso
+
+
+Domain annotation for each model (and alignments):
+>> Hmw_CFAP97  Hemingway/CFA97
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.7   1.4   9.2e-11   8.8e-07       3     101 ..      86     176 ..      73     177 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 29.7 bits;  conditional E-value: 9.2e-11
+              Hmw_CFAP97   3 nklknikssidnkapkkpeflsknkkklqleeerlkeiereNqkLleklseimrrkgtkksastqsessktspkslnaknrkke.lq 88 
+                             ++lk+iks  d+   +   +   n+++l+ e ++++ei r+N +Ll ++++++r kg       +s++ +    +  ++n+ +e ++
+  tr|Q95U06|Q95U06_DROME  86 RRLKSIKSAGDSLGFH---ARLLNRSQLAGEFNQKQEIFRKNMELLGRINKTNRLKGG-----VDSFNRHFPALQS-NRNKIRElAD 163
+                             5677777777766554...2567899******************************63.....4444444333333.345555559* PP
+
+              Hmw_CFAP97  89 kIeeENqkllkRl 101
+                             ++++EN++l  Rl
+  tr|Q95U06|Q95U06_DROME 164 RLSQENRQLGCRL 176
+                             ************9 PP
+
+>> Pro_isomerase  Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (385 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       760  (0.0396267); expected 383.6 (0.02)
+Passed bias filter:                      533  (0.0277908); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.62
+# Mc/sec: 2009.20
+//
+[ok]

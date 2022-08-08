@@ -1,0 +1,647 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004163.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004163
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q20965|Q20965_CAEEL  [L=410]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-37  129.0   2.4    2.6e-37  128.6   2.4    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    5.2e-17   62.3   0.2    5.2e-17   62.3   0.2    2.6  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  128.6   2.4   2.7e-41   2.6e-37       9     303 ..      33     312 ..      22     313 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 128.6 bits;  conditional E-value: 2.7e-41
+                    IFRD   9 Setas...eeg..eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikkgsseEq 89 
+                             S       +e+  +   + ++ +d  ++L d +d  ++k++ tR++ L   + +l+ + ++ef++++++t+++++ +   k  se q
+  tr|Q20965|Q20965_CAEEL  33 S---AytyNEDiqSIMgDVEDMNDVYDQLVDNLDRAQDKNSTTRIDGLHRVNLALTAKPAPEFINRNKETIMAVCSRMANKPDSEAQ 116
+                             2...122333345344466778888888888888888*********************************************88888 PP
+
+                    IFRD  90 alAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgqsvdan 176
+                              lA ++++l++++  ag+e  e++ e  +++++i+ d+s  +  ++a++++L+++t ++++++ee++   +     +++   s++an
+  tr|Q20965|Q20965_CAEEL 117 FLA-RLVGLVAVQ--AGEEISEMIAEPMSQMRTILMDASRCVFLRTACATSLAIVTRIACSEDEEVTANAKACRFAWAHTKVSGSAN 200
+                             886.9********..668888999999************99******************************99999999999999*9 PP
+
+                    IFRD 177 dsas.alvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeeeeeeedeeeedl 262
+                             d  + +lv   l +W ++l   + +++n+ + +      ++ v+lL+s+++evr+AA e++A+l E  ++ +  +            
+  tr|Q20965|Q20965_CAEEL 201 DIGHaKLVGTSLFSWCVMLLDADFQTINDAVAD-----QPKIVTLLSSNQLEVRLAAAETLAFLHEFMQDARPGFR----------- 271
+                             999999****************99999999999.....59**************************9977755555........... PP
+
+                    IFRD 263 yedteelleqlreLatdsnKsraKkDrkkqrstFrdiltti 303
+                               ++e++l+ l+++ +ds+K++ KkD++ qr   rdi  +i
+  tr|Q20965|Q20965_CAEEL 272 FPNKEHVLSLLDQMVNDSSKKKTKKDKRAQRYAVRDIRAFI 312
+                             459**********************************9988 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.3   0.2   5.4e-21   5.2e-17       1      52 []     359     407 ..     359     407 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 62.3 bits;  conditional E-value: 5.4e-21
+                  IFRD_C   1 NelLRdiFdLgpkllldagkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                             Ne+LRd+FdLgp  l++   +++ +k+ r ++++aa+K+R+q+RgKqRDKRs
+  tr|Q20965|Q20965_CAEEL 359 NEVLRDVFDLGPIALEP---AESANKQSRLAVHEAADKHRNQVRGKQRDKRS 407
+                             9****************...999****************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (410 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1057  (0.0551124); expected 383.6 (0.02)
+Passed bias filter:                      681  (0.0355076); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.62
+# Mc/sec: 2151.34
+//
+Query:       tr|Q9VQI5|Q9VQI5_DROME  [L=425]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-89  298.4   0.3      7e-89  298.0   0.3    1.2  1  IFRD      Interferon-related developmental regulator (IFRD)
+    4.2e-21   75.4   0.5    1.3e-20   73.9   0.5    1.9  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  298.0   0.3   7.3e-93     7e-89       1     304 []      27     322 ..      27     322 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 298.0 bits;  conditional E-value: 7.3e-93
+                    IFRD   1 tlSvlsssSetaseegeeeeeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikkgsse 87 
+                             ++Sv+s++Se as+e+   +e ++e++eek+e+a+++ teksaqtR +aL+a++ell+++y+++fve+r++tl+d ++ksi++g+++
+  tr|Q9VQI5|Q9VQI5_DROME  27 NVSVYSHMSEVASSEA--TDELANERFEEKFEKALEQATEKSAQTRVQALQAICELLMHRYMPDFVEDRKMTLMDFVEKSIRRGKGQ 111
+                             5799999999999666..46889**************************************************************** PP
+
+                    IFRD  88 EqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgqsvd 174
+                             Eq++ ++++ llvl++g    +e i +++ + L ++++d+sv  +a+a++++a gll f+g++d+ e+++lm+ ++ if++++ ++d
+  tr|Q9VQI5|Q9VQI5_DROME 112 EQVWGARLAPLLVLQMGG---DEGISKAMNQFLLNTVQDKSVGFDARAKCCTAVGLLSFLGCEDVGELVHLMQSFEAIFAGSYLRGD 195
+                             ***************884...677*************************************************************** PP
+
+                    IFRD 175 andsas......alvtaalsaWglLltllpssklnklleedl..eealealvelLdssdvevriAAGeaiALlfElsrtedeeeeee 253
+                             ++++ s      + ++ al+aWglLltl+ps+++ +l+++     ++++++  lL+s++++vr+AAGe+iAL+ E +r ++e++  e
+  tr|Q9VQI5|Q9VQI5_DROME 196 DKTPVSvtaeagTFHAEALNAWGLLLTLIPSGDFVSLMTTGQnmFPSIKKFLGLLQSTHLDVRMAAGETIALILESGRAHEEDFL-E 281
+                             *999999*******************************987788889*********************************99999.4 PP
+
+                    IFRD 254 eedeeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                             +          d +el e +++Latds+K+raK+Drk qr+tFrd+l+++e
+  tr|Q9VQI5|Q9VQI5_DROME 282 D----------DIAELSEAVKQLATDSHKYRAKRDRKAQRATFRDVLRYLE 322
+                             4..........7*************************************98 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.9   0.5   1.3e-24   1.3e-20       1      52 []     367     421 ..     367     421 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 73.9 bits;  conditional E-value: 1.3e-24
+                  IFRD_C   1 NelLRdiFdLgpkllld...agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                             Ne++RdiF+Lgp+  ++    +++ k +kler+l+n+aafKaR+++RgK+RDKRs
+  tr|Q9VQI5|Q9VQI5_DROME 367 NEFIRDIFQLGPRPTNTginGNAKVKPTKLERHLVNAAAFKARSITRGKNRDKRS 421
+                             9****************999999*******************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (425 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1520  (0.0792534); expected 383.6 (0.02)
+Passed bias filter:                     1014  (0.0528703); expected 383.6 (0.02)
+Passed Vit filter:                       112  (0.00583972); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.21s 00:00:00.69 Elapsed: 00:00:00.67
+# Mc/sec: 2062.09
+//
+Query:       tr|A0A0R4IV16|A0A0R4IV16_DANRE  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.8e-96  320.8   0.5    9.9e-96  320.4   0.5    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    6.9e-23   81.1   0.4    6.9e-23   81.1   0.4    2.2  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.4   0.5     1e-99   9.9e-96       2     304 .]      57     355 ..      56     355 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 320.4 bits;  conditional E-value: 1e-99
+                            IFRD   2 lSvlsssSetas..eeg..eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlld 75 
+                                     lS++ss Se+as  eeg  e+  e+++qe+ e+kL+++Id+l++ksa+tR +aLe+l+ +++s++l+ef+ er+ t+ d
+  tr|A0A0R4IV16|A0A0R4IV16_DANRE  57 LSHYSSASESASviEEGagEVVdEQTAQEETEDKLKQCIDNLMDKSAKTRLAALESLRMAFSSRVLYEFLLERRYTISD 135
+                                     79999999*****7666995555******************************************************** PP
+
+                            IFRD  76 allksikkgsseEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggad.ee 153
+                                     +l++s+kkg +eEqa+A++++all+l+lg g e ee ++ l+pvL++i+ ds++s +a++++++aLg++++v+++d  e
+  tr|A0A0R4IV16|A0A0R4IV16_DANRE 136 CLERSLKKGGGEEQAAAATVFALLCLQLGGGVEGEEGFKMLRPVLSTILIDSCASLAARQSCARALGMCCYVSASDdAE 214
+                                     ************************************************************************9988689 PP
+
+                            IFRD 154 eieelmeflleifssdgqsvdandsas.....alvtaalsaWglLltllpssklnklleedleealealvelLdssdve 227
+                                     ++++++  l+++f + +  +d++ ++      al++aal+aW+lL+tl+p+s++n++l++  +  l++l ++L+ss+v+
+  tr|A0A0R4IV16|A0A0R4IV16_DANRE 215 DLLKSLGHLESVFVGAYPLGDGSLPSVkagtpALHSAALQAWALLCTLCPASHINTILNH--H--LPRLHACLESSEVN 289
+                                     9*********************999999******************************99..6..9************* PP
+
+                            IFRD 228 vriAAGeaiALlfElsrtedeeeeeeeedeeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                      riA Ge+iALl+El+r++d+e+e           yed + l+++l++Latd nK+raK+Dr+kqrs Fr++l++ie
+  tr|A0A0R4IV16|A0A0R4IV16_DANRE 290 FRIAVGETIALLYELGRDIDQEFE-----------YEDCDALCDSLKSLATDGNKHRAKNDRRKQRSIFREVLHYIE 355
+                                     ***********************9...........559**************************************8 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.1   0.4   7.2e-27   6.9e-23       1      52 []     400     452 ..     400     452 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 81.1 bits;  conditional E-value: 7.2e-27
+                          IFRD_C   1 NelLRdiFdLgpkllld.agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                                     N+lLRdiF+Lgp+l ld + k+ kis++er+l+nsaafKaRt+ R+K RDKR+
+  tr|A0A0R4IV16|A0A0R4IV16_DANRE 400 NPLLRDIFGLGPPLILDaSVKASKISRTERHLFNSAAFKARTKLRNKVRDKRA 452
+                                     9****************999********************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       782  (0.0407738); expected 383.6 (0.02)
+Passed bias filter:                      585  (0.0305021); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.18s 00:00:00.63 Elapsed: 00:00:00.59
+# Mc/sec: 2479.70
+//
+Query:       tr|A9C3R1|A9C3R1_DANRE  [L=138]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-18   65.9   1.8    3.9e-18   65.6   1.8    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.6   1.8     2e-22   3.9e-18       2      78 ..      57     138 .]      56     138 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 65.6 bits;  conditional E-value: 2e-22
+                    IFRD   2 lSvlsssSetas..eeg..eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldall 78 
+                             lS++ss Se+as  eeg  e+  e+++qe+ e+kL+++Id+l++ksa+tR +aLe+l+ +++s++l+ef+ er+ t+ d+l+
+  tr|A9C3R1|A9C3R1_DANRE  57 LSHYSSASESASviEEGagEVVdEQTAQEETEDKLKQCIDNLMDKSAKTRLAALESLRMAFSSRVLYEFLLERRYTISDCLE 138
+                             79999999*****7666995555********************************************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (138 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1022  (0.0532874); expected 383.6 (0.02)
+Passed bias filter:                      594  (0.0309714); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.14s 00:00:00.47 Elapsed: 00:00:00.51
+# Mc/sec: 880.58
+//
+Query:       tr|A9C3R0|A9C3R0_DANRE  [L=435]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.9e-96  321.0   0.5    8.7e-96  320.6   0.5    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    6.5e-23   81.2   0.4    6.5e-23   81.2   0.4    2.2  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.6   0.5    9e-100   8.7e-96       2     304 .]      37     335 ..      36     335 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 320.6 bits;  conditional E-value: 9e-100
+                    IFRD   2 lSvlsssSetas..eeg..eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikk 83 
+                             lS++ss Se+as  eeg  e+  e+++qe+ e+kL+++Id+l++ksa+tR +aLe+l+ +++s++l+ef+ er+ t+ d+l++s+kk
+  tr|A9C3R0|A9C3R0_DANRE  37 LSHYSSASESASviEEGagEVVdEQTAQEETEDKLKQCIDNLMDKSAKTRLAALESLRMAFSSRVLYEFLLERRYTISDCLERSLKK 123
+                             79999999*****7666995555**************************************************************** PP
+
+                    IFRD  84 gsseEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggad.eeeieelmeflleifssd 169
+                             g +eEqa+A++++all+l+lg g e ee ++ l+pvL++i+ ds++s +a++++++aLg++++v+++d  e++++++  l+++f + 
+  tr|A9C3R0|A9C3R0_DANRE 124 GGGEEQAAAATVFALLCLQLGGGVEGEEGFKMLRPVLSTILIDSCASLAARQSCARALGMCCYVSASDdAEDLLKSLGHLESVFVGA 210
+                             ****************************************************************99886899*************** PP
+
+                    IFRD 170 gqsvdandsas.....alvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeee 251
+                             +  +d++ ++      al++aal+aW+lL+tl+p+s++n++l++  +  l++l ++L+ss+v+ riA Ge+iALl+El+r++d+e+e
+  tr|A9C3R0|A9C3R0_DANRE 211 YPLGDGSLPSVkagtpALHSAALQAWALLCTLCPASHINTILNH--H--LPRLHACLESSEVNFRIAVGETIALLYELGRDIDQEFE 293
+                             ******999999******************************99..6..9************************************9 PP
+
+                    IFRD 252 eeeedeeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                        yed + l+++l++Latd nK+raK+Dr+kqrs Fr++l++ie
+  tr|A9C3R0|A9C3R0_DANRE 294 -----------YEDCDALCDSLKSLATDGNKHRAKNDRRKQRSIFREVLHYIE 335
+                             ...........559**************************************8 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.2   0.4   6.7e-27   6.5e-23       1      52 []     380     432 ..     380     432 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 81.2 bits;  conditional E-value: 6.7e-27
+                  IFRD_C   1 NelLRdiFdLgpkllld.agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                             N+lLRdiF+Lgp+l ld + k+ kis++er+l+nsaafKaRt+ R+K RDKR+
+  tr|A9C3R0|A9C3R0_DANRE 380 NPLLRDIFGLGPPLILDaSVKASKISRTERHLFNSAAFKARTKLRNKVRDKRA 432
+                             9****************999********************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (435 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       753  (0.0392617); expected 383.6 (0.02)
+Passed bias filter:                      566  (0.0295114); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.23s 00:00:00.70 Elapsed: 00:00:00.60
+# Mc/sec: 2353.23
+//
+Query:       tr|A0A2R8QT62|A0A2R8QT62_DANRE  [L=422]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-96  321.1   0.5    7.9e-96  320.8   0.5    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    6.2e-23   81.3   0.4    6.2e-23   81.3   0.4    2.2  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.8   0.5  8.2e-100   7.9e-96       2     304 .]      24     322 ..      23     322 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 320.8 bits;  conditional E-value: 8.2e-100
+                            IFRD   2 lSvlsssSetas..eeg..eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlld 75 
+                                     lS++ss Se+as  eeg  e+  e+++qe+ e+kL+++Id+l++ksa+tR +aLe+l+ +++s++l+ef+ er+ t+ d
+  tr|A0A2R8QT62|A0A2R8QT62_DANRE  24 LSHYSSASESASviEEGagEVVdEQTAQEETEDKLKQCIDNLMDKSAKTRLAALESLRMAFSSRVLYEFLLERRYTISD 102
+                                     79999999*****7666995555******************************************************** PP
+
+                            IFRD  76 allksikkgsseEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggad.ee 153
+                                     +l++s+kkg +eEqa+A++++all+l+lg g e ee ++ l+pvL++i+ ds++s +a++++++aLg++++v+++d  e
+  tr|A0A2R8QT62|A0A2R8QT62_DANRE 103 CLERSLKKGGGEEQAAAATVFALLCLQLGGGVEGEEGFKMLRPVLSTILIDSCASLAARQSCARALGMCCYVSASDdAE 181
+                                     ************************************************************************9988689 PP
+
+                            IFRD 154 eieelmeflleifssdgqsvdandsas.....alvtaalsaWglLltllpssklnklleedleealealvelLdssdve 227
+                                     ++++++  l+++f + +  +d++ ++      al++aal+aW+lL+tl+p+s++n++l++  +  l++l ++L+ss+v+
+  tr|A0A2R8QT62|A0A2R8QT62_DANRE 182 DLLKSLGHLESVFVGAYPLGDGSLPSVkagtpALHSAALQAWALLCTLCPASHINTILNH--H--LPRLHACLESSEVN 256
+                                     9*********************999999******************************99..6..9************* PP
+
+                            IFRD 228 vriAAGeaiALlfElsrtedeeeeeeeedeeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                      riA Ge+iALl+El+r++d+e+e           yed + l+++l++Latd nK+raK+Dr+kqrs Fr++l++ie
+  tr|A0A2R8QT62|A0A2R8QT62_DANRE 257 FRIAVGETIALLYELGRDIDQEFE-----------YEDCDALCDSLKSLATDGNKHRAKNDRRKQRSIFREVLHYIE 322
+                                     ***********************9...........559**************************************8 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.3   0.4   6.5e-27   6.2e-23       1      52 []     367     419 ..     367     419 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 81.3 bits;  conditional E-value: 6.5e-27
+                          IFRD_C   1 NelLRdiFdLgpkllld.agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                                     N+lLRdiF+Lgp+l ld + k+ kis++er+l+nsaafKaRt+ R+K RDKR+
+  tr|A0A2R8QT62|A0A2R8QT62_DANRE 367 NPLLRDIFGLGPPLILDaSVKASKISRTERHLFNSAAFKARTKLRNKVRDKRA 419
+                                     9****************999********************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (422 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1063  (0.0554252); expected 383.6 (0.02)
+Passed bias filter:                      832  (0.0433808); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.16s 00:00:00.61 Elapsed: 00:00:00.59
+# Mc/sec: 2321.03
+//
+Query:       tr|H0WF57|H0WF57_DANRE  [L=62]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-14   54.1   0.1    1.4e-14   54.0   0.1    1.0  1  IFRD      Interferon-related developmental regulator (IFRD)
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.0   0.1   7.1e-19   1.4e-14      23      83 ..       2      62 .]       1      62 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 54.0 bits;  conditional E-value: 7.1e-19
+                    IFRD 23 sqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikk 83
+                            ++ed+++kL+ +Id++ +ksa+tR+ aL++l +++ +++l++f++er++t++d +++++kk
+  tr|H0WF57|H0WF57_DANRE  2 AEEDFQYKLKVYIDSTVDKSAKTRQGALDGLKTAMATKILYDFISERRMTITDGIERCLKK 62
+                            589*********************************************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (62 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       477  (0.024871); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.18s 00:00:00.48 Elapsed: 00:00:00.45
+# Mc/sec: 439.82
+//
+Query:       tr|Q1LUD0|Q1LUD0_DANRE  [L=427]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-94  315.9   2.6    2.8e-94  315.7   2.6    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    1.6e-24   86.4   1.4    4.8e-24   84.8   0.4    2.3  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  315.7   2.6   2.9e-98   2.8e-94       1     304 []      29     324 ..      29     324 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 315.7 bits;  conditional E-value: 2.9e-98
+                    IFRD   1 tlSvlsssSetas..eegeee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikkg 84 
+                             tlS++ss Se++s  ee+  e ee ++ed+++kL+ +Id++ +ksa+tR+ aL++l +++ +++l++f++er++t++d +++++kkg
+  tr|Q1LUD0|Q1LUD0_DANRE  29 TLSHCSSLSERTSaaEEAG-EtEEMAEEDFQYKLKVYIDSTVDKSAKTRQGALDGLKTAMATKILYDFISERRMTITDGIERCLKKG 114
+                             5899*99******964444.459**************************************************************** PP
+
+                    IFRD  85 sseEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgq 171
+                             ++ Eq++A+++++ll+++lg+g esee++++lkpv+k+i++d++++++a++a++++Lgl+t+v+++d  +++ +me+++++f++++ 
+  tr|Q1LUD0|Q1LUD0_DANRE 115 KGVEQSAAASLACLLCIQLGSGIESEEVFKSLKPVFKTILNDGTANIQARQACATSLGLCTLVAEDDIMDVYATMECFESLFTRSYI 201
+                             *************************************************************************************** PP
+
+                    IFRD 172 svdandsas.....alvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeeeee 253
+                             + d++ ++      +l+t+al +W+lLlt+++ s++ +++++  +  l +l++lL+++dv++riAAGe+iALlfEl r+ + e++ +
+  tr|Q1LUD0|Q1LUD0_DANRE 202 REDGSRPSVsppvtQLHTNALLSWALLLTICTGSHIRAIAQK--H--LAKLPRLLENDDVNMRIAAGETIALLFELIRDVEPEFDLD 284
+                             ****99999*********************************..6..9*************************************44 PP
+
+                    IFRD 254 eedeeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                        + e l+e+l++Latd+nK+raK D++kqrs+Frd+l+++e
+  tr|Q1LUD0|Q1LUD0_DANRE 285 -----------EWEPLCEKLNALATDCNKHRAKTDKRKQRSVFRDVLKAVE 324
+                             ...........69************************************98 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.8   0.4     5e-28   4.8e-24       1      51 [.     369     421 ..     369     422 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 84.8 bits;  conditional E-value: 5e-28
+                  IFRD_C   1 NelLRdiFdLgpkllld..agkeqkisklerrlynsaafKaRtqaRgKqRDKR 51 
+                             Ne++Rd+F+Lgp++l d  + k++k s+ler+lyn+aafKaRt+aR+K+RDKR
+  tr|Q1LUD0|Q1LUD0_DANRE 369 NEFIRDVFELGPPMLIDsaTLKAMKSSRLERHLYNAAAFKARTKARNKCRDKR 421
+                             9***************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (427 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       835  (0.0435372); expected 383.6 (0.02)
+Passed bias filter:                      666  (0.0347255); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.62
+# Mc/sec: 2225.58
+//
+Query:       sp|O00458|IFRD1_HUMAN  [L=451]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.5e-90  300.8   1.8    1.2e-89  300.5   1.8    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    2.5e-24   85.7   0.6    2.5e-24   85.7   0.6    2.1  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  300.5   1.8   1.2e-93   1.2e-89       1     304 []      50     347 ..      50     347 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 300.5 bits;  conditional E-value: 1.2e-93
+                   IFRD   1 tlSvlsssSetas..eeg.eee.eeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikkg 84 
+                            t+S++s+ S+ +s  e+g e+  ee +qed e+kL+ +Id + +ksa+tR++aLe++ ++l s++l+ef+ er++tl+d++++++kkg
+  sp|O00458|IFRD1_HUMAN  50 TMSHCSGYSDPSSfaEDGpEVLdEEGTQEDLEYKLKGLIDLTLDKSAKTRQAALEGIKNALASKMLYEFILERRMTLTDSIERCLKKG 137
+                            69************8888966679**************************************************************** PP
+
+                   IFRD  85 sseEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgqs 172
+                            +s+Eq +A+ ++++l+++lg g eseeil++l p+Lk+ii d+s+s++a++ +++++g+++f++ +d +e+++++e+l++if++++ +
+  sp|O00458|IFRD1_HUMAN 138 KSDEQRAAAALASVLCIQLGPGIESEEILKTLGPILKKIICDGSASMQARQTCATCFGVCCFIATDDITELYSTLECLENIFTKSYLK 225
+                            ***************************************************************************************7 PP
+
+                   IFRD 173 vdandsas.....alvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeeeeeee 255
+                              +++         l+ + l aW+lLlt++p ++++k+le   +    +l++lL+++dv++riAAGe +ALlfEl+r +++++     
+  sp|O00458|IFRD1_HUMAN 226 EKDTTVICstpntVLHISSLLAWTLLLTICPINEVKKKLEM--H--FHKLPSLLSCDDVNMRIAAGESLALLFELARGIESDFF---- 305
+                            77655544899999****************99999999887..5..89*******************************88887.... PP
+
+                   IFRD 256 deeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                   yed+e+l++ lr+Latd nK+raK D++kqrs+Frd+l+++e
+  sp|O00458|IFRD1_HUMAN 306 -------YEDMESLTQMLRALATDGNKHRAKVDKRKQRSVFRDVLRAVE 347
+                            .......669*************************************98 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.7   0.6   2.6e-28   2.5e-24       1      52 []     392     445 ..     392     445 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 85.7 bits;  conditional E-value: 2.6e-28
+                 IFRD_C   1 NelLRdiFdLgpkllld..agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                            Ne+LR++F+Lgp+++ld  + k +kis++er+lynsaafKaRt+aR+K+RDKR+
+  sp|O00458|IFRD1_HUMAN 392 NEFLRNVFELGPPVMLDaaTLKTMKISRFERHLYNSAAFKARTKARSKCRDKRA 445
+                            9****************************************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (451 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       738  (0.0384796); expected 383.6 (0.02)
+Passed bias filter:                      533  (0.0277908); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.15s 00:00:00.51 Elapsed: 00:00:00.67
+# Mc/sec: 2171.78
+//
+Query:       sp|Q12894|IFRD2_HUMAN  [L=506]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-92  309.0   0.6      4e-92  308.6   0.6    1.1  1  IFRD      Interferon-related developmental regulator (IFRD)
+    4.3e-22   78.6   0.2    1.2e-21   77.1   0.2    1.8  1  IFRD_C    Interferon-related protein conserved region
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  308.6   0.6   4.2e-96     4e-92       3     304 .]     109     405 ..     101     405 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 308.6 bits;  conditional E-value: 4.2e-96
+                   IFRD   3 Svl.sssSetas..eeg.eeeeeasqedweekLedaIdelteksaqtReeaLealvellkshyleefveerlatlldallksikkgss 86 
+                            S + s  S+ta+    g  ++e+ +qed eekL++++d lt+ksa+tR+ aLe+l+ +l s++l++f+ er+ tl+dal+k++kkg++
+  sp|Q12894|IFRD2_HUMAN 109 SECpSLLSTTAEdsLGGdVVDEQGQQEDLEEKLKEYVDCLTDKSAKTRQGALESLRLALASRLLPDFLLERRLTLADALEKCLKKGKG 196
+                            4444444555554433345669****************************************************************** PP
+
+                   IFRD  87 eEqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgqsvd 174
+                            eEqalA+ +l+ll+++lg g++ ee++++l+p+L ++++ds++s++a+ ++++aLgl ++v++ad +++++++ +l+++fs+ ++ + 
+  sp|Q12894|IFRD2_HUMAN 197 EEQALAAAVLGLLCVQLGPGPKGEELFHSLQPLLVSVLSDSTASPAARLHCASALGLGCYVAAADIQDLVSCLACLESVFSRFYGLGG 284
+                            *************************************************************************************999 PP
+
+                   IFRD 175 andsas......alvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeeeeeeed 256
+                            +++s+        l++aal+aW+lLlt++ps++++++l++  +  l++l++lL+s++v++riAAGe+iALlfEl+r+ +ee+      
+  sp|Q12894|IFRD2_HUMAN 285 SSTSPVvpaslhGLLSAALQAWALLLTICPSTQISHILDR--Q--LPRLPQLLSSESVNLRIAAGETIALLFELARDLEEEFV----- 363
+                            9999889999*****************************9..4..9*****************************99977777..... PP
+
+                   IFRD 257 eeeedlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                                  yed+e l++ lr+LatdsnK+raK Dr++qrstFr +l+++e
+  sp|Q12894|IFRD2_HUMAN 364 ------YEDMEALCSVLRTLATDSNKYRAKADRRRQRSTFRAVLHSVE 405
+                            ......669*************************************98 PP
+
+>> IFRD_C  Interferon-related protein conserved region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.1   0.2   1.3e-25   1.2e-21       1      52 []     450     503 ..     450     503 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 77.1 bits;  conditional E-value: 1.3e-25
+                 IFRD_C   1 NelLRdiFdLgpkllld..agkeqkisklerrlynsaafKaRtqaRgKqRDKRs 52 
+                            NelLRdiF+Lgp+llld  a k++k+ ++e++lyn+aafKaRt+aR++ RDKR+
+  sp|Q12894|IFRD2_HUMAN 450 NELLRDIFGLGPVLLLDatALKACKVPRFEKHLYNAAAFKARTKARSRVRDKRA 503
+                            9*****************9**********************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (506 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       706  (0.0368111); expected 383.6 (0.02)
+Passed bias filter:                      539  (0.0281037); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.14s 00:00:00.55 Elapsed: 00:00:00.70
+# Mc/sec: 2347.06
+//
+Query:       sp|O42973|YGZ3_SCHPO  [L=446]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-63  212.2   7.5    1.2e-62  211.8   7.5    1.2  1  IFRD      Interferon-related developmental regulator (IFRD)
+
+
+Domain annotation for each model (and alignments):
+>> IFRD  Interferon-related developmental regulator (IFRD)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.8   7.5   6.4e-67   1.2e-62       3     304 .]      21     322 ..      19     322 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 211.8 bits;  conditional E-value: 6.4e-67
+                  IFRD   3 SvlsssSetas.eegeee.eeasqedweekLedaIdelt...eksaqtReeaLealvellkshyleefveerlatlldallksikkgss 86 
+                           S+ls+s ++ s  + e++   + +++w e+Le  Id+l+   +  a++Ree+Le+++ ++++hy+++ ++e++a+l + llk++   +s
+  sp|O42973|YGZ3_SCHPO  21 SILSGSMDQLSvGSMEDSgILKGSKTWLEELESTIDDLIevkKIGAKEREEHLEKIYVICTRHYAKR-ISENVASLEELLLKIFNGPRS 108
+                           545555344444222455578899***************998889*********************9.99******************* PP
+
+                  IFRD  87 e.EqalAlkalallvltlgagdeseeileelkpvLkriikdssvsssakaaaieaLglltfvggadeeeieelmeflleifssdgqsvd 174
+                           + E +l++++++ ++l   ++++ ee++++++  ++++++d++ ss +k++ i +++llt + +++ ++++e+ +fl +i++sdg+ v+
+  sp|O42973|YGZ3_SCHPO 109 DkELILTIRIMCTFCLA--SVFQVEELWTKTEGRFNALANDAE-SSGIKCESILCFSLLTALLDSE-ADVIEFGDFLISILESDGAVVN 193
+                           *****************..************************.*******************887.********************** PP
+
+                  IFRD 175 andsasalvtaalsaWglLltllpssklnklleedleealealvelLdssdvevriAAGeaiALlfElsrtedeeeeeeeedeeee... 260
+                           ++d+++ +v +a++a+glLlt +      +  +e l +a+eal+e+Ld ++++v++AAG+a+A lfE  ++++ +++ee+++++ +   
+  sp|O42973|YGZ3_SCHPO 194 SEDDEG-VVGCACQALGLLLTCV------TTESEFLASAAEALSEQLDAASIDVQLAAGQALAALFERVNEIRPDKDEENDESDVSqts 275
+                           ******.****************......3333444789****************************999998888866655554489* PP
+
+                  IFRD 261 ...dlyedteelleqlreLatdsnKsraKkDrkkqrstFrdilttie 304
+                              d+  d+++ll +lr+La++s+Ks+ Kk rk ++++Fr++l+tie
+  sp|O42973|YGZ3_SCHPO 276 kfdDIIPDRNQLLITLRDLASESSKSIGKKQRKVLHQVFRNVLQTIE 322
+                           **********************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (446 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       818  (0.0426508); expected 383.6 (0.02)
+Passed bias filter:                      536  (0.0279472); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.15s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 2523.78
+//
+[ok]

@@ -1,0 +1,189 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013250.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013250
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55G50|Q55G50_DICDI  [L=365]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-15   56.5   5.7    2.7e-07   30.3   0.0    3.1  2  DUF2034   Protein of unknown function (DUF2034)
+    2.1e-07   31.1   0.0    3.8e-06   27.1   0.0    2.8  1  Mrr_cat   Restriction endonuclease
+
+
+Domain annotation for each model (and alignments):
+>> DUF2034  Protein of unknown function (DUF2034)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.3   0.0   2.8e-11   2.7e-07       1      47 [.     195     239 ..     195     244 .. 0.93
+   2 !   28.7   0.0   8.6e-11   8.2e-07      85     164 ..     243     329 ..     238     346 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 30.3 bits;  conditional E-value: 2.8e-11
+                 DUF2034   1 stvfrGtlYEltvkrelekkLnvesLervGGayDgGvDivGkwnlkd 47 
+                             st  +G+ YEl   ++l++    +++ r+GG++D+G+D +G+wnl+ 
+  tr|Q55G50|Q55G50_DICDI 195 STYSKGKIYELKTIEILNEF--GMEIIRSGGRDDKGIDFKGNWNLPS 239
+                             78899***************..999********************87 PP
+
+  == domain 2  score: 28.7 bits;  conditional E-value: 8.6e-11
+                 DUF2034  85 lkVlvqCkalkk.kikpkeirELsGsfsshkak.........kk.rkstlmilvspkllTksalklldklnipliylkisllkladg 160
+                             lk++ qCk++   k++p  irE + +f +++++         k+ +kstl+i+vs   + +s +   +++++p++ + +    l +g
+  tr|Q55G50|Q55G50_DICDI 243 LKIIGQCKNYSGkKVGPSVIREFESTFLRYQSEldkenskllKQdKKSTLGIIVSKSGFSPSIRSFSEEIQYPIVLCHL----LDEG 325
+                             78999*****988**************98765322222223244799******************************99....6677 PP
+
+                 DUF2034 161 llsl 164
+                             +ls+
+  tr|Q55G50|Q55G50_DICDI 326 ILSF 329
+                             5554 PP
+
+>> Mrr_cat  Restriction endonuclease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.1   0.0   3.9e-10   3.8e-06      14     106 ..     208     319 ..     200     323 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 27.1 bits;  conditional E-value: 3.9e-10
+                             HHHHHHHSSSEEE---B-TTSSB--E..EEETTEEEEEEEEEEE--T.S-B-HHHHHHHHHHCTT................S..SEE CS
+                 Mrr_cat  14 aellealGyeevevtgrsgdggvDlv..akkdplgserilvqaKryk.nsvgveeVqelvgalka................ekaqkg 81 
+                              e+l + G+e + ++g++ d+g+D+    +  +++  +i+ q+K y+ ++vg+ +++e+ +                    +k + g
+  tr|Q55G50|Q55G50_DICDI 208 IEILNEFGME-IIRSGGRDDKGIDFKgnWNLPSNKILKIIGQCKNYSgKKVGPSVIREFESTFLRyqseldkenskllkqdKKSTLG 293
+                             5788999999.9*************944355555556*********7589*********999887678889899999988778999* PP
+
+                             EEEESS-B-HHHHHHHHTT-.-EEEE CS
+                 Mrr_cat  82 ifvttsdftkdAreeakela.eieLl 106
+                             i+v+ s+f++  r++ +e++ +i+L 
+  tr|Q55G50|Q55G50_DICDI 294 IIVSKSGFSPSIRSFSEEIQyPIVLC 319
+                             ******************77799996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (365 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3076  (0.160384); expected 383.6 (0.02)
+Passed bias filter:                      610  (0.0318056); expected 383.6 (0.02)
+Passed Vit filter:                        97  (0.00505762); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.53u 0.25s 00:00:00.78 Elapsed: 00:00:00.74
+# Mc/sec: 1593.93
+//
+Query:       Q08774  [L=242]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-70  235.4   0.1    3.9e-70  235.1   0.1    1.0  1  DUF2034   Protein of unknown function (DUF2034)
+
+
+Domain annotation for each model (and alignments):
+>> DUF2034  Protein of unknown function (DUF2034)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  235.1   0.1   2.1e-74   3.9e-70       1     185 []      29     219 ..      29     219 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 235.1 bits;  conditional E-value: 2.1e-74
+  DUF2034   1 stvfrGtlYEltvkrelekkLnvesLervGGayDgGvDivGkwnlkdv.leieeeaevdekpsklklgsir....ekklkykiidk.aedlkVlvqCkalkk 96 
+              stvf+G+lYE+tv+rel++kL++++L+++GGa+DgGvDi+G+w ++d+ ++i++ +++ e++s++k+++++    +k+lky+iid+ +e+lkVlvqCka++k
+   Q08774  29 STVFQGNLYEYTVMRELSEKLRMTKLRKTGGAHDGGVDIKGSWPVDDIyWKISSLMPNLEMASNIKRTNSQngfvLKPLKYRIIDHtFEPLKVLVQCKAFTK 130
+              8*********************************************************************99**9**************************9 PP
+
+  DUF2034  97 .kikpkeirELsGsfsshkakkkrkstlmilvspkllTksalklldklnipliylkisllk.ladgllsldlwnggalelvyenakarkll 185
+               k++p+e+rEL+G+f+s++++++r++t++i++sp++lTk++l+l++++++pliyl++++lk ++dg  ++dl+n+g+l ++yen++a++l+
+   Q08774 131 sKLSPREFRELVGTFTSLVSHSQRNKTVCIMCSPHMLTKDTLNLINNITLPLIYLRVEMLKeKTDG--HFDLINSGKLINYYENSYASTLM 219
+              9***********************************************************988999..*******************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (242 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       585  (0.0305021); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.50
+# Mc/sec: 1549.81
+//
+Query:       sp|Q9UT40|YIQ3_SCHPO  [L=247]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.9e-38  130.8   0.1    1.4e-21   76.8   0.0    2.1  2  DUF2034   Protein of unknown function (DUF2034)
+    2.4e-12   47.0   0.0    3.6e-12   46.5   0.0    1.2  1  Mrr_cat   Restriction endonuclease
+
+
+Domain annotation for each model (and alignments):
+>> DUF2034  Protein of unknown function (DUF2034)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.5   0.2   2.2e-18   2.1e-14       1      48 [.      50      95 ..      50      97 .. 0.96
+   2 !   76.8   0.0   1.5e-25   1.4e-21      81     185 .]      95     193 ..      91     193 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 53.5 bits;  conditional E-value: 2.2e-18
+               DUF2034  1 stvfrGtlYEltvkrelekkLnvesLervGGayDgGvDivGkwnlkdv 48
+                          +tv++Gtl+E++v+++l+++   ++Ler+GG++DgGvD+vG++++k+v
+  sp|Q9UT40|YIQ3_SCHPO 50 NTVAQGTLFEYLVQYVLKQH--SFQLERCGGKGDGGVDLVGQFSIKNV 95
+                          69******************..***********************987 PP
+
+  == domain 2  score: 76.8 bits;  conditional E-value: 1.5e-25
+               DUF2034  81 k.aedlkVlvqCkalkkkikpkeirELsGsfsshkakkkrkstlmilvspkllTksalklldklnipliylkisllkladg...llsld 165
+                             +e++kV+v+Ck++k +i+p+++rEL+Gs+ss++     ++tl+il++  ++T+s+lk+l+ +n pl  ++i    + dg   ++ + 
+  sp|Q9UT40|YIQ3_SCHPO  95 VlFEPTKVVVSCKSNKGSIGPRFVRELEGSLSSYP-----TDTLGILACLGSFTSSSLKTLSISNRPLALCRI----YVDGfhsYMFQF 174
+                           3589*******************************.....79*******************************....555555599999 PP
+
+               DUF2034 166 lwnggalelvyenakarkll 185
+                           +wn++al++ + + ++r+++
+  sp|Q9UT40|YIQ3_SCHPO 175 VWNHQALAI-FPDLSVRQIY 193
+                           *******98.9999999886 PP
+
+>> Mrr_cat  Restriction endonuclease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.5   0.0   3.8e-16   3.6e-12       6      94 ..      55     147 ..      52     161 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.5 bits;  conditional E-value: 3.8e-16
+                           TTCHHHHHHHHHHHHSSSEEE---B-TTSSB--E....EEETTEEEEEEEEEEE--TS-B-HHHHHHHHHHCTTS...SEEEEEESS-B CS
+               Mrr_cat   6 pkeFeelvaellealGyeevevtgrsgdggvDlv....akkdplgserilvqaKryknsvgveeVqelvgalkae.kaqkgifvttsdf 89 
+                           +  Fe+lv+ +l+++ ++ +e+ g+ gdggvDlv    +k   ++  +++v +K  k+s+g++ V+el g+l ++   + gi+   ++f
+  sp|Q9UT40|YIQ3_SCHPO  55 GTLFEYLVQYVLKQHSFQ-LERCGGKGDGGVDLVgqfsIKNVLFEPTKVVVSCKSNKGSIGPRFVRELEGSLSSYpTDTLGILACLGSF 142
+                           678***************.***************8876677777777**************************9846999********* PP
+
+                           -HHHH CS
+               Mrr_cat  90 tkdAr 94 
+                           t+   
+  sp|Q9UT40|YIQ3_SCHPO 143 TSSSL 147
+                           *8765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (247 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       333  (0.0173627); expected 383.6 (0.02)
+Passed bias filter:                      304  (0.0158507); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.49
+# Mc/sec: 1629.46
+//
+[ok]

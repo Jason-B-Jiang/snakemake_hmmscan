@@ -1,0 +1,207 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0014513.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0014513
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1RE25|F1RE25_DANRE  [L=401]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-30  106.8   0.2    1.4e-30  106.4   0.2    1.1  1  Ion_trans    Ion transport protein
+    3.1e-14   52.8   0.4    3.1e-14   52.8   0.4    2.3  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> Ion_trans  Ion transport protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.4   0.2   1.5e-34   1.4e-30       5     235 ..      98     333 ..      94     343 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 106.4 bits;  conditional E-value: 1.5e-34
+                             HHHHHHHHHHHHHHHHSCSSSSTHHHHH.HHHHHHHHHHHHHHHHHHHHHHHHHCH.......HHHHHHCTSHHHHHHHHHHHHHHH CS
+               Ion_trans   5 elfilllillncvflaletyfpedelek.tileilelvftaiftlemllkilalgl.......likkrYlrdpwnilDflvvlpsll 83 
+                                +++li+l c++l + t f+e+e++  ++l ile++ + if  e++l+i+a+g+        +++++ r+p ++lD++v++ s+ 
+  tr|F1RE25|F1RE25_DANRE  98 YHAFVFLIVLGCLILSILTTFKEHEKDSaHWLVILETFTIFIFGGEFALRIWAAGCccrykgwRGRLKFARKPLCVLDIFVLIASVP 184
+                             567899*****************88888**********************************************************9 PP
+
+                             HHHHHC...HHHHHHHHHHHHGGGGGGGHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTCCCSCTS...HHS CS
+               Ion_trans  84 slvlse...esllllsvlrlfrvlrllklisrleglrtlvtalirsvkdllnvlllllvvlfifaligvqlfkgklrekne...cak 164
+                             ++  ++       +l+ lr++++lr+l++ +r ++++ l  a+    k+l+   ++ ++ l++ + +++ + k++           +
+  tr|F1RE25|F1RE25_DANRE 185 VVAVRNqgnVLATSLRSLRFLQILRMLRMDRRGGTWKLLGSAIYTHSKELITAWYIGFLSLILASFLVYLVEKDDET---TelhRDT 268
+                             9944445567799**************************************99999999999999888888833333...1343455 PP
+
+                             SSSSSTTTSSSSSSHHHHHHHHHHHHTTSSHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+               Ion_trans 165 twenpnngntnFdnfftallwlfrlmttegwgdilyatldekskvaliyfvifiilgsflllNlliaviad 235
+                              + +p      Fd++ +al+w + ++tt+g+gd +++t  ++      +++  + l+++ +++l+ ++  +
+  tr|F1RE25|F1RE25_DANRE 269 DGPSPTPAPQDFDTYADALWWGLITLTTIGYGDKTPKTWAGR------LLAGTFALIGVSFFALPAGILGS 333
+                             66677777777*******************************......89999999999999*99999876 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.8   0.4   3.3e-18   3.1e-14      19      74 ..     280     332 ..     239     336 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 52.8 bits;  conditional E-value: 3.3e-18
+                             ..T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2  19 gwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlg 74 
+                             +    ++ dal++ ++tltT+GYGd +p+t+agrl++  ++l+G+++fa+   +lg
+  tr|F1RE25|F1RE25_DANRE 280 FD---TYADALWWGLITLTTIGYGDKTPKTWAGRLLAGTFALIGVSFFALPAGILG 332
+                             44...99******************************************9887776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (401 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       777  (0.0405131); expected 383.6 (0.02)
+Passed bias filter:                      562  (0.0293029); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.24s 00:00:00.68 Elapsed: 00:00:00.65
+# Mc/sec: 2002.45
+//
+Query:       tr|A0A2R8QGH1|A0A2R8QGH1_DANRE  [L=399]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.1e-30  104.3   0.1    7.7e-30  104.0   0.1    1.1  1  Ion_trans    Ion transport protein
+    3.1e-14   52.8   0.4    3.1e-14   52.8   0.4    2.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> Ion_trans  Ion transport protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.0   0.1     8e-34   7.7e-30       9     235 ..     100     331 ..      92     341 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 104.0 bits;  conditional E-value: 8e-34
+                                     HHHHHHHHHHHHSCSSSSTHHHHH.HHHHHHHHHHHHHHHHHHHHHHHHHCH.......HHHHHHCTSHHHHHHHHHHH CS
+                       Ion_trans   9 lllillncvflaletyfpedelek.tileilelvftaiftlemllkilalgl.......likkrYlrdpwnilDflvvl 79 
+                                      +li+l c++l + t f+e+e++  ++l ile++ + if  e++l+i+a+g+        +++++ r+p ++lD++v++
+  tr|A0A2R8QGH1|A0A2R8QGH1_DANRE 100 AFLIVLGCLILSILTTFKEHEKDSaHWLVILETFTIFIFGGEFALRIWAAGCccrykgwRGRLKFARKPLCVLDIFVLI 178
+                                     6899***************88888******************************************************* PP
+
+                                     HHHHHHHHHC...HHHHHHHHHHHHGGGGGGGHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTC CS
+                       Ion_trans  80 psllslvlse...esllllsvlrlfrvlrllklisrleglrtlvtalirsvkdllnvlllllvvlfifaligvqlfkgk 155
+                                      s+ ++  ++       +l+ lr++++lr+l++ +r ++++ l  a+    k+l+   ++ ++ l++ + +++ + k++
+  tr|A0A2R8QGH1|A0A2R8QGH1_DANRE 179 ASVPVVAVRNqgnVLATSLRSLRFLQILRMLRMDRRGGTWKLLGSAIYTHSKELITAWYIGFLSLILASFLVYLVEKDD 257
+                                     ***99944445567799**************************************999999999999998888888333 PP
+
+                                     CCSCTS...HHSSSSSSTTTSSSSSSHHHHHHHHHHHHTTSSHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                       Ion_trans 156 lrekne...caktwenpnngntnFdnfftallwlfrlmttegwgdilyatldekskvaliyfvifiilgsflllNllia 231
+                                                + + +p      Fd++ +al+w + ++tt+g+gd +++t  ++      +++  + l+++ +++l+ +
+  tr|A0A2R8QGH1|A0A2R8QGH1_DANRE 258 ET---TelhRDTDGPSPTPAPQDFDTYADALWWGLITLTTIGYGDKTPKTWAGR------LLAGTFALIGVSFFALPAG 327
+                                     33...134345566677777777*******************************......89999999999999*9999 PP
+
+                                     HHHH CS
+                       Ion_trans 232 viad 235
+                                     +  +
+  tr|A0A2R8QGH1|A0A2R8QGH1_DANRE 328 ILGS 331
+                                     9876 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.8   0.4   3.2e-18   3.1e-14      19      74 ..     278     330 ..     237     334 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 52.8 bits;  conditional E-value: 3.2e-18
+                                     ..T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHH CS
+                     Ion_trans_2  19 gwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlg 74 
+                                     +    ++ dal++ ++tltT+GYGd +p+t+agrl++  ++l+G+++fa+   +lg
+  tr|A0A2R8QGH1|A0A2R8QGH1_DANRE 278 FD---TYADALWWGLITLTTIGYGDKTPKTWAGRLLAGTFALIGVSFFALPAGILG 330
+                                     44...99******************************************9887776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (399 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       697  (0.0363418); expected 383.6 (0.02)
+Passed bias filter:                      524  (0.0273215); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.67
+# Mc/sec: 1926.59
+//
+Query:       tr|E9QCR9|E9QCR9_DANRE  [L=391]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      1e-30  106.9   0.2    1.3e-30  106.5   0.2    1.1  1  Ion_trans    Ion transport protein
+    3.1e-14   52.8   0.4    3.1e-14   52.8   0.4    2.4  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> Ion_trans  Ion transport protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.5   0.2   1.4e-34   1.3e-30       5     235 ..      98     333 ..      94     343 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 106.5 bits;  conditional E-value: 1.4e-34
+                             HHHHHHHHHHHHHHHHSCSSSSTHHHHH.HHHHHHHHHHHHHHHHHHHHHHHHHCH.......HHHHHHCTSHHHHHHHHHHHHHHH CS
+               Ion_trans   5 elfilllillncvflaletyfpedelek.tileilelvftaiftlemllkilalgl.......likkrYlrdpwnilDflvvlpsll 83 
+                                +++li+l c++l + t f+e+e++  ++l ile++ + if  e++l+i+a+g+        +++++ r+p ++lD++v++ s+ 
+  tr|E9QCR9|E9QCR9_DANRE  98 YHAFVFLIVLGCLILSILTTFKEHEKDSaHWLVILETFTIFIFGGEFALRIWAAGCccrykgwRGRLKFARKPLCVLDIFVLIASVP 184
+                             567899*****************88888**********************************************************9 PP
+
+                             HHHHHC...HHHHHHHHHHHHGGGGGGGHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTCCCSCTS...HHS CS
+               Ion_trans  84 slvlse...esllllsvlrlfrvlrllklisrleglrtlvtalirsvkdllnvlllllvvlfifaligvqlfkgklrekne...cak 164
+                             ++  ++       +l+ lr++++lr+l++ +r ++++ l  a+    k+l+   ++ ++ l++ + +++ + k++           +
+  tr|E9QCR9|E9QCR9_DANRE 185 VVAVRNqgnVLATSLRSLRFLQILRMLRMDRRGGTWKLLGSAIYTHSKELITAWYIGFLSLILASFLVYLVEKDDET---TelhRDT 268
+                             9944445567799**************************************99999999999999888888833333...1343455 PP
+
+                             SSSSSTTTSSSSSSHHHHHHHHHHHHTTSSHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+               Ion_trans 165 twenpnngntnFdnfftallwlfrlmttegwgdilyatldekskvaliyfvifiilgsflllNlliaviad 235
+                              + +p      Fd++ +al+w + ++tt+g+gd +++t  ++      +++  + l+++ +++l+ ++  +
+  tr|E9QCR9|E9QCR9_DANRE 269 DGPSPTPAPQDFDTYADALWWGLITLTTIGYGDKTPKTWAGR------LLAGTFALIGVSFFALPAGILGS 333
+                             66677777777*******************************......99999999999999*99999876 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.8   0.4   3.2e-18   3.1e-14      18      74 ..     279     332 ..     238     336 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 52.8 bits;  conditional E-value: 3.2e-18
+                             ...T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2  18 egwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlg 74 
+                             ++    ++ dal++ ++tltT+GYGd +p+t+agrl++  ++l+G+++fa+   +lg
+  tr|E9QCR9|E9QCR9_DANRE 279 DFD---TYADALWWGLITLTTIGYGDKTPKTWAGRLLAGTFALIGVSFFALPAGILG 332
+                             444...99******************************************9887776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (391 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       753  (0.0392617); expected 383.6 (0.02)
+Passed bias filter:                      529  (0.0275823); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.69
+# Mc/sec: 1835.59
+//
+[ok]

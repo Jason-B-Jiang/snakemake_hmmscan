@@ -1,0 +1,111 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0017675.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0017675
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q95ZS5|Q95ZS5_CAEEL  [L=444]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-16   58.1   7.3    1.5e-07   31.2   4.7    2.3  2  LRR_8     Leucine rich repeat
+    8.5e-13   48.4   8.0      4e-06   27.2   2.6    3.1  1  LRR_4     Leucine Rich repeats (2 copies)
+    1.5e-05   25.0   9.0        1.4    9.9   0.8    4.9  1  LRR_1     Leucine Rich Repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.1   8.4e-11   5.4e-07       5      61 .]      19      73 ..      18      73 .. 0.93
+   2 !   31.2   4.7   2.3e-11   1.5e-07       7      61 .]      67     119 ..      65     119 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 8.4e-11
+                            EEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+                   LRR_8  5 sLdLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61
+                            +LdLs + +++ +    + l+ L++LdLs+N +t+l p++f  +++L  Ld  +++L
+  tr|Q95ZS5|Q95ZS5_CAEEL 19 ELDLSASGIQEFPNAIVQ-LPRLTKLDLSSNAITFL-PESFCKMTKLIRLDFGSCQL 73
+                            799********9999999.*****************.9*********9999888776 PP
+
+  == domain 2  score: 31.2 bits;  conditional E-value: 2.3e-11
+                             E-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+                   LRR_8   7 dLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61 
+                             d  + +l++l+dg    l++L++L+L nN+++ l p +f++L+sL++LdL  N+L
+  tr|Q95ZS5|Q95ZS5_CAEEL  67 DFGSCQLHHLPDGIGL-LTSLQHLNLYNNQIEDL-PLSFANLKSLKWLDLKKNPL 119
+                             5567889999999999.*****************.9*****************97 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.2   2.6   6.3e-10     4e-06       1      37 [.      84     122 ..      84     128 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.2 bits;  conditional E-value: 6.3e-10
+                             SS--EEE--SS---E-S-.HHH-TT--EEE-.-S.---- CS
+                   LRR_4   1 pnLevLdLsnNqltdipl.leklpnLkvLdLsgN.litd 37 
+                             ++L++L+L nNq+ d+pl +++l++Lk LdL  N l ++
+  tr|Q95ZS5|Q95ZS5_CAEEL  84 TSLQHLNLYNNQIEDLPLsFANLKSLKWLDLKKNpLNSK 122
+                             69*****************999*********98944444 PP
+
+>> LRR_1  Leucine Rich Repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.9   0.8   0.00021       1.4       1      19 [.      85     102 ..      85     106 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 9.9 bits;  conditional E-value: 0.00021
+                   LRR_1   1 nLrhLdLsnnpllglppns 19 
+                             +L+hL+L nn++++lp  s
+  tr|Q95ZS5|Q95ZS5_CAEEL  85 SLQHLNLYNNQIEDLP-LS 102
+                             69**********7555.44 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (444 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3518  (0.18343); expected 383.6 (0.02)
+Passed bias filter:                     1030  (0.0537046); expected 383.6 (0.02)
+Passed Vit filter:                       317  (0.0165285); expected 19.2 (0.001)
+Passed Fwd filter:                        53  (0.00276344); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.68u 0.24s 00:00:00.92 Elapsed: 00:00:00.89
+# Mc/sec: 1609.54
+//
+Query:       tr|O45574|O45574_CAEEL  [L=254]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (254 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1912  (0.0996924); expected 383.6 (0.02)
+Passed bias filter:                     1067  (0.0556338); expected 383.6 (0.02)
+Passed Vit filter:                       135  (0.00703895); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.39u 0.16s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 1525.77
+//
+[ok]

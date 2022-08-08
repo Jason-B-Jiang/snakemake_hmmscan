@@ -1,0 +1,915 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0002497.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0002497
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9BLB6|RU2A_CAEEL  [L=253]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-66  222.9   2.2    2.7e-66  222.5   2.2    1.1  1  LRR_9     Leucine-rich repeat
+    3.3e-12   46.1  12.0    3.5e-07   30.0   1.4    2.8  2  LRR_8     Leucine rich repeat
+    5.3e-09   36.3  17.6      2e-05   25.0   3.6    3.6  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  222.5   2.2   4.2e-70   2.7e-66       1     171 [.       1     171 [.       1     175 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 222.5 bits;  conditional E-value: 4.2e-70
+                 LRR_9   1 mvkltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPn 89 
+                           mv+lt+el  +  q++n+v  re++lrG kipvien+G t dqfd idl+dn+irkld+fP + rl+tl+l nnri  i++++   lPn
+  sp|Q9BLB6|RU2A_CAEEL   1 MVRLTTELFAERPQFVNSVNMREINLRGQKIPVIENMGVTRDQFDVIDLTDNDIRKLDNFPTFSRLNTLYLHNNRINYIAPDIATKLPN 89 
+                           9**************************************************************************************** PP
+
+                 LRR_9  90 leeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgkela 171
+                           l++l lt+n++ el+d++Pla+ kkl++++++ np+t+k++yr y+iykl+ +r++df++v+l ere+a+++f++k gk++ 
+  sp|Q9BLB6|RU2A_CAEEL  90 LKTLALTNNNICELGDIEPLAECKKLEYVTFIGNPITHKDNYRMYMIYKLPTVRVIDFNRVRLTEREAAKKMFKGKSGKKAR 171
+                           ******************************************************************************9875 PP
+
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.4   3.5   1.7e-10   1.1e-06       6      61 .]      47     100 ..      42     100 .. 0.77
+   2 !   30.0   1.4   5.4e-11   3.5e-07       1      40 [.      64     103 ..      64     125 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 28.4 bits;  conditional E-value: 1.7e-10
+                           EE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+                 LRR_8   6 LdLsnNrltslddgaFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61 
+                           +dL++N + +ld   F  +s L++L+L nN+++ + p+    Lp+L+ L L++N++
+  sp|Q9BLB6|RU2A_CAEEL  47 IDLTDNDIRKLDN--FPTFSRLNTLYLHNNRINYIAPDIATKLPNLKTLALTNNNI 100
+                           6777777777765..55568888888888888888888888888888888888876 PP
+
+  == domain 2  score: 30.0 bits;  conditional E-value: 5.4e-11
+                           TT-SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GG CS
+                 LRR_8   1 pnLtsLdLsnNrltslddgaFkglsnLkvLdLsnNllttl 40 
+                           ++L++L+L+nNr++ + ++  ++l+nLk+L L+nN++  l
+  sp|Q9BLB6|RU2A_CAEEL  64 SRLNTLYLHNNRINYIAPDIATKLPNLKTLALTNNNICEL 103
+                           589*********************************9776 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (253 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       808  (0.0421294); expected 383.6 (0.02)
+Passed bias filter:                      604  (0.0314928); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.39u 0.21s 00:00:00.60 Elapsed: 00:00:00.70
+# Mc/sec: 1167.22
+//
+Query:       tr|Q553C7|Q553C7_DICDI  [L=290]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-12   46.8   0.6    5.3e-12   45.7   0.6    1.5  1  LRR_9     Leucine-rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.7   0.6   2.8e-16   5.3e-12      87     169 ..      45     127 ..      36     133 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 45.7 bits;  conditional E-value: 2.8e-16
+                   LRR_9  87 lPnleeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgke 169
+                             l +l++l l++n++q + +++ l +l+ ++ l l  npvt++++yrl vi++l+ l +ld +k+   er++a+e+   + +k+
+  tr|Q553C7|Q553C7_DICDI  45 LKCLKKLDLSSNRFQLIRNIKGLFDLPVIEDLNLTGNPVTKQNNYRLIVIQNLPTLLILDEKKITATERNQAREFDSNQVAKD 127
+                             67999*******************************************************************99655555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (290 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3602  (0.18781); expected 383.6 (0.02)
+Passed bias filter:                      823  (0.0429115); expected 383.6 (0.02)
+Passed Vit filter:                       144  (0.00750821); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.52u 0.19s 00:00:00.71 Elapsed: 00:00:00.66
+# Mc/sec: 1418.93
+//
+Query:       tr|Q54ID3|Q54ID3_DICDI  [L=966]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (966 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5437  (0.283487); expected 383.6 (0.02)
+Passed bias filter:                      950  (0.0495333); expected 383.6 (0.02)
+Passed Vit filter:                       339  (0.0176756); expected 19.2 (0.001)
+Passed Fwd filter:                       108  (0.00563116); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 1.76u 0.28s 00:00:02.04 Elapsed: 00:00:01.47
+# Mc/sec: 2134.91
+//
+Query:       tr|Q54Q46|Q54Q46_DICDI  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-65  219.8   3.8    2.6e-65  219.3   3.8    1.2  1  LRR_9     Leucine-rich repeat
+    6.7e-08   32.8  27.8    7.2e-05   23.2   3.9    4.6  0  LRR_4     Leucine Rich repeats (2 copies)
+    7.2e-07   29.0  10.6    1.5e-05   24.7   4.1    2.9  0  LRR_8     Leucine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  219.3   3.8   4.1e-69   2.6e-65       3     164 ..       2     163 ..       1     169 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 219.3 bits;  conditional E-value: 4.1e-69
+                   LRR_9   3 kltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPn 89 
+                             +ltaeli +s +yin++++rel+lrG+ki+ ienlGat +qfdtid+sdnei k+++fP l+r+ktll+nnn i   +e+++  lP+
+  tr|Q54Q46|Q54Q46_DICDI   2 RLTAELILKSPDYINPCKDRELNLRGNKISSIENLGATKNQFDTIDFSDNEISKVENFPKLERVKTLLFNNNHIKSFEEDFGSSLPH 88 
+                             8************************************************************************************** PP
+
+                   LRR_9  90 leeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrs 164
+                             l++lil++n++++l+dl+Pl++l++++++sll+npv++k++yrly+i+ +++l+++dfrkvk+ ere++++lf  
+  tr|Q54Q46|Q54Q46_DICDI  89 LRALILSNNRINNLSDLEPLTKLSEIKFISLLENPVSKKPNYRLYLIHLVPHLKIIDFRKVKKIEREESKKLFGQ 163
+                             ***********************************************************************9954 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> LRR_8  Leucine rich repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1476  (0.0769592); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.60
+# Mc/sec: 1315.79
+//
+Query:       sp|Q9V4Q8|RU2A_DROME  [L=265]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-90  301.5   1.3      2e-90  301.1   1.3    1.1  1  LRR_9     Leucine-rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  301.1   1.3     1e-94     2e-90       1     174 [.       1     174 [.       1     175 [. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 301.1 bits;  conditional E-value: 1e-94
+                 LRR_9   1 mvkltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPn 89 
+                           mvklt+eli+qs+qyin++rereldlrGykip+ienlGatldqfdtidlsdn++rkld++P+l rlk+lllnnnrilri+eglee++Pn
+  sp|Q9V4Q8|RU2A_DROME   1 MVKLTPELINQSMQYINPCRERELDLRGYKIPQIENLGATLDQFDTIDLSDNDLRKLDNLPHLPRLKCLLLNNNRILRISEGLEEAVPN 89 
+                           9**************************************************************************************** PP
+
+                 LRR_9  90 leeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgkelakei 174
+                           l ++ilt+n+lqel+dl+Pl+ + kl++++ll npv++k++yr+y++yk++qlrlldfrk+k+k+r++a+e+fr+k+gk+++kei
+  sp|Q9V4Q8|RU2A_DROME  90 LGSIILTGNNLQELSDLEPLVGFTKLETICLLINPVSTKPNYREYMAYKFPQLRLLDFRKIKQKDRQAAQEFFRTKQGKDVLKEI 174
+                           ***********************************************************************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (265 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       877  (0.0457271); expected 383.6 (0.02)
+Passed bias filter:                      656  (0.0342041); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.58
+# Mc/sec: 1478.86
+//
+Query:       tr|F1QQN4|F1QQN4_DANRE  [L=181]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      9e-16   58.0   0.2    1.4e-15   57.4   0.2    1.3  1  LRR_9     Leucine-rich repeat
+    2.1e-08   33.9   7.0    1.3e-07   31.4   2.4    3.1  1  LRR_8     Leucine rich repeat
+    5.1e-08   33.2   7.7    0.00017   22.0   0.4    3.4  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.4   0.2   2.1e-19   1.4e-15      64     166 ..      69     170 ..      40     175 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 57.4 bits;  conditional E-value: 2.1e-19
+                   LRR_9  64 krlktlllnnnrilrigegleevlPnleeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkv 150
+                              rl  l l  n i +i+  l + l +l+ l l +n++qel+++d la l++l++++l  np+ +++dyr ++i  l++++++df  v
+  tr|F1QQN4|F1QQN4_DANRE  69 TRLAWLDLSFNEIKHIDSVLTQ-LKELRLLYLHGNNIQELSEVDKLAVLPSLHTITLHGNPIVSERDYRAHLIATLPHVKMIDFSAV 154
+                             6999999**********99988.689************************************************************* PP
+
+                   LRR_9 151 klkeredaeelfrskk 166
+                              ++ere ++   +s++
+  tr|F1QQN4|F1QQN4_DANRE 155 TKQERELTSVWQKSRN 170
+                             *****98776666665 PP
+
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.4   2.4     2e-11   1.3e-07       2      61 .]      70     129 ..      69     129 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 31.4 bits;  conditional E-value: 2e-11
+                             T-SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGG.GGGTT--S-.EEE--SS-- CS
+                   LRR_8   2 nLtsLdLsnNrltslddgaFkglsnLkvLdLsnNllttlsp.gafsgLpsLrsLdLsgNrL 61 
+                             +L  LdLs+N ++++d    + l+ L+ L+L  N+++ ls+ + ++ LpsL  ++L+gN++
+  tr|F1QQN4|F1QQN4_DANRE  70 RLAWLDLSFNEIKHIDSVLTQ-LKELRLLYLHGNNIQELSEvDKLAVLPSLHTITLHGNPI 129
+                             799************987777.****************9984579**************87 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (181 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       436  (0.0227332); expected 383.6 (0.02)
+Passed bias filter:                      297  (0.0154857); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.50
+# Mc/sec: 1170.76
+//
+Query:       tr|F6P9M5|F6P9M5_DANRE  [L=173]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-83  278.6   2.7    1.9e-83  278.4   2.7    1.0  1  LRR_9     Leucine-rich repeat
+    6.1e-07   29.2   5.4    4.6e-06   26.4   2.9    2.4  0  LRR_8     Leucine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  278.4   2.7     2e-87   1.9e-83       1     154 [.       1     154 [.       1     165 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 278.4 bits;  conditional E-value: 2e-87
+                   LRR_9   1 mvkltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevl 87 
+                             mvkltaelieq+aqy+n+vr+reldlrGykipv+enlGatldqfdtidlsdne+rkldgfPllkrlktll+nnnri+rige+le++l
+  tr|F6P9M5|F6P9M5_DANRE   1 MVKLTAELIEQAAQYTNPVRDRELDLRGYKIPVLENLGATLDQFDTIDLSDNEVRKLDGFPLLKRLKTLLVNNNRICRIGENLEQAL 87 
+                             9************************************************************************************** PP
+
+                   LRR_9  88 PnleeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklke 154
+                             P l+elilt+n++qel+dldPla++k+l+ lsllrnpvtnk++yrlyvi+k++q+r+ldf+kvklk 
+  tr|F6P9M5|F6P9M5_DANRE  88 PDLKELILTSNNIQELGDLDPLATVKSLSLLSLLRNPVTNKKHYRLYVINKIPQIRVLDFQKVKLKV 154
+                             ****************************************************************985 PP
+
+>> LRR_8  Leucine rich repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (173 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       396  (0.0206476); expected 383.6 (0.02)
+Passed bias filter:                      321  (0.0167371); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.16s 00:00:00.49 Elapsed: 00:00:00.59
+# Mc/sec: 948.14
+//
+Query:       tr|F1R300|F1R300_DANRE  [L=277]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-93  311.7   4.2    1.7e-93  311.1   4.2    1.2  1  LRR_9     Leucine-rich repeat
+    2.5e-06   27.2   5.2      1e-05   25.3   2.8    2.3  0  LRR_8     Leucine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  311.1   4.2   1.7e-97   1.7e-93       1     175 []       1     175 [.       1     175 [. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 311.1 bits;  conditional E-value: 1.7e-97
+                   LRR_9   1 mvkltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevl 87 
+                             mvkltaelieq+aqy+n+vr+reldlrGykipv+enlGatldqfdtidlsdne+rkldgfPllkrlktll+nnnri+rige+le++l
+  tr|F1R300|F1R300_DANRE   1 MVKLTAELIEQAAQYTNPVRDRELDLRGYKIPVLENLGATLDQFDTIDLSDNEVRKLDGFPLLKRLKTLLVNNNRICRIGENLEQAL 87 
+                             9************************************************************************************** PP
+
+                   LRR_9  88 PnleeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgkelakei 174
+                             P l+elilt+n++qel+dldPla++k+l+ lsllrnpvtnk++yrlyvi+k++q+r+ldf+kvklker++ae++f++k+g++lak+i
+  tr|F1R300|F1R300_DANRE  88 PDLKELILTSNNIQELGDLDPLATVKSLSLLSLLRNPVTNKKHYRLYVINKIPQIRVLDFQKVKLKERQEAEKMFKGKRGAQLAKDI 174
+                             **************************************************************************************9 PP
+
+                   LRR_9 175 a 175
+                             a
+  tr|F1R300|F1R300_DANRE 175 A 175
+                             8 PP
+
+>> LRR_8  Leucine rich repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (277 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       665  (0.0346733); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.64
+# Mc/sec: 1403.20
+//
+Query:       sp|A6NJI9|LRC72_HUMAN  [L=287]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-16   60.8   3.3    2.8e-16   59.7   1.9    1.9  1  LRR_9     Leucine-rich repeat
+    3.1e-09   37.1  11.9     0.0018   18.7   2.2    3.3  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.7   1.9   2.9e-20   2.8e-16      55     168 ..      77     192 ..      74     198 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 59.7 bits;  conditional E-value: 2.9e-20
+                  LRR_9  55 rkldgfPllkr...lktlllnnnrilrigegleevlPnleeliltknslqel.adldPlaslkkltslsllrnpvtnkedyrlyviyk 138
+                             kl g+ +l r   l  l+lnnn i  i egl ++lP+l+ l+l +n+l+++ a+++ l  + +l+ lsl +np+++ + yrly+iy+
+  sp|A6NJI9|LRC72_HUMAN  77 NKLHGITFLTRnycLTELYLNNNAIFEI-EGL-HYLPSLHILLLHHNELTNIdATVKELKGMLNLKILSLYQNPLCQYNLYRLYIIYH 162
+                            5899999999955556679********9.688.59**************9986799******************************** PP
+
+                  LRR_9 139 lkqlrlldfrkvklkeredaeelfrskkgk 168
+                            l+ + lld ++v  ker+    +f+ kk++
+  sp|A6NJI9|LRC72_HUMAN 163 LPGVELLDRNQVTEKERRSMITIFNHKKAH 192
+                            *************************99985 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (287 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       459  (0.0239324); expected 383.6 (0.02)
+Passed bias filter:                      339  (0.0176756); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.59
+# Mc/sec: 1579.32
+//
+Query:       sp|Q96E66|LRC51_HUMAN  [L=192]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-12   45.4   0.1    2.1e-11   43.8   0.0    1.8  1  LRR_9     Leucine-rich repeat
+      4e-07   29.8   1.8      4e-07   29.8   1.8    2.4  1  LRR_8     Leucine rich repeat
+    6.2e-07   29.7   4.7    0.00052   20.5   0.2    3.4  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.8   0.0   3.3e-15   2.1e-11      72     161 ..      87     175 ..      63     187 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 43.8 bits;  conditional E-value: 3.3e-15
+                  LRR_9  72 nnnrilrigegleevlPnleeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredae 159
+                              n ++ i++ l  +  nl+ l l +ns+q+l++++ la l++l sl+l  np+ +++ yr+yv+  l ++  +df  v +++r  ae
+  sp|Q96E66|LRC51_HUMAN  87 SFNDLTSIDPVLTTF-FNLSVLYLHGNSIQRLGEVNKLAVLPRLRSLTLHGNPMEEEKGYRQYVLCTLSRITTFDFSGVTKADRTTAE 173
+                            556677777777665.599*****************************************************************9998 PP
+
+                  LRR_9 160 el 161
+                              
+  sp|Q96E66|LRC51_HUMAN 174 VW 175
+                            54 PP
+
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.8   1.8   6.3e-11     4e-07       2      60 ..      80     138 ..      79     139 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 29.8 bits;  conditional E-value: 6.3e-11
+                            T-SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGGG.GGGTT--S-.EEE--SS- CS
+                  LRR_8   2 nLtsLdLsnNrltslddgaFkglsnLkvLdLsnNllttlsp.gafsgLpsLrsLdLsgNr 60 
+                            nL  +dLs+N lts+d+   + + nL vL+L  N++++l + + ++ Lp+LrsL+L+gN+
+  sp|Q96E66|LRC51_HUMAN  80 NLAWIDLSFNDLTSIDPVLTT-FFNLSVLYLHGNSIQRLGEvNKLAVLPRLRSLTLHGNP 138
+                            89***************8888.78**************976478***************7 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (192 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       394  (0.0205433); expected 383.6 (0.02)
+Passed bias filter:                      327  (0.0170499); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.65
+# Mc/sec: 952.31
+//
+Query:       sp|P09661|RU2A_HUMAN  [L=255]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-97  323.9   1.6    2.7e-97  323.5   1.6    1.1  1  LRR_9     Leucine-rich repeat
+    1.1e-06   29.0   9.6     0.0009   19.7   2.5    3.0  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  323.5   1.6  2.8e-101   2.7e-97       1     175 []       1     175 [.       1     175 [. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 323.5 bits;  conditional E-value: 2.8e-101
+                 LRR_9   1 mvkltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPn 89 
+                           mvkltaelieq+aqy+navr+reldlrGykipvienlGatldqfd+id+sdneirkldgfPll+rlktll+nnnri+rigegl+++lP+
+  sp|P09661|RU2A_HUMAN   1 MVKLTAELIEQAAQYTNAVRDRELDLRGYKIPVIENLGATLDQFDAIDFSDNEIRKLDGFPLLRRLKTLLVNNNRICRIGEGLDQALPC 89 
+                           9**************************************************************************************** PP
+
+                 LRR_9  90 leeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgkelakeia 175
+                           l+elilt+nsl el+dldPlaslk+lt+ls+lrnpvtnk++yrlyviyk++q+r+ldf+kvklker++ae++f++k+g++lak+ia
+  sp|P09661|RU2A_HUMAN  90 LTELILTNNSLVELGDLDPLASLKSLTYLSILRNPVTNKKHYRLYVIYKVPQVRVLDFQKVKLKERQEAEKMFKGKRGAQLAKDIA 175
+                           ************************************************************************************98 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (255 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       530  (0.0276344); expected 383.6 (0.02)
+Passed bias filter:                      437  (0.0227853); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.63
+# Mc/sec: 1316.51
+//
+Query:       XP_013237616.1  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-40  138.4   0.7    6.2e-40  136.7   0.7    1.7  1  LRR_9     Leucine-rich repeat
+    5.3e-09   36.3   7.3    6.1e-08   32.9   0.6    3.6  1  LRR_4     Leucine Rich repeats (2 copies)
+    1.9e-07   30.8   3.3    3.4e-06   26.8   0.5    2.8  0  LRR_8     Leucine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.7   0.7   9.6e-44   6.2e-40      28     164 ..      21     168 ..      16     173 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 136.7 bits;  conditional E-value: 9.6e-44
+           LRR_9  28 GykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPnleeliltknslqeladldPlaslk......... 113
+                     G ki  ienl +t d  dtidlsdneir+ld++P l rlk l+l nn+i +i+++l + +P l++lil++n+++el+dl Pla  +         
+  XP_013237616.1  21 GCKIVAIENLSSTRDLHDTIDLSDNEIRELDNVPPLFRLKHLYLSNNKISKIDPALAQRVPFLHTLILSGNNISELTDLVPLAGWSdlrhkntyy 115
+                     89********************************************************************************9876111222222 PP
+
+           LRR_9 114 ..kltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrs 164
+                       +l+ lsl++npv++k++yr+++i  +++lr+ld+ kv  ker+  +el++s
+  XP_013237616.1 116 kpQLEGLSLIDNPVCKKPNYRHFLISLIPSLRVLDYCKVTDKERKYVQELLQS 168
+                     224677***************************************99998876 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.9   0.6   9.5e-12   6.1e-08       2      41 ..      58      99 ..      58     103 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 32.9 bits;  conditional E-value: 9.5e-12
+                    S--EEE--SS---E-S-.HHH.-TT--EEE-.-S----GGGG CS
+           LRR_4  2 nLevLdLsnNqltdipl.lek.lpnLkvLdLsgNlitdldeL 41
+                    +L++L+LsnN++++i++ l++  p L++L LsgN+i+ l++L
+  XP_013237616.1 58 RLKHLYLSNNKISKIDPaLAQrVPFLHTLILSGNNISELTDL 99
+                    69****************9999*******99***77777665 PP
+
+>> LRR_8  Leucine rich repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       845  (0.0440586); expected 383.6 (0.02)
+Passed bias filter:                      594  (0.0309714); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.57
+# Mc/sec: 1282.68
+//
+Query:       EPZ31755.1  [L=219]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-64  215.8   3.9    4.3e-64  215.4   3.9    1.2  1  LRR_9     Leucine-rich repeat
+    2.1e-07   31.2  16.0    0.00018   22.0   6.1    4.4  0  LRR_4     Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  215.4   3.9   4.4e-68   4.3e-64       3     169 ..       2     168 ..       1     171 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 215.4 bits;  conditional E-value: 4.4e-68
+       LRR_9   3 kltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPnleeliltknslq 101
+                 +lt+++ie sa+++nav + eldlrG+kip ienl  t dq dtid+sdn+i++l++fPl++rlk+++lnnnr++ i+++l+++l n+++li+ +n +q
+  EPZ31755.1   2 RLTVDVIEYSASFLNAVNDMELDLRGNKIPSIENLAVTRDQHDTIDFSDNDIKRLENFPLMHRLKSIYLNNNRVMSIEPNLGKTLVNIQNLIMNNNFIQ 100
+                 89************************************************************************************************* PP
+
+       LRR_9 102 eladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrskkgke 169
+                 el dl+Pl s+k l  lsl+ npvt++++yrl++++++++++lldfrk++ kere+a+++f +k+ k+
+  EPZ31755.1 101 ELNDLEPLFSVKTLRCLSLIGNPVTKRPNYRLFIAHNMPNIKLLDFRKINTKEREEAAKVFGGKEVKS 168
+                 ***************************************************************99876 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (219 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       654  (0.0340998); expected 383.6 (0.02)
+Passed bias filter:                      365  (0.0190312); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.60
+# Mc/sec: 1175.79
+//
+Query:       EPZ33468.1  [L=110]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.4e-08   32.4   0.4    7.3e-08   32.3   0.4    1.1  1  LRR_9     Leucine-rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   0.4   3.8e-12   7.3e-08      90     163 ..       2      75 ..       1      89 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 3.8e-12
+       LRR_9  90 leeliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfr 163
+                 l++l ++kn ++++ dl+P+ sl+ l +l l  n ++  + yr+ +i+++ +l++ld++ +  +e+  a ++f 
+  EPZ33468.1   2 LSKLDVSKNLISSIRDLNPIKSLPLLCNLDLRLNEISIIKFYRSKLIFHFSKLQVLDLQIISNEEKITAINMFD 75 
+                 56677899****************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (110 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       386  (0.0201262); expected 383.6 (0.02)
+Passed bias filter:                      254  (0.0132437); expected 383.6 (0.02)
+Passed Vit filter:                        15  (0.000782105); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.61
+# Mc/sec: 583.13
+//
+Query:       EPZ36558.1  [L=288]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-14   53.6   2.6      2e-14   53.6   2.6    2.2  1  LRR_9     Leucine-rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.6   2.6     1e-18     2e-14      63     172 ..      19     127 ..       8     131 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 53.6 bits;  conditional E-value: 1e-18
+       LRR_9  63 lkrlktlllnnnrilrigegleevlPnleeliltknslqeladldPlaslkkltslsllrnpvtn.kedyrlyviyklkqlrlldfrkvklkeredaee 160
+                 l+    l l nn i  i ++++  lP+l+ l+l++n+++e+ ++  l +l+ l  lsl  np+++ +++y+++viy lk+l++l+ rkv  +er+ ae+
+  EPZ36558.1  19 LNLEIDLNLKNNHINEIKQSIG--LPSLRRLLLADNKISEMKNILGLFKLNGLIELSLYGNPISKnEPNYKNFVIYGLKHLKMLESRKVSEEERRLAER 115
+                 3333358899********9998..9**************************************96268**************************99998 PP
+
+       LRR_9 161 lfrskkgkelak 172
+                   + +  ke ak
+  EPZ36558.1 116 EAKRDILKERAK 127
+                 877766666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (288 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1236  (0.0644455); expected 383.6 (0.02)
+Passed bias filter:                      423  (0.0220554); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.64
+# Mc/sec: 1445.00
+//
+Query:       Q08963  [L=238]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-13   51.2   1.3    2.2e-13   50.2   1.3    1.4  1  LRR_9     Leucine-rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.2   1.3   1.1e-17   2.2e-13      47     168 ..      57     177 ..      47     181 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 50.2 bits;  conditional E-value: 1.1e-17
+   LRR_9  47 idlsdneirkldgfPllkrlktlllnnnrilrigegleevlP.nleeliltknslqeladldPlasl.kkltslsllrnpvtnkedyrlyviyklkqlrlldf 147
+             +dl++n++  + ++     ++tlll  n i+ ++  l   lP n+++l l++ns++++ dl+ l    + l++l+l+ n v++  +yr++v+  +++l  ldf
+  Q08963  57 LDLTNNDLIMIPDLSRRDDIHTLLLGRNNIVEVDGRL---LPmNVQNLTLSNNSIRRFEDLQRLRRApRTLKNLTLIGNQVCHLANYREHVLRLVPHLETLDF 156
+             799**********99999*************998665...55489*******************987257********************************* PP
+
+   LRR_9 148 rkvklkeredaeelfrskkgk 168
+             + v  +er+ a ++ r   g+
+  Q08963 157 QNVTAEERKSAMSFPRQADGD 177
+             ***********9988877776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (238 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       638  (0.0332656); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.17s 00:00:00.51 Elapsed: 00:00:00.62
+# Mc/sec: 1234.29
+//
+Query:       sp|Q9USX8|RU2A_SCHPO  [L=239]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.7e-57  192.4   0.1    6.2e-57  192.1   0.1    1.2  1  LRR_9     Leucine-rich repeat
+    2.5e-12   46.9   6.6    1.3e-07   31.9   0.4    3.4  1  LRR_4     Leucine Rich repeats (2 copies)
+    4.9e-07   29.5   0.2    1.2e-06   28.2   0.2    1.7  1  LRR_8     Leucine rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  192.1   0.1   9.6e-61   6.2e-57       3     164 ..       2     163 ..       1     175 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 192.1 bits;  conditional E-value: 9.6e-61
+                 LRR_9   3 kltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPnle 91 
+                           +l+ae+++q  ++i++++e eldlr y+ip+ienlG   d  d+id++dn+ir l +fP +krl+tll  nnri+ i++++++vlPnl+
+  sp|Q9USX8|RU2A_SCHPO   2 RLNAEFLSQVPSFISPLKETELDLRWYQIPIIENLGVLRDVHDAIDFTDNDIRYLGNFPRMKRLQTLLCGNNRITAIAPDIGKVLPNLK 90 
+                           89*************************************************************************************** PP
+
+                 LRR_9  92 eliltknslqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvklkeredaeelfrs 164
+                           +l l++n+lqe+adldPlas ++lt+ls ++npv++k+ yrly+i+++++l +ldf++v+++er  aee+f  
+  sp|Q9USX8|RU2A_SCHPO  91 TLSLAQNHLQEIADLDPLASCPQLTNLSCIDNPVAQKQYYRLYLIWRIPSLHILDFERVRRNERLRAEEVFGQ 163
+                           **********************************************************************965 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.9   0.4   2.1e-11   1.3e-07       1      41 [.      63     105 ..      63     106 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 31.9 bits;  conditional E-value: 2.1e-11
+                           SS--EEE--SS---E-S-.HHH.-TT--EEE-.-S----GGGG CS
+                 LRR_4   1 pnLevLdLsnNqltdipl.lek.lpnLkvLdLsgNlitdldeL 41 
+                           ++L++L ++nN++t i +  +k lpnLk+L+L +N ++ + +L
+  sp|Q9USX8|RU2A_SCHPO  63 KRLQTLLCGNNRITAIAPdIGKvLPNLKTLSLAQNHLQEIADL 105
+                           68************999988899*********99977777665 PP
+
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.2   0.2   1.9e-10   1.2e-06       2      51 ..      64     114 ..      63     122 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 28.2 bits;  conditional E-value: 1.9e-10
+                           T-SEEE-TTS--SEE-TTSSTT-TT--EEE--SS---GGG.GGGGTT--S- CS
+                 LRR_8   2 nLtsLdLsnNrltslddgaFkglsnLkvLdLsnNllttls.pgafsgLpsL 51 
+                           +L++L   nNr+t++ ++  k l+nLk+L+L +N l+ +   + ++++p+L
+  sp|Q9USX8|RU2A_SCHPO  64 RLQTLLCGNNRITAIAPDIGKVLPNLKTLSLAQNHLQEIAdLDPLASCPQL 114
+                           79999999*****************************97403444555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (239 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       541  (0.0282079); expected 383.6 (0.02)
+Passed bias filter:                      517  (0.0269566); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.15s 00:00:00.51 Elapsed: 00:00:00.60
+# Mc/sec: 1286.63
+//
+Query:       KAF7684685.1  [L=183]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.2e-29  101.8   9.7    3.7e-29  101.6   9.3    1.2  1  LRR_9     Leucine-rich repeat
+    6.1e-11   42.5  26.5    1.5e-07   31.7   3.9    4.7  1  LRR_4     Leucine Rich repeats (2 copies)
+    9.6e-10   38.2  15.4    5.9e-07   29.2   0.8    3.8  1  LRR_8     Leucine rich repeat
+    6.6e-06   25.9   4.8       0.58   10.5   0.0    4.1  2  LRR_6     Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_9  Leucine-rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.6   9.3   7.7e-33   3.7e-29       3     152 ..       2     147 ..       1     158 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 101.6 bits;  conditional E-value: 7.7e-33
+         LRR_9   3 kltaelieqsaqyinavrereldlrGykipvienlGatldqfdtidlsdneirkldgfPllkrlktlllnnnrilrigegleevlPnleeliltkns 99 
+                   ++t++l++q +  +na+++ el lr  ki+ i+ l    d  d +dls+n+i+ ld+fP + rlk l + nn+i rig++l + +Pnl +l +++n+
+  KAF7684685.1   2 RITPDLLKQNKPKLNAIHQIELSLRNKKITEINGLEYLNDSIDYLDLSNNNIKILDNFPKMSRLKHLNVSNNKIERIGDDLYKRIPNLVSLNIANNQ 98 
+                   799********************************************************************************************** PP
+
+         LRR_9 100 lqeladldPlaslkkltslsllrnpvtnkedyrlyviyklkqlrlldfrkvkl 152
+                   +++ a+l  + +++kl++l l+ n+v+    y++y i+++ +l +ldf k+++
+  KAF7684685.1  99 ISDSAQLINISKFEKLKNLILIGNTVA----YKSYCINNIASLDMLDFSKIRK 147
+                   **************************7....999*****************97 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7   3.9   3.1e-11   1.5e-07       5      41 ..      45      82 ..      41      84 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 3.1e-11
+                  EEE--SS---E-S-HHH-TT--EEE-.-S----G.GGG CS
+         LRR_4  5 vLdLsnNqltdiplleklpnLkvLdLsgNlitdl.deL 41
+                  +LdLsnN+++ ++++ k+  Lk+L++s+N+i+++ d+L
+  KAF7684685.1 45 YLDLSNNNIKILDNFPKMSRLKHLNVSNNKIERIgDDL 82
+                  8*************999*********999999995555 PP
+
+>> LRR_8  Leucine rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   0.8   1.2e-10   5.9e-07      20      61 .]      58      99 ..      57      99 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 1.2e-10
+                  SSTT-TT--EEE--SS---GGGGGGGTT--S-.EEE--SS-- CS
+         LRR_8 20 aFkglsnLkvLdLsnNllttlspgafsgLpsLrsLdLsgNrL 61
+                   F ++s Lk+L+ snN+++++  +     p+L sL++ +N++
+  KAF7684685.1 58 NFPKMSRLKHLNVSNNKIERIGDDLYKRIPNLVSLNIANNQI 99
+                  588899999999999999999999999999999999999997 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.8   0.1   0.00021         1       3      16 ..      63      76 ..      61      79 .. 0.87
+   2 !   10.5   0.0   0.00012      0.58       3      18 ..      87     102 ..      86     103 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 0.00021
+         LRR_6  3 thLttLdLsgNdIg 16
+                  + L++L++s N+I 
+  KAF7684685.1 63 SRLKHLNVSNNKIE 76
+                  67**********95 PP
+
+  == domain 2  score: 10.5 bits;  conditional E-value: 0.00012
+         LRR_6   3 thLttLdLsgNdIgde 18 
+                   ++L +L+++ N+I+d 
+  KAF7684685.1  87 PNLVSLNIANNQISDS 102
+                   689***********95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (183 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       709  (0.0369675); expected 383.6 (0.02)
+Passed bias filter:                      305  (0.0159028); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.69
+# Mc/sec: 852.86
+//
+[ok]

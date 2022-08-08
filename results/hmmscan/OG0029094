@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029094.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029094
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q86JP5|RABR_DICDI  [L=307]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-19   70.2   0.0    1.5e-08   34.5   0.0    3.1  2  Ras       Ras family
+    1.5e-06   28.5   0.8    2.2e-05   24.7   0.0    2.9  0  Roc       Ras of Complex, Roc, domain of DAPkinase
+
+
+Domain annotation for each model (and alignments):
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.5   0.0   1.6e-12   1.5e-08       2     103 ..      57     171 ..      56     181 .. 0.85
+   2 !   31.3   0.0   1.5e-11   1.5e-07     106     156 ..     224     274 ..     212     280 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 34.5 bits;  conditional E-value: 1.6e-12
+                           EEEEESTTSSHHHHHHHHHHSSSS.SSCTTTSSEEEEEEEEEET..........TEEE..EEEEEEETTSGGGHHHHHHHHTTESEEEE CS
+                   Ras   2 lvlvGdsavGKtslllrfvkdkFk.eeyesTigvdfytkeievd..........gkev..kleiwDTAGqeefkslrslyyrdaegill 77 
+                           ++++Gd+ vGK s+  r+++++F+ +e    i vd + k+i+            +k v  +l++w        +  +++ yr+++g++l
+  sp|Q86JP5|RABR_DICDI  57 ILMLGDEEVGKGSVARRYTEGYFPiNENLYNIEVDRKHKDIKDWgdglikrkdpNKPVigRLQLWNFHMHKISDIPTKQQYRETNGFIL 145
+                           789********************93455567888888888875577888888885555458*****999888888899*********** PP
+
+                           EEETTBHHHHHTHHHHHHHHHHHSTT CS
+                   Ras  78 vyditsresfenvkkwveeikrvaee 103
+                           ++d+t+++sf ++++++e ++ ++ +
+  sp|Q86JP5|RABR_DICDI 146 FFDVTNKSSFLQLSSLIELVRAKCAD 171
+                           ******************99999983 PP
+
+  == domain 2  score: 31.3 bits;  conditional E-value: 1.5e-11
+                           EEEEEEETTTGGGG-SS-HHHHHHHHHHHTSEEEEEBTTTTTTHHHHHHHH CS
+                   Ras 106 pivLvGnKvDleekravsteegeelakelglkfletSAktnenveeafeel 156
+                           piv+vGnK+D  ++ +v+   +++++++l+++ l +SAktnenv+eaf+ l
+  sp|Q86JP5|RABR_DICDI 224 PIVIVGNKCDDVSNTVVDPIAAKKYCDSLSIPLLFISAKTNENVNEAFNIL 274
+                           79**********************************************866 PP
+
+>> Roc  Ras of Complex, Roc, domain of DAPkinase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (307 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1945  (0.101413); expected 383.6 (0.02)
+Passed bias filter:                      524  (0.0273215); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.25s 00:00:00.65 Elapsed: 00:00:00.59
+# Mc/sec: 1680.63
+//
+[ok]

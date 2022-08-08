@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040287.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040287
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O95813|CER1_HUMAN  [L=267]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-29  101.0   7.6    5.7e-29  100.5   7.6    1.2  1  DAN       DAN domain
+    5.1e-06   26.8   7.6    6.7e-06   26.5   7.6    1.2  1  Cys_knot  Cystine-knot domain
+
+
+Domain annotation for each model (and alignments):
+>> DAN  DAN domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.5   7.6   5.9e-33   5.7e-29      10     113 ..     144     243 ..     135     244 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 100.5 bits;  conditional E-value: 5.9e-33
+                   DAN  10 k...allvtkrkelkkdwCktqpltqtiteegCesktvinrlCyGqCnsfyiPkeiekekeaeafkscarCkPkkattvtvtLkCpgle 95 
+                           +   ++l++k++e+++++C+t+p++qtit+egCe+++v+n+lC+G+C s+++P + ++     +++sc++C P+k+tt+++ L+C+  e
+  sp|O95813|CER1_HUMAN 144 AsqgVILPIKSHEVHWETCRTVPFSQTITHEGCEKVVVQNNLCFGKCGSVHFPGAAQH-----SHTSCSHCLPAKFTTMHLPLNCT--E 225
+                           3344999************************************************999.....678*******************9..7 PP
+
+                   DAN  96 pevrekrvqrvkeCkCks 113
+                            + + k v+ v+eC+Ck+
+  sp|O95813|CER1_HUMAN 226 LSSVIKVVMLVEECQCKV 243
+                           88999***********96 PP
+
+>> Cys_knot  Cystine-knot domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   7.6   6.9e-10   6.7e-06       3      98 ..     161     255 ..     159     262 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 6.9e-10
+                           BSEEEEEEEEE--TTSS--EEEEEEEEEEEEEEE--SBTTTTT----EEEEEEEEEEEEEE-TT--TTS--EEEEEEEEEEEEE.EEET CS
+              Cys_knot   3 kCsktnktisvekegCtscktinttiCaGlCvtkdlvlkdaksaleqkvCtykevtyetkelpgCpegvdptvtypvalsCkCs.kCkt 90 
+                            C++++ + ++++egC++ ++++ ++C G C + +   ++++ ++++++ + + + +++    +C e +++ + ++++++C+C+ k ++
+  sp|O95813|CER1_HUMAN 161 TCRTVPFSQTITHEGCEK-VVVQNNLCFGKCGSVHFPGAAQH-SHTSCSHCLPAKFTTMHLPLNCTELSSVIKVVMLVEECQCKvKTEH 247
+                           79****99999******7.78999********6665544444.34444446777777777778********************977777 PP
+
+                           TTEEEESS CS
+              Cys_knot  91 dnsdctre 98 
+                           ++ ++ ++
+  sp|O95813|CER1_HUMAN 248 EDGHILHA 255
+                           66665555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (267 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       627  (0.032692); expected 383.6 (0.02)
+Passed bias filter:                      401  (0.0209083); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.54
+# Mc/sec: 1608.75
+//
+[ok]

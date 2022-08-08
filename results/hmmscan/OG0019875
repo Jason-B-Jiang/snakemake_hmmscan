@@ -1,0 +1,138 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019875.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019875
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5EFQ8|Q5EFQ8_DANRE  [L=180]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-30  104.2   0.9    6.2e-30  104.0   0.9    1.0  1  IL10      Interleukin 10
+    9.9e-10   38.9   0.2    1.3e-09   38.5   0.2    1.2  1  IL22      Interleukin 22 IL-10-related T-cell-derived-inducib
+
+
+Domain annotation for each model (and alignments):
+>> IL10  Interleukin 10
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.0   0.9   6.5e-34   6.2e-30       8     169 ..      13     174 ..       6     175 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 104.0 bits;  conditional E-value: 6.5e-34
+                             XX.........XXXXXXXXXXX--SHHHHHHHHHHHHHTTHHHHCCC-SSSS-SS-HHHHHHHHSTTHHHHHHHHHHHHHHTHHHHH CS
+                    IL10   8 llagvaasrdaytasesscidlpvslphmlrelraafskvktffqkkdqldnlllteslledfkgylgcqalsemiqfyleevmpqa 94 
+                              l    +++++ ++ +++c  + + +p  lrelr+a+ +++ f++  d+l+ l l+e + ++++   gc  + e++ fyle ++p a
+  tr|Q5EFQ8|Q5EFQ8_DANRE  13 TLLLCDCAQSRRVECKTDCCSFVEGFPLRLRELRSAYKEIQKFYESNDDLEPL-LNEDIKHNINSPYGCHVMNEILHFYLETILPTA 98 
+                             333334444455667778999*****************************986.57889999************************* PP
+
+                             HHHSG..GGHHHHHHHHHHHHHHHHHHHTSTTS-GGG---HHHHHHHHHHHTTHHHHHHHHHHTHHHHHHHHHHHHH CS
+                    IL10  95 enhgp..eikehvnslgeklktlrlrlrrchrflpcenkskavekvksafnklqekgvykamsefdifinyietymt 169
+                              +++p  +    ++s+g+ ++ l++ + +c+r++ c+n    v+ +k++++k++ekgvykam e+d++  yie y++
+  tr|Q5EFQ8|Q5EFQ8_DANRE  99 LQKNPlkHSTTPIDSIGNIFQELKRDMVKCKRYFSCQNPF-EVNSLKNSYEKMKEKGVYKAMGELDLLFRYIEQYLA 174
+                             *999933345679************************976.69********************************85 PP
+
+>> IL22  Interleukin 22 IL-10-related T-cell-derived-inducible factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.5   0.2   1.4e-13   1.3e-09      33     137 ..      63     171 ..      43     173 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 38.5 bits;  conditional E-value: 1.4e-13
+                             S-SSSGGGGTT--GGGHHHHHHHHHHHHHHHTTTTTTTSSTTHHHHHHHH..HHHHHHHHTT---SS-SHHHHHH...HHHHHHHHH CS
+                    IL22  33 vrligeklyvnvresercylmkrvleiilkevllteaderqpyaeevvqf..larlsselsrckiegddehiekn...leklkdkvk 114
+                               l+ e + +n++    c++m ++l++ l+ +l + a +++p  +  +++  + ++ +el r  ++ ++    +n   ++ lk+   
+  tr|Q5EFQ8|Q5EFQ8_DANRE  63 EPLLNEDIKHNINSPYGCHVMNEILHFYLETIL-PTALQKNPLKHSTTPIdsIGNIFQELKRDMVKCKRYFSCQNpfeVNSLKNSYE 148
+                             46999************************9876.66777777766655432256666677776666666665554444899****** PP
+
+                             HTHHHHHHHHHHTHHHHHHHHHH CS
+                    IL22 115 klgesgkikaigeldllfdslen 137
+                             k+ e+g  ka+geldllf ++e+
+  tr|Q5EFQ8|Q5EFQ8_DANRE 149 KMKEKGVYKAMGELDLLFRYIEQ 171
+                             ********************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (180 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       746  (0.0388967); expected 383.6 (0.02)
+Passed bias filter:                      458  (0.0238803); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.57
+# Mc/sec: 1023.07
+//
+Query:       sp|P22301|IL10_HUMAN  [L=178]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.8e-104  346.6   0.7     2e-104  346.5   0.7    1.0  1  IL10      Interleukin 10
+    8.7e-08   32.6   0.3    1.1e-07   32.3   0.3    1.2  1  IL22      Interleukin 22 IL-10-related T-cell-derived-inducib
+
+
+Domain annotation for each model (and alignments):
+>> IL10  Interleukin 10
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  346.5   0.7  2.1e-108    2e-104       2     170 .]       6     174 ..       5     174 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 346.5 bits;  conditional E-value: 2.1e-108
+                           XXXXXXXX.........XXXXXXXXXXX--SHHHHHHHHHHHHHTTHHHHCCC-SSSS-SS-HHHHHHHHSTTHHHHHHHHHHHHHHTH CS
+                  IL10   2 llqclvllagvaasrdaytasesscidlpvslphmlrelraafskvktffqkkdqldnlllteslledfkgylgcqalsemiqfyleev 90 
+                           ll+clvll+gv as ++ t+se+sc+++p +lp+mlr+lr+afs+vktffq+kdqldnlll+eslledfkgylgcqalsemiqfyleev
+  sp|P22301|IL10_HUMAN   6 LLCCLVLLTGVRASPGQGTQSENSCTHFPGNLPNMLRDLRDAFSRVKTFFQMKDQLDNLLLKESLLEDFKGYLGCQALSEMIQFYLEEV 94 
+                           89*************************************************************************************** PP
+
+                           HHHHHHHSGGGHHHHHHHHHHHHHHHHHHHTSTTS-GGG---HHHHHHHHHHHTTHHHHHHHHHHTHHHHHHHHHHHHHT CS
+                  IL10  91 mpqaenhgpeikehvnslgeklktlrlrlrrchrflpcenkskavekvksafnklqekgvykamsefdifinyietymti 170
+                           mpqaen++p+ik hvnslge+lktlrlrlrrchrflpcenkskave+vk+afnklqekg+ykamsefdifinyie+ymt+
+  sp|P22301|IL10_HUMAN  95 MPQAENQDPDIKAHVNSLGENLKTLRLRLRRCHRFLPCENKSKAVEQVKNAFNKLQEKGIYKAMSEFDIFINYIEAYMTM 174
+                           ******************************************************************************95 PP
+
+>> IL22  Interleukin 22 IL-10-related T-cell-derived-inducible factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   0.3   1.1e-11   1.1e-07      29     136 ..      59     169 ..      35     172 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 1.1e-11
+                           TTTSS-SSSGGGGTT--GGGHHHHHHHHHHHHHHHTTTTTTTSSTTHHHHHH....HHHHHHHHHHTT---SS-SHHHHHHHHHHHHHH CS
+                  IL22  29 qdtdvrligeklyvnvresercylmkrvleiilkevllteaderqpyaeevv....qflarlsselsrckiegddehieknleklkdkv 113
+                           ++ d+ l+ e l  + +    c  + +++++ l+ev +++a+++ p ++  v    + l +l  +l rc+     e   k +e++k+  
+  sp|P22301|IL10_HUMAN  59 DQLDNLLLKESLLEDFKGYLGCQALSEMIQFYLEEV-MPQAENQDPDIKAHVnslgENLKTLRLRLRRCHRFLPCENKSKAVEQVKNAF 146
+                           56799999999999999999***************9.599999999776655111156778999************************* PP
+
+                           HHTHHHHHHHHHHTHHHHHHHHH CS
+                  IL22 114 kklgesgkikaigeldllfdsle 136
+                            kl e+g  ka+ e+d++++++e
+  sp|P22301|IL10_HUMAN 147 NKLQEKGIYKAMSEFDIFINYIE 169
+                           *********************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (178 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       894  (0.0466135); expected 383.6 (0.02)
+Passed bias filter:                      579  (0.0301893); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.16s 00:00:00.48 Elapsed: 00:00:00.61
+# Mc/sec: 937.92
+//
+[ok]

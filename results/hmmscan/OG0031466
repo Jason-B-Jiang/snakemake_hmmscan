@@ -1,0 +1,56 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031466.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031466
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54E54|Q54E54_DICDI  [L=1230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-11   44.5   6.1     0.0001   22.9   0.1    3.7  0  Ank_2     Ankyrin repeats (3 copies)
+    1.8e-09   38.1   3.0    2.7e-05   24.7   0.1    3.7  1  Ank_4     Ankyrin repeats (many copies)
+    5.4e-05   23.4   5.2      0.088   13.5   0.0    4.9  0  Ank_3     Ankyrin repeat
+
+
+Domain annotation for each model (and alignments):
+>> Ank_2  Ankyrin repeats (3 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Ank_4  Ankyrin repeats (many copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   0.1   4.2e-09   2.7e-05       2      54 ..     924     976 ..     923     976 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 4.2e-09
+                   Ank_4   2 ltaLhyaaisgrlelvrlLlekg.adinaqdnrsGetalhiAakrgnveilklL 54 
+                             + +Lh a+++g++++v +Ll ++  d++ + ++  e ++h+A+ + ++++++lL
+  tr|Q54E54|Q54E54_DICDI 924 MNVLHLACAMGNVKIVNRLLKTRaFDLYQR-DNKEELCIHKAIGNQKFDVIRLL 976
+                             889******************95599****.888*****************998 PP
+
+>> Ank_3  Ankyrin repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1230 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4446  (0.231816); expected 383.6 (0.02)
+Passed bias filter:                      557  (0.0290422); expected 383.6 (0.02)
+Passed Vit filter:                       165  (0.00860316); expected 19.2 (0.001)
+Passed Fwd filter:                        59  (0.00307628); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.26u 0.26s 00:00:01.52 Elapsed: 00:00:01.34
+# Mc/sec: 2973.12
+//
+[ok]

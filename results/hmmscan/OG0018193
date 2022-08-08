@@ -1,0 +1,106 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0018193.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0018193
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55C85|Q55C85_DICDI  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-15   57.7   0.2    3.9e-15   56.6   0.2    1.5  1  AAA_18    AAA domain
+    7.1e-06   26.1   4.4    1.9e-05   24.7   4.2    1.8  1  dNK       Deoxynucleoside kinase
+
+
+Domain annotation for each model (and alignments):
+>> AAA_18  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   0.2     4e-19   3.9e-15       2     124 ..      15     177 ..      14     182 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 4e-19
+                  AAA_18   2 lltGtpGvGKttlakeLserlgfgvnlrdlakenglllevdpe...........aldeskrldedkldklldaleenns........ 69 
+                             +l G++G+GKt+l+k+ s+    g+ + d a+ +++ ++  ++           ++++ ++++     ++ ++++   +        
+  tr|Q55C85|Q55C85_DICDI  15 CLKGCHGSGKTELCKYFSKV---GFTVLDEAFLDMPTFSIPNQsltmetvwvsnWFQRLLKMELIENSNNNNNNN---Nnknnnnhn 95 
+                             789**************998...9999999999999999988899999888666555555555444333333333...233478899 PP
+
+                  AAA_18  70 .........................leegknl..vidghlaeleserakdikkvvLtaspeelleRlekRgyeeakikenee 124
+                                                      + +g+ l  +i+ ++ el ++ ++dik+v+L++++++l+eR++kR +e +++k  +e
+  tr|Q55C85|Q55C85_DICDI  96 inkfdnqhhkvfiadrspfsailysQNNGHYLdpIISEQIKELKKYTNIDIKTVYLRVEKDVLWERIQKRLQEQPERKKYNE 177
+                             999********************963333333779999999999999999999*********************99885554 PP
+
+>> dNK  Deoxynucleoside kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   4.2     2e-09   1.9e-05       1     153 [.      14     177 ..      14     192 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 2e-09
+                             EEEEESTTSSHHHHHHHHHCCSTCEEEE-....................HHHHCCSSSS....HHHHHHHHSHHHHHHHHHHHHHHH CS
+                     dNK   1 ivveGnIgaGKstlvklLskklgvkvfeE....................pvdkwtnvqk....nlLekfYkdpsrwsfalqtyvlls 63 
+                             +++ G  g+GK+ l k +sk   + v+ E                     v++w   q+    +l+e+  ++ ++   + +++   +
+  tr|Q55C85|Q55C85_DICDI  14 LCLKGCHGSGKTELCKYFSKVG-FTVLDEafldmptfsipnqsltmetvWVSNWF--QRllkmELIENSNNNNNNNNNKNNNNHNIN 97 
+                             6999**************9976.******87777666666665555555555552..224455666666666666555555555555 PP
+
+                             HHHHHHCHHSSS-EEEEES-HHHHHHTHHHHHHHTTSS-HHHHHHHHHHHHHHHHHCCH-SEEEEEE--HHHHHHHHHHCTTCCCT. CS
+                     dNK  64 rlkqqlealatkqvvvleRsiysdryiFakalaekgtlseeelkiykelldnlleelakpdlliYLkasletclerikkRgreeek. 149
+                             ++++q      ++v +++Rs++s+  ++ ++  +  +l++   +  kel +  + +++     +YL+++ +++ eri+kR +e+ + 
+  tr|Q55C85|Q55C85_DICDI  98 KFDNQ-----HHKVFIADRSPFSAI-LYSQN--NGHYLDPIISEQIKELKKYTNIDIK----TVYLRVEKDVLWERIQKRLQEQPEr 172
+                             55554.....789************.88885..5679999999999999999999999....9*****************8765332 PP
+
+                             .TS-H CS
+                     dNK 150 .kiel 153
+                              k ++
+  tr|Q55C85|Q55C85_DICDI 173 kKYNE 177
+                             34444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1673  (0.0872308); expected 383.6 (0.02)
+Passed bias filter:                      396  (0.0206476); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.58
+# Mc/sec: 1273.49
+//
+Query:       tr|Q54YM4|Q54YM4_DICDI  [L=274]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (274 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1321  (0.0688774); expected 383.6 (0.02)
+Passed bias filter:                      424  (0.0221075); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 1550.65
+//
+[ok]

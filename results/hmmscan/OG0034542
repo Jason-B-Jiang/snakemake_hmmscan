@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034542.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034542
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QAD4|F1QAD4_DANRE  [L=127]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.7e-14   53.2   0.0    3.3e-14   52.9   0.0    1.1  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+    2.3e-11   43.6   0.0    2.9e-11   43.3   0.0    1.1  1  Pkinase         Protein kinase domain
+
+
+Domain annotation for each model (and alignments):
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.9   0.0   3.4e-18   3.3e-14     180     258 ..       3      85 ..       1      86 [. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 52.9 bits;  conditional E-value: 3.4e-18
+                             SEESHHHHHHHHHHHHHHHHTTSSGTTTTS.HHHHHHHHHHTTEE....S-BBTTSBHHHHHHHHHHT-SSGGGS--HHHHHHH CS
+          PK_Tyr_Ser-Thr 180 kkftsksDvWsfGvllwEiftlgespypgl.sneevlekleegkr....lekpekcpeelyelmkqcweedpeeRptfkelvek 258
+                             + ++ +sDv+s+G++l+E++t ge py+++ +  +++ ++ +g+      +  + cp+++++l+ +c +++++eRp f +++++
+  tr|F1QAD4|F1QAD4_DANRE   3 NPYSFQSDVYSYGIVLFELMT-GELPYSQIgNRDQIIFMVGRGYLspdlSKLYKRCPKAMKRLVADCIKKSKDERPLFPQILSS 85 
+                             6699*****************.********8888899999999983332344688*************************9875 PP
+
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.3   0.0     3e-15   2.9e-11     171     260 ..       2      84 ..       1      88 [. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 43.3 bits;  conditional E-value: 3e-15
+                             TSCBSHHHHHHHHHHHHHHHHHSS-STTTSSHHHHHHHHHHTHHHHHHHCTSHH...HHHTTS-HHHHHHHHHHT-SSGCCSTTHHH CS
+                 Pkinase 171 eneyskkvDvWslGvilyelltgkppfsgekgkekvekeldqlekilkilgetkeklpeakeiseeakdllkkllkkdpkkRltaee 257
+                             +n+ys ++Dv+s+G++l+el+tg+ p+s+  +++++  ++ + + + +        ++  k++++ +k+l+ +++kk + +R+ + +
+  tr|F1QAD4|F1QAD4_DANRE   2 NNPYSFQSDVYSYGIVLFELMTGELPYSQIGNRDQIIFMVGRGYLSPD-------LSKLYKRCPKAMKRLVADCIKKSKDERPLFPQ 81 
+                             799*************************88877777777777554444.......4588999************************* PP
+
+                             HHT CS
+                 Pkinase 258 llq 260
+                             +l+
+  tr|F1QAD4|F1QAD4_DANRE  82 ILS 84 
+                             997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (127 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       436  (0.0227332); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.29u 0.18s 00:00:00.47 Elapsed: 00:00:00.52
+# Mc/sec: 790.37
+//
+[ok]

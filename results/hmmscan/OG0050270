@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050270.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050270
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q10218|PPC89_SCHPO  [L=783]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.3e-25   88.9   1.4    2.3e-25   88.9   1.4    4.5  1  Cep57_MT_bd  Centrosome microtubule-binding domain of Cep57
+    7.2e-13   48.5   8.7    7.2e-13   48.5   8.7    3.4  1  Cep57_CLD_2  Centrosome localisation domain of PPC89
+
+
+Domain annotation for each model (and alignments):
+>> Cep57_MT_bd  Centrosome microtubule-binding domain of Cep57
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.9   1.4   2.4e-29   2.3e-25       1      77 []     700     776 ..     700     776 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 88.9 bits;  conditional E-value: 2.4e-29
+            Cep57_MT_bd   1 aterpsqspkeaLaevlkeLedEfehlkleyqelaaqynaldpslgkrkRkelaeeleellkrlEkKadqIykLydv 77 
+                            +t+rpsq+p eaL++v+++L++E+++lk++y++l+++yn+l+p ++k+kR+e++++l +l++ +E+K+dqIy Lydv
+  sp|Q10218|PPC89_SCHPO 700 QTLRPSQPPSEALKTVVNQLTNELMELKKRYEKLSDRYNSLTPGYHKHKRQEIKNKLIKLIECMESKSDQIYLLYDV 776
+                            599*************************************************************************8 PP
+
+>> Cep57_CLD_2  Centrosome localisation domain of PPC89
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.5   8.7   7.5e-17   7.2e-13       2      66 ..     368     432 ..     367     433 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 48.5 bits;  conditional E-value: 7.5e-17
+            Cep57_CLD_2   2 eaevktLqnrLdsltrklqvheeelkrLnkERdsalrqLgvAyeelneLkaevealrkELkeqra 66 
+                            ++e+++L ++L+sl++++++ ++ +k++  +R+s++++Lg++++e+neL +e+++l+++L+++++
+  sp|Q10218|PPC89_SCHPO 368 KREKERLSEHLKSLQEQYEHIQSVYKNVLLDRESYIMRLGNKISENNELLNENRVLKEKLQTYLD 432
+                            689**********************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (783 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1845  (0.096199); expected 383.6 (0.02)
+Passed bias filter:                      627  (0.032692); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        32  (0.00166849); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.69u 0.23s 00:00:00.92 Elapsed: 00:00:00.90
+# Mc/sec: 2810.12
+//
+[ok]

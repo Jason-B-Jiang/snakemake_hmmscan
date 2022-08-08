@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049906.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049906
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P53693|RDS1_SCHPO  [L=402]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    9.4e-21   74.5   0.1    1.4e-20   73.9   0.1    1.2  1  Ferritin_2  Ferritin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> Ferritin_2  Ferritin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.9   0.1   7.4e-25   1.4e-20       2     136 ..      78     208 ..      77     210 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 73.9 bits;  conditional E-value: 7.4e-25
+            Ferritin_2   2 dvdiLnfAlnlEyleaafYqaaaeglslddfakalldpavrelakeiakdeeaHvkflkkaleGgkavarpeydfafdpfadqksflel 90 
+                           d + L  Al  Ey+e + ++++++++s ++f++a++d+++r l++ +a++e++H+++ +++l G +a +++ y++   +f+++ sf+++
+  sp|P53693|RDS1_SCHPO  78 DYQSLSLALYHEYIEYDLFNYGLTKFSDAEFDEAGIDAEYRHLIRFMAQQEIGHIELVTNML-GPNAPKACSYQY---NFDTVGSFIDF 162
+                           678899********************************************************.************...*********** PP
+
+            Ferritin_2  91 aavlEdvGvsaYlgaapllsnkelltaaasIlavEArHaavirtll 136
+                           a++l +++ s+  g +p+l++++++++ ++  ++EAr++  +r+l 
+  sp|P53693|RDS1_SCHPO 163 AQTLTKWSESGVYGFLPHLDSRAAAALLLQSITTEARQQMSLRQLQ 208
+                           ******************************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (402 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       372  (0.0193962); expected 383.6 (0.02)
+Passed bias filter:                      330  (0.0172063); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.20s 00:00:00.61 Elapsed: 00:00:00.73
+# Mc/sec: 1789.51
+//
+[ok]

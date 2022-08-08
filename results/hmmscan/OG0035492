@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035492.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035492
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R9G5|F1R9G5_DANRE  [L=395]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.3e-82  274.2   0.0    7.6e-82  273.7   0.0    1.1  1  KCNQ_channel     KCNQ voltage-gated potassium channel
+      4e-33  113.8   3.3      7e-33  113.1   3.3    1.4  1  KCNQC3-Ank-G_bd  Ankyrin-G binding motif of KCNQ2-3
+
+
+Domain annotation for each model (and alignments):
+>> KCNQ_channel  KCNQ voltage-gated potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  273.7   0.0   7.9e-86   7.6e-82       5     185 ..      41     237 ..      37     240 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 273.7 bits;  conditional E-value: 7.9e-86
+            KCNQ_channel   5 edsaeesPskvqkswsfndrerfrtslrlkasasrqsseeaelageevledkslecdllvedlipalkvviravrilkflvakrkfk 91 
+                             ++++eesPsk+ k+++f++rerfrt++r+ka+a rqsse++ +  +++ e+k++ +d+l+e++ip+lk+vira+ri+ fl++k++fk
+  tr|F1R9G5|F1R9G5_DANRE  41 AEAIEESPSKEGKPAGFSNRERFRTAFRMKAYALRQSSEDTGGLPDPTPEEKGFPPDILLEEMIPTLKLVIRALRIIMFLLNKKRFK 127
+                             6789*********************************************************************************** PP
+
+            KCNQ_channel  92 etlrPydvkdvieqysaGhldmlsrikslqtrvdqilgrgpistdkkkk.ekgek...............kaeleavedlsmlGrlv 162
+                             etlrPydvkdvieqysaGhldml+rik+lqtr+d il++gp+ t+k+kk +k++                k++l + ed+sm+Gr+v
+  tr|F1R9G5|F1R9G5_DANRE 128 ETLRPYDVKDVIEQYSAGHLDMLTRIKYLQTRLDLILTPGPTLTPKHKKpQKTPFpypsqqsprqesylaKTSLPDPEDQSMMGRFV 214
+                             *************************************************999999*************99889************** PP
+
+            KCNQ_channel 163 kvekqvqsiekkldllldvyvqv 185
+                             +ve+qv+++ekkld+l+d+++q+
+  tr|F1R9G5|F1R9G5_DANRE 215 RVERQVEDMEKKLDFLVDMHMQH 237
+                             *********************97 PP
+
+>> KCNQC3-Ank-G_bd  Ankyrin-G binding motif of KCNQ2-3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.1   3.3   7.3e-37     7e-33       9     101 ..     300     391 ..     293     392 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 113.1 bits;  conditional E-value: 7.3e-37
+         KCNQC3-Ank-G_bd   9 kretalrdsdtslsllsvdheelersfsGfsisqekenldvlnaglaageaalakvrPsylaeGesdtdsdlftPsGplplsstGeG 95 
+                              ++t+++   t+lsllsv heelers+sGfsis eke+     +gl+a  +++ + r  ylaeGe+dtd+d+ftPsGp+p sstG+G
+  tr|F1R9G5|F1R9G5_DANRE 300 VSQTGGHRVGTPLSLLSVTHEELERSPSGFSISAEKEEVTGKASGLTA-GSSWGRDRR-YLAEGETDTDTDPFTPSGPVPPSSTGDG 384
+                             4567777888*****************************975556555.567*****5.**************************** PP
+
+         KCNQC3-Ank-G_bd  96 .fgdaeW 101
+                               +d  W
+  tr|F1R9G5|F1R9G5_DANRE 385 fQSDGAW 391
+                             6688888 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (395 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       418  (0.0217947); expected 383.6 (0.02)
+Passed bias filter:                      349  (0.018197); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 2090.93
+//
+[ok]

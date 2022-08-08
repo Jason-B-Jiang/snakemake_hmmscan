@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048722.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048722
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q12106  [L=302]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-32  111.0   1.8      3e-17   63.4   0.0    2.1  2  DUF1691   Protein of unknown function (DUF1691)
+    7.8e-08   32.5   2.3      6e-05   23.2   1.5    2.2  0  Sdh_cyt   Succinate dehydrogenase/Fumarate reductase transmem
+
+
+Domain annotation for each model (and alignments):
+>> DUF1691  Protein of unknown function (DUF1691)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.4   0.0   3.2e-21     3e-17       2     104 ..      68     167 ..      67     169 .. 0.84
+   2 !   46.6   0.9   5.2e-16     5e-12       1     104 [.     182     275 ..     182     278 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 63.4 bits;  conditional E-value: 3.2e-21
+  DUF1691   2 llglHvlvnrivPllvgdsskvgllyvahglarspplslleyaaLvgsgvlHivsGlakwlgvlrilkki.kkkkrrrrwliingi.aaakaalglaGg... 98 
+              +++lH+++++i+P++++ds+++++l++++++   +p+  +++++Lv+ ++lH+ +G++     lri++++ k +++r+r l i+++  ++++++gl+Gg   
+   Q12106  68 YFPLHAANTLITPAVSPDSAPDDVLMMVREI---LPS--ITTKLLVAGITLHVSAGVL-----LRIVNNWnKPRRNRHRHLKISAEqDLSQDSIGLTGGisg 159
+              99*****************************...888..9******************.....99*****644555555666654414566********888 PP
+
+  DUF1691  99 ..lgvvkr 104
+                +g++k+
+   Q12106 160 ylFGLYKT 167
+              87777776 PP
+
+  == domain 2  score: 46.6 bits;  conditional E-value: 5.2e-16
+  DUF1691   1 pllglHvlvnrivPllvgdsskvgllyvahglarsppl.....slleyaaLvgsgvlHivsGlakwlgvlrilkkikkkkrrrrwliingiaaakaalglaG 97 
+              p+l++H+l++++vP+    s++v+++++++ l +++ +     +l+++a+L+ sgv+Hi sGl++++gv++      +++r++       +++a + l l+G
+   Q12106 182 PVLIYHLLIMKWVPNSI--STEVDFASIKQLLSSKNRWwkwlgGLVPLAILLESGVYHIGSGLCRYFGVRK------MTSRKK-------WSTAINLLTLVG 268
+              6799*************..*************988777688888899***********************5......677777.......677777888888 PP
+
+  DUF1691  98 glgvvkr 104
+              ++++++ 
+   Q12106 269 FVSLIRL 275
+              7777665 PP
+
+>> Sdh_cyt  Succinate dehydrogenase/Fumarate reductase transmembrane subunit
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (302 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       446  (0.0232546); expected 383.6 (0.02)
+Passed bias filter:                      365  (0.0190312); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 1731.98
+//
+[ok]

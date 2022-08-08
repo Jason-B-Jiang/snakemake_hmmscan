@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033216.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033216
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9XTN4|Q9XTN4_DROME  [L=704]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      3e-33  113.4   0.8      3e-33  113.4   0.8    4.6  1  BrkDBD    Brinker DNA-binding domain
+    1.6e-05   25.0   0.1    1.6e-05   25.0   0.1    2.8  1  HTH_28    Helix-turn-helix domain
+
+
+Domain annotation for each model (and alignments):
+>> BrkDBD  Brinker DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.4   0.8   3.2e-37     3e-33       1      58 []      43     100 ..      43     100 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 113.4 bits;  conditional E-value: 3.2e-37
+                             -------HHHHHHHHHHHHH-TTTTT-HHHHHHHTTS-HHHHHHHHTTHHHHHHHHT- CS
+                  BrkDBD   1 GsrrsysasfKLqvvesfesdndCkGdyRAvAkkynisrknvekWlqveeqlqeadan 58 
+                             Gsrr+++++fKLqv+es+++dndCkG++RA+A+kyni+r++++kWlq+e++l++++an
+  tr|Q9XTN4|Q9XTN4_DROME  43 GSRRIFTPHFKLQVLESYRNDNDCKGNQRATARKYNIHRRQIQKWLQCESNLRSSVAN 100
+                             9******************************************************996 PP
+
+>> HTH_28  Helix-turn-helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   0.1   1.6e-09   1.6e-05       1      35 [.      52      90 ..      52      92 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 1.6e-09
+                  HTH_28  1 qRleivlllaa...Ge.svreaArelgisrrtvyrWikr 35
+                            ++l++++ + +   ++ ++r++Ar+++i+rr++++W+++
+  tr|Q9XTN4|Q9XTN4_DROME 52 FKLQVLESYRNdndCKgNQRATARKYNIHRRQIQKWLQC 90
+                            69999999998788777*******************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (704 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4467  (0.232911); expected 383.6 (0.02)
+Passed bias filter:                      587  (0.0306064); expected 383.6 (0.02)
+Passed Vit filter:                       188  (0.00980239); expected 19.2 (0.001)
+Passed Fwd filter:                        82  (0.00427551); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.16u 0.27s 00:00:01.43 Elapsed: 00:00:01.20
+# Mc/sec: 1903.77
+//
+[ok]

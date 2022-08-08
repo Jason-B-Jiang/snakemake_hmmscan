@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0036044.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0036044
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAG0420783.1  [L=177]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    4.1e-26   91.6   0.0    4.9e-26   91.4   0.0    1.1  1  FMN_red       NADPH-dependent FMN reductase
+      2e-07   31.0   0.0    3.7e-07   30.1   0.0    1.4  1  Flavodoxin_2  Flavodoxin-like fold
+
+
+Domain annotation for each model (and alignments):
+>> FMN_red  NADPH-dependent FMN reductase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.4   0.0   5.2e-30   4.9e-26       1     133 [.      45     176 ..      45     177 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 91.4 bits;  conditional E-value: 5.2e-30
+                   XEEEEEES--STT-HHHHHHHHHHHHCCT.TT.EEEEEECTTC.---.....SS-HCHGHTGGCSHHHHHHHHHHHH-SEEEEEEEECTTCE-HHHH CS
+       FMN_red   1 mkilvisGslrkksntrklaewaaealkeadgaevelidladl.ilpc...alcdkdlesegqtsddveellekikaadaiiivtPeYngsvsgllK 93 
+                   mk+l+i+Gs+++k++t++++  +a +l+++ g+e+e++++  + + +c     c +++   ++ +  v+e +ek k+ada++++tP++++s sg + 
+  KAG0420783.1  45 MKVLLINGSPHEKGCTYTALSLIAGELNAS-GIETEILNVGTKpVGGCigcGGCAAGK--GCVFGGVVNEAIEKAKTADAFVFGTPVHYASASGNMT 138
+                   9**************************999.9**********9999987654444444..59*********************************** PP
+
+                   HHHHTHT..SSSCTTTT-EEEEEEEESSTTTTHHHHHHHH CS
+       FMN_red  94 nalDrlsatrgkkelrgKpvalvavgggrrgglraeeqlr 133
+                   +++Drl   +g+k l+ Kp+a+  +++ r+g+  +  ql 
+  KAG0420783.1 139 SFMDRLA-YAGGKYLAYKPAAIC-ASARRAGTTTTLDQLV 176
+                   ******8.5**************.6669999999888885 PP
+
+>> Flavodoxin_2  Flavodoxin-like fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.1   0.0   3.9e-11   3.7e-07       1     122 [.      45     151 ..      45     173 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 30.1 bits;  conditional E-value: 3.9e-11
+                   -EEEEEE--TTGGCCHHHCHHHHHHHHHCCCTTTEEEEEEHHCCT-----CCCCHCC.HHHHTT..CHHHHHHHHHHHHCSSEEEEEEE-BTTB--H CS
+  Flavodoxin_2   1 mkiLiinahprpeksfssalaqafvealekagphevtvrdLyadflpvlttrdlaae.layeek..padveseqiekllaadaivlqfPlwwfgvPa 94 
+                   mk+L+in++p++ k  ++ ++  ++ +l+++g  e +++++ +   pv    ++ ++  a+ ++     v  e+iek + ada v+++P++  + + 
+  KAG0420783.1  45 MKVLLINGSPHE-KGCTYTALSLIAGELNASG-IETEILNVGTK--PVG--GCIGCGgCAAGKGcvFGGVVNEAIEKAKTADAFVFGTPVHYASASG 135
+                   9**********9.7999***************.9*********6..333..245555556666653344444448********************** PP
+
+                   HHHHHHHHHS-TTTSCEETTCSSCCCCT CS
+  Flavodoxin_2  95 ilKgwiDrvltagfafyteeggegrggg 122
+                    +  ++Dr + ag               
+  KAG0420783.1 136 NMTSFMDRLAYAGGK------------Y 151
+                   ********9766643............3 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (177 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       349  (0.018197); expected 383.6 (0.02)
+Passed bias filter:                      244  (0.0127222); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.18s 00:00:00.49 Elapsed: 00:00:00.57
+# Mc/sec: 1007.64
+//
+[ok]

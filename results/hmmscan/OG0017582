@@ -1,0 +1,122 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0017582.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0017582
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|W6RY57|W6RY57_CAEEL  [L=542]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-40  137.4   0.2    8.1e-40  134.8   0.1    2.3  1  Myosin-VI_CBD  Myosin VI cargo binding domain
+    8.2e-15   54.2   0.0    1.5e-14   53.3   0.0    1.4  1  Myosin_head    Myosin head (motor domain)
+    2.9e-06   26.7   0.9      1e-05   25.0   0.9    1.9  1  IQ             IQ calmodulin-binding motif
+
+
+Domain annotation for each model (and alignments):
+>> Myosin-VI_CBD  Myosin VI cargo binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  134.8   0.1   1.3e-43   8.1e-40       1      90 []     446     534 ..     446     534 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 134.8 bits;  conditional E-value: 1.3e-43
+           Myosin-VI_CBD   1 qryfripfvrpsekkkeskkkkgwWyahfdGqyiarqlelhpdkkpvllvaGkddlqmCelsLeetgLtrkkgaeileeefeeeWkk 87 
+                             qryf+++f+++++kk +  +++g+Wyahf+Gqyi+rql+++p++kp+llvaGkddlqmCel Le+tgL rkkgaei++++fe++W +
+  tr|W6RY57|W6RY57_CAEEL 446 QRYFKVSFATDNKKK-NGGSQSGMWYAHFNGQYIRRQLTIRPSQKPQLLVAGKDDLQMCELPLEQTGLLRKKGAEISSNDFETMWYH 531
+                             8*********99986.56799****************************************************************** PP
+
+           Myosin-VI_CBD  88 agG 90 
+                             +gG
+  tr|W6RY57|W6RY57_CAEEL 532 YGG 534
+                             *98 PP
+
+>> Myosin_head  Myosin head (motor domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.3   0.0   2.3e-18   1.5e-14     591     676 ..       2      84 ..       1      85 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 53.3 bits;  conditional E-value: 2.3e-18
+                             -TT---HHHHHHHHHHTTHHHHHHHHHHSSSEEEEHHHHHHHHGGGSTTSSTSS.SSSHHHHHHHHHHHTTS-GGGEEECSSEEEE CS
+             Myosin_head 591 kakkldeslvleqlrclGvlegirirraGfpnRitfeefvqrYkllakkelkkllkedakkaveailkeleldkeeykiGktKiFf 676
+                             ka+++d s +l ql+c G+ + +r++++Gfp+R+ f++++ +Y+  ++ +l +l   d + +++ ++++l ld++++++G+tK+Ff
+  tr|W6RY57|W6RY57_CAEEL   2 KAWHFDGSAILGQLQCAGMASVLRLMQEGFPSRTSFADLYAMYEKNLPPSLARL---DPRLFSKCLFHALGLDQNDFQFGNTKVFF 84 
+                             799******************************************999998555...9***************************9 PP
+
+>> IQ  IQ calmodulin-binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   0.9   1.6e-09     1e-05       4      21 .]     143     160 ..     141     160 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 1.6e-09
+                             HHHHHHHHHHHHHHHHHH CS
+                      IQ   4 aikIQaawRGylaRkryk 21 
+                             + kIQa++RGyl+Rkr++
+  tr|W6RY57|W6RY57_CAEEL 143 IKKIQAWIRGYLVRKRFH 160
+                             78**************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (542 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2380  (0.124094); expected 383.6 (0.02)
+Passed bias filter:                      597  (0.0311278); expected 383.6 (0.02)
+Passed Vit filter:                       101  (0.00526618); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.56u 0.22s 00:00:00.78 Elapsed: 00:00:00.76
+# Mc/sec: 2320.39
+//
+Query:       tr|W6RRZ0|W6RRZ0_CAEEL  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.7e-40  137.0   0.1    4.2e-40  135.7   0.1    1.7  1  Myosin-VI_CBD  Myosin VI cargo binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Myosin-VI_CBD  Myosin VI cargo binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.7   0.1   2.2e-44   4.2e-40       1      90 []     268     356 ..     268     356 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.7 bits;  conditional E-value: 2.2e-44
+           Myosin-VI_CBD   1 qryfripfvrpsekkkeskkkkgwWyahfdGqyiarqlelhpdkkpvllvaGkddlqmCelsLeetgLtrkkgaeileeefeeeWkk 87 
+                             qryf+++f+++++kk +  +++g+Wyahf+Gqyi+rql+++p++kp+llvaGkddlqmCel Le+tgL rkkgaei++++fe++W +
+  tr|W6RRZ0|W6RRZ0_CAEEL 268 QRYFKVSFATDNKKK-NGGSQSGMWYAHFNGQYIRRQLTIRPSQKPQLLVAGKDDLQMCELPLEQTGLLRKKGAEISSNDFETMWYH 353
+                             8*********99986.56799****************************************************************** PP
+
+           Myosin-VI_CBD  88 agG 90 
+                             +gG
+  tr|W6RRZ0|W6RRZ0_CAEEL 354 YGG 356
+                             *98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2742  (0.142969); expected 383.6 (0.02)
+Passed bias filter:                      699  (0.0364461); expected 383.6 (0.02)
+Passed Vit filter:                       116  (0.00604828); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.53u 0.21s 00:00:00.74 Elapsed: 00:00:00.77
+# Mc/sec: 1538.70
+//
+[ok]

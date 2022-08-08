@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035737.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035737
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E9QDR0|E9QDR0_DANRE  [L=111]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      9e-07   28.9   0.1    2.2e-06   27.6   0.1    1.7  1  Ribosomal_S5  Ribosomal protein S5, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Ribosomal_S5  Ribosomal protein S5, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   0.1   1.2e-10   2.2e-06       1      24 [.      88     111 .]      88     111 .] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 1.2e-10
+                             XEEEEEEEEEEEEEETTEEEEEEE CS
+            Ribosomal_S5   1 lkekvlkikrvqkvtkgGrrtsfs 24 
+                             lk++vlki++vqk+t++G+rt+f+
+  tr|E9QDR0|E9QDR0_DANRE  88 LKDEVLKIMPVQKQTRAGQRTRFK 111
+                             79*********************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (111 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       309  (0.0161114); expected 383.6 (0.02)
+Passed bias filter:                      238  (0.0124094); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.20s 00:00:00.52 Elapsed: 00:00:00.66
+# Mc/sec: 540.06
+//
+[ok]

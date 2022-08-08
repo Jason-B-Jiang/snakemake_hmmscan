@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032908.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032908
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|M9PJJ5|M9PJJ5_DROME  [L=315]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.3e-22   77.9   0.0    1.1e-21   76.9   0.0    1.5  1  Hydrolase_6     Haloacid dehalogenase-like hydrolase
+    1.9e-13   50.4   0.0    3.7e-13   49.5   0.0    1.5  1  Hydrolase_like  HAD-hyrolase-like
+    1.2e-06   28.9   0.0     0.0024   18.1   0.0    2.5  0  HAD_2           Haloacid dehalogenase-like hydrolase
+
+
+Domain annotation for each model (and alignments):
+>> Hydrolase_6  Haloacid dehalogenase-like hydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.9   0.0   1.7e-25   1.1e-21       1     100 [.      25     126 ..      25     127 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 76.9 bits;  conditional E-value: 1.7e-25
+                             EEEESTTTSEE.TTEE-TTHHHHHHHHHHTT-EEEEEE---SS-HHHHHHHHHHTT--.--GGGEEEHHHHHHHHHHHHSXXXEEEE CS
+             Hydrolase_6   1 vlfDidGvLwr.gkkaipgaaealnalraagkkvvllTNnssrseeeyakkleklGvd.iteeqvvtsataaaeylkkrkadkkvlv 85 
+                             v++D+dGv+w   ++ ipg+aeal  l   gk v ++TNns +s +e+++k+ek G+  i+e q+v++a+ + ++l+++k+++++++
+  tr|M9PJJ5|M9PJJ5_DROME  25 VFCDCDGVVWYpLRDFIPGSAEALAHLAHLGKDVTFVTNNSISSVKEHIEKFEKQGHLkIDEHQIVHPAQTICDHLRSIKFEGLIYC 111
+                             689*******86889*************************************8877544**************************** PP
+
+                             ESXHHHHHHHHHTTX CS
+             Hydrolase_6  86 igeeglleelkeagf 100
+                             + + +++e+l +agf
+  tr|M9PJJ5|M9PJJ5_DROME 112 LATSPFKEILVNAGF 126
+                             **************9 PP
+
+>> Hydrolase_like  HAD-hyrolase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   0.0   5.8e-17   3.7e-13       2      70 ..     220     293 ..     219     298 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 5.8e-17
+                             .STTSSHHHHHHHHHH.---GGGEEEEES-TTTHHHHHHHCT-EEEEESSSSS-TTTHHH....HHHHHT---S CS
+          Hydrolase_like   2 lGKPepgmydaalevl.gsppeevlmiGDrlatDiagAneaGlksvLVltGvtrpedlek....aahkptyvad 70 
+                             lGKP   + +  le++ ++pp++vl++GD+la+Di +A++ G++++LVltG t+ ed+++        p+y ad
+  tr|M9PJJ5|M9PJJ5_DROME 220 LGKPGEDLRKLLLERHrEIPPSRVLFVGDSLASDIGFARASGYQTLLVLTGGTKLEDVQRlpidHSQMPDYLAD 293
+                             69**************999**************************************99954322235666655 PP
+
+>> HAD_2  Haloacid dehalogenase-like hydrolase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (315 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       592  (0.0308671); expected 383.6 (0.02)
+Passed bias filter:                      575  (0.0299807); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.22s 00:00:00.63 Elapsed: 00:00:00.69
+# Mc/sec: 1486.43
+//
+[ok]

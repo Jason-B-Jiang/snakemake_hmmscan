@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040883.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040883
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NQ92|COPRS_HUMAN  [L=184]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-80  268.9   5.1    2.3e-80  268.7   5.1    1.1  1  COPR5     Cooperator of PRMT5 family
+
+
+Domain annotation for each model (and alignments):
+>> COPR5  Cooperator of PRMT5 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  268.7   5.1   1.2e-84   2.3e-80       1     150 []      34     184 .]      34     184 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 268.7 bits;  conditional E-value: 1.2e-84
+                  COPR5   1 vglatadhsgeeretekatdrlasGaqsvpsdvpahgegshseeegval.eeesdgeenlweleeaeallPkeqtaelvkedwdlelk 87 
+                            +g+atadhs++ereteka+drla+G+qs+p+d pa+geg+hseeeg+a+ ee+sdge n+wel+e+++++Pkeq  +l++edwd elk
+  sp|Q9NQ92|COPRS_HUMAN  34 AGFATADHSSQERETEKAMDRLARGTQSIPNDSPARGEGTHSEEEGFAMdEEDSDGELNTWELSEGTNCPPKEQPGDLFNEDWDSELK 121
+                            58***********************************************9999*********************************** PP
+
+                  COPR5  88 ldqGnpydaddiqgsisqevkpWvccapqGdliydPsWhhPpPliPhyskmvfetGqfddaed 150
+                            +dqGnpydaddiq sisqe+kpWvccapqGd+iydPsWhhPpPliP+yskmvfetGqfddaed
+  sp|Q9NQ92|COPRS_HUMAN 122 ADQGNPYDADDIQESISQELKPWVCCAPQGDMIYDPSWHHPPPLIPYYSKMVFETGQFDDAED 184
+                            **************************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (184 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       358  (0.0186662); expected 383.6 (0.02)
+Passed bias filter:                      253  (0.0131915); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.59
+# Mc/sec: 1013.71
+//
+[ok]

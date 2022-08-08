@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037752.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037752
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651163.1  [L=126]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-09   39.2   0.0    1.3e-09   39.0   0.0    1.1  1  HsdM_N    HsdM N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> HsdM_N  HsdM N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.0   0.0   6.9e-14   1.3e-09       5     127 ..      14     121 ..      10     124 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 39.0 bits;  conditional E-value: 6.9e-14
+                     HHHHHHHHHHS-SHHHHHHHHHHHHHHHHHHHHHHHHHHCC.........--..--------.....S-CCCSHHHHHHS--HHHHHHHHHHCHH CS
+          HsdM_N   5 lwkaadkLRgkvdaseykeyilgLlFlkrlddvleeeeeklleelykeneaeeeleeeldskeeafyipeelrWknlknkkdndelgealnkafp 99 
+                     + + ad +Rg  d++e +++   Ll+lk+l+dvl +e +k            + +++e       f +pe++ + +l  ++++   g+ ln+a++
+  XP_002651163.1  14 VLRSADVFRGYGDPMESVSFTMALLLLKYLSDVLLDEPRKE-----------H-KAMED----ARFIVPEKADFYRLLSNAREPGNGNRLNQALA 92 
+                     56779****766************************98888...........2.33332....3499***********99666679********* PP
+
+                     HHCT--STHHHHHHS.......S-----S CS
+          HsdM_N 100 aleelndslkgvfmd.dfnsfalgiitke 127
+                     al+++n +lk+ f   df+s  lg++t++
+  XP_002651163.1  93 ALQSANYELKDAFLGiDFDSIVLGNETPK 121
+                     ******99999998668888888777665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (126 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       421  (0.0219511); expected 383.6 (0.02)
+Passed bias filter:                      404  (0.0210647); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.19s 00:00:00.51 Elapsed: 00:00:00.63
+# Mc/sec: 646.06
+//
+[ok]

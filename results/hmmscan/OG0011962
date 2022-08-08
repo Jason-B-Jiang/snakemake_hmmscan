@@ -1,0 +1,352 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0011962.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0011962
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P00973|OAS1_HUMAN  [L=400]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.3e-87  291.4   1.1      3e-87  291.1   1.1    1.1  1  OAS1_C        2'-5'-oligoadenylate synthetase 1, domain 2, C-
+    2.4e-08   34.3   0.0      5e-08   33.2   0.0    1.6  1  NTP_transf_2  Nucleotidyltransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> OAS1_C  2'-5'-oligoadenylate synthetase 1, domain 2, C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  291.1   1.1   3.1e-91     3e-87       2     182 ..     164     344 ..     163     348 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 291.1 bits;  conditional E-value: 3.1e-91
+                           ---HHHHHHHHHHHHH...TTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SSS- CS
+                OAS1_C   2 kpspevYaeLikslkk...egefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskkekf 87 
+                           kp+p++Y++Li++++    egefs+cftelqr+Flk+rptklksLirLvkhWyq++kkkl    +lpp+yaleLLtvyaWE+gs k++f
+  sp|P00973|OAS1_HUMAN 164 KPNPQIYVKLIEECTDlqkEGEFSTCFTELQRDFLKQRPTKLKSLIRLVKHWYQNCKKKL---GKLPPQYALELLTVYAWERGSMKTHF 249
+                           89************98889*****************************************...99************************ PP
+
+                           -HHHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTSS CS
+                OAS1_C  88 klaeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkdes 176
+                           ++a+g+rtvleL+ +y++lciyWt++Ydf++++++++l++ql+k+rPviLDPadPt+n+g+g+ k W++la+ea+awl+++cfk++d+s
+  sp|P00973|OAS1_HUMAN 250 NTAQGFRTVLELVINYQQLCIYWTKYYDFKNPIIEKYLRRQLTKPRPVILDPADPTGNLGGGDPKGWRQLAQEAEAWLNYPCFKNWDGS 338
+                           ***************************************************************************************** PP
+
+                           B----G CS
+                OAS1_C 177 pvqswe 182
+                           pv+sw 
+  sp|P00973|OAS1_HUMAN 339 PVSSWI 344
+                           *****6 PP
+
+>> NTP_transf_2  Nucleotidyltransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.2   0.0   5.2e-12     5e-08       1      76 [.      37     119 ..      37     140 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 33.2 bits;  conditional E-value: 5.2e-12
+                           HHHHHHHHHHHTT.....TSEEEEEHHHHCTTSCTT.SSEEEEEEESTTCHH.HHHCHHHHHHHHCCCEEECTTEEEEEECEE CS
+          NTP_transf_2   1 lkklleelkelep.....vakvvlfGSyarGtalkg.SDiDllvvlpeevsr.ekeegleklaeiikfleellglevdlvtre 76 
+                           ++ +l+e +++ +     v kvv  GS+ +Gt+l+g SD Dl+v+l+  +   ++ +++ + +++i  + e  ++e  ++++ 
+  sp|P00973|OAS1_HUMAN  37 ICGFLKERCFRGSsypvcVSKVVKGGSSGKGTTLRGrSDADLVVFLSPLTTFqDQLNRRGEFIQEIRRQLEACQRERAFSVKF 119
+                           577899999999999999*******************************8854444444444444444444455555555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (400 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       579  (0.0301893); expected 383.6 (0.02)
+Passed bias filter:                      538  (0.0280515); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.21s 00:00:00.65 Elapsed: 00:00:00.66
+# Mc/sec: 1948.35
+//
+Query:       sp|Q9Y6K5|OAS3_HUMAN  [L=1087]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   2.2e-245  806.6   0.0    3.5e-82  274.5   0.0    3.3  3  OAS1_C        2'-5'-oligoadenylate synthetase 1, domain 2, C-
+    6.1e-18   65.0   0.0    1.7e-10   41.1   0.0    3.4  1  NTP_transf_2  Nucleotidyltransferase domain
+    1.7e-14   54.4   0.0    1.3e-06   28.8   0.0    3.5  0  SMODS         Second Messenger Oligonucleotide or Dinucleotid
+
+
+Domain annotation for each model (and alignments):
+>> OAS1_C  2'-5'-oligoadenylate synthetase 1, domain 2, C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  269.0   0.0   2.8e-84   1.8e-80       2     182 ..     161     341 ..     160     344 .. 0.99
+   2 !  259.4   0.0   2.3e-81   1.5e-77       2     185 ..     560     744 ..     559     745 .. 0.96
+   3 !  274.5   0.0   5.4e-86   3.5e-82       2     185 ..     904    1085 ..     903    1086 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 269.0 bits;  conditional E-value: 2.8e-84
+                           ---HHHHHHHHHHHHHTTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SSS--HH CS
+                OAS1_C   2 kpspevYaeLikslkkegefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskkekfkla 90 
+                           kp+p+vY++L++s ++ ge++acftel+r+F++ rp+klk+Li+LvkhWy+qv  +   k++lpp yaleLLt++aWEqg+kk++f+la
+  sp|Q9Y6K5|OAS3_HUMAN 161 KPKPQVYSTLLNSGCQGGEHAACFTELRRNFVNIRPAKLKNLILLVKHWYHQVCLQGLWKETLPPVYALELLTIFAWEQGCKKDAFSLA 249
+                           89***************************************************99999******************************* PP
+
+                           HHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTSSB-- CS
+                OAS1_C  91 eglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkdespvq 179
+                           eglrtvl Liq++++lc++WtvnY fed++v++fl++qlk++rPviLDPadPt+++g+g++++W+lla+eaa++++++cf +  ++pvq
+  sp|Q9Y6K5|OAS3_HUMAN 250 EGLRTVLGLIQQHQHLCVFWTVNYGFEDPAVGQFLQRQLKRPRPVILDPADPTWDLGNGAAWHWDLLAQEAASCYDHPCFLRGMGDPVQ 338
+                           ***************************************************************************************** PP
+
+                           --G CS
+                OAS1_C 180 swe 182
+                           sw+
+  sp|Q9Y6K5|OAS3_HUMAN 339 SWK 341
+                           **8 PP
+
+  == domain 2  score: 259.4 bits;  conditional E-value: 2.3e-81
+                           ---HHHHHHHHHHHHHTTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH......TTGS--HHHHHHHHHHHHHHHT-SSS CS
+                OAS1_C   2 kpspevYaeLikslkkegefsacftelqrkFlksrptklksLirLvkhWyqqvkkkl....kkkaslppkyaleLLtvyaWEqgskkek 86 
+                           kp+p+vY++L++s ++ege++acf+el+r+F++ rp+klk+Li+LvkhWy+qv+ ++     + aslpp+yaleLLt++aWEqg++++ 
+  sp|Q9Y6K5|OAS3_HUMAN 560 KPNPQVYSRLLTSGCQEGEHKACFAELRRNFMNIRPVKLKNLILLVKHWYRQVAAQNkgkgPAPASLPPAYALELLTIFAWEQGCRQDC 648
+                           89***************************************************9998343335689*********************** PP
+
+                           --HHHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTS CS
+                OAS1_C  87 fklaeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkde 175
+                           f++a+g+rtvl L+q++++lc+yWtvnY++ed+++r +l  ql+k+rP++LDPadPt+nvg+g   sWella+eaaa+  ++cf ++d+
+  sp|Q9Y6K5|OAS3_HUMAN 649 FNMAQGFRTVLGLVQQHQQLCVYWTVNYSTEDPAMRMHLLGQLRKPRPLVLDPADPTWNVGHG---SWELLAQEAAALGMQACFLSRDG 734
+                           ***************************************************************...6********************** PP
+
+                           SB----GGGT CS
+                OAS1_C 176 spvqswevkp 185
+                           ++vq+w+v+p
+  sp|Q9Y6K5|OAS3_HUMAN 735 TSVQPWDVMP 744
+                           ********87 PP
+
+  == domain 3  score: 274.5 bits;  conditional E-value: 5.4e-86
+                            ---HHHHHHHHHHHHHTTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SSS-- CS
+                OAS1_C    2 kpspevYaeLikslkkegefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskkekfk 88  
+                            +ps++vY++Li+s++++ge+s+cftelqr+F+ srptklksLirLvkhWyqq++k +k + slpp++ leLLtvyaWEqg k+++f+
+  sp|Q9Y6K5|OAS3_HUMAN  904 RPSSQVYVDLIHSYSNAGEYSTCFTELQRDFIISRPTKLKSLIRLVKHWYQQCTKISKGRGSLPPQHGLELLTVYAWEQGGKDSQFN 990 
+                            799************************************************************************************ PP
+
+                            HHHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTS CS
+                OAS1_C   89 laeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkde 175 
+                            +aeg+rtvleL+++y++lciyWt nY+ +d+tv++flk+ql+k+rP+iLDPadPt+n+g++  ++W+llakeaaa++++ c++ +++
+  sp|Q9Y6K5|OAS3_HUMAN  991 MAEGFRTVLELVTQYRQLCIYWTINYNAKDKTVGDFLKQQLQKPRPIILDPADPTGNLGHN--ARWDLLAKEAAACTSALCCMGRNG 1075
+                            ************************************************************9..79********************** PP
+
+                            SB----GGGT CS
+                OAS1_C  176 spvqswevkp 185 
+                             p+q+w vk 
+  sp|Q9Y6K5|OAS3_HUMAN 1076 IPIQPWPVKA 1085
+                            ******9975 PP
+
+>> NTP_transf_2  Nucleotidyltransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.1   0.0   2.7e-14   1.7e-10       1      92 [.     780     870 ..     780     872 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 41.1 bits;  conditional E-value: 2.7e-14
+                           HHHHHHHHHHHTT...TSEEEEEHHHHCTTSCTT.SSEEEEEEESTTCHHHHHCHHHHHHHHCCCEEECTTEEEEEECEEECCCCTEEE CS
+          NTP_transf_2   1 lkklleelkelep...vakvvlfGSyarGtalkg.SDiDllvvlpeevsrekeegleklaeiikfleellglevdlvtrekledpllvk 85 
+                           ++ +l+e +++++   v+kvv  GS+a+Gtal+g SD Dl+v+l+ +++    e+ +k+aeii+++    +le+   +r+    ++ v+
+  sp|Q9Y6K5|OAS3_HUMAN 780 ICSFLKENCFRNSpikVIKVVKGGSSAKGTALRGrSDADLVVFLSCFSQ--FTEQGNKRAEIISEIRA--QLEACQQERQFEV-KFEVS 863
+                           68899*******99*********************************87..78888999999999988..8888888888777.77777 PP
+
+                           EEECEEE CS
+          NTP_transf_2  86 sileerp 92 
+                           ++++ r+
+  sp|Q9Y6K5|OAS3_HUMAN 864 KWENPRV 870
+                           7776665 PP
+
+>> SMODS  Second Messenger Oligonucleotide or Dinucleotide Synthetase domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1087 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       398  (0.0207519); expected 383.6 (0.02)
+Passed bias filter:                      352  (0.0183534); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.50u 0.16s 00:00:00.66 Elapsed: 00:00:00.73
+# Mc/sec: 4798.91
+//
+Query:       sp|Q15646|OASL_HUMAN  [L=514]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.6e-78  262.6   0.2    2.6e-78  261.9   0.2    1.4  1  OAS1_C     2'-5'-oligoadenylate synthetase 1, domain 2, C-ter
+    4.8e-19   68.0   0.1    1.4e-16   60.1   0.0    2.6  1  ubiquitin  Ubiquitin family
+    1.6e-08   34.3   0.0    6.2e-07   29.2   0.0    2.5  1  Rad60-SLD  Ubiquitin-2 like Rad60 SUMO-like
+
+
+Domain annotation for each model (and alignments):
+>> OAS1_C  2'-5'-oligoadenylate synthetase 1, domain 2, C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  261.9   0.2   4.1e-82   2.6e-78       2     185 ..     168     350 ..     167     351 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 261.9 bits;  conditional E-value: 4.1e-82
+                           ---HHHHHHHHHHHHHTTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SS.S--H CS
+                OAS1_C   2 kpspevYaeLikslkkegefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskke.kfkl 89 
+                           +p pevY++Lik++  +g+f ++f+elqr+F+k+rptklksL+rLvkhWyqq+ k+ +++a+lpp yaleLLt+yaWE+g++++ +f l
+  sp|Q15646|OASL_HUMAN 168 QPPPEVYVSLIKACGGPGNFCPSFSELQRNFVKHRPTKLKSLLRLVKHWYQQYVKARSPRANLPPLYALELLTIYAWEMGTEEDeNFML 256
+                           799******************************************************************************9998**** PP
+
+                           HHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTSSB- CS
+                OAS1_C  90 aeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkdespv 178
+                           +eg++tv++L+ +y+ +ciyWt++Y++++ +++++++kqlkkerP+iLDPadPt nv+eg  ++W+++a++a+++lk+ c+ +++e+p+
+  sp|Q15646|OASL_HUMAN 257 DEGFTTVMDLLLEYEVICIYWTKYYTLHNAIIEDCVRKQLKKERPIILDPADPTLNVAEG--YRWDIVAQRASQCLKQDCCYDNRENPI 343
+                           ************************************************************..89************************* PP
+
+                           ---GGGT CS
+                OAS1_C 179 qswevkp 185
+                           +sw+vk+
+  sp|Q15646|OASL_HUMAN 344 SSWNVKR 350
+                           *****86 PP
+
+>> ubiquitin  Ubiquitin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.1   0.0   2.2e-20   1.4e-16       1      70 [.     436     505 ..     436     507 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 60.1 bits;  conditional E-value: 2.2e-20
+                           EEEEETTSEEEEEEEETTSBHHHHHHHHHHHHTSSGGGEEEEETTEEE-TTSBHGGHTTSTTEEEEEEES CS
+             ubiquitin   1 itVktldgkkitleveesdtveelKekiaekegipaeqqrLiysGkvLeddqtleeygiqdgstihlvlr 70 
+                           ++Vk+ dg ++ + +++++ ++ lK++i++++g+p +qq+L ++G+vL+d + l+ ygiqd +t+ l  +
+  sp|Q15646|OASL_HUMAN 436 VFVKNPDGGSYAYAINPNSFILGLKQQIEDQQGLPKKQQQLEFQGQVLQDWLGLGIYGIQDSDTLILSKK 505
+                           79***************************************************************99766 PP
+
+>> Rad60-SLD  Ubiquitin-2 like Rad60 SUMO-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   0.0   9.8e-11   6.2e-07       1      68 [.     434     500 ..     434     502 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 9.8e-11
+                           EEEEEEESSS--EEEEEETTSBHHHHHHHHHHHHT----TT-EEEETTEE--TTSBGGGSS--TTEEE CS
+             Rad60-SLD   1 ikiilkgkdgkevkikVkptttvskLieayrkkkgiseeqkvrLiFDGeeLdpnstvedldiedgdti 68 
+                           i++++k++dg  + + ++p++ +  L+++ ++++g+++ ++++L F+G+ L++   ++ ++i+d dt+
+  sp|Q15646|OASL_HUMAN 434 IQVFVKNPDGGSYAYAINPNSFILGLKQQIEDQQGLPK-KQQQLEFQGQVLQDWLGLGIYGIQDSDTL 500
+                           89************************************.***************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (514 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       599  (0.0312321); expected 383.6 (0.02)
+Passed bias filter:                      531  (0.0276865); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.22s 00:00:00.65 Elapsed: 00:00:00.59
+# Mc/sec: 2816.11
+//
+Query:       sp|P29728|OAS2_HUMAN  [L=719]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   1.1e-162  537.0   1.3    7.6e-86  286.5   0.0    2.3  2  OAS1_C        2'-5'-oligoadenylate synthetase 1, domain 2, C-
+    8.9e-14   51.7   0.1    1.3e-09   38.4   0.0    2.6  1  NTP_transf_2  Nucleotidyltransferase domain
+    2.8e-11   43.9   0.1    2.6e-05   24.6   0.1    2.6  0  SMODS         Second Messenger Oligonucleotide or Dinucleotid
+
+
+Domain annotation for each model (and alignments):
+>> OAS1_C  2'-5'-oligoadenylate synthetase 1, domain 2, C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  248.4   1.4   5.5e-78   3.5e-74       2     185 ..     154     337 ..     153     338 .. 0.95
+   2 !  286.5   0.0   1.2e-89   7.6e-86       2     185 ..     497     684 ..     496     685 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 248.4 bits;  conditional E-value: 5.5e-78
+                           ---HHHHHHHHHHHHH....TTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SSS CS
+                OAS1_C   2 kpspevYaeLikslkk....egefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskkek 86 
+                           +psp++Y+eL++sl+k    +gef++cftelq+kF+++rp klk+Li+L+khW+qq++kk  k+ +  + yaleLLtvyaWEqg++k++
+  sp|P29728|OAS2_HUMAN 154 NPSPWIYRELKRSLDKtnasPGEFAVCFTELQQKFFDNRPGKLKDLILLIKHWHQQCQKKI-KDLPSLSPYALELLTVYAWEQGCRKDN 241
+                           799********999988899****************************************9.66666677******************* PP
+
+                           --HHHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTS CS
+                OAS1_C  87 fklaeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkde 175
+                           f++aeg+rtvleLi+ +++lciyW+vnY+fedet+r++l +ql+++rPviLDP dPt+nv+++k  +W+ l+kea++wl+s+ +  ++e
+  sp|P29728|OAS2_HUMAN 242 FDIAEGVRTVLELIKCQEKLCIYWMVNYNFEDETIRNILLHQLQSARPVILDPVDPTNNVSGDK-ICWQWLKKEAQTWLTSPNL--DNE 327
+                           *************************************************************995.9*************99998..677 PP
+
+                           SB----GGGT CS
+                OAS1_C 176 spvqswevkp 185
+                            p++sw+v p
+  sp|P29728|OAS2_HUMAN 328 LPAPSWNVLP 337
+                           8999***976 PP
+
+  == domain 2  score: 286.5 bits;  conditional E-value: 1.2e-89
+                           ---HHHHHHHHHHHHH....TTTTGGGGHHHHHHHHHTS-HHHHHHHHHHHHHHHHHHHHH..TTGS--HHHHHHHHHHHHHHHT-SSS CS
+                OAS1_C   2 kpspevYaeLikslkk....egefsacftelqrkFlksrptklksLirLvkhWyqqvkkklkkkaslppkyaleLLtvyaWEqgskkek 86 
+                           +pspevYa Li+ +k+     gefs+cft lqr+F++srptklk+LirLvkhWy+++++klk+k slppkyaleLLt+yaWEqgs+  +
+  sp|P29728|OAS2_HUMAN 497 TPSPEVYAGLIDLYKSsdlpGGEFSTCFTVLQRNFIRSRPTKLKDLIRLVKHWYKECERKLKPKGSLPPKYALELLTIYAWEQGSGVPD 585
+                           799*******99999889999******************************************************************** PP
+
+                           --HHHHHHHHHHHHHTGGG-EE---SS--SSSHHHHHHHHHHHTSSS-EEB-TT-TT-BTTTS-HHHHHHHHHHHHHHTTSGGGBTTTS CS
+                OAS1_C  87 fklaeglrtvleLiqkykelciyWtvnYdfedetvreflkkqlkkerPviLDPadPtknvgegkkksWellakeaaawlksscfkkkde 175
+                           f++aeg+rtvleL+++y++lci+W+vnY+fedetvr+fl +ql+k+rPviLDPa+Pt++vg+g++++W+llakea++wl+s+cfk+ ++
+  sp|P29728|OAS2_HUMAN 586 FDTAEGFRTVLELVTQYQQLCIFWKVNYNFEDETVRKFLLSQLQKTRPVILDPAEPTGDVGGGDRWCWHLLAKEAKEWLSSPCFKDGTG 674
+                           ***************************************************************************************** PP
+
+                           SB----GGGT CS
+                OAS1_C 176 spvqswevkp 185
+                           +p+++w+v++
+  sp|P29728|OAS2_HUMAN 675 NPIPPWKVPT 684
+                           *******975 PP
+
+>> NTP_transf_2  Nucleotidyltransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   0.0     2e-13   1.3e-09       1      65 [.     373     438 ..     373     471 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 2e-13
+                           HHHHHHHHHHHTT..TSEEEEEHHHHCTTSCTT.SSEEEEEEESTTCHHHHHCHHHHHHHHCCCEEEC CS
+          NTP_transf_2   1 lkklleelkelep..vakvvlfGSyarGtalkg.SDiDllvvlpeevsrekeegleklaeiikfleel 65 
+                           ++++l+e +++++  ++++v  GS+a+Gtalk+ SD Dl+v++++ +s  +  +++++++i k++ e+
+  sp|P29728|OAS2_HUMAN 373 IRTFLKENCFRQStaKIQIVRGGSTAKGTALKTgSDADLVVFHNSLKS--YTSQKNERHKIVKEIHEQ 438
+                           6899******************************************88..666666666666665553 PP
+
+>> SMODS  Second Messenger Oligonucleotide or Dinucleotide Synthetase domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (719 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       695  (0.0362376); expected 383.6 (0.02)
+Passed bias filter:                      558  (0.0290943); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.47u 0.16s 00:00:00.63 Elapsed: 00:00:00.71
+# Mc/sec: 3270.55
+//
+[ok]

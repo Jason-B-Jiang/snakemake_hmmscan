@@ -1,0 +1,876 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003197.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003197
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q22968|Q22968_CAEEL  [L=402]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-81  274.0   0.0    1.3e-81  273.8   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    3.3e-19   68.6   0.0    8.3e-19   67.4   0.0    1.7  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  273.8   0.0   1.3e-85   1.3e-81       1     255 []      30     287 ..      30     287 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 273.8 bits;  conditional E-value: 1.3e-85
+                   GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllner 87 
+                             l + hk++g k+vefaG++mP qY++ +ik+++ ++R++++lfDvshm + +++G+d+ af+++ltt+dv++l+++++t+++++ne+
+  tr|Q22968|Q22968_CAEEL  30 LIETHKKHGGKLVEFAGYDMPTQYADFSIKESTIHTRKHVSLFDVSHMLQTYITGKDRVAFIESLTTADVQGLQENSGTLSVFTNEK 116
+                             5689*********************************************************************************** PP
+
+                   GCV_T  88 GgvidDlivyrlgedefllvvnaanrekdlawlekhaeklds...vevedvtedlallavqGPkarelleklvgadleelkffsare 171
+                             Gg++dDli++++++d ++lv+na++ ekdl +l+++a+ ++s    +  ++ ++ +l+avqGP+ +++l++ +++dl++l f+++  
+  tr|Q22968|Q22968_CAEEL 117 GGIKDDLIIMKTDKDFLFLVTNAGCIEKDLPYLQENAAAWRSkgkDVKIETLDNRGLVAVQGPEMAKVLQEGTDIDLSKLTFMKTTV 203
+                             ***************************************999997667778899********************************* PP
+
+                   GCV_T 172 veiggvkv.lvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgwa 255
+                              ++ g++  +v+r+gytGedG+ei++ + +ae+++e+Ll++    +vk aGlgArd+lRlEagl+lyG+d++e+ttP+eagl ++
+  tr|Q22968|Q22968_CAEEL 204 GKVFGIDGcRVTRCGYTGEDGVEISVDPTKAEQLVERLLASQ-AGSVKLAGLGARDALRLEAGLCLYGSDIEENTTPIEAGLAFV 287
+                             ******988*******************************95.679************************************985 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.4   0.0   8.6e-23   8.3e-19       1      79 [.     315     394 ..     315     395 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 67.4 bits;  conditional E-value: 8.6e-23
+                 GCV_T_C   1 rrlvglelddgapllrggepvlr..dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                             +r+vgl+   g   +r + p+++  d+  +G+vTSg++sptlgk+ia+Ayv++ ++k+gt++ v+   k+ p++vvk+pf+
+  tr|Q22968|Q22968_CAEEL 315 KRRVGLLAPAG-RCPRSHLPLIDplDKCSIGFVTSGCPSPTLGKNIAIAYVDKSHSKIGTKFVVDFGAKQAPVEVVKMPFV 394
+                             899*****655.679******96679999***************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (402 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       461  (0.0240367); expected 383.6 (0.02)
+Passed bias filter:                      427  (0.0222639); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.73
+# Mc/sec: 1780.24
+//
+Query:       sp|Q54DD3|GCST_DICDI  [L=403]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.7e-86  287.4   0.0    1.1e-85  287.1   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    7.2e-18   64.3   0.0    1.2e-17   63.6   0.0    1.4  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  287.1   0.0   1.1e-89   1.1e-85       1     254 [.      29     289 ..      29     290 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 287.1 bits;  conditional E-value: 1.1e-89
+                 GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGg 89 
+                           l+++hk+lgak+v+f GwemPvqY   g ++Eh++vR+++glfDvshmg++++ G+d+ +f+++++++d+++l+ g++++++++ne+Gg
+  sp|Q54DD3|GCST_DICDI  29 LNELHKELGAKMVPFCGWEMPVQYP-AGVMKEHLHVRKESGLFDVSHMGQLRIHGKDRVKFFESIVVADLQALPTGHSKLSVFTNEKGG 116
+                           6789*********************.9************************************************************** PP
+
+                 GCV_T  90 vidDlivyrlgedefllvvnaanrekdlawlekhaeklds.....vevedvtedlallavqGPkarelleklvgadl.eelkffsarev 172
+                           +idD+++++   d++++vvna++++kd++++++++++++s      +  +  edl+l+a+qGP  +++l+k v+++  ++++f++ r +
+  sp|Q54DD3|GCST_DICDI 117 IIDDTMITNA-GDSLYVVVNAGCADKDISHINEKIKEFKSvnpthDVSMQLLEDLSLIAIQGPTTESILQKFVKDQDiTNMEFMTQRPM 204
+                           *********9.5889999********************99999998889999*******************9987766*********** PP
+
+                 GCV_T 173 eiggvkvlvsrtgytGedGfeiyipaeeaeevweaLleagk...elgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                           +i+g++++v+r+gytGedGfei++p+++a+++ e  l+  +   e g+kpaGlgArd+lRlEagl+lyG+dl++++tP+ea+l+w
+  sp|Q54DD3|GCST_DICDI 205 TIAGIDCIVTRCGYTGEDGFEISVPSKQAVRLAELFLATSNasiESGIKPAGLGARDSLRLEAGLCLYGHDLNDDITPIEASLNW 289
+                           ***********************************99876533368**************************************9 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.6   0.0   1.3e-21   1.2e-17       2      79 ..     319     396 ..     318     397 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 63.6 bits;  conditional E-value: 1.3e-21
+               GCV_T_C   2 rlvglelddgapllrggepvlr..dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                           ++vg+ + +g +++r+g  +l+   ++++G+vTSg+ sp + +si +Ayvk+ ++k+gt+v+v +rgk++ at++k+pf+
+  sp|Q54DD3|GCST_DICDI 319 KRVGVII-NG-APAREGCLILDpsTNQEIGKVTSGTISPITRQSISMAYVKTPFSKIGTQVNVSIRGKPITATISKMPFV 396
+                           5788888.55.346*******655889****************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (403 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       586  (0.0305543); expected 383.6 (0.02)
+Passed bias filter:                      537  (0.0279994); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.65
+# Mc/sec: 1993.64
+//
+Query:       tr|Q9VKR4|Q9VKR4_DROME  [L=405]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-79  265.6   0.0    4.6e-79  265.4   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    1.8e-23   82.3   0.0    3.5e-23   81.4   0.0    1.5  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  265.4   0.0   4.8e-83   4.6e-79       1     254 [.      30     288 ..      30     289 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 265.4 bits;  conditional E-value: 4.8e-83
+                   GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllner 87 
+                             lyd+h+++g k+v+f+G+  PvqYs+++i+a+h+++R+  ++fDvshm + ++ G+daaa+L++++t+d+ + ++g++++t+++ne 
+  tr|Q9VKR4|Q9VKR4_DROME  30 LYDFHVQKGGKIVNFGGYALPVQYSDQSIIASHLHTRQVGSIFDVSHMLQSRIFGKDAAACLESVCTADILGTPEGSGSLTVFTNEA 116
+                             79************************************************************************************* PP
+
+                   GCV_T  88 GgvidDlivyrlgedefllvvnaanrekdlawlekhaeklds.....vevedvtedlallavqGPkarelleklvgadl..eelkff 167
+                             Gg++dDliv +++e+e+++v+naa +e+d+  ++ ++++++s      +   + +d++l+avqGP+ ++ l+kl++++   ++l f+
+  tr|Q9VKR4|Q9VKR4_DROME 117 GGILDDLIVNKVSEKELYVVSNAAMKEQDMGIMKTAVDNFKSqgkdvSIEFLTPADQSLVAVQGPQVAKELSKLLTGKAslDQLYFM 203
+                             ***********************************999999999994444566689*******************999999****** PP
+
+                   GCV_T 168 sareveiggvkv.lvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglg 253
+                             s+  ++++g++  +++r+gytGedG+ei++++++a++++e Lle+g    +k aGlgArd+lRlEagl+lyG+d+d++ttP+ea l 
+  tr|Q9VKR4|Q9VKR4_DROME 204 SSFVTTLAGIPNvRITRCGYTGEDGVEISVASSQAQKLTESLLESG---VLKLAGLGARDSLRLEAGLCLYGSDIDSKTTPVEAALA 287
+                             *********9987*********************************...9************************************9 PP
+
+                   GCV_T 254 w 254
+                             w
+  tr|Q9VKR4|Q9VKR4_DROME 288 W 288
+                             9 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.4   0.0   3.6e-27   3.5e-23       1      80 []     316     396 ..     316     396 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 81.4 bits;  conditional E-value: 3.6e-27
+                 GCV_T_C   1 rrlvglelddgapll.rggepvlrdgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfyD 80 
+                             rr+vgl++   +p++ r g +++ +g++vG+vTSg++sp+ g++ia++yv+ +l+++gt+ve +vr+k ++a+v+k+pf++
+  tr|Q9VKR4|Q9VKR4_DROME 316 RRRVGLQMLGTKPPPaRSGVAIFSQGQQVGQVTSGCPSPSAGRNIAMGYVAENLKAPGTKVEFKVRDKLYEAEVTKMPFVK 396
+                             9*******94445555***************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (405 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       469  (0.0244538); expected 383.6 (0.02)
+Passed bias filter:                      430  (0.0224204); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.65
+# Mc/sec: 2029.24
+//
+Query:       tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE  [L=333]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-56  190.0   0.0    5.7e-56  189.7   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    6.7e-13   48.4   0.0    1.2e-12   47.6   0.0    1.4  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  189.7   0.0   5.9e-60   5.7e-56      63     254 ..       1     194 [.       1     195 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 189.7 bits;  conditional E-value: 5.9e-60
+                           GCV_T  63 qrlttndvsklkagratytlllnerGgvidDlivyrlgedefllvvnaanrekdlawlekhaekldsvevedvtedlal 141
+                                     qrl++nd++ +  g++++t +ln rGg+++D+ v+rl++++f+++++++++ ++++w+++h++++ ++++edv+ ++++
+  tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE   1 QRLCANDLDVPV-GHIVHTGMLNARGGYENDCSVVRLSKNSFFIISPTDQQVHCWSWMKQHMPSDPQLHLEDVSWKYTA 78 
+                                     79*******886.****************************************************99************ PP
+
+                           GCV_T 142 lavqGPkarelleklvgadl..eelkffsareveiggvkv.lvsrtgytGedGfeiyipaeeaeevweaLleagkelgv 217
+                                     l++ GP+a ++l++l+   +  e+++ + ++e+++g+++  +v+ +++tGe+Gf +yip e+a +v+++++++g+++g+
+  tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE  79 LNLIGPRAMDVLSELSYVSMtpEHFPSLFCKEMSVGYANGiRVMSMTHTGEPGFMLYIPIEYALHVYNEVMSVGQKYGI 157
+                                     *******************9*******************99************************************** PP
+
+                           GCV_T 218 kpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                                     ++aG++A+++lR+E++++++G+dld+ ttPle+g ++
+  tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE 158 RNAGYYALRSLRIEKFFAFWGQDLDSFTTPLECGREF 194
+                                     *********************************9765 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.6   0.0   1.3e-16   1.2e-12       1      78 [.     220     311 ..     220     312 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 47.6 bits;  conditional E-value: 1.3e-16
+                         GCV_T_C   1 rrlvgleld..dg..apll..rggepvlrdgevvGhvTSgaysptlgksialAyvk...........aelaklgtevev 62 
+                                     rr+  l+l+  d   +  l  + gep++r+g+  G+++S+ays+tl++ ++l++++           +e+ +  +++ev
+  tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE 220 RRFLMLVLEdhDAelD--LwpWWGEPIYRSGQLAGTTSSSAYSYTLQRHVCLGFIRrledgapavitPEFIN-RGDYEV 295
+                                     8899999984433333..35599********************************************99999.89**** PP
+
+                         GCV_T_C  63 evrgkrvpatvvkkpf 78 
+                                     e++g+r+pa+    pf
+  tr|A0A2R8Q6G3|A0A2R8Q6G3_DANRE 296 EIAGQRFPAKAKLYPF 311
+                                     *********9987777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (333 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       385  (0.020074); expected 383.6 (0.02)
+Passed bias filter:                      367  (0.0191355); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.65
+# Mc/sec: 1659.23
+//
+Query:       tr|F6P1J6|F6P1J6_DANRE  [L=264]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-29  102.5   0.0    2.1e-28   99.3   0.0    2.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    5.9e-22   77.4   0.1    9.6e-22   76.8   0.1    1.4  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.3   0.0   2.2e-32   2.1e-28     145     254 ..      14     152 ..       8     153 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 99.3 bits;  conditional E-value: 2.2e-32
+                   GCV_T 145 qGPkarelleklvgadleelkffsareveiggvkv.lvsrtgytGedGfeiyip...............................ae 199
+                              GP  +++l+k vg+dl++l f+++  + + g++  +v+r+gytGedG+e++                                 ++
+  tr|F6P1J6|F6P1J6_DANRE  14 LGPSMARVLQKGVGDDLKKLTFMTSVLTPVFGIQGcRVTRCGYTGEDGVEVSGFklfcccyvigvhlcgacmstvifffinisvpSK 100
+                             7********************************988****************999******************************** PP
+
+                   GCV_T 200 eaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                             e + ++e+Ll+     +vk aGlgArd+lRlEagl+lyG+d+de+ttP+ea l w
+  tr|F6P1J6|F6P1J6_DANRE 101 EVVSLTEKLLADS---EVKLAGLGARDSLRLEAGLCLYGNDIDETTTPVEATLVW 152
+                             ***********97...9************************************99 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.8   0.1     1e-25   9.6e-22       1      79 [.     180     257 ..     180     258 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 76.8 bits;  conditional E-value: 1e-25
+                 GCV_T_C   1 rrlvglelddgapllrggepvlr.dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                             r++vgl    g p++r+++p+l  dg+v+G+vTSg++sp l++++a++yv+++++k+gt+++vevr+k vpa v+k+pf+
+  tr|F6P1J6|F6P1J6_DANRE 180 RKRVGLIST-G-PPVRQHTPILSsDGRVIGEVTSGCPSPCLKQNVAMGYVETAFSKAGTSIQVEVRKKAVPAVVSKMPFV 257
+                             899999995.4.458*******55*******************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (264 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       583  (0.0303978); expected 383.6 (0.02)
+Passed bias filter:                      426  (0.0222118); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.65
+# Mc/sec: 1321.52
+//
+Query:       tr|A9C3Q7|A9C3Q7_DANRE  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-84  282.0   0.1    5.7e-84  281.4   0.1    1.3  1  GCV_T     Aminomethyltransferase folate-binding domain
+    8.1e-22   77.0   0.2    2.1e-21   75.7   0.1    1.8  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  281.4   0.1     6e-88   5.7e-84       1     254 [.      45     297 ..      45     298 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 281.4 bits;  conditional E-value: 6e-88
+                   GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllner 87 
+                             lyd+h+a+g k+vefaGw+mPvqY+ ++++ +h ++R+++++fDvshm + +v G+d+ +f+++l++ d+++lk +++t++l++n++
+  tr|A9C3Q7|A9C3Q7_DANRE  45 LYDFHRAHGGKMVEFAGWSMPVQYK-DSHITSHMHTRQHCSIFDVSHMLQTKVYGKDRVKFIESLIVGDIAELKDNQGTLSLFTNSK 130
+                             79***********************.9999********************************************************* PP
+
+                   GCV_T  88 GgvidDlivyrlgedefllvvnaanrekdlawlekhaeklds..vevedvtedlallavqGPkarelleklvgadleelkffsarev 172
+                             Gg++dDliv+++++d +++v+na++++kd a++++++++++s   +v+ +  + +l+a+qGP  +++l+k vg+dl++l f+++  +
+  tr|A9C3Q7|A9C3Q7_DANRE 131 GGIMDDLIVTKTDQDYLYVVSNAGCADKDSAHMQARLQEFKSagHDVDLEFMEESLIALQGPSMARVLQKGVGDDLKKLTFMTSVLT 217
+                             ****************************************99999999999************************************ PP
+
+                   GCV_T 173 eiggvkv.lvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                              + g++  +v+r+gytGedG+ei++p++e + ++e+Ll+     +vk aGlgArd+lRlEagl+lyG+d+de+ttP+ea l w
+  tr|A9C3Q7|A9C3Q7_DANRE 218 PVFGIQGcRVTRCGYTGEDGVEISVPSKEVVSLTEKLLADS---EVKLAGLGARDSLRLEAGLCLYGNDIDETTTPVEATLVW 297
+                             *****988*******************************97...9************************************99 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.7   0.1   2.2e-25   2.1e-21       1      79 [.     325     402 ..     325     403 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 75.7 bits;  conditional E-value: 2.2e-25
+                 GCV_T_C   1 rrlvglelddgapllrggepvlr.dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                             r++vgl    g p++r+++p+l  dg+v+G+vTSg++sp l++++a++yv+++++k+gt+++vevr+k vpa v+k+pf+
+  tr|A9C3Q7|A9C3Q7_DANRE 325 RKRVGLIST-G-PPVRQHTPILSsDGRVIGEVTSGCPSPCLKQNVAMGYVETAFSKAGTSIQVEVRKKAVPAVVSKMPFV 402
+                             899999995.4.458*******55*******************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       476  (0.0248188); expected 383.6 (0.02)
+Passed bias filter:                      439  (0.0228896); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.57
+# Mc/sec: 2315.18
+//
+Query:       tr|F1Q4Q8|F1Q4Q8_DANRE  [L=908]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.7e-63  213.0   0.2    1.7e-62  212.1   0.2    1.4  1  DAO       FAD dependent oxidoreductase
+    1.7e-62  211.1   0.0    2.7e-62  210.4   0.0    1.3  1  GCV_T     Aminomethyltransferase folate-binding domain
+    1.6e-19   70.0   1.8    3.6e-19   68.9   1.8    1.6  1  FAO_M     FAD dependent oxidoreductase central domain
+    1.1e-12   47.7   0.0    2.4e-12   46.7   0.0    1.6  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> DAO  FAD dependent oxidoreductase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  212.1   0.2   3.6e-66   1.7e-62       1     353 []      65     424 ..      65     424 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 212.1 bits;  conditional E-value: 3.6e-66
+                             EEEEECTSHHHHHHHHHHHHTTS.CEEEEESSSSTTSSGGGSSEEEEESSCSTHHSHHHHHHHHHHHHHH.HHHHHHCSSTTSEEEE CS
+                     DAO   1 dvviiGGGiiGlstAyeLarrgl.sVtllekgdiagsgaSgrnsgllhsglrylppselarlslealeel.releeelgididyrrt 85 
+                             dvv+iGGG  G+ t y+L + g+ +V+lle+++  + g++++++gll++ lr + +   ++l +++++    el ee+g+++++ ++
+  tr|F1Q4Q8|F1Q4Q8_DANRE  65 DVVVIGGGSLGCQTLYHLCKLGMtNVVLLERDRLTA-GTTWHTAGLLWQ-LR-PSD-TEVELLAHTRNVVsSELKEETGLETGWIQN 147
+                             9******************99***********8888.************.65.333.345******99999**************** PP
+
+                             EEEEEESSHHHHHHHHHHHHHHHHTTTTEEEEEHHHHHHHSTT..STTTSEEEEETTEEEEEHHHHHHHHHHHHHHTT-EEEESECE CS
+                     DAO  86 Gllslaadeeelealdkllarlleagldaelldaeevrelepa..lpgllgalfypdtgqvdpakltaalaraaealGveilegtev 170
+                             G l++a++ + l++ ++l+ +++ +g+++++l+++e+++l+p   +++l g l++p +g++dpa  +  l raa+a+G++++e+++v
+  tr|F1Q4Q8|F1Q4Q8_DANRE 148 GGLFIASNKQRLDEYKRLMSLGKVYGIESHVLSPAETKDLYPLmnVKDLYGTLYVPKDGTMDPAGTCTTLSRAATARGATVIENCPV 234
+                             ******998888888888888888****9*************976559*************************************** PP
+
+                             EEEEEE..TTEEEEEE.EECT.EEEEEEEEEEE--GGGHHHH.HTT.CTTTSEEEEEEEEEEEEEECCTHSTGSGCSEEEEEEEETT CS
+                     DAO 171 tgleee..dgkvwgve.rttp.gendaadavVnaaGawsdll.gll.keldlpispvrgqvlvlkplseklvspaailpvpetdddg 251
+                             tg++ +  d +v++v+ ++tp g++++  +vVn+aG+w+++l +++  ++  p+ ++++ ++v+++++  +       ++p  +d +
+  tr|F1Q4Q8|F1Q4Q8_DANRE 235 TGIQVKvdDLGVKRVKaVQTPhGTIRT-PCVVNCAGVWATKLgEMAgVNV--PLIAMHHAYVVTERIEGIQ-------NMPNVRDHD 311
+                             ***777755556666665888898644.66**********8867776655..99**********8887644.......444589999 PP
+
+                             TTEEEEEETTSEEEEEESSEE.........ETTCSSTSCSHHHHHHHHHHHHHHSGGGCG..EEEEEEEEEE.ETTSSEEEEEEETE CS
+                     DAO 252 rgvyvtprkdgrvlvGgtade.........esgdddpevdeedidellealrklfPqlgd..vlrkwaGlrp.lpdglpligetpgv 326
+                              +vy++    + + vGg ++          ++++  ++ d++ + + ++ + +++P+l+   ++++ +G    + d+ pl+ge+p+v
+  tr|F1Q4Q8|F1Q4Q8_DANRE 312 ASVYLRLQG-DALSVGGYEQNpifwddvsdKFAFSLFDLDWDVFMQHIDGAVNRVPALEQtgIKSTVCGPESfTADHKPLMGEAPEV 397
+                             9******86.66*****98669998887665555559********************844449999999777557*********9** PP
+
+                             ECEEEEEECTTTHHHHHHHHHHHHHHH CS
+                     DAO 327 kglylatGhsghGltlapatGkllael 353
+                             +g++l +G+++ G++l+ ++Gk la++
+  tr|F1Q4Q8|F1Q4Q8_DANRE 398 RGFFLGCGFNSAGMMLGGGCGKELAHW 424
+                             ************************975 PP
+
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.4   0.0   5.6e-66   2.7e-62      28     254 ..     537     778 ..     503     779 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 210.4 bits;  conditional E-value: 5.6e-66
+                   GCV_T  28 gikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGgvidDlivyrl.............ge 101
+                              i++E++ +R+a+++fD+s +gk++++Gpda++  ++l+t+dv+k + g+++yt++ln+rGgv++Dl+v rl             + 
+  tr|F1Q4Q8|F1Q4Q8_DANRE 537 VIRDECLTCRNAVAVFDMSYFGKFYLSGPDAKKAADWLFTADVNKAP-GSTVYTCMLNQRGGVESDLTVSRLepspahlpltpesNG 622
+                             4559*****************************************98.************************************999 PP
+
+                   GCV_T 102 defllvvnaanrekdlawlekhaeklds.vevedvtedlallavqGPkarelleklvgadl..eelkffsareveiggvkvlvsrtg 185
+                             d ++l  +++ +++ ++++++ +++    +++ d ted++++++qGPk+rell+++++++l  e+++f ++r v+ +g++v+++r++
+  tr|F1Q4Q8|F1Q4Q8_DANRE 623 DAYYLAIGGGVAQHNWSHIQSVLQDQGFrCTLIDHTEDMGMISIQGPKSRELLQEVLDSELsnEAFPFSTHRIVSAAGHQVRAMRLS 709
+                             99******************999987668********************************************************** PP
+
+                   GCV_T 186 ytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                             ++Ge G+e++ip+e    v++a+++ag+++g+ +aG++A d+l +E+g++++  dl ++ tPleagl +
+  tr|F1Q4Q8|F1Q4Q8_DANRE 710 FVGEMGWELHIPKESCLPVYNAVMAAGAKYGICNAGYRAIDSLSIEKGYRHWHADLRPDDTPLEAGLAF 778
+                             *******************************************************************87 PP
+
+>> FAO_M  FAD dependent oxidoreductase central domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.9   1.8   7.6e-23   3.6e-19       1      54 [.     427     481 ..     427     482 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 68.9 bits;  conditional E-value: 7.6e-23
+                   FAO_M   1 dGepsiDlwelDirRFe.elqnnrkylrervtesygevYsivyPneeresgRnlr 54 
+                             +G+p+ D++++DirRF+  l+nn++++rer++esy+++Ys+v+P++e+++ Rn+r
+  tr|F1Q4Q8|F1Q4Q8_DANRE 427 HGRPEKDMYGYDIRRFHhSLTNNNRWIRERSHESYAKNYSVVFPFDEPLASRNMR 481
+                             7*****************************************************9 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.7   0.0   4.9e-16   2.4e-12       1      80 []     804     889 ..     804     889 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 46.7 bits;  conditional E-value: 4.9e-16
+                 GCV_T_C   1 rrlvglelddgapllrggepvlrdgevvGhvTSgaysptlgksialAyvk........aelaklgtevevevrgkrvpatvvkkpfy 79 
+                             rr+v++++ d+++++ g e+++r+g +vGh++++ ++ +++k+i+++y++        +++++ +++++ e +g +++at   k  +
+  tr|F1Q4Q8|F1Q4Q8_DANRE 804 RRIVCFTV-DEKVPMFGLEAIFRNGVPVGHLRRSEFGFAIDKTIGYGYIRnpdggvvsPDFVR-SGDFTLERMGVTYKATAHLKSPF 888
+                             9*******.555778************************************************.99***************665555 PP
+
+                 GCV_T_C  80 D 80 
+                             D
+  tr|F1Q4Q8|F1Q4Q8_DANRE 889 D 889
+                             6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (908 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       331  (0.0172585); expected 383.6 (0.02)
+Passed bias filter:                      317  (0.0165285); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.53u 0.22s 00:00:00.75 Elapsed: 00:00:00.71
+# Mc/sec: 4162.79
+//
+Query:       sp|P48728|GCST_HUMAN  [L=403]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.7e-82  274.7   0.0    8.2e-82  274.4   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    7.6e-20   70.7   0.1    2.4e-19   69.1   0.0    1.9  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  274.4   0.0   8.6e-86   8.2e-82       1     255 []      38     291 ..      38     291 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 274.4 bits;  conditional E-value: 8.6e-86
+                 GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGg 89 
+                           lyd+h a+g k+v faGw+ PvqY  ++++++h+++R++++lfDvshm + ++ G d+ +++++l++ d+++l+++++t++l++ne Gg
+  sp|P48728|GCST_HUMAN  38 LYDFHLAHGGKMVAFAGWSLPVQYR-DSHTDSHLHTRQHCSLFDVSHMLQTKILGSDRVKLMESLVVGDIAELRPNQGTLSLFTNEAGG 125
+                           79***********************.9999*********************************************************** PP
+
+                 GCV_T  90 vidDlivyrlgedefllvvnaanrekdlawlekhaeklds..vevedvtedlallavqGPkarelleklvgadleelkffsareveigg 176
+                           ++dDliv++++e ++++v+na++ ekdla +++++++l++   +v  +  d alla+qGP a+++l++ v +dl +l+f++++ +e+ g
+  sp|P48728|GCST_HUMAN 126 ILDDLIVTNTSEGHLYVVSNAGCWEKDLALMQDKVRELQNqgRDVGLEVLDNALLALQGPTAAQVLQAGVADDLRKLPFMTSAVMEVFG 214
+                           *************************************99888999999999************************************** PP
+
+                 GCV_T 177 vkv.lvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgwa 255
+                           v+  +v+r+gytGedG+ei++p + a+++  a+l+++   +vk aGl+Ard+lRlEagl+lyG+d+de+ttP+e +l+w+
+  sp|P48728|GCST_HUMAN 215 VSGcRVTRCGYTGEDGVEISVPVAGAVHLATAILKNP---EVKLAGLAARDSLRLEAGLCLYGNDIDEHTTPVEGSLSWT 291
+                           *988********************************9...9************************************995 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.1   0.0   2.5e-23   2.4e-19       1      79 [.     318     395 ..     318     396 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 69.1 bits;  conditional E-value: 2.5e-23
+               GCV_T_C   1 rrlvglelddgapllrggepvlr.dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                           rr+vgl ++ g +++r + p+l+ +g+++G+vTSg++sp+l+k++a++yv+ e++++gt + vevr k+  a v+k+pf+
+  sp|P48728|GCST_HUMAN 318 RRRVGLMCE-G-APMRAHSPILNmEGTKIGTVTSGCPSPSLKKNVAMGYVPCEYSRPGTMLLVEVRRKQQMAVVSKMPFV 395
+                           99******6.4.347*******77*******************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (403 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       362  (0.0188748); expected 383.6 (0.02)
+Passed bias filter:                      341  (0.0177799); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.20s 00:00:00.55 Elapsed: 00:00:00.59
+# Mc/sec: 2225.43
+//
+Query:       XP_013238303.1  [L=379]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-38  132.8   0.0    4.6e-38  131.0   0.0    1.8  1  GCV_T     Aminomethyltransferase folate-binding domain
+    1.9e-10   40.5   0.0      5e-10   39.2   0.0    1.7  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.0   0.0   4.8e-42   4.6e-38       2     255 .]      23     279 ..      22     279 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 131.0 bits;  conditional E-value: 4.8e-42
+           GCV_T   2 ydrhkalgakfvefaGwemPvqYssn.gikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGgvidDli 95 
+                     ++ h+ + a++++f  w  P+ +s n +  +E+r  R +a +fD+shm++i ++G+ a a+++++t ++v+ ++    +y+l+l ++  +idD +
+  XP_013238303.1  23 HSMHVSRDAHMTPFYDWRLPLSFSPNfSPLEEAREARRGALIFDISHMNRISITGRSAIALVSKITRSNVEMKD--FFRYSLILSDHCFIIDDAM 115
+                     899*********************663445*****************************************775..99***************** PP
+
+           GCV_T  96 vyrlgedefllvvnaanrekdlawlekhaeklds..vevedvtedlallavq........GPkarelleklvgadleelkffsareveiggvkvl 180
+                     +     +++llv+na++++ ++a +++ +++l     +++ +   +  +a+q        GPka+e+l++lv++  e++ f + + +       +
+  XP_013238303.1 116 IHAS-HKQVLLVCNASQKQSVHARIQETISQLALqnESIQWKEHTTPSIAIQgkkfaltkGPKAKEILQDLVQNS-ENIYFGQIAPIPGV---GT 205
+                     *998.899******************99999876763333334444445555222222248************98.99999999876554...37 PP
+
+           GCV_T 181 vsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldee........ttPleaglgwa 255
+                     ++rtgy+GedGfe +   e+a   ++          +k aGlgAr++lRlEaglpl G d++++        +tP  agl+wa
+  XP_013238303.1 206 LARTGYSGEDGFEGVSFCEHAIGKYQ---------FLKWAGLGARNILRLEAGLPLSGVDFSSNrrgslaefVTPKRAGLSWA 279
+                     79**********97666666555444.........456679*******************66665566666699999999996 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.2   0.0   5.2e-14     5e-10       4      76 ..     295     365 ..     293     368 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 39.2 bits;  conditional E-value: 5.2e-14
+         GCV_T_C   4 vglelddgapll.rggepvlr.dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevr.gkrvpatvvkk 76 
+                      g+ l d  +++ ++g+p+ +  g +vG++TS+++sptlgk+ia++y++  ++     + v+v       at v  
+  XP_013238303.1 295 TGFIL-DS-VIPaKEGAPINElTGHKVGEITSSCPSPTLGKTIAMGYLHVSAKG---PFVVPVGaSFSAHATKVTL 365
+                     57777.44.2345******866**************************965543...5666663133444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (379 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       524  (0.0273215); expected 383.6 (0.02)
+Passed bias filter:                      476  (0.0248188); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.58
+# Mc/sec: 2106.29
+//
+Query:       PJF17566.1  [L=450]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-58  197.8   0.0    3.8e-58  196.8   0.0    1.5  1  GCV_T     Aminomethyltransferase folate-binding domain
+    3.1e-13   49.5   0.0    6.5e-13   48.5   0.0    1.5  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  196.8   0.0   3.9e-62   3.8e-58       1     254 [.      34     264 ..      34     265 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 196.8 bits;  conditional E-value: 3.9e-62
+       GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGgvidDlivyrl 99 
+                 ly+  +++g k+v+faGw mP+q++ ++  +++r++R +a+lfDvshm + +++ +     L++l++ d +++++g a+yt++lne+Gg+idD i+++ 
+  PJF17566.1  34 LYETLVQNGGKMVPFAGWLMPIQFDGTSVLESVRHTRRHASLFDVSHMLQCRFSPN----SLESLMPVDTKTMRVGAAQYTAILNEQGGIIDDAILTKR 128
+                 78999*************************************************86....59************************************9 PP
+
+       GCV_T 100 gedefllvvnaanrekdlawlekhaekldsvevedvtedlallavqGPkarelleklvgadleelkffsareveiggvkvlvsrtgytGedGfeiyipa 198
+                  e+++ lv+na++ +++la l+++++            + al+a+qG   r l+  l++ + ++l f+++    ++ ++ +++r+gytGedGfei++++
+  PJF17566.1 129 -ESNYTLVSNASRVNAVLALLSDNVSVC----------ENALFALQGT-VRLLCGLLSEHQATSLLFMNS----LESAEFTITRCGYTGEDGFEISVKP 211
+                 .899***************999987754..........579******6.455555566666699999985....568899******************* PP
+
+       GCV_T 199 eeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                 e a  + e Ll+      vk aGl+Ard+lRlEagl+lyG+d de++tP+eagl+w
+  PJF17566.1 212 EAAPSMAELLLKDA---RVKLAGLAARDILRLEAGLCLYGHDVDETVTPIEAGLQW 264
+                 ************96...9*************************************9 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.5   0.0   6.7e-17   6.5e-13       1      73 [.     289     368 ..     289     372 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 48.5 bits;  conditional E-value: 6.7e-17
+     GCV_T_C   1 rrlvglelddgapllrggepvlr..dgevvGhvTSgaysptlgksialAyvk.......aelaklgtevevevrgkrvpatv 73 
+                 +++ g++  +g pl+r+g+ +++  +g vvG++TSg++sp+++++i ++yv+       + la+ +t++ v++rgk++p++ 
+  PJF17566.1 289 KKRLGFTSPEG-PLPREGAVITEleNGSVVGKITSGTFSPHTNSNISMGYVNadsveglKSLAN-STSLAVQIRGKQYPISA 368
+                 78899999666.899******9555***************************777777666666.9************9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (450 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       263  (0.0137129); expected 383.6 (0.02)
+Passed bias filter:                      252  (0.0131394); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.60
+# Mc/sec: 2432.12
+//
+Query:       EPZ36657.1  [L=313]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-60  203.4   0.0    4.6e-60  203.1   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    3.2e-18   65.5   0.1    6.9e-18   64.4   0.1    1.5  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  203.1   0.0   4.8e-64   4.6e-60      50     255 .]       5     203 ..       2     203 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 203.1 bits;  conditional E-value: 4.8e-64
+       GCV_T  50 kievkGpdaaafLqrlttndvsklkagratytlllnerGgvidDlivyrlgedefllvvnaanrekdlawlekhaekldsvevedvtedlallavqGPk 148
+                 k+++ G d+++f+++lt+ d++++++g++++++++ne+Ggv+dD+++++   d++ lv na+++ek+ ++l +h  k+d   v+   e+l+l+avqGP 
+  EPZ36657.1   5 KLRIHGTDKERFIEKLTVVDLARMSVGQSALSVFTNEKGGVLDDTVITCK-ADHLHLVNNAGCSEKIKSHLLEHSVKFD---VKVSFENLSLIAVQGPL 99 
+                 789*********************************************98.8*************************96...888999*********** PP
+
+       GCV_T 149 arelleklvgadleelkffsareveiggvkvlvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettP 247
+                 +++++ek++g+++e+lkf+ + +v++g+ +v+vsr+gytGedGfei++ +++ ++++e++le g   +vk aGlgArdtlR+Eagl+lyG+++de+t P
+  EPZ36657.1 100 SQKVVEKVFGEKFEDLKFMHCTTVKFGDENVTVSRCGYTGEDGFEISVSEKNVVKLVERMLEDG---DVKMAGLGARDTLRMEAGLCLYGHEIDEQTGP 195
+                 ****************************************************************...9******************************* PP
+
+       GCV_T 248 leaglgwa 255
+                 +eaglgw+
+  EPZ36657.1 196 IEAGLGWT 203
+                 *******5 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.4   0.1   7.2e-22   6.9e-18       3      79 ..     232     307 ..     231     307 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 64.4 bits;  conditional E-value: 7.2e-22
+     GCV_T_C   3 lvglelddgapllrggepvlr.dgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                 +vg+ +  g +++r g+ +l+ +g++vG+vTSg++sp+l+++ia++y++ e+ k+gte++v vrg+   a+v+k pf+
+  EPZ36657.1 232 RVGIIVS-G-APARSGADILDvEGKIVGRVTSGGPSPSLKQNIAMGYIRREHCKVGTEIKVNVRGRNQLAKVAKLPFV 307
+                 6788884.4.346*******66*******************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (313 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       463  (0.024141); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.14s 00:00:00.50 Elapsed: 00:00:00.57
+# Mc/sec: 1773.08
+//
+Query:       EPZ36658.1  [L=41]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.2e-11   41.7   0.0    8.4e-11   41.7   0.0    1.0  1  GCV_T     Aminomethyltransferase folate-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.7   0.0   4.4e-15   8.4e-11      12      51 ..       1      40 [.       1      41 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 41.7 bits;  conditional E-value: 4.4e-15
+       GCV_T 12 fvefaGwemPvqYssngikaEhravReaaglfDvshmgki 51
+                +v f+G++mP+ Y + gi+++h+++R+++++fDvshm + 
+  EPZ36658.1  1 MVAFGGYSMPLVYPDCGIIESHLHTRSKVSVFDVSHMLQT 40
+                799**********************************875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (41 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       176  (0.0091767); expected 383.6 (0.02)
+Passed bias filter:                      145  (0.00756035); expected 383.6 (0.02)
+Passed Vit filter:                         7  (0.000364983); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.29u 0.16s 00:00:00.44 Elapsed: 00:00:00.46
+# Mc/sec: 289.66
+//
+Query:       P48015  [L=400]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-82  275.3   0.0    5.3e-82  275.0   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+    4.7e-13   48.9   0.0    1.1e-12   47.8   0.0    1.6  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  275.0   0.0   5.5e-86   5.3e-82       1     255 []      21     280 ..      21     280 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 275.0 bits;  conditional E-value: 5.5e-86
+   GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGgvidDlivyrl.ged 102
+             l+d+h+ lg ++v++aG++mPv Y+ + ++++h+++R++aglfDvshm + +++Gp++ +fLqr+t+ d+++l++g++t+++lln++Ggv+dD+i+++  +++
+  P48015  21 LHDLHVSLGGTMVPYAGYSMPVLYKGQTHIESHNWTRTNAGLFDVSHMLQSKLSGPHSVKFLQRVTPTDFNALPVGSGTLSVLLNPQGGVVDDTIITKEnDDN 123
+             79************************************************************************************************95677 PP
+
+   GCV_T 103 efllvvnaanrekdlawlekhaeklds.vevedvtedlallavqGPkarelleklvgadl.....eelkffsareveiggvkv.lvsrtgytGedGfeiyipa 198
+             ef++v+na+++e+d ++++++++++++  + +++ e  +lla+qGPka+++le+l+++       +el f + +e+ +++ ++  ++r gytGedGfei+i++
+  P48015 124 EFYIVTNAGCAERDTEFFHDELQNGSTlDCQWKIIEGRSLLALQGPKAKDVLEPLLSKTApgkdlKELFFGQRHEFALKDGSLvQIARGGYTGEDGFEISIAN 226
+             8************************99999*************************99999999999999******9999888779****************** PP
+
+   GCV_T 199 eeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgwa 255
+             e+a+e+ e+Ll+++    +kp+Gl+Ard+lRlEag++lyG++lde++tP+ea l+w+
+  P48015 227 EKAVEFAEQLLANP---VMKPIGLAARDSLRLEAGMCLYGHELDESITPVEAALNWV 280
+             *************8...8**************************************6 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.8   0.0   1.1e-16   1.1e-12       1      78 [.     312     392 ..     312     393 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 47.8 bits;  conditional E-value: 1.1e-16
+  GCV_T_C   1 rrlvglelddgapllrggepvlr..dgevvGhvTSgaysptl.gksialAyvkaelaklgtevevevrgkrvpatvvkkpf 78 
+              + +vg++  ++ p +r g +++    +++vG vTSg  sptl + +i+ Ayv++++ k gt++ v+vr+k +p++++k+p+
+   P48015 312 KVRVGFKYLKKGPAARNGVKIFLpdAETEVGLVTSGSASPTLnNINIGQAYVQKGYHKKGTKLLVQVRNKFYPIELAKMPL 392
+              6789***99666889*******5447789*************4469*********************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (400 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       444  (0.0231503); expected 383.6 (0.02)
+Passed bias filter:                      426  (0.0222118); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.59
+# Mc/sec: 2179.74
+//
+Query:       sp|O14110|GCST_SCHPO  [L=387]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-84  283.9   0.0    1.2e-84  283.6   0.0    1.1  1  GCV_T     Aminomethyltransferase folate-binding domain
+      1e-22   79.9   0.3    2.2e-22   78.8   0.3    1.6  1  GCV_T_C   Glycine cleavage T-protein C-terminal barrel domain
+
+
+Domain annotation for each model (and alignments):
+>> GCV_T  Aminomethyltransferase folate-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  283.6   0.0   1.3e-88   1.2e-84       1     254 [.      27     277 ..      27     278 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 283.6 bits;  conditional E-value: 1.3e-88
+                 GCV_T   1 lydrhkalgakfvefaGwemPvqYssngikaEhravReaaglfDvshmgkievkGpdaaafLqrlttndvsklkagratytlllnerGg 89 
+                           lyd+h ++ga++v+faG++mPvqY+ + i+a+h+++Re++glfDvshm ++ v+G++a+a+L+++t++++++lk+ ++t+++++ne+Gg
+  sp|O14110|GCST_SCHPO  27 LYDLHLKEGATIVPFAGFSMPVQYKGQTISASHKWTREHSGLFDVSHMVQWFVRGENATAYLESITPSSLKELKPFHSTLSAFTNETGG 115
+                           79*************************************************************************************** PP
+
+                 GCV_T  90 vidDlivyrlgedefllvvnaanrekdlawlekhaekldsvevedvtedlallavqGPkarelleklvgadl.eelkffsareveiggv 177
+                           +idD+i+ +++e+++++v+naa++ekd a l+kh+e+++ ve+ ++ +  al+a+qGP+ +++++kl+++   + lkf +++ v+++gv
+  sp|O14110|GCST_SCHPO 116 IIDDTIISKQDENTYYIVTNAACSEKDEANLKKHIENWKGVEL-ERVQGRALIAIQGPETASVVQKLIPNVDfSVLKFGQSAYVDFKGV 203
+                           **************************************95555.5667789*****************99778**************** PP
+
+                 GCV_T 178 kvlvsrtgytGedGfeiyipaeeaeevweaLleagkelgvkpaGlgArdtlRlEaglplyGedldeettPleaglgw 254
+                           k+l sr+gytGedGfe++ip+e  +++  +Ll+      v+p+GlgArdtlRlEag++lyG+d+d++t+P+e +l+w
+  sp|O14110|GCST_SCHPO 204 KCLFSRSGYTGEDGFEVSIPEEVSVDFASTLLADT---RVRPIGLGARDTLRLEAGMCLYGSDIDDTTSPVEGSLSW 277
+                           *********************************97...9************************************99 PP
+
+>> GCV_T_C  Glycine cleavage T-protein C-terminal barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.8   0.3   2.3e-26   2.2e-22       1      79 [.     305     381 ..     305     382 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 78.8 bits;  conditional E-value: 2.3e-26
+               GCV_T_C   1 rrlvglelddgapllrggepvlrdgevvGhvTSgaysptlgksialAyvkaelaklgtevevevrgkrvpatvvkkpfy 79 
+                           rr+vg+ +++   ++r+g +v  dg +vG+vTSg++sptlgk+ia++y++++l ++gt  +++vr+k +pa+vv++pf+
+  sp|O14110|GCST_SCHPO 305 RRRVGFIVEKV--PARHGSAVEVDGVEVGQVTSGCPSPTLGKNIAMGYISTGLHQVGTPAHIKVRNKLHPAQVVRMPFV 381
+                           99******644..46***************************************************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (387 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       466  (0.0242974); expected 383.6 (0.02)
+Passed bias filter:                      442  (0.023046); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.68
+# Mc/sec: 1840.40
+//
+[ok]

@@ -1,0 +1,150 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019302.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019302
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A5PMY6|COL12_DANRE  [L=720]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.1e-22   77.2  87.1    5.3e-09   35.8  29.0    3.3  3  Collagen  Collagen triple helix repeat (20 copies)
+    1.5e-10   41.9   0.3    5.7e-10   40.0   0.3    2.1  1  Lectin_C  Lectin C-type domain
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.8  29.0   5.5e-13   5.3e-09       4      55 ..     438     489 ..     436     491 .. 0.47
+   2 !   29.5  40.8   5.3e-11   5.1e-07       2      60 .]     475     533 ..     474     539 .. 0.55
+   3 !   33.1  25.4   3.9e-12   3.7e-08       1      55 [.     522     576 ..     522     578 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 35.8 bits;  conditional E-value: 5.5e-13
+                            XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB CS
+               Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaG 55 
+                            G+pG++Gp+G +G+ G pG++G+kGekG++G++G+ G++G++G++G++G +G
+  sp|A5PMY6|COL12_DANRE 438 GPPGPRGPRGDKGSMGLPGKTGPKGEKGEKGAPGDAGPKGEKGPAGPPGVPG 489
+                            4555555555555555555555555555555555555555555555555444 PP
+
+  == domain 2  score: 29.5 bits;  conditional E-value: 5.3e-11
+                            XXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XXX CS
+               Collagen   2 ppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapgea 60 
+                            p+Ge+G++GppG pG +G+pG++G++G+kG +G+ G++G+ G++G pG +G +G++g++
+  sp|A5PMY6|COL12_DANRE 475 PKGEKGPAGPPGVPGLKGPPGSRGSPGPKGSRGSGGRQGPSGEKGDPGIPGMPGRDGQP 533
+                            56666666666666666666666666666666555555555555555555555555543 PP
+
+  == domain 3  score: 33.1 bits;  conditional E-value: 3.9e-12
+                            XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB CS
+               Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaG 55 
+                            G pG pG++G+pGp+G++G++G +G++G++G +G++Gp G+ G+pG+pG +G ++
+  sp|A5PMY6|COL12_DANRE 522 GIPGMPGRDGQPGPTGPQGPQGLRGPAGPAGLEGARGPVGPIGPPGPPGLPGLPA 576
+                            5567777777777777777777777777777777777777777777777776554 PP
+
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.0   0.3     6e-14   5.7e-10       2     109 .]     624     711 ..     623     711 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 40.0 bits;  conditional E-value: 6e-14
+                            EEEHHHHHHHHHHTTSEEB--SSHHHHHHHHHHSTSTTSEEEEEEEECSSTTEEEETTSTBCSTTTCSE-BSSTSSTTSEEEEEEGCS CS
+               Lectin_C   2 kksweeAeeaCqkkggsLvsvnskeeldflssllkksaksfWigltdeknegewkwedgskvnttklyknwepsensenedCvelrek 89 
+                            +++++eA+e C++ ++s++ +n++ee+ +++ ++ + + +fW+gl         kw+ g++ n       w ++ ++  edC+ l   
+  sp|A5PMY6|COL12_DANRE 624 SLNFDEAKERCSNLSSSMLIINDEEEQLWIKRQI-SGKGYFWLGL---------KWKPGQPDN-------W-SHGHEAGEDCAGL--I 691
+                            789*******************************.6999******.........9*******9.......4.899**********..* PP
+
+                            TTSEEEEEETTSEEEEEEEE CS
+               Lectin_C  90 ssgkwndenCnkklpfvCek 109
+                               +wnd  C++   f+Ce+
+  sp|A5PMY6|COL12_DANRE 692 HEASWNDFFCTERIGFICER 711
+                            ******************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (720 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1801  (0.0939048); expected 383.6 (0.02)
+Passed bias filter:                      711  (0.0370718); expected 383.6 (0.02)
+Passed Vit filter:                       114  (0.005944); expected 19.2 (0.001)
+Passed Fwd filter:                        55  (0.00286772); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.94u 0.24s 00:00:01.18 Elapsed: 00:00:01.04
+# Mc/sec: 2236.39
+//
+Query:       sp|Q5KU26|COL12_HUMAN  [L=742]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.4e-24   83.0 100.5    1.5e-09   37.5  30.2    3.3  2  Collagen  Collagen triple helix repeat (20 copies)
+    1.8e-21   76.9   3.1    7.5e-21   75.0   3.1    2.1  1  Lectin_C  Lectin C-type domain
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.0  38.5     4e-12   3.8e-08       4      58 ..     443     497 ..     441     499 .. 0.69
+   2 !   37.5  30.2   1.6e-13   1.5e-09       1      59 [.     530     588 ..     530     589 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 33.0 bits;  conditional E-value: 4e-12
+                            XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--X CS
+               Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapg 58 
+                            G+pG++Gp+G +G++G+pG++G+kG+kG++Ge+GppG+aG++G+ G++G++G++g
+  sp|Q5KU26|COL12_HUMAN 443 GPPGPRGPRGDRGSQGPPGPTGNKGQKGEKGEPGPPGPAGERGPIGPAGPPGERG 497
+                            7777777777777777777777777777777777777777777777777777766 PP
+
+  == domain 2  score: 37.5 bits;  conditional E-value: 1.6e-13
+                            XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XX CS
+               Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapge 59 
+                            GppG++G pGp+GppG +G +G+ Ge+G +Gp+G +G pG +G pG++G++G++G++g+
+  sp|Q5KU26|COL12_HUMAN 530 GPPGKEGLPGPQGPPGFQGLQGTVGEPGVPGPRGLPGLPGVPGMPGPKGPPGPPGPSGA 588
+                            89999999999999999999999999999999999999999999999999999999986 PP
+
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.0   3.1   7.8e-25   7.5e-21       2     109 .]     625     732 ..     624     732 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 75.0 bits;  conditional E-value: 7.8e-25
+                            EEEHHHHHHHHHHTTSEEB--SSHHHHHHHHHHSTSTTSEEEEEEEECSSTTEEEETTSTBCSTTTCSE-B.......SSTSSTTSEE CS
+               Lectin_C   2 kksweeAeeaCqkkggsLvsvnskeeldflssllkksaksfWigltdeknegewkwedgskvnttklyknw.......epsensened 82 
+                            k+ +e+A+ +C+ k+++Lv +n++ee++++++++    +s+Wigltd+++e+ewkw dg+       yknw       + + ++  ed
+  sp|Q5KU26|COL12_HUMAN 625 KEIFEDAKLFCEDKSSHLVFINTREEQQWIKKQMV-GRESHWIGLTDSERENEWKWLDGTSPD----YKNWkagqpdnWGHGHGPGED 707
+                            67799****************************97.99*************************....77777777777799999**** PP
+
+                            EEEEGCSTTSEEEEEETTSEEEEEEEE CS
+               Lectin_C  83 CvelrekssgkwndenCnkklpfvCek 109
+                            C+ l     g+wnd +C+++++f+Cek
+  sp|Q5KU26|COL12_HUMAN 708 CAGL--IYAGQWNDFQCEDVNNFICEK 732
+                            ****..*******************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (742 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2138  (0.111476); expected 383.6 (0.02)
+Passed bias filter:                      616  (0.0321185); expected 383.6 (0.02)
+Passed Vit filter:                       105  (0.00547474); expected 19.2 (0.001)
+Passed Fwd filter:                        61  (0.00318056); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.98u 0.21s 00:00:01.19 Elapsed: 00:00:00.97
+# Mc/sec: 2484.57
+//
+[ok]

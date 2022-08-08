@@ -1,0 +1,52 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035913.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035913
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B8A6D2|B8A6D2_DANRE  [L=640]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.3e-10   39.4   7.9    1.1e-09   38.4   7.9    1.5  1  EGF_CA      Calcium-binding EGF domain
+    3.1e-06   27.2   5.0    5.2e-06   26.4   5.0    1.4  0  EGF_MSP1_1  MSP1 EGF domain 1
+
+
+Domain annotation for each model (and alignments):
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   7.9   1.1e-13   1.1e-09       1      36 [.     463     500 ..     463     506 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 1.1e-13
+                  EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegye..nn 36 
+                             D++EC++   +C+++++CvN+ Gs++C+C +gy+   +
+  tr|B8A6D2|B8A6D2_DANRE 463 DINECETHMVVCDADAECVNQFGSYSCRCLHGYReaHG 500
+                             9********************************95433 PP
+
+>> EGF_MSP1_1  MSP1 EGF domain 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (640 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       981  (0.0511497); expected 383.6 (0.02)
+Passed bias filter:                      732  (0.0381667); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.25s 00:00:00.73 Elapsed: 00:00:00.71
+# Mc/sec: 2922.19
+//
+[ok]

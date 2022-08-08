@@ -1,0 +1,58 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040309.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040309
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P28906|CD34_HUMAN  [L=385]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.4e-75  252.9   0.0    4.2e-75  252.1   0.0    1.4  1  CD34_antigen  CD34/Podocalyxin family
+
+
+Domain annotation for each model (and alignments):
+>> CD34_antigen  CD34/Podocalyxin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  252.1   0.0   2.2e-79   4.2e-75       1     206 []     190     385 .]     190     385 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 252.1 bits;  conditional E-value: 2.2e-79
+          CD34_antigen   1 iLnlketssCedfkkekgekLlqvlceaekaefeaaqdscslkLakseekdqvlllvlanetetkevlellkdkksdleelGiqnvttv 89 
+                           +L+ ++tssC +fkk++ge L+ vlc +e+a+++a++++csl La+se+++q+lllvlan+te++++l+l+k+++sdl++lGi ++t  
+  sp|P28906|CD34_HUMAN 190 CLEQNKTSSCAEFKKDRGEGLARVLCGEEQADADAGAQVCSLLLAQSEVRPQCLLLVLANRTEISSKLQLMKKHQSDLKKLGILDFT-- 276
+                           8**************************************************************************************.. PP
+
+          CD34_antigen  90 keaqeedvrseqdyskkllialvtsglllaiLlvaglygclmrRlskskagerLgEelqtvEngghdnptlevaedtssemqekasvnk 178
+                               e+dv s+q+ys+k+lialvtsg lla+L+++g++  lm+R+s+s++gerLgE+++++Engg +++ +++ ++ts e+q+kasvn+
+  sp|P28906|CD34_HUMAN 277 ----EQDVASHQSYSQKTLIALVTSGALLAVLGITGYF--LMNRRSWSPTGERLGEDPYYTENGG-GQG-YSSGPGTSPEAQGKASVNR 357
+                           ....**********************************..************************8.9*9.******************* PP
+
+          CD34_antigen 179 gaqlnGtdsatskngksdrqhveeDTeL 206
+                           gaq+nGt++ats+ng+s+rqhv++DTeL
+  sp|P28906|CD34_HUMAN 358 GAQENGTGQATSRNGHSARQHVVADTEL 385
+                           ***************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (385 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       854  (0.0445279); expected 383.6 (0.02)
+Passed bias filter:                      433  (0.0225768); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.22s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 2108.26
+//
+[ok]

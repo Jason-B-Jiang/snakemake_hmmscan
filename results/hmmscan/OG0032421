@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0032421.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0032421
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VQ68|Q9VQ68_DROME  [L=994]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-15   57.3  27.5    1.5e-07   31.5   7.6    3.4  2  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.3   1.5   1.4e-09   2.8e-05       6      50 ..      24      73 ..      19      76 .. 0.85
+   2 !   31.5   7.6   7.9e-12   1.5e-07      10      53 .]     784     828 ..     777     828 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 24.3 bits;  conditional E-value: 1.4e-09
+                  CBM_14  6 dglfadptdCskyyvCs.....ngepveftCpeglvFdeetqtCdypenv 50
+                            + + +++t C+ +y+C      +  ++  +C eglvF  ++++C+ p + 
+  tr|Q9VQ68|Q9VQ68_DROME 24 EKTRPHKTRCDAFYKCRelpsnSHVWIPVKCNEGLVFESSLGSCVLPGED 73
+                            677899***********9998666666******************99765 PP
+
+  == domain 2  score: 31.5 bits;  conditional E-value: 7.9e-12
+                  CBM_14  10 adptdCskyyvCs..ngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +++tdC++y+vCs  +g+  +++Cp+ ++F+++t++Cd p+  +qC
+  tr|Q9VQ68|Q9VQ68_DROME 784 PNQTDCTRYFVCSkkDGKVLSYSCPPYTAFNKQTRICDAPTY-AQC 828
+                             4489*********9999999*********************8.999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (994 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       824  (0.0429637); expected 383.6 (0.02)
+Passed bias filter:                      494  (0.0257573); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.53u 0.22s 00:00:00.75 Elapsed: 00:00:00.81
+# Mc/sec: 3967.43
+//
+[ok]

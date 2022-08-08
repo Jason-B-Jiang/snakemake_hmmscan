@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034068.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034068
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B0UYA2|B0UYA2_DANRE  [L=268]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-46  159.2   0.0    1.3e-46  158.8   0.0    1.1  1  3HCDH_N   3-hydroxyacyl-CoA dehydrogenase, NAD binding domain
+      3e-14   53.4   0.0    5.7e-14   52.5   0.0    1.5  1  3HCDH     3-hydroxyacyl-CoA dehydrogenase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> 3HCDH_N  3-hydroxyacyl-CoA dehydrogenase, NAD binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  158.8   0.0   1.4e-50   1.3e-46       2     178 ..       9     188 ..       8     190 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 158.8 bits;  conditional E-value: 1.4e-50
+                             EEEE--SHHHHHHHHHHHHTT--EEEE-S-HHHHHHHHHHHHHHHHTTTTTTSS-.HHHHHHHHHTEEEE--GGGGG.G-SEEEE-S CS
+                 3HCDH_N   2 vaviGaGtmGagiaavfasagleVtlvdiseealekalekieksleklvkkgklk.eeeveealarisfttdleeav.dadlviEav 86 
+                             ++v+G+G++G+++a+vf+s g++V+l+d ++ ++  a+++i+k+le+l++ + l  + ++ e+l+r+s ++dl++a+ +a +v+E+v
+  tr|B0UYA2|B0UYA2_DANRE   9 ITVVGSGLIGRSWAMVFLSGGYKVKLYDNKPGQASGAIAEIRKQLEELQQAKMLRgNLSATEQLSRLSSHEDLQQALdGAFFVQESV 95 
+                             79***********************************************999999788999****************99******** PP
+
+                             --SHHHHHHHHHHHHHHS-TTSEEEE--SSS-HHHHTTTSSSGGGEEEEEE-SSTTT--EEEEEE-SS--HHHHHHHHHHHHHTT-E CS
+                 3HCDH_N  87 vEnlelKrkvfaelekiakpdailatnTSslsiselaealkrperviglHffnPvplmkLvEvvrgekTseetvatvvelakkigkt 173
+                             +E+le K++vf+++e+++++++il+++TS l++s++ +++++++r+i+ H++nP+++++LvE+v++++T +++++ ++ l++++g+ 
+  tr|B0UYA2|B0UYA2_DANRE  96 FEDLEAKQSVFHAVEELVSESVILSSSTSCLMPSNVFSQVQNRTRCIVSHPVNPPYYVRLVELVPHPETLPAVMEVAYSLMTDVGQA 182
+                             *************************************************************************************** PP
+
+                             EEEE.E CS
+                 3HCDH_N 174 pvvv.k 178
+                             pv++ k
+  tr|B0UYA2|B0UYA2_DANRE 183 PVRLrK 188
+                             **9955 PP
+
+>> 3HCDH  3-hydroxyacyl-CoA dehydrogenase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.5   0.0     6e-18   5.7e-14       1      69 [.     192     260 ..     192     267 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 52.5 bits;  conditional E-value: 6e-18
+                             TTTHHHHHHHHHHHHHHHHHTTSS-HHHHHHHHHHHHTHSSTHHHHHHHHHHHHHHHHHHHHHHHTTTG CS
+                   3HCDH   1 GFvvnRllapllneavrlveegvatpediDaamrlglGlpmGpfelsDlvgldvglkilevlaeelger 69 
+                             GF++nR++++++ e +rlv++gv++++diD +m++glG+++++++++++++l+  + + e ++ +lg++
+  tr|B0UYA2|B0UYA2_DANRE 192 GFALNRVQYAIIAESWRLVQDGVISVKDIDLVMSEGLGMRYAFIGPIETMHLNAPEGMEEEIGLVLGTT 260
+                             9****************************************************9999888776666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (268 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       815  (0.0424944); expected 383.6 (0.02)
+Passed bias filter:                      687  (0.0358204); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.23s 00:00:00.61 Elapsed: 00:00:00.64
+# Mc/sec: 1353.18
+//
+[ok]

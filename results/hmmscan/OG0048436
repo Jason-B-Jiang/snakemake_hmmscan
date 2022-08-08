@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048436.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048436
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q08490  [L=590]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.2e-15   55.4   7.8    1.4e-14   53.7   7.8    2.0  1  Shugoshin_N  Shugoshin N-terminal coiled-coil region
+    1.6e-08   34.2   2.4    6.2e-08   32.4   2.4    2.1  1  Shugoshin_C  Shugoshin C terminus
+
+
+Domain annotation for each model (and alignments):
+>> Shugoshin_N  Shugoshin N-terminal coiled-coil region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.7   7.8   1.4e-18   1.4e-14       1      44 [.      43      86 ..      43      87 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 53.7 bits;  conditional E-value: 1.4e-18
+  Shugoshin_N  1 lKrkylrqNreLAKsNsalslkirelekevseLlsENlnLRela 44
+                 +++ y+rqN+ LAK Ns+l++k+++lek++s+L++EN+ LR++ 
+       Q08490 43 IRQSYSRQNSLLAKDNSILKIKVNSLEKKISQLVQENVTLRSKT 86
+                 6899**************************************96 PP
+
+>> Shugoshin_C  Shugoshin C terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.4   2.4   6.5e-12   6.2e-08       2      24 .]     367     389 ..     366     389 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 32.4 bits;  conditional E-value: 6.5e-12
+  Shugoshin_C   2 RpsRrarkvvsYKEPsLnsKMRR 24 
+                  R +R+++k+v+Y +PsL++KMRR
+       Q08490 367 RTRRTRGKAVDYTLPSLRAKMRR 389
+                  99********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (590 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2095  (0.109234); expected 383.6 (0.02)
+Passed bias filter:                      309  (0.0161114); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.24s 00:00:00.75 Elapsed: 00:00:00.71
+# Mc/sec: 2687.93
+//
+[ok]

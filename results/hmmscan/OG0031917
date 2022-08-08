@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031917.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031917
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VLW8|Q9VLW8_DROME  [L=311]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.7e-18   66.5   0.0    6.5e-09   36.5   0.0    2.4  2  dsrm      Double-stranded RNA binding motif
+
+
+Domain annotation for each model (and alignments):
+>> dsrm  Double-stranded RNA binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9   0.0   1.6e-10   3.1e-06       1      66 [.       6      66 ..       6      67 .. 0.86
+   2 !   36.5   0.0   3.4e-13   6.5e-09       3      65 ..      98     159 ..      96     161 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 1.6e-10
+                            HHHHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHHH CS
+                    dsrm  1 pKskLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdalek 66
+                            ++s Lqe+c ++   +++++   +g+++    +v++v++ + +   G g++K++A+++AA ++l+k
+  tr|Q9VLW8|Q9VLW8_DROME  6 AVSALQEFCARTQINLPTYSF-IPGEDG---GYVCKVELLEIEA-LGNGRSKRDAKHLAASNILRK 66
+                            5799*********77777766.566666...59******88888.*******************97 PP
+
+  == domain 2  score: 36.5 bits;  conditional E-value: 3.4e-13
+                             HHHHHHHHHTTSCEEEEEEEEESSSSSSEEEEEEEEETTEEEEEEEESSHHHHHHHHHHHHHH CS
+                    dsrm   3 skLqeycqkkgkppnyeyvseegpphslpkFvvtvkvdgkligsGvgsnKKeAeqsAAkdale 65 
+                             + L++yc ++ +p+++  v ++ ++ s p+Fv+++ v   ++++G++  KK+A q+AA ++l+
+  tr|Q9VLW8|Q9VLW8_DROME  98 KELRDYCVRREMPLPCIEVVQQSGTPSAPEFVACCSV-ASIVRYGKSDKKKDARQRAAIEMLA 159
+                             6899*************99999999999*********.88888*****************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (311 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       794  (0.0413994); expected 383.6 (0.02)
+Passed bias filter:                      532  (0.0277387); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.20s 00:00:00.60 Elapsed: 00:00:00.68
+# Mc/sec: 1487.62
+//
+[ok]

@@ -1,0 +1,87 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025775.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025775
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q20646|CEP1_CAEEL  [L=644]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+   8.1e-120  397.7   7.0   1.4e-119  396.9   7.0    1.4  1  CEP1-DNA_bind  CEP-1, DNA binding
+    3.7e-12   46.7   2.9    7.7e-12   45.7   2.9    1.5  1  P53            P53 DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> CEP1-DNA_bind  CEP-1, DNA binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  396.9   7.0  1.4e-123  1.4e-119       1     196 []     223     418 ..     223     418 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 396.9 bits;  conditional E-value: 1.4e-123
+                           --EEEEEE-HHHHTT-SSEEEEE-TT--EEEEE-TT--EEEEEEEE--TTTTT---EEEEEEEEE-SSS-HHHHTT-TT-B----HHHH CS
+         CEP1-DNA_bind   1 ekwleievkkekvakvsdlefeivvedekylwakmkclvpiivkwkldkrhfnkqlslkvrlvkydkkenveyairvprsdlakcrshr 89 
+                           ekw+ei+v+k+kvak+sd++f+i++e+ekylw+km+clvpi+vkwkldkrhfn++lsl++r+vkydkkenveyair+prsd++kcrsh+
+  sp|Q20646|CEP1_CAEEL 223 EKWMEIDVLKQKVAKSSDMAFAISSEHEKYLWTKMGCLVPIQVKWKLDKRHFNSNLSLRIRFVKYDKKENVEYAIRNPRSDVMKCRSHT 311
+                           89*************************************************************************************** PP
+
+                           HT--SSSTT-SEEEES-SSEEEEE-TTSSEEEEE--TT--EEEEEEEESS-GGGS-HHHHTSEEEEEEEEE-TTS-EEEEEEEEEEEE- CS
+         CEP1-DNA_bind  90 ereektpresffyvvkseeefsisakkdstfvlklapgavqvlfdlifkcqekcldlderrkrmclavfledengnellhdvikqlliv 178
+                           ere+++p++sffy+++se+efs+sa+k+stf+l+++pgavq++fd+if+cqekcldld+rrk+mclavfl+dengne+lh++ikq++iv
+  sp|Q20646|CEP1_CAEEL 312 EREQHFPFDSFFYIRNSEHEFSYSAEKGSTFTLIMYPGAVQANFDIIFMCQEKCLDLDDRRKTMCLAVFLDDENGNEILHAYIKQVRIV 400
+                           ***************************************************************************************** PP
+
+                           S-HHHHHHHHHHHHHH-- CS
+         CEP1-DNA_bind 179 ayprrdwknfcekeddkk 196
+                           ayprrdwknfce+ed+k+
+  sp|Q20646|CEP1_CAEEL 401 AYPRRDWKNFCEREDAKQ 418
+                           ***************986 PP
+
+>> P53  P53 DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.7   2.9     8e-16   7.7e-12       3     182 ..     220     408 ..     204     414 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 45.7 bits;  conditional E-value: 8e-16
+                           S-B-TTTTEEEEESSBSSSTTTSEE.EETTTTEEEEETTSEEEEEEEESSCS...STTEEEEEEEE.ESSCCCT.......TSB-B--H CS
+                   P53   3 eslpgelnFkveleeekeakkkkwl.ySeklnklyvkmnksvpvkfkveeek...pkglvvramlv.yskseha.......kkpVerCp 79 
+                           e+++++++ +v  ++  ++++++++  Se+ + l++km+  vp+++k++ +k   +++l +r+  v y k+e++       +  V +C 
+  sp|Q20646|CEP1_CAEEL 220 EDCEKWMEIDVLKQKVAKSSDMAFAiSSEHEKYLWTKMGCLVPIQVKWKLDKrhfNSNLSLRIRFVkYDKKENVeyairnpRSDVMKCR 308
+                           455566666666655333333444326788889****************9999899999999976636666665111222245688899 PP
+
+                           HHHHSSTTTTSSSS-BSEEESSBT-EEE.EETTTTEEEEEEE---SSSSEEEEEEESS-TTCTTT.TTTS-EEEEEEEEET.TSCEEEE CS
+                   P53  80 nHlaednsknkaikehvlrceneeaeYvgedegeerlsvlvpleepeesvtvllkFvCksSCsgg.inRrptalvftLede.egqvlGr 166
+                            H++++++      +++  ++n+e+e+  ++ +++  + l+ +     + +  + F+C+  C     +R+ + l ++L de  +++l  
+  sp|Q20646|CEP1_CAEEL 309 SHTEREQH---FPFDSFFYIRNSEHEFS-YSAEKGSTFTLIMYPGAV-QANFDIIFMCQEKCLDLdDRRKTMCLAVFLDDEnGNEILHA 392
+                           99999988...35567777777777777.445555566666664444.5688999*******77724555668999999996779**** PP
+
+                           EEEEEEEESSHHHHHH CS
+                   P53 167 qsievkvCacpkRDre 182
+                            + +v++ a+p+RD +
+  sp|Q20646|CEP1_CAEEL 393 YIKQVRIVAYPRRDWK 408
+                           **************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (644 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       882  (0.0459878); expected 383.6 (0.02)
+Passed bias filter:                      443  (0.0230982); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.71
+# Mc/sec: 2951.04
+//
+[ok]

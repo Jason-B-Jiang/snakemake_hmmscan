@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034354.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034354
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QF56|F1QF56_DANRE  [L=877]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.8e-28   97.1 119.8    0.00022   21.6   2.7   17.1  0  zf-H2C2_2  Zinc-finger double domain
+      1e-25   88.8 131.1    0.00026   21.4   1.7   16.5  1  zf-C2H2    Zinc finger, C2H2 type
+    2.1e-25   88.2 108.5    2.4e-07   30.4   3.6   13.9  1  zf-H2C2_5  C2H2-type zinc-finger domain
+    1.3e-24   84.8 126.0      0.012   16.5   0.5   16.4  0  zf-C2H2_4  C2H2-type zinc finger
+    1.4e-06   28.6  79.9      0.033   14.6   0.5   10.4  0  zf-Di19    Drought induced 19 protein (Di19), zinc-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   1.7   6.7e-08   0.00026       1      23 []     541     563 ..     541     563 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 6.7e-08
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             +kC+ C++  ++ksnLk+H+++H
+  tr|F1QF56|F1QF56_DANRE 541 FKCSQCDYASRSKSNLKAHMNRH 563
+                             8*********************9 PP
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.4   3.6   6.3e-11   2.4e-07       1      24 [.     541     564 ..     541     565 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 30.4 bits;  conditional E-value: 6.3e-11
+               zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHt 24 
+                             +KCsqCDY + +KsnLk H+  H+
+  tr|F1QF56|F1QF56_DANRE 541 FKCSQCDYASRSKSNLKAHMNRHN 564
+                             8*******************9997 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-Di19  Drought induced 19 protein (Di19), zinc-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (877 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1818  (0.0947912); expected 383.6 (0.02)
+Passed bias filter:                      427  (0.0222639); expected 383.6 (0.02)
+Passed Vit filter:                        65  (0.00338912); expected 19.2 (0.001)
+Passed Fwd filter:                        29  (0.00151207); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.62u 0.26s 00:00:00.88 Elapsed: 00:00:00.83
+# Mc/sec: 3438.63
+//
+[ok]

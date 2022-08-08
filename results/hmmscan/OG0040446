@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040446.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040446
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P04141|CSF2_HUMAN  [L=144]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.5e-70  233.3   0.1    6.3e-70  233.1   0.1    1.0  1  GM_CSF    Granulocyte-macrophage colony-stimulating factor
+
+
+Domain annotation for each model (and alignments):
+>> GM_CSF  Granulocyte-macrophage colony-stimulating factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  233.1   0.1   3.3e-74   6.3e-70       1     122 []      18     139 ..      18     139 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 233.1 bits;  conditional E-value: 3.3e-74
+                           XXX----TTT-TTHHHHHHHHHHHHHHH----HHHHTSEEEEESS--BTTS--SHHHHHHHHHHT-SGGGGGGHHHHHHHHHHHHHHS- CS
+                GM_CSF   1 aPtrspspvtrpwkhvdaikealsllnessdlaavlneevevvseefdlqeptclqtrlklykqGlrGsltklkgaltllashykqhcP 89 
+                           aP+rspsp+t+pw+hv+ai+ea++lln s+d+aa++ne+vev+se+fdlqeptclqtrl+lykqGlrGsltklkg+lt++ashykqhcP
+  sp|P04141|CSF2_HUMAN  18 APARSPSPSTQPWEHVNAIQEARRLLNLSRDTAAEMNETVEVISEMFDLQEPTCLQTRLELYKQGLRGSLTKLKGPLTMMASHYKQHCP 106
+                           8**************************************************************************************** PP
+
+                           ----SS--EEEEEHHHHHHHHHHHHHHS-SS-- CS
+                GM_CSF  90 ptpetscetqvitfksfkenlkeflfaiPfdcw 122
+                           ptpetsc+tq+itf+sfkenlk+fl+ iPfdcw
+  sp|P04141|CSF2_HUMAN 107 PTPETSCATQIITFESFKENLKDFLLVIPFDCW 139
+                           ********************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (144 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       565  (0.0294593); expected 383.6 (0.02)
+Passed bias filter:                      478  (0.0249231); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.19s 00:00:00.49 Elapsed: 00:00:00.57
+# Mc/sec: 812.74
+//
+[ok]

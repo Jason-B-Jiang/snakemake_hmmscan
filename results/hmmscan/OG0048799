@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048799.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048799
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q07589  [L=356]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-27   96.4   0.1    2.7e-27   95.6   0.1    1.4  1  ApbA_C    Ketopantoate reductase PanE/ApbA C terminal
+    4.4e-21   75.2   0.0    6.2e-21   74.7   0.0    1.2  1  ApbA      Ketopantoate reductase PanE/ApbA
+
+
+Domain annotation for each model (and alignments):
+>> ApbA_C  Ketopantoate reductase PanE/ApbA C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.6   0.1   2.8e-31   2.7e-27       2     123 ..     208     332 ..     207     334 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 95.6 bits;  conditional E-value: 2.8e-31
+  ApbA_C   2 irltrweKllinaainpltalldckngell.....dspelralvralmkEavavaeaegvelseerleeavaavlektaanksSMlqDveagrktEidyinGa 99 
+             +r  rw+Kll+naain+ tal+++++ ++l     ++    +++ ++m+E++a+a +eg+ ++ee +  + +++++k+   k+SM+ D e+g+ +E+++i+G+
+  Q07589 208 VRYSRWKKLLYNAAINTSTALVGLDVPRCLefgvnKKSTEIEVFHPAMREIIAIAASEGIIIEEE-FITMFTEITRKKV-FKPSMCVDCEKGQLMELEVILGN 308
+             6789**********************9999999988888899*****************999999.9999999999955.4********************** PP
+
+  ApbA_C 100 vvklAeklgvetPvnellyelvka 123
+             ++++A+++gv tP++  ly+l+ +
+  Q07589 309 PIRIAKRNGVATPTLSILYNLLVL 332
+             *********************965 PP
+
+>> ApbA  Ketopantoate reductase PanE/ApbA
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.7   0.0   6.5e-25   6.2e-21       1     151 [.       4     177 ..       4     178 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 74.7 bits;  conditional E-value: 6.5e-25
+             EEEESSSHHHHHHHHHH.HHCTHCEEEE-SSHHHHHHHHHCEEEEETT.CEEEEEECEEECCC.....SCCCSS-ESEEEE-SSGG...GHHHHHHH.HGGGE CS
+    ApbA   1 iailGaGaiGsllaakL.akagadvtlilrsrrlealkknGlrltseg.geeilrppvalsae.....eksedepidllivtvKay...qteealee.ikpll 92 
+             i+++GaG++G + a +L  k+  dv l++rs+ ++++ k+G++++s++ g    + p+++ ++     + ++++ + +++vt+K+    ++ + +++ i+p+l
+  Q07589   4 ILVIGAGGVGVITALSLwLKKESDVSLVVRSD-YDRVLKHGYTIESCDyGRLEGWRPHHIYSSvedaaSAADNQGYNYIVVTTKNIidgPVNSRVSNiIRPVL 105
+             89***************55599**********.****************6666666666666669999999*************96333777888899***** PP
+
+             ECEE.........EEEEESSSSSHHHHHCTTS...TTS.EEEEEEEE-EEEEECTTEEEEES--EEEEEESS CS
+    ApbA  93 dpnt.........vvlllqNGlgheeelkeal...pkp.rvlggvtthgatregpgevhhagkgeikigela 151
+             ++n          ++ll+qNG++ e+e+ +++   + + +vl+g+  +g+t+ g g++++ g++ +  g+++
+  Q07589 106 EKNKelhgpqlttHILLVQNGIDIEKEIWAEFpreQYRyTVLSGIQLIGSTKIGSGHISQVGQDHLSCGAFD 177
+             ***9999999999*******************65533458*************************9999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (356 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       459  (0.0239324); expected 383.6 (0.02)
+Passed bias filter:                      424  (0.0221075); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.59
+# Mc/sec: 1946.01
+//
+[ok]

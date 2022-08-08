@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040814.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040814
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|H3BTG2|TEX46_HUMAN  [L=121]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-55  186.9   9.0    9.4e-30  103.6   1.6    2.0  2  DUF5531   Family of unknown function (DUF5531)
+
+
+Domain annotation for each model (and alignments):
+>> DUF5531  Family of unknown function (DUF5531)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   92.1   0.7   1.7e-30   3.3e-26       1      56 [.       2      57 ..       2      58 .. 0.98
+   2 !  103.6   1.6   4.9e-34   9.4e-30      87     152 .]      55     120 ..      54     120 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 92.1 bits;  conditional E-value: 1.7e-30
+                DUF5531  1 slhgllassGtiGavvawlisykpalfgflllllllsnwlvkrevkstltepkqek 56
+                           slhg+las+GtiGav awl+sykpalfgfl+lllllsnwlvk+e+k tl+ep+q++
+  sp|H3BTG2|TEX46_HUMAN  2 SLHGILASAGTIGAVAAWLMSYKPALFGFLFLLLLLSNWLVKYEHKLTLPEPQQDE 57
+                           79***************************************************986 PP
+
+  == domain 2  score: 103.6 bits;  conditional E-value: 4.9e-34
+                DUF5531  87 qdkvlerlllsemklkvlenqmfiiwnklnrrrrssgqrkfserrrrsrrqesafstvsecttssp 152
+                            qd +l+rll+semk+kvlenqmfiiwnk+n++ rss++r+f  +++r+rr+es + t+s+ct+ssp
+  sp|H3BTG2|TEX46_HUMAN  55 QDEILQRLLFSEMKMKVLENQMFIIWNKMNHHGRSSRHRNFPMKKHRMRRHESICPTLSDCTSSSP 120
+                            99*************************************************************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (121 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       733  (0.0382189); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.30u 0.21s 00:00:00.51 Elapsed: 00:00:00.56
+# Mc/sec: 695.50
+//
+[ok]

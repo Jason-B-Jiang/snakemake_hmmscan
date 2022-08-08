@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031141.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031141
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54JY3|Q54JY3_DICDI  [L=187]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-26   90.1  15.9      1e-13   50.9   6.0    2.5  2  PQ-loop   PQ loop repeat
+
+
+Domain annotation for each model (and alignments):
+>> PQ-loop  PQ loop repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.9   6.0   5.2e-18     1e-13       2      58 ..      15      71 ..      14      74 .. 0.94
+   2 !   44.5   2.2   5.4e-16     1e-11       9      59 ..     132     182 ..     125     184 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 50.9 bits;  conditional E-value: 5.2e-18
+                 PQ-loop  2 snvlgyislvlwlvsyiPQiikNykrkSteGlSilflllwllGdilsllylilnsfp 58
+                             ++lg++s +l+ ++y+PQ+++N+krkS++G+S + +++ l+G ++ ++++ l++ +
+  tr|Q54JY3|Q54JY3_DICDI 15 YYILGILSSILFGIQYLPQMYLNFKRKSVQGFSSSGIIIKLVGASFLFVNSWLTGES 71
+                            689***********************************************9998765 PP
+
+  == domain 2  score: 44.5 bits;  conditional E-value: 5.4e-16
+                 PQ-loop   9 slvlwlvsyiPQiikNykrkSteGlSilflllwllGdilsllylilnsfpp 59 
+                             + +  l+s +PQ+i+ y++kSt+G+S+ + +l+++G+i+ +l++++++ + 
+  tr|Q54JY3|Q54JY3_DICDI 132 KPITQLLSHLPQVILCYQSKSTTGVSLPSQYLNFIGGIAGVLSMYIKNNNN 182
+                             5567799****************************************9885 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (187 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       481  (0.0250795); expected 383.6 (0.02)
+Passed bias filter:                      263  (0.0137129); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.17s 00:00:00.49 Elapsed: 00:00:00.52
+# Mc/sec: 1165.74
+//
+[ok]

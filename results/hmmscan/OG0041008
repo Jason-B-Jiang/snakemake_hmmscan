@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041008.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041008
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q13352|CENPR_HUMAN  [L=177]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-65  219.1  10.4    2.2e-65  218.8  10.4    1.1  1  CENP-R    Kinetochore component, CENP-R
+
+
+Domain annotation for each model (and alignments):
+>> CENP-R  Kinetochore component, CENP-R
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  218.8  10.4   1.2e-69   2.2e-65       1     136 [.      25     160 ..      25     162 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 218.8 bits;  conditional E-value: 1.2e-69
+                 CENP-R   1 rkksltsYSPttGtrqlSpfsSPtsskeqelrngpsnekrkkenelslsrrkesttkdd.efmvLlskvekslekileimqnLsslqa 87 
+                            rkks+ +YSPttGt+q+S f+SPtss+eq++rng+snekrkk+n+ sl+++kesttkd+ efm+Llskvek +e+i+eimqnLss+qa
+  sp|Q13352|CENPR_HUMAN  25 RKKSVITYSPTTGTCQMSLFASPTSSEEQKHRNGLSNEKRKKLNHPSLTESKESTTKDNdEFMMLLSKVEKLSEEIMEIMQNLSSIQA 112
+                            79*********************************************************9**************************** PP
+
+                 CENP-R  88 LegsreLenliGvskascvLkaElkKtkeLmtkveklkllekkssklpa 136
+                            LegsreLenliG+s+as++Lk+E++KtkeLmtkv+k+kl+ek s++lp+
+  sp|Q13352|CENPR_HUMAN 113 LEGSRELENLIGISCASHFLKREMQKTKELMTKVNKQKLFEK-STGLPH 160
+                            *****************************************9.555665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (177 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1578  (0.0822775); expected 383.6 (0.02)
+Passed bias filter:                      529  (0.0275823); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.72
+# Mc/sec: 794.79
+//
+[ok]

@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030300.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030300
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55C37|Q55C37_DICDI  [L=252]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.7e-20   72.4   0.2    1.7e-10   41.7   0.1    2.1  2  Peptidase_C39_2  Peptidase_C39 like family
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_C39_2  Peptidase_C39 like family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.7   0.1   8.7e-15   1.7e-10       2      99 ..       6     128 ..       5     130 .. 0.85
+   2 !   31.0   0.1   1.8e-11   3.4e-07      58     144 .]     117     223 ..     100     223 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 41.7 bits;  conditional E-value: 8.7e-15
+         Peptidase_C39_2   2 dvplynQldelpngCeptslamvlsyl.........gkkvtqnelakelktns........sgdpntgfvgnitdksglgvynepiv 71 
+                             + + +nQ++ lp+gCe+t+++++l+ l          +k+t ++la+++ + +        +g+p  +f+g++++k ++g+ ++pi+
+  tr|Q55C37|Q55C37_DICDI   6 ETKAQNQYPLLPTGCEVTATSILLNSLikshnlnisTYKITNESLADKIIKEQdpdpitnfCGNPYRAFIGSPYSKESFGIFHKPIY 92 
+                             56789*******************766665555444668999999999999999********************************* PP
+
+         Peptidase_C39_2  72 klaekygl........kvsdtrgssieevkkeidag 99 
+                             +l +++ +        +v d++++ i++ k  i+++
+  tr|Q55C37|Q55C37_DICDI  93 NLIKEVIYqdnenqhiEVIDLTQTNINKFKYLIKQN 128
+                             *****9998777777777777777777777777776 PP
+
+  == domain 2  score: 31.0 bits;  conditional E-value: 1.8e-11
+         Peptidase_C39_2  58 t.dksglgvynepivklaekygl......kvsdtrgssieevkkeid.agkPvvvsvtt.fkpl...........ndgeikftssgH 124
+                             + +k ++ + +++++++ e+ ++      +  +  ++++e +k+++  ++ P+++++t  +k++           +++  ++ s +H
+  tr|Q55C37|Q55C37_DICDI 117 NiNKFKYLIKQNETKDYIESRLNyfenddNNNNNGEEDFEILKNHMIfNNAPIIIWMTLeLKEPkitdewfdiknQSQPLYWVSPEH 203
+                             356677777778888888877777777766677788899999999763799*********9999**********87888******** PP
+
+         Peptidase_C39_2 125 lvvitGYdekgkrvyvnDPa 144
+                             + +++G+de ++ v++ DP+
+  tr|Q55C37|Q55C37_DICDI 204 CATLSGFDEIENVVIITDPH 223
+                             *********777*******7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (252 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1093  (0.0569894); expected 383.6 (0.02)
+Passed bias filter:                      472  (0.0246103); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.62
+# Mc/sec: 1309.55
+//
+[ok]

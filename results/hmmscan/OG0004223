@@ -1,0 +1,779 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004223.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004223
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A1ZAU8|PTRO_DROME  [L=1630]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.7e-52  176.0   0.1    5.4e-52  175.0   0.1    1.6  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.8e-27   95.0   0.1    1.8e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+    1.9e-20   72.5   5.2    1.9e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.0   0.1   8.5e-56   5.4e-52       1     119 []    1490    1608 ..    1490    1608 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 175.0 bits;  conditional E-value: 8.5e-56
+            CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvklaGvGPkvvtek 87  
+                            pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+G+GP +v+e 
+  sp|A1ZAU8|PTRO_DROME 1490 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLYGTGPSQVEEV 1576
+                            8************************************************************************************** PP
+
+            CAMSAP_CKK   88 mieklykYnsgrkefkevssktlsvsidavti 119 
+                            m++k++kYnsg+k f++v++k+l+v+ida+ti
+  sp|A1ZAU8|PTRO_DROME 1577 MFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1608
+                            *******************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1   2.8e-31   1.8e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 2.8e-31
+             CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDllyvr 85 
+                           s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y+r
+  sp|A1ZAU8|PTRO_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTYMR 272
+                           6779**********.******************************************************************96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2     3e-24   1.9e-20       2      59 .]     592     658 ..     591     658 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3e-24
+            CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                           ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  sp|A1ZAU8|PTRO_DROME 592 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 658
+                           6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1630 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3066  (0.159862); expected 383.6 (0.02)
+Passed bias filter:                      575  (0.0299807); expected 383.6 (0.02)
+Passed Vit filter:                       123  (0.00641326); expected 19.2 (0.001)
+Passed Fwd filter:                        41  (0.00213775); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.30u 0.32s 00:00:01.62 Elapsed: 00:00:01.11
+# Mc/sec: 4743.84
+//
+Query:       tr|A0A0B4KFA4|A0A0B4KFA4_DROME  [L=1680]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.9e-52  175.9   0.1    5.6e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.5   5.2      2e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.8e-56   5.6e-52       1     119 []    1540    1658 ..    1540    1658 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.8e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KFA4|A0A0B4KFA4_DROME 1540 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1616
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KFA4|A0A0B4KFA4_DROME 1617 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1658
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1   2.9e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 2.9e-31
+                       CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDl 81 
+                                     s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD+
+  tr|A0A0B4KFA4|A0A0B4KFA4_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDV 268
+                                     6779**********.**************************************************************** PP
+
+                       CAMSAP_CH  82 lyvr 85 
+                                     +y+r
+  tr|A0A0B4KFA4|A0A0B4KFA4_DROME 269 TYMR 272
+                                     **96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2   3.1e-24     2e-20       2      59 .]     629     695 ..     628     695 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3.1e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|A0A0B4KFA4|A0A0B4KFA4_DROME 629 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 695
+                                     6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1680 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3129  (0.163147); expected 383.6 (0.02)
+Passed bias filter:                      597  (0.0311278); expected 383.6 (0.02)
+Passed Vit filter:                       127  (0.00662183); expected 19.2 (0.001)
+Passed Fwd filter:                        41  (0.00213775); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.29u 0.25s 00:00:01.54 Elapsed: 00:00:01.09
+# Mc/sec: 5004.70
+//
+Query:       tr|A0A0B4KG58|A0A0B4KG58_DROME  [L=1538]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.5e-52  176.1   0.1      5e-52  175.1   0.1    1.6  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    6.5e-28   96.4   0.6    1.7e-27   95.1   0.1    2.0  1  CAMSAP_CH   CAMSAP CH domain
+    1.8e-20   72.6   5.2    1.8e-20   72.6   5.2    3.2  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.1   0.1   7.9e-56     5e-52       1     119 []    1398    1516 ..    1398    1516 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 175.1 bits;  conditional E-value: 7.9e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KG58|A0A0B4KG58_DROME 1398 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1474
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KG58|A0A0B4KG58_DROME 1475 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1516
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.1   0.1   2.7e-31   1.7e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.1 bits;  conditional E-value: 2.7e-31
+                       CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDl 81 
+                                     s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD+
+  tr|A0A0B4KG58|A0A0B4KG58_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDV 268
+                                     6779**********.**************************************************************** PP
+
+                       CAMSAP_CH  82 lyvr 85 
+                                     +y+r
+  tr|A0A0B4KG58|A0A0B4KG58_DROME 269 TYMR 272
+                                     **96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.6   5.2   2.8e-24   1.8e-20       2      59 .]     578     644 ..     577     644 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.6 bits;  conditional E-value: 2.8e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|A0A0B4KG58|A0A0B4KG58_DROME 578 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 644
+                                     6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1538 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2625  (0.136868); expected 383.6 (0.02)
+Passed bias filter:                      541  (0.0282079); expected 383.6 (0.02)
+Passed Vit filter:                       115  (0.00599614); expected 19.2 (0.001)
+Passed Fwd filter:                        44  (0.00229418); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.25u 0.25s 00:00:01.50 Elapsed: 00:00:01.13
+# Mc/sec: 4420.18
+//
+Query:       tr|B7YZJ2|B7YZJ2_DROME  [L=1599]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.6e-52  176.0   0.1    5.3e-52  175.0   0.1    1.6  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.8e-27   95.1   0.1    1.8e-27   95.1   0.1    2.4  1  CAMSAP_CH   CAMSAP CH domain
+    1.9e-20   72.5   5.2    1.9e-20   72.5   5.2    3.2  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.0   0.1   8.3e-56   5.3e-52       1     119 []    1459    1577 ..    1459    1577 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 175.0 bits;  conditional E-value: 8.3e-56
+              CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvklaGvGPkvvt 85  
+                              pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+G+GP +v+
+  tr|B7YZJ2|B7YZJ2_DROME 1459 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLYGTGPSQVE 1543
+                              8************************************************************************************ PP
+
+              CAMSAP_CKK   86 ekmieklykYnsgrkefkevssktlsvsidavti 119 
+                              e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|B7YZJ2|B7YZJ2_DROME 1544 EVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1577
+                              *********************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.1   0.1   2.8e-31   1.8e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.1 bits;  conditional E-value: 2.8e-31
+               CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDllyvr 85 
+                             s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y+r
+  tr|B7YZJ2|B7YZJ2_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTYMR 272
+                             6779**********.******************************************************************96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2     3e-24   1.9e-20       2      59 .]     613     679 ..     612     679 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3e-24
+              CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                             ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|B7YZJ2|B7YZJ2_DROME 613 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 679
+                             6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1599 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3088  (0.161009); expected 383.6 (0.02)
+Passed bias filter:                      547  (0.0285208); expected 383.6 (0.02)
+Passed Vit filter:                       117  (0.00610042); expected 19.2 (0.001)
+Passed Fwd filter:                        39  (0.00203347); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.26u 0.24s 00:00:01.50 Elapsed: 00:00:01.07
+# Mc/sec: 4866.20
+//
+Query:       tr|A0A0B4KET5|A0A0B4KET5_DROME  [L=1674]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-52  175.9   0.1    5.6e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.5   5.2      2e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.8e-56   5.6e-52       1     119 []    1534    1652 ..    1534    1652 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.8e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KET5|A0A0B4KET5_DROME 1534 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1610
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KET5|A0A0B4KET5_DROME 1611 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1652
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1   2.9e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 2.9e-31
+                       CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDl 81 
+                                     s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD+
+  tr|A0A0B4KET5|A0A0B4KET5_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDV 268
+                                     6779**********.**************************************************************** PP
+
+                       CAMSAP_CH  82 lyvr 85 
+                                     +y+r
+  tr|A0A0B4KET5|A0A0B4KET5_DROME 269 TYMR 272
+                                     **96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2   3.1e-24     2e-20       2      59 .]     664     730 ..     663     730 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3.1e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|A0A0B4KET5|A0A0B4KET5_DROME 664 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 730
+                                     6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1674 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3143  (0.163877); expected 383.6 (0.02)
+Passed bias filter:                      592  (0.0308671); expected 383.6 (0.02)
+Passed Vit filter:                       115  (0.00599614); expected 19.2 (0.001)
+Passed Fwd filter:                        35  (0.00182491); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.23u 0.20s 00:00:01.43 Elapsed: 00:00:01.15
+# Mc/sec: 4728.73
+//
+Query:       tr|A0A0B4KEY4|A0A0B4KEY4_DROME  [L=1689]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.9e-52  175.9   0.1    5.7e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.4   5.2      2e-20   72.4   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.9e-56   5.7e-52       1     119 []    1549    1667 ..    1549    1667 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.9e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KEY4|A0A0B4KEY4_DROME 1549 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1625
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KEY4|A0A0B4KEY4_DROME 1626 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1667
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1     3e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 3e-31
+                       CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDl 81 
+                                     s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD+
+  tr|A0A0B4KEY4|A0A0B4KEY4_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDV 268
+                                     6779**********.**************************************************************** PP
+
+                       CAMSAP_CH  82 lyvr 85 
+                                     +y+r
+  tr|A0A0B4KEY4|A0A0B4KEY4_DROME 269 TYMR 272
+                                     **96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.4   5.2   3.1e-24     2e-20       2      59 .]     613     679 ..     612     679 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.4 bits;  conditional E-value: 3.1e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|A0A0B4KEY4|A0A0B4KEY4_DROME 613 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 679
+                                     6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1689 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3168  (0.165181); expected 383.6 (0.02)
+Passed bias filter:                      598  (0.0311799); expected 383.6 (0.02)
+Passed Vit filter:                       125  (0.00651755); expected 19.2 (0.001)
+Passed Fwd filter:                        38  (0.00198133); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.34u 0.22s 00:00:01.56 Elapsed: 00:00:01.19
+# Mc/sec: 4607.14
+//
+Query:       tr|E1JH91|E1JH91_DROME  [L=1683]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-52  175.9   0.1    5.7e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.5   5.2      2e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.8e-56   5.7e-52       1     119 []    1543    1661 ..    1543    1661 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.8e-56
+              CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvklaGvGPkvvt 85  
+                              pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+G+GP +v+
+  tr|E1JH91|E1JH91_DROME 1543 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLYGTGPSQVE 1627
+                              8************************************************************************************ PP
+
+              CAMSAP_CKK   86 ekmieklykYnsgrkefkevssktlsvsidavti 119 
+                              e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|E1JH91|E1JH91_DROME 1628 EVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1661
+                              *********************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1     3e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 3e-31
+               CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDllyvr 85 
+                             s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y+r
+  tr|E1JH91|E1JH91_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTYMR 272
+                             6779**********.******************************************************************96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2   3.1e-24     2e-20       2      59 .]     613     679 ..     612     679 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3.1e-24
+              CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                             ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|E1JH91|E1JH91_DROME 613 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 679
+                             6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1683 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3164  (0.164972); expected 383.6 (0.02)
+Passed bias filter:                      597  (0.0311278); expected 383.6 (0.02)
+Passed Vit filter:                       126  (0.00656969); expected 19.2 (0.001)
+Passed Fwd filter:                        38  (0.00198133); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.33u 0.25s 00:00:01.58 Elapsed: 00:00:01.07
+# Mc/sec: 5116.45
+//
+Query:       tr|B7YZJ1|B7YZJ1_DROME  [L=1663]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-52  175.9   0.1    5.6e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.5   5.2      2e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.7e-56   5.6e-52       1     119 []    1523    1641 ..    1523    1641 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.7e-56
+              CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvklaGvGPkvvt 85  
+                              pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+G+GP +v+
+  tr|B7YZJ1|B7YZJ1_DROME 1523 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLYGTGPSQVE 1607
+                              8************************************************************************************ PP
+
+              CAMSAP_CKK   86 ekmieklykYnsgrkefkevssktlsvsidavti 119 
+                              e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|B7YZJ1|B7YZJ1_DROME 1608 EVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1641
+                              *********************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1   2.9e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 2.9e-31
+               CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDllyvr 85 
+                             s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y+r
+  tr|B7YZJ1|B7YZJ1_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTYMR 272
+                             6779**********.******************************************************************96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2   3.1e-24     2e-20       2      59 .]     592     658 ..     591     658 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3.1e-24
+              CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                             ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|B7YZJ1|B7YZJ1_DROME 592 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 658
+                             6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1663 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3169  (0.165233); expected 383.6 (0.02)
+Passed bias filter:                      572  (0.0298243); expected 383.6 (0.02)
+Passed Vit filter:                       127  (0.00662183); expected 19.2 (0.001)
+Passed Fwd filter:                        48  (0.00250274); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.34u 0.25s 00:00:01.59 Elapsed: 00:00:01.18
+# Mc/sec: 4591.32
+//
+Query:       tr|A0A0B4KFU3|A0A0B4KFU3_DROME  [L=1504]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.5e-52  176.1   0.1    4.9e-52  175.1   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    6.4e-28   96.5   0.6    1.7e-27   95.2   0.1    2.0  1  CAMSAP_CH   CAMSAP CH domain
+    1.8e-20   72.6   5.2    1.8e-20   72.6   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.1   0.1   7.7e-56   4.9e-52       1     119 []    1364    1482 ..    1364    1482 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 175.1 bits;  conditional E-value: 7.7e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KFU3|A0A0B4KFU3_DROME 1364 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1440
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KFU3|A0A0B4KFU3_DROME 1441 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1482
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.2   0.1   2.6e-31   1.7e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.2 bits;  conditional E-value: 2.6e-31
+                       CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDl 81 
+                                     s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD+
+  tr|A0A0B4KFU3|A0A0B4KFU3_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDV 268
+                                     6779**********.**************************************************************** PP
+
+                       CAMSAP_CH  82 lyvr 85 
+                                     +y+r
+  tr|A0A0B4KFU3|A0A0B4KFU3_DROME 269 TYMR 272
+                                     **96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.6   5.2   2.8e-24   1.8e-20       2      59 .]     531     597 ..     530     597 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.6 bits;  conditional E-value: 2.8e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|A0A0B4KFU3|A0A0B4KFU3_DROME 531 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 597
+                                     6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1504 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2319  (0.120913); expected 383.6 (0.02)
+Passed bias filter:                      540  (0.0281558); expected 383.6 (0.02)
+Passed Vit filter:                        99  (0.0051619); expected 19.2 (0.001)
+Passed Fwd filter:                        23  (0.00119923); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.94u 0.24s 00:00:01.18 Elapsed: 00:00:00.82
+# Mc/sec: 5970.31
+//
+Query:       tr|E1JH90|E1JH90_DROME  [L=1671]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-52  175.9   0.1    5.6e-52  174.9   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.9e-27   95.0   0.1    1.9e-27   95.0   0.1    2.3  1  CAMSAP_CH   CAMSAP CH domain
+      2e-20   72.5   5.2      2e-20   72.5   5.2    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   0.1   8.8e-56   5.6e-52       1     119 []    1531    1649 ..    1531    1649 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 8.8e-56
+              CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvklaGvGPkvvt 85  
+                              pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+G+GP +v+
+  tr|E1JH90|E1JH90_DROME 1531 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLYGTGPSQVE 1615
+                              8************************************************************************************ PP
+
+              CAMSAP_CKK   86 ekmieklykYnsgrkefkevssktlsvsidavti 119 
+                              e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|E1JH90|E1JH90_DROME 1616 EVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1649
+                              *********************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.1   2.9e-31   1.9e-27       3      85 .]     191     272 ..     189     272 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 2.9e-31
+               CAMSAP_CH   3 sarslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDllyvr 85 
+                             s+ ++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y+r
+  tr|E1JH90|E1JH90_DROME 191 SRLQTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTYMR 272
+                             6779**********.******************************************************************96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   5.2   3.1e-24     2e-20       2      59 .]     613     679 ..     612     679 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 3.1e-24
+              CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk.........lGkaAFlqvvkk 59 
+                             ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k         ++++++++++k+
+  tr|E1JH90|E1JH90_DROME 613 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKedlescpdvMKWETMSNESKR 679
+                             6899***********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1671 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3157  (0.164607); expected 383.6 (0.02)
+Passed bias filter:                      584  (0.03045); expected 383.6 (0.02)
+Passed Vit filter:                       124  (0.0064654); expected 19.2 (0.001)
+Passed Fwd filter:                        38  (0.00198133); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.30u 0.23s 00:00:01.53 Elapsed: 00:00:01.17
+# Mc/sec: 4642.12
+//
+Query:       tr|A0A0B4KEY6|A0A0B4KEY6_DROME  [L=1439]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.3e-52  176.2   0.1    4.6e-52  175.2   0.1    1.5  1  CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin
+    1.8e-27   95.0   0.9    4.4e-27   93.8   0.1    2.0  1  CAMSAP_CH   CAMSAP CH domain
+    9.8e-21   73.5   4.6    9.8e-21   73.5   4.6    3.1  1  CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+
+
+Domain annotation for each model (and alignments):
+>> CAMSAP_CKK  Microtubule-binding calmodulin-regulated spectrin-associated
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.2   0.1   7.3e-56   4.6e-52       1     119 []    1299    1417 ..    1299    1417 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 175.2 bits;  conditional E-value: 7.3e-56
+                      CAMSAP_CKK    1 pklfkkpssksnkkiienalshcvlaGkvneeqkekvleelekseskhfliLfrdsglqfRalYsyneeseelvkla 77  
+                                      pkl+k+p++ksn+ ii na+++cv++G vn+e+k+kvle++++se+khfl+Lfrd+g+qfRalYsy++e+++++kl+
+  tr|A0A0B4KEY6|A0A0B4KEY6_DROME 1299 PKLYKQPAAKSNRGIILNAVEYCVFPGVVNREAKQKVLEKIARSEAKHFLVLFRDAGCQFRALYSYQPETDQVTKLY 1375
+                                      8**************************************************************************** PP
+
+                      CAMSAP_CKK   78 GvGPkvvtekmieklykYnsgrkefkevssktlsvsidavti 119 
+                                      G+GP +v+e m++k++kYnsg+k f++v++k+l+v+ida+ti
+  tr|A0A0B4KEY6|A0A0B4KEY6_DROME 1376 GTGPSQVEEVMFDKFFKYNSGGKCFSQVHTKHLTVTIDAFTI 1417
+                                      *****************************************8 PP
+
+>> CAMSAP_CH  CAMSAP CH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.8   0.1   6.9e-31   4.4e-27       5      85 .]     188     267 ..     186     267 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 93.8 bits;  conditional E-value: 6.9e-31
+                       CAMSAP_CH   5 rslplsppvedllkdlsdGvaLaallhfYcPqliklediclkesmsladslyNiqllqefcqekLgnrvleltleDlly 83 
+                                     +++p++ppv+d+ +dl+dG++La l+++YcP++++++++++++ ++++ds++Ni l+++f+q++L+++v+++t+eD++y
+  tr|A0A0B4KEY6|A0A0B4KEY6_DROME 188 DNTPDIPPVRDF-QDLCDGICLALLISYYCPKVVPWTSVRINYLPAVEDSIHNILLVCNFSQKHLPYTVMHMTPEDVTY 265
+                                     679*********.****************************************************************** PP
+
+                       CAMSAP_CH  84 vr 85 
+                                     +r
+  tr|A0A0B4KEY6|A0A0B4KEY6_DROME 266 MR 267
+                                     96 PP
+
+>> CAMSAP_CC1  Spectrin-binding region of Ca2+-Calmodulin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.5   4.6   1.5e-24   9.8e-21       2      59 .]     475     540 ..     474     540 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 73.5 bits;  conditional E-value: 1.5e-24
+                      CAMSAP_CC1   2 saddssdsselaselseirlkLEEKRRaIEaeKrkiEaalarqRqk........lGkaAFlqvvkk 59 
+                                     ++dd+++s e+as+ls+ir+kLEEKRR+IE++KrkiE+al r+++k        ++++++++++k+
+  tr|A0A0B4KEY6|A0A0B4KEY6_DROME 475 VGDDDMRSLENASKLSTIRMKLEEKRRRIEQDKRKIEMALLRHQEKdlescpdvMKWETMSNESKR 540
+                                     6899**********************************************************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1439 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2229  (0.116221); expected 383.6 (0.02)
+Passed bias filter:                      524  (0.0273215); expected 383.6 (0.02)
+Passed Vit filter:                       100  (0.00521404); expected 19.2 (0.001)
+Passed Fwd filter:                        22  (0.00114709); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.89u 0.22s 00:00:01.11 Elapsed: 00:00:00.89
+# Mc/sec: 5268.39
+//
+[ok]

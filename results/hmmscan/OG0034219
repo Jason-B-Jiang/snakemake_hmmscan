@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034219.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034219
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|I3IST1|I3IST1_DANRE  [L=356]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.1e-29  101.8  12.0    1.4e-15   57.5   1.0    2.3  2  Myb_DNA-bind_4  Myb/SANT-like DNA-binding domain
+    9.4e-07   29.2   5.9    0.00061   20.2   0.7    2.7  0  MADF_DNA_bdg    Alcohol dehydrogenase transcription factor My
+
+
+Domain annotation for each model (and alignments):
+>> Myb_DNA-bind_4  Myb/SANT-like DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.5   1.0   1.5e-19   1.4e-15       3      79 ..       8      82 ..       6      94 .. 0.86
+   2 !   48.9   4.1   7.1e-17   6.8e-13       2      73 ..     143     212 ..     142     226 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 57.5 bits;  conditional E-value: 1.5e-19
+                            SS-HHHHHHHHHHHHH...HHHHHHH..SS--HHHHHHHHHHHHHHC----HHHHHHHHHHHHHHHHCSSSSSS---- CS
+          Myb_DNA-bind_4  3 kWteeetklLieawge.rilelrfqekgkkknkklWeevaeamaergyerspqqckeKienLkkkYkkekerekgsgs 79
+                             W++ee+ +L+++w++ +i+e+ ++ ++kkk+  +++e++++m++ g++rs++q+ +K+++L+k+Y+ +k + +++g+
+  tr|I3IST1|I3IST1_DANRE  8 LWSSEEISVLLAIWSSsEIQEK-LE-RSKKKQI-VYDEISQEMMNGGFNRSSEQIVNKLKKLRKEYRDLKMKPSKRGR 82
+                            5***************888777.54.4666666.************************************98777764 PP
+
+  == domain 2  score: 48.9 bits;  conditional E-value: 7.1e-17
+                             SSS-HHHHHHHHHHHHH...HHHHHHH..SS--HHHHHHHHHHHHHHC----HHHHHHHHHHHHHHHHCSSSS CS
+          Myb_DNA-bind_4   2 dkWteeetklLieawge.rilelrfqekgkkknkklWeevaeamaergyerspqqckeKienLkkkYkkeker 73 
+                             ++Wt++et++L+++w++ +++e  +++  +k+ k ++e++ ++m + g++r+ +q+ +Ki++Lkk+ k  k +
+  tr|I3IST1|I3IST1_DANRE 143 QQWTSKETNTLLTIWSStEFQER-LEK--SKRRKRVYEDICQEMVNAGFTRTTEQIVNKIKKLKKELKDQKIE 212
+                             58***************666554.654..666666*******************************9998875 PP
+
+>> MADF_DNA_bdg  Alcohol dehydrogenase transcription factor Myb/SANT-like
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (356 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1827  (0.0952604); expected 383.6 (0.02)
+Passed bias filter:                      524  (0.0273215); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                        16  (0.000834246); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.21s 00:00:00.61 Elapsed: 00:00:00.67
+# Mc/sec: 1724.56
+//
+[ok]

@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034596.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034596
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IWU5|A0A0R4IWU5_DANRE  [L=89]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.2e-14   53.9   1.7    2.1e-14   53.1   1.7    1.4  1  TCR_zetazeta  T-cell surface glycoprotein CD3 zeta chain
+
+
+Domain annotation for each model (and alignments):
+>> TCR_zetazeta  T-cell surface glycoprotein CD3 zeta chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.1   1.7   1.1e-18   2.1e-14       3      29 ..      24      50 ..      23      52 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 53.1 bits;  conditional E-value: 1.1e-18
+                    TCR_zetazeta  3 rlCYILDgiLliYGiiiTaLfvreKls 29
+                                    ++CY+LDgiL++YGi++T+L++r+K+ 
+  tr|A0A0R4IWU5|A0A0R4IWU5_DANRE 24 NVCYVLDGILIVYGIVLTVLYCRLKIR 50
+                                    79***********************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (89 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       577  (0.030085); expected 383.6 (0.02)
+Passed bias filter:                      462  (0.0240888); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.73
+# Mc/sec: 396.40
+//
+[ok]

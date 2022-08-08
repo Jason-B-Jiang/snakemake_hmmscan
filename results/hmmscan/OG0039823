@@ -1,0 +1,80 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039823.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039823
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8IV45|UN5CL_HUMAN  [L=518]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-26   91.9   0.0    5.1e-26   90.8   0.0    1.5  1  ZU5       ZU5 domain
+    3.2e-14   52.9   0.1    6.5e-14   52.0   0.1    1.6  1  Death     Death domain
+    2.6e-10   40.2   0.0    4.9e-10   39.3   0.0    1.5  1  UPA       UPA domain
+
+
+Domain annotation for each model (and alignments):
+>> ZU5  ZU5 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.8   0.0     8e-30   5.1e-26       5      88 ..     108     191 ..     104     197 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 90.8 bits;  conditional E-value: 8e-30
+                    ZU5   5 vdsrGgrLvlpesGvsliiPegaipegtrkeiylavlkeetsrpkleegetllspvvecgpsglkfskpvileipHcaslkeee 88 
+                            vd+rGg L+l+++G+sl+iP+ga++ g+++ + l+   + ++ p+l++++ l+spvv cgp+g++f+kp++l+++Hca++ ++ 
+  sp|Q8IV45|UN5CL_HUMAN 108 VDHRGGCLMLQDTGISLLIPPGAVAVGRQERVSLILVWDLSDAPSLSQAQGLVSPVVACGPHGASFLKPCTLTFKHCAEQPSHA 191
+                            9*****************************************************************************987655 PP
+
+>> Death  Death domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   0.1     1e-17   6.5e-14       2      86 .]     414     491 ..     413     491 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 1e-17
+                            HHHHHHHCHSSCCSCCHHHHHHHTTSHHHHHHHHHHCSTTHHHHHHHHHHHHHHHHTTTSSHHHHHHHHHHTTHHHHHHHHHHHH CS
+                  Death   2 krlarlldhpdplgkdWrelarkLglseeeIdriekennslksqsyalLqlWedregenatvgtLleaLrklgrddaaeklesal 86 
+                            ++l  ll++ +++g+dWr+la++Lgl  ++I+++ ++     s++ a+L l+e+   +n+++++L+++++ ++r d+a++++++l
+  sp|Q8IV45|UN5CL_HUMAN 414 EQLRMLLEPNSITGNDWRRLASHLGLCGMKIRFLSCQR----SPAAAILELFEE---QNGSLQELHYLMTVMERLDCASAIQNYL 491
+                            68999*********************************....************...8************************985 PP
+
+>> UPA  UPA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.0   7.7e-14   4.9e-10       1     105 [.     243     347 ..     243     373 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 7.7e-14
+                    UPA   1 avKrLklavFa.paactsleyslrvyclddtedalkevlqlekklggqlleepktllFkdsthnLrlsiedvpsslWkskllakyqei 87 
+                            a K L+lavF  p+ +     +lr+y l++t++al+  l+ e+ +gg+l    +   F +   + +l ++ +++  W++    ++q +
+  sp|Q8IV45|UN5CL_HUMAN 243 ARKWLQLAVFCsPLVPGQSHLQLRIYFLNNTPCALQWALTNEQPHGGRLRGPCQLFDFNGARGDQCLKLTYISEG-WENVDDSSCQLV 329
+                            6799******85789999999*****************************************************9.************ PP
+
+                    UPA  88 pfshvwsgsqkalhCaFt 105
+                            p+ h+w g+      +F 
+  sp|Q8IV45|UN5CL_HUMAN 330 PHLHIWHGKCPFRSFCFR 347
+                            *******98777666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (518 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       418  (0.0217947); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.63
+# Mc/sec: 2646.57
+//
+[ok]

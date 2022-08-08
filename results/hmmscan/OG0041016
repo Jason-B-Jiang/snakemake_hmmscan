@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041016.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041016
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8IYK8|REM2_HUMAN  [L=340]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-29  102.5   0.0    2.4e-29  102.1   0.0    1.1  1  Ras       Ras family
+      2e-08   34.6   0.0    2.8e-08   34.1   0.0    1.2  1  Roc       Ras of Complex, Roc, domain of DAPkinase
+
+
+Domain annotation for each model (and alignments):
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.1   0.0   2.5e-33   2.4e-29       1     161 [.     116     278 ..     116     279 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 102.1 bits;  conditional E-value: 2.5e-33
+                           EEEEEESTTSSHHHHHHHHHHSSSSSSCTTTSSEEEEEEEEEETTEEEEEEEEEETTSGGG.HHHHHHHHTTESEEEEEEETTBHHHHH CS
+                   Ras   1 klvlvGdsavGKtslllrfvkdkFkeeyesTigvdfytkeievdgkevkleiwDTAGqeef.kslrslyyrdaegillvyditsresfe 88 
+                           k++lvG+s+vGK++l   f   + ++ +e+   +d y+++i+vd++ev+l ++D   q +    lr+ ++++++++l+v+++t+r+sf+
+  sp|Q8IYK8|REM2_HUMAN 116 KVMLVGESGVGKSTLAGTFGGLQGDSAHEPENPEDTYERRIMVDKEEVTLVVYDIWEQGDAgGWLRDHCLQTGDAFLIVFSVTDRRSFS 204
+                           89******************************************************997762579************************ PP
+
+                           THHHHHHHHHHHST.TTSEEEEEEETTTGGGG-SS-HHHHHHHHHHHTSEEEEEBTTTTTTHHHHHHHHHHHHH CS
+                   Ras  89 nvkkwveeikrvae.envpivLvGnKvDleekravsteegeelakelglkfletSAktnenveeafeellreil 161
+                           +v + +  ++   + +++p++LvGnK+Dl+++r+vs eeg++la  l++k++etSA  ++n +e+fe ++r+i+
+  sp|Q8IYK8|REM2_HUMAN 205 KVPETLLRLRAGRPhHDLPVILVGNKSDLARSREVSLEEGRHLAGTLSCKHIETSAALHHNTRELFEGAVRQIR 278
+                           ***99999998888789******************************************************985 PP
+
+>> Roc  Ras of Complex, Roc, domain of DAPkinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.1   0.0   2.9e-12   2.8e-08       1     119 []     116     232 ..     116     232 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 34.1 bits;  conditional E-value: 2.9e-12
+                           EEEEESSTTTTHHHHHHCHCT-CCC-EEETTTTEEEEEEECGGSTTCTTBCCCTCEEEEEEEESSGGCTTT.T-HHHHCTSCEEEEEEE CS
+                   Roc   1 KivllGdsgvGKtsllkrfvedtfsekekstigvdfltkevtkikglendkklkkvklniWDtaGqerfrs.lhplylreaalailvyd 88 
+                           K++l+G+sgvGK++l+  f   + ++ +++    d+++++++ ++       +++v+l ++D+  q +    l+++ l++ +++++v++
+  sp|Q8IYK8|REM2_HUMAN 116 KVMLVGESGVGKSTLAGTFGGLQGDSAHEPENPEDTYERRIM-VD-------KEEVTLVVYDIWEQGDAGGwLRDHCLQTGDAFLIVFS 196
+                           9************************************99984.32.......2467888888888877765488888888888888774 PP
+
+                           ...SCCCCTCHHHHHHHHHHCSSS..-EEEEEE-TT CS
+                   Roc  89 ...srssenlkeWlkelkkvagks..pvilvgnkiD 119
+                              +rs++++ e l  l++ ++++  pvilvgnk D
+  sp|Q8IYK8|REM2_HUMAN 197 vtdRRSFSKVPETLLRLRAGRPHHdlPVILVGNKSD 232
+                           4338899***99999999987754459*******98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (340 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       367  (0.0191355); expected 383.6 (0.02)
+Passed bias filter:                      329  (0.0171542); expected 383.6 (0.02)
+Passed Vit filter:                        72  (0.00375411); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.67
+# Mc/sec: 1630.86
+//
+[ok]

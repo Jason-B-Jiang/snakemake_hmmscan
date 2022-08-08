@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031609.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031609
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q09101|HIG_DROME  [L=958]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-39  132.7  17.3    2.3e-10   41.0   1.9    5.7  4  Sushi     Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7   0.2   9.4e-12   1.8e-07      11      56 .]     725     768 ..     714     768 .. 0.83
+   2 !   21.4   0.1   1.6e-08   0.00031      25      56 .]     796     827 ..     778     827 .. 0.93
+   3 !   40.8   0.1   1.3e-14   2.5e-10       1      56 []     832     890 ..     832     890 .. 0.93
+   4 !   41.0   1.9   1.2e-14   2.3e-10       1      56 []     894     952 ..     894     952 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 9.4e-12
+                          EE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB-----SE CS
+                Sushi  11 svsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWspaepeC 56 
+                          ++    e  ++g+++ yeC +G+rl g  ++tC ++g+Ws+++p+C
+  sp|Q09101|HIG_DROME 725 KLRL--EGNKLGQRAHYECPEGFRLDGAWNATCLASGNWSSPTPTC 768
+                          4443..78899*********************************** PP
+
+  == domain 2  score: 21.4 bits;  conditional E-value: 1.6e-08
+                          EEEEE-TTEEESTT-EEEB-TTSSB-----SE CS
+                Sushi  25 veyeCkpGyrlegssvitCqedgtWspaepeC 56 
+                          + ++C+ G++l g+  + C+ +g+Ws+++p+C
+  sp|Q09101|HIG_DROME 796 AVFKCQWGFKLTGPAQLDCEPSGVWSGPVPRC 827
+                          679***************************** PP
+
+  == domain 3  score: 40.8 bits;  conditional E-value: 1.3e-14
+                          B-S----SSEEE-TTG...S-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB-----SE CS
+                Sushi   1 CppPrdlengsvsatk...eeyqvgaqveyeCkpGyrlegssvitCqedgtWspaepeC 56 
+                          C++P  + ng++ +t       +vga v+++C++G++l+g+s i C+e+g+Ws+++p C
+  sp|Q09101|HIG_DROME 832 CVMPVAPLNGRIGGTSlsqRRLTVGALVTFSCNDGHSLVGESSIICTENGQWSHSPPFC 890
+                          8888888899888888888999*********************************9999 PP
+
+  == domain 4  score: 41.0 bits;  conditional E-value: 1.2e-14
+                          B-S----SSEEE-TTGS-BBTTEEEEEEE-TTEEE..STT.-EEEB-TTSSB-----SE CS
+                Sushi   1 CppPrdlengsvsatkeeyqvgaqveyeCkpGyrl..egs.svitCqedgtWspaepeC 56 
+                          Cp P d++ng + + k +y  g++++++C+pG+    eg+ ++ +Cq dg+Ws+++p+C
+  sp|Q09101|HIG_DROME 894 CPYPGDPPNGLIAPLKFNYDAGDYLSVQCRPGFVQsyEGPpERPKCQPDGRWSGPMPKC 952
+                          *********************************76457889****************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (958 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       954  (0.0497419); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.54u 0.24s 00:00:00.78 Elapsed: 00:00:00.78
+# Mc/sec: 3963.78
+//
+[ok]

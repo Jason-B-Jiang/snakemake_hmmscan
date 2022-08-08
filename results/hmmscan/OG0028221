@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0028221.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0028221
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q18313|Q18313_CAEEL  [L=669]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-08   33.0   2.2    7.4e-08   32.2   2.2    1.3  1  Pkinase   Protein kinase domain
+    1.3e-07   31.5   3.2    1.5e-06   28.1   3.2    2.5  1  Chromo    Chromo (CHRromatin Organisation MOdifier) domain
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.2   2.2   7.7e-12   7.4e-08      25     263 ..     179     411 ..     170     412 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 32.2 bits;  conditional E-value: 7.7e-12
+                             EEEEEEEEECHCHCHHHHHHHHHHHHHHHHHS.CTTB--EEEEEEESSEEEEEEE--TTEBHHHHHH....HHSS--HHHHHHHHHH CS
+                 Pkinase  25 kivAvKkikkekakkkkekkvlrEikilkklk.hpnivrlyevfeekdelylvleyveggeladlle....rkgslseeeakkiakq 106
+                             k v  K   +++++++ +++  +  ++l+++  h+nivr+ + f + ++l    e v+ +++ d+ +    ++ + ++   kk+++ 
+  tr|Q18313|Q18313_CAEEL 179 KNVSFKDSTNNDIDNRVQQHHHEDRSFLQSMIkHNNIVRMRDLFVSYNKLD---ETVNITSIYDWCHqnlrQQLNNEKVSWKKVCRD 262
+                             567888888888888888999999999998877************977765...6666666666665443244445666899***** PP
+
+                             HHHHHHHHHHTTEE-SS-SGGGEEEETTTEEEE-SGTTSEESSSSCCBSCTTSGGGGS-HHHH.TTSCBSHHHHHHHHHHHHHHHHH CS
+                 Pkinase 107 ilegleylHsegvvHrDlKpeNiLidekgelKitDFGlakelessskltsfvgtseYlAPEvl.keneyskkvDvWslGvilyellt 192
+                             il++l+++H  g+ H  +  + i +++ g  K++ F      ++   ++++  ++  lAP++   + + ++++D+++l+++l++  +
+  tr|Q18313|Q18313_CAEEL 263 ILNALSFIHPYGI-HQGVSLDHIYYHKGGTYKLSHFNNFFFGKRIP-AEKVKSDRVELAPRLYnLKFKLGRNSDIYALAIVLLQCHN 347
+                             ***********96.**********************9776666654.9999999999******555666****************** PP
+
+                             SS-STTTSSHHHHHHHHHHTHHHHHHHCTSHH...HHHTTS-HHHHHHHHHHT-S...SGCCSTTHHHHHTSGG CS
+                 Pkinase 193 gkppfsgekgkekvekeldqlekilkilgetkeklpeakeiseeakdllkkllkk...dpkkRltaeellqhpy 263
+                             +k  f+    + +  +e+++   i+k +    ++ + +    + +k+ll+  l++     + R+t ++ll+hp+
+  tr|Q18313|Q18313_CAEEL 348 KKFSFR---VNPSSVMEIEE--DIAKGMS--AFENKDD---RHFLKSLLRARLHVyhgSGHYRFTSSSLLHHPV 411
+                             ******...33333444544..3444332..2333333...333444444444441115566888888888876 PP
+
+>> Chromo  Chromo (CHRromatin Organisation MOdifier) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   3.2   1.5e-10   1.5e-06      17      51 ..      39      87 ..       9      90 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 1.5e-10
+                            C................EEEEEEETTSTGGGTEEEEGGGCTSCSHHHHHHH CS
+                  Chromo 17 e................leYlVKWkglpysentWEpeenlekcfqelideF 51
+                                             + +lVKW g+  +e tWEpe+n+ +     + e+
+  tr|Q18313|Q18313_CAEEL 39 FseerfkrtkkpqlisnYFFLVKWLGYGNKEMTWEPESNIPDS--VYLYEY 87
+                            0555555555567789999*********************976..445555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (669 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       991  (0.0516711); expected 383.6 (0.02)
+Passed bias filter:                      497  (0.0259138); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.20s 00:00:00.63 Elapsed: 00:00:00.69
+# Mc/sec: 3149.41
+//
+[ok]

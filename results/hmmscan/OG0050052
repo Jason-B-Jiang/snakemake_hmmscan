@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050052.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050052
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9USJ8|CTK3_SCHPO  [L=218]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-50  169.0   0.0    6.3e-50  168.4   0.0    1.3  1  CTK3      CTD kinase subunit gamma CTK3
+    4.3e-19   68.5   6.4    9.8e-19   67.4   6.4    1.6  1  CTK3_C    CTD kinase subunit gamma CTK3 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> CTK3  CTD kinase subunit gamma CTK3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.4   0.0   6.6e-54   6.3e-50       1     123 []       1     123 [.       1     123 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 168.4 bits;  conditional E-value: 6.6e-54
+                           --HHHHHHHHHHHHTT--SSGGGTHHHHHHHHHTGGGHHHHHHHHHHHHHHS-HHHHHHHHHHHHHHHHHHHHTT--S..THHHHHHHT CS
+                  CTK3   1 mDpFEvrsqFsqlLrkLtasvqslqkaaqfAlknkdkeedlfscileqlesadlNtranilyfidllleeslkegqsekspYveslkrd 89 
+                           mDpFE+r++F+qlL kL+as++s+ k+aqfA+k+ d eedl+sci+e+les+++Ntr+ni+yf+d+l+e++lk+g ++  +Y+++++rd
+  sp|Q9USJ8|CTK3_SCHPO   1 MDPFEGRMTFLQLLGKLNASQFSQIKPAQFAIKHLDLEEDLYSCIWEELESGSFNTRVNIMYFVDTLCEMCLKNGLTG--GYLNMISRD 87 
+                           9****************************************************************************5..9******** PP
+
+                           HHHHHHHHS-..HHHHHHHHHHHHHHHHHHHTTSS- CS
+                  CTK3  90 ilklvdsvvP..gsgaaNlksvrkilkslklksllt 123
+                           i+klv++v+P  ++gaaN+ +vrk+l+sl++k++++
+  sp|Q9USJ8|CTK3_SCHPO  88 ICKLVQNVAPigAAGAANAPEVRKVLQSLHEKKVID 123
+                           ***********999*******************986 PP
+
+>> CTK3_C  CTD kinase subunit gamma CTK3 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.4   6.4     1e-22   9.8e-19       1      68 [.     153     213 ..     153     214 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 67.4 bits;  conditional E-value: 1e-22
+                CTK3_C   1 skkqilkRiEeDRErhKRlrEniWvvprskekslateaEfenlWeetsdlneddeeealeeleelnea 68 
+                           sk++ilkRiEeDRErhKR+rEniW++++++        E e +W++t+ ++e+d e+ ++e+e++ne+
+  sp|Q9USJ8|CTK3_SCHPO 153 SKNDILKRIEEDRERHKRMRENIWAISEPE-------LEAEIAWNTTQGITESDLESLKDEYEKFNEC 213
+                           79***************************5.......9**************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (218 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1005  (0.0524011); expected 383.6 (0.02)
+Passed bias filter:                      609  (0.0317535); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 1167.33
+//
+[ok]

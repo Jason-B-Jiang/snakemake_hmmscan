@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0036006.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0036006
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAG0419335.1  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.1e-24   85.7   0.4    3.4e-24   85.1   0.4    1.4  1  UPF0122       Putative helix-turn-helix protein, YlxM / p13 l
+    1.1e-09   37.8   0.6    1.8e-08   33.9   0.1    2.3  1  Sigma70_r4    Sigma-70, region 4
+    3.2e-06   26.8   0.0    6.3e-06   25.9   0.0    1.5  1  Sigma70_r4_2  Sigma-70, region 4
+
+
+Domain annotation for each model (and alignments):
+>> UPF0122  Putative helix-turn-helix protein, YlxM / p13 like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.1   0.4   5.3e-28   3.4e-24       4      88 ..      81     165 ..      78     187 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 85.1 bits;  conditional E-value: 5.3e-28
+       UPF0122   4 tlrlnaLfdiYqsLLTekqanylelyyadDlSlsEiAeefnvsrqavydnikrtekllekyEekLkllekykkreellekikdkl 88 
+                    l+l  Lfd+Y+++LT+kq++ ++lyy++DlSlsEiAe+  ++rq v d + r+e+ l+ +E+kL+l+++y k  + +e + ++ 
+  KAG0419335.1  81 HLELCLLFDFYGEMLTDKQRELFDLYYNEDLSLSEIAEHAGITRQGVRDAVVRAEHTLTALEDKLHLVSRYGKIDQHVEALGQEI 165
+                   578899*****************************************************************99888777776654 PP
+
+>> Sigma70_r4  Sigma-70, region 4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.9   0.1   2.8e-12   1.8e-08       5      44 ..      95     134 ..      93     139 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 33.9 bits;  conditional E-value: 2.8e-12
+                   S-HHHHHHHHHHTTST--HHHHHHHHTS-HHHHHHHHHHH CS
+    Sigma70_r4   5 LpererevlelrfgeelTleEigerlgiSrerVrqiekrA 44 
+                   L++++re + l++ e+l+l+Ei+e+ gi+r  Vr    rA
+  KAG0419335.1  95 LTDKQRELFDLYYNEDLSLSEIAEHAGITRQGVRDAVVRA 134
+                   9*********************************988887 PP
+
+>> Sigma70_r4_2  Sigma-70, region 4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.0   9.8e-10   6.3e-06       9      50 ..      93     134 ..      93     138 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 9.8e-10
+                   TTS-HHHHHHHHHHHTS---HHHHHHHHT--HHHHHHHHHHH CS
+  Sigma70_r4_2   9 aeLperqreifllryleglsykEIAellgisegtVksrlsRA 50 
+                   ++L+ +qre f l+y e+ls  EIAe  gi+ + V+ ++ RA
+  KAG0419335.1  93 EMLTDKQRELFDLYYNEDLSLSEIAEHAGITRQGVRDAVVRA 134
+                   589*********************************999998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       716  (0.0373325); expected 383.6 (0.02)
+Passed bias filter:                      570  (0.02972); expected 383.6 (0.02)
+Passed Vit filter:                        70  (0.00364983); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.55
+# Mc/sec: 1147.66
+//
+[ok]

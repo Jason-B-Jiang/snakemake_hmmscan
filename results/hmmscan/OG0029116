@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029116.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029116
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q552X2|MED26_DICDI  [L=2073]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.8e-09   35.7   0.0    6.8e-09   35.7   0.0   24.3  1  SUIM_assoc  Unstructured region C-term to UIM in Ataxin3
+    3.1e-06   27.2   0.0    9.6e-06   25.7   0.0    1.9  1  Med26       TFIIS helical bundle-like domain
+
+
+Domain annotation for each model (and alignments):
+>> SUIM_assoc  Unstructured region C-term to UIM in Ataxin3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.7   0.0   7.1e-13   6.8e-09       8      40 ..     557     695 ..     551     721 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 35.7 bits;  conditional E-value: 7.1e-13
+             SUIM_assoc   8 qtSgtqLtsEeLrkrreaYFEk.................................................................. 29 
+                             + +t++t Ee ++++   FE+                                                                  
+  sp|Q552X2|MED26_DICDI 557 SSGSTKMTHEETQQQKSSLFEQcrriivtyphffnqiiterfifdledlnskisdifkqfnnnnnnnnnnaienspimaeqykrfqtd 644
+                            455788********************************************************************************** PP
+
+             SUIM_assoc  30 .........................................qqqqqqqQqqq 40 
+                                                                     q qqqqqQqqq
+  sp|Q552X2|MED26_DICDI 645 yiikfdqlqcfkfpdyslssiistlnpsplrqqqqqqqqqqQ-QQQQQQQQQ 695
+                            *******************************98765443211.111111111 PP
+
+>> Med26  TFIIS helical bundle-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.7   0.0     1e-09   9.6e-06       3      50 ..    1347    1393 ..    1345    1396 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 25.7 bits;  conditional E-value: 1e-09
+                             HHHS---....HHH.HHHSHHHHHHHHHH-TTS-HHHHHHHHHHHHHHH CS
+                  Med26    3 LaqLeklpittetL.rsTgIGkvVnalrkhkhetaevktlAksLvekWk 50  
+                             L+ L+ lp+t+e+L  +  IGk+++ ++k  h ++ vk+ A++L ++W+
+  sp|Q552X2|MED26_DICDI 1347 LKGLKGLPVTVEHLhAEKLIGKTIRSFKK--HSNPNVKEYAEELESEWM 1393
+                             8889***********************65..66***************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2073 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      8273  (0.431357); expected 383.6 (0.02)
+Passed bias filter:                     2426  (0.126493); expected 383.6 (0.02)
+Passed Vit filter:                      2290  (0.119401); expected 19.2 (0.001)
+Passed Fwd filter:                       289  (0.0150686); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 13.99u 0.71s 00:00:14.70 Elapsed: 00:00:10.27
+# Mc/sec: 657.49
+//
+[ok]

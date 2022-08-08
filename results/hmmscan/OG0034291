@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034291.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034291
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A140LGR2|A0A140LGR2_DANRE  [L=167]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.9e-09   36.7   0.0      5e-09   35.9   0.0    1.3  1  Rad60-SLD  Ubiquitin-2 like Rad60 SUMO-like
+    2.8e-09   36.7   0.2    5.8e-09   35.7   0.0    1.5  1  ubiquitin  Ubiquitin family
+
+
+Domain annotation for each model (and alignments):
+>> Rad60-SLD  Ubiquitin-2 like Rad60 SUMO-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.9   0.0   5.2e-13     5e-09       8      70 ..     103     164 ..      97     165 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 35.9 bits;  conditional E-value: 5.2e-13
+                                     SSS--EEEEEETTSBHHHHHHHHHHHHT----TT-EEEETTEE--TTSBGGGSS--TTEEEEE CS
+                       Rad60-SLD   8 kdgkevkikVkptttvskLieayrkkkgiseeqkvrLiFDGeeLdpnstvedldiedgdtidv 70 
+                                     + gk +++++ p ++vs L+++ ++  + ++ +k+ L++DG++Ld n+tv ++++++g t+++
+  tr|A0A140LGR2|A0A140LGR2_DANRE 103 SAGKSMEVEIFPLERVSVLLKQTCELARKKP-EKMCLVYDGTRLDVNKTVSQYGLRRGTTVHL 164
+                                     46889**************************.*****************************97 PP
+
+>> ubiquitin  Ubiquitin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.7   0.0     6e-13   5.8e-09       1      67 [.      99     164 ..      99     166 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 35.7 bits;  conditional E-value: 6e-13
+                                     EEEEETTSEEEEEEEETTSBHHHHHHHHHHHHTSSGGGEEEEETTEEE-TTSBHGGHTTSTTEEEEE CS
+                       ubiquitin   1 itVktldgkkitleveesdtveelKekiaekegipaeqqrLiysGkvLeddqtleeygiqdgstihl 67 
+                                     ++Vk+  gk++++e+ + + v+ l ++ +e  +  +e++ L+y+G +L+ ++t+++yg++ g+t+hl
+  tr|A0A140LGR2|A0A140LGR2_DANRE  99 LNVKS-AGKSMEVEIFPLERVSVLLKQTCELARKKPEKMCLVYDGTRLDVNKTVSQYGLRRGTTVHL 164
+                                     57995.89**********************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (167 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       790  (0.0411909); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 1000.03
+//
+[ok]

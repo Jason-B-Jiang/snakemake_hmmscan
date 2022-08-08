@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040399.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040399
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9Y5I7|CLD16_HUMAN  [L=235]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.5e-17   63.4   6.7    3.4e-17   62.9   6.7    1.1  1  PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+    5.9e-07   29.5  12.6    4.5e-06   26.6  12.6    2.0  0  Claudin_2      PMP-22/EMP/MP20/Claudin tight junction
+
+
+Domain annotation for each model (and alignments):
+>> PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.9   6.7   3.5e-21   3.4e-17       9     165 ..      10     182 ..       3     183 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 62.9 bits;  conditional E-value: 3.5e-21
+                            HHHHHHHHHHHHHHHS-S-SEEEEE-S...EEEEE-SSBEEEESS.SS-SBE-B--S---SSTT.TTTHHHHHHHHHHHHHHHHHHHH CS
+          PMP22_Claudin   9 ivlaiaavillvvatitdqWlvsrsvg...vaasagLWrsCtlesctgklsckqidslleeeda.lqavqalmilsiilgilslivav 92 
+                            +++a+ +++ l+vat td W+v + +     +   gLW +C+++   g   c ++ds+l+e+   l  ++almi + il  ++++ ++
+  sp|Q9Y5I7|CLD16_HUMAN  10 CFFAFFSAGFLIVATWTDCWMVNADDSlevSTKCRGLWWECVTNAFDGIRTCDEYDSILAEHPLkLVVTRALMITADILAGFGFLTLL 97 
+                            4567777889*************999888788999***********************99886527889******************* PP
+
+                            HHHHHTGGGTTTSS........HHHHHHHHHHHHHHHHHHHHHHHHH----SS-S....SSS-EE-TTHHHHHHHHHHHHHHHHH CS
+          PMP22_Claudin  93 lqlkclkkgerfkl........aGiiflvsgLcvlvgasiYtsriaedlskslsk....kqkysfGysfilgwvafllallsGvl 165
+                            l+l c+k + +           aG+++l++g   ++g  +Y+     + s           +y+fG+s  lg ++ l ++l+G +
+  sp|Q9Y5I7|CLD16_HUMAN  98 LGLDCVKFLPDEPYikvricfvAGATLLIAGTPGIIGSVWYAVDVYVERSTLVLHniflGIQYKFGWSCWLGMAGSLGCFLAGAV 182
+                            *******997765558999**********************97655444432222233599**********************75 PP
+
+>> Claudin_2  PMP-22/EMP/MP20/Claudin tight junction
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (235 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       454  (0.0236717); expected 383.6 (0.02)
+Passed bias filter:                      293  (0.0152771); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.57
+# Mc/sec: 1329.03
+//
+[ok]

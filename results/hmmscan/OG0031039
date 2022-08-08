@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031039.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031039
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54SL9|Q54SL9_DICDI  [L=136]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    5.5e-15   55.3   0.5    1.1e-14   54.3   0.5    1.5  1  Complex1_LYR    Complex 1 protein (LYR family)
+      5e-05   23.9   0.1    6.8e-05   23.5   0.1    1.2  1  Complex1_LYR_1  Complex1_LYR-like
+
+
+Domain annotation for each model (and alignments):
+>> Complex1_LYR  Complex 1 protein (LYR family)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.3   0.5   1.1e-18   1.1e-14       2      58 ..      14      70 ..      13      71 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.3 bits;  conditional E-value: 1.1e-18
+            Complex1_LYR  2 qvLsLYRalLRearkfpdyntreyirrriRdeFrknkhvtdpekieellkkgreeLe 58
+                            ++L+L+R++LRe   fp +n reyi  ++R+eFrk k++tdp+k++ l   g  +L+
+  tr|Q54SL9|Q54SL9_DICDI 14 KILKLFRNILRERLGFPTENRREYILIKTRQEFRKAKNETDPKKLRGLTIIGNTQLD 70
+                            78**********************************************999999997 PP
+
+>> Complex1_LYR_1  Complex1_LYR-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.1   7.1e-09   6.8e-05       2      75 ..      14      86 ..      13     108 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 7.1e-09
+          Complex1_LYR_1  2 eklrlyrallkaarrfPlrsrreivaeevraafrhplndslttkevdyklllgweraaaiqtyaenmywflsrd 75
+                            + l+l+r++l+   +fP  +rre +  + r +fr+  n++  +k +    ++g  +  ++   a+ +  +l r+
+  tr|Q54SL9|Q54SL9_DICDI 14 KILKLFRNILRERLGFPTENRREYILIKTRQEFRKAKNETDPKKLRGLT-IIGNTQLDTVIVQAKHLSSILDRE 86
+                            689*******************************999988776666655.667666666666666666666555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (136 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1024  (0.0533917); expected 383.6 (0.02)
+Passed bias filter:                      329  (0.0171542); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.49
+# Mc/sec: 899.08
+//
+[ok]

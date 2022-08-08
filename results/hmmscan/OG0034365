@@ -1,0 +1,82 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034365.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034365
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0G2KTB7|A0A0G2KTB7_DANRE  [L=375]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-28   97.6   0.0    3.9e-18   65.9   0.0    2.4  2  CUB       CUB domain
+    2.3e-08   34.2  12.7    2.8e-08   33.9  10.5    2.4  1  EGF_CA    Calcium-binding EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> CUB  CUB domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.0   8.3e-11     8e-07       9     101 ..      39     136 ..      34     147 .. 0.78
+   2 !   65.9   0.0     4e-22   3.9e-18       1     110 []     194     302 ..     194     302 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 8.3e-11
+                                     EEEEESTTTTS---SS-EEEEEEE--TTEEEEEEEESEEB--BSTSSSSEEEEEETTESSSSEEEEE-S.....SSS-S CS
+                             CUB   9 sgsisspnypkeYeenkeCvweiraekgssvklkfedfeleeeeecayDyveirdgeeasskllgkfcG.....sekpe 82 
+                                     sg i+sp  p  Ye+ ++ +w+  a+ g++++l++++ +lee+ +c+ D ++++++ee   +l++++       s +p 
+  tr|A0A0G2KTB7|A0A0G2KTB7_DANRE  39 SGWIQSPGHPLGYEPYSNMTWKECAPAGHRITLTLTHVDLEESFNCEDDALKVFSDEELLVNLCARMNMkelqtSVNPF 117
+                                     689*****************************************************99665555555543332233344 PP
+
+                                     EEE-SSSEEEEEEE--SS- CS
+                             CUB  83 diksssnqllikfvsdesv 101
+                                       +ss+  l ++f+sd s+
+  tr|A0A0G2KTB7|A0A0G2KTB7_DANRE 118 LHSSSGGCLSVSFLSDYSN 136
+                                     4456666777777777665 PP
+
+  == domain 2  score: 65.9 bits;  conditional E-value: 4e-22
+                                     SCEE.E-SSEEEEESTTTTS---SS-EEEEEEE--TTEEEEEEEES.EEB--BST..SSSSEEEEEETTESSSSEEEEE CS
+                             CUB   1 Cgge.ltessgsisspnypkeYeenkeCvweiraekgssvklkfed.feleeeee..cayDyveirdgeeasskllgkf 75 
+                                     C+++   + +g+++sp++p++Y+en+ C +++ +e+g + +l+f+  f++e++++  c  D + i+    +       +
+  tr|A0A0G2KTB7|A0A0G2KTB7_DANRE 194 CSKNyTGSLEGELKSPHWPSPYPENSVCSYKLAVEEGLQFELTFTGtFDVEKADNgrC-IDSLTIKPLIGE----AKTY 267
+                                     8888455679**********************************988****9998867.899999876663....478* PP
+
+                                     -SSSS-SEEE-SSSEEEEEEE--SS--SSEEEEEE CS
+                             CUB  76 cGsekpediksssnqllikfvsdesvskkGFkity 110
+                                     cG++ p+ + ++s+++ i+f +d++ +++GF+++y
+  tr|A0A0G2KTB7|A0A0G2KTB7_DANRE 268 CGKDLPSSFLTRSESVEITFRTDHKGTNRGFRLSY 302
+                                     *********************************98 PP
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.9  10.5   2.9e-12   2.8e-08       1      42 []     151     190 ..     151     190 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 33.9 bits;  conditional E-value: 2.9e-12
+                          EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegyennedetkC 42 
+                                     DvdEC++++++C   + C+N +G+++C C++gy  + d+++C
+  tr|A0A0G2KTB7|A0A0G2KTB7_DANRE 151 DVDECQDPENECT--QLCNNYIGGYRCFCRPGYFMDSDNHTC 190
+                                     9***********8..8******************99999999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (375 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       492  (0.0256531); expected 383.6 (0.02)
+Passed bias filter:                      361  (0.0188227); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.74
+# Mc/sec: 1641.57
+//
+[ok]

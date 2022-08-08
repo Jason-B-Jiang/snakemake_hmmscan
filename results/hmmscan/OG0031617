@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031617.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031617
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NIP6|CP2B_DROME  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.3e-06   28.2   3.7      0.063   13.6   0.1    3.3  2  Periviscerokin  Periviscerokinin family
+
+
+Domain annotation for each model (and alignments):
+>> Periviscerokin  Periviscerokinin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.7   0.1   6.6e-06      0.13       4      11 .]      35      42 ..      35      42 .. 0.98
+   2 !   13.6   0.1   3.3e-06     0.063       3      11 .]      84      92 ..      83      92 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 6.6e-06
+        Periviscerokin  4 GLIpFPRV 11
+                          GL++FPRV
+  sp|Q9NIP6|CP2B_DROME 35 GLYAFPRV 42
+                          9******9 PP
+
+  == domain 2  score: 13.6 bits;  conditional E-value: 3.3e-06
+        Periviscerokin  3 SGLIpFPRV 11
+                          SGL +FPRV
+  sp|Q9NIP6|CP2B_DROME 84 SGLVAFPRV 92
+                          9*******9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       290  (0.0151207); expected 383.6 (0.02)
+Passed bias filter:                      274  (0.0142865); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.21s 00:00:00.55 Elapsed: 00:00:00.58
+# Mc/sec: 840.73
+//
+[ok]

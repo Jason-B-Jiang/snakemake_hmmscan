@@ -1,0 +1,166 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0021277.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0021277
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WBC8|X1WBC8_DANRE  [L=1176]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.5e-38  129.6 132.2    3.2e-07   30.6   0.1   19.8  0  zf-H2C2_2  Zinc-finger double domain
+    3.1e-32  109.3 160.3      7e-05   23.2   3.3   19.4  2  zf-C2H2    Zinc finger, C2H2 type
+    6.2e-29   98.3 151.2     0.0054   17.5   2.9   19.4  0  zf-C2H2_4  C2H2-type zinc finger
+      2e-25   88.2 120.3    1.1e-08   34.8   0.2   14.6  2  zf-H2C2_5  C2H2-type zinc-finger domain
+    2.1e-06   28.0  93.5      0.047   14.1   0.5   12.1  0  zf-Di19    Drought induced 19 protein (Di19), zinc-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.2   3.3   1.8e-08     7e-05       1      23 []     269     291 ..     269     291 .. 0.98
+   2 !   20.9   1.7   9.3e-08   0.00036       1      23 []     840     862 ..     840     862 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 23.2 bits;  conditional E-value: 1.8e-08
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             ++C++C+k+Fk k++L++H+r+H
+  tr|X1WBC8|X1WBC8_DANRE 269 FTCEYCNKVFKFKHSLQAHLRIH 291
+                             89********************9 PP
+
+  == domain 2  score: 20.9 bits;  conditional E-value: 9.3e-08
+                             EEETTTTEEESSHHHHHHHHHCC CS
+                 zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                             +kC+ C++  ++ksnLk+H+++H
+  tr|X1WBC8|X1WBC8_DANRE 840 FKCSQCDYASRSKSNLKAHMNRH 862
+                             8*********************9 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.8   0.2   2.8e-12   1.1e-08       1      25 []     297     321 ..     297     321 .. 0.99
+   2 !   30.0   3.6   8.8e-11   3.4e-07       1      24 [.     840     863 ..     840     864 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 34.8 bits;  conditional E-value: 2.8e-12
+               zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHtg 25 
+                             +KC qCDY +a K nL  H++kHtg
+  tr|X1WBC8|X1WBC8_DANRE 297 FKCMQCDYASAIKANLSVHMRKHTG 321
+                             8***********************8 PP
+
+  == domain 2  score: 30.0 bits;  conditional E-value: 8.8e-11
+               zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHt 24 
+                             +KCsqCDY + +KsnLk H+  H+
+  tr|X1WBC8|X1WBC8_DANRE 840 FKCSQCDYASRSKSNLKAHMNRHN 863
+                             8*******************9997 PP
+
+>> zf-Di19  Drought induced 19 protein (Di19), zinc-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1176 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1963  (0.102352); expected 383.6 (0.02)
+Passed bias filter:                      423  (0.0220554); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                        30  (0.00156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.65u 0.19s 00:00:00.84 Elapsed: 00:00:00.90
+# Mc/sec: 4221.87
+//
+Query:       sp|Q9P243|ZFAT_HUMAN  [L=1243]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    6.7e-40  133.9 128.7    9.2e-08   32.3   0.3   20.3  0  zf-H2C2_2  Zinc-finger double domain
+    1.3e-36  123.1 159.2    7.5e-05   23.1   3.3   19.4  2  zf-C2H2    Zinc finger, C2H2 type
+    6.4e-32  109.0 109.5    2.5e-09   36.8   0.2   15.0  2  zf-H2C2_5  C2H2-type zinc-finger domain
+    2.2e-32  109.0 153.7     0.0058   17.5   2.9   19.4  0  zf-C2H2_4  C2H2-type zinc finger
+    1.6e-16   60.4  90.9     0.0014   19.0   0.7   12.3  0  zf-Di19    Drought induced 19 protein (Di19), zinc-binding
+
+
+Domain annotation for each model (and alignments):
+>> zf-H2C2_2  Zinc-finger double domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-C2H2  Zinc finger, C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.1   3.3   1.9e-08   7.5e-05       1      23 []     271     293 ..     271     293 .. 0.98
+   2 !   19.8   1.5   2.1e-07   0.00082       1      23 []     909     931 ..     909     931 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 23.1 bits;  conditional E-value: 1.9e-08
+                           EEETTTTEEESSHHHHHHHHHCC CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                           ++C++C+k+Fk k++L++H+r+H
+  sp|Q9P243|ZFAT_HUMAN 271 FTCEYCNKVFKFKHSLQAHLRIH 293
+                           89********************9 PP
+
+  == domain 2  score: 19.8 bits;  conditional E-value: 2.1e-07
+                           EEETTTTEEESSHHHHHHHHHCC CS
+               zf-C2H2   1 ykCpdCgksFkrksnLkrHirtH 23 
+                           +kC+ C +  ++ksnLk+H+++H
+  sp|Q9P243|ZFAT_HUMAN 909 FKCSLCEYATRSKSNLKAHMNRH 931
+                           8*********************9 PP
+
+>> zf-H2C2_5  C2H2-type zinc-finger domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.8   0.2   6.5e-13   2.5e-09       1      25 []     299     323 ..     299     323 .. 0.99
+   2 !   27.8   0.2   4.2e-10   1.6e-06       1      23 [.     966     988 ..     966     989 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 36.8 bits;  conditional E-value: 6.5e-13
+             zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkHtg 25 
+                           YKC+qC+Y +a K nL+ Hl+kHtg
+  sp|Q9P243|ZFAT_HUMAN 299 YKCPQCSYASAIKANLNVHLRKHTG 323
+                           9***********************8 PP
+
+  == domain 2  score: 27.8 bits;  conditional E-value: 4.2e-10
+             zf-H2C2_5   1 YKCsqCDYstawKsnLkRHlkkH 23 
+                           +KC  CDY++a+K  L RH+++H
+  sp|Q9P243|ZFAT_HUMAN 966 FKCTVCDYTAAQKPQLLRHMEQH 988
+                           8*********************9 PP
+
+>> zf-C2H2_4  C2H2-type zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-Di19  Drought induced 19 protein (Di19), zinc-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1243 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1413  (0.0736743); expected 383.6 (0.02)
+Passed bias filter:                      572  (0.0298243); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        40  (0.00208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.74u 0.19s 00:00:00.93 Elapsed: 00:00:00.85
+# Mc/sec: 4736.09
+//
+[ok]

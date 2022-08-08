@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034556.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034556
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IUU7|A0A0R4IUU7_DANRE  [L=444]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-10   41.3  26.9    5.5e-06   26.8   1.5    3.6  2  TNFR_c6   TNFR/NGFR cysteine-rich region
+
+
+Domain annotation for each model (and alignments):
+>> TNFR_c6  TNFR/NGFR cysteine-rich region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   6.4   1.3e-09   2.5e-05       1      39 []      40      82 ..      40      82 .. 0.89
+   2 !   26.8   1.5   2.9e-10   5.5e-06       1      39 []     107     147 ..     107     147 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 1.3e-09
+                                    --TTCEEBTTCTC.SEEEEE-.B-T..TEEECC--BTTC--EE CS
+                         TNFR_c6  1 CpegtYtdsense.eClpCtr.Cpp..gqvvlrpCtptsdtvC 39
+                                    C+ g+Y+ ++ +  +C++Ct  C+   +q ++++C+  +++vC
+  tr|A0A0R4IUU7|A0A0R4IUU7_DANRE 40 CESGKYLLQKPGGlKCQRCTLmCDGqkNQMEVTSCSQERNRVC 82
+                                    ******66666666******99*77779*************** PP
+
+  == domain 2  score: 26.8 bits;  conditional E-value: 2.9e-10
+                                     --TTCEEBTTCTC.SEEEEE-B-T.TEEECC--BTTC--EE CS
+                         TNFR_c6   1 CpegtYtdsense.eClpCtrCpp.gqvvlrpCtptsdtvC 39 
+                                     C+ gt++++++   +C p t C++ g+ vl++ ++t+d++C
+  tr|A0A0R4IUU7|A0A0R4IUU7_DANRE 107 CATGTFSSKPSLTsSCTPHTDCEKlGMKVLKEGSTTQDREC 147
+                                     ******999988878*******888**************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (444 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1532  (0.079879); expected 383.6 (0.02)
+Passed bias filter:                      510  (0.0265916); expected 383.6 (0.02)
+Passed Vit filter:                        64  (0.00333698); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.44u 0.22s 00:00:00.66 Elapsed: 00:00:00.67
+# Mc/sec: 2148.93
+//
+[ok]

@@ -1,0 +1,94 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019788.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019788
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q90VV9|Q90VV9_DANRE  [L=161]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.9e-15   55.7   6.3    5.8e-07   30.5   3.4    2.5  2  Insulin   Insulin/IGF/Relaxin family
+
+
+Domain annotation for each model (and alignments):
+>> Insulin  Insulin/IGF/Relaxin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.0   8.4e-10   1.6e-05       2      28 ..      48      72 ..      47      77 .. 0.90
+   2 !   30.5   3.4     3e-11   5.8e-07      59      85 .]      78     105 ..      73     105 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 8.4e-10
+                            HHHTHHHHHHHHHHHGGXXGTEEESXT CS
+                 Insulin  2 klCGreLvralievCgevkrgafytap 28
+                            +lCG eLv++l++vCg+  rg+++++p
+  tr|Q90VV9|Q90VV9_DANRE 48 TLCGAELVDTLQFVCGD--RGFYFSKP 72
+                            89***************..***99866 PP
+
+  == domain 2  score: 30.5 bits;  conditional E-value: 3e-11
+                             XXX.....-CHHHHTTSTBCCCCCCCCC CS
+                 Insulin  59 esrr.rkrGiveeCClkgCtlrsLekyC 85 
+                             +srr ++rGiv+eCC+++C+lr+Le+yC
+  tr|Q90VV9|Q90VV9_DANRE  78 SSRRsHNRGIVDECCFQSCELRRLEMYC 105
+                             6777799********************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (161 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       477  (0.024871); expected 383.6 (0.02)
+Passed bias filter:                      268  (0.0139736); expected 383.6 (0.02)
+Passed Vit filter:                        13  (0.000677825); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.19s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 861.68
+//
+Query:       sp|P05019|IGF1_HUMAN  [L=195]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.4e-14   52.4  12.0      8e-13   49.3   4.8    3.1  1  Insulin   Insulin/IGF/Relaxin family
+
+
+Domain annotation for each model (and alignments):
+>> Insulin  Insulin/IGF/Relaxin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.3   4.8   4.2e-17     8e-13       2      85 .]      52     109 ..      51     109 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 49.3 bits;  conditional E-value: 4.2e-17
+                           HHHTHHHHHHHHHHHGGXXGTEEESXTTXX......................XXXXXXXX.....-CHHHHTTSTBCCCCCCCCC CS
+               Insulin   2 klCGreLvralievCgevkrgafytapkareeedplveqveaedkeeaelkylgldeesrr.rkrGiveeCClkgCtlrsLekyC 85 
+                           +lCG eLv+al++vCg+  rg+++++p                         +g  ++srr +++Giv+eCC+++C+lr+Le+yC
+  sp|P05019|IGF1_HUMAN  52 TLCGAELVDALQFVCGD--RGFYFNKP-------------------------TGYGSSSRRaPQTGIVDECCFRSCDLRRLEMYC 109
+                           89***************..***99866.........................34567788889********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (195 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       765  (0.0398874); expected 383.6 (0.02)
+Passed bias filter:                      357  (0.0186141); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.54
+# Mc/sec: 1162.17
+//
+[ok]

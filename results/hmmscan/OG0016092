@@ -1,0 +1,201 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0016092.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0016092
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P38690  [L=423]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.3e-37  128.1   0.2    6.6e-37  127.5   0.2    1.3  1  AA_kinase  Amino acid kinase family
+    1.7e-20   72.8   0.0    3.6e-20   71.8   0.0    1.6  1  PUA        PUA domain
+
+
+Domain annotation for each model (and alignments):
+>> AA_kinase  Amino acid kinase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.5   0.2   6.9e-41   6.6e-37       2     240 ..       6     237 ..       5     238 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 127.5 bits;  conditional E-value: 6.9e-41
+                EEEEEE-TTCCCCTCC.....HHHHHHHHHHHHHHHHTTEEEEEE--HHHHHHHHHHTCCCCCHHHC....E..HHHHHHHHHHHHHHHHHHHHHHHHHT CS
+  AA_kinase   2 rvVvKlGGssltdkee.....aslrrlaeqiaalkesgnklvvVhGggsftdgllalksglssgelaaglrstleeagevatrdalaslgerlvaallaa 96 
+                ++V+KlG+ssl d+++     + +  ++e + +lk+ g+k+++V++g +++ gl al  +++ ++++            + + +a+a++g+  + a ++ 
+     P38690   6 TIVIKLGSSSLVDESTkepklSIMTLIVETVTNLKRMGHKVIIVSSG-GIAVGLDAL--NIPHKPKQ------------LSEVQAIAAVGQGRLIARWNM 90 
+                69*******888777788*****************************.888888888..77777777............5667***************** PP
+
+                THGEEEE-GGGTCEECCCE..HHHTTTCEEECCHHHHHHHTT-EEEEESEEEEETTTEEEEE-HHHHHHHHHHHCTSSEEEEEESSSSCESSTTTTSCTT CS
+  AA_kinase  97 glpavglsaaaldateagrdegsdgnvesvdaeaieelleagvvpvltgfigldeegelgrgssDtiaallAealgAdkliiltdVdGVydadpkkvpda 196
+                +++++g + a++++t++++      n +++ +++i+ell++gv+p+++++++l+  +   +g++Dt++a+ A+++gAd l +ltdVd +y+++p+ +pda
+     P38690  91 LFSQYGEQTAQILLTRNDI---LRWNQYNNARNTINELLAMGVIPIVNENDTLSISEI-EFGDNDTLSAITAALVGADFLFLLTDVDCLYTDNPRTNPDA 186
+                *******************...9****************************9999977.59*************************************** PP
+
+                CECCEE.EHHHCHH..........CSSS.TTTHHHHCHHHHHHHHHCTT-EEEEE CS
+  AA_kinase 197 rllpei.svdeaee..........saselatgGmkvkhpaalaaarrggipvvIt 240
+                r++  + + +   e          s se +tgGm++k+ aa  a + g i+++++
+     P38690 187 RPIVLVpELS---EglpgvntssgSGSEVGTGGMRTKLIAADLASNAG-IETIVM 237
+                9987763333...333588**********************9999999.999986 PP
+
+>> PUA  PUA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.8   0.0   3.8e-24   3.6e-20       1      74 []     316     403 ..     316     403 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 71.8 bits;  conditional E-value: 3.8e-24
+             CEEEE-HHHHHHHHT..T-EEEGGGEEEEETT--TTSEEEEEETTS............CEEEEEEESS-HHHHHHHCTSEEEEEEEEE CS
+     PUA   1 grvvvddgAvkalls..gasLlapGvvevegdfeegdvVaivdedg............elvavGlanysseelakikggksveiervl 74 
+             g++++d++++++lls  +asL+++ v+ev+++f+e ++V+++ +++            + v+++++ny+s elakikg++s++i++vl
+  P38690 316 GAIIIDENSYDKLLSkdMASLTPNAVIEVRDNFHELECVDLKIGQRlpngeldiskpiQSVGCVRSNYTSLELAKIKGLPSEKIHDVL 403
+             79******************************************6677779**********************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (423 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       572  (0.0298243); expected 383.6 (0.02)
+Passed bias filter:                      539  (0.0281037); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.21s 00:00:00.61 Elapsed: 00:00:00.64
+# Mc/sec: 2148.97
+//
+Query:       P32264  [L=428]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.8e-35  122.1   0.5    1.2e-34  120.1   0.3    1.9  1  AA_kinase  Amino acid kinase family
+      1e-23   83.1   0.0    2.1e-23   82.1   0.0    1.6  1  PUA        PUA domain
+
+
+Domain annotation for each model (and alignments):
+>> AA_kinase  Amino acid kinase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.1   0.3   1.2e-38   1.2e-34       2     239 ..      11     241 ..      10     244 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 120.1 bits;  conditional E-value: 1.2e-38
+                EEEEEE-TTCCCCTCC.....HHHHHHHHHHHHHHHHTTEEEEEE--HHHHHHHHHHTCCCCCHHHC....E..HHHHHHHHHHHHHHHHHHHHHHHHHT CS
+  AA_kinase   2 rvVvKlGGssltdkee.....aslrrlaeqiaalkesgnklvvVhGggsftdgllalksglssgelaaglrstleeagevatrdalaslgerlvaallaa 96 
+                ++V+KlG+ssl d+++     a +  ++e + +l++ g+k+++V++g +++ gl +    +++++++            +a+ +a+a++g+  +   ++ 
+     P32264  11 TIVIKLGSSSLVDEKTkepklAIMSLIVETVVKLRRMGHKVIIVSSG-GIAVGLRTM--RMNKRPKH------------LAEVQAIAAIGQGRLIGRWDL 95 
+                69*******888666679*****************************.666666666..56777777............5678***************** PP
+
+                THGEEEE-GGGTCEECCCE..HHHTTTCEEECCHHHHHHHTT-EEEEESEEEEETTTEEEEE-HHHHHHHHHHHCTSSEEEEEESSSSCESSTTTTSCTT CS
+  AA_kinase  97 glpavglsaaaldateagrdegsdgnvesvdaeaieelleagvvpvltgfigldeegelgrgssDtiaallAealgAdkliiltdVdGVydadpkkvpda 196
+                +++++    a++++t++++    d + +++ +++i+ell++gv+p+++++++l++ +   +g++Dt++a+  ++++Ad+l +ltdVd +y+++p+ +pda
+     P32264  96 LFSQFDQRIAQILLTRNDI---LDWTQYKNAQNTINELLNMGVIPIVNENDTLSVREI-KFGDNDTLSAITSALIHADYLFLLTDVDCLYTDNPRTNPDA 191
+                *******************...********************************9988.59************************************999 PP
+
+                CECCEEEHHHCHH..........CSSS.TTTHHHHCHHHHHHHHHCTT-EEEE CS
+  AA_kinase 197 rllpeisvdeaee..........saselatgGmkvkhpaalaaarrggipvvI 239
+                   p + v ++ +          s s  +tgGm++k+ aa  a + g +++ I
+     P32264 192 --MPILVVPDLSKglpgvntaggSGSDVGTGGMETKLVAADLATNAG-VHTLI 241
+                ..6667777777777899**************************999.55555 PP
+
+>> PUA  PUA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.1   0.0   2.2e-27   2.1e-23       1      74 []     322     409 ..     322     409 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 82.1 bits;  conditional E-value: 2.2e-27
+             CEEEE-HHHHHHHHT..T-EEEGGGEEEEETT--TTSEEEEEETTS............CEEEEEEESS-HHHHHHHCTSEEEEEEEEE CS
+     PUA   1 grvvvddgAvkalls..gasLlapGvvevegdfeegdvVaivdedg............elvavGlanysseelakikggksveiervl 74 
+             g+vv+d+gA+ al++  +a Ll++Gv++v+g+f+e ++V+i+ ++             ++v+++++ny+s+el+kikg++s++ie++l
+  P32264 322 GAVVIDQGAYAALTRknKAGLLPAGVIDVQGTFHELECVDIKVGKKlpdgtldpdfplQTVGKARCNYTSSELTKIKGLHSDQIEEEL 409
+             79**************999*************************777788**********************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (428 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       678  (0.0353512); expected 383.6 (0.02)
+Passed bias filter:                      575  (0.0299807); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.60
+# Mc/sec: 2322.61
+//
+Query:       sp|O13810|PROB_SCHPO  [L=402]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    8.2e-40  137.0   0.2    1.1e-39  136.6   0.2    1.2  1  AA_kinase  Amino acid kinase family
+    1.7e-18   66.4   0.1    3.1e-18   65.6   0.1    1.5  1  PUA        PUA domain
+
+
+Domain annotation for each model (and alignments):
+>> AA_kinase  Amino acid kinase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.6   0.2   1.1e-43   1.1e-39       2     240 ..      13     241 ..      12     242 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 136.6 bits;  conditional E-value: 1.1e-43
+                           EEEEEE-TTCCCCTCC.....HHHHHHHHHHHHHHHHTTEEEEEE--HHHHHHHHHHTCCCCCHHHC....E..HHHHHHHHHHHHHHH CS
+             AA_kinase   2 rvVvKlGGssltdkee.....aslrrlaeqiaalkesgnklvvVhGggsftdgllalksglssgelaaglrstleeagevatrdalasl 85 
+                           ++V+KlG ss+ d+++     ++l  ++e + +l++ g+++v+V++g +++ gl +l  +l++++++            +   +a+a++
+  sp|O13810|PROB_SCHPO  13 TIVIKLGTSSICDEKThepliSNLSLIVETVVKLRKLGHNVVLVSSG-GIAMGLRRL--DLPKRPSK------------LSAVQAIAAV 86 
+                           69**********88888******************************.999999999..99999998............5666****** PP
+
+                           HHHHHHHHHHTTHGEEEE-GGGTCEECCCE..HHHTTTCEEECCHHHHHHHTT-EEEEESEEEEETTTEEEEE-HHHHHHHHHHHCTSS CS
+             AA_kinase  86 gerlvaallaaglpavglsaaaldateagrdegsdgnvesvdaeaieelleagvvpvltgfigldeegelgrgssDtiaallAealgAd 174
+                           g+  + +l++ ++ +   + a++++t++++     +  + + a++i ell+ gvvp+++++++l++++   +g++Dt++a+ A +++Ad
+  sp|O13810|PROB_SCHPO  87 GQGRLISLWDTLFTQLRQPIAQVLITRNDI---AERSQYVNAANTISELLHFGVVPIVNENDTLSVQEIR-FGDNDTLSAITAGMINAD 171
+                           ******************************...99********************************997.9***************** PP
+
+                           EEEEEESSSSCESSTTTTSCTTCECCEEEHHHCHH.....CSSS.TTTHHHHCHHHHHHHHHCTT-EEEEE CS
+             AA_kinase 175 kliiltdVdGVydadpkkvpdarllpeisvdeaee.....saselatgGmkvkhpaalaaarrggipvvIt 240
+                           +l +ltdVd +y+++p+ +pda+++ +i   ++ +       s+ +tgGmk+k+ aa     +g ++v+I+
+  sp|O13810|PROB_SCHPO 172 YLFLLTDVDCLYTDNPRTNPDAKPILKIHDTSMVNanvstPGSGVGTGGMKTKLIAADLGTSSG-VNVIIC 241
+                           ****************************9999999999**9**************998888888.888885 PP
+
+>> PUA  PUA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.6   0.1   3.3e-22   3.1e-18       1      74 []     296     370 ..     296     370 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 65.6 bits;  conditional E-value: 3.3e-22
+                           CEEEE-HHHHHHHHT..T-EEEGGGEEEEETT--TTSEEEEEETTSCEEEEEEESS-HHHHHHHCTSEEEEEEEEE CS
+                   PUA   1 grvvvddgAvkalls..gasLlapGvvevegdfeegdvVaivdedgelvavGlanysseelakikggksveiervl 74 
+                           g + +d+gA +a+++  +a Ll+ Gv++v+g+f++ + V ++   ge+++++l+nyss e+  ikg++s+ei  +l
+  sp|O13810|PROB_SCHPO 296 GSLEIDRGAFEAITRtnRAGLLPVGVTKVHGHFSAHQAVTVIYN-GEEIGRALVNYSSTEIDLIKGKRSKEIASIL 370
+                           5789************9*************************99.***************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (402 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       483  (0.0251838); expected 383.6 (0.02)
+Passed bias filter:                      433  (0.0225768); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.61
+# Mc/sec: 2140.01
+//
+[ok]

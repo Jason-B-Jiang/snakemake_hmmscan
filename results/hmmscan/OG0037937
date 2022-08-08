@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037937.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037937
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002652449.1  [L=289]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    6.6e-28   96.3   0.4    1.6e-27   95.1   0.4    1.6  1  PEP-utilizers    PEP-utilising enzyme, mobile domain
+    8.3e-24   84.3   0.0    1.3e-23   83.7   0.0    1.2  1  PEP-utilizers_C  PEP-utilising enzyme, PEP-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> PEP-utilizers  PEP-utilising enzyme, mobile domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.1   0.4   1.6e-31   1.6e-27       4      73 .]      56     137 ..      53     137 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.1 bits;  conditional E-value: 1.6e-31
+                     S-EEEEES---HHHHTTS-GEEEEEES--TTHHHHHHHHHHTT--EEE--SSHH.............HH--TEEEEEETTTT CS
+   PEP-utilizers   4 egvILvaeetspsdtagldkaaGivterGGmtSHaAivArelgiPavvgvgeati............elkegdlvtvDgstG 73 
+                     e+v+Lv+ etsp+d++g+++a+Gi+t rGGmtSHaA+vAr++g+++v+g+g++              e  egd +++DgstG
+  XP_002652449.1  56 EKVVLVRLETSPEDIEGMKAAQGILTVRGGMTSHAAVVARGMGKCCVSGCGDIVMdeenkrftlggkEYCEGDAISIDGSTG 137
+                     559**************************************************99**************************9 PP
+
+>> PEP-utilizers_C  PEP-utilising enzyme, PEP-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.7   0.0   1.3e-27   1.3e-23       5      99 ..     153     266 ..     150     273 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 83.7 bits;  conditional E-value: 1.3e-27
+                      TSCCCCCCCHCCCXBCEEEEEESSCHHHHHHHHTTXSSEEEEEHHHHCTTSCCHHHHHH....................HHHHHHHHHHHTTTS CS
+  PEP-utilizers_C   5 gklktllavtkdgkkikvlaNidtpedaekalengaeGiGLlRtEflfmareelpteee....................qaeaykkvleamngr 78 
+                      g+++++++++++ + + v  N+dtp+da+ka+e ga+GiGL+RtE++f+   ++ +++e                    q ++++++ eam+g+
+   XP_002652449.1 153 GEFGRIMSWADKYRTMGVRTNADTPRDAKKARELGAQGIGLCRTEHMFFGEGRIDAFREmicaetkeereralekilpyQQDDFEQIYEAMEGL 246
+                      678899**************************************************************************************** PP
+
+                      EEEEEXXXSSCCCCSGGCHHH CS
+  PEP-utilizers_C  79 pvvvRtlDiggdkelpelkee 99 
+                      pv++R+lD++ ++++p+  ee
+   XP_002652449.1 247 PVTIRFLDPPLHEFVPTE-EE 266
+                      ****************97.44 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (289 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       543  (0.0283122); expected 383.6 (0.02)
+Passed bias filter:                      482  (0.0251317); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.62
+# Mc/sec: 1517.52
+//
+[ok]

@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034841.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034841
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B0S7K1|B0S7K1_DANRE  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.9e-50  168.4  13.9    6.5e-37  126.1   0.4    3.6  2  hSH3      Helically-extended SH3 domain
+      6e-07   29.3   0.3    0.00028   20.7   0.1    2.3  0  SH3_2     Variant SH3 domain
+    1.3e-05   24.8   0.0      0.054   13.2   0.0    2.7  0  SH3_1     SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> hSH3  Helically-extended SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.1   2.4   1.1e-16   6.9e-13       3      87 ..      65     157 ..      63     159 .. 0.81
+   2 !  126.1   0.4     1e-40   6.5e-37       1      89 []     210     297 .]     210     297 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 49.1 bits;  conditional E-value: 1.1e-16
+                    hSH3   3 kkfkyegeikvlysvtvdpnlkskklggkdLqvkrgevldviqktddek..vlcrneeGkyGyvlrsal.........veedgeiYD 78 
+                             kkfk +++i vl +v+v    + +k+g+ +L++k+ge++++++kt++ k   l+rn+eG yG+v+  +l          e+++e+YD
+  tr|B0S7K1|B0S7K1_DANRE  65 KKFKIKSPIVVLETVKV---RVDHKGGKNKLPLKQGESIEIVRKTENPKeyWLARNTEGHYGFVKPDTLdvvhdrlkdTEDEQEVYD 148
+                             9**************99...567899******************99765348************87665332322222357899*** PP
+
+                    hSH3  79 Diaedciyd 87 
+                             D++ d+ y+
+  tr|B0S7K1|B0S7K1_DANRE 149 DVGADDEYE 157
+                             **9888775 PP
+
+  == domain 2  score: 126.1 bits;  conditional E-value: 1e-40
+                    hSH3   1 frkkfkyegeikvlysvtvdpnlkskklggkdLqvkrgevldviqktddekvlcrneeGkyGyvlrsalveedgeiYDDiaedciyd 87 
+                             frkkfky++eikvly++tv ++l++kk+g+kdL+vk+ge++dvi +++ +k+++rn+eGk+Gyv++++l e dg++YDD++++ciyd
+  tr|B0S7K1|B0S7K1_DANRE 210 FRKKFKYNAEIKVLYEATVLQTLVIKKFGNKDLPVKPGETIDVILHQAGDKLIGRNSEGKFGYVFTANL-EPDGSVYDDVGDECIYD 295
+                             9*******************************************************************9.8**************** PP
+
+                    hSH3  88 nd 89 
+                             nd
+  tr|B0S7K1|B0S7K1_DANRE 296 ND 297
+                             *8 PP
+
+>> SH3_2  Variant SH3 domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> SH3_1  SH3 domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3949  (0.205902); expected 383.6 (0.02)
+Passed bias filter:                     1084  (0.0565202); expected 383.6 (0.02)
+Passed Vit filter:                       243  (0.0126701); expected 19.2 (0.001)
+Passed Fwd filter:                        55  (0.00286772); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.64u 0.24s 00:00:00.88 Elapsed: 00:00:00.90
+# Mc/sec: 1070.31
+//
+[ok]

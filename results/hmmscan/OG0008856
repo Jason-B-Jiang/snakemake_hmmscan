@@ -1,0 +1,398 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008856.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008856
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54T86|DWWA_DICDI  [L=568]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-20   72.8   1.5    3.4e-09   36.7   0.1    2.5  2  WW        WW domain
+    3.2e-06   27.5   0.5      0.023   15.1   0.1    2.6  2  C2        C2 domain
+
+
+Domain annotation for each model (and alignments):
+>> WW  WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.7   0.1   3.6e-13   3.4e-09       1      29 [.     327     355 ..     327     357 .. 0.95
+   2 !   35.0   0.2   1.2e-12   1.2e-08       1      31 []     521     550 ..     521     550 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 36.7 bits;  conditional E-value: 3.6e-13
+                           --TTEEEEE-TTTT-EEEEETTT--EESS CS
+                    WW   1 LPpGWeeqwdpesGrvYYyNheTgetqWe 29 
+                           LP+GWe + dp sG+v+Y Nh++++t+W 
+  sp|Q54T86|DWWA_DICDI 327 LPDGWESRIDPVSGKVFYLNHNNKTTSWI 355
+                           8***************************6 PP
+
+  == domain 2  score: 35.0 bits;  conditional E-value: 1.2e-12
+                           --TTEEEEE-TTTT-EEEEETTT--EESS-- CS
+                    WW   1 LPpGWeeqwdpesGrvYYyNheTgetqWekP 31 
+                           LP GWe + d   Grv+Y++h ++ t+W++P
+  sp|Q54T86|DWWA_DICDI 521 LPNGWEVRQDQF-GRVFYVDHINRATTWTRP 550
+                           8***********.*****************9 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.1   0.1   2.4e-06     0.023      15      94 ..      33     121 ..      16     128 .. 0.79
+   2 !   10.0   0.0   9.3e-05      0.89      27      92 ..     172     238 ..     147     247 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 15.1 bits;  conditional E-value: 2.4e-06
+                           SSSTTSSCEEEEEEEEECEEEEEE-SCSSS...SSSEEEE.EEEEEESC.....HTTSEEEEEEEEECSSSSEEEEEEEEEEGHHHHTT CS
+                    C2  15 nkdkkgssdpyvkvsldgkqkakTrvikns...lnPvWne.kftfevae.....leeskLeveVfdndrlskddfiGkveiplstllsg 94 
+                               ++ss+ y + ++d+ + +kT+++k+s    + ++ne  ++f+ +      l +++ ++ V+ ++++++d+ iG + ++l tl++g
+  sp|Q54T86|DWWA_DICDI  33 VSHTSKSSNIYLVGDFDQFKQFKTETKKSSsthGSCIYNEfAMEFQYETkyihkLDHKHFKICVYKKKSIGSDKYIGSFGVDLYTLATG 121
+                           44447889*****************98666444568999644555555555999*************************9999886654 PP
+
+  == domain 2  score: 10.0 bits;  conditional E-value: 9.3e-05
+                           EEEEECEEEEEE-SCSSSSSSEE.EEE...EEEEESCHTTSEEEEEEEEECSSSSEEEEEEEEEEGHHHH CS
+                    C2  27 kvsldgkqkakTrviknslnPvW.nek...ftfevaeleeskLeveVfdndrlskddfiGkveiplstll 92 
+                             sl++ +  k+++i+n++ P W n++   +++++++l + ++ + ++d ++   +++iG++++p++++ 
+  sp|Q54T86|DWWA_DICDI 172 DYSLNKINPLKSSIIENTICPSWyNQSsilMNISLKDLVDGSIFFNLKDTKS---SKVIGELKLPVKSIF 238
+                           556677788899*9*********64442213335555999999999999655...89*********9864 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (568 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2519  (0.131342); expected 383.6 (0.02)
+Passed bias filter:                      427  (0.0222639); expected 383.6 (0.02)
+Passed Vit filter:                        77  (0.00401481); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.54u 0.22s 00:00:00.76 Elapsed: 00:00:00.85
+# Mc/sec: 2168.50
+//
+Query:       tr|A0A0R4ICG6|A0A0R4ICG6_DANRE  [L=951]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.2e-56  188.4   0.2    5.7e-56  187.6   0.2    1.4  1  HECW_N       N-terminal domain of E3 ubiquitin-protein ligase
+    9.1e-11   41.7   0.7    2.4e-10   40.4   0.7    1.8  1  WW           WW domain
+    3.6e-10   40.2   0.0    8.6e-10   38.9   0.0    1.6  1  C2           C2 domain
+    2.8e-06   27.6   0.0    6.1e-06   26.5   0.0    1.5  1  HECW1_helix  Helical box domain of E3 ubiquitin-protein ligas
+
+
+Domain annotation for each model (and alignments):
+>> HECW_N  N-terminal domain of E3 ubiquitin-protein ligase HECW1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  187.6   0.2   1.2e-59   5.7e-56       1     119 [.      52     170 ..      52     171 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 187.6 bits;  conditional E-value: 1.2e-59
+                          HECW_N   1 rsnsdtdLvtsdsrssLtvskneltlgkssslvisWDikeevdaeDWiGlylideeskenfldlknRgvsgtrkGqivw 79 
+                                     rs+sdtdL+t +srs+Ltvs++++++g+s++++i+WDikeev+++DWiG+ylide  +enfld+k+Rgvsg++kGqi w
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE  52 RSTSDTDLLTLQSRSTLTVSSSQYCIGQSEDICICWDIKEEVEPGDWIGMYLIDEVLSENFLDYKSRGVSGSHKGQIRW 130
+                                     89***************************************************************************** PP
+
+                          HECW_N  80 rvdaesefteaetkiCFkYYhgvsgaLrattpsitvknpa 119
+                                     r+da+ +f+eaetkiCFkYYhg+sgaLrattps+tv+n++
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE 131 RIDASLYFMEAETKICFKYYHGLSGALRATTPSVTVRNTS 170
+                                     **************************************86 PP
+
+>> WW  WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   0.7   4.9e-14   2.4e-10       1      31 []     800     829 ..     800     829 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 4.9e-14
+                                     --TTEEEEE-TTTT-EEEEETTT--EESS-- CS
+                              WW   1 LPpGWeeqwdpesGrvYYyNheTgetqWekP 31 
+                                     LPp+We+++d+  Grv+Y++h +++t+W +P
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE 800 LPPNWEARVDSH-GRVFYVDHVNRTTTWQRP 829
+                                     8***********.*****************9 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.9   0.0   1.8e-13   8.6e-10       4      97 ..     195     301 ..     193     306 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 38.9 bits;  conditional E-value: 1.8e-13
+                                     EEEEEEEESSSSSSTTSSCEEEEEEEE............ECEEEEEE-SCSSSSSSEEE.EEEEEEESCHTTSEEEEEE CS
+                              C2   4 evtvieAknLpnkdkkgssdpyvkvsl............dgkqkakTrviknslnPvWn.ekftfevaeleeskLeveV 69 
+                                     +++ ++A +L++   + ++dpy k+s+            ++ q +++++  n+++PvW+ e+f+f v+  ++++Le+eV
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE 195 SLSDVQAVGLKKG-MFFNPDPYLKISIqpgkqslypalpHHGQEKRSSIACNTISPVWKrERFNF-VSL-PTDVLEIEV 270
+                                     567789****555.5899*********************99*******89********87*****.555.79******* PP
+
+                                     EE.ECSSSSEE...EEEEEEEEGHHHHTTHHH CS
+                              C2  70 fd.ndrlskdd...fiGkveiplstllsgeea 97 
+                                     +d + + s+     f+Gk+ +p+++ll+++++
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE 271 KDkFAK-SRPIikrFLGKLVVPVQRLLEKHAI 301
+                                     **5333.4433555***********8777655 PP
+
+>> HECW1_helix  Helical box domain of E3 ubiquitin-protein ligase HECW1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.0   1.3e-09   6.1e-06       2      25 ..     908     931 ..     907     937 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 1.3e-09
+                     HECW1_helix   2 lleSPavkFitrPdffsvlhsnqs 25 
+                                     ll+ PavkFit+P+ff+vlh+n++
+  tr|A0A0R4ICG6|A0A0R4ICG6_DANRE 908 LLQCPAVKFITHPEFFTVLHANYV 931
+                                     9********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (951 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       889  (0.0463528); expected 383.6 (0.02)
+Passed bias filter:                      404  (0.0210647); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.51u 0.18s 00:00:00.69 Elapsed: 00:00:00.72
+# Mc/sec: 4278.15
+//
+Query:       tr|A0A2R8Q1Y0|A0A2R8Q1Y0_DANRE  [L=266]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.5e-60  200.1   0.0      1e-59  199.7   0.0    1.2  1  HECW_N    N-terminal domain of E3 ubiquitin-protein ligase HE
+    3.4e-07   30.6   0.0    6.5e-07   29.7   0.0    1.4  1  C2        C2 domain
+
+
+Domain annotation for each model (and alignments):
+>> HECW_N  N-terminal domain of E3 ubiquitin-protein ligase HECW1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.7   0.0   1.1e-63     1e-59       1     120 []      58     177 ..      58     177 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 199.7 bits;  conditional E-value: 1.1e-63
+                          HECW_N   1 rsnsdtdLvtsdsrssLtvskneltlgkssslvisWDikeevdaeDWiGlylideeskenfldlknRgvsgtrkGqivw 79 
+                                     r+nsdtdLvtsdsrssLt+s++++tlg++++lvisWDikeevda+DWiGly+ide++++n++d+knRgv+gt++Gqivw
+  tr|A0A2R8Q1Y0|A0A2R8Q1Y0_DANRE  58 RANSDTDLVTSDSRSSLTASTYQFTLGRGQNLVISWDIKEEVDATDWIGLYHIDETCPANVWDSKNRGVNGTQRGQIVW 136
+                                     89***************************************************************************** PP
+
+                          HECW_N  80 rvdaesefteaetkiCFkYYhgvsgaLrattpsitvknpav 120
+                                     r+++ ++f+e+etkiCFkYYhgvsgaLrattp+itvknp v
+  tr|A0A2R8Q1Y0|A0A2R8Q1Y0_DANRE 137 RLEPGPYFMEPETKICFKYYHGVSGALRATTPCITVKNPGV 177
+                                     **************************************975 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.7   0.0   6.7e-11   6.5e-07       3      52 ..     200     260 ..     198     264 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 29.7 bits;  conditional E-value: 6.7e-11
+                                     EEEEEEEEESSSSSSTTSSCEEEEEEEE............ECEEEEEE-SCSSSSSSEEEEE CS
+                              C2   3 levtvieAknLpnkdkkgssdpyvkvsl............dgkqkakTrviknslnPvWnek 52 
+                                     ++++ i+A++L++   + ++dpy k+s+            ++ q ++T++i+n++nPvW+ +
+  tr|A0A2R8Q1Y0|A0A2R8Q1Y0_DANRE 200 FTLSDIRAQGLKKG-MFFNPDPYLKMSIqpgkrngfptfsHHGQERRTSIISNTTNPVWHGE 260
+                                     678899*****555.5899****************************************854 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (266 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       379  (0.0197612); expected 383.6 (0.02)
+Passed bias filter:                      346  (0.0180406); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.16s 00:00:00.56 Elapsed: 00:00:00.56
+# Mc/sec: 1533.88
+//
+Query:       tr|A0A0R4ID96|A0A0R4ID96_DANRE  [L=952]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.2e-56  188.4   0.2    5.7e-56  187.6   0.2    1.4  1  HECW_N       N-terminal domain of E3 ubiquitin-protein ligase
+    9.1e-11   41.7   0.7    2.4e-10   40.4   0.7    1.8  1  WW           WW domain
+    3.6e-10   40.2   0.0    8.6e-10   38.9   0.0    1.6  1  C2           C2 domain
+    2.9e-06   27.6   0.0    6.1e-06   26.5   0.0    1.5  1  HECW1_helix  Helical box domain of E3 ubiquitin-protein ligas
+
+
+Domain annotation for each model (and alignments):
+>> HECW_N  N-terminal domain of E3 ubiquitin-protein ligase HECW1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  187.6   0.2   1.2e-59   5.7e-56       1     119 [.      53     171 ..      53     172 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 187.6 bits;  conditional E-value: 1.2e-59
+                          HECW_N   1 rsnsdtdLvtsdsrssLtvskneltlgkssslvisWDikeevdaeDWiGlylideeskenfldlknRgvsgtrkGqivw 79 
+                                     rs+sdtdL+t +srs+Ltvs++++++g+s++++i+WDikeev+++DWiG+ylide  +enfld+k+Rgvsg++kGqi w
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE  53 RSTSDTDLLTLQSRSTLTVSSSQYCIGQSEDICICWDIKEEVEPGDWIGMYLIDEVLSENFLDYKSRGVSGSHKGQIRW 131
+                                     89***************************************************************************** PP
+
+                          HECW_N  80 rvdaesefteaetkiCFkYYhgvsgaLrattpsitvknpa 119
+                                     r+da+ +f+eaetkiCFkYYhg+sgaLrattps+tv+n++
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE 132 RIDASLYFMEAETKICFKYYHGLSGALRATTPSVTVRNTS 171
+                                     **************************************86 PP
+
+>> WW  WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   0.7     5e-14   2.4e-10       1      31 []     801     830 ..     801     830 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 5e-14
+                                     --TTEEEEE-TTTT-EEEEETTT--EESS-- CS
+                              WW   1 LPpGWeeqwdpesGrvYYyNheTgetqWekP 31 
+                                     LPp+We+++d+  Grv+Y++h +++t+W +P
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE 801 LPPNWEARVDSH-GRVFYVDHVNRTTTWQRP 830
+                                     8***********.*****************9 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.9   0.0   1.8e-13   8.6e-10       4      97 ..     196     302 ..     194     307 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 38.9 bits;  conditional E-value: 1.8e-13
+                                     EEEEEEEESSSSSSTTSSCEEEEEEEE............ECEEEEEE-SCSSSSSSEEE.EEEEEEESCHTTSEEEEEE CS
+                              C2   4 evtvieAknLpnkdkkgssdpyvkvsl............dgkqkakTrviknslnPvWn.ekftfevaeleeskLeveV 69 
+                                     +++ ++A +L++   + ++dpy k+s+            ++ q +++++  n+++PvW+ e+f+f v+  ++++Le+eV
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE 196 SLSDVQAVGLKKG-MFFNPDPYLKISIqpgkqslypalpHHGQEKRSSIACNTISPVWKrERFNF-VSL-PTDVLEIEV 271
+                                     567789****555.5899*********************99*******89********87*****.555.79******* PP
+
+                                     EE.ECSSSSEE...EEEEEEEEGHHHHTTHHH CS
+                              C2  70 fd.ndrlskdd...fiGkveiplstllsgeea 97 
+                                     +d + + s+     f+Gk+ +p+++ll+++++
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE 272 KDkFAK-SRPIikrFLGKLVVPVQRLLEKHAI 302
+                                     **5333.4433555***********8777655 PP
+
+>> HECW1_helix  Helical box domain of E3 ubiquitin-protein ligase HECW1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.0   1.3e-09   6.1e-06       2      25 ..     909     932 ..     908     938 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 1.3e-09
+                     HECW1_helix   2 lleSPavkFitrPdffsvlhsnqs 25 
+                                     ll+ PavkFit+P+ff+vlh+n++
+  tr|A0A0R4ID96|A0A0R4ID96_DANRE 909 LLQCPAVKFITHPEFFTVLHANYV 932
+                                     9********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (952 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       888  (0.0463006); expected 383.6 (0.02)
+Passed bias filter:                      405  (0.0211168); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.62
+# Mc/sec: 4952.78
+//
+Query:       tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE  [L=1190]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.7e-57  190.8   0.3    9.5e-57  190.1   0.3    1.4  1  HECW_N       N-terminal domain of E3 ubiquitin-protein ligase
+    4.6e-39  132.6   4.7    2.3e-35  120.7   1.5    2.5  1  HECW1_helix  Helical box domain of E3 ubiquitin-protein ligas
+    2.2e-18   66.1   0.4    5.5e-10   39.3   0.3    2.6  1  WW           WW domain
+      2e-10   40.9   0.0    5.2e-10   39.6   0.0    1.6  1  C2           C2 domain
+
+
+Domain annotation for each model (and alignments):
+>> HECW_N  N-terminal domain of E3 ubiquitin-protein ligase HECW1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  190.1   0.3     2e-60   9.5e-57       1     119 [.      64     182 ..      64     183 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 190.1 bits;  conditional E-value: 2e-60
+                          HECW_N   1 rsnsdtdLvtsdsrssLtvskneltlgkssslvisWDikeevdaeDWiGlylideeskenfldlknRgvsgtrkGqivw 79 
+                                     rs+sdtdL+ts+ rs+Ltvs++++t+g+++++++sWDikeevda+DWiG+ylide  +enfld+knRgv+g++kGqi+w
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE  64 RSTSDTDLLTSHCRSTLTVSTSSYTIGQTQDITLSWDIKEEVDAGDWIGMYLIDEVLSENFLDYKNRGVNGSHKGQIIW 142
+                                     89***************************************************************************** PP
+
+                          HECW_N  80 rvdaesefteaetkiCFkYYhgvsgaLrattpsitvknpa 119
+                                     +++a+s+f e+etkiCFkYYhgvsgaLrattp++tvknp+
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE 143 KIEASSYFVEPETKICFKYYHGVSGALRATTPCVTVKNPS 182
+                                     **************************************97 PP
+
+>> HECW1_helix  Helical box domain of E3 ubiquitin-protein ligase HECW1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.7   1.5   4.9e-39   2.3e-35       2      67 .]     802     867 ..     801     867 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 120.7 bits;  conditional E-value: 4.9e-39
+                     HECW1_helix   2 lleSPavkFitrPdffsvlhsnqsAyrlftkntalkhliskvrrdpakFerYqHnrdlVallNlFa 67 
+                                     ll+SPavkFit+P+ff+vlh+n+ Ayr+ft++++lkh++ k+rrd+++FerYqHnrdlV++lN Fa
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE 802 LLQSPAVKFITHPEFFTVLHANYGAYRMFTNSSCLKHMVLKIRRDARNFERYQHNRDLVTFLNRFA 867
+                                     9****************************************************************8 PP
+
+>> WW  WW domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.3   1.1e-13   5.5e-10       1      31 []     693     722 ..     693     722 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 1.1e-13
+                                     --TTEEEEE-TTTT-EEEEETTT--EESS-- CS
+                              WW   1 LPpGWeeqwdpesGrvYYyNheTgetqWekP 31 
+                                     LPp+We++ d+  Grv+Y++h +++t+W +P
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE 693 LPPNWEARIDSH-GRVFYVDHINRTTTWQRP 722
+                                     8***********.*****************9 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.6   0.0   1.1e-13   5.2e-10       5      97 ..     208     313 ..     205     318 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 39.6 bits;  conditional E-value: 1.1e-13
+                                     EEEEEEESSSSSSTTSSCEEEEEEEE............ECEEEEEE-SCSSSSSSEEE.EEEEEEESCHTTSEEEEEEE CS
+                              C2   5 vtvieAknLpnkdkkgssdpyvkvsl............dgkqkakTrviknslnPvWn.ekftfevaeleeskLeveVf 70 
+                                     ++  +A++L++   + ++dpy k+ +            ++ q +++ ++ n++nPvW+ e+f+f v+  ++++Le+eV+
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE 208 LSDFQATGLKKG-MFFNPDPYLKIAIhpgkhsifpalpHHGQEKRSGIVCNTINPVWQrERFNF-VSL-PTDVLEIEVK 283
+                                     6678999**555.5899******************************99********8799**9.555.79******** PP
+
+                                     E.ECSSSSEE...EEEEEEEEGHHHHTTHHH CS
+                              C2  71 d.ndrlskdd...fiGkveiplstllsgeea 97 
+                                     d + + s+     f+Gk+++p+++ll+++++
+  tr|A0A2R8Q4R9|A0A2R8Q4R9_DANRE 284 DkFAK-SRPIikrFLGKLSMPVQRLLEKHAI 313
+                                     *5333.4433555***********8777655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1190 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       492  (0.0256531); expected 383.6 (0.02)
+Passed bias filter:                      394  (0.0205433); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.76
+# Mc/sec: 5073.88
+//
+[ok]

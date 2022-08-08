@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049450.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049450
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P43617  [L=309]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.8e-40  136.8  11.1    1.3e-17   63.6   1.0    4.0  3  Mito_carr  Mitochondrial carrier protein
+
+
+Domain annotation for each model (and alignments):
+>> Mito_carr  Mitochondrial carrier protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.7   0.2   2.2e-10   4.2e-06       4      89 ..       7      80 ..       4      88 .. 0.70
+   2 !   50.2   0.3   9.8e-18   1.9e-13       6      95 ..     100     214 ..      95     216 .. 0.82
+   3 !   63.6   1.0   6.7e-22   1.3e-17       7      93 ..     220     303 ..     217     307 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 26.7 bits;  conditional E-value: 2.2e-10
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHH CS
+  Mito_carr  4 svlkellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetl 89
+                ++k+++aG++a++++t++t+P++++Kt lq+q+k ++ +           i    ++++ + G+++  +  + ++ l+fv++++l
+     P43617  7 DLYKQITAGSVAAVFQTTMTYPFEYLKTGLQLQPKGTAFE----------II--LPQIKSYFVGCSALNVAAFGKTILRFVTFDKL 80
+               67899****************************9986432..........12..23455555555555555555555555555555 PP
+
+  == domain 2  score: 50.2 bits;  conditional E-value: 9.8e-18
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH............CCCSSTTTSCSS.......................HHHHHHHHHHHHHHHGGGTTHHH CS
+  Mito_carr   6 lkellaGglagavatlvttPldvvKtrlqt............qkksskkkksaa.......................ildvlkkiykeeGlrglyrGllp 70 
+                ++ l+aG l g+v++l++ P++ +Kt l              q          +                       +l ++k++y++ G +++ +G ++
+     P43617 100 YNLLIAGTLTGIVESLFIIPFENIKTTLIQsamidhkkleknQ----------PvvnakatfhkvatkstpvariekLLPAVKHMYQTRGPAAFVQGTTA 189
+                6789*********************998774666655555551..........044445555556666677777888*********************** PP
+
+                HHHHHHHHHHHHHHHHHHHHHHHCT CS
+  Mito_carr  71 nllrvapasalkfvlyetlkrlllk 95 
+                +++r++ +++++f++y  +krll+ 
+     P43617 190 TIFRQIANTSIQFTAYTAFKRLLQA 214
+                **********************986 PP
+
+  == domain 3  score: 63.6 bits;  conditional E-value: 6.7e-22
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCSSTTTSCSSHHHHHHHHHHHHHHHGGGTTHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+  Mito_carr   7 kellaGglagavatlvttPldvvKtrlqtqkksskkkksaaildvlkkiykeeGlrglyrGllpnllrvapasalkfvlyetlkrll 93 
+                +++++G++  ++ + +t+P+dvvKtr+++q+ ++++k+   +l+++++i+ +eG++ +++G + ++++v ++ +l+f++ye++  ll
+     P43617 220 SSVITGLATSFTLVAMTQPIDVVKTRMMSQNAKTEYKN---TLNCMYRIFVQEGMATFWKGSIFRFMKVGISGGLTFTVYEQVSLLL 303
+                6899*****************************99977...*****************************************98776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (309 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       691  (0.036029); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.66
+# Mc/sec: 1520.50
+//
+[ok]

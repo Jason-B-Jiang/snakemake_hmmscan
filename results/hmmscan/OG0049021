@@ -1,0 +1,52 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049021.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049021
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q12089  [L=606]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-13   49.6   3.1    2.1e-05   24.7   0.1    4.5  0  PPR_2     PPR repeat family
+    2.4e-09   37.2   0.3     0.0004   20.5   0.0    4.1  1  PPR_3     Pentatricopeptide repeat domain
+
+
+Domain annotation for each model (and alignments):
+>> PPR_2  PPR repeat family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> PPR_3  Pentatricopeptide repeat domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.5   0.0   4.2e-08    0.0004      35      62 ..     241     268 ..     236     269 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 20.5 bits;  conditional E-value: 4.2e-08
+   PPR_3  35 levlermkkkgikPtvvtyNailgvigg 62 
+              e++++mk +g kP+ +t+N +l  +++
+  Q12089 241 REIFAQMKAEGTKPNTITFNLLLRNVVK 268
+             59*********************87776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (606 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       913  (0.0476042); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.24s 00:00:00.67 Elapsed: 00:00:00.81
+# Mc/sec: 2416.20
+//
+[ok]

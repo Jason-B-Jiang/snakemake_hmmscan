@@ -1,0 +1,110 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034475.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034475
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WGR4|X1WGR4_DANRE  [L=688]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.7e-42  143.0  69.4      1e-15   57.8   0.6    9.6  2  TSP1_spondin  Spondin-like TSP1 domain
+    5.9e-18   64.9 101.7    4.7e-05   23.6  10.4   12.5  0  TSP1_ADAMTS   Thrombospondin type 1 domain
+    3.2e-16   59.3  94.9    6.2e-10   39.2   0.6   12.6  4  TSP_1         Thrombospondin type 1 domain
+    1.3e-06   28.8   2.3    1.3e-06   28.8   2.3    9.4  1  TSP1_CCN      CCN3 Nov like TSP1 domain
+
+
+Domain annotation for each model (and alignments):
+>> TSP1_spondin  Spondin-like TSP1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.8   0.6   2.2e-19     1e-15       1      52 []     175     226 ..     175     226 .. 0.99
+   2 !   50.2   6.2   5.2e-17   2.5e-13       1      49 [.     348     401 ..     348     403 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 57.8 bits;  conditional E-value: 2.2e-19
+            TSP1_spondin   1 CvvseWseWseCsktCgkGvqtRsRevivepenggkpCpelletrkCneekC 52 
+                             Cvv+e+++W++CsktCg G q+R R+v+++p  gg pCp+l+e ++C  + C
+  tr|X1WGR4|X1WGR4_DANRE 175 CVVTEFTPWTTCSKTCGLGLQNRVRSVVAPPLFGGLPCPNLTEFQTCAPRAC 226
+                             ************************************************9999 PP
+
+  == domain 2  score: 50.2 bits;  conditional E-value: 5.2e-17
+            TSP1_spondin   1 CvvseWseWseCsktC.....gkGvqtRsRevivepenggkpCpelletrkCne 49 
+                             Cv+seWseWs+Csk C      +G ++RsR++++ p+ gg +Cp+l+e+++C+ 
+  tr|X1WGR4|X1WGR4_DANRE 348 CVLSEWSEWSSCSKACsdpkvPQGSRSRSRQLTRLPSGGGLECPQLEESEACEP 401
+                             ******************9999******************************85 PP
+
+>> TSP1_ADAMTS  Thrombospondin type 1 domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> TSP_1  Thrombospondin type 1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.2   0.6   1.3e-13   6.2e-10       2      49 .]     179     226 ..     178     226 .. 0.93
+   2 !   20.6   5.9   8.3e-08    0.0004       1      45 [.     351     400 ..     351     403 .. 0.79
+   3 !   12.5   2.0   2.9e-05      0.14       1      49 []     526     580 ..     526     580 .. 0.79
+   4 !   24.0   1.0   7.3e-09   3.5e-05       1      24 [.     645     672 ..     645     683 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 39.2 bits;  conditional E-value: 1.3e-13
+                             SCCCSSS-SSSSSEEEEEEEECSETT.STTSS-BSSTSEEEEEEESSSC CS
+                   TSP_1   2 pwseWspCsvTCgkGsqvRqRtcksp.qkggeqCtgdaaetqaCkmqkC 49 
+                             ++++W+ Cs+TCg G q R R++++p  +gg +C+  + e+q C  + C
+  tr|X1WGR4|X1WGR4_DANRE 179 EFTPWTTCSKTCGLGLQNRVRSVVAPpLFGGLPCPNLT-EFQTCAPRAC 226
+                             79*********************************877.8****88877 PP
+
+  == domain 2  score: 20.6 bits;  conditional E-value: 8.3e-08
+                             TSCCCSSS-SSSSSE.....EEEEEEECSETT.STTSS-BSSTSEEEEEEE CS
+                   TSP_1   1 spwseWspCsvTCgk.....GsqvRqRtcksp.qkggeqCtgdaaetqaCk 45 
+                             s+wseWs+Cs+ C+      Gs+ R+R +    + gg  C++   e +aC+
+  tr|X1WGR4|X1WGR4_DANRE 351 SEWSEWSSCSKACSDpkvpqGSRSRSRQLTRLpSGGGLECPQLE-ESEACE 400
+                             89***********9444555**********99555566777655.799996 PP
+
+  == domain 3  score: 12.5 bits;  conditional E-value: 2.9e-05
+                             TSCCCSSS-SS.SS.....SEEEEEEEECSETTSTTSS-BSSTSEEEEEEESSSC CS
+                   TSP_1   1 spwseWspCsv.TC.....gkGsqvRqRtckspqkggeqCtgdaaetqaCkmqkC 49 
+                             spw+ W pC+   C      kG + R+R++ + + gge   +  +e  +C+++ C
+  tr|X1WGR4|X1WGR4_DANRE 526 SPWGAWGPCTFeNCdersvKKGFKFRRRSITNYPTGGEGSCAHLVESIPCDDPSC 580
+                             8*********999*5554448**********99555554445555899**99999 PP
+
+  == domain 4  score: 24.0 bits;  conditional E-value: 7.3e-09
+                             TSCCCSSS-SSSSS....EEEEEEEECS CS
+                   TSP_1   1 spwseWspCsvTCg....kGsqvRqRtc 24 
+                             s w+eWs Cs TC+    +G+q+R+R +
+  tr|X1WGR4|X1WGR4_DANRE 645 SLWTEWSTCSQTCSsknaEGKQMRTRAI 672
+                             89***********966667*******87 PP
+
+>> TSP1_CCN  CCN3 Nov like TSP1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.8   2.3   2.6e-10   1.3e-06       4      44 .]     179     226 ..     171     226 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 28.8 bits;  conditional E-value: 2.6e-10
+                TSP1_CCN   4 qsteWsaCSktCGlGvstRvsn.......dneeCkleketrlCqlrpC 44 
+                             + t W++CSktCGlG+  Rv++           C + +e + C  r C
+  tr|X1WGR4|X1WGR4_DANRE 179 EFTPWTTCSKTCGLGLQNRVRSvvapplfGGLPCPNLTEFQTCAPRAC 226
+                             4799*****************989999888899*************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (688 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       392  (0.020439); expected 383.6 (0.02)
+Passed bias filter:                      197  (0.0102717); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.73
+# Mc/sec: 3061.59
+//
+[ok]

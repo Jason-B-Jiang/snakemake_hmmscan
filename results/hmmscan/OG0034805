@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034805.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034805
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1REJ4|F1REJ4_DANRE  [L=1108]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    6.4e-83  276.5   0.1    1.3e-82  275.5   0.1    1.5  1  VCIP135_N  VCIP135 N-terminal
+    2.1e-10   41.3   0.0    4.9e-10   40.1   0.0    1.7  1  OTU        OTU-like cysteine protease
+
+
+Domain annotation for each model (and alignments):
+>> VCIP135_N  VCIP135 N-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  275.5   0.1   1.3e-86   1.3e-82       3     166 ..       7     172 ..       5     173 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 275.5 bits;  conditional E-value: 1.3e-86
+               VCIP135_N   3 skkkdkrvlsgtCpdekCqakLffpa.kdvsveCteCGqrheksalknveevtekevalhnllrnlllgn.vkpkkgadsvkvlGls 87 
+                             sk+kd+r+l+g+Cpd++CqakL+fpa +++s+eCteCGqrhe+++l nveevt+++v+lhnllrn+llg+ + pkkg++ vkv+Gls
+  tr|F1REJ4|F1REJ4_DANRE   7 SKQKDRRILCGMCPDPQCQAKLIFPAhTSMSIECTECGQRHEQKNLANVEEVTNPDVVLHNLLRNALLGVpGPPKKGSELVKVMGLS 93 
+                             578999*******************96789****************************************999************** PP
+
+               VCIP135_N  88 nykCkllsplLtryGmDkqtgkaklLkelgqgevfdCslLgdraflieeehvevvgyGrDrsGslsyLkdtLeeikkan 166
+                             ny+Ckllsp+LtryGmDkqtg aklLke++qg++fdCslLgdraflie+ehv +vgyGrDrsGsl yL+dtLeeikkan
+  tr|F1REJ4|F1REJ4_DANRE  94 NYHCKLLSPILTRYGMDKQTGTAKLLKEMNQGDIFDCSLLGDRAFLIEQEHVSTVGYGRDRSGSLIYLHDTLEEIKKAN 172
+                             *****************************************************************************99 PP
+
+>> OTU  OTU-like cysteine protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   0.0   5.1e-14   4.9e-10       2     113 ..     185     302 ..     184     325 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 5.1e-14
+                             -SS-HHHHHHHHCCCSS.SHCCHHHHHHHHHCHHHHHHTSSHHCCHHHHCCHHHHHHHTTSTTHHHH.................... CS
+                     OTU   2 gDGnCLlravsqqlwgvqdslrkakvseLreklaeylrehseelelfleeeeegylkeiektaawgg.................... 68 
+                             gDG+CL +avs++l+     +r+   ++Lre+l+  ++++ + ++ ++++          + a+w++                    
+  tr|F1REJ4|F1REJ4_DANRE 185 GDGHCLVHAVSRALV-----GRELFWHALRENLKLHFKQNLDRYKALFQDF--------IDAAEWEDiinecdplfvppegvplglr 258
+                             8*************8.....9999999*********************999........678899999999**************** PP
+
+                             HHHHHHHHHHCTS-EEEETTSSSSEEEE-TT-EEE--TTS-GGGS CS
+                     OTU  69 eieifalahiLrrpIiVlksesgeelvglkfegvylplekdkslc 113
+                             +i+if la++L rp+i+l s sg   +g  +    lp   ++++c
+  tr|F1REJ4|F1REJ4_DANRE 259 NIHIFGLANVLHRPVILLDSLSGMRSSG-DYSATFLPGLIPEEQC 302
+                             *****************66655555444.3333344444444433 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1108 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       715  (0.0372804); expected 383.6 (0.02)
+Passed bias filter:                      528  (0.0275301); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.26s 00:00:00.85 Elapsed: 00:00:00.79
+# Mc/sec: 4520.23
+//
+[ok]

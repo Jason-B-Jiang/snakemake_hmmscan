@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035393.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035393
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QDD0|F1QDD0_DANRE  [L=422]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.4e-27   96.7   0.7    7.7e-27   94.4   0.1    2.2  1  TGF_beta         Transforming growth factor beta like domain
+    3.6e-07   30.2   0.3    6.1e-07   29.4   0.3    1.3  1  TGFb_propeptide  TGF-beta propeptide
+
+
+Domain annotation for each model (and alignments):
+>> TGF_beta  Transforming growth factor beta like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.4   0.1   8.1e-31   7.7e-27       2     102 .]     320     421 ..     319     421 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 94.4 bits;  conditional E-value: 8.1e-31
+                             SEEE--EEECCCH--.-SEEE-SEEE--EEES--...--CCCSSSSHHHHHHGGGCT.S.STSSS-EEEESSEEEEEEEEE.ETTEE CS
+                TGF_beta   2 CrrkelevsfedlgwddwiiaPkgyeakyCsGsCskeekaeksatnhallqslvkelkp.kkvpkpcCvPtklsslsvlyvdeennv 87 
+                             C r+ l+v+f d+gw++wi+aPk ++a+yC+G+C+    +  + +nha++qs+v+++     vp pcCvP k+ssl vl +d+++n+
+  tr|F1QDD0|F1QDD0_DANRE 320 CTRRYLRVDFADIGWSEWILAPKAFDAYYCAGTCAFPIPKVVHPSNHATIQSIVRAVGIvPGVPDPCCVPDKMSSLAVLFLDSSRNM 406
+                             **********************************7667777788*********999866458************************* PP
+
+                             EEEEEEEEEE-EEEE CS
+                TGF_beta  88 vlkkledmvvkeCgC 102
+                              lk +++m+v++C+C
+  tr|F1QDD0|F1QDD0_DANRE 407 LLKIYPSMSVETCAC 421
+                             *************** PP
+
+>> TGFb_propeptide  TGF-beta propeptide
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.3   6.3e-11   6.1e-07      48     188 ..      47     191 ..      31     213 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 6.3e-11
+         TGFb_propeptide  48 qfmldLYnslsaeeepllsaqderaldeadtvmsfvnkvendkel.rhekefkFnlseipegeavtaAeLRly............kd 121
+                               m  +Y++ s++++      +++ + + +t++sf    + ++el +h+  f+Fnl+++p+ e++++  L                 
+  tr|F1QDD0|F1QDD0_DANRE  47 VHMYRVYDKYSKKQQ------QHQQQLNVNTIRSF----RGVPELsHHKVVFHFNLTSVPDSEMILTSNLHYPdqqsrprswacqR- 122
+                             468888988887777......77777789******....35788868889********************9879999986665542. PP
+
+         TGFb_propeptide 122 rskekfknetlrisvYqvlkea......kgrdaslrlldsrlvt.aseegWlsfdvtaavnrWlknpeenlglq 188
+                                   ++++ r++  q   ++      + + a  + l++ ++  ++++ W++ dv++a+++  +n e    ++
+  tr|F1QDD0|F1QDD0_DANRE 123 -----SRRSSCRLQYLQTTTPRliikasSANAAVPTQLSNITLPpNRKTLWQTADVSSAMKQAHANAELLISIE 191
+                             .....4445555555554444444433377777789999999999999***********998666655444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (422 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       695  (0.0362376); expected 383.6 (0.02)
+Passed bias filter:                      516  (0.0269044); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.70
+# Mc/sec: 1948.11
+//
+[ok]

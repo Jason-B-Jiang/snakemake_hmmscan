@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029143.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029143
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54F38|H3V1_DICDI  [L=619]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-20   73.6   0.1      2e-20   73.6   0.1    5.3  1  Histone   Core histone H2A/H2B/H3/H4
+    4.7e-07   29.9   0.0    1.4e-06   28.4   0.0    1.8  1  CENP-T_C  Centromere kinetochore component CENP-T histone fol
+
+
+Domain annotation for each model (and alignments):
+>> Histone  Core histone H2A/H2B/H3/H4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.6   0.1   2.1e-24     2e-20      27     124 ..     508     608 ..     483     615 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 73.6 bits;  conditional E-value: 2.1e-24
+                           T...TS-SSSSB--TT--XTTHHHHHHHHHHHHXXSXSSXHHHHHHHHHHHH.TTSSSXEEXHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+               Histone  27 r...kasskskkkkkrryrpgtvalkeirkyqkstdlliqklpfaRvvreivksekedlrisaeavlalqealEallvelfeeAnllak 112
+                           r   +    + ++++r+ r++      ir+ + s d+ i++lp +R+vrei++ ++++lri+  a+la+q+ +Ea+l++l+e+++lla 
+  sp|Q54F38|H3V1_DICDI 508 RvqrTTTTPTTPTTPRKKRRRRLVASVIRRLRNSVDFMIPRLPLSRLVREIMCLFDDGLRITPGALLAIQTTTEAYLTRLMEDSGLLAS 596
+                           232344455556677777778888899************************************************************** PP
+
+                           HTTXSEEXHHHH CS
+               Histone 113 haKRvTitpkDi 124
+                           ha R+Ti + D+
+  sp|Q54F38|H3V1_DICDI 597 HAGRKTIRSVDM 608
+                           ********9998 PP
+
+>> CENP-T_C  Centromere kinetochore component CENP-T histone fold
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.4   0.0   1.5e-10   1.4e-06       8      73 ..     546     611 ..     539     617 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.4 bits;  conditional E-value: 1.5e-10
+              CENP-T_C   8 lPaavvkklakrfakasgskaklskealealekasdeffeqvgeDLeayakHagRKtidesDvilL 73 
+                           +P   +++l+++++       ++++ al a++++++ ++ ++ eD   +a+HagRKti + D+ + 
+  sp|Q54F38|H3V1_DICDI 546 IPRLPLSRLVREIMCLFDDGLRITPGALLAIQTTTEAYLTRLMEDSGLLASHAGRKTIRSVDMYAW 611
+                           677778899999988888999*****************************************9864 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (619 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2674  (0.139423); expected 383.6 (0.02)
+Passed bias filter:                      874  (0.0455707); expected 383.6 (0.02)
+Passed Vit filter:                       528  (0.0275301); expected 19.2 (0.001)
+Passed Fwd filter:                       232  (0.0120966); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 2.64u 0.45s 00:00:03.09 Elapsed: 00:00:02.38
+# Mc/sec: 847.38
+//
+[ok]

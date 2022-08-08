@@ -1,0 +1,2998 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0001123.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0001123
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q11122|KCNL3_CAEEL  [L=692]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.6e-37  128.2   0.6    4.7e-37  126.7   0.6    1.8  1  SK_channel   Calcium-activated SK potassium channel
+    5.7e-24   83.9   1.1    1.3e-23   82.8   1.1    1.7  1  CaMBD        Calmodulin binding domain
+      6e-11   42.2   8.7    8.8e-11   41.7   7.2    2.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.7   0.6   7.3e-41   4.7e-37       3     116 ..     254     369 ..     252     371 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 126.7 bits;  conditional E-value: 7.3e-41
+             SK_channel   3 kerkellekrrrltdfalvlalfGivlmvietEltalkv..vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                            + r e l++r r+td +l+lalfG++lm++e+E+ta k+  vsk++++s+ l+v +++sT++LL++i+lyh+++i l lvd+ga+dwr
+  sp|Q11122|KCNL3_CAEEL 254 RVRSERLTNRVRITDRSLYLALFGVILMLVESEITAEKFygVSKTHWISQSLRVGVTCSTIALLYHIILYHLNDIVLELVDCGADDWR 341
+                            679999********************************999*********************************************** PP
+
+             SK_channel  89 valtserilkillEllvcaihPiPgeie 116
+                            v++t+er++++++E+++c i+P+Pg+ e
+  sp|Q11122|KCNL3_CAEEL 342 VVVTTERVIQFCIEFICCGICPLPGSGE 369
+                            ************************9876 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.8   1.1   2.1e-27   1.3e-23       1      66 [.     559     623 ..     559     630 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 82.8 bits;  conditional E-value: 2.1e-27
+                  CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqan 66 
+                            d++l++e+k+aAA+VL++tW+i+k+ + ++++ ++r+r++qrk+L+AIh++r+vk+++r+++++ +
+  sp|Q11122|KCNL3_CAEEL 559 DSKLAREHKEAAARVLQHTWHIHKCLQ-GSDGGNRRLRTYQRKFLKAIHKFRSVKSEMREFSENNS 623
+                            89************************7.8*********************************9654 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.7   7.2   1.4e-14   8.8e-11       2      75 ..     463     542 ..     459     545 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 41.7 bits;  conditional E-value: 1.4e-14
+                            HHHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   2 vlllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlge 75 
+                            ++++++i ++ f+ +      +++ ++  ++++l+F  +t+   GYGdivp+t+agr+++i+++++G ++ +++++v+++
+  sp|Q11122|KCNL3_CAEEL 463 TFIFWIIMSWMFVQCerygfsGKNPQSILYSNSLWFIAITFMLNGYGDIVPQTNAGRFIAIFVGVVGAVISSILIAVISR 542
+                            578999999999999****9967778889**********************************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (692 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1021  (0.0532353); expected 383.6 (0.02)
+Passed bias filter:                      560  (0.0291986); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.18s 00:00:00.63 Elapsed: 00:00:00.83
+# Mc/sec: 2714.57
+//
+Query:       tr|G5EDA9|G5EDA9_CAEEL  [L=635]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.8e-38  129.4   1.8    6.8e-38  129.4   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.1e-30  103.3   1.4    9.4e-30  102.5   1.4    1.5  1  CaMBD        Calmodulin binding domain
+      2e-15   56.6   1.2      2e-15   56.6   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.4   1.8   1.1e-41   6.8e-38       1     115 [.     210     324 ..     210     327 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.4 bits;  conditional E-value: 1.1e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5EDA9|G5EDA9_CAEEL 210 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 296
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5EDA9|G5EDA9_CAEEL 297 MVALSFRRTCQIGLELLICMLCPLPIEF 324
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.5   1.4   1.5e-33   9.4e-30       1      74 [.     501     574 ..     501     575 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.5 bits;  conditional E-value: 1.5e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5EDA9|G5EDA9_CAEEL 501 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 574
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   1.2   3.1e-19     2e-15       3      77 ..     406     486 ..     404     487 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 3.1e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5EDA9|G5EDA9_CAEEL 406 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 486
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (635 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       848  (0.044215); expected 383.6 (0.02)
+Passed bias filter:                      483  (0.0251838); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.16s 00:00:00.60 Elapsed: 00:00:00.87
+# Mc/sec: 2365.82
+//
+Query:       tr|K7STE9|K7STE9_CAEEL  [L=652]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.1e-38  129.4   1.8    7.1e-38  129.4   1.8    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    5.3e-30  103.3   1.4    9.8e-30  102.4   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.1e-15   56.5   1.2    2.1e-15   56.5   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.4   1.8   1.1e-41   7.1e-38       1     115 [.     210     324 ..     210     327 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.4 bits;  conditional E-value: 1.1e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|K7STE9|K7STE9_CAEEL 210 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 296
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|K7STE9|K7STE9_CAEEL 297 MVALSFRRTCQIGLELLICMLCPLPIEF 324
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   1.4   1.5e-33   9.8e-30       1      74 [.     501     574 ..     501     575 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 1.5e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|K7STE9|K7STE9_CAEEL 501 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 574
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   1.2   3.2e-19   2.1e-15       3      77 ..     406     486 ..     404     487 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.2e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|K7STE9|K7STE9_CAEEL 406 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 486
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (652 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       909  (0.0473956); expected 383.6 (0.02)
+Passed bias filter:                      557  (0.0290422); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.69
+# Mc/sec: 3039.84
+//
+Query:       tr|O17697|O17697_CAEEL  [L=485]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-33  115.9   1.5    2.9e-33  114.5   1.5    1.8  1  SK_channel   Calcium-activated SK potassium channel
+    2.6e-23   81.8   5.3    2.6e-23   81.8   5.3    1.9  1  CaMBD        Calmodulin binding domain
+    8.2e-09   35.4   6.3    8.2e-09   35.4   6.3    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.5   1.5   4.6e-37   2.9e-33       1     114 [.      65     181 ..      65     185 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 114.5 bits;  conditional E-value: 4.6e-37
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r+k r++l + + +l+d++l+la+ G++l+++++E+ta+++   + ++s +s++l+++ +++T++LL+++++yh+++i+++lv++g+
+  tr|O17697|O17697_CAEEL  65 RWKIRRRLSDLKVKLCDATLILAVGGLILAMLDVEFTATRIlesFVNTSDLSFILRTAAIITTIALLFFLLFYHFIDIKIQLVETGT 151
+                             6789************************************9999999**************************************** PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             ++wrv +tser+l++llE+++cai+PiP++
+  tr|O17697|O17697_CAEEL 152 SNWRVGITSERVLNTLLEVAICAICPIPET 181
+                             ****************************86 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.8   5.3   4.1e-27   2.6e-23       1      74 [.     363     440 ..     363     441 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 81.8 bits;  conditional E-value: 4.1e-27
+                   CaMBD   1 dtqltkelknaAAnVLretW.liykhtkl...vkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             ++++t+e+knaAA+VL++tW ++++++++   +++r+q+r++k+qr+lL++++++rk+++k r++++++++++++++a
+  tr|O17697|O17697_CAEEL 363 ENNITNEHKNAAACVLQNTWrTVLRARDYqksSSRRNQQRLAKMQRMLLCSVITFRKTRWKLRMQMEDEDDFFTARRA 440
+                             689************************9988899****************************************9986 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.4   6.3   1.3e-12   8.2e-09      16      77 ..     273     348 ..     261     349 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 35.4 bits;  conditional E-value: 1.3e-12
+                             C....................T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2  16 l................eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             +                   +  + f d l+F ++t++++GYGd+  +t +gr ++++++++G+++ +++++++++ l
+  tr|O17697|O17697_CAEEL 273 CvvswmltqceryaypsI--SGFQHFADYLWFEIITFFSIGYGDVQVNTYCGRGLAMLTAIVGTLFSSTLIALISRKL 348
+                             333333444455554432..33459**********************************************9998865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (485 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1213  (0.0632463); expected 383.6 (0.02)
+Passed bias filter:                      541  (0.0282079); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.56
+# Mc/sec: 2780.71
+//
+Query:       tr|G5EEZ9|G5EEZ9_CAEEL  [L=611]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.5e-40  135.7   1.2    7.5e-40  135.7   1.2    1.8  1  SK_channel   Calcium-activated SK potassium channel
+    2.3e-29  101.2   3.6    4.9e-29  100.2   3.6    1.6  1  CaMBD        Calmodulin binding domain
+      4e-12   46.0   4.2      4e-12   46.0   4.2    2.0  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.7   1.2   1.2e-43   7.5e-40       1     114 [.      81     197 ..      81     200 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.7 bits;  conditional E-value: 1.2e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|G5EEZ9|G5EEZ9_CAEEL  81 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 167
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|G5EEZ9|G5EEZ9_CAEEL 168 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 197
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.2   3.6   7.7e-33   4.9e-29       1      74 [.     380     453 ..     380     454 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 100.2 bits;  conditional E-value: 7.7e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|G5EEZ9|G5EEZ9_CAEEL 380 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 453
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.0   4.2   6.3e-16     4e-12       3      77 ..     287     365 ..     281     366 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 46.0 bits;  conditional E-value: 6.3e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|G5EEZ9|G5EEZ9_CAEEL 287 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 365
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (611 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       873  (0.0455185); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.82
+# Mc/sec: 2407.01
+//
+Query:       tr|G5ECI3|G5ECI3_CAEEL  [L=669]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.4e-38  129.3   1.8    7.4e-38  129.3   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.5e-30  103.2   1.4      1e-29  102.4   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.1e-15   56.5   1.2    2.1e-15   56.5   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.3   1.8   1.2e-41   7.4e-38       1     115 [.     244     358 ..     244     361 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.3 bits;  conditional E-value: 1.2e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5ECI3|G5ECI3_CAEEL 244 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 330
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5ECI3|G5ECI3_CAEEL 331 MVALSFRRTCQIGLELLICMLCPLPIEF 358
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   1.4   1.6e-33     1e-29       1      74 [.     535     608 ..     535     609 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 1.6e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5ECI3|G5ECI3_CAEEL 535 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 608
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   1.2   3.4e-19   2.1e-15       3      77 ..     440     520 ..     438     521 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.4e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5ECI3|G5ECI3_CAEEL 440 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 520
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (669 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       890  (0.0464049); expected 383.6 (0.02)
+Passed bias filter:                      513  (0.026748); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.60
+# Mc/sec: 3608.29
+//
+Query:       tr|G5EEU0|G5EEU0_CAEEL  [L=628]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.7e-38  129.4   1.8    6.7e-38  129.4   1.8    2.5  1  SK_channel   Calcium-activated SK potassium channel
+      5e-30  103.3   1.4    9.3e-30  102.5   1.4    1.5  1  CaMBD        Calmodulin binding domain
+      2e-15   56.6   1.2      2e-15   56.6   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.4   1.8     1e-41   6.7e-38       1     115 [.     203     317 ..     203     320 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.4 bits;  conditional E-value: 1e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5EEU0|G5EEU0_CAEEL 203 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 289
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5EEU0|G5EEU0_CAEEL 290 MVALSFRRTCQIGLELLICMLCPLPIEF 317
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.5   1.4   1.5e-33   9.3e-30       1      74 [.     494     567 ..     494     568 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.5 bits;  conditional E-value: 1.5e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5EEU0|G5EEU0_CAEEL 494 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 567
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   1.2   3.1e-19     2e-15       3      77 ..     399     479 ..     397     480 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 3.1e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5EEU0|G5EEU0_CAEEL 399 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 479
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (628 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       819  (0.042703); expected 383.6 (0.02)
+Passed bias filter:                      465  (0.0242453); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.14s 00:00:00.56 Elapsed: 00:00:00.68
+# Mc/sec: 3001.11
+//
+Query:       tr|V6CLK4|V6CLK4_CAEEL  [L=855]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-37  128.8   1.8    1.1e-37  128.8   1.8    2.1  1  SK_channel   Calcium-activated SK potassium channel
+    7.4e-30  102.8   1.4    1.4e-29  101.9   1.4    1.5  1  CaMBD        Calmodulin binding domain
+      3e-15   56.0   1.2      3e-15   56.0   1.2    2.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  128.8   1.8   1.7e-41   1.1e-37       1     115 [.     413     527 ..     413     530 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 128.8 bits;  conditional E-value: 1.7e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|V6CLK4|V6CLK4_CAEEL 413 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 499
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|V6CLK4|V6CLK4_CAEEL 500 MVALSFRRTCQIGLELLICMLCPLPIEF 527
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.9   1.4   2.2e-33   1.4e-29       1      74 [.     704     777 ..     704     778 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 101.9 bits;  conditional E-value: 2.2e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|V6CLK4|V6CLK4_CAEEL 704 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 777
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.0   1.2   4.7e-19     3e-15       3      77 ..     609     689 ..     607     690 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.0 bits;  conditional E-value: 4.7e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|V6CLK4|V6CLK4_CAEEL 609 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 689
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (855 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       969  (0.050524); expected 383.6 (0.02)
+Passed bias filter:                      580  (0.0302414); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.51u 0.12s 00:00:00.63 Elapsed: 00:00:00.72
+# Mc/sec: 3819.68
+//
+Query:       tr|G5EER9|G5EER9_CAEEL  [L=680]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.9e-40  135.5   1.2    8.9e-40  135.5   1.2    1.8  1  SK_channel   Calcium-activated SK potassium channel
+    2.7e-29  101.0   3.6    5.7e-29  100.0   3.6    1.6  1  CaMBD        Calmodulin binding domain
+    4.7e-12   45.8   4.2    4.7e-12   45.8   4.2    2.0  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.5   1.2   1.4e-43   8.9e-40       1     114 [.     150     266 ..     150     269 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.5 bits;  conditional E-value: 1.4e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|G5EER9|G5EER9_CAEEL 150 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 236
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|G5EER9|G5EER9_CAEEL 237 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 266
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.0   3.6   8.9e-33   5.7e-29       1      74 [.     449     522 ..     449     523 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 100.0 bits;  conditional E-value: 8.9e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|G5EER9|G5EER9_CAEEL 449 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 522
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.8   4.2   7.3e-16   4.7e-12       3      77 ..     356     434 ..     350     435 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 45.8 bits;  conditional E-value: 7.3e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|G5EER9|G5EER9_CAEEL 356 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 434
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (680 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       971  (0.0506283); expected 383.6 (0.02)
+Passed bias filter:                      567  (0.0295636); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.67
+# Mc/sec: 3286.35
+//
+Query:       tr|G5EDG3|G5EDG3_CAEEL  [L=745]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      1e-39  135.3   1.2      1e-39  135.3   1.2    1.7  1  SK_channel   Calcium-activated SK potassium channel
+    3.2e-29  100.8   3.6    6.5e-29   99.8   3.6    1.5  1  CaMBD        Calmodulin binding domain
+    5.3e-12   45.6   4.2    5.3e-12   45.6   4.2    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.3   1.2   1.6e-43     1e-39       1     114 [.     215     331 ..     215     334 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.3 bits;  conditional E-value: 1.6e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|G5EDG3|G5EDG3_CAEEL 215 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 301
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|G5EDG3|G5EDG3_CAEEL 302 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 331
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.8   3.6     1e-32   6.5e-29       1      74 [.     514     587 ..     514     588 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 99.8 bits;  conditional E-value: 1e-32
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|G5EDG3|G5EDG3_CAEEL 514 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 587
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.6   4.2   8.3e-16   5.3e-12       3      77 ..     421     499 ..     415     500 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 45.6 bits;  conditional E-value: 8.3e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|G5EDG3|G5EDG3_CAEEL 421 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 499
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (745 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       736  (0.0383753); expected 383.6 (0.02)
+Passed bias filter:                      442  (0.023046); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.17s 00:00:00.62 Elapsed: 00:00:00.87
+# Mc/sec: 2782.12
+//
+Query:       tr|Q8I4D2|Q8I4D2_CAEEL  [L=555]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.4e-40  136.0   1.2    6.4e-40  136.0   1.2    1.8  1  SK_channel   Calcium-activated SK potassium channel
+      2e-29  101.4   3.6    4.3e-29  100.4   3.6    1.6  1  CaMBD        Calmodulin binding domain
+    3.5e-12   46.2   4.2    3.5e-12   46.2   4.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.0   1.2     1e-43   6.4e-40       1     114 [.      25     141 ..      25     144 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 136.0 bits;  conditional E-value: 1e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|Q8I4D2|Q8I4D2_CAEEL  25 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 111
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|Q8I4D2|Q8I4D2_CAEEL 112 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 141
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.4   3.6   6.7e-33   4.3e-29       1      74 [.     324     397 ..     324     398 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 100.4 bits;  conditional E-value: 6.7e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|Q8I4D2|Q8I4D2_CAEEL 324 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 397
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.2   4.2   5.5e-16   3.5e-12       3      77 ..     231     309 ..     225     310 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 46.2 bits;  conditional E-value: 5.5e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|Q8I4D2|Q8I4D2_CAEEL 231 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 309
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (555 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       762  (0.039731); expected 383.6 (0.02)
+Passed bias filter:                      396  (0.0206476); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.70
+# Mc/sec: 2553.41
+//
+Query:       tr|Q8I4G5|Q8I4G5_CAEEL  [L=655]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.2e-38  129.3   1.8    7.2e-38  129.3   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.3e-30  103.3   1.4    9.9e-30  102.4   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.1e-15   56.5   1.2    2.1e-15   56.5   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.3   1.8   1.1e-41   7.2e-38       1     115 [.     230     344 ..     230     347 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.3 bits;  conditional E-value: 1.1e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|Q8I4G5|Q8I4G5_CAEEL 230 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 316
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|Q8I4G5|Q8I4G5_CAEEL 317 MVALSFRRTCQIGLELLICMLCPLPIEF 344
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   1.4   1.5e-33   9.9e-30       1      74 [.     521     594 ..     521     595 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 1.5e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|Q8I4G5|Q8I4G5_CAEEL 521 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 594
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   1.2   3.3e-19   2.1e-15       3      77 ..     426     506 ..     424     507 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.3e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|Q8I4G5|Q8I4G5_CAEEL 426 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 506
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (655 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       929  (0.0484384); expected 383.6 (0.02)
+Passed bias filter:                      562  (0.0293029); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.49u 0.15s 00:00:00.64 Elapsed: 00:00:00.75
+# Mc/sec: 2816.24
+//
+Query:       tr|G5EGU5|G5EGU5_CAEEL  [L=635]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.8e-38  129.4   1.8    6.8e-38  129.4   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.1e-30  103.3   1.4    9.4e-30  102.5   1.4    1.5  1  CaMBD        Calmodulin binding domain
+      2e-15   56.6   1.2      2e-15   56.6   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.4   1.8   1.1e-41   6.8e-38       1     115 [.     210     324 ..     210     327 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.4 bits;  conditional E-value: 1.1e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5EGU5|G5EGU5_CAEEL 210 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 296
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5EGU5|G5EGU5_CAEEL 297 MVALSFRRTCQIGLELLICMLCPLPIEF 324
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.5   1.4   1.5e-33   9.4e-30       1      74 [.     501     574 ..     501     575 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.5 bits;  conditional E-value: 1.5e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5EGU5|G5EGU5_CAEEL 501 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 574
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   1.2   3.1e-19     2e-15       3      77 ..     406     486 ..     404     487 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 3.1e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5EGU5|G5EGU5_CAEEL 406 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 486
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (635 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       835  (0.0435372); expected 383.6 (0.02)
+Passed bias filter:                      469  (0.0244538); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.74
+# Mc/sec: 2789.69
+//
+Query:       tr|D5MCU0|D5MCU0_CAEEL  [L=430]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      8e-34  116.3   1.5    2.3e-33  114.8   1.5    1.8  1  SK_channel   Calcium-activated SK potassium channel
+    2.2e-23   82.1   5.3    2.2e-23   82.1   5.3    1.9  1  CaMBD        Calmodulin binding domain
+    6.8e-09   35.7   6.3    6.8e-09   35.7   6.3    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.8   1.5   3.7e-37   2.3e-33       1     114 [.      10     126 ..      10     130 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 114.8 bits;  conditional E-value: 3.7e-37
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r+k r++l + + +l+d++l+la+ G++l+++++E+ta+++   + ++s +s++l+++ +++T++LL+++++yh+++i+++lv++g+
+  tr|D5MCU0|D5MCU0_CAEEL  10 RWKIRRRLSDLKVKLCDATLILAVGGLILAMLDVEFTATRIlesFVNTSDLSFILRTAAIITTIALLFFLLFYHFIDIKIQLVETGT 96 
+                             6789************************************9999999**************************************** PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             ++wrv +tser+l++llE+++cai+PiP++
+  tr|D5MCU0|D5MCU0_CAEEL  97 SNWRVGITSERVLNTLLEVAICAICPIPET 126
+                             ****************************86 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.1   5.3   3.4e-27   2.2e-23       1      74 [.     308     385 ..     308     386 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 82.1 bits;  conditional E-value: 3.4e-27
+                   CaMBD   1 dtqltkelknaAAnVLretW.liykhtkl...vkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             ++++t+e+knaAA+VL++tW ++++++++   +++r+q+r++k+qr+lL++++++rk+++k r++++++++++++++a
+  tr|D5MCU0|D5MCU0_CAEEL 308 ENNITNEHKNAAACVLQNTWrTVLRARDYqksSSRRNQQRLAKMQRMLLCSVITFRKTRWKLRMQMEDEDDFFTARRA 385
+                             689************************9988899****************************************9986 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.7   6.3   1.1e-12   6.8e-09      16      77 ..     218     293 ..     206     294 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 35.7 bits;  conditional E-value: 1.1e-12
+                             C....................T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2  16 l................eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             +                   +  + f d l+F ++t++++GYGd+  +t +gr ++++++++G+++ +++++++++ l
+  tr|D5MCU0|D5MCU0_CAEEL 218 CvvswmltqceryaypsI--SGFQHFADYLWFEIITFFSIGYGDVQVNTYCGRGLAMLTAIVGTLFSSTLIALISRKL 293
+                             333333444455554432..33459**********************************************9998865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (430 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1057  (0.0551124); expected 383.6 (0.02)
+Passed bias filter:                      436  (0.0227332); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.60
+# Mc/sec: 2298.39
+//
+Query:       tr|G5ECM0|G5ECM0_CAEEL  [L=739]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.6e-38  129.1   1.8    8.6e-38  129.1   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.8e-30  103.2   1.4    1.2e-29  102.2   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.5e-15   56.3   1.2    2.5e-15   56.3   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.1   1.8   1.3e-41   8.6e-38       1     115 [.     314     428 ..     314     431 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.1 bits;  conditional E-value: 1.3e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5ECM0|G5ECM0_CAEEL 314 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 400
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5ECM0|G5ECM0_CAEEL 401 MVALSFRRTCQIGLELLICMLCPLPIEF 428
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.2   1.4   1.8e-33   1.2e-29       1      74 [.     605     678 ..     605     679 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.2 bits;  conditional E-value: 1.8e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5ECM0|G5ECM0_CAEEL 605 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 678
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.3   1.2   3.9e-19   2.5e-15       3      77 ..     510     590 ..     508     591 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.3 bits;  conditional E-value: 3.9e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5ECM0|G5ECM0_CAEEL 510 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 590
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (739 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       675  (0.0351947); expected 383.6 (0.02)
+Passed bias filter:                      405  (0.0211168); expected 383.6 (0.02)
+Passed Vit filter:                        42  (0.0021899); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.15s 00:00:00.57 Elapsed: 00:00:00.65
+# Mc/sec: 3681.81
+//
+Query:       tr|G5EFI1|G5EFI1_CAEEL  [L=792]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-39  135.2   1.2    1.1e-39  135.2   1.2    1.7  1  SK_channel   Calcium-activated SK potassium channel
+    3.5e-29  100.7   3.6      7e-29   99.7   3.6    1.5  1  CaMBD        Calmodulin binding domain
+    5.7e-12   45.5   4.2    5.7e-12   45.5   4.2    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.2   1.2   1.8e-43   1.1e-39       1     114 [.     262     378 ..     262     381 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.2 bits;  conditional E-value: 1.8e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|G5EFI1|G5EFI1_CAEEL 262 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 348
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|G5EFI1|G5EFI1_CAEEL 349 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 378
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.7   3.6   1.1e-32     7e-29       1      74 [.     561     634 ..     561     635 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 99.7 bits;  conditional E-value: 1.1e-32
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|G5EFI1|G5EFI1_CAEEL 561 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 634
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.5   4.2     9e-16   5.7e-12       3      77 ..     468     546 ..     462     547 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 45.5 bits;  conditional E-value: 9e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|G5EFI1|G5EFI1_CAEEL 468 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 546
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (792 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       801  (0.0417644); expected 383.6 (0.02)
+Passed bias filter:                      479  (0.0249752); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.49u 0.16s 00:00:00.65 Elapsed: 00:00:00.74
+# Mc/sec: 3442.67
+//
+Query:       tr|Q8I4G4|Q8I4G4_CAEEL  [L=672]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.5e-38  129.3   1.8    7.5e-38  129.3   1.8    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    5.5e-30  103.2   1.4      1e-29  102.4   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.2e-15   56.5   1.2    2.2e-15   56.5   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.3   1.8   1.2e-41   7.5e-38       1     115 [.     230     344 ..     230     347 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.3 bits;  conditional E-value: 1.2e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|Q8I4G4|Q8I4G4_CAEEL 230 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 316
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|Q8I4G4|Q8I4G4_CAEEL 317 MVALSFRRTCQIGLELLICMLCPLPIEF 344
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   1.4   1.6e-33     1e-29       1      74 [.     521     594 ..     521     595 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 1.6e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|Q8I4G4|Q8I4G4_CAEEL 521 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 594
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   1.2   3.4e-19   2.2e-15       3      77 ..     426     506 ..     424     507 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.4e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|Q8I4G4|Q8I4G4_CAEEL 426 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 506
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (672 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1006  (0.0524532); expected 383.6 (0.02)
+Passed bias filter:                      651  (0.0339434); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.19s 00:00:00.65 Elapsed: 00:00:00.66
+# Mc/sec: 3286.97
+//
+Query:       tr|G5ED53|G5ED53_CAEEL  [L=695]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    9.2e-40  135.4   1.2    9.2e-40  135.4   1.2    1.7  1  SK_channel   Calcium-activated SK potassium channel
+    2.8e-29  101.0   3.6    5.9e-29   99.9   3.6    1.6  1  CaMBD        Calmodulin binding domain
+    4.8e-12   45.7   4.2    4.8e-12   45.7   4.2    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.4   1.2   1.4e-43   9.2e-40       1     114 [.     165     281 ..     165     284 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 135.4 bits;  conditional E-value: 1.4e-43
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkv...vsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdnga 84 
+                             r++ rk+l+ +r++++d++l+la++G++l++i++Eltal+    ++k+s +s++l++++++sT++L+++++ yha+e++++l+d+ga
+  tr|G5ED53|G5ED53_CAEEL 165 RCRLRKQLFIRRNKVCDISLFLAVLGLLLVIIDSELTALSSstgITKDSPISIILRSACVVSTFFLICCLINYHAIEVKIALIDSGA 251
+                             5788**********************************988899******************************************* PP
+
+              SK_channel  85 edwrvaltserilkillEllvcaihPiPge 114
+                             +dwrva++++r++k+l+E++vc+i+P+P+ 
+  tr|G5ED53|G5ED53_CAEEL 252 DDWRVAFSTDRFIKMLIEVCVCMICPFPEI 281
+                             ****************************85 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.9   3.6   9.2e-33   5.9e-29       1      74 [.     464     537 ..     464     538 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 99.9 bits;  conditional E-value: 9.2e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             d++lt++ knaAA+VL+etW+i+k++k+++k+d+ r+r+hqr++L++I+e+r++k++qrkl+++ n+l d+ k 
+  tr|G5ED53|G5ED53_CAEEL 464 DSKLTNQRKNAAASVLQETWFIHKYKKALHKGDDLRLRHHQRRFLHSINEFRRIKWDQRKLQEKGNSLLDVGKL 537
+                             89*********************************************************************996 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.7   4.2   7.5e-16   4.8e-12       3      77 ..     371     449 ..     365     450 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 45.7 bits;  conditional E-value: 7.5e-16
+                             HHHTCHHHHHHHHC..........T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             l  +++ ++ f  +          e +  +l++++F +vt+ ++GYGdivp+t +gr ++i ++++G ++ +a+++++++ l
+  tr|G5ED53|G5ED53_CAEEL 371 LSYWMCMSWMFTQCerydgqL---EvEHYYLNSMWFIMVTFMSIGYGDIVPNTYCGRCLSITTGIVGAGVSSALIAIISRKL 449
+                             445566666666668875431...335679**********************************************999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (695 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       671  (0.0349862); expected 383.6 (0.02)
+Passed bias filter:                      403  (0.0210126); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.45u 0.17s 00:00:00.62 Elapsed: 00:00:00.65
+# Mc/sec: 3455.50
+//
+Query:       tr|G5EBM2|G5EBM2_CAEEL  [L=668]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.4e-38  129.3   1.8    7.4e-38  129.3   1.8    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    5.5e-30  103.2   1.4      1e-29  102.4   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.1e-15   56.5   1.2    2.1e-15   56.5   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.3   1.8   1.2e-41   7.4e-38       1     115 [.     243     357 ..     243     360 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.3 bits;  conditional E-value: 1.2e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|G5EBM2|G5EBM2_CAEEL 243 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 329
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|G5EBM2|G5EBM2_CAEEL 330 MVALSFRRTCQIGLELLICMLCPLPIEF 357
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   1.4   1.6e-33     1e-29       1      74 [.     534     607 ..     534     608 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 1.6e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|G5EBM2|G5EBM2_CAEEL 534 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 607
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   1.2   3.4e-19   2.1e-15       3      77 ..     439     519 ..     437     520 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.4e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|G5EBM2|G5EBM2_CAEEL 439 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 519
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (668 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       907  (0.0472913); expected 383.6 (0.02)
+Passed bias filter:                      525  (0.0273737); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.47u 0.17s 00:00:00.64 Elapsed: 00:00:00.72
+# Mc/sec: 3005.80
+//
+Query:       tr|V6CLJ1|V6CLJ1_CAEEL  [L=714]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.2e-38  129.2   1.8    8.2e-38  129.2   1.8    2.1  1  SK_channel   Calcium-activated SK potassium channel
+    5.9e-30  103.1   1.4    1.1e-29  102.2   1.4    1.5  1  CaMBD        Calmodulin binding domain
+    2.4e-15   56.3   1.2    2.4e-15   56.3   1.2    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.2   1.8   1.3e-41   8.2e-38       1     115 [.     272     386 ..     272     389 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.2 bits;  conditional E-value: 1.3e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +r+ l+ekrr+++d al++a++Gi+lm+ie+El+++ v++++s +s++lk  i+++T++LL ++ ++h++eiqlf+  n+a+dw
+  tr|V6CLJ1|V6CLJ1_CAEEL 272 RLIRREILHEKRRHVSDRALAFAIMGIILMIIENELRTAYVIRPGSSLSHLLKFFIIFTTTALLSFVGYFHVIEIQLFMNANAADDW 358
+                             577899999****************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgei 115
+                             +val+++r ++i lEll+c+++P+P+e+
+  tr|V6CLJ1|V6CLJ1_CAEEL 359 MVALSFRRTCQIGLELLICMLCPLPIEF 386
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.2   1.4   1.7e-33   1.1e-29       1      74 [.     563     636 ..     563     637 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.2 bits;  conditional E-value: 1.7e-33
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlska 74 
+                             dtqltk+lk++AAnVLretW+i+k++klv+k d  ++rkhqrk+L AI+e+r+v+ +qrkl+++  +l d++k+
+  tr|V6CLJ1|V6CLJ1_CAEEL 563 DTQLTKQLKHSAANVLRETWFIFKFRKLVEKPDFGKIRKHQRKFLLAIYEMRRVRRDQRKLAENLVSLGDVAKT 636
+                             89**********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.3   1.2   3.7e-19   2.4e-15       3      77 ..     468     548 ..     466     549 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 56.3 bits;  conditional E-value: 3.7e-19
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++l++i+g+++ ++       + + + +++++++ + +t+++vGYGdivp+t++gr ++iv+++lG++  ++v++v+++ l
+  tr|V6CLJ1|V6CLJ1_CAEEL 468 AFLWIIAGWILRLCereymtPDKYNDINYVNSIWLVAITFLSVGYGDIVPKTNCGRSMAIVTGILGTCASSMVVAVIARKL 548
+                             689***************975557788**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (714 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       690  (0.0359768); expected 383.6 (0.02)
+Passed bias filter:                      436  (0.0227332); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.16s 00:00:00.60 Elapsed: 00:00:00.66
+# Mc/sec: 3476.19
+//
+Query:       tr|Q55CX3|Q55CX3_DICDI  [L=466]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (466 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3753  (0.195683); expected 383.6 (0.02)
+Passed bias filter:                      602  (0.0313885); expected 383.6 (0.02)
+Passed Vit filter:                        67  (0.0034934); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.48u 0.18s 00:00:00.65 Elapsed: 00:00:00.69
+# Mc/sec: 2173.25
+//
+Query:       sp|Q7KVW5|KCNN_DROME  [L=927]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.2e-49  164.6   0.3    8.2e-49  164.6   0.3    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    3.2e-35  120.0   5.4    9.8e-35  118.4   5.4    1.9  1  CaMBD        Calmodulin binding domain
+    1.1e-12   47.8   1.3    3.1e-12   46.3   1.3    1.7  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.6   0.3   1.3e-52   8.2e-49       1     116 [.     471     586 ..     471     588 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 164.6 bits;  conditional E-value: 1.3e-52
+            SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwrv 89 
+                           rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+qlf++dn+a+dwr+
+  sp|Q7KVW5|KCNN_DROME 471 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQLFMIDNCADDWRI 559
+                           6899************************************************************************************* PP
+
+            SK_channel  90 altserilkillEllvcaihPiPgeie 116
+                           a+t++ri +i lEl++caihPiPge+ 
+  sp|Q7KVW5|KCNN_DROME 560 AMTWQRISQIGLELFICAIHPIPGEYY 586
+                           ************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.4   5.4   1.5e-38   9.8e-35       1      75 []     763     837 ..     763     837 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.4 bits;  conditional E-value: 1.5e-38
+                 CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                           dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  sp|Q7KVW5|KCNN_DROME 763 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 837
+                           89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.3   1.3   4.9e-16   3.1e-12       2      77 ..     671     748 ..     659     749 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.3 bits;  conditional E-value: 4.9e-16
+                           HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+           Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                           ++ l++i+++++  +     e   e  ++l++++ + +t++ vGYGdivp+t +gr +t+  +++G +++a++++v+++ l
+  sp|Q7KVW5|KCNN_DROME 671 MVSLWIIASWTLRQCerfhdE---EHANLLNSMWLTAITFLCVGYGDIVPNTYCGRGITLTCGMVGAGCTALLVAVVSRKL 748
+                           678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (927 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2359  (0.122999); expected 383.6 (0.02)
+Passed bias filter:                      722  (0.0376453); expected 383.6 (0.02)
+Passed Vit filter:                       103  (0.00537046); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.60u 0.13s 00:00:00.73 Elapsed: 00:00:00.90
+# Mc/sec: 3336.60
+//
+Query:       tr|M9PH41|M9PH41_DROME  [L=928]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.3e-47  158.3   2.6    1.1e-46  157.8   0.4    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    2.8e-35  120.2   5.4    9.8e-35  118.4   5.4    2.0  1  CaMBD        Calmodulin binding domain
+    2.7e-13   49.8   1.1    8.1e-13   48.2   1.1    1.8  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.8   0.4   1.7e-50   1.1e-46       1     116 [.     468     585 ..     468     587 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 157.8 bits;  conditional E-value: 1.7e-50
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiq..lflvdngae 85 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+q  lf++dn+a+
+  tr|M9PH41|M9PH41_DROME 468 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQvrLFMIDNCAD 554
+                             6899*********************************************************************9873369******* PP
+
+              SK_channel  86 dwrvaltserilkillEllvcaihPiPgeie 116
+                             dwr+a+t++ri +i lEl++caihPiPge+ 
+  tr|M9PH41|M9PH41_DROME 555 DWRIAMTWQRISQIGLELFICAIHPIPGEYY 585
+                             ****************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.4   5.4   1.5e-38   9.8e-35       1      75 []     762     836 ..     762     836 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.4 bits;  conditional E-value: 1.5e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|M9PH41|M9PH41_DROME 762 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 836
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.2   1.1   1.3e-16   8.1e-13       2      77 ..     670     747 ..     658     748 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 48.2 bits;  conditional E-value: 1.3e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l+a++   +t+++vG+Gdivp+t +gr +++ ++++G +++a++++v+++ l
+  tr|M9PH41|M9PH41_DROME 670 MVSLWIIASWTLRQCerfhdE---EHANLLNAMWLIAITFLSVGFGDIVPNTYCGRGIAVSTGIMGAGCTALLVAVVSRKL 747
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (928 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2367  (0.123416); expected 383.6 (0.02)
+Passed bias filter:                      713  (0.0371761); expected 383.6 (0.02)
+Passed Vit filter:                       102  (0.00531832); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.60u 0.15s 00:00:00.75 Elapsed: 00:00:00.83
+# Mc/sec: 3617.95
+//
+Query:       tr|X2JAI8|X2JAI8_DROME  [L=1122]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.1e-48  164.3   0.3    1.1e-48  164.3   0.3    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    4.4e-35  119.6   5.4    1.2e-34  118.1   5.4    1.9  1  CaMBD        Calmodulin binding domain
+    1.4e-12   47.4   1.3      4e-12   46.0   1.3    1.7  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.3   0.3   1.7e-52   1.1e-48       1     116 [.     471     586 ..     471     588 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 164.3 bits;  conditional E-value: 1.7e-52
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+qlf++dn+a+dw
+  tr|X2JAI8|X2JAI8_DROME 471 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQLFMIDNCADDW 557
+                             6899*********************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgeie 116
+                             r+a+t++ri +i lEl++caihPiPge+ 
+  tr|X2JAI8|X2JAI8_DROME 558 RIAMTWQRISQIGLELFICAIHPIPGEYY 586
+                             **************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.1   5.4     2e-38   1.2e-34       1      75 []     763     837 ..     763     837 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.1 bits;  conditional E-value: 2e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|X2JAI8|X2JAI8_DROME 763 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 837
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.0   1.3   6.3e-16     4e-12       2      77 ..     671     748 ..     659     749 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.0 bits;  conditional E-value: 6.3e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l++++ + +t++ vGYGdivp+t +gr +t+  +++G +++a++++v+++ l
+  tr|X2JAI8|X2JAI8_DROME 671 MVSLWIIASWTLRQCerfhdE---EHANLLNSMWLTAITFLCVGYGDIVPNTYCGRGITLTCGMVGAGCTALLVAVVSRKL 748
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1122 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2084  (0.108661); expected 383.6 (0.02)
+Passed bias filter:                      638  (0.0332656); expected 383.6 (0.02)
+Passed Vit filter:                        94  (0.00490119); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.16s 00:00:00.82 Elapsed: 00:00:00.93
+# Mc/sec: 3911.56
+//
+Query:       tr|M9PDT6|M9PDT6_DROME  [L=960]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.9e-47  158.2   2.6    1.1e-46  157.7   0.4    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    2.6e-35  120.3   5.4      1e-34  118.4   5.4    2.1  1  CaMBD        Calmodulin binding domain
+    2.8e-13   49.7   1.1    8.4e-13   48.2   1.1    1.7  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.7   0.4   1.8e-50   1.1e-46       1     116 [.     502     619 ..     502     621 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 157.7 bits;  conditional E-value: 1.8e-50
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiq..lflvdngae 85 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+q  lf++dn+a+
+  tr|M9PDT6|M9PDT6_DROME 502 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQvrLFMIDNCAD 588
+                             6899*********************************************************************9873369******* PP
+
+              SK_channel  86 dwrvaltserilkillEllvcaihPiPgeie 116
+                             dwr+a+t++ri +i lEl++caihPiPge+ 
+  tr|M9PDT6|M9PDT6_DROME 589 DWRIAMTWQRISQIGLELFICAIHPIPGEYY 619
+                             ****************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.4   5.4   1.6e-38     1e-34       1      75 []     796     870 ..     796     870 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.4 bits;  conditional E-value: 1.6e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|M9PDT6|M9PDT6_DROME 796 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 870
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.2   1.1   1.3e-16   8.4e-13       2      77 ..     704     781 ..     692     782 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 48.2 bits;  conditional E-value: 1.3e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l+a++   +t+++vG+Gdivp+t +gr +++ ++++G +++a++++v+++ l
+  tr|M9PDT6|M9PDT6_DROME 704 MVSLWIIASWTLRQCerfhdE---EHANLLNAMWLIAITFLSVGFGDIVPNTYCGRGIAVSTGIMGAGCTALLVAVVSRKL 781
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (960 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2436  (0.127014); expected 383.6 (0.02)
+Passed bias filter:                      744  (0.0387924); expected 383.6 (0.02)
+Passed Vit filter:                       104  (0.0054226); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.59u 0.16s 00:00:00.75 Elapsed: 00:00:00.80
+# Mc/sec: 3900.03
+//
+Query:       tr|X2JDR8|X2JDR8_DROME  [L=1174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      1e-46  157.9   2.3    1.5e-46  157.3   0.4    2.1  1  SK_channel   Calcium-activated SK potassium channel
+    4.3e-35  119.6   5.4    1.3e-34  118.0   5.4    1.9  1  CaMBD        Calmodulin binding domain
+    3.9e-13   49.2   1.1    1.1e-12   47.8   1.1    1.7  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.3   0.4   2.3e-50   1.5e-46       1     116 [.     468     585 ..     468     587 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 157.3 bits;  conditional E-value: 2.3e-50
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiq..lflvdngae 85 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+q  lf++dn+a+
+  tr|X2JDR8|X2JDR8_DROME 468 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQvrLFMIDNCAD 554
+                             6899*********************************************************************9873369******* PP
+
+              SK_channel  86 dwrvaltserilkillEllvcaihPiPgeie 116
+                             dwr+a+t++ri +i lEl++caihPiPge+ 
+  tr|X2JDR8|X2JDR8_DROME 555 DWRIAMTWQRISQIGLELFICAIHPIPGEYY 585
+                             ****************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.0   5.4   2.1e-38   1.3e-34       1      75 []     762     836 ..     762     836 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.0 bits;  conditional E-value: 2.1e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|X2JDR8|X2JDR8_DROME 762 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 836
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.8   1.1   1.7e-16   1.1e-12       2      77 ..     670     747 ..     658     748 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 47.8 bits;  conditional E-value: 1.7e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l+a++   +t+++vG+Gdivp+t +gr +++ ++++G +++a++++v+++ l
+  tr|X2JDR8|X2JDR8_DROME 670 MVSLWIIASWTLRQCerfhdE---EHANLLNAMWLIAITFLSVGFGDIVPNTYCGRGIAVSTGIMGAGCTALLVAVVSRKL 747
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1174 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2168  (0.11304); expected 383.6 (0.02)
+Passed bias filter:                      678  (0.0353512); expected 383.6 (0.02)
+Passed Vit filter:                        94  (0.00490119); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.68u 0.13s 00:00:00.81 Elapsed: 00:00:00.92
+# Mc/sec: 4145.47
+//
+Query:       tr|X2JIE0|X2JIE0_DROME  [L=719]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.1e-47  159.2   2.7    7.4e-47  158.3   0.4    2.3  1  SK_channel   Calcium-activated SK potassium channel
+      7e-35  118.9   5.4      7e-35  118.9   5.4    1.9  1  CaMBD        Calmodulin binding domain
+    5.9e-13   48.7   1.2    5.9e-13   48.7   1.2    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  158.3   0.4   1.2e-50   7.4e-47       1     116 [.      66     183 ..      66     185 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 158.3 bits;  conditional E-value: 1.2e-50
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiq..lflvdngae 85 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+q  lf++dn+a+
+  tr|X2JIE0|X2JIE0_DROME  66 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQvrLFMIDNCAD 152
+                             6899*********************************************************************9873369******* PP
+
+              SK_channel  86 dwrvaltserilkillEllvcaihPiPgeie 116
+                             dwr+a+t++ri +i lEl++caihPiPge+ 
+  tr|X2JIE0|X2JIE0_DROME 153 DWRIAMTWQRISQIGLELFICAIHPIPGEYY 183
+                             ****************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.9   5.4   1.1e-38     7e-35       1      75 []     360     434 ..     360     434 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.9 bits;  conditional E-value: 1.1e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|X2JIE0|X2JIE0_DROME 360 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 434
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.7   1.2   9.3e-17   5.9e-13       2      77 ..     268     345 ..     255     346 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 48.7 bits;  conditional E-value: 9.3e-17
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l+a++   +t+++vG+Gdivp+t +gr +++ ++++G +++a++++v+++ l
+  tr|X2JIE0|X2JIE0_DROME 268 MVSLWIIASWTLRQCerfhdE---EHANLLNAMWLIAITFLSVGFGDIVPNTYCGRGIAVSTGIMGAGCTALLVAVVSRKL 345
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (719 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1415  (0.0737786); expected 383.6 (0.02)
+Passed bias filter:                      797  (0.0415559); expected 383.6 (0.02)
+Passed Vit filter:                       128  (0.00667397); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.50u 0.18s 00:00:00.68 Elapsed: 00:00:00.68
+# Mc/sec: 3406.63
+//
+Query:       tr|M9PGG9|M9PGG9_DROME  [L=979]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.4e-47  158.2   2.6    1.2e-46  157.7   0.4    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    3.1e-35  120.0   5.4    1.1e-34  118.3   5.4    2.0  1  CaMBD        Calmodulin binding domain
+    2.9e-13   49.6   1.1    8.6e-13   48.1   1.1    1.7  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.7   0.4   1.8e-50   1.2e-46       1     116 [.     468     585 ..     468     587 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 157.7 bits;  conditional E-value: 1.8e-50
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiq..lflvdngae 85 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+q  lf++dn+a+
+  tr|M9PGG9|M9PGG9_DROME 468 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQvrLFMIDNCAD 554
+                             6899*********************************************************************9873369******* PP
+
+              SK_channel  86 dwrvaltserilkillEllvcaihPiPgeie 116
+                             dwr+a+t++ri +i lEl++caihPiPge+ 
+  tr|M9PGG9|M9PGG9_DROME 555 DWRIAMTWQRISQIGLELFICAIHPIPGEYY 585
+                             ****************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.3   5.4   1.6e-38   1.1e-34       1      75 []     762     836 ..     762     836 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.3 bits;  conditional E-value: 1.6e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|M9PGG9|M9PGG9_DROME 762 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 836
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.1   1.1   1.4e-16   8.6e-13       2      77 ..     670     747 ..     658     748 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 48.1 bits;  conditional E-value: 1.4e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l+a++   +t+++vG+Gdivp+t +gr +++ ++++G +++a++++v+++ l
+  tr|M9PGG9|M9PGG9_DROME 670 MVSLWIIASWTLRQCerfhdE---EHANLLNAMWLIAITFLSVGFGDIVPNTYCGRGIAVSTGIMGAGCTALLVAVVSRKL 747
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (979 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2458  (0.128161); expected 383.6 (0.02)
+Passed bias filter:                      766  (0.0399395); expected 383.6 (0.02)
+Passed Vit filter:                       106  (0.00552688); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.16s 00:00:00.82 Elapsed: 00:00:00.92
+# Mc/sec: 3444.52
+//
+Query:       tr|X2JE69|X2JE69_DROME  [L=771]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.7e-49  165.1   3.6    6.3e-49  165.0   0.3    2.3  1  SK_channel   Calcium-activated SK potassium channel
+    3.2e-35  120.0   5.4    7.7e-35  118.8   5.4    1.7  1  CaMBD        Calmodulin binding domain
+    2.6e-12   46.6   1.4    2.6e-12   46.6   1.4    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.0   0.3   9.8e-53   6.3e-49       1     116 [.      66     181 ..      66     183 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 165.0 bits;  conditional E-value: 9.8e-53
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl +rk+l+ekr+r++d+alv+++fGi++mvie+El++++v++k+s++s+alk+lis+sTv+LL liv+yha+e+qlf++dn+a+dw
+  tr|X2JE69|X2JE69_DROME  66 RLGKRKALFEKRKRISDYALVMGMFGIIVMVIENELSSAGVYTKASFYSTALKTLISVSTVILLGLIVAYHALEVQLFMIDNCADDW 152
+                             6899*********************************************************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPiPgeie 116
+                             r+a+t++ri +i lEl++caihPiPge+ 
+  tr|X2JE69|X2JE69_DROME 153 RIAMTWQRISQIGLELFICAIHPIPGEYY 181
+                             **************************875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.8   5.4   1.2e-38   7.7e-35       1      75 []     358     432 ..     358     432 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 118.8 bits;  conditional E-value: 1.2e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk+lknaAAnVLretWliykht+lvk+ ++ rvr+hqrk+L AI+ lrkvk++qrkl+d+ant++d++k+q
+  tr|X2JE69|X2JE69_DROME 358 DTQLTKRLKNAAANVLRETWLIYKHTRLVKRVNPGRVRTHQRKFLLAIYALRKVKMDQRKLMDNANTITDMAKTQ 432
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.6   1.4     4e-16   2.6e-12       2      77 ..     266     343 ..     253     344 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.6 bits;  conditional E-value: 4e-16
+                             HHHHTCHHHHHHHHC.........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.....eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++  +     e   e  ++l++++ + +t++ vGYGdivp+t +gr +t+  +++G +++a++++v+++ l
+  tr|X2JE69|X2JE69_DROME 266 MVSLWIIASWTLRQCerfhdE---EHANLLNSMWLTAITFLCVGYGDIVPNTYCGRGITLTCGMVGAGCTALLVAVVSRKL 343
+                             678899999999999755433...356*************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (771 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1500  (0.0782105); expected 383.6 (0.02)
+Passed bias filter:                      880  (0.0458835); expected 383.6 (0.02)
+Passed Vit filter:                       137  (0.00714323); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.59u 0.25s 00:00:00.84 Elapsed: 00:00:00.91
+# Mc/sec: 2739.94
+//
+Query:       tr|Q1LY45|Q1LY45_DANRE  [L=235]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      2e-35  120.7   9.6      4e-35  119.7   9.6    1.5  1  CaMBD        Calmodulin binding domain
+      1e-09   38.3   1.9    1.6e-09   37.7   1.9    1.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  119.7   9.6   4.1e-39     4e-35       1      75 []      64     138 ..      64     138 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 119.7 bits;  conditional E-value: 4.1e-39
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdl+k+q
+  tr|Q1LY45|Q1LY45_DANRE  64 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQ 138
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.7   1.9   1.6e-13   1.6e-09      30      77 ..       2      49 ..       1      50 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 37.7 bits;  conditional E-value: 1.6e-13
+                            HHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2 30 YFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77
+                            +   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|Q1LY45|Q1LY45_DANRE  2 WLISITFLSIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVARKL 49
+                            66789***************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (235 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2177  (0.11351); expected 383.6 (0.02)
+Passed bias filter:                      802  (0.0418166); expected 383.6 (0.02)
+Passed Vit filter:                       135  (0.00703895); expected 19.2 (0.001)
+Passed Fwd filter:                        27  (0.00140779); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 1203.90
+//
+Query:       tr|E7FAT2|E7FAT2_DANRE  [L=771]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.1e-47  160.1   0.5    2.1e-47  160.1   0.5    2.2  1  SK_channel   Calcium-activated SK potassium channel
+      6e-37  125.5   9.6    1.1e-36  124.7   9.6    1.5  1  CaMBD        Calmodulin binding domain
+    1.6e-12   47.3   4.1    1.6e-12   47.3   4.1    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.1   0.5   3.3e-51   2.1e-47       2     117 ..     297     411 ..     296     412 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 160.1 bits;  conditional E-value: 3.3e-51
+              SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                             l +r++l+ekr+rl+d+al++++fGiv+mvietEl++  v+skss++slalk+lislsT++LL li++yha e+qlf++dnga+dwr
+  tr|E7FAT2|E7FAT2_DANRE 297 LGHRRALFEKRKRLSDYALIFGMFGIVVMVIETELSWG-VYSKSSMYSLALKCLISLSTIILLGLIIAYHAREVQLFVIDNGADDWR 382
+                             789**********************************9.8*********************************************** PP
+
+              SK_channel  89 valtserilkillEllvcaihPiPgeies 117
+                             +a+t+er+l i+lEl+v a+hP+Pg++++
+  tr|E7FAT2|E7FAT2_DANRE 383 IAMTMERVLLIALELIVSAVHPVPGDFKF 411
+                             *************************9876 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.7   9.6   1.7e-40   1.1e-36       1      75 []     588     662 ..     588     662 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 124.7 bits;  conditional E-value: 1.7e-40
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk++knaAAnVLretWliykhtkl+kk d+srvrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdlsk+q
+  tr|E7FAT2|E7FAT2_DANRE 588 DTQLTKRIKNAAANVLRETWLIYKHTKLMKKIDHSRVRKHQRKFLQAIHQLRSVKMEQRKLSDQANTLVDLSKMQ 662
+                             89***********************************************************************98 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.3   4.1   2.4e-16   1.6e-12       3      77 ..     495     573 ..     481     574 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 47.3 bits;  conditional E-value: 2.4e-16
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             + l++i+++++ ++      ++   + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|E7FAT2|E7FAT2_DANRE 495 ISLWIIAAWTVRVCeryhdaQDV--TSNFLGAMWLISITFLSIGYGDMVPHTYCGKGVCLLTGIMGAGCTALVVAVVARKL 573
+                             67899999999999999875333..45**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (771 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1401  (0.0730486); expected 383.6 (0.02)
+Passed bias filter:                      632  (0.0329527); expected 383.6 (0.02)
+Passed Vit filter:                        80  (0.00417123); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.61
+# Mc/sec: 4065.20
+//
+Query:       tr|F1R329|F1R329_DANRE  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.3e-49  167.2   0.5    1.3e-49  167.2   0.5    1.9  1  SK_channel  Calcium-activated SK potassium channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.2   0.5   6.8e-54   1.3e-49       2     116 ..      45     158 ..      44     160 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 167.2 bits;  conditional E-value: 6.8e-54
+              SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                             l +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL li++yha eiqlf+vdnga+dwr
+  tr|F1R329|F1R329_DANRE  45 LGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLGLIIMYHAREIQLFMVDNGADDWR 130
+                             789**********************************9.89********************************************** PP
+
+              SK_channel  89 valtserilkillEllvcaihPiPgeie 116
+                             +a+t+eri+ i+lEllvcaihPiPg++ 
+  tr|F1R329|F1R329_DANRE 131 IAMTYERIFFIVLELLVCAIHPIPGQYV 158
+                             *************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       676  (0.0352469); expected 383.6 (0.02)
+Passed bias filter:                      376  (0.0196048); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.14s 00:00:00.46 Elapsed: 00:00:00.51
+# Mc/sec: 1640.96
+//
+Query:       tr|F1Q7U8|F1Q7U8_DANRE  [L=338]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.3e-46  156.2   1.9    3.3e-46  156.2   1.9    2.3  1  SK_channel   Calcium-activated SK potassium channel
+    6.9e-23   80.5   6.3    6.9e-23   80.5   6.3    1.7  1  CaMBD        Calmodulin binding domain
+    1.7e-13   50.4   3.5    1.7e-13   50.4   3.5    2.4  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.2   1.9   5.2e-50   3.3e-46       9     116 ..       2     108 ..       1     110 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 156.2 bits;  conditional E-value: 5.2e-50
+              SK_channel   9 lekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwrvaltser 95 
+                             +ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL+li++yha eiqlf+vdnga+dwr+a+t+er
+  tr|F1Q7U8|F1Q7U8_DANRE   2 FEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLCLIIMYHAREIQLFMVDNGADDWRIAMTYER 87 
+                             799***************************9.89***************************************************** PP
+
+              SK_channel  96 ilkillEllvcaihPiPgeie 116
+                             il i+lEllvcaihPiPg++ 
+  tr|F1Q7U8|F1Q7U8_DANRE  88 ILFIVLELLVCAIHPIPGQYV 108
+                             ******************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.5   6.3   1.1e-26   6.9e-23       1      52 [.     286     337 ..     286     338 .] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 80.5 bits;  conditional E-value: 1.1e-26
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelr 52 
+                             dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+ r
+  tr|F1Q7U8|F1Q7U8_DANRE 286 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQHR 337
+                             89***********************************************966 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.4   3.5   2.6e-17   1.7e-13       3      77 ..     193     271 ..     178     272 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 50.4 bits;  conditional E-value: 2.6e-17
+                             HHHTCHHHHHHHHC.......T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl...eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             + +++i++++++++    + +e + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|F1Q7U8|F1Q7U8_DANRE 193 ISSWIIAAWTVHVCeryHDKVEvTSNFLGAMWLISITFLSIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVARKL 271
+                             56789999999999*9944444467**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (338 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1181  (0.0615778); expected 383.6 (0.02)
+Passed bias filter:                      555  (0.0289379); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.58
+# Mc/sec: 1880.83
+//
+Query:       tr|A0A0R4IC13|A0A0R4IC13_DANRE  [L=547]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.7e-49  165.8   1.1    3.7e-49  165.8   1.1    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    3.4e-32  110.3  10.5    3.4e-32  110.3  10.5    1.8  1  CaMBD        Calmodulin binding domain
+    7.8e-13   48.3   4.5    7.8e-13   48.3   4.5    2.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.8   1.1   5.7e-53   3.7e-49       2     116 ..      82     195 ..      81     197 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 165.8 bits;  conditional E-value: 5.7e-53
+                      SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflv 80 
+                                     l +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL+li++yha eiqlf+v
+  tr|A0A0R4IC13|A0A0R4IC13_DANRE  82 LGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLCLIIMYHAREIQLFMV 159
+                                     789**********************************9.89************************************** PP
+
+                      SK_channel  81 dngaedwrvaltserilkillEllvcaihPiPgeie 116
+                                     dnga+dwr+a+t+eril i+lEllvcaihPiPg++ 
+  tr|A0A0R4IC13|A0A0R4IC13_DANRE 160 DNGADDWRIAMTYERILFIVLELLVCAIHPIPGQYV 195
+                                     *********************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.3  10.5   5.3e-36   3.4e-32       1      75 []     373     450 ..     373     450 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 110.3 bits;  conditional E-value: 5.3e-36
+                           CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhe...lrkvklkqrklrdqantlvdlskaq 75 
+                                     dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+   lr+vk++qrkl+dqantlvdl+k+q
+  tr|A0A0R4IC13|A0A0R4IC13_DANRE 373 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQaqkLRSVKMEQRKLNDQANTLVDLAKTQ 450
+                                     89***********************************************9999***********************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.3   4.5   1.2e-16   7.8e-13       3      77 ..     280     358 ..     265     359 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 48.3 bits;  conditional E-value: 1.2e-16
+                                     HHHTCHHHHHHHHC.......T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                     Ion_trans_2   3 lllvlifgavfysl...eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                                     + +++i++++++++    + +e + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|A0A0R4IC13|A0A0R4IC13_DANRE 280 ISSWIIAAWTVHVCeryHDKVEvTSNFLGAMWLISITFLSIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVARKL 358
+                                     56789999999999*9944444467**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (547 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1626  (0.0847802); expected 383.6 (0.02)
+Passed bias filter:                      642  (0.0334741); expected 383.6 (0.02)
+Passed Vit filter:                       105  (0.00547474); expected 19.2 (0.001)
+Passed Fwd filter:                        16  (0.000834246); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.17s 00:00:00.60 Elapsed: 00:00:00.66
+# Mc/sec: 2692.51
+//
+Query:       tr|Q1LY44|Q1LY44_DANRE  [L=544]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.6e-49  165.8   1.1    3.6e-49  165.8   1.1    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    1.7e-34  117.7   9.6    1.7e-34  117.7   9.6    1.8  1  CaMBD        Calmodulin binding domain
+    7.7e-13   48.3   4.5    7.7e-13   48.3   4.5    2.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.8   1.1   5.7e-53   3.6e-49       2     116 ..      82     195 ..      81     197 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 165.8 bits;  conditional E-value: 5.7e-53
+              SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                             l +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL+li++yha eiqlf+vdnga+dwr
+  tr|Q1LY44|Q1LY44_DANRE  82 LGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLCLIIMYHAREIQLFMVDNGADDWR 167
+                             789**********************************9.89********************************************** PP
+
+              SK_channel  89 valtserilkillEllvcaihPiPgeie 116
+                             +a+t+eril i+lEllvcaihPiPg++ 
+  tr|Q1LY44|Q1LY44_DANRE 168 IAMTYERILFIVLELLVCAIHPIPGQYV 195
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.7   9.6   2.6e-38   1.7e-34       1      75 []     373     447 ..     373     447 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 117.7 bits;  conditional E-value: 2.6e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdl+k+q
+  tr|Q1LY44|Q1LY44_DANRE 373 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQ 447
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.3   4.5   1.2e-16   7.7e-13       3      77 ..     280     358 ..     265     359 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 48.3 bits;  conditional E-value: 1.2e-16
+                             HHHTCHHHHHHHHC.......T.---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl...eegwe.gwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             + +++i++++++++    + +e + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|Q1LY44|Q1LY44_DANRE 280 ISSWIIAAWTVHVCeryHDKVEvTSNFLGAMWLISITFLSIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVARKL 358
+                             56789999999999*9944444467**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (544 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1510  (0.0787319); expected 383.6 (0.02)
+Passed bias filter:                      651  (0.0339434); expected 383.6 (0.02)
+Passed Vit filter:                       117  (0.00610042); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.16s 00:00:00.64 Elapsed: 00:00:00.87
+# Mc/sec: 2020.26
+//
+Query:       tr|X1WCL6|X1WCL6_DANRE  [L=481]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.8e-37  127.0   1.1    3.8e-37  127.0   1.1    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    3.2e-28   97.5   4.3    6.1e-28   96.7   4.3    1.5  1  CaMBD        Calmodulin binding domain
+    6.4e-14   51.8   3.8    6.4e-14   51.8   3.8    2.5  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.0   1.1     6e-41   3.8e-37       1     111 [.      53     162 ..      53     167 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 127.0 bits;  conditional E-value: 6e-41
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl++rk lle++rrl+++al +al+Gi+lmv+++El+ + v++++s+++l ++ lis+sT +LL+li+++h+++i+lf++d+++ dw
+  tr|X1WCL6|X1WCL6_DANRE  53 RLRDRKFLLEDKRRLCAWALGTALLGILLMVLHAELCPV-VYQPGSIYALSINGLISFSTGCLLILIIAFHYKDIRLFIIDHNQVDW 138
+                             689************************************.89********************************************* PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPi 111
+                             r+a+ts r+l i lEl+vcaihP+
+  tr|X1WCL6|X1WCL6_DANRE 139 RIAMTSYRVLGISLELMVCAIHPV 162
+                             ***********************8 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.7   4.3   9.6e-32   6.1e-28       1      75 []     355     427 ..     355     427 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.7 bits;  conditional E-value: 9.6e-32
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             d+q++k++++aAAnVLre+Wl++++t+   k  + ++r+hqr+lL+AI+ +r+++lkqrklrd a+++vdlsk+q
+  tr|X1WCL6|X1WCL6_DANRE 355 DIQISKRIRHAAANVLRECWLLHRTTQ--TKYTSGEHRHHQRCLLEAIRVFRHLRLKQRKLRDYASEMVDLSKMQ 427
+                             89************************7..7*******************************************98 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.8   3.8     1e-17   6.4e-14       2      77 ..     263     340 ..     261     341 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 51.8 bits;  conditional E-value: 1e-17
+                             HHHHTCHHHHHHHHC......T---HHH.HHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl.eeg.wegwsfld.alYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             +++++l +++ + ++ +e  + +   +d al+   +t++TvGYGd++p+t +g++++++++++G+a++a++++v+++ l
+  tr|X1WCL6|X1WCL6_DANRE 263 IMFFWLSASWMLRLCeREKqVDT-GGMDtALWLIAITFLTVGYGDVSPHTSCGKVVCLFTGVMGVACTAMLVAVMTKKL 340
+                             67889999999999973332544.44455*********************************************99865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (481 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1107  (0.0577194); expected 383.6 (0.02)
+Passed bias filter:                      606  (0.0315971); expected 383.6 (0.02)
+Passed Vit filter:                        62  (0.0032327); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.16s 00:00:00.59 Elapsed: 00:00:00.77
+# Mc/sec: 2014.08
+//
+Query:       tr|F1QND4|F1QND4_DANRE  [L=916]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.2e-48  164.1   2.6    1.3e-48  164.0   0.5    2.0  1  SK_channel   Calcium-activated SK potassium channel
+    1.1e-34  118.2   9.6    3.4e-34  116.7   9.6    1.9  1  CaMBD        Calmodulin binding domain
+    2.1e-13   50.1   3.1    6.7e-13   48.5   3.1    1.8  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.0   0.5     2e-52   1.3e-48       2     116 ..     459     572 ..     458     574 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 164.0 bits;  conditional E-value: 2e-52
+              SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                             l +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL li++yha eiqlf+vdnga+dwr
+  tr|F1QND4|F1QND4_DANRE 459 LGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLGLIIMYHAREIQLFMVDNGADDWR 544
+                             789**********************************9.89********************************************** PP
+
+              SK_channel  89 valtserilkillEllvcaihPiPgeie 116
+                             +a+t+eri+ i+lEllvcaihPiPg++ 
+  tr|F1QND4|F1QND4_DANRE 545 IAMTYERIFFIVLELLVCAIHPIPGQYV 572
+                             *************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.7   9.6   5.3e-38   3.4e-34       1      75 []     750     824 ..     750     824 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 116.7 bits;  conditional E-value: 5.3e-38
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdl+k+q
+  tr|F1QND4|F1QND4_DANRE 750 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQ 824
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.5   3.1     1e-16   6.7e-13       3      77 ..     657     735 ..     643     736 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 48.5 bits;  conditional E-value: 1e-16
+                             HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             + +++i+++++ ++      +e   + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|F1QND4|F1QND4_DANRE 657 ISSWIIAAWTVRVCeryhdkQEV--TSNFLGAMWLISITFLSIGYGDMVPHTYCGKGVCLLTGIMGAGCTALVVAVVARKL 735
+                             56788888888888*99875333..56**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (916 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1370  (0.0714323); expected 383.6 (0.02)
+Passed bias filter:                      526  (0.0274258); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.59u 0.15s 00:00:00.74 Elapsed: 00:00:00.87
+# Mc/sec: 3419.81
+//
+Query:       tr|A0A0R4INU5|A0A0R4INU5_DANRE  [L=538]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.5e-49  165.2   0.5    5.5e-49  165.2   0.5    2.2  1  SK_channel   Calcium-activated SK potassium channel
+      8e-35  118.7   9.6    1.6e-34  117.7   9.6    1.6  1  CaMBD        Calmodulin binding domain
+    4.1e-13   49.2   3.5    4.1e-13   49.2   3.5    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.2   0.5   8.6e-53   5.5e-49       2     116 ..      81     194 ..      80     196 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 165.2 bits;  conditional E-value: 8.6e-53
+                      SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflv 80 
+                                     l +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+s +s+alk+lislsTv+LL li++yha eiqlf+v
+  tr|A0A0R4INU5|A0A0R4INU5_DANRE  81 LGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESSYSFALKCLISLSTVILLGLIIMYHAREIQLFMV 158
+                                     789**********************************9.89************************************** PP
+
+                      SK_channel  81 dngaedwrvaltserilkillEllvcaihPiPgeie 116
+                                     dnga+dwr+a+t+eri+ i+lEllvcaihPiPg++ 
+  tr|A0A0R4INU5|A0A0R4INU5_DANRE 159 DNGADDWRIAMTYERIFFIVLELLVCAIHPIPGQYV 194
+                                     *********************************986 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.7   9.6   2.5e-38   1.6e-34       1      75 []     372     446 ..     372     446 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 117.7 bits;  conditional E-value: 2.5e-38
+                           CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                                     dtql k++kn AAnVLretWliykhtklvkk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdl+k+q
+  tr|A0A0R4INU5|A0A0R4INU5_DANRE 372 DTQLCKRVKNTAANVLRETWLIYKHTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQ 446
+                                     89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.2   3.5   6.4e-17   4.1e-13       3      77 ..     279     357 ..     264     358 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 49.2 bits;  conditional E-value: 6.4e-17
+                                     HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHH CS
+                     Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlge 75 
+                                     + +++i+++++ ++      +e   + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++
+  tr|A0A0R4INU5|A0A0R4INU5_DANRE 279 ISSWIIAAWTVRVCeryhdkQEV--TSNFLGAMWLISITFLSIGYGDMVPHTYCGKGVCLLTGIMGAGCTALVVAVVAR 355
+                                     56788888888888**9875333..56**************************************************99 PP
+
+                                     HH CS
+                     Ion_trans_2  76 vl 77 
+                                      l
+  tr|A0A0R4INU5|A0A0R4INU5_DANRE 356 KL 357
+                                     76 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (538 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1785  (0.0930705); expected 383.6 (0.02)
+Passed bias filter:                      843  (0.0439543); expected 383.6 (0.02)
+Passed Vit filter:                       127  (0.00662183); expected 19.2 (0.001)
+Passed Fwd filter:                        16  (0.000834246); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.51u 0.19s 00:00:00.70 Elapsed: 00:00:00.68
+# Mc/sec: 2568.77
+//
+Query:       tr|A0A2R8QR31|A0A2R8QR31_DANRE  [L=424]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.4e-34  116.9   1.5    5.4e-34  116.9   1.5    2.7  1  SK_channel   Calcium-activated SK potassium channel
+    6.3e-17   61.4   1.9    1.4e-16   60.3   1.9    1.5  1  CaMBD        Calmodulin binding domain
+    1.4e-12   47.5   6.1    1.4e-12   47.5   6.1    3.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.9   1.5   8.4e-38   5.4e-34       1     111 [.      25     129 ..      25     136 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 116.9 bits;  conditional E-value: 8.4e-38
+                      SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlfl 79 
+                                     rl++rk lle++rrl+++al +al+Gi+lmv+++El+        s+++l ++ lis+sT +LL+li+++h+++i+lf+
+  tr|A0A2R8QR31|A0A2R8QR31_DANRE  25 RLRDRKFLLEDKRRLCAWALGTALLGILLMVLHAELCPG------SIYALSINGLISFSTGCLLILIIAFHYKDIRLFI 97 
+                                     689*********************************988......78******************************** PP
+
+                      SK_channel  80 vdngaedwrvaltserilkillEllvcaihPi 111
+                                     +d+++ dwr+a+ts r+l i lEl+vcaihP+
+  tr|A0A2R8QR31|A0A2R8QR31_DANRE  98 IDHNQVDWRIAMTSYRVLGISLELMVCAIHPV 129
+                                     *******************************8 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.3   1.9   2.2e-20   1.4e-16       1      49 [.     297     343 ..     297     347 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 60.3 bits;  conditional E-value: 2.2e-20
+                           CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIh 49 
+                                     d+q++k++++aAAnVLre+Wl++++t+   k  + ++r+hqr+lL+AI+
+  tr|A0A2R8QR31|A0A2R8QR31_DANRE 297 DIQISKRIRHAAANVLRECWLLHRTTQ--TKYTSGEHRHHQRCLLEAIR 343
+                                     89************************7..7******************7 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.5   6.1   2.1e-16   1.4e-12       3      77 ..     205     282 ..     201     283 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 47.5 bits;  conditional E-value: 2.1e-16
+                                     HHHTCHHHHHHHHC........T---HHH.HHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHH CS
+                     Ion_trans_2   3 lllvlifgavfysl....eegwegwsfld.alYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgev 76 
+                                     ++++l +++ + ++    ++ +     +d al+   +t++TvGYGd++p+t +g++++++++++G+a++a++++v+++ 
+  tr|A0A2R8QR31|A0A2R8QR31_DANRE 205 MFFWLSASWMLRLCeryrMCDY--TGGMDtALWLIAITFLTVGYGDVSPHTSCGKVVCLFTGVMGVACTAMLVAVMTKK 281
+                                     5667777777777755432222..2334459********************************************9986 PP
+
+                                     H CS
+                     Ion_trans_2  77 l 77 
+                                     l
+  tr|A0A2R8QR31|A0A2R8QR31_DANRE 282 L 282
+                                     5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (424 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1373  (0.0715887); expected 383.6 (0.02)
+Passed bias filter:                      669  (0.0348819); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.14s 00:00:00.58 Elapsed: 00:00:00.78
+# Mc/sec: 1758.26
+//
+Query:       tr|F1QW20|F1QW20_DANRE  [L=561]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.7e-49  164.9   0.5    6.7e-49  164.9   0.5    2.4  1  SK_channel   Calcium-activated SK potassium channel
+    4.2e-34  116.4  10.0    8.1e-34  115.5  10.0    1.5  1  CaMBD        Calmodulin binding domain
+    1.8e-13   50.3   5.8    1.8e-13   50.3   5.8    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.9   0.5     1e-52   6.7e-49       2     117 ..     107     221 ..     106     222 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 164.9 bits;  conditional E-value: 1e-52
+              SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                             l +r++l+ekr+rl+d+al++++fGiv+mvietEl++   + k+sl+slalk+lislsT++LL li++yha eiqlf+vdn+a+dwr
+  tr|F1QW20|F1QW20_DANRE 107 LGHRRALFEKRKRLSDYALIFGMFGIVVMVIETELSWG-AYGKESLYSLALKCLISLSTIILLGLIIIYHAREIQLFMVDNAADDWR 192
+                             789**********************************9.69********************************************** PP
+
+              SK_channel  89 valtserilkillEllvcaihPiPgeies 117
+                             +a+t+eri+ i+lE+lvcaihPiPg++++
+  tr|F1QW20|F1QW20_DANRE 193 IAMTYERIFFICLEILVCAIHPIPGNYTF 221
+                             *************************9875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.5  10.0   1.3e-37   8.1e-34       1      75 []     398     472 ..     398     472 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 115.5 bits;  conditional E-value: 1.3e-37
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                             dtqltk++kn AAnVLretWliyk tklv+k d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqan+lvdl+k+q
+  tr|F1QW20|F1QW20_DANRE 398 DTQLTKRVKNTAANVLRETWLIYKNTKLVRKMDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANSLVDLAKTQ 472
+                             89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.3   5.8   2.8e-17   1.8e-13       2      77 ..     304     383 ..     290     384 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 50.3 bits;  conditional E-value: 2.8e-17
+                             HHHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   2 vlllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++ l++i+++++ ++      ++   + +fl a++   +t++T+GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  tr|F1QW20|F1QW20_DANRE 304 TISLWIIAAWTVRACeryhdnMD--VTSNFLGAMWLISITFLTIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVAKKL 383
+                             577899999999999**974422..267**************************************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (561 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1381  (0.0720058); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.63
+# Mc/sec: 2868.83
+//
+Query:       tr|E7F9T2|E7F9T2_DANRE  [L=418]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.2e-34  116.9   1.5    5.2e-34  116.9   1.5    2.7  1  SK_channel   Calcium-activated SK potassium channel
+    6.1e-17   61.4   1.9    1.4e-16   60.3   1.9    1.6  1  CaMBD        Calmodulin binding domain
+    1.3e-12   47.5   6.1    1.3e-12   47.5   6.1    3.1  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.9   1.5   8.2e-38   5.2e-34       1     111 [.      19     123 ..      19     130 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 116.9 bits;  conditional E-value: 8.2e-38
+              SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedw 87 
+                             rl++rk lle++rrl+++al +al+Gi+lmv+++El+        s+++l ++ lis+sT +LL+li+++h+++i+lf++d+++ dw
+  tr|E7F9T2|E7F9T2_DANRE  19 RLRDRKFLLEDKRRLCAWALGTALLGILLMVLHAELCPG------SIYALSINGLISFSTGCLLILIIAFHYKDIRLFIIDHNQVDW 99 
+                             689*********************************988......78**************************************** PP
+
+              SK_channel  88 rvaltserilkillEllvcaihPi 111
+                             r+a+ts r+l i lEl+vcaihP+
+  tr|E7F9T2|E7F9T2_DANRE 100 RIAMTSYRVLGISLELMVCAIHPV 123
+                             ***********************8 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.3   1.9   2.1e-20   1.4e-16       1      49 [.     291     337 ..     291     341 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 60.3 bits;  conditional E-value: 2.1e-20
+                   CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIh 49 
+                             d+q++k++++aAAnVLre+Wl++++t+   k  + ++r+hqr+lL+AI+
+  tr|E7F9T2|E7F9T2_DANRE 291 DIQISKRIRHAAANVLRECWLLHRTTQ--TKYTSGEHRHHQRCLLEAIR 337
+                             89************************7..7******************7 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.5   6.1   2.1e-16   1.3e-12       3      77 ..     199     276 ..     195     277 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 47.5 bits;  conditional E-value: 2.1e-16
+                             HHHTCHHHHHHHHC........T---HHH.HHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+             Ion_trans_2   3 lllvlifgavfysl....eegwegwsfld.alYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                             ++++l +++ + ++    ++ +     +d al+   +t++TvGYGd++p+t +g++++++++++G+a++a++++v+++ l
+  tr|E7F9T2|E7F9T2_DANRE 199 MFFWLSASWMLRLCeryrMCDY--TGGMDtALWLIAITFLTVGYGDVSPHTSCGKVVCLFTGVMGVACTAMLVAVMTKKL 276
+                             5667777777777755432222..2334459********************************************99865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (418 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1344  (0.0700766); expected 383.6 (0.02)
+Passed bias filter:                      651  (0.0339434); expected 383.6 (0.02)
+Passed Vit filter:                        77  (0.00401481); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.39u 0.16s 00:00:00.55 Elapsed: 00:00:00.62
+# Mc/sec: 2166.56
+//
+Query:       sp|Q9UGI6|KCNN3_HUMAN  [L=731]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.8e-49  165.7   0.3    3.8e-49  165.7   0.3    2.2  1  SK_channel   Calcium-activated SK potassium channel
+    9.4e-38  128.1  11.6    3.7e-36  123.0   9.7    2.6  1  CaMBD        Calmodulin binding domain
+    7.7e-13   48.3   3.7    7.7e-13   48.3   3.7    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.7   0.3     6e-53   3.8e-49       2     117 ..     270     384 ..     269     385 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 165.7 bits;  conditional E-value: 6e-53
+             SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwrv 89 
+                            l +r++l+ekr+rl+d+al++++fGiv+mvietEl++  ++sk+s++slalk+lislsT++LL li++yh+ e+qlf++dnga+dwr+
+  sp|Q9UGI6|KCNN3_HUMAN 270 LGHRRALFEKRKRLSDYALIFGMFGIVVMVIETELSWG-LYSKDSMFSLALKCLISLSTIILLGLIIAYHTREVQLFVIDNGADDWRI 356
+                            789**********************************9.79*********************************************** PP
+
+             SK_channel  90 altserilkillEllvcaihPiPgeies 117
+                            a+t+eril i lE+lvcaihPiPge+++
+  sp|Q9UGI6|KCNN3_HUMAN 357 AMTYERILYISLEMLVCAIHPIPGEYKF 384
+                            ************************9875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.0   9.7   5.8e-40   3.7e-36       1      75 []     561     635 ..     561     635 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 123.0 bits;  conditional E-value: 5.8e-40
+                  CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                            dtqltk++knaAAnVLretWliykhtkl+kk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdlsk+q
+  sp|Q9UGI6|KCNN3_HUMAN 561 DTQLTKRIKNAAANVLRETWLIYKHTKLLKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLSDQANTLVDLSKMQ 635
+                            89***********************************************************************98 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.3   3.7   1.2e-16   7.7e-13       3      77 ..     468     546 ..     454     547 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 48.3 bits;  conditional E-value: 1.2e-16
+                            HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                            + l++i+++++ ++      ++ + + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  sp|Q9UGI6|KCNN3_HUMAN 468 ISLWIIAAWTVRVCeryhdqQD-V-TSNFLGAMWLISITFLSIGYGDMVPHTYCGKGVCLLTGIMGAGCTALVVAVVARKL 546
+                            6789999999999999996433.3.56**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (731 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1925  (0.10037); expected 383.6 (0.02)
+Passed bias filter:                      713  (0.0371761); expected 383.6 (0.02)
+Passed Vit filter:                       119  (0.0062047); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.62u 0.18s 00:00:00.80 Elapsed: 00:00:00.81
+# Mc/sec: 2914.91
+//
+Query:       sp|Q9H2S1|KCNN2_HUMAN  [L=579]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.5e-50  169.1   3.2    1.4e-49  167.2   0.3    2.9  1  SK_channel   Calcium-activated SK potassium channel
+    3.8e-35  119.8  10.0    3.8e-35  119.8  10.0    2.1  1  CaMBD        Calmodulin binding domain
+    6.7e-13   48.5   3.8    6.7e-13   48.5   3.8    2.2  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.2   0.3   2.1e-53   1.4e-49       2     117 ..     121     235 ..     120     236 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 167.2 bits;  conditional E-value: 2.1e-53
+             SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwrv 89 
+                            l +r++l+ekr+rl+d+al++++fGiv+mvietEl++   ++k+sl+slalk+lislsT++LL li++yha eiqlf+vdnga+dwr+
+  sp|Q9H2S1|KCNN2_HUMAN 121 LGHRRALFEKRKRLSDYALIFGMFGIVVMVIETELSWG-AYDKASLYSLALKCLISLSTIILLGLIIVYHAREIQLFMVDNGADDWRI 207
+                            789**********************************9.69*********************************************** PP
+
+             SK_channel  90 altserilkillEllvcaihPiPgeies 117
+                            a+t+eri+ i+lE+lvcaihPiPg++++
+  sp|Q9H2S1|KCNN2_HUMAN 208 AMTYERIFFICLEILVCAIHPIPGNYTF 235
+                            ************************9875 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  119.8  10.0   5.9e-39   3.8e-35       1      75 []     412     486 ..     412     486 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 119.8 bits;  conditional E-value: 5.9e-39
+                  CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                            dtqltk++knaAAnVLretWliyk tklvkk d+++vrkhqrk+LqAIh+lr+vk++qrkl+dqantlvdl+k+q
+  sp|Q9H2S1|KCNN2_HUMAN 412 DTQLTKRVKNAAANVLRETWLIYKNTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQ 486
+                            89***********************************************************************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.5   3.8     1e-16   6.7e-13       3      77 ..     319     397 ..     304     398 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 48.5 bits;  conditional E-value: 1e-16
+                            HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                            + l++i+++++ ++      ++ + + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  sp|Q9H2S1|KCNN2_HUMAN 319 ISLWIIAAWTVRACeryhdqQD-V-TSNFLGAMWLISITFLSIGYGDMVPNTYCGKGVCLLTGIMGAGCTALVVAVVARKL 397
+                            6789999999999999996433.3.56**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (579 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1582  (0.0824861); expected 383.6 (0.02)
+Passed bias filter:                      599  (0.0312321); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.53u 0.13s 00:00:00.66 Elapsed: 00:00:00.72
+# Mc/sec: 2604.72
+//
+Query:       sp|O15554|KCNN4_HUMAN  [L=427]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.1e-37  127.3   0.0    7.5e-37  126.1   0.0    1.6  1  SK_channel   Calcium-activated SK potassium channel
+    1.8e-28   98.3   9.2    3.4e-28   97.5   9.2    1.5  1  CaMBD        Calmodulin binding domain
+    4.3e-15   55.5   4.2    4.3e-15   55.5   4.2    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.1   0.0   1.2e-40   7.5e-37       2     113 ..      12     122 ..      11     125 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 126.1 bits;  conditional E-value: 1.2e-40
+             SK_channel   2 lkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwrv 89 
+                            l++rk+lle++++l+ +alvla +Gi lmv+++E+ +++   ++ l+++++k+ is+sT+lLL+liv++ha+e+qlf++dng++dwrv
+  sp|O15554|KCNN4_HUMAN  12 LRRRKRLLEQEKSLAGWALVLAGTGIGLMVLHAEMLWFGG-CSWALYLFLVKCTISISTFLLLCLIVAFHAKEVQLFMTDNGLRDWRV 98 
+                            789***********************************86.8999******************************************* PP
+
+             SK_channel  90 altserilkillEllvcaihPiPg 113
+                            alt ++ ++i+lEl+vc +hP P+
+  sp|O15554|KCNN4_HUMAN  99 ALTGRQAAQIVLELVVCGLHPAPV 122
+                            ***********************7 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.5   9.2   5.4e-32   3.4e-28       1      75 []     304     375 ..     304     375 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 97.5 bits;  conditional E-value: 5.4e-32
+                  CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhelrkvklkqrklrdqantlvdlskaq 75 
+                            d+q+tke+k++AA+VL+e+W++ykht   ++++++ +r+hqrklL+AI+ +r+v+lk+rklr+q+n++vd+sk++
+  sp|O15554|KCNN4_HUMAN 304 DIQYTKEMKESAARVLQEAWMFYKHT---RRKESHAARRHQRKLLAAINAFRQVRLKHRKLREQVNSMVDISKMH 375
+                            89************************...69******************************************96 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   4.2   6.7e-19   4.3e-15       3      77 ..     213     289 ..     211     291 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 6.7e-19
+                            HHHTCHHHHHHHHC......T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   3 lllvlifgavfysl.eeg.wegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                            l l+l++++v+ +  +++   +  ++d+l+   +t++T+GYGd+vp+t +g++++++++++G++++a++++v+++ l
+  sp|O15554|KCNN4_HUMAN 213 LGLWLTTAWVLSVAeRQAvNATGHLSDTLWLIPITFLTIGYGDVVPGTMWGKIVCLCTGVMGVCCTALLVAVVARKL 289
+                            67899999999999855535699**************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (427 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1665  (0.0868137); expected 383.6 (0.02)
+Passed bias filter:                      809  (0.0421816); expected 383.6 (0.02)
+Passed Vit filter:                        82  (0.00427551); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.16s 00:00:00.56 Elapsed: 00:00:00.58
+# Mc/sec: 2386.29
+//
+Query:       sp|Q92952|KCNN1_HUMAN  [L=543]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.4e-48  163.1   2.6      3e-48  162.8   0.2    2.1  1  SK_channel   Calcium-activated SK potassium channel
+    6.4e-34  115.8   7.6    1.1e-33  115.1   7.6    1.4  1  CaMBD        Calmodulin binding domain
+    2.7e-13   49.8   2.9    2.7e-13   49.8   2.9    1.9  1  Ion_trans_2  Ion channel
+
+
+Domain annotation for each model (and alignments):
+>> SK_channel  Calcium-activated SK potassium channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.8   0.2   4.7e-52     3e-48       1     116 [.      92     206 ..      92     208 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 162.8 bits;  conditional E-value: 4.7e-52
+             SK_channel   1 rlkerkellekrrrltdfalvlalfGivlmvietEltalkvvsksslvslalkvlislsTvlLLvlivlyhaaeiqlflvdngaedwr 88 
+                            rl +r++l+ekr+rl+d+al++++fGiv+mv etEl++  v++k+sl+s+alk+lislsT++LL l+vlyha eiqlf+vdnga+dwr
+  sp|Q92952|KCNN1_HUMAN  92 RLGHRRALFEKRKRLSDYALIFGMFGIVVMVTETELSWG-VYTKESLYSFALKCLISLSTAILLGLVVLYHAREIQLFMVDNGADDWR 178
+                            6899**********************************9.89********************************************** PP
+
+             SK_channel  89 valtserilkillEllvcaihPiPgeie 116
+                            +a+t+er++ i lEl+vcaihP+Pg+++
+  sp|Q92952|KCNN1_HUMAN 179 IAMTCERVFLISLELAVCAIHPVPGHYR 206
+                            *************************886 PP
+
+>> CaMBD  Calmodulin binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.1   7.6   1.7e-37   1.1e-33       1      75 []     384     461 ..     384     461 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 115.1 bits;  conditional E-value: 1.7e-37
+                  CaMBD   1 dtqltkelknaAAnVLretWliykhtklvkkrdqsrvrkhqrklLqAIhe...lrkvklkqrklrdqantlvdlskaq 75 
+                            dtqltk++knaAAnVLretWliykht+lvkk dq+rvrkhqrk+LqAIh+   lr+vk++q kl+dqantl+dl+k+q
+  sp|Q92952|KCNN1_HUMAN 384 DTQLTKRVKNAAANVLRETWLIYKHTRLVKKPDQARVRKHQRKFLQAIHQaqkLRSVKIEQGKLNDQANTLTDLAKTQ 461
+                            89***********************************************9999***********************97 PP
+
+>> Ion_trans_2  Ion channel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.8   2.9   4.2e-17   2.7e-13       3      77 ..     291     369 ..     275     370 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 49.8 bits;  conditional E-value: 4.2e-17
+                            HHHTCHHHHHHHHC..........T---HHHHHHHHHHHHTTS--SSSSTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            Ion_trans_2   3 lllvlifgavfysl......eegwegwsfldalYFsfvtltTvGYGdivpltdagrlftivyillGlalfaavlsvlgevl 77 
+                            + +++i+++++ ++      +e   + +fl a++   +t++++GYGd+vp+t +g+ ++++++++G +++a+v++v+++ l
+  sp|Q92952|KCNN1_HUMAN 291 ISSWIIAAWTVRVCeryhdkQEV--TSNFLGAMWLISITFLSIGYGDMVPHTYCGKGVCLLTGIMGAGCTALVVAVVARKL 369
+                            56788888888888**9875333..56**************************************************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (543 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1222  (0.0637155); expected 383.6 (0.02)
+Passed bias filter:                      693  (0.0361333); expected 383.6 (0.02)
+Passed Vit filter:                        97  (0.00505762); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.14s 00:00:00.60 Elapsed: 00:00:00.74
+# Mc/sec: 2362.59
+//
+[ok]

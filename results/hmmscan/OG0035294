@@ -1,0 +1,54 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035294.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035294
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0G2KLR5|A0A0G2KLR5_DANRE  [L=250]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.5e-07   31.3   0.0    3.7e-07   30.8   0.0    1.2  1  Radical_SAM  Radical SAM superfamily
+    0.00022   21.3   0.0    0.00034   20.6   0.0    1.3  0  TRAM         TRAM domain
+
+
+Domain annotation for each model (and alignments):
+>> Radical_SAM  Radical SAM superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8   0.0   3.8e-11   3.7e-07     102     167 .]      13      79 ..       2      79 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 3.8e-11
+                                     -SEEEEEEBSSSHHHHHHHHTCTSHHHHHHHHHHHHHHCTSET...EEEEEEEBTTTSHHHHHHHHHHH CS
+                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxxxxxxxxxxxxx RF
+                     Radical_SAM 102 vdrvslgleaaddekvlklmnrghtfeevlealeklreagikr...vvdrivglpGendeeleellell 167
+                                     +  ++++l++a+d  vl  m+r +   ++  ++++l+e+ ++     +d+i g+pGe+de++e++l l+
+  tr|A0A0G2KLR5|A0A0G2KLR5_DANRE  13 FSFLHVPLQSASDS-VLMEMRREYCCADFTHLVDYLKER-VPGitiATDIICGFPGETDEDFEQTLALV 79 
+                                     6679**********.************************.999999*******************9875 PP
+
+>> TRAM  TRAM domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (250 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       626  (0.0326399); expected 383.6 (0.02)
+Passed bias filter:                      513  (0.026748); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.60
+# Mc/sec: 1340.59
+//
+[ok]

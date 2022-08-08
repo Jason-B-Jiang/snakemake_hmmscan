@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030720.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030720
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55F44|Q55F44_DICDI  [L=220]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-06   26.5   6.9    4.3e-06   26.1   6.9    1.1  1  PUCC      PUCC protein
+
+
+Domain annotation for each model (and alignments):
+>> PUCC  PUCC protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   6.9   2.3e-10   4.3e-06      50     197 ..       9     173 ..       2     187 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 2.3e-10
+                    PUCC  50 pyiwlGslalalg...laiaplalivlsgkgeae.aaatwaglilaavafllvGlgvslsqTallALladlaeeeerpkvvgllyvm 132
+                              ++wlG+++l+l    ++i+    ++l+g g+++  + +w+  +la     l+G+g +l++ a+l ++ ++ +e++r  +   +y+m
+  tr|Q55F44|Q55F44_DICDI   9 VFLWLGTIILMLAgslAMIIYNKPLQLQGLGTKTiVGQVWFNAVLALHSIYLIGVGFELISRAYLMMVGSTCSEQRRGFLCCFVYSM 95 
+                             59*****999874111223333456777767666689999999999999999*************************9998777654 PP
+
+                    PUCC 133 ......lligivvsaivvgallkd......ytearLir..vvqgvalitlvlnvlalWkievkskkkkeekeeeepsll 197
+                                   ++i  vvs+iv+  l++       + + ++ir  v  +v+l+ l+ +v+      +++k++ ee+ e+ + ++
+  tr|Q55F44|Q55F44_DICDI  96 siwwklMMILGVVSSIVLCGLTALvivlegFAKIKIIRlaVTDAVTLVQLFFSVICFVTSRATQKMQDEEE-EALHGVK 173
+                             33333344444566666655555455666699999988335678999999999998877777777776433.3333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (220 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       998  (0.0520361); expected 383.6 (0.02)
+Passed bias filter:                      434  (0.0226289); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.58
+# Mc/sec: 1226.21
+//
+[ok]

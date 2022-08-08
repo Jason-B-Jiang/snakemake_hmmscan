@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0027539.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0027539
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O01508|O01508_CAEEL  [L=623]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.6e-17   63.3   3.7    3.5e-10   39.9   0.5    2.2  2  Y_phosphatase  Protein-tyrosine phosphatase
+
+
+Domain annotation for each model (and alignments):
+>> Y_phosphatase  Protein-tyrosine phosphatase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.2   1.3e-09   2.5e-05      53     124 ..     256     327 ..     250     358 .. 0.82
+   2 !   39.9   0.5   1.8e-14   3.5e-10      45     176 ..     492     621 ..     479     622 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 1.3e-09
+                             GGHHHHHHHHHHTT--EEEEESBSEETTEESS---S-SSTSSEEEETTEEEEEEEEEECEESSEEEEEEEEE CS
+           Y_phosphatase  53 stvedFWrmvwqekvkvivmLtsleekgrekcaqYwpeeeeesleygkikvtlkekekedekeyvlrelevk 124
+                                +dFW  + ++++++i m  ++ ek   +c+qY p++++e l++g+i v+  ++ +    +++++++ v+
+  tr|O01508|O01508_CAEEL 256 TRTQDFWTQCHKDRISLITMFGKFLEKRGANCKQYIPDDKQEILKCGQIIVRRLTDPEYPYRHCKIQKFAVR 327
+                             5569***********************99**********************988444445556666666665 PP
+
+  == domain 2  score: 39.9 bits;  conditional E-value: 1.8e-14
+                             EEEE---GGGHHHHHHHHHHTT--EEEEESBSEETTEESS---S-SSTSSEEEETTEEEEEE.EEEECEESSEEEEEEEEEETTTTE CS
+           Y_phosphatase  45 IatQgPlkstvedFWrmvwqekvkvivmLtsleekgrekcaqYwpeeeeesleygkikvtlk.ekekedekeyvlrelevkkkkees 130
+                             I +  P ++  +dFW+m++++ + +i  + +l+ ++  +ca Y+p  +e ++++g ++v+     e++ + +++ ++l + k +e++
+  tr|O01508|O01508_CAEEL 492 IYANSPDPEQTQDFWQMILHKGIPTIHTISDLDPEETANCASYFPYGSESEKSCGIYTVKRLgI-ETQLSMNLKKQQLLIFKMGESE 577
+                             88999****************************************99999999999**999953.4445667777777777777775 PP
+
+                             EEEEEEEEEESSSSSSSSGSSSHHHHHHHHHHHHHHSTTSS-EEEE CS
+           Y_phosphatase 131 ekrevkqlqyteWpdhgvpksaksllklirkvkkskeaksgpivVh 176
+                              ++ v++ +++e  +++v +s+ + +++i++  +++  ++  +++h
+  tr|O01508|O01508_CAEEL 578 YQNVVNVTHFHEIVKNQVTDSKVRNIEIINEHVSRQ--SNPQLLIH 621
+                             55577**************99999999999988888..56666666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (623 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       766  (0.0399395); expected 383.6 (0.02)
+Passed bias filter:                      522  (0.0272173); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.45u 0.22s 00:00:00.67 Elapsed: 00:00:00.67
+# Mc/sec: 3025.64
+//
+[ok]

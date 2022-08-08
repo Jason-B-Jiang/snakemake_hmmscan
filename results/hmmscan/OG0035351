@@ -1,0 +1,77 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035351.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035351
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7FGC6|E7FGC6_DANRE  [L=547]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-22   79.1   0.0    4.1e-19   69.2   0.0    2.3  1  TIR       TIR domain
+    6.6e-12   45.9   0.7    0.00018   22.1   0.0    3.5  0  Ig_3      Immunoglobulin domain
+    2.8e-10   40.5   0.7      0.019   15.3   0.0    3.5  0  Ig_2      Immunoglobulin domain
+    3.9e-09   36.6   4.3    6.5e-05   23.1   0.0    4.1  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> TIR  TIR domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.2   0.0   8.5e-23   4.1e-19      10     157 ..     379     536 ..     366     545 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 69.2 bits;  conditional E-value: 8.5e-23
+                             .CCCHHCHHHCHHHHHTTCCTTSEEEESSTT--SSS-HHHHHHHHHHCSSEEEEEE-TTHHHHC....................CCC CS
+                     TIR  10 gsdtrenfvshllkellekqkgiklfiddrdlepGeaiadelksaIkkSrrlivvlSknyassk....................wcl 76 
+                             +s +  +f++h+l+ +le+ +g++lfi +rd  pGeai d++++   +Srrli++l  ++ ss+                    ++ 
+  tr|E7FGC6|E7FGC6_DANRE 379 SSSSAMTFALHFLPSVLEDLYGYRLFISGRDELPGEAIQDVVSDRMNRSRRLIIILTSQSCSSPqkhasdkaqdseckssyealRSA 465
+                             5677889*************************************************9988887643333333333222222222246 PP
+
+                             HHHHHHHCHHH-CTSTCEEEEECSS-HCCCHTT.HHHHHCHCCCCCCHHTTTHHHHHHHHHHSTTTTCCHHHHHHCCCC.SH CS
+                     TIR  77 eElekilecalvekgqkvilifyevdpedvrkqtGslgeafkklkkvlkeekvlkWrealteksvkdeskfikkirkai.ks 157
+                             +E+  +l+ alv++g+kvil+++e   e+       l+e++k++ + +   ++l+Wre+      + + +f+k++r+++   
+  tr|E7FGC6|E7FGC6_DANRE 466 YEQRVGLYDALVKQGLKVILVQVEDGVEEH-----LLPESLKYISRTQ---GILNWREN---ARERTNRRFWKHMRYRMpAC 536
+                             788889999**************9877766.....7***********9...******99...77899************522 PP
+
+>> Ig_3  Immunoglobulin domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Ig_2  Immunoglobulin domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.1   0.0   1.4e-08   6.5e-05       2      82 ..     221     307 ..     220     312 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 23.1 bits;  conditional E-value: 1.4e-08
+                             EESEEEEETTS-EEEEEEEE...SSSCTSEEEEEESSSSCSEEEE..EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEE CS
+                      ig   2 akplvlvleGesatLtCsvs...tqtkptdvtWkkegqtkiesqk..vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvt 82 
+                             ++++++v +G+s  ++C++    +++++td+ W  + ++  +     + keg+++   s l is vt e+   ++tC+v ++ +s++
+  tr|E7FGC6|E7FGC6_DANRE 221 PSQTHRVTLGQSYKINCKALvgmNDDDDTDLYWYTDSDSLRLDFDlsRFKEGDQEYLLSVLSISEVTAEHLNiNFTCKVDHPAGSDS 307
+                             789****************99**********************999999*********************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (547 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       603  (0.0314406); expected 383.6 (0.02)
+Passed bias filter:                      460  (0.0239846); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.43u 0.23s 00:00:00.66 Elapsed: 00:00:00.79
+# Mc/sec: 2255.85
+//
+[ok]

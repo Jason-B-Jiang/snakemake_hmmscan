@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0027872.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0027872
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q93411|Q93411_CAEEL  [L=423]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-08   34.5  13.1    2.8e-08   34.0  13.1    1.2  1  MARVEL    Membrane-associating domain
+
+
+Domain annotation for each model (and alignments):
+>> MARVEL  Membrane-associating domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.0  13.1   1.5e-12   2.8e-08       6     144 .]     280     414 ..     275     414 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 34.0 bits;  conditional E-value: 1.5e-12
+                  MARVEL   6 lgilrilqlvfaiiilgliasliakldqllgspssalnfavfvavfsflyalfllvlylfknsaftsilwplidlivdalaallwlv 92 
+                              ++++ +q+++++ ++gl+ +  +    ++   ++ +++   v ++s+ +++f lvl ++++ a    +w  +d +++a  +++wl 
+  tr|Q93411|Q93411_CAEEL 280 RLAVKAAQVILGVAVIGLVLGPMKGSSFHDFVIRTNTEWQGLVLGISVSFSFFSLVLGITSCFASNLHIWKKVDGLLTAAGCFFWLL 366
+                             5789******************996666788999***************************999999******************** PP
+
+                  MARVEL  93 afialaaglrdiscafe.snqysasltvrcgqaqaavafgflavllfaasavl 144
+                             a+ + a++  +        n    +l+++  ++++a++++f+++++f++++vl
+  tr|Q93411|Q93411_CAEEL 367 AGFVEAYYAAC-----YpPNGPRINLVCHRAEWIIACILAFINFCVFVVDFVL 414
+                             ***********.....779999999*************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (423 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       705  (0.036759); expected 383.6 (0.02)
+Passed bias filter:                      396  (0.0206476); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.62
+# Mc/sec: 2212.45
+//
+[ok]

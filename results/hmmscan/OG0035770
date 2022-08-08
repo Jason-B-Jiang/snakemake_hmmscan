@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035770.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035770
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8Q837|A0A2R8Q837_DANRE  [L=268]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.5e-60  203.2   0.3    7.6e-60  202.7   0.3    1.1  1  Integrin_beta  Integrin beta chain VWA domain
+    2.5e-12   46.4  10.8    2.5e-12   46.4  10.8    2.2  1  PSI_integrin   Integrin plexin domain
+
+
+Domain annotation for each model (and alignments):
+>> Integrin_beta  Integrin beta chain VWA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  202.7   0.3     8e-64   7.6e-60       1     126 [.     130     254 ..     130     259 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 202.7 bits;  conditional E-value: 8e-64
+                   Integrin_beta   1 aedyPvDLYyLmDlsasmkddlenlkklgkklaeelkkltsnlrlGfGsfvdktvlPfvsttpeklknpcekeeeecqp 79 
+                                     aedyP+DLYyLmDls+smkddlen+k+lg++l++e++k+ts++r+GfGsfv+ktv+P++sttp+kl npc++ +++c++
+  tr|A0A2R8Q837|A0A2R8Q837_DANRE 130 AEDYPIDLYYLMDLSYSMKDDLENVKNLGTDLMKEMQKITSDFRIGFGSFVEKTVMPYISTTPAKLLNPCTS-DQNCTS 207
+                                     689*******************************************************************98.59**** PP
+
+                   Integrin_beta  80 pfsfkhvlsLtedveeFeeevkkqkisgnlDapEggldallQaavCk 126
+                                     pfs+k+vlsLt+d ++F++ v++q+isgnlD+pEgg+da++Q+avC 
+  tr|A0A2R8Q837|A0A2R8Q837_DANRE 208 PFSYKNVLSLTDDGSQFNSLVSRQQISGNLDSPEGGFDAIMQVAVCG 254
+                                     **********************************************7 PP
+
+>> PSI_integrin  Integrin plexin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.4  10.8   2.6e-16   2.5e-12       1      46 []      18      69 ..      18      69 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 46.4 bits;  conditional E-value: 2.6e-16
+                    PSI_integrin  1 nsCksa..ksCkeCiqsgpsCaWCsqenft....sessRCdseeellergCs 46
+                                    n+C++a  +sC eCiq+g++C+WC++e f     ++s+RCd  e l+++gCs
+  tr|A0A2R8Q837|A0A2R8Q837_DANRE 18 NECTKAsaQSCGECIQAGEKCGWCTDEGFLkqgeQKSTRCDEIEALEKKGCS 69
+                                    68**9999*********************999*9*****************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (268 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       998  (0.0520361); expected 383.6 (0.02)
+Passed bias filter:                      551  (0.0287293); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 1529.68
+//
+[ok]

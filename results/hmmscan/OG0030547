@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030547.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030547
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86B18|Q86B18_DICDI  [L=651]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.1e-08   33.7   4.6    3.1e-08   33.7   4.6    3.2  1  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+    2.8e-05   24.4   3.6    2.8e-05   24.4   3.6    2.3  1  zf-met       Zinc-finger of C2H2 type
+
+
+Domain annotation for each model (and alignments):
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.7   4.6   3.2e-12   3.1e-08       1      26 [.     136     161 ..     136     162 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 33.7 bits;  conditional E-value: 3.2e-12
+                             ECBBTTTTBBBSSHHHHHCCTTSHHH CS
+             zf-C2H2_jaz   1 qfYCvlCdKyFksenaldnHlkSKkH 26 
+                             ++YC+ C+K F++e+++ +H++S kH
+  tr|Q86B18|Q86B18_DICDI 136 NYYCPFCKKKFQTEQTWNTHINSSKH 161
+                             59************************ PP
+
+>> zf-met  Zinc-finger of C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   3.6     3e-09   2.8e-05       1      25 []     137     161 ..     137     161 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 3e-09
+                  zf-met   1 fyCelCnvtftSesqlksHlqgKKH 25 
+                             +yC  C+++f+ e+++++H ++ KH
+  tr|Q86B18|Q86B18_DICDI 137 YYCPFCKKKFQTEQTWNTHINSSKH 161
+                             9************************ PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (651 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3213  (0.167527); expected 383.6 (0.02)
+Passed bias filter:                      663  (0.0345691); expected 383.6 (0.02)
+Passed Vit filter:                       339  (0.0176756); expected 19.2 (0.001)
+Passed Fwd filter:                        97  (0.00505762); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.37u 0.26s 00:00:01.63 Elapsed: 00:00:01.13
+# Mc/sec: 1866.31
+//
+[ok]

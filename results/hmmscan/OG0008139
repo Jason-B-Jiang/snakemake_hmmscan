@@ -1,0 +1,367 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008139.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008139
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7FCU0|E7FCU0_DANRE  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-35  122.2   0.0    3.4e-35  120.7   0.0    1.8  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+    8.2e-28   96.2   0.9    1.4e-27   95.4   0.9    1.4  1  NPM1-C         Nucleophosmin C-terminal domain
+    7.3e-07   29.9   0.0    7.3e-07   29.9   0.0    2.9  1  NPL            Nucleoplasmin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.7   0.0   5.4e-39   3.4e-35       1     102 []      12     111 ..      12     111 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 120.7 bits;  conditional E-value: 5.4e-39
+           Nucleoplasmin   1 lfGcelkkekkevtfkeeeeekeehkLllkqvcLgaeakdevnvveveavneekkkikvpiasLkasvqpmvsldgleldppvtfrL 87 
+                             l+Gcelk+ k ++tf+ e+++  +h+L+++++c+++++kde+nvve+e++++e++k+k+++a+Lk s++p+v l+g+e++ppv+frL
+  tr|E7FCU0|E7FCU0_DANRE  12 LYGCELKAGK-DITFNPEDDD-YDHQLSVRMACVDPSTKDELNVVEIEGQDSEGQKVKAVLATLKPSTLPSVCLGGFEITPPVVFRL 96 
+                             7********9.89***99999.***************************************************************** PP
+
+           Nucleoplasmin  88 kkGsGpVhisGqhlv 102
+                             ++GsGpVhisGqhlv
+  tr|E7FCU0|E7FCU0_DANRE  97 RTGSGPVHISGQHLV 111
+                             *************96 PP
+
+>> NPM1-C  Nucleophosmin C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.4   0.9   2.3e-31   1.4e-27       2      49 .]     230     277 ..     229     277 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.4 bits;  conditional E-value: 2.3e-31
+                  NPM1-C   2 dIKaKmqasveKgvsLPkveaKFinyvKncFkmtDqeviqdLWqwrqs 49 
+                             dIK+Km++sv KgvsLPkv+ KF+nyv+ncFk tD++v+++LW+wrq+
+  tr|E7FCU0|E7FCU0_DANRE 230 DIKSKMMESVAKGVSLPKVQLKFENYVNNCFKGTDPKVVEELWKWRQT 277
+                             9**********************************************7 PP
+
+>> NPL  Nucleoplasmin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.0   1.1e-10   7.3e-07       1     112 [.      12     108 ..      12     110 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 1.1e-10
+                     NPL   1 fwglevppgkpvvlevpad.....fritmaaldpsaeekkeakekertvvkvkvekekekekeeeeddeeeeeleefvlCtLdpekn 82 
+                             ++g+e+++gk +++++++d     + + ma++dps+++       e +vv+++ +++             e++  + vl+tL+p++ 
+  tr|E7FCU0|E7FCU0_DANRE  12 LYGCELKAGKDITFNPEDDdydhqLSVRMACVDPSTKD-------ELNVVEIEGQDS-------------EGQKVKAVLATLKPSTL 78 
+                             6**************888888888**********9332.......334444444444.............566779*********** PP
+
+                     NPL  83 yqqpld.ltisegeevffkv.tGthtVhLtGn 112
+                             +++ l  + i++  +v+f++ tG+++Vh++G 
+  tr|E7FCU0|E7FCU0_DANRE  79 PSVCLGgFEITP--PVVFRLrTGSGPVHISGQ 108
+                             ***997466666..677766379*******97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1422  (0.0741436); expected 383.6 (0.02)
+Passed bias filter:                      623  (0.0324834); expected 383.6 (0.02)
+Passed Vit filter:                       183  (0.00954169); expected 19.2 (0.001)
+Passed Fwd filter:                        80  (0.00417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.72u 0.28s 00:00:01.00 Elapsed: 00:00:01.02
+# Mc/sec: 888.46
+//
+Query:       tr|A0A0A0MPF3|A0A0A0MPF3_DANRE  [L=160]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      4e-36  123.7   0.1    8.5e-36  122.7   0.0    1.6  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+    4.8e-08   33.7   2.3    1.9e-07   31.8   0.0    2.2  1  NPL            Nucleoplasmin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.7   0.0   8.9e-40   8.5e-36       1     102 []      12     111 ..      12     111 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 122.7 bits;  conditional E-value: 8.9e-40
+                   Nucleoplasmin   1 lfGcelkkekkevtfkeeeeekeehkLllkqvcLgaeakdevnvveveavneekkkikvpiasLkasvqpmvsldglel 79 
+                                     l+Gcelk+ k ++tf+ e+++  +h+L+++++c+++++kde+nvve+e++++e++k+k+++a+Lk s++p+v l+g+e+
+  tr|A0A0A0MPF3|A0A0A0MPF3_DANRE  12 LYGCELKAGK-DITFNPEDDD-YDHQLSVRMACVDPSTKDELNVVEIEGQDSEGQKVKAVLATLKPSTLPSVCLGGFEI 88 
+                                     7********9.89***99999.********************************************************* PP
+
+                   Nucleoplasmin  80 dppvtfrLkkGsGpVhisGqhlv 102
+                                     +ppv+frL++GsGpVhisGqhlv
+  tr|A0A0A0MPF3|A0A0A0MPF3_DANRE  89 TPPVVFRLRTGSGPVHISGQHLV 111
+                                     *********************96 PP
+
+>> NPL  Nucleoplasmin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.8   0.0   1.9e-11   1.9e-07       1     112 [.      12     108 ..      12     110 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 31.8 bits;  conditional E-value: 1.9e-11
+                             NPL   1 fwglevppgkpvvlevpad.....fritmaaldpsaeekkeakekertvvkvkvekekekekeeeeddeeeeeleefvl 74 
+                                     ++g+e+++gk +++++++d     + + ma++dps+++       e +vv+++ +++             e++  + vl
+  tr|A0A0A0MPF3|A0A0A0MPF3_DANRE  12 LYGCELKAGKDITFNPEDDdydhqLSVRMACVDPSTKD-------ELNVVEIEGQDS-------------EGQKVKAVL 70 
+                                     6**************888888888**********9332.......334444444444.............566779*** PP
+
+                             NPL  75 CtLdpeknyqqpld.ltisegeevffkv.tGthtVhLtGn 112
+                                     +tL+p++ +++ l  + i++  +v+f++ tG+++Vh++G 
+  tr|A0A0A0MPF3|A0A0A0MPF3_DANRE  71 ATLKPSTLPSVCLGgFEITP--PVVFRLrTGSGPVHISGQ 108
+                                     ***********997466666..677766379********7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (160 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       958  (0.0499505); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.74
+# Mc/sec: 696.24
+//
+Query:       tr|E9QGH7|E9QGH7_DANRE  [L=214]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.4e-28   96.8   0.9    9.3e-28   96.0   0.9    1.4  1  NPM1-C         Nucleophosmin C-terminal domain
+    4.4e-09   36.9   0.4    4.4e-09   36.9   0.4    2.5  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+
+
+Domain annotation for each model (and alignments):
+>> NPM1-C  Nucleophosmin C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.0   0.9   9.7e-32   9.3e-28       2      49 .]     165     212 ..     164     212 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.0 bits;  conditional E-value: 9.7e-32
+                  NPM1-C   2 dIKaKmqasveKgvsLPkveaKFinyvKncFkmtDqeviqdLWqwrqs 49 
+                             dIK+Km++sv KgvsLPkv+ KF+nyv+ncFk tD++v+++LW+wrq+
+  tr|E9QGH7|E9QGH7_DANRE 165 DIKSKMMESVAKGVSLPKVQLKFENYVNNCFKGTDPKVVEELWKWRQT 212
+                             9**********************************************7 PP
+
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.9   0.4   4.6e-13   4.4e-09      76     102 .]      20      46 ..      15      46 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 36.9 bits;  conditional E-value: 4.6e-13
+           Nucleoplasmin  76 gleldppvtfrLkkGsGpVhisGqhlv 102
+                             g +++ppv+frL++GsGpVhisGqhlv
+  tr|E9QGH7|E9QGH7_DANRE  20 GKDITPPVVFRLRTGSGPVHISGQHLV 46 
+                             5689*********************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (214 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1424  (0.0742479); expected 383.6 (0.02)
+Passed bias filter:                      601  (0.0313364); expected 383.6 (0.02)
+Passed Vit filter:                       184  (0.00959383); expected 19.2 (0.001)
+Passed Fwd filter:                        88  (0.00458835); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.67u 0.21s 00:00:00.88 Elapsed: 00:00:00.98
+# Mc/sec: 705.34
+//
+Query:       tr|F1QW36|F1QW36_DANRE  [L=192]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.9e-28   96.9   0.9    7.7e-28   96.3   0.9    1.3  1  NPM1-C         Nucleophosmin C-terminal domain
+    4.6e-08   33.6   0.3    4.6e-08   33.6   0.3    2.0  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+
+
+Domain annotation for each model (and alignments):
+>> NPM1-C  Nucleophosmin C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.3   0.9     8e-32   7.7e-28       2      49 .]     143     190 ..     142     190 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.3 bits;  conditional E-value: 8e-32
+                  NPM1-C   2 dIKaKmqasveKgvsLPkveaKFinyvKncFkmtDqeviqdLWqwrqs 49 
+                             dIK+Km++sv KgvsLPkv+ KF+nyv+ncFk tD++v+++LW+wrq+
+  tr|F1QW36|F1QW36_DANRE 143 DIKSKMMESVAKGVSLPKVQLKFENYVNNCFKGTDPKVVEELWKWRQT 190
+                             9**********************************************7 PP
+
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.6   0.3   4.8e-12   4.6e-08      80     102 .]       1      23 [.       1      23 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 33.6 bits;  conditional E-value: 4.8e-12
+           Nucleoplasmin  80 dppvtfrLkkGsGpVhisGqhlv 102
+                             +ppv+frL++GsGpVhisGqhlv
+  tr|F1QW36|F1QW36_DANRE   1 TPPVVFRLRTGSGPVHISGQHLV 23 
+                             69*******************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (192 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1309  (0.0682517); expected 383.6 (0.02)
+Passed bias filter:                      595  (0.0310235); expected 383.6 (0.02)
+Passed Vit filter:                       109  (0.0056833); expected 19.2 (0.001)
+Passed Fwd filter:                        45  (0.00234632); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.56u 0.21s 00:00:00.77 Elapsed: 00:00:00.92
+# Mc/sec: 679.04
+//
+Query:       tr|F1QGI4|F1QGI4_DANRE  [L=281]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.1e-35  122.3   0.0    3.5e-35  120.7   0.0    1.9  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+    8.3e-28   96.2   0.9    1.5e-27   95.4   0.9    1.4  1  NPM1-C         Nucleophosmin C-terminal domain
+    7.4e-07   29.9   0.0    7.4e-07   29.9   0.0    2.9  1  NPL            Nucleoplasmin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.7   0.0   5.4e-39   3.5e-35       1     102 []      12     111 ..      12     111 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 120.7 bits;  conditional E-value: 5.4e-39
+           Nucleoplasmin   1 lfGcelkkekkevtfkeeeeekeehkLllkqvcLgaeakdevnvveveavneekkkikvpiasLkasvqpmvsldgleldppvtfrL 87 
+                             l+Gcelk+ k ++tf+ e+++  +h+L+++++c+++++kde+nvve+e++++e++k+k+++a+Lk s++p+v l+g+e++ppv+frL
+  tr|F1QGI4|F1QGI4_DANRE  12 LYGCELKAGK-DITFNPEDDD-YDHQLSVRMACVDPSTKDELNVVEIEGQDSEGQKVKAVLATLKPSTLPSVCLGGFEITPPVVFRL 96 
+                             7********9.89***99999.***************************************************************** PP
+
+           Nucleoplasmin  88 kkGsGpVhisGqhlv 102
+                             ++GsGpVhisGqhlv
+  tr|F1QGI4|F1QGI4_DANRE  97 RTGSGPVHISGQHLV 111
+                             *************96 PP
+
+>> NPM1-C  Nucleophosmin C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.4   0.9   2.3e-31   1.5e-27       2      49 .]     232     279 ..     231     279 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.4 bits;  conditional E-value: 2.3e-31
+                  NPM1-C   2 dIKaKmqasveKgvsLPkveaKFinyvKncFkmtDqeviqdLWqwrqs 49 
+                             dIK+Km++sv KgvsLPkv+ KF+nyv+ncFk tD++v+++LW+wrq+
+  tr|F1QGI4|F1QGI4_DANRE 232 DIKSKMMESVAKGVSLPKVQLKFENYVNNCFKGTDPKVVEELWKWRQT 279
+                             9**********************************************7 PP
+
+>> NPL  Nucleoplasmin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.0   1.2e-10   7.4e-07       1     112 [.      12     108 ..      12     110 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 1.2e-10
+                     NPL   1 fwglevppgkpvvlevpad.....fritmaaldpsaeekkeakekertvvkvkvekekekekeeeeddeeeeeleefvlCtLdpekn 82 
+                             ++g+e+++gk +++++++d     + + ma++dps+++       e +vv+++ +++             e++  + vl+tL+p++ 
+  tr|F1QGI4|F1QGI4_DANRE  12 LYGCELKAGKDITFNPEDDdydhqLSVRMACVDPSTKD-------ELNVVEIEGQDS-------------EGQKVKAVLATLKPSTL 78 
+                             6**************888888888**********9332.......334444444444.............566779*********** PP
+
+                     NPL  83 yqqpld.ltisegeevffkv.tGthtVhLtGn 112
+                             +++ l  + i++  +v+f++ tG+++Vh++G 
+  tr|F1QGI4|F1QGI4_DANRE  79 PSVCLGgFEITP--PVVFRLrTGSGPVHISGQ 108
+                             ***997466666..677766379*******97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (281 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1481  (0.0772199); expected 383.6 (0.02)
+Passed bias filter:                      639  (0.0333177); expected 383.6 (0.02)
+Passed Vit filter:                       183  (0.00954169); expected 19.2 (0.001)
+Passed Fwd filter:                        80  (0.00417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.71u 0.25s 00:00:00.96 Elapsed: 00:00:00.94
+# Mc/sec: 964.16
+//
+Query:       sp|P06748|NPM_HUMAN  [L=294]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-40  138.3   0.0    2.4e-40  137.3   0.0    1.6  1  Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+      3e-33  113.6   1.1      3e-33  113.6   1.1    2.2  1  NPM1-C         Nucleophosmin C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Nucleoplasmin  Nucleoplasmin/nucleophosmin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  137.3   0.0   2.5e-44   2.4e-40       1     102 []      18     117 ..      18     117 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 137.3 bits;  conditional E-value: 2.5e-44
+        Nucleoplasmin   1 lfGcelkkekkevtfkeeeeekeehkLllkqvcLgaeakdevnvveveavneekkkikvpiasLkasvqpmvsldgleldppvtfrLkkG 90 
+                          lfGcelk++k +++fk +++e +eh+L+l++v+Lga+akde+++ve+ea+n+e++ ikv++a+Lk+svqp+vsl+g+e++ppv++rLk+G
+  sp|P06748|NPM_HUMAN  18 LFGCELKADK-DYHFKVDNDE-NEHQLSLRTVSLGAGAKDELHIVEAEAMNYEGSPIKVTLATLKMSVQPTVSLGGFEITPPVVLRLKCG 105
+                          7********9.99*******9.******************************************************************** PP
+
+        Nucleoplasmin  91 sGpVhisGqhlv 102
+                          sGpVhisGqhlv
+  sp|P06748|NPM_HUMAN 106 SGPVHISGQHLV 117
+                          **********96 PP
+
+>> NPM1-C  Nucleophosmin C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.6   1.1   3.1e-37     3e-33       1      49 []     245     293 ..     245     293 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 113.6 bits;  conditional E-value: 3.1e-37
+               NPM1-C   1 edIKaKmqasveKgvsLPkveaKFinyvKncFkmtDqeviqdLWqwrqs 49 
+                          edIKaKmqas+eKg+sLPkveaKFinyvKncF+mtDqe+iqdLWqwr+s
+  sp|P06748|NPM_HUMAN 245 EDIKAKMQASIEKGGSLPKVEAKFINYVKNCFRMTDQEAIQDLWQWRKS 293
+                          8***********************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (294 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1311  (0.068356); expected 383.6 (0.02)
+Passed bias filter:                      554  (0.0288858); expected 383.6 (0.02)
+Passed Vit filter:                       134  (0.00698681); expected 19.2 (0.001)
+Passed Fwd filter:                        47  (0.0024506); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.20s 00:00:00.82 Elapsed: 00:00:00.97
+# Mc/sec: 979.20
+//
+[ok]

@@ -1,0 +1,118 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0023764.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0023764
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P40161  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-44  151.8   0.9    1.2e-44  151.8   0.9    1.7  1  PH_18     Pleckstrin homology domain
+    2.5e-27   95.2   0.2    6.6e-27   93.8   0.1    1.8  1  Rtt106    Histone chaperone Rttp106-like
+    7.4e-20   70.3   0.1    1.7e-19   69.2   0.1    1.6  1  Rtt106_N  Histone chaperone Rtt106 N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> PH_18  Pleckstrin homology domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  151.8   0.9   1.9e-48   1.2e-44       1     141 []      66     203 ..      66     203 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 151.8 bits;  conditional E-value: 1.9e-48
+   PH_18   1 eieeeeiifelkevsvlsPlRkklnlvlhlseeekkpvLslvkkkdekpelsiedLkesiklavlLpvpeKknivyLlivldekkedskkkdpiliqlNkdlv 103
+             ei+e+++if+l+ vsvlsPlRkkl+lv+ ls+ + +pv++l   k +  elsi +L+++ik+a++LpvpeK n++yL++++ ++ ed+k ++p++++lNk+++
+  P40161  66 EISETNTIFKLEGVSVLSPLRKKLDLVFYLSNVDGSPVITLL--KGNDRELSIYQLNKNIKMASFLPVPEKPNLIYLFMTY-TSCEDNKFSEPVVMTLNKENT 165
+             5899**************************************..88889********************************.9999***************** PP
+
+   PH_18 104 kkqlkkkgkleaeaedfekiidylrrQakltGirlvdy 141
+             ++q+k+ g+l+++ +dfek+++y+r+Qa+ltG+++ ++
+  P40161 166 LNQFKNLGLLDSNVTDFEKCVEYIRKQAILTGFKISNP 203
+             ***********************************985 PP
+
+>> Rtt106  Histone chaperone Rttp106-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.8   0.1     1e-30   6.6e-27       2      88 .]     221     307 ..     220     307 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 93.8 bits;  conditional E-value: 1e-30
+             -EEEEETTEEEEEEEESSEEEE.ESSS-EEEEGGGEEEEEEE-------EEEEEEEEST.-EEEEEEEEGGGHHHHHHHHHHTT--EEE CS
+  Rtt106   2 gVkasrkakeGlLypleegllf.fkkPalfiplsdiesvsfeRvsvtsrtfdlvvtlkk.eevefsmIdqeeldgieeylkskkikiks 88 
+             + +++r++keG+Ly+l+++++f fkkP+l+++ sdies++++  s+t+ tf+  +++k+ e++efsmIdq e+ +i++y+k+k++k+ks
+  P40161 221 HLQCHRGTKEGTLYFLPDHIIFgFKKPILLFDASDIESITYS--SITRLTFNASLVTKDgEKYEFSMIDQTEYAKIDDYVKRKQMKDKS 307
+             679***************************************..*************889*************************9985 PP
+
+>> Rtt106_N  Histone chaperone Rtt106 N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.2   0.1   2.6e-23   1.7e-19       2      46 .]       5      50 ..       4      50 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 69.2 bits;  conditional E-value: 2.6e-23
+              CCCCS-HHHHHHHHHHHTT-TTHHHHHHHHHHHHHHC.S---SSSS CS
+  Rtt106_N  2 FLdeLPeeLrsKvekItsvlPsSleiFeELYnfakse.sndekkRK 46
+              FLdeLPe+L++K+ ++++vlPsSleiFeELY++a++e snd++ R+
+    P40161  5 FLDELPESLSRKIGTVVRVLPSSLEIFEELYKYALNEnSNDRSGRH 50
+              ****************************************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1265  (0.0659576); expected 383.6 (0.02)
+Passed bias filter:                      433  (0.0225768); expected 383.6 (0.02)
+Passed Vit filter:                        63  (0.00328484); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.78
+# Mc/sec: 1892.17
+//
+Query:       sp|Q92348|MU183_SCHPO  [L=376]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-22   79.5   0.0    4.1e-22   78.5   0.0    1.6  1  Rtt106    Histone chaperone Rttp106-like
+
+
+Domain annotation for each model (and alignments):
+>> Rtt106  Histone chaperone Rttp106-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.5   0.0   2.1e-26   4.1e-22       1      87 [.     225     310 ..     225     311 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 78.5 bits;  conditional E-value: 2.1e-26
+                            .-EEEEETTEEEEEEEESSEEEE.ESSS-EEEEGGGEEEEEEE-------EEEEEEEEST-EEEEEEEEGGGHHHHHHHHHHTT--EE CS
+                 Rtt106   1 agVkasrkakeGlLypleegllf.fkkPalfiplsdiesvsfeRvsvtsrtfdlvvtlkkeevefsmIdqeeldgieeylkskkikik 87 
+                            +gV+a++kak+G+L++l++g+l+ f kP+lfi+l++i++ s++  +v +rtf ++++  ++ + f+m+dq+ +  +++y +++++ ++
+  sp|Q92348|MU183_SCHPO 225 YGVEANYKAKDGHLFFLRTGILWgFRKPILFIELASIQHFSYS--NVLQRTFTVNFEAGGTIYSFDMVDQSVFRAVNDYATKHGLMDS 310
+                            59*****************************************..*************88************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (376 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       637  (0.0332134); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.75
+# Mc/sec: 1615.90
+//
+[ok]

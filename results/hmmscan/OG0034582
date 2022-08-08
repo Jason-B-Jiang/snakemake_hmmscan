@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034582.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034582
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WBS8|X1WBS8_DANRE  [L=387]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.5e-08   31.9   5.0      2e-06   27.0   0.9    3.5  1  EF-hand_1  EF hand
+      1e-05   25.6   0.0    2.4e-05   24.4   0.0    1.6  1  ABM        Antibiotic biosynthesis monooxygenase
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_1  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.0   0.9   2.1e-10     2e-06       2      27 ..      65      90 ..      64      91 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 27.0 bits;  conditional E-value: 2.1e-10
+                            HHHHHHHHTTTSSSEEEHHHHHHHHH CS
+               EF-hand_1  2 lkeiFrefDkDgdGkIdfeEfkellk 27
+                            + +iFr +Dk+ dGk++feEfk++++
+  tr|X1WBS8|X1WBS8_DANRE 65 FHDIFRRADKNDDGKLSFEEFKAYFA 90
+                            789*******************9875 PP
+
+>> ABM  Antibiotic biosynthesis monooxygenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   0.0   2.5e-09   2.4e-05       2      76 ..     287     359 ..     286     360 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 2.5e-09
+                             EEEEEEEEESTTGHHHHHHHHHHHHHHHHHTSTTEEEEEEEEEETSTTEEEEEEEESSHHHHHHHHTSHHHHHHH CS
+                     ABM   2 vivvaeirvkpgkaeafldafaeaveavlakepGclgyellrstedpdevvvieeWeseealeahlksphfkaah 76 
+                             + v+ +++v +   e+f +a+++++ ++ a++  +l++ + +   +   ++++e+W+++ ++  +l+s++ k ++
+  tr|X1WBS8|X1WBS8_DANRE 287 LLVQRQMSVMENDLEEFQKALKSYADTT-ANQNDNLHVSIQK-LPEKSCYIIYEFWQDRISWMSYLQSDASKMFQ 359
+                             568889999999**************66.9***********9.**************************999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (387 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1342  (0.0699724); expected 383.6 (0.02)
+Passed bias filter:                      676  (0.0352469); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.67
+# Mc/sec: 1863.88
+//
+[ok]

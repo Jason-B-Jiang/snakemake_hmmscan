@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039629.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039629
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8NHS4|CLHC1_HUMAN  [L=586]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.6e-28   97.9   1.3    4.6e-28   97.9   1.3    2.6  1  TSNAXIP1_N       Translin-associated factor X-interacting N-t
+    5.3e-12   45.7   0.0    2.3e-11   43.6   0.0    2.0  1  Clathrin_H_link  Clathrin-H-link
+
+
+Domain annotation for each model (and alignments):
+>> TSNAXIP1_N  Translin-associated factor X-interacting N-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.9   1.3   4.8e-32   4.6e-28       2     111 .]      29     141 ..      28     141 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 97.9 bits;  conditional E-value: 4.8e-32
+             TSNAXIP1_N   2 kkleqelqklkctedgpsekrlqvyrevFedlieeftaykplLseIKkEYelyiaeLlesqreaqylkaklkllsesst......kra 83 
+                            +++ +e+++l+c+e+gp+ +++ +yr+vF+++ie++tayk +L++IKkEY+++i+++++  r++++l++klk+l+++ t      kr+
+  sp|Q8NHS4|CLHC1_HUMAN  29 RYIITETERLGCSEEGPADEYYIIYRNVFDKVIEHITAYKSILTSIKKEYDAFIETIKKDRRTTFCLHGKLKGLAAEPTalvyyrKRT 116
+                            89*********************************************************************999999999****9888 PP
+
+             TSNAXIP1_N  84 leleekreeiralekeskalleeidkLr 111
+                             +le+k   +r +e++s++++++id+++
+  sp|Q8NHS4|CLHC1_HUMAN 117 IQLEAK---MRIIESNSSKIQSQIDHIK 141
+                            8***99...****************986 PP
+
+>> Clathrin_H_link  Clathrin-H-link
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   0.0   2.4e-15   2.3e-11       9      66 .]     297     354 ..     294     354 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 2.4e-15
+        Clathrin_H_link   9 yvqqFeqllaqgnykeAakvaAssprgiLRtpetIqrfkqlpaqpgqlspllqYFgvL 66 
+                            y+++F++l++ g+y++Aa  aA+spr iLR+  t++ fk + +  g++ pll +F+ L
+  sp|Q8NHS4|CLHC1_HUMAN 297 YIERFNELISLGEYEKAACYAANSPRRILRNIGTMNTFKAVGKIRGKPLPLLLFFEAL 354
+                            789****************************************************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (586 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1038  (0.0541217); expected 383.6 (0.02)
+Passed bias filter:                      527  (0.027478); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.49u 0.21s 00:00:00.70 Elapsed: 00:00:00.80
+# Mc/sec: 2372.04
+//
+[ok]

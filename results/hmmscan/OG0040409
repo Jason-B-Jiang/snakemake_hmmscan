@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040409.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040409
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q96F83|CLBA1_HUMAN  [L=325]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.8e-39  132.6   0.8    7.7e-39  131.6   0.8    1.5  1  Clathrin_bdg  Clathrin-binding box of Aftiphilin, vesicle tra
+
+
+Domain annotation for each model (and alignments):
+>> Clathrin_bdg  Clathrin-binding box of Aftiphilin, vesicle trafficking
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.6   0.8     4e-43   7.7e-39       1      80 []     193     272 ..     193     272 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 131.6 bits;  conditional E-value: 4e-43
+           Clathrin_bdg   1 srklWraLqdtdttsasrclWseSrcqenlllvLGIDaaqkalsggqghtlegpdlkepedlasvsgfrlepckaliqtk 80 
+                            srklWraLq+++tts+s+ lWseSrcqen++lvLGIDaaqk+lsggqgh++e+ dlkepe l++vs+f l++ckaliqtk
+  sp|Q96F83|CLBA1_HUMAN 193 SRKLWRALQSIHTTSTSQRLWSESRCQENFFLVLGIDAAQKNLSGGQGHIMEDCDLKEPEGLLTVSSFCLQHCKALIQTK 272
+                            89*****************************************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (325 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       501  (0.0261223); expected 383.6 (0.02)
+Passed bias filter:                      385  (0.020074); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.64
+# Mc/sec: 1646.20
+//
+[ok]

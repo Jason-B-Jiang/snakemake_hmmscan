@@ -1,0 +1,479 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008555.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008555
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P34501|YMS5_CAEEL  [L=1385]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-45  154.0   7.5    1.2e-44  152.2   7.5    2.0  1  AMOP      AMOP domain
+    1.8e-44  151.8   0.0    3.8e-44  150.8   0.0    1.6  1  VWD       von Willebrand factor type D domain
+      3e-20   72.9   0.2      3e-20   72.9   0.2    2.8  1  NIDO      Nidogen-like
+    1.2e-06   29.1   1.4    2.6e-06   28.0   0.1    2.3  1  Sushi     Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.2   7.5   2.4e-48   1.2e-44       2     143 .]     686     836 ..     685     836 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 152.2 bits;  conditional E-value: 2.4e-48
+                  AMOP   2 tekCekWleedealknfleelp...sCPCtlkqallDlgrflpdlecdlesgkkekctykkgakhcvrsslssesgagqqCCYdeegkl 87 
+                            ++C +W+e+d +++nf+ +l+   +CPC+l+qa+lDlgrf+p ++cd++   +++c ++kga+hc++s++++ sg++qqCCYd++g+l
+  sp|P34501|YMS5_CAEEL 686 IDMCIEWFEYDGKRNNFQIDLTtdfPCPCKLPQAMLDLGRFMPIMDCDKDG--DTSCPFNKGAQHCIQSVQPTFSGSSQQCCYDYDGYL 772
+                           589****************9998889************************9..556********************************* PP
+
+                  AMOP  88 lltad.........slqgstpkrahelgaapyreaekvpelShylnDvlpfllCClwadeecery 143
+                           ++t+d         ++q++tp rah++gaapyr ++++p+lS+y+ D+ p+ +CC++ad +ce y
+  sp|P34501|YMS5_CAEEL 773 MFTDDwepdgdyttFFQPGTPARAHRYGAAPYRLPPFIPTLSNYQLDLNPYRTCCKYAD-HCEFY 836
+                           *************99********************************************.**998 PP
+
+>> VWD  von Willebrand factor type D domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.8   0.0   7.9e-48   3.8e-44       1     157 []     854    1055 ..     854    1055 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 150.8 bits;  conditional E-value: 7.9e-48
+                            EEEETTTEEE-TTS-EEE---SC.........EEE.EEES--SSSTT.....-SEEEEEEEEE-SSSS-EEEEEEEEEET....... CS
+                   VWD    1 CsvsgdphitTFDgakytfpgnc.........tYv.vlaqdcseqpd.....fsvnvtvkkedagqenvsclksvkvrvg....... 65  
+                            ++++g+ph++T+Dg++yt+pg+          +Y+ +++q++ eqpd     ++vn+tv++++a+qen+s++++v++r++       
+  sp|P34501|YMS5_CAEEL  854 GYIYGEPHVITYDGIRYTMPGKGyyvltmsdsPYHkLMVQVRLEQPDdtlwhAHVNATVITGVAVQENDSSIVQVYARKPmrrwryr 940 
+                            589******************66666666777******************************************************* PP
+
+                            .TEEEEEETT........EEEEEE--SSS---......EEEEEE........TTEEEEEE....TTSEEE...EE-S.SS-EEEEE- CS
+                   VWD   66 .dveieltkrn......kkvlvngedvslplvnagq..eveilk........sgfvvvdv....ppgvelt.vdgdg.ssslsvsls 129 
+                             dv++++t+r+      k++++++ d+++pl+n++q  +v++lk        +gf+++dv    pp++++t ++g++ sssl+++++
+  sp|P34501|YMS5_CAEEL  941 tDVYVDGTRRFfdkphwKHQQFKHLDIRNPLQNMNQseIVIMLKsgvgirifEGFGMLDVmvtlPPSYNTTcRPGESlSSSLNAPRG 1027
+                            *************************************9999999********888888877788*********************** PP
+
+                            GGGTTS-BSTT---SS-CCCS-B-TTS- CS
+                   VWD  130 qryqnktcGLCGnyngdpadDlltpsgt 157 
+                            qr++++t GL+G+yn+dpadDl+tpsgt
+  sp|P34501|YMS5_CAEEL 1028 QRRCYTTLGLLGTYNNDPADDLTTPSGT 1055
+                            **************************97 PP
+
+>> NIDO  Nidogen-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.9   0.2   6.2e-24     3e-20       1      87 [.     362     448 ..     362     449 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 72.9 bits;  conditional E-value: 6.2e-24
+                  NIDO   1 tnTFQavLatdgsesfalflYeegglqwttgkas.....glggipaqaGFsagdsstkkkyyelpgseessirnltetsnvgvpGrwvf 84 
+                           +nTFQ+vLa+d++++fa+f+Y++  l+wt++++        g++ a+aGF+ g++   + +y lp+s+e ++ +l + snv +pGrw+ 
+  sp|P34501|YMS5_CAEEL 362 QNTFQVVLASDEIRTFAIFNYAR--LNWTSSNEAggldgFGGKQAAMAGFNGGNG---TGWYGLPYSGEGRLWKLGYFSNVLTPGRWIH 445
+                           6**********************..****87655789975578899********8...9****************************** PP
+
+                  NIDO  85 rvd 87 
+                           rvd
+  sp|P34501|YMS5_CAEEL 446 RVD 448
+                           *98 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   0.1   5.4e-10   2.6e-06       8      51 ..    1187    1230 ..    1181    1232 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 5.4e-10
+                            SSE.EE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB-- CS
+                 Sushi    8 eng.svsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWsp 51  
+                            ++g + ++   +y  g++v ++Ckp y+  g+  ++C  +gtWsp
+  sp|P34501|YMS5_CAEEL 1187 KEGvVKTPPAANYLDGDKVVFSCKPKYYIHGDIERVC-RNGTWSP 1230
+                            44523344459**************************.******8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1385 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       888  (0.0463006); expected 383.6 (0.02)
+Passed bias filter:                      554  (0.0288858); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.70u 0.22s 00:00:00.92 Elapsed: 00:00:00.85
+# Mc/sec: 5280.19
+//
+Query:       sp|Q0KHY3|MESH_DROME  [L=1454]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-50  171.2   7.2    2.9e-50  170.4   7.2    1.5  1  AMOP      AMOP domain
+    4.3e-19   69.2   0.5    1.3e-18   67.6   0.5    1.9  1  NIDO      Nidogen-like
+    9.3e-16   58.6   0.0    4.7e-15   56.3   0.0    2.2  1  VWD       von Willebrand factor type D domain
+    0.00011   22.8   0.1    0.00029   21.4   0.1    1.8  1  Sushi     Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  170.4   7.2     6e-54   2.9e-50       2     143 .]     661     803 ..     660     803 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 170.4 bits;  conditional E-value: 6e-54
+                  AMOP   2 tekCekWleedealknfleelpsCPCtlkqallDlgrflpdlecdlesgkkekctykkgakhcvrsslssesgagqqCCYdeegklllt 90 
+                           ++ C++W+++d++l+nf+++lp CPCtl+qa+lD+grf pd ecd++s+++  c  ++ga+hcv s +++ +ga+qqCCYd+ g l+lt
+  sp|Q0KHY3|MESH_DROME 661 RALCDNWIRADRFLRNFAADLPLCPCTLDQAVLDKGRFRPDRECDKDSNPS--CLRHRGAIHCVVSGTPVAQGAEQQCCYDRYGFLMLT 747
+                           578********************************************9776..************************************ PP
+
+                  AMOP  91 adslqgstpkrahelgaapyreaekvpelShylnDvlpfllCClwade...ecery 143
+                           +d+++gs+p+r h+lg++p++ea+kvp+lS++++D+ pf++CC w++e    ce+y
+  sp|Q0KHY3|MESH_DROME 748 YDQMWGSRPRRVHNLGKMPWNEASKVPSLSMWFHDMRPFYSCCYWQEEqavGCETY 803
+                           ***********************************************988899988 PP
+
+>> NIDO  Nidogen-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.6   0.5   2.8e-22   1.3e-18       1      88 []     334     424 ..     334     424 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 67.6 bits;  conditional E-value: 2.8e-22
+                  NIDO   1 tnTFQavLatdgsesfalflYeegglqwttgkas......glggipaqaGFsagdsstkkkyyelpgseessirnltetsnv.gvpGrw 82 
+                           tnTFQ+vLatd+ +++ +f+Y+   l+w ++++       g+gg+pa +GF+ag++ t+   y+ p+s++  ir+l+++  + g pGr+
+  sp|Q0KHY3|MESH_DROME 334 TNTFQMVLATDEVYTYIIFNYAV--LNWLSHTEAggdttkGEGGVPAYVGFNAGNG-TQAYEYN-PYSQNMVIRDLANRGWAnGFPGRH 418
+                           7**********************..****7644446677899*************7.4445555.99*************966****** PP
+
+                  NIDO  83 vfrvds 88 
+                           +frvd+
+  sp|Q0KHY3|MESH_DROME 419 IFRVDE 424
+                           ****95 PP
+
+>> VWD  von Willebrand factor type D domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.3   0.0   9.9e-19   4.7e-15       3     157 .]     824    1000 ..     822    1000 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 56.3 bits;  conditional E-value: 9.9e-19
+                            EETTTEEE-TTS-EEE---SCEEEEEES--SSSTT...............-SEEEEEEEEE-SSSS-EEEEEEEEEET......TEE CS
+                   VWD    3 vsgdphitTFDgakytfpgnctYvvlaqdcseqpd...............fsvnvtvkkedagqenvsclksvkvrvg......dve 68  
+                            v+gdph++TFDg+ ytf+g  ++v la++ +e+ +                +v++t  + +a   n++   +++vr+       ++ 
+  sp|Q0KHY3|MESH_DROME  824 VFGDPHFVTFDGTAYTFNGLGEFV-LARSVDESNKfevqgrfeqlpvnyyGEVKATQLTAVAMRGNTT--TTIEVRLRplharwRYR 907 
+                            89**********************.8888888877678888888777777666666666666555553..44444444335555444 PP
+
+                            EEEETT..EEEEEE--SSS---.......EEEEEETTEEEEEETTSEEE...EE-SSS-EEEEE-GGGTTS-BSTT---SS-CCCS- CS
+                   VWD   69 ieltkrnkkvlvngedvslplvnagq...eveilksgfvvvdvppgvelt.vdgdgssslsvslsqryqnktcGLCGnyngdpadDl 151 
+                             ++  + ++v ++ e+ + ++++       +  l++  vvv+++ g+++  v  +g ++ +v l++++ nkt GL Gn+  ++ dD+
+  sp|Q0KHY3|MESH_DROME  908 LDVLADGRRVYFDRESLKFQHFDGVTvytPTYLLNQSQVVVQFDAGIGVEvVENEGYMTGRVFLPWKFINKTAGLFGNWSFNKLDDF 994 
+                            4433333677888887777776555554434444466699999******9899999******************************* PP
+
+                            B-TTS- CS
+                   VWD  152 ltpsgt 157 
+                            ++p+g+
+  sp|Q0KHY3|MESH_DROME  995 MLPNGQ 1000
+                            ****95 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.1   6.1e-08   0.00029       1      52 [.    1121    1170 ..    1121    1177 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 6.1e-08
+                            B-S----SSE.EE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB--- CS
+                 Sushi    1 CppPrdleng.svsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWspa 52  
+                            C++++++ +g ++s     +  ga+v++eC++G+ l g++++ C  +g W+ +
+  sp|Q0KHY3|MESH_DROME 1121 CGVLQTPRFGrKLS---FDFMPGAKVSFECNEGFILIGDQRRECLSNGLWNIP 1170
+                            66666666666666...5799*****************************855 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1454 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       520  (0.027113); expected 383.6 (0.02)
+Passed bias filter:                      431  (0.0224725); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.61u 0.17s 00:00:00.78 Elapsed: 00:00:00.73
+# Mc/sec: 6442.38
+//
+Query:       tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME  [L=1243]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-50  171.5   7.2    2.3e-50  170.7   7.2    1.5  1  AMOP      AMOP domain
+    3.8e-19   69.4   0.5    1.1e-18   67.9   0.5    1.9  1  NIDO      Nidogen-like
+    6.5e-16   59.1   0.0    3.8e-15   56.6   0.0    2.3  1  VWD       von Willebrand factor type D domain
+    8.9e-05   23.1   0.1    0.00024   21.7   0.1    1.8  1  Sushi     Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  170.7   7.2   4.8e-54   2.3e-50       2     143 .]     661     803 ..     660     803 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 170.7 bits;  conditional E-value: 4.8e-54
+                            AMOP   2 tekCekWleedealknfleelpsCPCtlkqallDlgrflpdlecdlesgkkekctykkgakhcvrsslssesgagqqCC 80 
+                                     ++ C++W+++d++l+nf+++lp CPCtl+qa+lD+grf pd ecd++s+++  c  ++ga+hcv s +++ +ga+qqCC
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME 661 RALCDNWIRADRFLRNFAADLPLCPCTLDQAVLDKGRFRPDRECDKDSNPS--CLRHRGAIHCVVSGTPVAQGAEQQCC 737
+                                     578********************************************9776..************************** PP
+
+                            AMOP  81 YdeegkllltadslqgstpkrahelgaapyreaekvpelShylnDvlpfllCClwade...ecery 143
+                                     Yd+ g l+lt+d+++gs+p+r h+lg++p++ea+kvp+lS++++D+ pf++CC w++e    ce+y
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME 738 YDRYGFLMLTYDQMWGSRPRRVHNLGKMPWNEASKVPSLSMWFHDMRPFYSCCYWQEEqavGCETY 803
+                                     *********************************************************988899988 PP
+
+>> NIDO  Nidogen-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.9   0.5   2.3e-22   1.1e-18       1      88 []     334     424 ..     334     424 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 67.9 bits;  conditional E-value: 2.3e-22
+                            NIDO   1 tnTFQavLatdgsesfalflYeegglqwttgkas......glggipaqaGFsagdsstkkkyyelpgseessirnltet 73 
+                                     tnTFQ+vLatd+ +++ +f+Y+   l+w ++++       g+gg+pa +GF+ag++ t+   y+ p+s++  ir+l+++
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME 334 TNTFQMVLATDEVYTYIIFNYAV--LNWLSHTEAggdttkGEGGVPAYVGFNAGNG-TQAYEYN-PYSQNMVIRDLANR 408
+                                     7**********************..****7644446677899*************7.4445555.99************ PP
+
+                            NIDO  74 snv.gvpGrwvfrvds 88 
+                                       + g pGr++frvd+
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME 409 GWAnGFPGRHIFRVDE 424
+                                     *966**********95 PP
+
+>> VWD  von Willebrand factor type D domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   0.0   7.9e-19   3.8e-15       3     157 .]     824    1000 ..     822    1000 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 7.9e-19
+                                      EETTTEEE-TTS-EEE---SCEEEEEES--SSSTT...............-SEEEEEEEEE-SSSS-EEEEEEEEEE CS
+                             VWD    3 vsgdphitTFDgakytfpgnctYvvlaqdcseqpd...............fsvnvtvkkedagqenvsclksvkvrv 64  
+                                      v+gdph++TFDg+ ytf+g  ++v la++ +e+ +                +v++t  + +a   n++   +++vr+
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME  824 VFGDPHFVTFDGTAYTFNGLGEFV-LARSVDESNKfevqgrfeqlpvnyyGEVKATQLTAVAMRGNTT--TTIEVRL 897 
+                                      89**********************.8888888877678888888777777666666666666555553..4444444 PP
+
+                                      T......TEEEEEETT..EEEEEE--SSS---.......EEEEEETTEEEEEETTSEEE...EE-SSS-EEEEE-GG CS
+                             VWD   65 g......dveieltkrnkkvlvngedvslplvnagq...eveilksgfvvvdvppgvelt.vdgdgssslsvslsqr 131 
+                                             ++  ++  + ++v ++ e+ + ++++       +  l++  vvv+++ g+++  v  +g ++ +v l+++
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME  898 RplharwRYRLDVLADGRRVYFDRESLKFQHFDGVTvytPTYLLNQSQVVVQFDAGIGVEvVENEGYMTGRVFLPWK 974 
+                                      43355554444433333677888887777776555554434444466699999******9899999*********** PP
+
+                                      GTTS-BSTT---SS-CCCS-B-TTS- CS
+                             VWD  132 yqnktcGLCGnyngdpadDlltpsgt 157 
+                                      + nkt GL Gn+  ++ dD+++p+g+
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME  975 FINKTAGLFGNWSFNKLDDFMLPNGQ 1000
+                                      ************************95 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.7   0.1   5.1e-08   0.00024       1      52 [.    1121    1170 ..    1121    1177 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 21.7 bits;  conditional E-value: 5.1e-08
+                                      B-S----SSE.EE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB--- CS
+                           Sushi    1 CppPrdleng.svsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWspa 52  
+                                      C++++++ +g ++s     +  ga+v++eC++G+ l g++++ C  +g W+ +
+  tr|A0A0B4LHZ4|A0A0B4LHZ4_DROME 1121 CGVLQTPRFGrKLS---FDFMPGAKVSFECNEGFILIGDQRRECLSNGLWNIP 1170
+                                      66666666666666...5799*****************************855 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1243 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       557  (0.0290422); expected 383.6 (0.02)
+Passed bias filter:                      473  (0.0246624); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.57u 0.19s 00:00:00.76 Elapsed: 00:00:00.70
+# Mc/sec: 5720.91
+//
+Query:       tr|A0A0G2LAP2|A0A0G2LAP2_DANRE  [L=722]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      1e-49  168.6   6.1      1e-49  168.6   6.1    2.2  1  AMOP           AMOP domain
+    4.5e-10   40.0   1.7    1.2e-09   38.7   1.7    1.8  1  Sushi          Sushi repeat (SCR repeat)
+    1.3e-05   25.7   0.0    1.3e-05   25.7   0.0    1.7  1  VWD            von Willebrand factor type D domain
+    1.5e-05   25.4  17.5    1.5e-05   25.4  17.5    2.5  1  Somatomedin_B  Somatomedin B domain
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.6   6.1   2.1e-53     1e-49       3     143 .]     285     423 ..     283     423 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 168.6 bits;  conditional E-value: 2.1e-53
+                            AMOP   3 ekCekWleedealknfleelpsCPCtlkqallDlgrflpdlecdlesgkkekctykkgakhcvrsslsses.gagqqCC 80 
+                                     +kC  W +e++++++fl+e+++CPCtl+qa++D+grf++d+ cd+e g+   c y++ga+hcvr+++ s + gagqqCC
+  tr|A0A0G2LAP2|A0A0G2LAP2_DANRE 285 KKCLLWDKEEKSMPDFLTEITDCPCTLAQARADTGRFHTDYGCDIEAGSL--CVYHPGAVHCVRAIQGSPEyGAGQQCC 361
+                                     79********************************************9886..*****************9999****** PP
+
+                            AMOP  81 YdeegkllltadslqgstpkrahelgaapyreaekvpelShylnDvlpfllCClwadeecery 143
+                                     Yd++g ++lt+ds++gstp+r+h++g +py+++++vp++Sh+++Dv++f++CClw++ +ce+y
+  tr|A0A0G2LAP2|A0A0G2LAP2_DANRE 362 YDSTGAQVLTRDSIGGSTPDRGHDWGDPPYKKPPRVPGFSHWKYDVISFYYCCLWSH-NCEYY 423
+                                     *********************************************************.**998 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.7   1.7   2.5e-13   1.2e-09       7      56 .]     640     687 ..     634     687 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 38.7 bits;  conditional E-value: 2.5e-13
+                                     -SSEEE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB-----SE CS
+                           Sushi   7 lengsvsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWspaepeC 56 
+                                     +++g  ++  + y  ga+v+++C++Gy l gs+++tCq+dgtWs++  +C
+  tr|A0A0G2LAP2|A0A0G2LAP2_DANRE 640 PNHGQKEG--TLYLEGATVSFSCNRGYGLFGSQNRTCQADGTWSGQDTHC 687
+                                     55554444..7899********************************8899 PP
+
+>> VWD  von Willebrand factor type D domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.7   0.0   2.6e-09   1.3e-05       3      42 ..     443     479 ..     441     522 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 25.7 bits;  conditional E-value: 2.6e-09
+                                     EETTTEEE-TTS-EEE---SCEEEEEES--SSSTT-SEEE CS
+                             VWD   3 vsgdphitTFDgakytfpgnctYvvlaqdcseqpdfsvnv 42 
+                                     v gdph++TFDg+ +tf+g+ +Y+ l+++   q  +sv+ 
+  tr|A0A0G2LAP2|A0A0G2LAP2_DANRE 443 VLGDPHFITFDGVTFTFNGKGEYT-LVHSPAFQ--LSVQG 479
+                                     779*********************.99987766..55555 PP
+
+>> Somatomedin_B  Somatomedin B domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.4  17.5   3.1e-09   1.5e-05       2      39 ..      27      60 ..      26      61 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 25.4 bits;  conditional E-value: 3.1e-09
+                   Somatomedin_B  2 sCkgrCgekfeesrkaCqCdsdCveygdCCpDYeelCk 39
+                                    sC+ +Cgek    ++ C+C++ C++ +dCC+DY+++C 
+  tr|A0A0G2LAP2|A0A0G2LAP2_DANRE 27 SCARHCGEKL---NT-CSCHATCESLKDCCADYRHFCL 60
+                                    9*****8877...77.*********************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (722 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       717  (0.0373846); expected 383.6 (0.02)
+Passed bias filter:                      434  (0.0226289); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.62
+# Mc/sec: 3739.59
+//
+Query:       sp|Q9UGT4|SUSD2_HUMAN  [L=822]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.9e-54  182.9   6.9    8.1e-54  181.9   6.9    1.6  1  AMOP           AMOP domain
+    3.1e-18   66.6   0.0    5.6e-18   65.8   0.0    1.5  1  VWD            von Willebrand factor type D domain
+    1.6e-11   44.7   1.4    3.5e-11   43.6   1.4    1.6  1  Sushi          Sushi repeat (SCR repeat)
+    2.5e-06   27.8   9.1    8.8e-06   26.1   9.1    2.0  1  Somatomedin_B  Somatomedin B domain
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  181.9   6.9   1.7e-57   8.1e-54       2     143 .]     290     429 ..     289     429 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 181.9 bits;  conditional E-value: 1.7e-57
+                   AMOP   2 tekCekWleedealknfleelpsCPCtlkqallDlgrflpdlecdlesgkkekctykkgakhcvrsslsses.gagqqCCYdeegkll 88 
+                            +++C++W e +++l+nfleelp+CPCtl+qa++D+grf++d+ cd+e+g+   cty++ga+hcvrs+++s + g+gqqCCY+++g++l
+  sp|Q9UGT4|SUSD2_HUMAN 290 RTQCQAWEELEDQLPNFLEELPDCPCTLTQARADSGRFFTDYGCDMEQGSV--CTYHPGAVHCVRSVQASLRyGSGQQCCYTADGTQL 375
+                            689*********************************************887..****************99989************** PP
+
+                   AMOP  89 ltadslqgstpkrahelgaapyreaekvpelShylnDvlpfllCClwadeecery 143
+                            ltads +gstp+r+h++ga+p+r++++vp++Sh+l+Dvl+f++CClwa+ +c ry
+  sp|Q9UGT4|SUSD2_HUMAN 376 LTADSSGGSTPDRGHDWGAPPFRTPPRVPSMSHWLYDVLSFYYCCLWAP-DCPRY 429
+                            *************************************************.**998 PP
+
+>> VWD  von Willebrand factor type D domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.8   0.0   1.2e-21   5.6e-18       2     156 ..     448     612 ..     447     613 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 65.8 bits;  conditional E-value: 1.2e-21
+                            EEETTTEEE-TTS-EEE---SCEEEEEES--SSSTT-SEEEEEEEEE-SSSS-E...EEEEEEEEET...TEEEEEETT....EEEEE CS
+                    VWD   2 svsgdphitTFDgakytfpgnctYvvlaqdcseqpdfsvnvtvkkedagqenvs...clksvkvrvg...dveieltkrn..kkvlvn 81 
+                            s++gdph++TFDg+++tf+g+ +Yv l +    +  ++v++ +++++ ++ + +    l +v v+ g    ve++l  r+   +vl+n
+  sp|Q9UGT4|SUSD2_HUMAN 448 SAFGDPHFVTFDGTNFTFNGRGEYV-LLEAALTD--LRVQARAQPGTMSNGTETrgtGLTAVAVQEGnsdVVEVRLANRTggLEVLLN 532
+                            789**********************.77776666..5666666666555555444459999***9998777788888888**999999 PP
+
+                            E--SSS..---......EEEEEETTEEEEEETTSEEE..EE-S.SS-EEEEE-GGGTTS-BSTT---SS-CCCS-B-TTS CS
+                    VWD  82 gedvsl..plvnagq..eveilksgfvvvdvppgveltvdgdg.ssslsvslsqryqnktcGLCGnyngdpadDlltpsg 156
+                            +e  s   + + + +   +++   + v++ +++g +l v+ +g   s+sv l++++ ++t+GL+G+ n+dp+dD+++ sg
+  sp|Q9UGT4|SUSD2_HUMAN 533 QEVLSFteQSWMDLKgmFLSVAAGDRVSIMLASGAGLEVSVQGpFLSVSVLLPEKFLTHTHGLLGTLNNDPTDDFTLHSG 612
+                            9998866533322222344444455555555777777777777669*******************************998 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   1.4   7.3e-15   3.5e-11       7      56 .]     731     778 ..     725     778 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 7.3e-15
+                            -SSEEE-TTGS-BBTTEEEEEEE-TTEEESTT-EEEB-TTSSB-----SE CS
+                  Sushi   7 lengsvsatkeeyqvgaqveyeCkpGyrlegssvitCqedgtWspaepeC 56 
+                            ++ng  ++  + y  g++++++C+ Gy+l g ++ tCq+dgtWs+++p+C
+  sp|Q9UGT4|SUSD2_HUMAN 731 PPNGQKEG--NRYLAGSTIYFHCDNGYSLAGAETSTCQADGTWSSPTPKC 778
+                            55664444..9*************************************** PP
+
+>> Somatomedin_B  Somatomedin B domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   9.1   1.8e-09   8.8e-06       1      40 [.      29      64 ..      29      65 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 1.8e-09
+          Somatomedin_B  1 esCkgrCgekfeesrkaCqCdsdCveygdCCpDYeelCke 40
+                           esC+ rCg         C+C+  C   g+CC D++++C e
+  sp|Q9UGT4|SUSD2_HUMAN 29 ESCSMRCGALD---GP-CSCHPTCSGLGTCCLDFRDFCLE 64
+                           69*****5544...66.*********************75 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (822 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       691  (0.036029); expected 383.6 (0.02)
+Passed bias filter:                      504  (0.0262787); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.52u 0.19s 00:00:00.71 Elapsed: 00:00:00.66
+# Mc/sec: 4004.37
+//
+[ok]

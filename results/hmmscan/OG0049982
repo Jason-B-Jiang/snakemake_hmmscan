@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049982.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049982
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P30261|DPOD3_SCHPO  [L=372]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.5e-31  108.8  23.5    1.3e-23   84.2  26.1    2.0  2  CDC27     DNA polymerase subunit Cdc27
+
+
+Domain annotation for each model (and alignments):
+>> CDC27  DNA polymerase subunit Cdc27
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   1.9   7.5e-11   1.4e-06       2     195 ..      18     212 ..      17     220 .. 0.70
+   2 !   84.2  26.1   6.9e-28   1.3e-23     223     427 .]     157     372 .]     147     372 .] 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 7.5e-11
+                  CDC27   2 iVTYrlLSrtLrVhvnqAKqmLyefveskkkkksaqlhaTYlvsGrkaqneetask...............ivLvreedLeeakskle 74 
+                            +VT   LS +L++ +++A++ L  f++ +       l+  Yl+ G+ ++ e +  +               ++L++ + L+e++s+l+
+  sp|P30261|DPOD3_SCHPO  18 LVTVDNLSLQLDISSEKAQEYLNMFYQGN-----DFLYPIYLIHGQPIDDEINL-EideesqpisnfpvlqYILCDKSSLQEKQSRLK 99 
+                            689999*******************9754.....469*************9543.3699***************************** PP
+
+                  CDC27  75 tvtSvhiYsvqkallkDsnvLydvdydilkenkkndskdslirgaqagpivnkevkraeelgrpplaapaseakektangkkpkaake 162
+                                  i+ ++ a+l D   L  + y+i ++    d  ++++   ++g i n++   +  +      ap++++ + + ++k++   k+
+  sp|P30261|DPOD3_SCHPO 100 SGYKTVIFALSSAPLSDFDELLPAVYEIREK----DVLYKKEDADKYGFIFNENSVPRVLK-----KAPSTHSPQLSVPSKTSTIDKT 178
+                            ****************************999....77777777778888888887776643.....2334444444555555533222 PP
+
+                  CDC27 163 kaak.etssakseskkksaekskdaskettkeka 195
+                             + + e+++ k  + ++ ++k +++ k+++++ +
+  sp|P30261|DPOD3_SCHPO 179 DTRStEKTKGKDIFSNARNQKGNSSRKNKKAPLE 212
+                            2222022222222223333333332222222222 PP
+
+  == domain 2  score: 84.2 bits;  conditional E-value: 6.9e-28
+                  CDC27 223 akpaekkkkteakeqkveeeseeekekedkeleddsaaeeeeeeekstkkekrrqkklessdeeeeer..........ekekekrkrl 300
+                            ++p+  +++ + +++++   +     +++k++ +d +   + +++k   +  r+ kk    + ++e++          e+ k +r +l
+  sp|P30261|DPOD3_SCHPO 157 KAPSTHSPQLSVPSKTSTIDK-TDTRSTEKTKGKDIF--SNARNQKGNSS--RKNKKAPLEN-HKEKEpllpkeeklsEQAKRERDDL 238
+                            333333332222222222221.111222222222222..22222222222..1111111111.11112344444555599999999** PP
+
+                  CDC27 301 kkmmeDededdemedvpespvateeeetseppvl.....lkeevekeevtesgdgrrRkrrkVlKkktikDeeGylVtekvyewESfs 383
+                            k++m+ ede      v +s   + ++++ + + +      + ++++e ++  ++g+rR++rkV K  t kDeeG+lVt+++++wESfs
+  sp|P30261|DPOD3_SCHPO 239 KNIMQLEDESVSTTSVHDSEDDNLDSNNFQLEIGteaksAAPDEPQEIIKSVSGGKRRGKRKVKKYATTKDEEGFLVTKEEEVWESFS 326
+                            ****98888887788888775555554443333244454888888888998889********************************** PP
+
+                  CDC27 384 edEeeppvkkkpaeskkasa..aaakkakapkkkkQssimSFFgkK 427
+                            edE+      ++ ++k++    a +kk+ a  k +Q+simSFFgkK
+  sp|P30261|DPOD3_SCHPO 327 EDENISTGTSNVVRNKPTTVniATKKKNTAQSKPQQKSIMSFFGKK 372
+                            ****9655555555555544114466666888999**********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (372 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1412  (0.0736222); expected 383.6 (0.02)
+Passed bias filter:                      366  (0.0190834); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.44u 0.22s 00:00:00.66 Elapsed: 00:00:00.83
+# Mc/sec: 1448.77
+//
+[ok]

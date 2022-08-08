@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026380.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026380
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EG31|G5EG31_CAEEL  [L=93]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     0.0039   17.5   2.1        2.2    9.2   0.1    2.6  2  FARP      FMRFamide related peptide family
+
+
+Domain annotation for each model (and alignments):
+>> FARP  FMRFamide related peptide family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.6   0.3   0.00039       7.5       6      11 .]      77      82 ..      73      82 .. 0.84
+   2 !    9.2   0.1   0.00012       2.2       3      11 .]      85      93 .]      83      93 .] 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 7.6 bits;  conditional E-value: 0.00039
+                    FARP  6 fmRFGR 11
+                            f+RFG+
+  tr|G5EG31|G5EG31_CAEEL 77 FIRFGK 82
+                            9****9 PP
+
+  == domain 2  score: 9.2 bits;  conditional E-value: 0.00012
+                    FARP  3 dkrfmRFGR 11
+                             + f+RFG+
+  tr|G5EG31|G5EG31_CAEEL 85 SPSFIRFGK 93
+                            567*****9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (93 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       373  (0.0194484); expected 383.6 (0.02)
+Passed bias filter:                      342  (0.017832); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.29u 0.20s 00:00:00.49 Elapsed: 00:00:00.53
+# Mc/sec: 561.84
+//
+[ok]

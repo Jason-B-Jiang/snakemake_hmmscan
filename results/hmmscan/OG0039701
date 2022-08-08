@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039701.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039701
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P83859|OX26_HUMAN  [L=136]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.2e-66  220.4   0.1    9.2e-66  220.3   0.1    1.0  1  RFamide_26RFa  Orexigenic neuropeptide Qrfp/P518
+
+
+Domain annotation for each model (and alignments):
+>> RFamide_26RFa  Orexigenic neuropeptide Qrfp/P518
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  220.3   0.1   4.8e-70   9.2e-66       1     131 []       5     135 ..       5     135 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 220.3 bits;  conditional E-value: 4.8e-70
+         RFamide_26RFa   1 yslsyLllLpLgacfpllDrreptdavdgigaemswaklaegarphfvkgssrwkrapkPqallvvakelqasgreragfrlrfgRqde 89 
+                           y+l y+l+LpLgacfpllDrreptda++g+ga+++wa+la+g rph+v+gssrw+ra++Pqallv+a+ lq+sgre+ag+r+rfgRqde
+  sp|P83859|OX26_HUMAN   5 YPLIYFLFLPLGACFPLLDRREPTDAMGGLGAGERWADLAMGPRPHSVWGSSRWLRASQPQALLVIARGLQTSGREHAGCRFRFGRQDE 93 
+                           5799************************************************************************************* PP
+
+         RFamide_26RFa  90 gseatgflpadgeKasglLgtLAeelsgysrkKGGFsFRfGR 131
+                           gseatgflpa geK+sg+Lg+LAeel+gysrkKGGFsFRfGR
+  sp|P83859|OX26_HUMAN  94 GSEATGFLPAAGEKTSGPLGNLAEELNGYSRKKGGFSFRFGR 135
+                           *****************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (136 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       148  (0.00771677); expected 383.6 (0.02)
+Passed bias filter:                      124  (0.0064654); expected 383.6 (0.02)
+Passed Vit filter:                         8  (0.000417123); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.17s 00:00:00.49 Elapsed: 00:00:00.73
+# Mc/sec: 603.76
+//
+[ok]

@@ -1,0 +1,729 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004203.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004203
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86JG3|Q86JG3_DICDI  [L=761]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-11   45.0   0.1    4.1e-11   43.4   0.1    1.9  1  PH        PH domain
+    1.4e-08   35.1   0.0    2.8e-08   34.2   0.0    1.5  1  SAM_1     SAM domain (Sterile alpha motif)
+    2.5e-07   30.8   0.1    1.1e-06   28.7   0.0    2.0  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> PH  PH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.4   0.1   6.4e-15   4.1e-11       4     104 ..     136     231 ..     133     232 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 43.4 bits;  conditional E-value: 6.4e-15
+                             EEEEEEECSSSST...SEEEEEEEEETTE.EEEESSCTCTTECCEEEEEESTTEEEEEEECTTSSSSTSEEEEEESTSSSTEEEEEE CS
+                      PH   4 eGwLlkkgsgkkk...swkkrwfvLkdse.llyykndksekdkepkgsislsncevvevvatedpkrkfcfelriverngsrtyllq 86 
+                             eG+++kkg+   +    ++kr+f + ++  l+y+kn+    d +p g+i+++++   e    ++++++  f+l ++  ++ r+y+l 
+  tr|Q86JG3|Q86JG3_DICDI 136 EGFIQKKGNEGFFgskMFQKRYFKIYEEGrLAYFKNQ---NDVSPIGVIEMKGALACE----DMEGKPQGFKLSMK--TSARVYWLV 213
+                             9*******999889999*********5445*******...*****************6....5**********888..6679***** PP
+
+                             ESSHHHHHHHHHHHHHHH CS
+                      PH  87 asseeerkeWikaiqsai 104
+                             a +++ +++W++ i++ i
+  tr|Q86JG3|Q86JG3_DICDI 214 AMTNDQKQKWVSVIKQQI 231
+                             **************9987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   0.0   4.4e-12   2.8e-08       7      55 ..       3      51 ..       1      56 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 4.4e-12
+                            SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHH CS
+                   SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkk 55
+                            ++ + L+ igl+ Y+dl   +g++d + + +lteddL++++v++ GH+k+
+  tr|Q86JG3|Q86JG3_DICDI  3 TLEQYLKVIGLKSYKDLMiDNGYDDPELISELTEDDLVAINVKR-GHAKR 51
+                            67799***************************************.***98 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.7   0.0   1.7e-10   1.1e-06       8      65 ..       3      59 ..       1      60 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 28.7 bits;  conditional E-value: 1.7e-10
+                            HHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                   SAM_2  8 dvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65
+                            ++ ++L+ igl+ y+d + d+g++  el+ +lte+dL ++ + + gh k+ + k++el
+  tr|Q86JG3|Q86JG3_DICDI  3 TLEQYLKVIGLKSYKDLMIDNGYDDPELISELTEDDLVAINV-KRGHAKRAFLKAKEL 59
+                            6899**************************************.99****999999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (761 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1161  (0.060535); expected 383.6 (0.02)
+Passed bias filter:                      653  (0.0340477); expected 383.6 (0.02)
+Passed Vit filter:                        68  (0.00354554); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.51u 0.24s 00:00:00.75 Elapsed: 00:00:00.79
+# Mc/sec: 3121.17
+//
+Query:       tr|A0A0B4K6C1|A0A0B4K6C1_DROME  [L=1034]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-27   96.0   0.0    8.9e-15   54.6   0.0    2.5  2  SAM_2     SAM domain (Sterile alpha motif)
+    1.3e-26   92.8   0.0    5.9e-15   55.6   0.0    3.1  2  SAM_1     SAM domain (Sterile alpha motif)
+    9.9e-09   35.0   0.0    2.2e-08   33.8   0.0    1.6  1  SH3_2     Variant SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.6   0.0   1.4e-18   8.9e-15       9      66 .]       7      64 ..       4      64 .. 0.96
+   2 !   38.9   0.0   1.2e-13   7.4e-10       5      65 ..     816     876 ..     812     877 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.6 bits;  conditional E-value: 1.4e-18
+                                    HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                           SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                                    v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|A0A0B4K6C1|A0A0B4K6C1_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    9***********************8888**************************9986 PP
+
+  == domain 2  score: 38.9 bits;  conditional E-value: 1.2e-13
+                                     HHHHHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                           SAM_2   5 sledvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                                      +++v + L +igl++yt  F  +g+  +el ++l++ dL  lGi ++ hr k+l+++q l
+  tr|A0A0B4K6C1|A0A0B4K6C1_DROME 816 GPCSVEDLLIRIGLKEYTSVFVLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 876
+                                     5799************************9999**************************987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.6   0.0   9.2e-19   5.9e-15       7      64 .]       6      64 ..       4      64 .. 0.97
+   2 !   33.1   0.0   9.5e-12   6.1e-08       5      63 ..     817     876 ..     813     877 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.6 bits;  conditional E-value: 9.2e-19
+                                    SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                           SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                                     V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|A0A0B4K6C1|A0A0B4K6C1_DROME  6 IVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    7*******************************************************986 PP
+
+  == domain 2  score: 33.1 bits;  conditional E-value: 9.5e-12
+                                     HSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                           SAM_1   5 vedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63 
+                                     + +V + L  igl++Y++ F  +g+ d++ +++l   dL  lg+ +  Hr k+l a+q L
+  tr|A0A0B4K6C1|A0A0B4K6C1_DROME 817 PCSVEDLLIRIGLKEYTSVFvLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 876
+                                     678999999***********************************************9866 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.8   0.0   3.5e-12   2.2e-08       9      56 ..     741     785 ..     733     786 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 33.8 bits;  conditional E-value: 3.5e-12
+                                     -SCGCCB--B-TTEEEEEE..EEEECTTEEEEEECCCEEEEEGCGEEE CS
+                           SH3_2   9 vgedpelLsfkkGdvihvlslgdkesdgwweGavgGrvGlfPselvee 56 
+                                     +++d+e L fkkGd+i vl   + +  g w G+++GrvG+f+  +ve+
+  tr|A0A0B4K6C1|A0A0B4K6C1_DROME 741 NPYDKEALKFKKGDLIDVL---SMNASGIWKGRCHGRVGHFKFINVEV 785
+                                     689****************...9999999*************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1034 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1893  (0.0987017); expected 383.6 (0.02)
+Passed bias filter:                      848  (0.044215); expected 383.6 (0.02)
+Passed Vit filter:                        84  (0.00437979); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.67u 0.21s 00:00:00.88 Elapsed: 00:00:00.77
+# Mc/sec: 4329.27
+//
+Query:       tr|A0A0B4KH49|A0A0B4KH49_DROME  [L=128]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-16   60.8   0.0    1.8e-16   60.4   0.0    1.2  1  SAM_1     SAM domain (Sterile alpha motif)
+      2e-16   60.0   0.0      3e-16   59.4   0.0    1.2  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.4   0.0   1.9e-20   1.8e-16       6      64 .]       5      64 ..       3      64 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 60.4 bits;  conditional E-value: 1.9e-20
+                                    SSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                           SAM_1  6 edVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                                    + V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|A0A0B4KH49|A0A0B4KH49_DROME  5 NIVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    57*******************************************************996 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.4   0.0   3.1e-20     3e-16       9      66 .]       7      64 ..       4      64 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 59.4 bits;  conditional E-value: 3.1e-20
+                                    HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                           SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                                    v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|A0A0B4KH49|A0A0B4KH49_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    9***********************8888**************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (128 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       351  (0.0183013); expected 383.6 (0.02)
+Passed bias filter:                      343  (0.0178841); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.52
+# Mc/sec: 792.26
+//
+Query:       tr|A0A0B4KHV7|A0A0B4KHV7_DROME  [L=1080]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-27   95.9   0.0    9.4e-15   54.6   0.0    2.5  2  SAM_2     SAM domain (Sterile alpha motif)
+    1.5e-26   92.7   0.0    6.2e-15   55.5   0.0    3.1  2  SAM_1     SAM domain (Sterile alpha motif)
+    1.1e-08   34.8   0.0    2.4e-08   33.8   0.0    1.5  1  SH3_2     Variant SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.6   0.0   1.5e-18   9.4e-15       9      66 .]       7      64 ..       4      64 .. 0.96
+   2 !   38.8   0.0   1.2e-13   7.8e-10       5      65 ..     741     801 ..     737     802 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.6 bits;  conditional E-value: 1.5e-18
+                                    HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                           SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                                    v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|A0A0B4KHV7|A0A0B4KHV7_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    9***********************8888**************************9986 PP
+
+  == domain 2  score: 38.8 bits;  conditional E-value: 1.2e-13
+                                     HHHHHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                           SAM_2   5 sledvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                                      +++v + L +igl++yt  F  +g+  +el ++l++ dL  lGi ++ hr k+l+++q l
+  tr|A0A0B4KHV7|A0A0B4KHV7_DROME 741 GPCSVEDLLIRIGLKEYTSVFVLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 801
+                                     5799************************9999**************************987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   0.0   9.7e-19   6.2e-15       7      64 .]       6      64 ..       4      64 .. 0.97
+   2 !   33.0   0.0     1e-11   6.4e-08       5      63 ..     742     801 ..     738     802 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 9.7e-19
+                                    SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                           SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                                     V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|A0A0B4KHV7|A0A0B4KHV7_DROME  6 IVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    7*******************************************************986 PP
+
+  == domain 2  score: 33.0 bits;  conditional E-value: 1e-11
+                                     HSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                           SAM_1   5 vedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63 
+                                     + +V + L  igl++Y++ F  +g+ d++ +++l   dL  lg+ +  Hr k+l a+q L
+  tr|A0A0B4KHV7|A0A0B4KHV7_DROME 742 PCSVEDLLIRIGLKEYTSVFvLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 801
+                                     678999999***********************************************9866 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.8   0.0   3.7e-12   2.4e-08       9      56 ..     666     710 ..     658     711 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 33.8 bits;  conditional E-value: 3.7e-12
+                                     -SCGCCB--B-TTEEEEEE..EEEECTTEEEEEECCCEEEEEGCGEEE CS
+                           SH3_2   9 vgedpelLsfkkGdvihvlslgdkesdgwweGavgGrvGlfPselvee 56 
+                                     +++d+e L fkkGd+i vl   + +  g w G+++GrvG+f+  +ve+
+  tr|A0A0B4KHV7|A0A0B4KHV7_DROME 666 NPYDKEALKFKKGDLIDVL---SMNASGIWKGRCHGRVGHFKFINVEV 710
+                                     689****************...9999999*************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1080 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1902  (0.099171); expected 383.6 (0.02)
+Passed bias filter:                      913  (0.0476042); expected 383.6 (0.02)
+Passed Vit filter:                        83  (0.00432765); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.70u 0.23s 00:00:00.93 Elapsed: 00:00:00.74
+# Mc/sec: 4745.29
+//
+Query:       tr|A0A0B4KHM3|A0A0B4KHM3_DROME  [L=1027]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-27   96.0   0.0    8.9e-15   54.7   0.0    2.5  2  SAM_2     SAM domain (Sterile alpha motif)
+    1.3e-26   92.9   0.0    5.8e-15   55.6   0.0    3.1  2  SAM_1     SAM domain (Sterile alpha motif)
+    9.9e-09   35.0   0.0    2.2e-08   33.8   0.0    1.6  1  SH3_2     Variant SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.7   0.0   1.4e-18   8.9e-15       9      66 .]       7      64 ..       4      64 .. 0.96
+   2 !   38.9   0.0   1.1e-13   7.4e-10       5      65 ..     816     876 ..     812     877 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.7 bits;  conditional E-value: 1.4e-18
+                                    HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                           SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                                    v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|A0A0B4KHM3|A0A0B4KHM3_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    9***********************8888**************************9986 PP
+
+  == domain 2  score: 38.9 bits;  conditional E-value: 1.1e-13
+                                     HHHHHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                           SAM_2   5 sledvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                                      +++v + L +igl++yt  F  +g+  +el ++l++ dL  lGi ++ hr k+l+++q l
+  tr|A0A0B4KHM3|A0A0B4KHM3_DROME 816 GPCSVEDLLIRIGLKEYTSVFVLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 876
+                                     5799************************9999**************************987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.6   0.0   9.1e-19   5.8e-15       7      64 .]       6      64 ..       4      64 .. 0.97
+   2 !   33.1   0.0   9.4e-12     6e-08       5      63 ..     817     876 ..     813     877 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.6 bits;  conditional E-value: 9.1e-19
+                                    SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                           SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                                     V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|A0A0B4KHM3|A0A0B4KHM3_DROME  6 IVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                                    7*******************************************************986 PP
+
+  == domain 2  score: 33.1 bits;  conditional E-value: 9.4e-12
+                                     HSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                           SAM_1   5 vedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63 
+                                     + +V + L  igl++Y++ F  +g+ d++ +++l   dL  lg+ +  Hr k+l a+q L
+  tr|A0A0B4KHM3|A0A0B4KHM3_DROME 817 PCSVEDLLIRIGLKEYTSVFvLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 876
+                                     678999999***********************************************9866 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.8   0.0   3.5e-12   2.2e-08       9      56 ..     741     785 ..     733     786 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 33.8 bits;  conditional E-value: 3.5e-12
+                                     -SCGCCB--B-TTEEEEEE..EEEECTTEEEEEECCCEEEEEGCGEEE CS
+                           SH3_2   9 vgedpelLsfkkGdvihvlslgdkesdgwweGavgGrvGlfPselvee 56 
+                                     +++d+e L fkkGd+i vl   + +  g w G+++GrvG+f+  +ve+
+  tr|A0A0B4KHM3|A0A0B4KHM3_DROME 741 NPYDKEALKFKKGDLIDVL---SMNASGIWKGRCHGRVGHFKFINVEV 785
+                                     689****************...9999999*************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1027 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1885  (0.0982846); expected 383.6 (0.02)
+Passed bias filter:                      840  (0.0437979); expected 383.6 (0.02)
+Passed Vit filter:                        84  (0.00437979); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.21s 00:00:00.87 Elapsed: 00:00:00.69
+# Mc/sec: 4792.99
+//
+Query:       tr|Q9VCW5|Q9VCW5_DROME  [L=142]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-10   40.0   0.1      7e-10   39.3   0.1    1.3  1  SAM_1     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.1   3.7e-14     7e-10       7      63 ..       5      62 ..       4      63 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 3.7e-14
+                            SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                   SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63
+                             V++WL  + +++Yi +F ++g+++ + ++l+  +dL  lgv ++ Hrk +l+ ++ L
+  tr|Q9VCW5|Q9VCW5_DROME  5 AVRDWLVLLTMEKYIGKFlERGYDSIERCKLIIVSDLIMLGVDNPAHRKLLLEGVRFL 62
+                            79***************************************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (142 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       252  (0.0131394); expected 383.6 (0.02)
+Passed bias filter:                      231  (0.0120444); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.59
+# Mc/sec: 780.74
+//
+Query:       tr|Q0KI30|Q0KI30_DROME  [L=1064]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-27   95.9   0.0    9.3e-15   54.6   0.0    2.5  2  SAM_2     SAM domain (Sterile alpha motif)
+    1.5e-26   92.7   0.0    6.1e-15   55.5   0.0    3.1  2  SAM_1     SAM domain (Sterile alpha motif)
+      1e-08   34.9   0.0    2.3e-08   33.8   0.0    1.6  1  SH3_2     Variant SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.6   0.0   1.4e-18   9.3e-15       9      66 .]       7      64 ..       4      64 .. 0.96
+   2 !   38.8   0.0   1.2e-13   7.7e-10       5      65 ..     853     913 ..     849     914 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.6 bits;  conditional E-value: 1.4e-18
+                            HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                   SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                            v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|Q0KI30|Q0KI30_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                            9***********************8888**************************9986 PP
+
+  == domain 2  score: 38.8 bits;  conditional E-value: 1.2e-13
+                             HHHHHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                   SAM_2   5 sledvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                              +++v + L +igl++yt  F  +g+  +el ++l++ dL  lGi ++ hr k+l+++q l
+  tr|Q0KI30|Q0KI30_DROME 853 GPCSVEDLLIRIGLKEYTSVFVLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 913
+                             5799************************9999**************************987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   0.0   9.5e-19   6.1e-15       7      64 .]       6      64 ..       4      64 .. 0.97
+   2 !   33.0   0.0   9.8e-12   6.3e-08       5      63 ..     854     913 ..     850     914 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 9.5e-19
+                            SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                             V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|Q0KI30|Q0KI30_DROME  6 IVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                            7*******************************************************986 PP
+
+  == domain 2  score: 33.0 bits;  conditional E-value: 9.8e-12
+                             HSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                   SAM_1   5 vedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63 
+                             + +V + L  igl++Y++ F  +g+ d++ +++l   dL  lg+ +  Hr k+l a+q L
+  tr|Q0KI30|Q0KI30_DROME 854 PCSVEDLLIRIGLKEYTSVFvLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 913
+                             678999999***********************************************9866 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.8   0.0   3.6e-12   2.3e-08       9      56 ..     778     822 ..     770     823 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 33.8 bits;  conditional E-value: 3.6e-12
+                             -SCGCCB--B-TTEEEEEE..EEEECTTEEEEEECCCEEEEEGCGEEE CS
+                   SH3_2   9 vgedpelLsfkkGdvihvlslgdkesdgwweGavgGrvGlfPselvee 56 
+                             +++d+e L fkkGd+i vl   + +  g w G+++GrvG+f+  +ve+
+  tr|Q0KI30|Q0KI30_DROME 778 NPYDKEALKFKKGDLIDVL---SMNASGIWKGRCHGRVGHFKFINVEV 822
+                             689****************...9999999*************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1064 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1921  (0.100162); expected 383.6 (0.02)
+Passed bias filter:                      897  (0.0467699); expected 383.6 (0.02)
+Passed Vit filter:                        86  (0.00448407); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.66u 0.24s 00:00:00.90 Elapsed: 00:00:00.79
+# Mc/sec: 4334.39
+//
+Query:       tr|Q8SZS0|Q8SZS0_DROME  [L=952]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-28   96.3   0.0    8.1e-15   54.8   0.0    2.5  2  SAM_2     SAM domain (Sterile alpha motif)
+      1e-26   93.2   0.0    5.3e-15   55.7   0.0    3.2  2  SAM_1     SAM domain (Sterile alpha motif)
+    9.5e-09   35.0   0.0      2e-08   34.0   0.0    1.5  1  SH3_2     Variant SH3 domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.8   0.0   1.3e-18   8.1e-15       9      66 .]       7      64 ..       4      64 .. 0.96
+   2 !   39.0   0.0     1e-13   6.7e-10       5      65 ..     741     801 ..     737     802 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 54.8 bits;  conditional E-value: 1.3e-18
+                            HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                   SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                            v+eWLr++gl+qy+++F+d+g++ +e+ +++   dL ++G++++ hr+k+lk+i++l+
+  tr|Q8SZS0|Q8SZS0_DROME  7 VCEWLRALGLAQYAESFLDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                            9***********************8888**************************9986 PP
+
+  == domain 2  score: 39.0 bits;  conditional E-value: 1e-13
+                             HHHHHHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHH CS
+                   SAM_2   5 sledvaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqel 65 
+                              +++v + L +igl++yt  F  +g+  +el ++l++ dL  lGi ++ hr k+l+++q l
+  tr|Q8SZS0|Q8SZS0_DROME 741 GPCSVEDLLIRIGLKEYTSVFVLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 801
+                             5799************************9999**************************987 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.7   0.0   8.3e-19   5.3e-15       7      64 .]       6      64 ..       4      64 .. 0.97
+   2 !   33.2   0.0   8.6e-12   5.5e-08       5      63 ..     742     801 ..     738     802 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.7 bits;  conditional E-value: 8.3e-19
+                            SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                             V+eWL+++gl+qY+++F  +g++d++ +++  + dL ++gv ++ Hr+k+l++I+ L+
+  tr|Q8SZS0|Q8SZS0_DROME  6 IVCEWLRALGLAQYAESFlDNGYDDLEICKQVGDPDLDAIGVENPAHRHKLLKSIRSLR 64
+                            7*******************************************************986 PP
+
+  == domain 2  score: 33.2 bits;  conditional E-value: 8.6e-12
+                             HSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHH CS
+                   SAM_1   5 vedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrL 63 
+                             + +V + L  igl++Y++ F  +g+ d++ +++l   dL  lg+ +  Hr k+l a+q L
+  tr|Q8SZS0|Q8SZS0_DROME 742 PCSVEDLLIRIGLKEYTSVFvLNGYEDLELFKELEPADLDYLGILNQEHRAKLLTAVQLL 801
+                             678999999***********************************************9866 PP
+
+>> SH3_2  Variant SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.0   0.0   3.2e-12     2e-08       9      56 ..     666     710 ..     658     711 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 34.0 bits;  conditional E-value: 3.2e-12
+                             -SCGCCB--B-TTEEEEEE..EEEECTTEEEEEECCCEEEEEGCGEEE CS
+                   SH3_2   9 vgedpelLsfkkGdvihvlslgdkesdgwweGavgGrvGlfPselvee 56 
+                             +++d+e L fkkGd+i vl   + +  g w G+++GrvG+f+  +ve+
+  tr|Q8SZS0|Q8SZS0_DROME 666 NPYDKEALKFKKGDLIDVL---SMNASGIWKGRCHGRVGHFKFINVEV 710
+                             689****************...9999999*************999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (952 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1743  (0.0908807); expected 383.6 (0.02)
+Passed bias filter:                      753  (0.0392617); expected 383.6 (0.02)
+Passed Vit filter:                        76  (0.00396267); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.63u 0.22s 00:00:00.85 Elapsed: 00:00:00.74
+# Mc/sec: 4159.22
+//
+Query:       tr|F1R087|F1R087_DANRE  [L=164]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.8e-14   52.2   0.0      1e-13   51.6   0.0    1.2  1  SAM_1     SAM domain (Sterile alpha motif)
+    1.4e-09   38.0   0.0    3.7e-09   36.6   0.0    1.6  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.6   0.0   1.1e-17     1e-13       3      64 .]       3      65 ..       2      65 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 51.6 bits;  conditional E-value: 1.1e-17
+                            TTHSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1  3 wsvedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                            + ++ V eWL+ + l+qY+++F  +g++d++ ++++ + dL ++gv  + Hr++I  a+qrLk
+  tr|F1R087|F1R087_DANRE  3 NGPNIVYEWLKTLQLCQYVEAFvDNGYDDLEVCKQIGDPDLDAIGVFIPHHRQRIHDAVQRLK 65
+                            56889********************************************************98 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.6   0.0   3.9e-13   3.7e-09       9      66 .]       8      65 ..       5      65 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 36.6 bits;  conditional E-value: 3.9e-13
+                            HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                   SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                            v eWL+ ++l+qy+++F d+g++ +e+ +++   dL ++G+  + hr++i  ++q+lk
+  tr|F1R087|F1R087_DANRE  8 VYEWLKTLQLCQYVEAFVDNGYDDLEVCKQIGDPDLDAIGVFIPHHRQRIHDAVQRLK 65
+                            569*********************9999***************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (164 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       444  (0.0231503); expected 383.6 (0.02)
+Passed bias filter:                      438  (0.0228375); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.55
+# Mc/sec: 964.35
+//
+Query:       tr|A0A2R8RM95|A0A2R8RM95_DANRE  [L=175]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-15   57.1   0.0    2.9e-15   56.5   0.0    1.3  1  SAM_1     SAM domain (Sterile alpha motif)
+    1.1e-11   44.8   0.0    2.2e-11   43.8   0.0    1.5  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.5   0.0   3.1e-19   2.9e-15       4      64 .]      11      72 ..       9      72 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 56.5 bits;  conditional E-value: 3.1e-19
+                                    THSSHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                           SAM_1  4 svedVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                                     +  V eWL+ + l+qY+++F  +g++d++ ++++   dL ++gv ++ Hr+k+l+a++rL+
+  tr|A0A2R8RM95|A0A2R8RM95_DANRE 11 GPTIVYEWLKTLQLCQYVESFvDNGYDDLEVCKQIGNPDLDAIGVISPHHREKLLRAVERLR 72
+                                    5678********************************************************96 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.8   0.0   2.3e-15   2.2e-11      10      66 .]      16      72 ..      13      72 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 43.8 bits;  conditional E-value: 2.3e-15
+                                    HHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                           SAM_2 10 aeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                                     eWL+ ++l+qy+++F d+g++ +e+ +++   dL ++G+ s+ hr k+l+++++l+
+  tr|A0A2R8RM95|A0A2R8RM95_DANRE 16 YEWLKTLQLCQYVESFVDNGYDDLEVCKQIGNPDLDAIGVISPHHREKLLRAVERLR 72
+                                    59*********************9999***************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (175 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       382  (0.0199176); expected 383.6 (0.02)
+Passed bias filter:                      348  (0.0181448); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.17s 00:00:00.48 Elapsed: 00:00:00.52
+# Mc/sec: 1088.60
+//
+Query:       sp|Q5TGI4|SAMD5_HUMAN  [L=173]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-15   58.0   0.0    1.5e-15   57.5   0.0    1.2  1  SAM_1     SAM domain (Sterile alpha motif)
+    1.3e-12   47.7   0.0    2.2e-12   47.0   0.0    1.4  1  SAM_2     SAM domain (Sterile alpha motif)
+
+
+Domain annotation for each model (and alignments):
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.5   0.0   1.6e-19   1.5e-15       7      64 .]       5      63 ..       3      63 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 57.5 bits;  conditional E-value: 1.6e-19
+                           SHHHHHHHTTSGGGHHHH.HTTTSSHHHHTTSCHHHHHHTTTTSHHHHHHHHHHHHHHH CS
+                  SAM_1  7 dVgeWLesiglgqYidlF.rageidgdaLlllteddLeklgvtllGHrkkIlyaIqrLk 64
+                            V eWL+++ l+qY+++F  +g++d++ ++++ + dL ++gv  + Hr++Il+a++rL+
+  sp|Q5TGI4|SAMD5_HUMAN  5 IVYEWLKALQLPQYAESFvDNGYDDLEVCKQIGDPDLDAIGVLAPAHRRRILEAVRRLR 63
+                           79*******************************************************96 PP
+
+>> SAM_2  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.0   0.0   2.3e-16   2.2e-12       9      66 .]       6      63 ..       2      63 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 47.0 bits;  conditional E-value: 2.3e-16
+                           HHHHHHHTTTGGGHHHHHHTTCSHHHHHTTSCHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+                  SAM_2  9 vaeWLrsigleqytdnFrdagitgaelllrlteedLkrlGitsvghrkkilkkiqelk 66
+                           v eWL++++l+qy+++F d+g++ +e+ +++   dL ++G+ ++ hr++il ++++l+
+  sp|Q5TGI4|SAMD5_HUMAN  6 VYEWLKALQLPQYAESFVDNGYDDLEVCKQIGDPDLDAIGVLAPAHRRRILEAVRRLR 63
+                           569*********************9999**************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (173 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       290  (0.0151207); expected 383.6 (0.02)
+Passed bias filter:                      250  (0.0130351); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.29u 0.16s 00:00:00.44 Elapsed: 00:00:00.54
+# Mc/sec: 1041.31
+//
+[ok]

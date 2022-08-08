@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0028552.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0028552
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O45373|O45373_CAEEL  [L=777]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.7e-22   78.5   0.5    3.6e-21   75.3   0.1    3.0  1  Thioredoxin_8  Thioredoxin-like
+    8.9e-06   25.7   0.3    8.1e-05   22.6   0.0    2.6  0  Thioredoxin    Thioredoxin
+
+
+Domain annotation for each model (and alignments):
+>> Thioredoxin_8  Thioredoxin-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.3   0.1   3.8e-25   3.6e-21       1      94 []     659     749 ..     659     749 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 75.3 bits;  conditional E-value: 3.8e-25
+                             .SEEEEEE--SSSHHHHHHHHHHHHHHHHHHHTTSEEEEEEE-SS-HHHHHHHGGGS.TTSEE.EE-TT-HHHHTT-S--TT-SEEE CS
+           Thioredoxin_8   1 gkvvlLyfgaswcppckkftpkLkelyeklkkkkkveiVyvsldedeeefekylkkm.kpwlsvpfddkkrnklkkkykvkaiPtlv 86 
+                             gkvv+Lyf+a+wcpp+++ftp+L ++y++++  +++ei++vs+d++ +e++ yl++   +w ++p++   +n +k++ + ++iP l+
+  tr|O45373|O45373_CAEEL 659 GKVVGLYFSAHWCPPSRDFTPVLAQFYSQVE--DNFEILFVSSDNNTQEMNFYLQNFhGDWFHLPLN--LCNSMKHRNTKNHIPALI 741
+                             79****************************9..************************99********..678999999********* PP
+
+                             EE-TT-BE CS
+           Thioredoxin_8  87 vldkngev 94 
+                             +++++g v
+  tr|O45373|O45373_CAEEL 742 IMKPDGTV 749
+                             ******87 PP
+
+>> Thioredoxin  Thioredoxin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (777 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3575  (0.186402); expected 383.6 (0.02)
+Passed bias filter:                      726  (0.0378539); expected 383.6 (0.02)
+Passed Vit filter:                       325  (0.0169456); expected 19.2 (0.001)
+Passed Fwd filter:                        63  (0.00328484); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.08u 0.27s 00:00:01.35 Elapsed: 00:00:00.96
+# Mc/sec: 2631.12
+//
+[ok]

@@ -1,0 +1,614 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0006088.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0006088
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q93534|Q93534_CAEEL  [L=641]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.8e-16   60.2   0.3    3.3e-16   59.4   0.3    1.3  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    3.7e-14   53.0   2.1    7.1e-14   52.0   2.1    1.5  1  RabGAP-TBC  Rab-GTPase-TBC domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.4   0.3   3.4e-20   3.3e-16      54     223 ..     453     615 ..     448     618 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 59.4 bits;  conditional E-value: 3.4e-20
+               TBC1D23_C  54 kvisfientstpvdrlsfnlpwp...drscterhvsssdrvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwink 137
+                             k+ s + nts+ +      + +p   ++   ++h  s +r gk yr  + vf+i +      de+ + +  d++ ke + +      
+  tr|Q93534|Q93534_CAEEL 453 KMKSAVSNTSSRMKERVEAVVFPigeEKKLDDKHADSKQRHGKRYRQ-QSVFTIDE---NSDDEMAAGAAVDENPKEEILLS----- 530
+                             78899999998875444444443223678899**************7.789*9953...45699999999999999866543..... PP
+
+               TBC1D23_C 138 pdvkhhllckevkesghmfpshllvtathmyclreivsrkglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaier 223
+                              +    + c+ev   g +   h+ +t th+y+l ++  ++g+   ++r al +vv +ts++  pe++tfk g +     +i+a+ +
+  tr|Q93534|Q93534_CAEEL 531 KEFTETFECQEVFRDGSI-NGHIALTRTHIYVLHDVPGKQGYVTTEARHALSTVVAVTSRRSVPEMLTFKLGYEMNGSSKITAVHK 615
+                             467789*********986.78***************************************************99999999999876 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   2.1   7.4e-18   7.1e-14      46     215 .]      67     230 ..      42     230 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 7.4e-18
+              RabGAP-TBC  46 elsqIrkDvprtfpnsesfknkqgqnqLeriLkaysiynpevgYc..qGmndivaplllvsldeeeaFwcfvsLlekyklrdlytqs 130
+                             ++ ++r+D+    +     knk    +Le+ L+ y++ +  + Y+   G+  i+  +ll++ +  + F++f ++ + +++++  +++
+  tr|Q93534|Q93534_CAEEL  67 NQCALRNDCRKLAN---GLKNKRSVPELESFLTLYCKKRG-MDYIkdIGWLTILEKILLLNVPAAHEFNVFFAFTT-KYIPKDTRPD 148
+                             45666666666666...7889999999*********9998.89**444677888889999***************4.4444444444 PP
+
+              RabGAP-TBC 131 fpglkrklkvleellkkkdpklykhlkeegldlelfaikwfltlflrefpletvlrlwDlll.egekfvllrvalailklleeell 215
+                                  + + +++ ll+++dp++++hl+++++ +++++ +wf tlf+++++ e +  lw l++ +g+ f ++ +a+++l + ++e+l
+  tr|Q93534|Q93534_CAEEL 149 ----AQIFDLFRLLLQYHDPQISNHLESLHCSPSMYTKNWFATLFSSSMSTESCHELWKLYIeQGDPFLVFHLAIVFLINAKDEIL 230
+                             ....57889**************************************************777477789888899998878888875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (641 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       705  (0.036759); expected 383.6 (0.02)
+Passed bias filter:                      544  (0.0283644); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.21s 00:00:00.67 Elapsed: 00:00:00.70
+# Mc/sec: 2949.03
+//
+Query:       tr|Q54YR7|Q54YR7_DICDI  [L=1302]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.7e-11   42.6   3.9    5.7e-11   42.6   3.9    5.6  1  RabGAP-TBC  Rab-GTPase-TBC domain
+
+
+Domain annotation for each model (and alignments):
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.6   3.9     3e-15   5.7e-11     109     212 ..     283     390 ..     176     393 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 42.6 bits;  conditional E-value: 3e-15
+              RabGAP-TBC 109 e.....aFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpklykhlkeegldlelfaikwfltlflrefpletvlrlwD. 189
+                             +     + +++ s+  + ++  +  +  p l + +++++ ll ++dp l+ +l++  ++++ + ++w++ +f+ +++++ ++ +wD 
+  tr|Q54YR7|Q54YR7_DICDI 283 NdwmslSLKLIESIS-NSGIYPYS-TANPILLCESEMFRILLLYHDPILSHFLNQRTVNSMHYFYEWINHMFCGCIDIKFLIQIWDl 367
+                             255555555555555.33333333.3346699999**************999**********************************8 PP
+
+              RabGAP-TBC 190 lllegekfvllrvalailkllee 212
+                             +l+++++ + +++ala++ + +e
+  tr|Q54YR7|Q54YR7_DICDI 368 FLYHNNQDFYIYFALALIISKRE 390
+                             88877755599999997755554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1302 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3396  (0.177069); expected 383.6 (0.02)
+Passed bias filter:                      523  (0.0272694); expected 383.6 (0.02)
+Passed Vit filter:                       210  (0.0109495); expected 19.2 (0.001)
+Passed Fwd filter:                        73  (0.00380625); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 1.52u 0.24s 00:00:01.76 Elapsed: 00:00:01.26
+# Mc/sec: 3346.38
+//
+Query:       tr|Q9VPW9|Q9VPW9_DROME  [L=689]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.6e-40  137.8   0.0    8.9e-40  136.5   0.0    1.5  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    3.3e-28   98.9   2.1    5.5e-28   98.2   2.1    1.4  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    1.2e-05   25.9   0.0    3.3e-05   24.4   0.0    1.8  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.5   0.0   1.4e-43   8.9e-40      35     226 .]     475     667 ..     463     667 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 136.5 bits;  conditional E-value: 1.4e-43
+               TBC1D23_C  35 slvnkmtvalktksvnvkekvisfientstpvdr.lsfnlpwpdrscterhvsssdrvgkpyrgvkpvfsigdeeeydtd...eids 117
+                              l  k++ a+k+ks +vk k++ +i n s+      s     p   + erhvs+ +r gk yr v pvfsi de+e   d   e d 
+  tr|Q9VPW9|Q9VPW9_DROME 475 DLFSKFSAAMKSKSAEVKGKLLDIIVNPSANGGAtASGTNGVPSAPVQERHVSAKERNGKRYRNVAPVFSIDDENEDALDgagERDD 561
+                             578999*********************999876515677889********************************9976653335666 PP
+
+               TBC1D23_C 118 ssmsdddrkevvniqtwinkpdvkhhllckevkesghmfpshllvtathmyclreivsrkglayiqsrqalnsvvkitskkkhpeli 204
+                             + ++  d ke+vn++ + +  d+   + c+ev+ sg+m+ shl++t  ++ +lre+   +g a i  r+ l s+vkit+kk+h +li
+  tr|Q9VPW9|Q9VPW9_DROME 562 APLTS-DGKEIVNLNQYFKTADIINAFKCQEVHMSGYMYDSHLIITPGQLVVLRELG--RGQAQIMVRRPLASIVKITAKKRHRDLI 645
+                             66654.689**********************************************84..799************************* PP
+
+               TBC1D23_C 205 tfkygnssasgieilaieryli 226
+                             tfkyg  +  g+ i+ ++r+li
+  tr|Q9VPW9|Q9VPW9_DROME 646 TFKYGFPDGDGLLITDMDRFLI 667
+                             ********************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.2   2.1   8.6e-32   5.5e-28       2     215 .]      35     233 ..      34     233 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 98.2 bits;  conditional E-value: 8.6e-32
+              RabGAP-TBC   2 elRgevWklllgyepevkrlkksekkqeksekekskkekseeskelsqIrkDvprtfp..nsesfknkqgqnqLeriLkaysiynpe 86 
+                             +lR++vW+++l++              +++++++s  ++ ++ + +sq+r+D++r ++   ++++++ ++ ++Le+i++ y+++++ 
+  tr|Q9VPW9|Q9VPW9_DROME  35 ALRPDVWQVCLDV--------------RHKSDQMSLFNEIYDLPFQSQLREDCQRHVDrmGNDEEDKVSVVSDLESIITFYCKNRN- 106
+                             79**********9..............567888888999999999*************5544888888**************9888. PP
+
+              RabGAP-TBC  87 vgYc..qGmndivaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpklykhlkeegldlelfaikwf 171
+                             ++Y    G+  ++ pl++++l+ +++F++f s+    ++++ ++++     + ++v++ ll ++dp+l+++l++++++++l+++ wf
+  tr|Q9VPW9|Q9VPW9_DROME 107 LQYEpdNGWIELLLPLFALKLNRSDTFNLFESIR-DTYIPKGCRPK----GNVFHVFRLLLLYHDPELCTLLDTKKITPDLYSLTWF 188
+                             8**9889***************************.56677777776....58899******************************** PP
+
+              RabGAP-TBC 172 ltlflrefpletvlrlwDlllege.kfvllrvalailklleeell 215
+                             + lf+++ +l++++ +wDl++++   f+++++al+il + +e++l
+  tr|Q9VPW9|Q9VPW9_DROME 189 QSLFASCSSLSVIIAMWDLYFQNAdPFMVFFLALIILINGREQIL 233
+                             ******************7775555999999****9999899886 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   0.0   5.2e-09   3.3e-05      15     103 ..     329     429 ..     311     432 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 5.2e-09
+               Rhodanese  15 a...llDvRppeeYekghIpgAvnv.....skdtlsrakkseapllelpeellelgidnkktvvvycdgggraaaaaallkk....l 89 
+                             +   l+D+Rp+e+Y++gh+  A ++       ++   a+ +++ l ++ +++++     ++++ + ++g+    + ++++ +     
+  tr|Q9VPW9|Q9VPW9_DROME 329 VrffLVDCRPAEQYNAGHLSTAFHLdcnlmLQEPVAFATAVQGLLTAQRQAIEANSNAGGEHLCFMGSGRVEEDQYTHMVVAsflqK 415
+                             15669********************998876666666666666666666666666777899******99999777766555223325 PP
+
+               Rhodanese  90 Gykn.vsvldGGfka 103
+                             + +  vs+l GG+ +
+  tr|Q9VPW9|Q9VPW9_DROME 416 N-THyVSLLTGGYAS 429
+                             5.455*******976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (689 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       495  (0.0258095); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.18s 00:00:00.62 Elapsed: 00:00:00.63
+# Mc/sec: 3557.33
+//
+Query:       sp|Q7SXV1|TBC23_DANRE  [L=680]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.4e-127  423.6   6.9     3e-127  422.6   6.9    1.5  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    3.3e-16   59.7   0.4    6.9e-16   58.6   0.4    1.6  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    6.9e-07   29.8   0.0    1.4e-06   28.8   0.0    1.6  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  422.6   6.9  4.7e-131    3e-127       1     226 []     447     656 ..     447     656 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 422.6 bits;  conditional E-value: 4.7e-131
+              TBC1D23_C   1 ngyghwiastsgsrssinsvdgessngsndrgvkslvnkmtvalktksvnvkekvisfientstpvdrlsfnlpwpdrscterhvsss 88 
+                            n y+hwi+stsgs+ss++s+dge +n+++ +gvkslvnkmt+alk+ksvnvkekvisfientstpv+r               hvsss
+  sp|Q7SXV1|TBC23_DANRE 447 NVYVHWIVSTSGSHSSLSSADGE-LNSTDGKGVKSLVNKMTFALKSKSVNVKEKVISFIENTSTPVER---------------HVSSS 518
+                            67********************9.577888************************************98...............***** PP
+
+              TBC1D23_C  89 drvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhhllckevkesghmfpshllvtathmyclreivsr 176
+                            drvgkpyrgvkpvfsigdeeeydtdeidsss+sdddrke+vniqtwinkpdvkhh++c+evke+ghmfpshll+tathmyclrei++r
+  sp|Q7SXV1|TBC23_DANRE 519 DRVGKPYRGVKPVFSIGDEEEYDTDEIDSSSISDDDRKEIVNIQTWINKPDVKHHIPCNEVKETGHMFPSHLLITATHMYCLREIAAR 606
+                            **************************************************************************************** PP
+
+              TBC1D23_C 177 kglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli 226
+                            kg+ayiqsrqalnsvvkitskkkhpelitfk+gn++a+g+ei+a+eryli
+  sp|Q7SXV1|TBC23_DANRE 607 KGFAYIQSRQALNSVVKITSKKKHPELITFKFGNNNAAGVEIVAVERYLI 656
+                            ************************************************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6   0.4   1.1e-19   6.9e-16      68     214 ..      98     241 ..      45     242 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 1.1e-19
+             RabGAP-TBC  68 qgqnqLeriLkaysiynpevgYcqGmn..divaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpkly 153
+                            ++ +++e++++ y++ ++ v ++++++   i+ pll + l+ ++ ++cf+++++ky +rd   +      r +++++ ll+++ p+++
+  sp|Q7SXV1|TBC23_DANRE  98 DLVSDVESVITFYCKSRN-VTFTPDLSwpHILKPLLGLQLSRKDLYNCFYAIMNKYIPRDCIVKG-----RPFHLFRLLLQYHEPEFC 179
+                            567788999999999988.99998865448***********************999999999997.....899*************** PP
+
+             RabGAP-TBC 154 khlkeegldlelfaikwfltlflrefpletvlrlwDlllege.kfvllrvalailklleeel 214
+                            ++l++++++++ +ai+w+  lf+++   e++  lwD++l++   f +++++l+il + ++ +
+  sp|Q7SXV1|TBC23_DANRE 180 SFLDTKKITPDSYAINWLGSLFSSHCLPEVTQALWDVYLQQAdPFLIFFLMLIILVNAKDNI 241
+                            ***********************99999********99966647867778888887776666 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.8   0.0   2.3e-10   1.4e-06      12     105 ..     330     434 ..     318     436 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 28.8 bits;  conditional E-value: 2.3e-10
+              Rhodanese  12 gkva..llDvRppeeYekghIpgAvnv.skdtlsrakkseapllelpeellel....gidnkktvvvycdgggr.aaaa....aallk 87 
+                            ++v+  ++D+Rp+e+Y++gh+  A ++ s   l ++++   + + l+e+ ++      +  ++++ + ++g++   +      a++l+
+  sp|Q7SXV1|TBC23_DANRE 330 EGVRffVVDCRPAEQYNAGHLSTAFHLdSDLMLHNPSELALSVKSLLEAQKQSlesgSVASGEHLCFMGSGREEeDMYMnmvlAHFLQ 417
+                            3444679********************855555555555555555555555557779999**********999965555555555555 PP
+
+              Rhodanese  88 klGykn.vsvldGGfkawk 105
+                              + k+ vs+ +GGf+a +
+  sp|Q7SXV1|TBC23_DANRE 418 -KN-KEfVSIAKGGFMALQ 434
+                            .66.788********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (680 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       703  (0.0366547); expected 383.6 (0.02)
+Passed bias filter:                      588  (0.0306585); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.67
+# Mc/sec: 3268.73
+//
+Query:       tr|B7ZUZ8|B7ZUZ8_DANRE  [L=680]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.4e-127  423.6   6.9     3e-127  422.6   6.9    1.5  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+      3e-16   59.8   0.3    6.2e-16   58.8   0.3    1.6  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    4.2e-07   30.5   0.0    8.8e-07   29.5   0.0    1.6  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  422.6   6.9  4.7e-131    3e-127       1     226 []     447     656 ..     447     656 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 422.6 bits;  conditional E-value: 4.7e-131
+               TBC1D23_C   1 ngyghwiastsgsrssinsvdgessngsndrgvkslvnkmtvalktksvnvkekvisfientstpvdrlsfnlpwpdrscterhvss 87 
+                             n y+hwi+stsgs+ss++s+dge +n+++ +gvkslvnkmt+alk+ksvnvkekvisfientstpv+r               hvss
+  tr|B7ZUZ8|B7ZUZ8_DANRE 447 NVYVHWIVSTSGSHSSLSSADGE-LNSTDGKGVKSLVNKMTFALKSKSVNVKEKVISFIENTSTPVER---------------HVSS 517
+                             67********************9.577888************************************98...............**** PP
+
+               TBC1D23_C  88 sdrvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhhllckevkesghmfpshllvtathmyclreiv 174
+                             sdrvgkpyrgvkpvfsigdeeeydtdeidsss+sdddrke+vniqtwinkpdvkhh++c+evke+ghmfpshll+tathmyclrei+
+  tr|B7ZUZ8|B7ZUZ8_DANRE 518 SDRVGKPYRGVKPVFSIGDEEEYDTDEIDSSSISDDDRKEIVNIQTWINKPDVKHHIPCNEVKETGHMFPSHLLITATHMYCLREIA 604
+                             *************************************************************************************** PP
+
+               TBC1D23_C 175 srkglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli 226
+                             +rkg+ayiqsrqalnsvvkitskkkhpelitfk+gn++a+g+ei+a+eryli
+  tr|B7ZUZ8|B7ZUZ8_DANRE 605 ARKGFAYIQSRQALNSVVKITSKKKHPELITFKFGNNNAAGVEIVAVERYLI 656
+                             **************************************************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.8   0.3   9.6e-20   6.2e-16      68     214 ..      98     241 ..      45     242 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 58.8 bits;  conditional E-value: 9.6e-20
+              RabGAP-TBC  68 qgqnqLeriLkaysiynpevgYcqGmn..divaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpkl 152
+                             ++ +++e++++ y++ ++ v ++++++   i+ pll + l+ ++ ++cf+++++ky +rd   +      r +++++ ll+++ p++
+  tr|B7ZUZ8|B7ZUZ8_DANRE  98 DLVSDVESVITFYCKSRN-VTFTPDLSwpHILKPLLGLQLSRKDLYNCFYAIMNKYIPRDCIVKG-----RPFHLFRLLLQYHEPEF 178
+                             667889999999999988.99998865448***********************999999999997.....899************** PP
+
+              RabGAP-TBC 153 ykhlkeegldlelfaikwfltlflrefpletvlrlwDlllege.kfvllrvalailklleeel 214
+                             +++l++++++++ +ai+w+  lf+++   e++  lwD++l++   f +++++l+il + ++ +
+  tr|B7ZUZ8|B7ZUZ8_DANRE 179 CSFLDTKKITPDSYAINWLGSLFSSHCLPEVTQALWDVYLQQAdPFLIFFLMLIILVNAKDNI 241
+                             ************************99999********99966647867778888887776666 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.0   1.4e-10   8.8e-07      12     105 ..     330     434 ..     318     436 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 1.4e-10
+               Rhodanese  12 gkva..llDvRppeeYekghIpgAvnv.skdtlsrakkseapllelpeellel....gidnkktvvvycdgggr.aaaa....aall 86 
+                             ++v+  ++D+Rp+e+Y++gh+  A ++ s   l ++++   + + l+e+ ++      +  ++++ + ++g++   +      a++l
+  tr|B7ZUZ8|B7ZUZ8_DANRE 330 EGVRffVVDCRPAEQYNAGHLSTAFHLdSDLMLHNPSEFALSVKSLLEAQKQSlesgSVASGEHLCFMGSGREEeDMYMnmvlAHFL 416
+                             3444679********************96667777777777777776666666777999***********99996555555555555 PP
+
+               Rhodanese  87 kklGykn.vsvldGGfkawk 105
+                             +  + k+ vs+ +GGf+a +
+  tr|B7ZUZ8|B7ZUZ8_DANRE 417 Q-KN-KEfVSIAKGGFMALQ 434
+                             5.66.788********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (680 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       707  (0.0368632); expected 383.6 (0.02)
+Passed bias filter:                      591  (0.030815); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.18s 00:00:00.62 Elapsed: 00:00:00.61
+# Mc/sec: 3590.14
+//
+Query:       tr|A0A2R8RRP9|A0A2R8RRP9_DANRE  [L=680]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.4e-127  423.7   6.9     3e-127  422.6   6.9    1.6  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    3.3e-16   59.7   0.4    6.9e-16   58.6   0.4    1.6  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    4.3e-07   30.5   0.0    8.8e-07   29.5   0.0    1.5  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  422.6   6.9  4.7e-131    3e-127       1     226 []     447     656 ..     447     656 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 422.6 bits;  conditional E-value: 4.7e-131
+                       TBC1D23_C   1 ngyghwiastsgsrssinsvdgessngsndrgvkslvnkmtvalktksvnvkekvisfientstpvdrlsfnlpwpdrs 79 
+                                     n y+hwi+stsgs+ss++s+dge +n+++ +gvkslvnkmt+alk+ksvnvkekvisfientstpv+r           
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 447 NVYVHWIVSTSGSHSSLSSADGE-LNSTDGKGVKSLVNKMTFALKSKSVNVKEKVISFIENTSTPVER----------- 513
+                                     67********************9.577888************************************98........... PP
+
+                       TBC1D23_C  80 cterhvsssdrvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhhllckevkesghmfps 158
+                                         hvsssdrvgkpyrgvkpvfsigdeeeydtdeidsss+sdddrke+vniqtwinkpdvkhh++c+evke+ghmfps
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 514 ----HVSSSDRVGKPYRGVKPVFSIGDEEEYDTDEIDSSSISDDDRKEIVNIQTWINKPDVKHHIPCNEVKETGHMFPS 588
+                                     ....*************************************************************************** PP
+
+                       TBC1D23_C 159 hllvtathmyclreivsrkglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli 226
+                                     hll+tathmyclrei++rkg+ayiqsrqalnsvvkitskkkhpelitfk+gn++a+g+ei+a+eryli
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 589 HLLITATHMYCLREIAARKGFAYIQSRQALNSVVKITSKKKHPELITFKFGNNNAAGVEIVAVERYLI 656
+                                     ******************************************************************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6   0.4   1.1e-19   6.9e-16      68     214 ..      98     241 ..      45     242 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 1.1e-19
+                      RabGAP-TBC  68 qgqnqLeriLkaysiynpevgYcqGmn..divaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleel 144
+                                     ++ +++e++++ y++ ++ v ++++++   i+ pll + l+ ++ ++cf+++++ky +rd   +      r +++++ l
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE  98 DLVSDVESVITFYCKSRN-VTFTPDLSwpHILKPLLGLQLSRKDLYNCFYAIMNKYIPRDCIVKG-----RPFHLFRLL 170
+                                     567788999999999988.99998865448***********************999999999997.....899****** PP
+
+                      RabGAP-TBC 145 lkkkdpklykhlkeegldlelfaikwfltlflrefpletvlrlwDlllege.kfvllrvalailklleeel 214
+                                     l+++ p+++++l++++++++ +ai+w+  lf+++   e++  lwD++l++   f +++++l+il + ++ +
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 171 LQYHEPEFCSFLDTKKITPDSYAINWLGSLFSSHCLPEVTQALWDVYLQQAdPFLIFFLMLIILVNAKDNI 241
+                                     ********************************99999********99966647867778888887776666 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.0   1.4e-10   8.8e-07      12     105 ..     330     434 ..     318     436 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 1.4e-10
+                       Rhodanese  12 gkva..llDvRppeeYekghIpgAvnv.skdtlsrakkseapllelpeellel....gidnkktvvvycdgggr.aaaa 82 
+                                     ++v+  ++D+Rp+e+Y++gh+  A ++ s   l ++++   + + l+e+ ++      +  ++++ + ++g++   +  
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 330 EGVRffVVDCRPAEQYNAGHLSTAFHLdSDLMLHNPSEFALSVKSLLEAQKQSlesgSVASGEHLCFMGSGREEeDMYM 408
+                                     3444679********************96667777777777777776666666777999***********999965555 PP
+
+                       Rhodanese  83 ....aallkklGykn.vsvldGGfkawk 105
+                                         a++l+  + k+ vs+ +GGf+a +
+  tr|A0A2R8RRP9|A0A2R8RRP9_DANRE 409 nmvlAHFLQ-KN-KEfVSIAKGGFMALQ 434
+                                     555555555.66.788********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (680 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       710  (0.0370197); expected 383.6 (0.02)
+Passed bias filter:                      587  (0.0306064); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.47u 0.15s 00:00:00.62 Elapsed: 00:00:00.57
+# Mc/sec: 3876.78
+//
+Query:       tr|E7EY66|E7EY66_DANRE  [L=695]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   8.7e-143  473.4   3.3   1.2e-142  472.9   3.3    1.2  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    3.5e-16   59.6   0.4    7.1e-16   58.6   0.4    1.6  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    4.5e-07   30.5   0.0    9.1e-07   29.5   0.0    1.5  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  472.9   3.3  1.9e-146  1.2e-142       1     226 []     447     671 ..     447     671 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 472.9 bits;  conditional E-value: 1.9e-146
+               TBC1D23_C   1 ngyghwiastsgsrssinsvdgessngsndrgvkslvnkmtvalktksvnvkekvisfientstpvdrlsfnlpwpdrscterhvss 87 
+                             n y+hwi+stsgs+ss++s+dge +n+++ +gvkslvnkmt+alk+ksvnvkekvisfientstpv+r+sfnlpwpd+ + erhvss
+  tr|E7EY66|E7EY66_DANRE 447 NVYVHWIVSTSGSHSSLSSADGE-LNSTDGKGVKSLVNKMTFALKSKSVNVKEKVISFIENTSTPVERMSFNLPWPDKGILERHVSS 532
+                             67********************9.577888********************************************************* PP
+
+               TBC1D23_C  88 sdrvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhhllckevkesghmfpshllvtathmyclreiv 174
+                             sdrvgkpyrgvkpvfsigdeeeydtdeidsss+sdddrke+vniqtwinkpdvkhh++c+evke+ghmfpshll+tathmyclrei+
+  tr|E7EY66|E7EY66_DANRE 533 SDRVGKPYRGVKPVFSIGDEEEYDTDEIDSSSISDDDRKEIVNIQTWINKPDVKHHIPCNEVKETGHMFPSHLLITATHMYCLREIA 619
+                             *************************************************************************************** PP
+
+               TBC1D23_C 175 srkglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli 226
+                             +rkg+ayiqsrqalnsvvkitskkkhpelitfk+gn++a+g+ei+a+eryli
+  tr|E7EY66|E7EY66_DANRE 620 ARKGFAYIQSRQALNSVVKITSKKKHPELITFKFGNNNAAGVEIVAVERYLI 671
+                             **************************************************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6   0.4   1.1e-19   7.1e-16      68     214 ..      98     241 ..      45     242 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 1.1e-19
+              RabGAP-TBC  68 qgqnqLeriLkaysiynpevgYcqGmn..divaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpkl 152
+                             ++ +++e++++ y++ ++ v ++++++   i+ pll + l+ ++ ++cf+++++ky +rd   +      r +++++ ll+++ p++
+  tr|E7EY66|E7EY66_DANRE  98 DLVSDVESVITFYCKSRN-VTFTPDLSwpHILKPLLGLQLSRKDLYNCFYAIMNKYIPRDCIVKG-----RPFHLFRLLLQYHEPEF 178
+                             567788999999999988.99998865448***********************999999999997.....899************** PP
+
+              RabGAP-TBC 153 ykhlkeegldlelfaikwfltlflrefpletvlrlwDlllege.kfvllrvalailklleeel 214
+                             +++l++++++++ +ai+w+  lf+++   e++  lwD++l++   f +++++l+il + ++ +
+  tr|E7EY66|E7EY66_DANRE 179 CSFLDTKKITPDSYAINWLGSLFSSHCLPEVTQALWDVYLQQAdPFLIFFLMLIILVNAKDNI 241
+                             ************************99999********99966647867778888887776666 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.0   1.4e-10   9.1e-07      12     105 ..     330     434 ..     318     436 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 1.4e-10
+               Rhodanese  12 gkva..llDvRppeeYekghIpgAvnv.skdtlsrakkseapllelpeellel....gidnkktvvvycdgggr.aaaa....aall 86 
+                             ++v+  ++D+Rp+e+Y++gh+  A ++ s   l ++++   + + l+e+ ++      +  ++++ + ++g++   +      a++l
+  tr|E7EY66|E7EY66_DANRE 330 EGVRffVVDCRPAEQYNAGHLSTAFHLdSDLMLHNPSEFALSVKSLLEAQKQSlesgSVASGEHLCFMGSGREEeDMYMnmvlAHFL 416
+                             3444679********************96667777777777777776666666777999***********99996555555555555 PP
+
+               Rhodanese  87 kklGykn.vsvldGGfkawk 105
+                             +  + k+ vs+ +GGf+a +
+  tr|E7EY66|E7EY66_DANRE 417 Q-KN-KEfVSIAKGGFMALQ 434
+                             5.66.788********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (695 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       473  (0.0246624); expected 383.6 (0.02)
+Passed bias filter:                      407  (0.0212211); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.59
+# Mc/sec: 3792.10
+//
+Query:       sp|Q9NUY8|TBC23_HUMAN  [L=699]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   2.3e-155  514.5   6.7   6.6e-155  513.0   3.8    2.1  1  TBC1D23_C   TBC1 domain family member 23 C-terminal
+    1.5e-20   73.8   1.6    2.8e-20   73.0   1.6    1.5  1  RabGAP-TBC  Rab-GTPase-TBC domain
+    1.2e-07   32.3   0.0    3.9e-07   30.6   0.0    1.9  1  Rhodanese   Rhodanese-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TBC1D23_C  TBC1 domain family member 23 C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  513.0   3.8    1e-158  6.6e-155       1     226 []     451     676 ..     451     676 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 513.0 bits;  conditional E-value: 1e-158
+              TBC1D23_C   1 ngyghwiastsgsrssinsvdgessngsndrgvkslvnkmtvalktksvnvkekvisfientstpvdrlsfnlpwpdrscterhvsss 88 
+                            ngyghwiastsgsrssinsvdges+ngs+drg+kslvnkmtvalktksvnv+ekvisfientstpvdr+sfnlpwpdrscterhvsss
+  sp|Q9NUY8|TBC23_HUMAN 451 NGYGHWIASTSGSRSSINSVDGESPNGSSDRGMKSLVNKMTVALKTKSVNVREKVISFIENTSTPVDRMSFNLPWPDRSCTERHVSSS 538
+                            79************************************************************************************** PP
+
+              TBC1D23_C  89 drvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhhllckevkesghmfpshllvtathmyclreivsr 176
+                            drvgkpyrgvkpvfsigdeeeydtdeidsssmsdddrkevvniqtwinkpdvkhh++ckevkesghmfpshllvtathmyclreivsr
+  sp|Q9NUY8|TBC23_HUMAN 539 DRVGKPYRGVKPVFSIGDEEEYDTDEIDSSSMSDDDRKEVVNIQTWINKPDVKHHFPCKEVKESGHMFPSHLLVTATHMYCLREIVSR 626
+                            **************************************************************************************** PP
+
+              TBC1D23_C 177 kglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli 226
+                            kglayiqsrqalnsvvkitskkkhpelitfkygnssasgieilaieryli
+  sp|Q9NUY8|TBC23_HUMAN 627 KGLAYIQSRQALNSVVKITSKKKHPELITFKYGNSSASGIEILAIERYLI 676
+                            ************************************************97 PP
+
+>> RabGAP-TBC  Rab-GTPase-TBC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.0   1.6   4.4e-24   2.8e-20       2     214 ..      48     245 ..      47     246 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 73.0 bits;  conditional E-value: 4.4e-24
+             RabGAP-TBC   2 elRgevWklllgyepevkrlkksekkqeksekekskkekseeskelsqIrkDvprtfp..nsesfknkqgqnqLeriLkaysiynpev 87 
+                            +lR++vWk++l++                + ++   +    + +e+++I+kD+   ++  +  ++k +++  ++e++++ y++ ++ +
+  sp|Q9NUY8|TBC23_HUMAN  48 DLRAKVWKIALNV--------------AGKGDSLASWDGILDLPEQNTIHKDCLQFIDqlSVPEEKAAELLLDIESVITFYCKSRN-I 120
+                            69*********99..............45666777777888888899***********64448999999*************9999.9 PP
+
+             RabGAP-TBC  88 gYcqGmn..divaplllvsldeeeaFwcfvsLlekyklrdlytqsfpglkrklkvleellkkkdpklykhlkeegldlelfaikwflt 173
+                             Y   ++   ++ pl ++ l+ ++ ++cf+++++ky +rd  ++      r +++++ l++++ p+l+++l++++++++ +a++w+  
+  sp|Q9NUY8|TBC23_HUMAN 121 KYSTSLSwiHLLKPLVHLQLPRSDLYNCFYAIMNKYIPRDCSQKG-----RPFHLFRLLIQYHEPELCSYLDTKKITPDSYALNWLGS 203
+                            ***8877336799********************777777777775.....899*********************************** PP
+
+             RabGAP-TBC 174 lflrefpletvlrlwD.lllegekfvllrvalailklleeel 214
+                            lf++  + e++  +wD +l + + f++++++l+il + +e +
+  sp|Q9NUY8|TBC23_HUMAN 204 LFACYCSTEVTQAIWDgYLQQADPFFIYFLMLIILVNAKEVI 245
+                            ****************66667679989999999998877776 PP
+
+>> Rhodanese  Rhodanese-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.6   0.0   6.1e-11   3.9e-07      10     105 ..     332     438 ..     323     440 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 30.6 bits;  conditional E-value: 6.1e-11
+              Rhodanese  10 ekgkva..llDvRppeeYekghIpgAvnv.skdtlsrakkseapllelpeellel....gidnkktvvvycdgggr.aaaa....aal 85 
+                            + ++v+  ++D+Rp+e+Y++gh+  A ++ s   l ++++  ++ + l+e+ ++      i  ++++ + ++g++   +      a++
+  sp|Q9NUY8|TBC23_HUMAN 332 QGEGVRffVVDCRPAEQYNAGHLSTAFHLdSDLMLQNPSEFAQSVKSLLEAQKQSiesgSIAGGEHLCFMGSGREEeDMYMnmvlAHF 419
+                            445555789********************8777777777777777777777766688899*************999655555555555 PP
+
+              Rhodanese  86 lkklGykn.vsvldGGfkawk 105
+                            l+  + k+ vs+  GGf+a +
+  sp|Q9NUY8|TBC23_HUMAN 420 LQ-KN-KEyVSIASGGFMALQ 438
+                            55.66.778********9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (699 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       526  (0.0274258); expected 383.6 (0.02)
+Passed bias filter:                      452  (0.0235674); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.14s 00:00:00.58 Elapsed: 00:00:00.67
+# Mc/sec: 3389.87
+//
+[ok]

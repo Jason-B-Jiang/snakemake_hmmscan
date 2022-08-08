@@ -1,0 +1,120 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019306.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019306
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9PSI9|MCL1A_DANRE  [L=372]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-42  146.0   3.5    4.6e-30  105.7   0.2    2.4  2  Myc_N     Myc amino-terminal region
+    3.5e-14   52.6   0.2    7.4e-14   51.6   0.2    1.6  1  HLH       Helix-loop-helix DNA-binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Myc_N  Myc amino-terminal region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.7   0.2   4.8e-34   4.6e-30      15     159 ..      12     155 ..       4     176 .. 0.75
+   2 !   40.8   0.3   2.5e-14   2.4e-10     241     336 ..     183     284 ..     168     287 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 105.7 bits;  conditional E-value: 4.8e-34
+                  Myc_N  15 yDslqPyFY...eeeedfYlselqspaPsEDiWKKFELLPTPpLSPsrrssesslfpstadqlemvtElLl..adlvnqsficdpdee 97 
+                            +D ++ yFY   + eedf++    s+aPsEDiWKKFELLPTPp+SPsr    + lfp  +d+l ++   +l  ++ ++   + + d  
+  sp|Q9PSI9|MCL1A_DANRE  12 WD-MEHYFYdemDTEEDFFK----STAPSEDIWKKFELLPTPPMSPSRTLDGDWLFPIPGDRLGWAPPKVLtcDEEYE--GLHKFDPL 92 
+                            55.6789**77667999996....69****************************************865554666666..45555666 PP
+
+                  Myc_N  98 daf..lksiiiqDCmWSgfSaaaKlekvvsEkLaslqaarkegaaaaaaaaassasreesgsag 159
+                            d+f  l si+i+DCmWSg+S++ +lekv +   a   a  ++++a++aa aas + ++ +++a+
+  sp|Q9PSI9|MCL1A_DANRE  93 DIFgnLGSIVIKDCMWSGLSTSHRLEKVAHGERAPVAALIQNSTAQKAARAASGTPVT-GSQAA 155
+                            8998889******************999987777776666666664444433333222.22222 PP
+
+  == domain 2  score: 40.8 bits;  conditional E-value: 2.5e-14
+                  Myc_N 241 deeeeeeeeeeeeidVVtvekrqssskrkevstlttalaesraqsselvLkRchvit..hQHNYAAp.Psvesee.....paaKklkl 320
+                            ++++ +++e+++eidVVtv++r +   r  + +++ + + s    ++   kR hv+   +QHNYAAp P ++ e+     p +K+ +l
+  sp|Q9PSI9|MCL1A_DANRE 183 RSDSSDDDEDDDEIDVVTVDNRPKRG-RPPSRRTPVTITVSADPFGP-CPKRFHVSLhrQQHNYAAPsPDTDPEDdfeiePVSKRPRL 268
+                            223334457889********998554.34434455555555545555.67****985226***********987555566889***** PP
+
+                  Myc_N 321 esssrvlKqvsnnrks 336
+                            esss +   +s+++ s
+  sp|Q9PSI9|MCL1A_DANRE 269 ESSSAPSSPLSSPATS 284
+                            **98887777777665 PP
+
+>> HLH  Helix-loop-helix DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.6   0.2   7.7e-18   7.4e-14       3      54 .]     292     342 ..     290     342 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 51.6 bits;  conditional E-value: 7.7e-18
+                            HHHHHHHHHHHHHHHHHHHHHHHHSCHCSTTSS-STHHHHHHHHHHHHHHHH CS
+                    HLH   3 aahnerErrRRdriNsafeeLrellPsslppskKlsKaeiLekAveYIkhLq 54 
+                            +++n +Er+RRd+++s+f+ Lre +P +l  s+K sK++iL++A++Y+ +L+
+  sp|Q9PSI9|MCL1A_DANRE 292 QRRNFLERKRRDDLRSRFQALREEIP-GLSGSSKTSKVAILTQATDYLLQLH 342
+                            68999*********************.**********************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (372 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1192  (0.0621513); expected 383.6 (0.02)
+Passed bias filter:                      533  (0.0277908); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.21s 00:00:00.63 Elapsed: 00:00:00.78
+# Mc/sec: 1539.26
+//
+Query:       tr|B8A578|B8A578_DANRE  [L=138]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      2e-29  103.6   0.2    2.3e-29  103.3   0.2    1.0  1  Myc_N     Myc amino-terminal region
+
+
+Domain annotation for each model (and alignments):
+>> Myc_N  Myc amino-terminal region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.3   0.2   1.2e-33   2.3e-29      15     125 ..      12     122 ..       4     137 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 103.3 bits;  conditional E-value: 1.2e-33
+                   Myc_N  15 yDslqPyFY...eeeedfYlselqspaPsEDiWKKFELLPTPpLSPsrrssesslfpstadqlemvtElLl..adlvnqsficdpde 96 
+                             +D ++ yFY   + eedf++    s+aPsEDiWKKFELLPTPp+SPsr    + lfp  +d+l ++   +l  ++ ++   + + d 
+  tr|B8A578|B8A578_DANRE  12 WD-MEHYFYdemDTEEDFFK----STAPSEDIWKKFELLPTPPMSPSRTLDGDWLFPIPGDRLGWAPPKVLtcDEEYE--GLHKFDP 91 
+                             55.778***77667999996....69****************************************865554666666..4555566 PP
+
+                   Myc_N  97 edaf..lksiiiqDCmWSgfSaaaKlekvvs 125
+                              d+f  l si+i+DCmWSg+S++ +lekv +
+  tr|B8A578|B8A578_DANRE  92 LDIFgnLGSIVIKDCMWSGLSTSHRLEKVAH 122
+                             68998889********************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (138 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       204  (0.0106366); expected 383.6 (0.02)
+Passed bias filter:                      189  (0.00985453); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.15s 00:00:00.48 Elapsed: 00:00:00.60
+# Mc/sec: 745.33
+//
+[ok]

@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050433.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050433
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9USS1|YOA5_SCHPO  [L=433]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.8e-12   48.0   1.5    2.9e-12   47.3   0.7    1.8  1  Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Arrestin_C  Arrestin (or S-antigen), C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.3   0.7   1.5e-16   2.9e-12       4     133 ..     226     376 ..     223     379 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 47.3 bits;  conditional E-value: 1.5e-16
+                           -EEEEEEES-SEEETT--EEEEEEEEE-SSSEEEEEEEEEEEEEEEESS...............SEEEEEEEEEE.EEE---....... CS
+            Arrestin_C   4 kvslevslpkkayvpGetipvtvkidndskkkvkkikvslvqhvdvcafnr............asnkkeknvvak.sdnvkv....... 72 
+                            + ++vslp++ +  Ge++  ++ki+n+sk ++k++k++l++++  +   +            +++++e ++  k  +++++       
+  sp|Q9USS1|YOA5_SCHPO 226 ATRITVSLPRTDWLAGESVVSKIKIENHSKSSIKTLKLCLYRRIIGFDPPSwktqqmmshlnlSRKNSEVSKTCKcLQKETIrcnkksn 314
+                           6789*********************************************9999999998887744444444444434444448888999 PP
+
+                           .....B-TTEE.EEEEEEE.----B-----S---EEEEEEEEEEEEEEESSSEEEEEEEEEEEEEB CS
+            Arrestin_C  73 .....tvaakdkletevtlkiPeeltpssarnvelikvsYylkvkltlsgssggelslelPivlgs 133
+                                  aa ++++te++++iP +   +++  +++  v+++lk+++  +    +  ++e+P+ + s
+  sp|Q9USS1|YOA5_SCHPO 315 cynwnGIAALETYTTECHIQIP-DKEATIT-VGSNFEVDHFLKISVGNK--LWTLNRVEIPFKIIS 376
+                           9999966777789999******.6666665.9***************99..566899*****9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (433 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       539  (0.0281037); expected 383.6 (0.02)
+Passed bias filter:                      324  (0.0168935); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.22s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 2233.74
+//
+[ok]

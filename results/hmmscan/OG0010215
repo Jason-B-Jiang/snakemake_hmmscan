@@ -1,0 +1,618 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0010215.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0010215
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|H2L0C1|H2L0C1_CAEEL  [L=908]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    8.8e-48  160.7  25.4    3.5e-09   37.0   0.0    8.4  3  fn3              Fibronectin type III domain
+    3.6e-10   40.5  10.8      0.071   13.9   0.0    5.9  0  Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+    0.00028   21.2   0.1         46    4.5   0.0    4.7  0  Interfer-bind    Interferon-alpha/beta receptor, fibronectin 
+
+
+Domain annotation for each model (and alignments):
+>> fn3  Fibronectin type III domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.7   0.2   6.7e-13   4.3e-09       2      79 ..     143     216 ..     142     223 .. 0.87
+   2 !   37.0   0.0   5.5e-13   3.5e-09       5      79 ..     241     314 ..     237     318 .. 0.89
+   3 !   34.5   0.1   3.3e-12   2.1e-08       3      85 .]     440     523 ..     438     523 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 36.7 bits;  conditional E-value: 6.7e-13
+                             CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3   2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79 
+                             aP+ ++v+ev   sl ++W++p+   g++  Y+ve+  ++ + + +++tv+ ++  v +t+L pgt Y+v+V+a  + 
+  tr|H2L0C1|H2L0C1_CAEEL 143 APRYPQVTEVAQYSLAIKWDAPD--CGSVGDYQVELTGVSAPFDIHRQTVTQPH--VSVTNLLPGTFYSVKVRAADRS 216
+                             89********************7..**************999855555566666..*****************98765 PP
+
+  == domain 2  score: 37.0 bits;  conditional E-value: 5.5e-13
+                             EEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS.TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3   5 nlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee.ewneftvprtttsvtltgLkpgteYevrVqavngg 79 
+                             n+++  +t+++l+vsW+p +  +  +++Yev+  e+++ + +  +++v++  +s+ ltgL+p+t+Y++ V a+ ++
+  tr|H2L0C1|H2L0C1_CAEEL 241 NIQLLYRTDSELRVSWQPFT--DPRLQHYEVTAVEVDDDSrRVERRRVDPALNSFALTGLRPNTKYTIGVIAFVDH 314
+                             7788889************7..***********99999996777777999999*****************998665 PP
+
+  == domain 3  score: 34.5 bits;  conditional E-value: 3.3e-12
+                             ECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEE.ECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEEE CS
+                     fn3   3 PsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneft.vprtttsvtltgLkpgteYevrVqavngggegpes 85 
+                             P+n++  +v + s+ ++W+ p+  + + pi+gYe  + e ++  +    + v ++  +v ++gLk + +Y+++V++++ +g +++s
+  tr|H2L0C1|H2L0C1_CAEEL 440 PTNIRSADVDGQSIKLEWDVPRcdETHTPIDGYEYIVYEASQSAPVDGASyVGAP--HVIIKGLKQNVDYTFKVRSRSVNGHSQWS 523
+                             99********************************888888666644444415555..5***********************99998 PP
+
+>> Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Interfer-bind  Interferon-alpha/beta receptor, fibronectin type III
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (908 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       417  (0.0217425); expected 383.6 (0.02)
+Passed bias filter:                      351  (0.0183013); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.23s 00:00:00.67 Elapsed: 00:00:00.69
+# Mc/sec: 4274.91
+//
+Query:       tr|Q9UB29|Q9UB29_CAEEL  [L=4280]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+   3.1e-287  928.1 159.7    6.5e-16   58.5   0.1   36.8 19  fn3              Fibronectin type III domain
+    3.7e-51  171.8 105.3    0.00016   22.3   0.2   31.0  0  Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+    2.2e-15   56.9  23.8        1.3    9.4   0.0   21.1  0  Interfer-bind    Interferon-alpha/beta receptor, fibronectin 
+    1.8e-09   38.0   0.2         31    5.2   0.0   12.3  0  Glyco_hydro_36C  Glycosyl hydrolase family 36 C-terminal doma
+
+
+Domain annotation for each model (and alignments):
+>> fn3  Fibronectin type III domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   0.2   5.5e-12   2.6e-08       2      79 ..     143     216 ..     142     223 .. 0.87
+   2 !   34.4   0.0   4.7e-12   2.3e-08       5      78 ..     241     313 ..     237     317 .. 0.89
+   3 !   31.9   0.1   2.7e-11   1.3e-07       3      85 .]     440     523 ..     438     523 .. 0.86
+   4 !   58.5   0.1   1.4e-19   6.5e-16       2      83 ..    1300    1385 ..    1299    1386 .. 0.90
+   5 !   48.3   0.4   2.1e-16     1e-12       2      85 .]    1401    1486 ..    1400    1486 .. 0.88
+   6 !   46.6   0.1   7.4e-16   3.6e-12       4      79 ..    1619    1696 ..    1616    1702 .. 0.90
+   7 !   43.0   0.0   9.9e-15   4.7e-11       2      81 ..    1912    2000 ..    1911    2005 .. 0.82
+   8 !   42.5   0.1   1.4e-14   6.8e-11       1      84 [.    2017    2102 ..    2017    2103 .. 0.94
+   9 !   28.5   0.0   3.3e-10   1.6e-06       2      85 .]    2118    2212 ..    2117    2212 .. 0.86
+  10 !   45.0   0.0   2.3e-15   1.1e-11       1      83 [.    2225    2308 ..    2225    2310 .. 0.93
+  11 !   48.9   0.1   1.4e-16   6.6e-13       2      83 ..    2524    2608 ..    2523    2611 .. 0.90
+  12 !   51.9   0.3   1.7e-17     8e-14       2      85 .]    2625    2708 ..    2624    2708 .. 0.92
+  13 !   39.4   0.0   1.3e-13     6e-10       1      85 []    2721    2816 ..    2721    2816 .. 0.86
+  14 !   33.8   0.3   7.2e-12   3.4e-08       5      79 ..    2834    2915 ..    2832    2921 .. 0.87
+  15 !   39.0   0.1   1.8e-13   8.4e-10       2      85 .]    3146    3230 ..    3145    3230 .. 0.86
+  16 !   40.3   0.2   6.5e-14   3.1e-10       2      85 .]    3244    3343 ..    3243    3343 .. 0.90
+  17 !   32.3   0.0     2e-11   9.8e-08       6      79 ..    3362    3436 ..    3360    3439 .. 0.88
+  18 !   36.4   0.1   1.1e-12   5.2e-09       1      83 [.    3460    3550 ..    3460    3551 .. 0.91
+  19 !   26.5   0.4   1.4e-09   6.7e-06       5      73 ..    3566    3638 ..    3562    3645 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 5.5e-12
+                             CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3   2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79 
+                             aP+ ++v+ev   sl ++W++p+   g++  Y+ve+  ++ + + +++tv+ ++  v +t+L pgt Y+v+V+a  + 
+  tr|Q9UB29|Q9UB29_CAEEL 143 APRYPQVTEVAQYSLAIKWDAPD--CGSVGDYQVELTGVSAPFDIHRQTVTQPH--VSVTNLLPGTFYSVKVRAADRS 216
+                             89********************7..**************999855555566666..*****************98765 PP
+
+  == domain 2  score: 34.4 bits;  conditional E-value: 4.7e-12
+                             EEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS.TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEET CS
+                     fn3   5 nlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee.ewneftvprtttsvtltgLkpgteYevrVqavng 78 
+                             n+++  +t+++l+vsW+p +  +  +++Yev+  e+++ + +  +++v++  +s+ ltgL+p+t+Y++ V a+ +
+  tr|Q9UB29|Q9UB29_CAEEL 241 NIQLLYRTDSELRVSWQPFT--DPRLQHYEVTAVEVDDDSrRVERRRVDPALNSFALTGLRPNTKYTIGVIAFVD 313
+                             7788889************7..***********99999996777777999999*****************99765 PP
+
+  == domain 3  score: 31.9 bits;  conditional E-value: 2.7e-11
+                             ECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEE.ECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEEE CS
+                     fn3   3 PsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneft.vprtttsvtltgLkpgteYevrVqavngggegpes 85 
+                             P+n++  +v + s+ ++W+ p+  + + pi+gYe  + e ++  +    + v ++  +v ++gLk + +Y+++V++++ +g +++s
+  tr|Q9UB29|Q9UB29_CAEEL 440 PTNIRSADVDGQSIKLEWDVPRcdETHTPIDGYEYIVYEASQSAPVDGASyVGAP--HVIIKGLKQNVDYTFKVRSRSVNGHSQWS 523
+                             99********************************888888666644444415555..5***********************99998 PP
+
+  == domain 4  score: 58.5 bits;  conditional E-value: 1.4e-19
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrVqavnggg 80  
+                              a+ nl+v +++++sl+ sW+pp +++g it+Yev+y+  + ++      +++++tv +++  +t+tgL p+++Y+v V+a +++g
+  tr|Q9UB29|Q9UB29_CAEEL 1300 AVANLRVQPIGPDSLQCSWQPPVNPNGRITQYEVTYQLISRGNcdnnqeAPRTITVNGPH--FTITGLHPHSKYRVGVAAKSNVG 1382
+                              789*********************************999999977776666666677777..**********************9 PP
+
+                              EEE CS
+                     fn3   81 egp 83  
+                               g+
+  tr|Q9UB29|Q9UB29_CAEEL 1383 AGE 1385
+                              886 PP
+
+  == domain 5  score: 48.3 bits;  conditional E-value: 2.1e-16
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTS..TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgsee..ewneftvprtttsvtltgLkpgteYevrVqavngggeg 82  
+                              aP  l+ +++++t +++sW++p+  + +g+it Ye e+   +  +  ++++ ++ +t   +++++L+p t+Y+v+V+a+++ g g
+  tr|Q9UB29|Q9UB29_CAEEL 1401 APLYLRTEDIRPTDVSISWQAPPclQTNGEITEYEYEVTAGDRRQtvQKTTENIRGTR--AKIENLQPQTRYNVKVRAYTARGAG 1483
+                              7889999**************************9999877766665566666666666..************************* PP
+
+                              EEE CS
+                     fn3   83 pes 85  
+                              p+s
+  tr|Q9UB29|Q9UB29_CAEEL 1484 PWS 1486
+                              **8 PP
+
+  == domain 6  score: 46.6 bits;  conditional E-value: 7.4e-16
+                              CEEEEEEE..SSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    4 snlsvsev..tstsltvsWeppkdgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79  
+                              + l v+ +  +++sl+++W+  +d    +t +++++ ++++ +++++f+v+r t+++ + +L+p t+Y+v+V a +++
+  tr|Q9UB29|Q9UB29_CAEEL 1619 QVLFVKKIggSENSLHINWDVRPDDKNRVTAFRITVVPQDGSQRSQTFNVDRATYQYRIDNLRPRTTYNVTVSAATHK 1696
+                              556666667799**************************999999******************************9988 PP
+
+  == domain 7  score: 43.0 bits;  conditional E-value: 9.9e-15
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS........TEEEEE.ECSTSS.EEEEESSSTTEEEEEEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee........ewneft.vprttt.svtltgLkpgteYevrVqav 76  
+                              ++++l+v++ ++++++v+W +p  ++g+i+gY + yr k            +++ f  v ++++  +t+tgL p++ YevrV+a+
+  tr|Q9UB29|Q9UB29_CAEEL 1912 SVRDLRVKALSPNEVHVQWLAPLVQRGTIVGYDISYRLKHRLAcpeeeprdVSRDFVtVYNHKDlDYTITGLLPYSLYEVRVRAR 1996
+                              5899********************************99988889966665533333333333557******************** PP
+
+                              ETSEE CS
+                     fn3   77 nggge 81  
+                              +++  
+  tr|Q9UB29|Q9UB29_CAEEL 1997 TTE-L 2000
+                              *98.3 PP
+
+  == domain 8  score: 42.5 bits;  conditional E-value: 1.4e-14
+                              TCECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSS.EEEEESSSTTEEEEEEEEEEETSEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprttt.svtltgLkpgteYevrVqavngggeg 82  
+                              s+P nl  +   ++sl+++Wep +  +++g++++Ye e+  +++   + e+++ +t++ +vt+ gL+p+t+Y++rV+a+n  g+g
+  tr|Q9UB29|Q9UB29_CAEEL 2017 SPPLNLESTYALERSLSFQWEPVDcsQRHGHVVNYEYEILGQDDWA-KLERQIANTSDlRVTIDGLTPYTKYVMRVKAYNSIGGG 2100
+                              7999********************************9999998887.999999999999************************99 PP
+
+                              EE CS
+                     fn3   83 pe 84  
+                              p 
+  tr|Q9UB29|Q9UB29_CAEEL 2101 PN 2102
+                              85 PP
+
+  == domain 9  score: 28.5 bits;  conditional E-value: 3.3e-10
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEE...........ECSTSSEEEEESSSTTEEEEEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneft...........vprtttsvtltgLkpgteYevrVqa 75  
+                              +P++l v + +++ ++vsW pp ++ gp + Y+++y++  s + w+e+              ++   ++ tgL  g++++++V++
+  tr|Q9UB29|Q9UB29_CAEEL 2118 PPQDLVVAQEGTSFFMVSWLPPYPPYGPHDAYKIRYQQIPSDD-WKEVEkgikdpllqcpGESPRFCYNATGLDSGQQFKIQVAT 2201
+                              89*************************************9998.77777665555555322333449****************** PP
+
+                              EETSE.EEEEE CS
+                     fn3   76 vnggg.egpes 85  
+                              + +gg +gp+s
+  tr|Q9UB29|Q9UB29_CAEEL 2202 RIEGGsYGPWS 2212
+                              *****9***98 PP
+
+  == domain 10  score: 45.0 bits;  conditional E-value: 2.3e-15
+                              TCECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSS.EEEEESSSTTEEEEEEEEEEETSEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneftvprttt.svtltgLkpgteYevrVqavngggegp 83  
+                              +aP+ +++ e t++sl+++W pp d+ g +t+Y+v + + ++ +++++ ++ +++t ++ ++ L+p t Y++++ a +++g g+
+  tr|Q9UB29|Q9UB29_CAEEL 2225 DAPRAIHLIEKTDHSLHIRWVPPIDPKGYVTQYRVSIVSLDDVNDKKRTHIVNHPTlTYLFEELNPETSYNISISAGTKQGFGR 2308
+                              69***********************************99999997777778888777*********************999886 PP
+
+  == domain 11  score: 48.9 bits;  conditional E-value: 1.4e-16
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrVqavnggg 80  
+                              ++++l+++++++ts++ +W+pp+d++g itgY+++y+ k+ +e       ++e +v++ +   tl+gL p+++Ye+ V a++ + 
+  tr|Q9UB29|Q9UB29_CAEEL 2524 PVEGLTAKPTGPTSIVARWKPPRDPNGVITGYTLTYQLKSIGEcgprssTPIEKHVKNEE--ETLEGLLPDSTYEIHVVAHTSH- 2605
+                              789*********************************999888899998888888888888..99******************99. PP
+
+                              EEE CS
+                     fn3   81 egp 83  
+                               gp
+  tr|Q9UB29|Q9UB29_CAEEL 2606 AGP 2608
+                              444 PP
+
+  == domain 12  score: 51.9 bits;  conditional E-value: 1.7e-17
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngggegpe 84  
+                              +P+n+++ +vts+ + ++W+ p+  +++g+it Ye e++++++     + t  ++t++++l +L p+t+Y++rV+a+n++g gp+
+  tr|Q9UB29|Q9UB29_CAEEL 2625 PPQNVRAGSVTSSRADITWTQPEceQRNGKITDYEYELWSMDTW--ADNSTGHNPTERLNLDQLIPYTQYQIRVRAINKEGDGPF 2707
+                              8****************************************666..56666666666***************************9 PP
+
+                              E CS
+                     fn3   85 s 85  
+                              s
+  tr|Q9UB29|Q9UB29_CAEEL 2708 S 2708
+                              8 PP
+
+  == domain 13  score: 39.4 bits;  conditional E-value: 1.3e-13
+                              TCECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS........TEEEEE..ECSTSSEEEEESSSTTEEEEEEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee........ewneft..vprtttsvtltgLkpgteYevrVqa 75  
+                              +aPs+l+ +++ ++ + +sW pp++++g+i+ Y+v+y ++g+ +        +  e +  ++++   + l++L p +eY ++V a
+  tr|Q9UB29|Q9UB29_CAEEL 2721 PAPSDLQEEATFPHAIEISWLPPTPPHGNIDFYKVRYTPSGEANyreirvetDRLECSdsNKKDRLCYRLSDLDPEQEYDIQVSA 2805
+                              689999999999*******************************999888776333333224444559****************** PP
+
+                              EETSE.EEEEE CS
+                     fn3   76 vnggg.egpes 85  
+                              +++gg ++++s
+  tr|Q9UB29|Q9UB29_CAEEL 2806 HTEGGgWSEWS 2816
+                              ****9899987 PP
+
+  == domain 14  score: 33.8 bits;  conditional E-value: 7.2e-12
+                              EEEEEEESSSEEEEEEE-CS.SSSSTEEEEEEEEEETTSTSTEEEEE......ECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    5 nlsvsevtstsltvsWeppk.dgggpitgYeveyrekgseeewneft......vprtttsvtltgLkpgteYevrVqavngg 79  
+                              +l v++ ts+s++++We  + d+  +++gY +e+++++++ ew+e++       +++ +  t+++L+  t Y +r++ v ++
+  tr|Q9UB29|Q9UB29_CAEEL 2834 ELEVTDKTSNSISLKWEGLPqDQATHVVGYVLEFKSEDDNAEWQEYNgvvkhrKTSSDYKITVKQLETATLYFFRLRVVGKN 2915
+                              689**************************************9999999766533333459****************998665 PP
+
+  == domain 15  score: 39.0 bits;  conditional E-value: 1.8e-13
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngggegpe 84  
+                              +P+nl+ + + +++l ++W++p+  +++g+it+Ye e+   ++ +e ++  v++ + +  + +L+pg+ Y+++V+a++++g gp+
+  tr|Q9UB29|Q9UB29_CAEEL 3146 PPQNLQSTVRKDSELGFKWDAPEciQQNGNITQYEFELVGLDEWNEGTREGVTPRQ-NTLIDQLQPGSLYRIKVRAYTAEGPGPW 3229
+                              8**********************************999777444433333344444.79************************** PP
+
+                              E CS
+                     fn3   85 s 85  
+                              s
+  tr|Q9UB29|Q9UB29_CAEEL 3230 S 3230
+                              8 PP
+
+  == domain 16  score: 40.3 bits;  conditional E-value: 6.5e-14
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS................TEEEEEECSTSSEEEEESSSTTEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee................ewneftvprtttsvtltgLkpgteYe 70  
+                              +P++l++ ++ +t+++++W pp +  + +t Y+++y++  + +                ++  +  +++   +t++gL+p+t+Y+
+  tr|Q9UB29|Q9UB29_CAEEL 3244 PPRELTAVQTKATQIQLTWLPPYPEKAIVTAYRIRYSPRADDSnptevelsgddltcsgYKSPIITSANL-CATIKGLQPSTTYR 3327
+                              8***********************************8877777668888888888877777777788888.9************* PP
+
+                              EEEEEEETSE.EEEEE CS
+                     fn3   71 vrVqavnggg.egpes 85  
+                              + Vq ++  g +g++s
+  tr|Q9UB29|Q9UB29_CAEEL 3328 FAVQGQSSSGnWGEWS 3343
+                              **********9**998 PP
+
+  == domain 17  score: 32.3 bits;  conditional E-value: 2e-11
+                              EEEEEESSSEEEEEEE-CSSSSSTEEEEEEEE..EETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    6 lsvsevtstsltvsWeppkdgggpitgYevey..rekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79  
+                              l++ + ++++l v+W+pp   g +i++Y + +  +++ +++ ++ f+v ++tt +++++L   t+Y+v+Vq  ++g
+  tr|Q9UB29|Q9UB29_CAEEL 3362 LKLLSAGHDNLKVKWTPPAVIGEKIDKYDIFIsvASVLDQN-PKKFDVNGQTTDYHFRHLDSVTQYNVTVQGTSEG 3436
+                              66778899*********************998556666666.*****************************87765 PP
+
+  == domain 18  score: 36.4 bits;  conditional E-value: 1.1e-12
+                              TCECEEEEEEESSSEEEEEEE-CS....SSSSTEEEEEEEEEETTSTS....TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppk....dgggpitgYeveyrekgsee....ewneftvprtttsvtltgLkpgteYevrVqavn 77  
+                              +aP++l++ e ++t l+v W pp+    +++  it+ +v++++ + +     +++++tvp + +s +++gL+p t Y+++Vqa +
+  tr|Q9UB29|Q9UB29_CAEEL 3460 PAPTDLHLIEKSDTMLHVDWVPPEifdpEQRELITHHRVTIAPFDPTTgktgPSKNYTVPYPGNSIKFEGLRPETIYNITVQAGT 3544
+                              79**********************997777888********77666666678*******************************99 PP
+
+                              TSEEEE CS
+                     fn3   78 gggegp 83  
+                              + g+g+
+  tr|Q9UB29|Q9UB29_CAEEL 3545 NSGYGH 3550
+                              999886 PP
+
+  == domain 19  score: 26.5 bits;  conditional E-value: 1.4e-09
+                              EEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEE CS
+                     fn3    5 nlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrV 73  
+                               l++ ++t+t+l+v Wep   +g++ +gY+++ r+  s        + ++f+v++++t+++++gL p+t Y+v++
+  tr|Q9UB29|Q9UB29_CAEEL 3566 ILRLLNRTPTTLNVAWEPV--WGRSHSGYTLTARTLYSVYgnvrlqQIKTFDVDASETEFVIRGLHPSTVYNVTL 3638
+                              688999*************..9***********9998877888999999************************87 PP
+
+>> Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Interfer-bind  Interferon-alpha/beta receptor, fibronectin type III
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Glyco_hydro_36C  Glycosyl hydrolase family 36 C-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (4280 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       690  (0.0359768); expected 383.6 (0.02)
+Passed bias filter:                      560  (0.0291986); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 1.24u 0.24s 00:00:01.48 Elapsed: 00:00:01.03
+# Mc/sec: 13522.20
+//
+Query:       tr|Q9UB28|Q9UB28_CAEEL  [L=4450]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+   1.5e-286  925.9 159.7    6.8e-16   58.5   0.1   36.8 19  fn3              Fibronectin type III domain
+    1.1e-50  170.3 105.3    0.00017   22.3   0.2   31.0  0  Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+    3.9e-15   56.1  23.4        1.4    9.3   0.0   20.9  0  Interfer-bind    Interferon-alpha/beta receptor, fibronectin 
+    2.9e-09   37.3   0.2         33    5.1   0.0   12.2  0  Glyco_hydro_36C  Glycosyl hydrolase family 36 C-terminal doma
+
+
+Domain annotation for each model (and alignments):
+>> fn3  Fibronectin type III domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.1   0.2   5.7e-12   2.8e-08       2      79 ..     143     216 ..     142     223 .. 0.87
+   2 !   34.3   0.0   4.9e-12   2.4e-08       5      78 ..     241     313 ..     237     317 .. 0.89
+   3 !   31.9   0.1   2.9e-11   1.4e-07       3      85 .]     440     523 ..     438     523 .. 0.86
+   4 !   58.5   0.1   1.4e-19   6.8e-16       2      83 ..    1300    1385 ..    1299    1386 .. 0.90
+   5 !   48.3   0.4   2.2e-16   1.1e-12       2      85 .]    1401    1486 ..    1400    1486 .. 0.88
+   6 !   46.5   0.1   7.8e-16   3.7e-12       4      79 ..    1619    1696 ..    1616    1702 .. 0.90
+   7 !   42.9   0.0     1e-14     5e-11       2      81 ..    1912    2000 ..    1911    2005 .. 0.82
+   8 !   42.4   0.1   1.5e-14   7.1e-11       1      84 [.    2017    2102 ..    2017    2103 .. 0.94
+   9 !   28.4   0.0   3.4e-10   1.6e-06       2      85 .]    2118    2212 ..    2117    2212 .. 0.86
+  10 !   45.0   0.0   2.4e-15   1.1e-11       1      83 [.    2225    2308 ..    2225    2310 .. 0.93
+  11 !   48.9   0.1   1.4e-16   6.9e-13       2      83 ..    2524    2608 ..    2523    2611 .. 0.90
+  12 !   51.8   0.3   1.7e-17   8.3e-14       2      85 .]    2625    2708 ..    2624    2708 .. 0.92
+  13 !   39.4   0.0   1.3e-13   6.3e-10       1      85 []    2721    2816 ..    2721    2816 .. 0.86
+  14 !   33.7   0.3   7.5e-12   3.6e-08       5      79 ..    2834    2915 ..    2832    2921 .. 0.87
+  15 !   38.9   0.1   1.8e-13   8.8e-10       2      85 .]    3146    3230 ..    3145    3230 .. 0.86
+  16 !   40.3   0.2   6.8e-14   3.3e-10       2      85 .]    3244    3343 ..    3243    3343 .. 0.90
+  17 !   32.3   0.0   2.1e-11     1e-07       6      79 ..    3362    3436 ..    3360    3439 .. 0.88
+  18 !   36.4   0.1   1.1e-12   5.5e-09       1      83 [.    3460    3550 ..    3460    3551 .. 0.91
+  19 !   26.4   0.4   1.5e-09     7e-06       5      73 ..    3566    3638 ..    3562    3645 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 34.1 bits;  conditional E-value: 5.7e-12
+                             CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3   2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79 
+                             aP+ ++v+ev   sl ++W++p+   g++  Y+ve+  ++ + + +++tv+ ++  v +t+L pgt Y+v+V+a  + 
+  tr|Q9UB28|Q9UB28_CAEEL 143 APRYPQVTEVAQYSLAIKWDAPD--CGSVGDYQVELTGVSAPFDIHRQTVTQPH--VSVTNLLPGTFYSVKVRAADRS 216
+                             89********************7..**************999855555566666..*****************98765 PP
+
+  == domain 2  score: 34.3 bits;  conditional E-value: 4.9e-12
+                             EEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS.TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEET CS
+                     fn3   5 nlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee.ewneftvprtttsvtltgLkpgteYevrVqavng 78 
+                             n+++  +t+++l+vsW+p +  +  +++Yev+  e+++ + +  +++v++  +s+ ltgL+p+t+Y++ V a+ +
+  tr|Q9UB28|Q9UB28_CAEEL 241 NIQLLYRTDSELRVSWQPFT--DPRLQHYEVTAVEVDDDSrRVERRRVDPALNSFALTGLRPNTKYTIGVIAFVD 313
+                             7788889************7..***********99999996777777999999*****************99765 PP
+
+  == domain 3  score: 31.9 bits;  conditional E-value: 2.9e-11
+                             ECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEE.ECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEEE CS
+                     fn3   3 PsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneft.vprtttsvtltgLkpgteYevrVqavngggegpes 85 
+                             P+n++  +v + s+ ++W+ p+  + + pi+gYe  + e ++  +    + v ++  +v ++gLk + +Y+++V++++ +g +++s
+  tr|Q9UB28|Q9UB28_CAEEL 440 PTNIRSADVDGQSIKLEWDVPRcdETHTPIDGYEYIVYEASQSAPVDGASyVGAP--HVIIKGLKQNVDYTFKVRSRSVNGHSQWS 523
+                             99********************************888888666644444415555..5***********************99998 PP
+
+  == domain 4  score: 58.5 bits;  conditional E-value: 1.4e-19
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrVqavnggg 80  
+                              a+ nl+v +++++sl+ sW+pp +++g it+Yev+y+  + ++      +++++tv +++  +t+tgL p+++Y+v V+a +++g
+  tr|Q9UB28|Q9UB28_CAEEL 1300 AVANLRVQPIGPDSLQCSWQPPVNPNGRITQYEVTYQLISRGNcdnnqeAPRTITVNGPH--FTITGLHPHSKYRVGVAAKSNVG 1382
+                              789*********************************999999977776666666677777..**********************9 PP
+
+                              EEE CS
+                     fn3   81 egp 83  
+                               g+
+  tr|Q9UB28|Q9UB28_CAEEL 1383 AGE 1385
+                              886 PP
+
+  == domain 5  score: 48.3 bits;  conditional E-value: 2.2e-16
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTS..TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgsee..ewneftvprtttsvtltgLkpgteYevrVqavngggeg 82  
+                              aP  l+ +++++t +++sW++p+  + +g+it Ye e+   +  +  ++++ ++ +t   +++++L+p t+Y+v+V+a+++ g g
+  tr|Q9UB28|Q9UB28_CAEEL 1401 APLYLRTEDIRPTDVSISWQAPPclQTNGEITEYEYEVTAGDRRQtvQKTTENIRGTR--AKIENLQPQTRYNVKVRAYTARGAG 1483
+                              7889999**************************9999877766665566666666666..************************* PP
+
+                              EEE CS
+                     fn3   83 pes 85  
+                              p+s
+  tr|Q9UB28|Q9UB28_CAEEL 1484 PWS 1486
+                              **8 PP
+
+  == domain 6  score: 46.5 bits;  conditional E-value: 7.8e-16
+                              CEEEEEEE..SSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    4 snlsvsev..tstsltvsWeppkdgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79  
+                              + l v+ +  +++sl+++W+  +d    +t +++++ ++++ +++++f+v+r t+++ + +L+p t+Y+v+V a +++
+  tr|Q9UB28|Q9UB28_CAEEL 1619 QVLFVKKIggSENSLHINWDVRPDDKNRVTAFRITVVPQDGSQRSQTFNVDRATYQYRIDNLRPRTTYNVTVSAATHK 1696
+                              556666667799**************************999999******************************9988 PP
+
+  == domain 7  score: 42.9 bits;  conditional E-value: 1e-14
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS........TEEEEE.ECSTSS.EEEEESSSTTEEEEEEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee........ewneft.vprttt.svtltgLkpgteYevrVqav 76  
+                              ++++l+v++ ++++++v+W +p  ++g+i+gY + yr k            +++ f  v ++++  +t+tgL p++ YevrV+a+
+  tr|Q9UB28|Q9UB28_CAEEL 1912 SVRDLRVKALSPNEVHVQWLAPLVQRGTIVGYDISYRLKHRLAcpeeeprdVSRDFVtVYNHKDlDYTITGLLPYSLYEVRVRAR 1996
+                              5899********************************99988889966665533333333333557******************** PP
+
+                              ETSEE CS
+                     fn3   77 nggge 81  
+                              +++  
+  tr|Q9UB28|Q9UB28_CAEEL 1997 TTE-L 2000
+                              *98.3 PP
+
+  == domain 8  score: 42.4 bits;  conditional E-value: 1.5e-14
+                              TCECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSS.EEEEESSSTTEEEEEEEEEEETSEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprttt.svtltgLkpgteYevrVqavngggeg 82  
+                              s+P nl  +   ++sl+++Wep +  +++g++++Ye e+  +++   + e+++ +t++ +vt+ gL+p+t+Y++rV+a+n  g+g
+  tr|Q9UB28|Q9UB28_CAEEL 2017 SPPLNLESTYALERSLSFQWEPVDcsQRHGHVVNYEYEILGQDDWA-KLERQIANTSDlRVTIDGLTPYTKYVMRVKAYNSIGGG 2100
+                              7999********************************9999998887.999999999999************************99 PP
+
+                              EE CS
+                     fn3   83 pe 84  
+                              p 
+  tr|Q9UB28|Q9UB28_CAEEL 2101 PN 2102
+                              85 PP
+
+  == domain 9  score: 28.4 bits;  conditional E-value: 3.4e-10
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEE...........ECSTSSEEEEESSSTTEEEEEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneft...........vprtttsvtltgLkpgteYevrVqa 75  
+                              +P++l v + +++ ++vsW pp ++ gp + Y+++y++  s + w+e+              ++   ++ tgL  g++++++V++
+  tr|Q9UB28|Q9UB28_CAEEL 2118 PPQDLVVAQEGTSFFMVSWLPPYPPYGPHDAYKIRYQQIPSDD-WKEVEkgikdpllqcpGESPRFCYNATGLDSGQQFKIQVAT 2201
+                              89*************************************9998.77777665555555322333449****************** PP
+
+                              EETSE.EEEEE CS
+                     fn3   76 vnggg.egpes 85  
+                              + +gg +gp+s
+  tr|Q9UB28|Q9UB28_CAEEL 2202 RIEGGsYGPWS 2212
+                              *****9***98 PP
+
+  == domain 10  score: 45.0 bits;  conditional E-value: 2.4e-15
+                              TCECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTSTEEEEEECSTSS.EEEEESSSTTEEEEEEEEEEETSEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgseeewneftvprttt.svtltgLkpgteYevrVqavngggegp 83  
+                              +aP+ +++ e t++sl+++W pp d+ g +t+Y+v + + ++ +++++ ++ +++t ++ ++ L+p t Y++++ a +++g g+
+  tr|Q9UB28|Q9UB28_CAEEL 2225 DAPRAIHLIEKTDHSLHIRWVPPIDPKGYVTQYRVSIVSLDDVNDKKRTHIVNHPTlTYLFEELNPETSYNISISAGTKQGFGR 2308
+                              69***********************************99999997777778888777*********************999886 PP
+
+  == domain 11  score: 48.9 bits;  conditional E-value: 1.4e-16
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrVqavnggg 80  
+                              ++++l+++++++ts++ +W+pp+d++g itgY+++y+ k+ +e       ++e +v++ +   tl+gL p+++Ye+ V a++ + 
+  tr|Q9UB28|Q9UB28_CAEEL 2524 PVEGLTAKPTGPTSIVARWKPPRDPNGVITGYTLTYQLKSIGEcgprssTPIEKHVKNEE--ETLEGLLPDSTYEIHVVAHTSH- 2605
+                              789*********************************999888899998888888888888..99******************99. PP
+
+                              EEE CS
+                     fn3   81 egp 83  
+                               gp
+  tr|Q9UB28|Q9UB28_CAEEL 2606 AGP 2608
+                              444 PP
+
+  == domain 12  score: 51.8 bits;  conditional E-value: 1.7e-17
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngggegpe 84  
+                              +P+n+++ +vts+ + ++W+ p+  +++g+it Ye e++++++     + t  ++t++++l +L p+t+Y++rV+a+n++g gp+
+  tr|Q9UB28|Q9UB28_CAEEL 2625 PPQNVRAGSVTSSRADITWTQPEceQRNGKITDYEYELWSMDTW--ADNSTGHNPTERLNLDQLIPYTQYQIRVRAINKEGDGPF 2707
+                              8****************************************666..56666666666***************************9 PP
+
+                              E CS
+                     fn3   85 s 85  
+                              s
+  tr|Q9UB28|Q9UB28_CAEEL 2708 S 2708
+                              8 PP
+
+  == domain 13  score: 39.4 bits;  conditional E-value: 1.3e-13
+                              TCECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS........TEEEEE..ECSTSSEEEEESSSTTEEEEEEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee........ewneft..vprtttsvtltgLkpgteYevrVqa 75  
+                              +aPs+l+ +++ ++ + +sW pp++++g+i+ Y+v+y ++g+ +        +  e +  ++++   + l++L p +eY ++V a
+  tr|Q9UB28|Q9UB28_CAEEL 2721 PAPSDLQEEATFPHAIEISWLPPTPPHGNIDFYKVRYTPSGEANyreirvetDRLECSdsNKKDRLCYRLSDLDPEQEYDIQVSA 2805
+                              689999999999*******************************999888776333333224444559****************** PP
+
+                              EETSE.EEEEE CS
+                     fn3   76 vnggg.egpes 85  
+                              +++gg ++++s
+  tr|Q9UB28|Q9UB28_CAEEL 2806 HTEGGgWSEWS 2816
+                              ****9899987 PP
+
+  == domain 14  score: 33.7 bits;  conditional E-value: 7.5e-12
+                              EEEEEEESSSEEEEEEE-CS.SSSSTEEEEEEEEEETTSTSTEEEEE......ECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    5 nlsvsevtstsltvsWeppk.dgggpitgYeveyrekgseeewneft......vprtttsvtltgLkpgteYevrVqavngg 79  
+                              +l v++ ts+s++++We  + d+  +++gY +e+++++++ ew+e++       +++ +  t+++L+  t Y +r++ v ++
+  tr|Q9UB28|Q9UB28_CAEEL 2834 ELEVTDKTSNSISLKWEGLPqDQATHVVGYVLEFKSEDDNAEWQEYNgvvkhrKTSSDYKITVKQLETATLYFFRLRVVGKN 2915
+                              689**************************************9999999766533333459****************998665 PP
+
+  == domain 15  score: 38.9 bits;  conditional E-value: 1.8e-13
+                              CECEEEEEEESSSEEEEEEE-CS..SSSSTEEEEEEEEEETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETSEEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppk..dgggpitgYeveyrekgseeewneftvprtttsvtltgLkpgteYevrVqavngggegpe 84  
+                              +P+nl+ + + +++l ++W++p+  +++g+it+Ye e+   ++ +e ++  v++ + +  + +L+pg+ Y+++V+a++++g gp+
+  tr|Q9UB28|Q9UB28_CAEEL 3146 PPQNLQSTVRKDSELGFKWDAPEciQQNGNITQYEFELVGLDEWNEGTREGVTPRQ-NTLIDQLQPGSLYRIKVRAYTAEGPGPW 3229
+                              8**********************************999777444433333344444.79************************** PP
+
+                              E CS
+                     fn3   85 s 85  
+                              s
+  tr|Q9UB28|Q9UB28_CAEEL 3230 S 3230
+                              8 PP
+
+  == domain 16  score: 40.3 bits;  conditional E-value: 6.8e-14
+                              CECEEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS................TEEEEEECSTSSEEEEESSSTTEEEE CS
+                     fn3    2 aPsnlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee................ewneftvprtttsvtltgLkpgteYe 70  
+                              +P++l++ ++ +t+++++W pp +  + +t Y+++y++  + +                ++  +  +++   +t++gL+p+t+Y+
+  tr|Q9UB28|Q9UB28_CAEEL 3244 PPRELTAVQTKATQIQLTWLPPYPEKAIVTAYRIRYSPRADDSnptevelsgddltcsgYKSPIITSANL-CATIKGLQPSTTYR 3327
+                              8***********************************8877777668888888888877777777788888.9************* PP
+
+                              EEEEEEETSE.EEEEE CS
+                     fn3   71 vrVqavnggg.egpes 85  
+                              + Vq ++  g +g++s
+  tr|Q9UB28|Q9UB28_CAEEL 3328 FAVQGQSSSGnWGEWS 3343
+                              **********9**998 PP
+
+  == domain 17  score: 32.3 bits;  conditional E-value: 2.1e-11
+                              EEEEEESSSEEEEEEE-CSSSSSTEEEEEEEE..EETTSTSTEEEEEECSTSSEEEEESSSTTEEEEEEEEEEETS CS
+                     fn3    6 lsvsevtstsltvsWeppkdgggpitgYevey..rekgseeewneftvprtttsvtltgLkpgteYevrVqavngg 79  
+                              l++ + ++++l v+W+pp   g +i++Y + +  +++ +++ ++ f+v ++tt +++++L   t+Y+v+Vq  ++g
+  tr|Q9UB28|Q9UB28_CAEEL 3362 LKLLSAGHDNLKVKWTPPAVIGEKIDKYDIFIsvASVLDQN-PKKFDVNGQTTDYHFRHLDSVTQYNVTVQGTSEG 3436
+                              66778899*********************998556666666.*****************************87765 PP
+
+  == domain 18  score: 36.4 bits;  conditional E-value: 1.1e-12
+                              TCECEEEEEEESSSEEEEEEE-CS....SSSSTEEEEEEEEEETTSTS....TEEEEEECSTSSEEEEESSSTTEEEEEEEEEEE CS
+                     fn3    1 saPsnlsvsevtstsltvsWeppk....dgggpitgYeveyrekgsee....ewneftvprtttsvtltgLkpgteYevrVqavn 77  
+                              +aP++l++ e ++t l+v W pp+    +++  it+ +v++++ + +     +++++tvp + +s +++gL+p t Y+++Vqa +
+  tr|Q9UB28|Q9UB28_CAEEL 3460 PAPTDLHLIEKSDTMLHVDWVPPEifdpEQRELITHHRVTIAPFDPTTgktgPSKNYTVPYPGNSIKFEGLRPETIYNITVQAGT 3544
+                              79**********************997777888********77666666678*******************************99 PP
+
+                              TSEEEE CS
+                     fn3   78 gggegp 83  
+                              + g+g+
+  tr|Q9UB28|Q9UB28_CAEEL 3545 NSGYGH 3550
+                              999886 PP
+
+  == domain 19  score: 26.4 bits;  conditional E-value: 1.5e-09
+                              EEEEEEESSSEEEEEEE-CSSSSSTEEEEEEEEEETTSTS......TEEEEEECSTSSEEEEESSSTTEEEEEEE CS
+                     fn3    5 nlsvsevtstsltvsWeppkdgggpitgYeveyrekgsee......ewneftvprtttsvtltgLkpgteYevrV 73  
+                               l++ ++t+t+l+v Wep   +g++ +gY+++ r+  s        + ++f+v++++t+++++gL p+t Y+v++
+  tr|Q9UB28|Q9UB28_CAEEL 3566 ILRLLNRTPTTLNVAWEPV--WGRSHSGYTLTARTLYSVYgnvrlqQIKTFDVDASETEFVIRGLHPSTVYNVTL 3638
+                              688999*************..9***********9998877888999999************************87 PP
+
+>> Pur_ac_phosph_N  Purple acid Phosphatase, N-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Interfer-bind  Interferon-alpha/beta receptor, fibronectin type III
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Glyco_hydro_36C  Glycosyl hydrolase family 36 C-terminal domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (4450 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       600  (0.0312842); expected 383.6 (0.02)
+Passed bias filter:                      423  (0.0220554); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 1.21u 0.21s 00:00:01.42 Elapsed: 00:00:01.01
+# Mc/sec: 14279.03
+//
+Query:       tr|Q9BKP3|Q9BKP3_CAEEL  [L=386]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (386 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1049  (0.0546952); expected 383.6 (0.02)
+Passed bias filter:                      721  (0.0375932); expected 383.6 (0.02)
+Passed Vit filter:                        84  (0.00437979); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.60
+# Mc/sec: 2077.04
+//
+[ok]

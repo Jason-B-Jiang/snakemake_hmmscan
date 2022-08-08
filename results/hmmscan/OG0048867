@@ -1,0 +1,85 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048867.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048867
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P04386  [L=881]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.2e-21   77.0   7.5    2.3e-21   76.1   7.5    1.5  1  Fungal_trans  Fungal specific transcription factor domain
+    4.5e-10   39.6   1.2    1.5e-09   37.9   1.2    1.9  1  Gal4_dimer    Gal4-like dimerisation domain
+    9.3e-10   38.6  16.4    1.6e-09   37.8  16.4    1.4  1  Zn_clus       Fungal Zn(2)-Cys(6) binuclear cluster domain
+
+
+Domain annotation for each model (and alignments):
+>> Fungal_trans  Fungal specific transcription factor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.1   7.5   3.6e-25   2.3e-21       1     203 [.     244     427 ..     244     537 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 76.1 bits;  conditional E-value: 3.6e-25
+  Fungal_trans   1 ldrffsnfhpqfpilhkpsflpktssenssksayaspllllailalGalfsesetkesnssltsesqefiafplraeilihedfsspssslwilqsL 97 
+                   l+++  nfhp +pi+h p+++  ++++    s+ + ++l+++ila+Ga + e e+   +         f+++  + + +   + + +s s+  + +L
+        P04386 244 LQSYLNNFHPYCPIVHSPTLMMLYNNQIEIASKDQWQILFNCILAIGAWCIEGESTDIDV--------FYYQNAKSHLT---SKVFESGSIILVTAL 329
+                   789*********************6666667777778888**********9999988533........33333344444...4666677799***** PP
+
+  Fungal_trans  98 lllelyektssdralherhhgvavrlarslgLhrnpsyvgkkslwklweeeaesrrRlwwaaFylDktialklGrppllddsqinlpLPcddddlwe 194
+                    ll+ y +++++++  +++h+  +r+a slgL+r+ +++       ++    e+rrR+ww++++++++++l +Gr      sq ++++P + dd++ 
+        P04386 330 HLLSRYTQWRQKTNTSYNFHSFSIRMAISLGLNRDLPSSF------SDSSILEQRRRIWWSVYSWEIQLSLLYGRSI--QLSQNTISFPSSVDDVQR 418
+                   **************************************99......677778***********************55..679************999 PP
+
+  Fungal_trans 195 sddaseetl 203
+                   +++  +++ 
+        P04386 419 TTTGPTIYH 427
+                   998877766 PP
+
+>> Gal4_dimer  Gal4-like dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.9   1.2   2.4e-13   1.5e-09       1      44 [.      50      93 ..      50     101 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 37.9 bits;  conditional E-value: 2.4e-13
+  Gal4_dimer  1 TRAhLTevEnRvtqLEkiLrrllpdeDiDnlLenkhnnflreil 44
+                TRAhLTevE+R+  LE++   ++p eD D +L+    + ++ +l
+      P04386 50 TRAHLTEVESRLERLEQLFLLIFPREDLDMILKMDSLQDIKALL 93
+                9*******************************987777777666 PP
+
+>> Zn_clus  Fungal Zn(2)-Cys(6) binuclear cluster domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.8  16.4   2.6e-13   1.6e-09       1      40 []       9      47 ..       9      47 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 37.8 bits;  conditional E-value: 2.6e-13
+             SS-HHHHHHTS--STSSSS-HHHHHTTHHHCCCCTCSCEE CS
+  Zn_clus  1 haCdnCrkkKvKCdakkPaCsnCkklnleCtfysesskrs 40
+             +aCd Cr kK KC+++kP+C++C k+n+eC+ ys ++krs
+   P04386  9 QACDICRLKKLKCSKEKPKCAKCLKNNWECR-YSPKTKRS 47
+             69*****************************.***99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (881 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       793  (0.0413473); expected 383.6 (0.02)
+Passed bias filter:                      388  (0.0202305); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.50u 0.22s 00:00:00.72 Elapsed: 00:00:00.81
+# Mc/sec: 3540.70
+//
+[ok]

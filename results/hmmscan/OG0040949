@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040949.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040949
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9UKY0|PRND_HUMAN  [L=176]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      7e-48  161.5   0.0    9.4e-48  161.1   0.0    1.2  1  Prion     Prion/Doppel alpha-helical domain
+    1.7e-18   66.0   5.2    3.4e-18   65.1   5.2    1.5  1  Doppel    Prion-like protein Doppel
+
+
+Domain annotation for each model (and alignments):
+>> Prion  Prion/Doppel alpha-helical domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.1   0.0   9.8e-52   9.4e-48       1     117 []      63     176 .]      63     176 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 161.1 bits;  conditional E-value: 9.8e-52
+                           TT--S--TSSHHHHHHHHHHGGGSTSCEEES-GCSTTSSHHHHHHHHHHHHHHHHHHHHHCCHCCHHHHHHHHHHHHHHHHHHHHHHCH CS
+                 Prion   1 mskleidFgaedenryyeenyarypdqvyyrgvseanvtkevfvadCvNiTvtenkiepaaekteseleqrvlekvikelCiekycefs 89 
+                           ++kl+idFgae +nryye+ny+++pd+++y+g+seanvtke fv+ C+N+T+++n+ e+  +k +++l+q+vl+++++elC+ k+cef+
+  sp|Q9UKY0|PRND_HUMAN  63 GRKLDIDFGAE-GNRYYEANYWQFPDGIHYNGCSEANVTKEAFVTGCINATQAANQGEF--QKPDNKLHQQVLWRLVQELCSLKHCEFW 148
+                           689********.*********************************************99..899************************* PP
+
+                           HHHH-XXXXXXXXXXXXXXXXXXXXXX. CS
+                 Prion  90 lelgaglrlllaqpvlvlllllvlllvk 117
+                           le+gaglr++++qpvl++ll+l++l vk
+  sp|Q9UKY0|PRND_HUMAN 149 LERGAGLRVTMHQPVLLCLLALIWLTVK 176
+                           ************************9985 PP
+
+>> Doppel  Prion-like protein Doppel
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.1   5.2   3.6e-22   3.4e-18       1      30 []       1      30 [.       1      30 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 65.1 bits;  conditional E-value: 3.6e-22
+                          --SS-SSCCHHHHHHHHHHHCCTTTS-S-- CS
+                Doppel  1 MRkhLgtWwlAivcvLLfShLSlVkARGIK 30
+                          MRkhL++WwlA+vc+LLfShLS+V+ RGIK
+  sp|Q9UKY0|PRND_HUMAN  1 MRKHLSWWWLATVCMLLFSHLSAVQTRGIK 30
+                          *****************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (176 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       512  (0.0266959); expected 383.6 (0.02)
+Passed bias filter:                      389  (0.0202826); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.82
+# Mc/sec: 694.94
+//
+[ok]

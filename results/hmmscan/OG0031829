@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031829.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031829
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5U117|Q5U117_DROME  [L=639]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.1e-08   35.5   2.8    8.6e-08   32.6   0.1    2.2  1  Acyl-CoA_dh_1  Acyl-CoA dehydrogenase, C-terminal domain
+    3.4e-08   33.6   0.0    7.3e-08   32.6   0.0    1.5  0  Acyl-CoA_dh_M  Acyl-CoA dehydrogenase, middle domain
+    7.7e-08   33.1   0.0    2.4e-07   31.5   0.0    1.8  1  Acyl-CoA_dh_N  Acyl-CoA dehydrogenase, N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Acyl-CoA_dh_1  Acyl-CoA dehydrogenase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.6   0.1   1.3e-11   8.6e-08       2     128 ..     311     439 ..     310     443 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 32.6 bits;  conditional E-value: 1.3e-11
+                             BHHHHHTTTT--S-----..-SHHHHHHHHHHHHHHHTSB-CC-BGGGSHHHHHHHHHHHHHHHHHHHHHHHHHH--------..HH CS
+           Acyl-CoA_dh_1   2 kGfrvametlnheRlavaaaalglarraleealeyarrrkafgkplidhqlvreklaemaaeleaarllvyraaealdagkpd..ra 86 
+                             +G r+  +    +Rl   +  l la++ l+e+++y  ++++ g  l d +l r ++ + ++ + a+ +++y +a +ld+ + +  + 
+  tr|Q5U117|Q5U117_DROME 311 DGNRYSEQLVRSSRLRGSLVGLSLAKKLLNELAQYTVNTTQCGVQLQDLELTRIHMSRAMCSVYAMESMLYLTAGLLDEFRAQdvTL 397
+                             577777778888999999999*********************************************************9988889** PP
+
+                             HHHHHHHHHHHHHHHHHHHHHHHHGGGTTSGGGHHHHHHHHT CS
+           Acyl-CoA_dh_1  87 easmaKlfaselaqevadlamqllGgaGyleeypverlyrda 128
+                             e++++K+f+ + +  +a++ + ++G +++l ++  e  +rda
+  tr|Q5U117|Q5U117_DROME 398 ESAITKYFTLRQVYAIASQNLGVVGPKSLLSGETTELGLRDA 439
+                             *****************************9999888888887 PP
+
+>> Acyl-CoA_dh_M  Acyl-CoA dehydrogenase, middle domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Acyl-CoA_dh_N  Acyl-CoA dehydrogenase, N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.5   0.0   3.7e-11   2.4e-07      37     113 .]     119     193 ..      92     193 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 31.5 bits;  conditional E-value: 3.7e-11
+                             HHHHHHTTGTSTTS-GGGTS----HHHHHHHHHHHHHH-HHHHHHHHHHHHTTHHHHHHHS-HHHHHHHHHHHHTTS CS
+           Acyl-CoA_dh_N  37 lkklaelGllgitvpeeygGagldyleeaivaeelaradaglavllsvhsslvappilrfGteeqkrryLpklasge 113
+                              + l +lGl+g++v ++y G g ++ +++++ e     d  ++++l++h  +v   + + Gt+ q++ryL +la+g+
+  tr|Q5U117|Q5U117_DROME 119 PETLRQLGLYGLNVSTDYEGKGYGWSASLMASEP-DSTDINVTLGLQTHRVVV-DLLKEVGTPLQQQRYLQDLATGK 193
+                             578899****************986666666655.557999999999997655.89******************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (639 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       468  (0.0244017); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.63
+# Mc/sec: 3272.52
+//
+[ok]

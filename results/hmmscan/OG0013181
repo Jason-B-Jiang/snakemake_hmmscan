@@ -1,0 +1,149 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0013181.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0013181
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86HD7|Q86HD7_DICDI  [L=411]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.2e-10   39.7   0.7    5.7e-09   36.3   0.7    2.3  1  ADK       Adenylate kinase
+    4.3e-07   30.5   0.0      9e-07   29.5   0.0    1.6  1  AAA_17    AAA domain
+
+
+Domain annotation for each model (and alignments):
+>> ADK  Adenylate kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.3   0.7   5.9e-13   5.7e-09       1     109 [.     197     304 ..     197     378 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 36.3 bits;  conditional E-value: 5.9e-13
+                             EEESTTSSHHHHHHHHHHHHTSEEEEHHHHHHHHHHCT-HHHHHHHHHHHTTSS--HHHHHHHHHHHHHCH..GT.....TTEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xx.....xxxxxxx RF
+                     ADK   1 llGaPgaGKGtqaeklvkkyglahlstGdllRaevksgtelGkeakevmdkgelvpdevvvklvkeeleke..dk.....kkgfllD 80 
+                             l GaPg+GKGt +e l++ +g+++     ++  +   +++   e+ e+ ++g lv d+vv++l+ ++l+k+   +     kkg ++D
+  tr|Q86HD7|Q86HD7_DICDI 197 LAGAPGSGKGTNTEVLMNALGVNEEP---IV-MSSLLNSP---ECIEIKKQGGLVNDKVVLELLLKKLSKPdyLCenqgpKKGVIID 276
+                             57******************998622...22.22223344...55666689*****************987432322333689**** PP
+
+                             SB-SSHHHHHHHHHHHHHHTSEESEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+                     ADK  81 GfPRtveqaealeelleeekvkldlvlel 109
+                             GfPR+ +q + +e l++ + vk+   ++ 
+  tr|Q86HD7|Q86HD7_DICDI 277 GFPRSAKQVKFVELLFD-KLVKIRKTINP 304
+                             ********998887554.55666665554 PP
+
+>> AAA_17  AAA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5   0.0   9.4e-11     9e-07       2     122 ..     199     330 ..     198     346 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 9.4e-11
+                             E-TTSSHHHHHHHHHHHH..CEEEEEHHHHHHHHHHCTTSHSSHHHHCTSHHHHHHHHHHHHHHHHHHHH.......CSSEEEEEE- CS
+                  AAA_17   2 GgPGsGKgtqleklvekl..gfphlsaGdllreeakrrgleeardeirklpleekkelrkeaaekiaeea.......kkkgvlvdgh 79 
+                             G PGsGKgt  e l++ l  + + + +++ll     +++ +e ++   ++ l+ +k +++++ +k+ + +        kkgv++dg+
+  tr|Q86HD7|Q86HD7_DICDI 199 GAPGSGKGTNTEVLMNALgvNEEPIVMSSLLN----SPECIEIKK---QGGLVNDKVVLELLLKKLSKPDylcenqgPKKGVIIDGF 278
+                             99*************99944566799999995....455543333...458888999999999999777666666667789****** PP
+
+                             SEEEETTEEEESSHHHH...HHHH--SE......EEEEE--HHHHHHHHHHH CS
+                  AAA_17  80 prfkeqaglldglpkev...leelkpda......iillevdpeeilerrlkd 122
+                             pr ++q ++++ l ++     ++++p+a      i +l+v++ee ++r+l++
+  tr|Q86HD7|Q86HD7_DICDI 279 PRSAKQVKFVELLFDKLvkiRKTINPNAslprfrISVLHVSEEESVKRQLSR 330
+                             ****999887665544412256677665566667888***********9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (411 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       678  (0.0353512); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.57
+# Mc/sec: 2318.90
+//
+Query:       tr|Q54JR3|Q54JR3_DICDI  [L=483]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-08   34.6   4.3    2.6e-08   34.2   0.3    3.1  1  ADK       Adenylate kinase
+
+
+Domain annotation for each model (and alignments):
+>> ADK  Adenylate kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   0.3   1.4e-12   2.6e-08       1     102 [.     126     219 ..     126     229 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 1.4e-12
+                             EEESTTSSHHHHHHHHHHHHTSEEEEHHHHHHHHHHCT-HHHHHHHHHHHTTSS--HHHHHHHHHHHHHCHGTTTEEEEESB-SSHH CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+                     ADK   1 llGaPgaGKGtqaeklvkkyglahlstGdllRaevksgtelGkeakevmdkgelvpdevvvklvkeelekedkkkgfllDGfPRtve 87 
+                             + GaPg+GKGt ++ + +  g+   ++  ++ +++     + +eak++   g +v+d+ v++l  eel+k+  ++g ++DGfPRt  
+  tr|Q54JR3|Q54JR3_DICDI 126 VAGAPGSGKGTNTPFMSSVRGI---TADPIVMSSLL----NNEEAKKIKSSGGMVSDSNVLELFLEELRKPCYRSGVVVDGFPRTNI 205
+                             57************99876655...44444443333....34567888889***********************************9 PP
+
+                             HHHHHHHHHHHHTSE CS
+                             xxxxxxxxxxxxxxx RF
+                     ADK  88 qaealeelleeekvk 102
+                             q e  ++l ++  ++
+  tr|Q54JR3|Q54JR3_DICDI 206 QVELTNALYQK-MKQ 219
+                             99877775444.444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (483 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3204  (0.167058); expected 383.6 (0.02)
+Passed bias filter:                      844  (0.0440065); expected 383.6 (0.02)
+Passed Vit filter:                       103  (0.00537046); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.47u 0.17s 00:00:00.64 Elapsed: 00:00:00.65
+# Mc/sec: 2401.60
+//
+Query:       EPZ32346.1  [L=290]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (290 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       507  (0.0264352); expected 383.6 (0.02)
+Passed bias filter:                      346  (0.0180406); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.65
+# Mc/sec: 1435.82
+//
+[ok]

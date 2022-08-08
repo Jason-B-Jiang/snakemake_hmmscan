@@ -1,0 +1,84 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0028022.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0028022
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EFK8|G5EFK8_CAEEL  [L=722]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    4.7e-21   75.1   4.5    7.3e-07   29.7   0.1    5.1  2  Ldl_recept_b  Low-density lipoprotein receptor repeat class B
+      3e-09   37.0  23.0      2e-06   28.0   5.9    4.0  1  Ldl_recept_a  Low-density lipoprotein receptor domain class A
+    7.8e-07   29.3   6.6    7.8e-07   29.3   6.6    5.9  1  EGF_CA        Calcium-binding EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> Ldl_recept_b  Low-density lipoprotein receptor repeat class B
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.7   0.1   1.1e-10   7.3e-07       3      42 .]     448     487 ..     446     487 .. 0.95
+   2 !   27.2   0.0   6.5e-10   4.1e-06       1      35 [.     490     523 ..     490     530 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 29.7 bits;  conditional E-value: 1.1e-10
+                             EEEEETTTTEEEES-STTS---EEEE-SS-S-EEEEEEET CS
+            Ldl_recept_b   3 lYWtDwsldasisvadlnGshrktlfqedlqnPrgiAvDp 42 
+                             ++ tDws  a i++a+++Gsh + +++e + +P+++AvD+
+  tr|G5EFK8|G5EFK8_CAEEL 448 MFVTDWSANAFIAAASMDGSHFRKIITERITWPNAVAVDI 487
+                             6779*****************999***************6 PP
+
+  == domain 2  score: 27.2 bits;  conditional E-value: 6.5e-10
+                             TEEEEEETTTTEEEES-STTS---EEEE-SS-S-E CS
+            Ldl_recept_b   1 gklYWtDwsldasisvadlnGshrktlfqedlqnP 35 
+                             +k+YW D+ ld +i +a+++G+ r++++ ++++ P
+  tr|G5EFK8|G5EFK8_CAEEL 490 EKIYWADAFLD-TIESANMDGTGRRVIIADAGSVP 523
+                             59*********.*******************9888 PP
+
+>> Ldl_recept_a  Low-density lipoprotein receptor domain class A
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   5.9   3.1e-10     2e-06       3      37 .]     663     698 ..     661     698 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 3.1e-10
+                             SSSTCEEETTSE.EEEGGGTTSSSTTSSSSGCCSST CS
+            Ldl_recept_a   3 CepnefqCgsge.CIprswvCdgeaDCeDgSDEenC 37 
+                             C p +fqC+++  C p    Cd  +DC+D SDE  C
+  tr|G5EFK8|G5EFK8_CAEEL 663 CLPGQFQCHDNHkCLPPGGLCDKVTDCSDSSDEIYC 698
+                             99********999********************888 PP
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.3   6.6   1.2e-10   7.8e-07       1      42 []     274     314 ..     274     314 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 29.3 bits;  conditional E-value: 1.2e-10
+                  EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCe.egyennedetkC 42 
+                             DvdEC+s +  C+  ++CvN  G+feC+C+ + y+  +d+++C
+  tr|G5EFK8|G5EFK8_CAEEL 274 DVDECESLSSACS--QKCVNLPGTFECTCDpRTYKLATDNKTC 314
+                             9***********8..89************72589999999999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (722 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       586  (0.0305543); expected 383.6 (0.02)
+Passed bias filter:                      289  (0.0150686); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.49u 0.20s 00:00:00.69 Elapsed: 00:00:00.71
+# Mc/sec: 3313.25
+//
+[ok]

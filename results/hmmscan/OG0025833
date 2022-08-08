@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025833.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025833
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q18299|NHR43_CAEEL  [L=449]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.1e-24   84.5   1.5    8.1e-24   84.5   1.5    1.6  1  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+    9.3e-13   48.5  13.9    2.1e-12   47.4  13.9    1.6  1  zf-C4          Zinc finger, C4 type (two domains)
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.5   1.5   8.5e-28   8.1e-24       8     199 ..     232     430 ..     227     442 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 84.5 bits;  conditional E-value: 8.5e-28
+                            .HHHHHHHHHHHHHHHHHHHHHHH.TTSTTGGGS-HHHHHHHHHCCHHHHHHHHHHHHCHHGTTSEEEEECTCEEE...........H CS
+          Hormone_recep   8 lekinfkevfelwerqllltvewl.kkfpeFqkLpeedqvaLlksvwlvllrlelaqrtakirgkkildekilllsddsa...nkeki 91 
+                            + +++++ ++e++++q+ l+  +l  +f+e+ +++ ++q++++  +++vl+ +e++++t+++   +  +e +++++++++   ++  +
+  sp|Q18299|NHR43_CAEEL 232 IVPATREIISEIYQKQFGLLHIFLkNTFDEYAECDVQEQKRICAMFYPVLWEIESCYWTYRNMPVQPEYETLMMCTQTTYidsKNVRY 319
+                            578999******************99*****************************************************998844444 PP
+
+                            HHHCCTTHHHHHHHHH.............HHHHHHHHCT--HHHHHHHHHHHHCTS..SS--STTH...HHHHHHHHHHHHHHHHHHH CS
+          Hormone_recep  92 edskvskeseeeqlll...fgekidklfdeliqplqelkltetEfafllaillfnfnyagdrlqgetq.eiveklqerlsneLheYys 175
+                            +  + +   e + + +   +++ ++k ++ +++p+++l + e+Ef  lla+ +  +  a++++ g ++ +++e++++ l ++Lh  y 
+  sp|Q18299|NHR43_CAEEL 320 WLGNTTGLNESDIQAVearLENLLTKARNLVLEPMHKLIIKEFEFITLLALNI--W--APRNHRGCVSeDRAEQVRDALFDDLHYLYC 403
+                            4444444444444444668899*******************************..6..588877766659*****************7 PP
+
+                            HH.....STTHHHHHHHHHHHCCCCHH CS
+          Hormone_recep 176 see...nyssRlakllkilpelrkisr 199
+                              +   +yssR+++++++ +e+++++ 
+  sp|Q18299|NHR43_CAEEL 404 DGLkidKYSSRMGEMMCLHTEVQNADM 430
+                            6667888****************9875 PP
+
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.4  13.9   2.2e-16   2.1e-12       2      69 ..      46     116 ..      45     117 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 47.4 bits;  conditional E-value: 2.2e-16
+                            B-TTTSSB-SE.EETTEEE-HHHHHHHHHHHHTT-----SS.SST---STTTCC.T-HHHHHHHHHHTT-- CS
+                  zf-C4   2 lCkvCgdkasg.lhygvltCegCkgFFkRsiqkkakysCkk.ekkCvidkkkRn.rCqaCRlkkClevGms 69 
+                             C+vC+ +  g +h+g+  C +C +FF+Rs+  k+++ C++ ++kC+++  +R+ +Cq+CR+ +Cl vG++
+  sp|Q18299|NHR43_CAEEL  46 HCRVCERRYDGsQHFGIDICRACAAFFRRSVAVKKTFVCRRgTNKCELNTVSRKtTCQKCRWMRCLLVGLN 116
+                            6****99987637**************************973578****9988637*************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (449 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       706  (0.0368111); expected 383.6 (0.02)
+Passed bias filter:                      441  (0.0229939); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.69
+# Mc/sec: 2113.88
+//
+[ok]

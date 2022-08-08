@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041789.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041789
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_013238410.1  [L=169]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-15   57.8   0.0    6.5e-15   55.2   0.0    2.1  1  Ras       Ras family
+      4e-13   49.7   0.0    1.7e-12   47.7   0.0    1.9  1  Roc       Ras of Complex, Roc, domain of DAPkinase
+
+
+Domain annotation for each model (and alignments):
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.2   0.0   6.8e-19   6.5e-15      26      77 ..      20      71 ..      14     123 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 55.2 bits;  conditional E-value: 6.8e-19
+                    SSCTTTSSEEEEEEEEEETTEEEEEEEEEETTSGGGHHHHHHHHTTESEEEE CS
+             Ras 26 eeyesTigvdfytkeievdgkevkleiwDTAGqeefkslrslyyrdaegill 77
+                    e + +Tig+df++k+i +d+++v+l++wDTAGqe+f+sl ++y+rd++++++
+  XP_013238410.1 20 EYSLATIGIDFLSKTIFLDDRTVRLQLWDTAGQERFRSLIPSYIRDCDAAII 71
+                    56679********************************************997 PP
+
+>> Roc  Ras of Complex, Roc, domain of DAPkinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.7   0.0   1.8e-16   1.7e-12      28      96 ..      22      82 ..      13     100 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 47.7 bits;  conditional E-value: 1.8e-16
+                    EETTTTEEEEEEECGGSTTCTTBCCCTCEEEEEEEESSGGCTTTT-HHHHCTSCEEEEEEESCCCCTCH CS
+             Roc 28 ekstigvdfltkevtkikglendkklkkvklniWDtaGqerfrslhplylreaalailvydsrssenlk 96
+                    + +tig+dfl+k++  +++       ++v+l++WDtaGqerfrsl p+y+r+ ++ai+ + s++ +++k
+  XP_013238410.1 22 SLATIGIDFLSKTIF-LDD-------RTVRLQLWDTAGQERFRSLIPSYIRDCDAAIIDVISERGTRVK 82
+                    568********9983.322.......5799***************************988777666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (169 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       250  (0.0130351); expected 383.6 (0.02)
+Passed bias filter:                      203  (0.0105845); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.67
+# Mc/sec: 815.81
+//
+[ok]

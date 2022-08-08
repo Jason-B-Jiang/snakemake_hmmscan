@@ -1,0 +1,86 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034854.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034854
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4ICH2|A0A0R4ICH2_DANRE  [L=251]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-44  150.2   0.7    3.7e-44  149.6   0.7    1.3  1  JAB       JAB1/Mov34/MPN/PAD-1 ubiquitin protease
+      1e-10   41.7   0.0    2.8e-10   40.3   0.0    1.7  1  BRCC36_C  BRCC36 C-terminal helical domain
+    3.5e-10   39.9   0.1    5.4e-10   39.3   0.1    1.3  1  Prok-JAB  Prokaryotic homologs of the JAB domain
+
+
+Domain annotation for each model (and alignments):
+>> JAB  JAB1/Mov34/MPN/PAD-1 ubiquitin protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  149.6   0.7   5.8e-48   3.7e-44       2     118 .]      29     147 ..      28     147 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 149.6 bits;  conditional E-value: 5.8e-48
+                                     SSCEEEEEHHHHHHHHHHHHHHCHSTS--EEEEEEEEESSEEEEEEEEEEESEEEESSECEEEEEHHHHHHHHHHHHHH CS
+                             JAB   2 svqavhleslvllkildhalrtekeeeevmGlliGelnddttveitnvfalpfeetekdvdavsldqeylekksellkk 80 
+                                     +v+avhles+++l++++hal+teke  evmGl+iGe++ + +v+i++v++l++++++kd++++s++q   +++s+++++
+  tr|A0A0R4ICH2|A0A0R4ICH2_DANRE  29 AVNAVHLESDAFLVCMNHALSTEKE--EVMGLCIGEVDTNRIVHIHSVIILRRSDKRKDRVEISPEQL--SAASTEAEI 103
+                                     699**********************..****************************************9..888888877 PP
+
+                                     HH.....TT.SEEEEEEEEESSS-SS--HHHHHHHHHHHHHSTT CS
+                             JAB  81 lr.....gr.ervvGWYhshpditvwlsevdvrtqalyqrmdee 118
+                                      r     gr +rvvGWYhshp+itvw+s+vdvrtqa+yq+md++
+  tr|A0A0R4ICH2|A0A0R4ICH2_DANRE 104 SRlaemtGRpMRVVGWYHSHPHITVWPSHVDVRTQAMYQMMDQG 147
+                                     7777999999********************************96 PP
+
+>> BRCC36_C  BRCC36 C-terminal helical domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.3   0.0   4.4e-14   2.8e-10       1      39 [.     202     240 ..     202     245 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 40.3 bits;  conditional E-value: 4.4e-14
+                        BRCC36_C   1 cleslveLpeiLfqEEreayekalrsqkndllskihnsa 39 
+                                     cles veLp+iL+qEE++ y+++++ ++ d+++kihn++
+  tr|A0A0R4ICH2|A0A0R4ICH2_DANRE 202 CLESAVELPRILCQEEQDTYRRIHSLTHLDPITKIHNGS 240
+                                     9************************************98 PP
+
+>> Prok-JAB  Prokaryotic homologs of the JAB domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   0.1   8.4e-14   5.4e-10       4      93 ..      39     138 ..      36     166 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 8.4e-14
+                        Prok-JAB   4 vlsaivaharrehpeEacGillgkeneseevrvielvneasna...erfeipdptdslarvk........eareeglev 71 
+                                     ++   + ha  +++eE  G+ +g+ ++++ v++ +++   ++    +r ei +p+++ a+ +        e++ + + v
+  tr|A0A0R4ICH2|A0A0R4ICH2_DANRE  39 AFLVCMNHALSTEKEEVMGLCIGEVDTNRIVHIHSVIILRRSDkrkDRVEI-SPEQLSAASTeaeisrlaEMTGRPMRV 116
+                                     6677899******************99********9965555599988888.666666665578888999********* PP
+
+                        Prok-JAB  72 vgiyHSHPdgsarPSetDlrda 93 
+                                     vg yHSHP+    PS  D r+ 
+  tr|A0A0R4ICH2|A0A0R4ICH2_DANRE 117 VGWYHSHPHITVWPSHVDVRTQ 138
+                                     ******************9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (251 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       564  (0.0294072); expected 383.6 (0.02)
+Passed bias filter:                      476  (0.0248188); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.56
+# Mc/sec: 1448.88
+//
+[ok]

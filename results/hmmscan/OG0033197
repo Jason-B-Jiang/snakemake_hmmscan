@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033197.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033197
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O96660|O96660_DROME  [L=486]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-75  253.6   0.2      2e-75  252.9   0.2    1.3  1  MH2       MH2 domain
+    1.6e-37  127.9   3.2      3e-37  127.0   3.2    1.5  1  MH1       MH1 domain
+
+
+Domain annotation for each model (and alignments):
+>> MH2  MH2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  252.9   0.2   2.1e-79     2e-75       2     174 .]     292     462 ..     291     462 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 252.9 bits;  conditional E-value: 2.1e-79
+                     MH2   2 sWcsiayyElnervgetfkvsspvvsvtvdgftdpsdgerfcLgllsnvnrnekvekvrkkigkGvqlsleeegeVwienlsespvf 88 
+                             +Wcsi+yyEln+rvgetf++s+p  s+tvdgftdps++erfcLgllsnvnrne ve++r++igkGv+l++  +geV++e+ls+s++f
+  tr|O96660|O96660_DROME 292 FWCSISYYELNTRVGETFHASQP--SITVDGFTDPSNSERFCLGLLSNVNRNEVVEQTRRHIGKGVRLYYI-GGEVFAECLSDSSIF 375
+                             8*********************7..**********************************************.7************** PP
+
+                     MH2  89 VqsptldkeagrapdtvvkvppgeslkvFdleefakllsq.ekevaeepldvnklcsvriSFvKgwGpdysrqtitstPcWieihln 174
+                             Vqsp++++++g++p+tv+k+ppg++lk+F+++efa+llsq  ++  e+ ++ +++c++r+SFvKgwG++y+rqt+tstPcWie+hln
+  tr|O96660|O96660_DROME 376 VQSPNCNQRYGWHPATVCKIPPGCNLKIFNNQEFAALLSQsVSQGFEAVYQLTRMCTIRMSFVKGWGAEYRRQTVTSTPCWIELHLN 462
+                             ****************************************75566666667779*******************************97 PP
+
+>> MH1  MH1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.0   3.2   3.2e-41     3e-37       2     102 ..      30     128 ..      29     129 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 127.0 bits;  conditional E-value: 3.2e-41
+                             HHHHHHHHHHHTTSTTHHHHHHHHHH-T.TS-----EEE--TTS-EEETTEEE-HHHHHHHHHT-TT---GGGEEE-TT-SS-TTS- CS
+                     MH1   2 ekavesllkklkkkkeqleellkavesrgkkktkCvliprsldgrlqvaqrkglphvilcrlfrwpdLqsakelkaletceaaeklk 88 
+                             ekav++l+kk+kk+ +qleel++a++++ +++t+Cv++prs+ +  + + rkglphvi+crl+rwpdLqs++elk l++ce+a++l+
+  tr|O96660|O96660_DROME  30 EKAVKNLVKKIKKN-SQLEELERAISTQ-NCQTRCVTVPRSKPAPAGEHLRKGLPHVIYCRLWRWPDLQSQNELKPLDHCEYAFHLR 114
+                             799***********.6*********977.********************************************************** PP
+
+                             -SEEE--GGGEEE- CS
+                     MH1  89 kdevCvnPyHysrv 102
+                             k+e+C+nPyHy+++
+  tr|O96660|O96660_DROME 115 KEEICINPYHYKKI 128
+                             ***********998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (486 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       988  (0.0515147); expected 383.6 (0.02)
+Passed bias filter:                      697  (0.0363418); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.85
+# Mc/sec: 1849.78
+//
+[ok]

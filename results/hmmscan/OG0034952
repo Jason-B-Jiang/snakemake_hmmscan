@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034952.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034952
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8Q7P4|A0A2R8Q7P4_DANRE  [L=309]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.4e-24   84.7   0.5    5.6e-23   81.7   0.0    2.5  1  TFIIS_M   Transcription factor S-II (TFIIS), central domain
+    8.6e-08   32.2   1.9    8.6e-08   32.2   1.9    2.1  1  Med26     TFIIS helical bundle-like domain
+
+
+Domain annotation for each model (and alignments):
+>> TFIIS_M  Transcription factor S-II (TFIIS), central domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.7   0.0   5.8e-27   5.6e-23       4      97 ..     214     305 ..     211     307 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 81.7 bits;  conditional E-value: 5.8e-27
+                                     HHHHHHHHHHHHHTT----.......--THHHHHHHHHHHHHHT------HHHHHHHHHHHHHS-TT-HHHHHTSSSS- CS
+                         TFIIS_M   4 kvRdkcrelLlealekdseeanketseedakelaaeiEealfekkketdkkykqkvRsllfNLkdkkNpeLrrrvlsge 82 
+                                     ++R+kc++l+l+al+++++++    + ++ k+la++iE ++++ +++++ kyk  +Rs ++NLk+++Np+Lr+ ++sg+
+  tr|A0A2R8Q7P4|A0A2R8Q7P4_DANRE 214 ALRSKCVHLILQALSTNQQTD--PGHMNKLKALAENIELHVHALHGRNQHKYKFHIRSKVANLKNPNNPHLRQGLISGQ 290
+                                     78***************9864..456669**************999********************************* PP
+
+                                     -STTTTS---TTTSS CS
+                         TFIIS_M  83 ispsklvkmspeEla 97 
+                                     ++p+ +++ms eE+a
+  tr|A0A2R8Q7P4|A0A2R8Q7P4_DANRE 291 LTPDAFAQMSVEEMA 305
+                                     **************9 PP
+
+>> Med26  TFIIS helical bundle-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.2   1.9     9e-12   8.6e-08       2      52 ..      28      77 ..      27      78 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 32.2 bits;  conditional E-value: 9e-12
+                                    HHHHS---....HHHHHHSHHHHHHHHHH-TTS-HHHHHHHHHHHHHHHHH CS
+                           Med26  2 iLaqLeklpittetLrsTgIGkvVnalrkhkhetaevktlAksLvekWkka 52
+                                    +L +L+++ +t+e++++T I kv+ +l k+++   + kt+AksL+ kWkk+
+  tr|A0A2R8Q7P4|A0A2R8Q7P4_DANRE 28 LLTELDITSVTLEQIQTTDIVKVLYRLLKSCP-VLSAKTKAKSLLTKWKKL 77
+                                    799*****99******************9988.8899************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (309 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1407  (0.0733615); expected 383.6 (0.02)
+Passed bias filter:                      441  (0.0229939); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.20s 00:00:00.57 Elapsed: 00:00:00.60
+# Mc/sec: 1652.49
+//
+[ok]

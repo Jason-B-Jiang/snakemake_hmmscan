@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035925.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035925
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QUL2|F1QUL2_DANRE  [L=326]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-54  185.6   0.0      2e-54  185.2   0.0    1.1  1  Lipase    Lipase
+     0.0002   22.0   0.0    0.00031   21.4   0.0    1.4  1  PLAT      PLAT/LH2 domain
+
+
+Domain annotation for each model (and alignments):
+>> Lipase  Lipase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  185.2   0.0   2.1e-58     2e-54     176     336 .]      15     172 ..      13     172 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 185.2 bits;  conditional E-value: 2.1e-58
+                             EEES-B-TTTTTS-TTTS--GGGSSEEEEE-SSES-HHH-SSBESS--SSEEEEETTTTS-TTSSS-T--S---HHHHHTTTSGGTH CS
+                  Lipase 176 TgLDpaepyfegteeeerLdpdDAdFVdaiHTdaaeipglglGisqkvghvDffpNGgseqPGckkvvlskivdedGlwevtqfvaC 262
+                              gLDpa+p feg ++ +rL+pdDA+FVdaiHT+++     g+Gi+q v+hvDf+pNGg++qPGck+   +  v + Gl+ v ++++C
+  tr|F1QUL2|F1QUL2_DANRE  15 AGLDPAGPHFEGLPALDRLSPDDAQFVDAIHTFTKSPLLPGVGIKQSVAHVDFYPNGGTFQPGCKISDIYSNVYQYGLQGVPKTIKC 101
+                             59********************************877899*********************************************** PP
+
+                             HHHHHHHHHHHHHHSCC.CTB-EE-S-HHHHHTTTS-S--TT---BSSGGGGGSTTTTSSSSEEEEE---SSTT- CS
+                  Lipase 263 ahlRsvkyyidsllnee.gfaayacssyeefkqnkclpCkkekcpkmGyaadkfkakkskleqklyLqtgskspf 336
+                             +h+R+v++++dslln++ ++ +++c + ++f++++cl+C++ +c+++G+ +++ +   s   + lyL+tg ++p+
+  tr|F1QUL2|F1QUL2_DANRE 102 SHERAVRLFTDSLLNTSrPLLGFRCRDNSAFSRGQCLDCSRRRCNTLGFSVRREH---SG-GKGLYLRTGPETPY 172
+                             ***************998********************************76665...22.45799999999887 PP
+
+>> PLAT  PLAT/LH2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.0   3.3e-08   0.00031      16     100 ..     191     290 ..     177     308 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 3.3e-08
+                             ECEEEEEEEETTEEEEEEEEEECTTSCEETTT-EEEEEEEESS-ECSEEEEEEEEESSSS......................S-BEE CS
+                    PLAT  16 danvyislygkngesasleltldtsgpdfergatdsFkvdtdvdlGallkinlhwensgv......................sdewf 80 
+                             +a v++ l g+ g+++  +l l       ++g+  s ++   +dlG l+ ++l w++                          +e++
+  tr|F1QUL2|F1QUL2_DANRE 191 EAPVSVMLNGTGGQTGDVPLIL----HQHSSGQVLSSLLAAGADLGLLSSVRLLWKG--DpllsgwlrrvhniwniwsgtepEPELH 271
+                             578999***********99999....667899999999999**************65..455*******************9999** PP
+
+                             EEEEEEEECTTTSSEEEEEE CS
+                    PLAT  81 lksitvekpgetgqkvtFpc 100
+                             + +i v k+get+qk+ F+ 
+  tr|F1QUL2|F1QUL2_DANRE 272 IWRISV-KSGETQQKWWFCG 290
+                             ******.8**********94 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (326 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       476  (0.0248188); expected 383.6 (0.02)
+Passed bias filter:                      283  (0.0147557); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.23s 00:00:00.62 Elapsed: 00:00:00.64
+# Mc/sec: 1639.83
+//
+[ok]

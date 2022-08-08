@@ -1,0 +1,81 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034507.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034507
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1R5H2|F1R5H2_DANRE  [L=619]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-12   48.1   0.1    2.3e-12   47.1   0.1    1.6  1  Macro     Macro domain
+    2.6e-09   37.0   0.1    1.2e-07   31.7   0.1    2.5  1  PARP      Poly(ADP-ribose) polymerase catalytic domain
+
+
+Domain annotation for each model (and alignments):
+>> Macro  Macro domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.1   0.1   2.4e-16   2.3e-12       9     118 .]      89     194 ..      80     194 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 47.1 bits;  conditional E-value: 2.4e-16
+                             S-CSHHHHHHHHHHHHHHHHHHHHHHHHHHS--TTSEEEEE-TTSSSSEEEEEESE-TTTSTSTTHHHHHHHHHHHHHHHHHHTT-S CS
+                   Macro   9 lggggvagaihraagkalkeeckelekkqggcllGeavvtpaynlpakyvihavgplftssgskeeeellekayknalelaeekgik 95 
+                             l+ g ++ ai ++ag ++++e+ + + + +       + t++ynl +k v+h+   ++ + ++ +++e l + + ++l++a+e+  +
+  tr|F1R5H2|F1R5H2_DANRE  89 LHQGVISRAILKKAGDEIQNEIYKKKSNTSFYSSKVLYKTKGYNLYCKSVFHT---VCAHRSDSKSKEILFNVVLESLKKAAEDY-E 171
+                             467789****************99977666688899999**************...444558999***************99876.* PP
+
+                             EEEEE-TTSSTTSBTHHHHHHHH CS
+                   Macro  96 svafPaistGifgvpweeaaevl 118
+                             s+ fPai+tG   +++ e+a+++
+  tr|F1R5H2|F1R5H2_DANRE 172 SISFPAIGTGNLDFKKWEVAKIM 194
+                             ********************997 PP
+
+>> PARP  Poly(ADP-ribose) polymerase catalytic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7   0.1   1.2e-11   1.2e-07      19     191 ..     462     612 ..     449     615 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 1.2e-11
+                             TT..EEEEEEEEEEEEETTHHHHCGCCGG..SS-EEEEEEEE-GGGHHHHHHH-S--S-TTS-GGGSTTSSSEEEBSSHHHHHGGG- CS
+                    PARP  19 ha..yklkileifrvqregeaerfqekkk..lknrqlLfHGsrltnvlsilsqGLriappeapvtGymfGkGiYfaddaskSanYck 101
+                              +   +l+i++++++++  +++ f+++++  + + + L+   + + v  i+  G+  ++ +ap   ++ G+GiYf+ ++  +++  +
+  tr|F1R5H2|F1R5H2_DANRE 462 AStaFRLSIIKVEKLENIVLKQLFDKNRQriKCQPKRLYQCVSAQYVDLICRVGF--QKEFAPPAEQRHGNGIYFSTSVEGALKLWR 546
+                             223479*********************9977777999******************..****************************** PP
+
+                             -BSSS-EEEEEEEEEE--SEEEESS--TGCCGGTT-SEEEE-EEEEEGGEEETTE--S-E.EE-S--SSSEEE-EEEESSGGGEEEE CS
+                    PARP 102 aseakgsglllLaeValGdikelkkadylekakkgkksvkgkgktapesvekdgvPlkks.satkyesseleyneyvvydkeqvrlk 187
+                             + e+++   ++ a+V++G+                  s  g+ +          +P+ k+   ++y+s + + + yv+++++q+ ++
+  tr|F1R5H2|F1R5H2_DANRE 547 NLEHEQYVYIIQAQVLTGN------------------SAIGSPDFIL-------PPSLKGdPLERYDSLSDMGETYVIFSVQQALPE 608
+                             *9*****************..................8888888888.......888888667788888888999999999999999 PP
+
+                             EEEE CS
+                    PARP 188 YLle 191
+                             YL+ 
+  tr|F1R5H2|F1R5H2_DANRE 609 YLVI 612
+                             9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (619 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       987  (0.0514625); expected 383.6 (0.02)
+Passed bias filter:                      542  (0.0282601); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.71
+# Mc/sec: 2821.90
+//
+[ok]

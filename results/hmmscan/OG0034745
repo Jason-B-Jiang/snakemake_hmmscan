@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034745.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034745
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QRA1|A0A2R8QRA1_DANRE  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-59  199.5   0.2    4.1e-59  199.1   0.2    1.1  1  PIP49_N   N-term cysteine-rich ER, FAM69
+    1.3e-35  122.8   0.0    2.4e-35  121.9   0.0    1.4  1  PIP49_C   Protein-kinase domain of FAM69
+
+
+Domain annotation for each model (and alignments):
+>> PIP49_N  N-term cysteine-rich ER, FAM69
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.1   0.2   4.3e-63   4.1e-59       1     153 [.       5     161 ..       5     162 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 199.1 bits;  conditional E-value: 4.3e-63
+                         PIP49_N   1 arlsarrvkylllvllavavvswvvYvqyssytelCrghevewkvnkiCdkYkkgeisGsaCeeLCeketlsllkClst 79 
+                                     ar+s++++k+l++++lav+v+swvvYv+yssytelCrghe++   n+iCdk++kg+i+GsaC++LCek+tl+l+kCls+
+  tr|A0A2R8QRA1|A0A2R8QRA1_DANRE   5 ARFSYLHMKFLFFSWLAVFVGSWVVYVEYSSYTELCRGHECK---NTICDKFQKGVIDGSACNSLCEKDTLYLGKCLSA 80 
+                                     69****************************************...********************************** PP
+
+                         PIP49_N  80 kpknqvylakkkdkevvikcq...vlkedleklsevrkeaeefdkPt....veefkeivkrylkaklgeqlsleklvsl 151
+                                     kp+nqvy+++++d e++ikcq    +++dl+ + e+rke+++f +Pt    +++fke+v ++lkak+g+q++l++l +l
+  tr|A0A2R8QRA1|A0A2R8QRA1_DANRE  81 KPSNQVYSGSWGDMEGIIKCQmkeDPHYDLGFELEPRKESASFSRPTkgtsMQKFKEMVFNHLKAKVGDQANLADLLTL 159
+                                     *********************9999****************************************************99 PP
+
+                         PIP49_N 152 ll 153
+                                     +l
+  tr|A0A2R8QRA1|A0A2R8QRA1_DANRE 160 VL 161
+                                     85 PP
+
+>> PIP49_C  Protein-kinase domain of FAM69
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.9   0.0   2.5e-39   2.4e-35       1     116 [.     180     308 ..     180     313 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 121.9 bits;  conditional E-value: 2.5e-39
+                         PIP49_C   1 lwallqnneylllqllqdkewpfpkllGaCGrlyvveslgavkllek..............srsldqflksswekrakl 65 
+                                     +wallq ne+ll ++lq++e ++p+llG+CG+lyv+e++++v+l++               +rs+dq+ ++sw+++ak+
+  tr|A0A2R8QRA1|A0A2R8QRA1_DANRE 180 AWALLQLNEFLLSVVLQERE-HTPRLLGFCGDLYVMEKVPYVPLYGVslpwmvelwipaslRRSIDQWATPSWPRKAKI 257
+                                     6*******************.*************************9******************************** PP
+
+                         PIP49_C  66 alqLLelveelenndpdflylcdvslenfgvsedgrlklvDldnvvvedkl 116
+                                     a++L+elve++++++++++++cdvs+  fg++e++++k+vD++++v+e  +
+  tr|A0A2R8QRA1|A0A2R8QRA1_DANRE 258 AIGLFELVEDVFHGTFGSFLMCDVSAAGFGYTERHDIKVVDARQIVPEVAM 308
+                                     ***********************************************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       425  (0.0221597); expected 383.6 (0.02)
+Passed bias filter:                      355  (0.0185098); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.56
+# Mc/sec: 2118.12
+//
+[ok]

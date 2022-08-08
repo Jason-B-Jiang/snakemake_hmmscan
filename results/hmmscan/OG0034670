@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034670.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034670
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7FE90|E7FE90_DANRE  [L=499]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.2e-13   49.5   0.5    6.9e-08   32.7   0.1    2.6  1  Cystatin       Cystatin domain
+    4.5e-05   23.8   0.5     0.0054   17.1   0.3    2.5  0  Cathelicidins  Cathelicidin
+
+
+Domain annotation for each model (and alignments):
+>> Cystatin  Cystatin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.7   0.1   7.2e-12   6.9e-08       2      86 ..     149     238 ..     148     244 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 32.7 bits;  conditional E-value: 7.2e-12
+                             SEEEECTTSHHHHHHHHHHHHHHHHHT.TTCEEEEEEEEEEEEEESSSEEEEEEEEEEEEEEES..CEEEECEEEECS..TTSEEEE CS
+                Cystatin   2 glseindnspelqealdfAlaeyNkkt.dnsyfelvevveaksQvVaGtnyfikvevgetncsk..skklledcelkd..ekqegec 83 
+                             ++++++ +++e+ ++++  +++yN+++  n+yf   ++++a   +  G +y  ++ ++et cs   +  +  +cel +   + +g+c
+  tr|E7FE90|E7FE90_DANRE 149 CPMQLSGDNEEVLKTVKMGMEKYNNESgLNNYFAPLNITRASASLHLGRFYTAEFTIQETVCSSktKDVDVSKCELMAceFAHKGLC 235
+                             7899999*******************************************************9867777888999887877778888 PP
+
+                             EEE CS
+                Cystatin  84 saq 86 
+                             +a 
+  tr|E7FE90|E7FE90_DANRE 236 KAS 238
+                             876 PP
+
+>> Cathelicidins  Cathelicidin
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (499 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1507  (0.0785755); expected 383.6 (0.02)
+Passed bias filter:                      402  (0.0209604); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.53u 0.19s 00:00:00.72 Elapsed: 00:00:00.78
+# Mc/sec: 2058.66
+//
+[ok]

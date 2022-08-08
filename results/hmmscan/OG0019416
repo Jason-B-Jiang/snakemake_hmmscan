@@ -1,0 +1,134 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019416.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019416
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q4V8V3|Q4V8V3_DANRE  [L=165]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.9e-39  134.7  14.6    3.2e-39  134.6  14.6    1.0  1  PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+    1.3e-07   31.7  16.0      3e-07   30.5  15.5    1.7  1  Claudin_2      PMP-22/EMP/MP20/Claudin tight junction
+
+
+Domain annotation for each model (and alignments):
+>> PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  134.6  14.6   3.3e-43   3.2e-39       1     166 []       1     158 [.       1     158 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 134.6 bits;  conditional E-value: 3.3e-43
+                             TTHHHHHHHHHHHHHHHHHHHHHS-S-SEEEEE-SEEEEE-SSBEEEESS.SS-SBE-B--S---SSTTTTTHHHHHHHHHHHHHHH CS
+           PMP22_Claudin   1 mlvlllgiivlaiaavillvvatitdqWlvsrsvgvaasagLWrsCtlesctgklsckqidslleeedalqavqalmilsiilgils 87 
+                             m++ll+++++l++ ++++l++at++  W+v + +    s++LW++C  +++t+++ c +     ee ++lqavq+lm+ls++++ +s
+  tr|Q4V8V3|Q4V8V3_DANRE   1 MASLLIFVTLLHLSTLAVLFIATMEKSWWVWDNKE---SSDLWYNCQFDNETESWFCAT----SEETEWLQAVQVLMVLSVVFSSIS 80 
+                             7899********************99999999985...********************9....9*********************** PP
+
+                             HHHHHHHHHHTGGGTTTSSHHHHHHHHHHHHHHHHHHHHHHHHH----SS-SSSS-EE-TTHHHHHHHHHHHHHHHHHH CS
+           PMP22_Claudin  88 livavlqlkclkkgerfklaGiiflvsgLcvlvgasiYtsriaedlskslskkqkysfGysfilgwvafllallsGvly 166
+                             +++++ ql+++ kg+ f+l+G+++  +gL  ++++ iYt +++e+l+  +   ++++fG++f+l+wv+++l l sG++y
+  tr|Q4V8V3|Q4V8V3_DANRE  81 FLIFLGQLFTMSKGGLFYLTGVCQAFAGLNDFTAVLIYTLHNKEILQGMQ-ELSSGHFGFCFFLAWVCVPLLLCSGIMY 158
+                             *********************************************99765.789************************9 PP
+
+>> Claudin_2  PMP-22/EMP/MP20/Claudin tight junction
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.5  15.5   3.1e-11     3e-07      57     192 ..      24     159 ..      19     160 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 30.5 bits;  conditional E-value: 3.1e-11
+               Claudin_2  57 telfvvltqasn.......pfekkeeeivsisatsllalarfvqvlliLslvlivlavvlgllallkqsv.lllkaagilfllagvl 135
+                             +e+++ ++  ++        ++++e e+   +   + ++ ++vqvl++Ls+v++ + ++++l  l   s+ +l+ ++g++++ ag+ 
+  tr|Q4V8V3|Q4V8V3_DANRE  24 MEKSWWVWDNKEssdlwynCQFDNETESWFCATSEETEWLQAVQVLMVLSVVFSSISFLIFLGQLFTMSKgGLFYLTGVCQAFAGLN 110
+                             6667777766667778875566666677777777889*********************9999655555555**************** PP
+
+               Claudin_2 136 gllavvvfiesvkkvfeesfqqwmqelqnnvrisfgWSfalAvagvvlsllAglLfL 192
+                              + av+++    k      + q mqel+     +fg  f+lA++ v l+l +g++++
+  tr|Q4V8V3|Q4V8V3_DANRE 111 DFTAVLIYTLHNKE-----ILQGMQELSSG---HFGFCFFLAWVCVPLLLCSGIMYI 159
+                             ********999853.....45788999999...**********************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (165 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1119  (0.0583451); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.56
+# Mc/sec: 946.81
+//
+Query:       sp|P54852|EMP3_HUMAN  [L=163]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.2e-47  161.1  12.5    2.4e-47  161.0  12.5    1.0  1  PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+    1.7e-08   34.6  10.7    1.7e-08   34.6  10.7    1.7  1  Claudin_2      PMP-22/EMP/MP20/Claudin tight junction
+
+
+Domain annotation for each model (and alignments):
+>> PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.0  12.5   2.5e-51   2.4e-47       1     166 []       1     156 [.       1     156 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 161.0 bits;  conditional E-value: 2.5e-51
+                           TTHHHHHHHHHHHHHHHHHHHHHS.-S-SEEEEE-SEEEEE-SSBEEEESS.SS-SBE-B--S---SSTTTTTHHHHHHHHHHHHHHHH CS
+         PMP22_Claudin   1 mlvlllgiivlaiaavillvvati.tdqWlvsrsvgvaasagLWrsCtlesctgklsckqidslleeedalqavqalmilsiilgilsl 88 
+                           m++lll++++l+i ++ill+vat+ +++W++  ++    s +LW++Ct++++t++++c++    ++e+++l+avq+lm+ls+il++ls+
+  sp|P54852|EMP3_HUMAN   1 MSLLLLVVSALHILILILLFVATLdKSWWTLPGKE----SLNLWYDCTWNNDTKTWACSN----VSENGWLKAVQVLMVLSLILCCLSF 81 
+                           7899********************55555555555....9********************....************************* PP
+
+                           HHHHHHHHHTGGGTTTSSHHHHHHHHHHHHHHHHHHHHHHHHH----SS-SSSS-EE-TTHHHHHHHHHHHHHHHHHH CS
+         PMP22_Claudin  89 ivavlqlkclkkgerfklaGiiflvsgLcvlvgasiYtsriaedlskslskkqkysfGysfilgwvafllallsGvly 166
+                           i++++ql+++++g+ f+++G+++l+++++v++ga iY+ +++e+l+k+    + +sfGy+f l+wvaf+lal+sG++y
+  sp|P54852|EMP3_HUMAN  82 ILFMFQLYTMRRGGLFYATGLCQLCTSVAVFTGALIYAIHAEEILEKHP---RGGSFGYCFALAWVAFPLALVSGIIY 156
+                           ************************************************9...************************98 PP
+
+>> Claudin_2  PMP-22/EMP/MP20/Claudin tight junction
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.6  10.7   1.7e-12   1.7e-08      75     192 ..      49     157 ..      28     158 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 34.6 bits;  conditional E-value: 1.7e-12
+             Claudin_2  75 eeivsisatsllalarfvqvlliLslvlivlavvlgllallkqsv.lllkaagilfllagvlgllavvvfiesvkkvfeesfqqwmqel 162
+                            +    s  s+ ++  +vqvl++Lsl+l +l ++l++  l   ++ +l+ a+g ++l ++v ++ + +++++  +         +++ +
+  sp|P54852|EMP3_HUMAN  49 TKTWACSNVSENGWLKAVQVLMVLSLILCCLSFILFMFQLYTMRRgGLFYATGLCQLCTSVAVFTGALIYAIHAEEI-------LEKHP 130
+                           555566777888999*********************9888887777**************************99422.......44455 PP
+
+             Claudin_2 163 qnnvrisfgWSfalAvagvvlsllAglLfL 192
+                           +     sfg  falA++++ l l++g++++
+  sp|P54852|EMP3_HUMAN 131 RGG---SFGYCFALAWVAFPLALVSGIIYI 157
+                           666...*********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (163 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1272  (0.0663225); expected 383.6 (0.02)
+Passed bias filter:                      576  (0.0300328); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.53
+# Mc/sec: 997.09
+//
+[ok]

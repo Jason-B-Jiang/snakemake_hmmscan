@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033997.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033997
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QQS0|F1QQS0_DANRE  [L=389]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-20   72.7  56.7    3.3e-09   37.1  12.8    4.8  2  TNFR_c6   TNFR/NGFR cysteine-rich region
+    2.1e-09   37.5   0.0    5.2e-09   36.2   0.0    1.6  1  Death     Death domain
+
+
+Domain annotation for each model (and alignments):
+>> TNFR_c6  TNFR/NGFR cysteine-rich region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.1  12.8   3.5e-13   3.3e-09       1      39 []      72     112 ..      72     112 .. 0.98
+   2 !   31.4   7.0   2.2e-11   2.1e-07       1      39 []     114     154 ..     114     154 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 37.1 bits;  conditional E-value: 3.5e-13
+                             --TTCEEBTTCTC.SEEEEE-B.-TTEEECC--BTTC--EE CS
+                 TNFR_c6   1 CpegtYtdsense.eClpCtrC.ppgqvvlrpCtptsdtvC 39 
+                             C egtY+++ n++ +C++C++C +p+ ++++pCtp s++vC
+  tr|F1QQS0|F1QQS0_DANRE  72 CDEGTYLEQANYSpNCFRCQQCtKPHSRESSPCTPYSNRVC 112
+                             *************99*******888**************** PP
+
+  == domain 2  score: 31.4 bits;  conditional E-value: 2.2e-11
+                             --TTCEEBTTCTC..SEEEEE-B-TTEEECC--BTTC--EE CS
+                 TNFR_c6   1 CpegtYtdsense..eClpCtrCppgqvvlrpCtptsdtvC 39 
+                             C  ++Y  + ++   eC +C++C +gq ++++Ct+ ++++C
+  tr|F1QQS0|F1QQS0_DANRE 114 CDTDYYKKKLGDLgwECSRCKKCGDGQIEIQNCTKEENRQC 154
+                             8999996666555345************************* PP
+
+>> Death  Death domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.2   0.0   5.4e-13   5.2e-09       7      85 ..     297     380 ..     292     381 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 36.2 bits;  conditional E-value: 5.4e-13
+                             HHCHSSCCSCCHHHHHHHTTSHHHHHHHHHHCSTTHHHHHHHHHHHHHHHHT.......TTSSHHHHHHHHHHTTHHHHHHHHHHH CS
+                   Death   7 lldhpdplgkdWrelarkLglseeeIdriekennslksqsyalLqlWedreg.......enatvgtLleaLrklgrddaaeklesa 85 
+                             +ld++++   + +el+r Lg+se+ Idr+e+++++ k++ y++L+ W d          + + ++ L++ L+++ +  +a+++e++
+  tr|F1QQS0|F1QQS0_DANRE 297 VLDEVPI--GRFKELVRRLGVSEQNIDRAEHDHRNCKDAQYQMLKVWSDGGSgggnnvvPYDQIQMLMSTLKDMCLVSCADNIENK 380
+                             7899999..999***********************************995436555556556666*****************9975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (389 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1363  (0.0710673); expected 383.6 (0.02)
+Passed bias filter:                      488  (0.0254445); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.58
+# Mc/sec: 2179.70
+//
+[ok]

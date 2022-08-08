@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029087.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029087
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54YV7|ARFL_DICDI  [L=195]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.7e-27   93.9   0.1    9.6e-27   93.6   0.1    1.0  1  Arf       ADP-ribosylation factor family
+    2.8e-05   24.3   1.5    0.00052   20.2   1.4    2.2  0  MMR_HSR1  50S ribosome-binding GTPase
+
+
+Domain annotation for each model (and alignments):
+>> Arf  ADP-ribosylation factor family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.6   0.1     1e-30   9.6e-27      15     174 ..      19     180 ..      10     181 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 93.6 bits;  conditional E-value: 1e-30
+                           EEEEEEESTTSSHHHHHHHHHHSSEEE....ECSSSSEEEEEEEETTEEEEEEEE-SSGGGGGGGGGHCTTESEEEEEEETT-GCCHHH CS
+                   Arf  15 lrilllGLDnaGKtTilkklkleelvt....tvPTigfnveeleiknlkftvwDvGGqeklRplWknYfektdavifvvDsadreRlee 99 
+                           +++ ++GL+n+GKtT+l+k+ + + ++    +   +g  +e++ +k+ ++   D+   + + +++k Y+   d++if++Ds+d + ++e
+  sp|Q54YV7|ARFL_DICDI  19 IKLGIIGLENSGKTTLLNKFIDASSKKsiasVLISTGVYIESIIFKGWEIFAGDLLYPNYISKIYKPYLLGSDVIIFMIDSSDIHQMTE 107
+                           67779***************87766662222555679999999999999999999999******************************* PP
+
+                           HHHHHHHHHTSGGGTTSEEEEEEE-TTSTTSS-HHHHHHHCTGCCSSSSSSEEEEEEBTTTTBTHHHHHHHHHHH CS
+                   Arf 100 akeeLkalleeeelkevallvlaNKqDlpealseeelrellgleelkgkrkleiqkcsavkgeglkeglewlses 174
+                           ak++++ l++e+ +++ ++lv+aNKqD + ++s ++l++ l+l++l+  ++++    s ++ +g+++ ++w+ e+
+  sp|Q54YV7|ARFL_DICDI 108 AKNQIDLLIQEQCINSSVFLVMANKQDQKRCVSIHQLEQYLELYRLT--NPWKCLPLSLIQEKGIEDLIKWILEN 180
+                           ***********************************************..9*********************9986 PP
+
+>> MMR_HSR1  50S ribosome-binding GTPase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (195 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       841  (0.04385); expected 383.6 (0.02)
+Passed bias filter:                      530  (0.0276344); expected 383.6 (0.02)
+Passed Vit filter:                        72  (0.00375411); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.25s 00:00:00.68 Elapsed: 00:00:00.64
+# Mc/sec: 991.63
+//
+[ok]

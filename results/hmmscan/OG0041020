@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041020.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041020
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P09683|SECR_HUMAN  [L=121]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    7.5e-08   32.2   0.0    1.4e-07   31.4   0.0    1.5  1  Hormone_2  Peptide hormone
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_2  Peptide hormone
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.4   0.0   7.2e-12   1.4e-07       1      28 []      28      55 ..      28      55 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 31.4 bits;  conditional E-value: 7.2e-12
+             Hormone_2  1 HADGtFtsdYskvLdqlaAkkflqwLmn 28
+                          H+DGtFts++s++++ ++ + +lq L++
+  sp|P09683|SECR_HUMAN 28 HSDGTFTSELSRLREGARLQRLLQGLVG 55
+                          **************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (121 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       301  (0.0156942); expected 383.6 (0.02)
+Passed bias filter:                      226  (0.0117837); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.58
+# Mc/sec: 669.85
+//
+[ok]

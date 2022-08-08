@@ -1,0 +1,78 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030539.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030539
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54L95|Q54L95_DICDI  [L=574]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-21   77.9   0.5    1.7e-21   77.2   0.0    1.6  1  BCS1_N    BCS1 N terminal
+    9.5e-19   68.2   0.0      2e-18   67.2   0.0    1.6  1  AAA       ATPase family associated with various cellular acti
+
+
+Domain annotation for each model (and alignments):
+>> BCS1_N  BCS1 N terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.2   0.0   1.8e-25   1.7e-21       2     187 .]      82     250 ..      81     250 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 77.2 bits;  conditional E-value: 1.8e-25
+                  BCS1_N   2 gallaalrrllselaslirrrflvsveissdDeaynwvleWlsaqpasr..rsrelsvetrtesrssdssaesdededeeedekkkk 86 
+                             ++++ ++++ l ++++li++rf+ +++ +  D ++ ++leWls+++ s+   +r +sv tr+++ +s+             d   + 
+  tr|Q54L95|Q54L95_DICDI  82 TWVIGLIKSYLISIIDLIKNRFYFTAHLTYPDSMFIYFLEWLSSKQDSTiiGTRGVSVMTRYQNVESE-------------D-GGQM 154
+                             567788999999*******************************9544431155********9998511.............1.2377 PP
+
+                  BCS1_N  87 plrylPavgtthlfryrgrllavtRereekssdlstgapeetltltclgrsreilkeLleearelalkkqegktviyraaagsggeW 173
+                              +++lP+ g t++++y+g l+ + R   +k+s    g ++ +l +t++g +++i++++le+a e++   +++kt iy+   +s++ W
+  tr|Q54L95|Q54L95_DICDI 155 DIKLLPT-G-TQWLWYNGYLISIVRVTASKRS--FDGIKDDSLDVTVYGGNKNIINSILETAVEYSVTLNKDKTKIYSLD-QSSTFW 236
+                             9*****9.6.59**************955444..46679***************************************55.89**** PP
+
+                  BCS1_N 174 rrvasRpkRplstV 187
+                             + +a ++kR  ++V
+  tr|Q54L95|Q54L95_DICDI 237 ECIACQNKRLVDSV 250
+                             ************98 PP
+
+>> AAA  ATPase family associated with various cellular activities (AAA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.2   0.0   2.1e-22     2e-18       2     131 ..     286     407 ..     285     408 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 67.2 bits;  conditional E-value: 2.1e-22
+                             EEESSTTSSHHHHHHHHHHHHTSEEEEEETTTSSCSSTTHHHHHHHHHHHHHHHTSTSEEEEEETGGGTSHHS.SSSSHHHHHHHHH CS
+                     AAA   2 llyGppGtGKTllakavakelgvefleisgsellskyvgesekkirelfkeakekakpsilfiDEidalaksr.sgseseeeervvn 87 
+                             llyGppG GKT+++ ++a ++g ++  +++s+ +         +i+ +++++ +    +il++++ida++ +r ++s+ +++  + +
+  tr|Q54L95|Q54L95_DICDI 286 LLYGPPGSGKTSFILSMAGNFGKSISIMNMSKGI------HDGNIHSIIQKCNKD---TILVLEDIDAVFVKRkNNSAAGNDVLTFS 363
+                             9**********************99999999999......99*********8766...7**************66667777777899 PP
+
+                             HHHHHHHHTTSSSSTEEEEEEESSGGGSCHHHHS.TTSEEEEETE CS
+                     AAA  88 qLlteldgvkkkeskvivigatnrpdkldpallr.gRfdrkieie 131
+                              Ll+++dg+ ++++  i++++tn+ ++l+pal+r gR+d k++++
+  tr|Q54L95|Q54L95_DICDI 364 GLLNAIDGLASSDG-RILMMTTNHLERLSPALIRpGRIDLKVKFD 407
+                             ***********877.999***********************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (574 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1295  (0.0675218); expected 383.6 (0.02)
+Passed bias filter:                      505  (0.0263309); expected 383.6 (0.02)
+Passed Vit filter:                        76  (0.00396267); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.27s 00:00:00.79 Elapsed: 00:00:00.74
+# Mc/sec: 2523.72
+//
+[ok]

@@ -1,0 +1,59 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050684.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050684
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAF7683927.1  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.3e-17   63.3   0.1    4.1e-12   46.1   0.0    2.9  1  Pkinase         Protein kinase domain
+    2.1e-09   37.2   0.0    5.1e-05   22.8   0.0    3.0  0  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   0.0   4.3e-16   4.1e-12       4     133 ..      14     141 ..      11     147 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 4.3e-16
+                   EEEEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHHHHHHHHHHHHHHHSCTTB--EEEEEEESSEEEEEEE--TTEBHHHHHHHHSS--HHHH CS
+       Pkinase   4 leklGeGsfGkVykaveketgkivAvKkikkekakkkkekkvlrEikilkklkhpnivrlyevfeekdelylvleyveggeladllerkgslseeea 100
+                   ++ +G+ ++ +V +a++  t++ vA+K+i+ +    +  ++++rE +      hpni++ + vf++   ly+v  ++e g   +l    g++ e+e+
+  KAF7683927.1  14 ITCIGKSKMCTVTSAYHVPTNEPVALKQIDFSLVPPSFFDEFIREQRDRSLQGHPNIIKPLAVFTDGPLLYIVYKLMELGCCRSLF---GHIGESEC 107
+                   6679*****************************************99776666*************************99888887...57****** PP
+
+                   HHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEE.T CS
+       Pkinase 101 kkiakqilegleylHsegvvHrDlKpeNiLid.e 133
+                   k i+ ++++ l y+  ++  Hr + ++NiL+d +
+  KAF7683927.1 108 KGIICNVIRILGYMTTREHSHRNINSSNILFDiN 141
+                   *******************************944 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1191  (0.0620992); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.23s 00:00:00.70 Elapsed: 00:00:00.71
+# Mc/sec: 2076.62
+//
+[ok]

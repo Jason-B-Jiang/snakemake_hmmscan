@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035803.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035803
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B0S6Z4|B0S6Z4_DANRE  [L=709]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   2.7e-101  338.3   3.6   5.8e-101  337.2   3.6    1.6  1  Connexin    Connexin
+    5.8e-22   78.3   1.1    5.8e-22   78.3   1.1    2.9  1  Connexin50  Gap junction alpha-8 protein (Cx50)
+
+
+Domain annotation for each model (and alignments):
+>> Connexin  Connexin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  337.2   3.6    6e-105  5.8e-101       1     227 [.       3     233 ..       3     234 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 337.2 bits;  conditional E-value: 6e-105
+                Connexin   1 ewsfLerlleevqkhstlvGkiwltvllifRilvlvvaaesvysdeqskfvcntlqpGcenvCydaffpishvrfwvlqiilvstPs 87 
+                             +wsfL+++leev++hst++G++wltvl+ifRil+l++aae v++deqs++vcnt+qpGcenvCyd++fpish+r+wvlqii+vstPs
+  tr|B0S6Z4|B0S6Z4_DANRE   3 DWSFLGNILEEVNEHSTVIGRVWLTVLFIFRILILGTAAEFVWGDEQSDYVCNTQQPGCENVCYDEAFPISHIRLWVLQIIFVSTPS 89 
+                             6************************************************************************************** PP
+
+                Connexin  88 llylvyvlhkiakeekekekeeeeeeeeekeeeekk..eekekkekkeeeekekk..rirggllrtYvlslllrlllEvgflvgqyl 170
+                             l+y+++++h i++eek+ke+ee e +++++  ee++  ++ + ++ ke+++k +k  r++g+ll+tY++++++++l+E+gf+vgqy+
+  tr|B0S6Z4|B0S6Z4_DANRE  90 LVYVGHAVHYIHMEEKRKEREEAEVSHQQELCEERQamDQGSVRTAKETSTKGSKkfRLEGTLLCTYICHIIFKALFEIGFVVGQYF 176
+                             ****************8776665555554444444422444444444444443334688**************************** PP
+
+                Connexin 171 lYgfevpelfkCerspCpktvdCfvSrptEKtifllfmlvvsvlclllnllellhlg 227
+                             lYgf++ +l+kC+r+pCp+tvdC+vSrptEKtif++fml+v++++l+ln++e+ hlg
+  tr|B0S6Z4|B0S6Z4_DANRE 177 LYGFRILPLYKCSRWPCPNTVDCYVSRPTEKTIFIIFMLAVACVSLFLNFVEISHLG 233
+                             *******************************************************98 PP
+
+>> Connexin50  Gap junction alpha-8 protein (Cx50)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.3   1.1     6e-26   5.8e-22       1      66 []     267     339 ..     267     339 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 78.3 bits;  conditional E-value: 6e-26
+              Connexin50   1 iqkakGYklLeEeK..evshffPLtEvgmEagrlpa.pfekfeekss..avlple...dlskaydEtlPSyaQv 66 
+                             +qkakGY++LeEeK  ev+h++PL+EvgmE+g++++ ++ek e+kss  a+lp++   + + + dEt+PS++Qv
+  tr|B0S6Z4|B0S6Z4_DANRE 267 VQKAKGYRRLEEEKkdEVAHIYPLAEVGMEEGQFFLpQLEK-EQKSSqeAILPTAppvEETIICDETQPSFLQV 339
+                             8*************9*********************99999.9999988888888777557899*********7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (709 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       855  (0.04458); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.24s 00:00:00.70 Elapsed: 00:00:00.67
+# Mc/sec: 3404.83
+//
+[ok]

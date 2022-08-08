@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034973.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034973
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WFI8|X1WFI8_DANRE  [L=247]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-20   73.3  94.5    1.7e-09   37.4  31.6    3.6  2  Collagen  Collagen triple helix repeat (20 copies)
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4  31.6     9e-14   1.7e-09       6      58 ..      78     130 ..      75     131 .. 0.56
+   2 !   28.7  28.3   4.5e-11   8.6e-07       4      55 ..     132     182 ..     131     187 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 9e-14
+                             XXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--X CS
+                Collagen   6 pGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapg 58 
+                             pG++GppGppG++G++Ge+G++G++G +G++G pG++G++G pGekGe+G+pg
+  tr|X1WFI8|X1WFI8_DANRE  78 PGPAGPPGPPGNQGPHGEPGQPGPNGFPGNPGLPGSPGERGVPGEKGERGSPG 130
+                             55555555555555555555555555555566666666666666666666555 PP
+
+  == domain 2  score: 28.7 bits;  conditional E-value: 4.5e-11
+                             XXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB CS
+                Collagen   4 GepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaG 55 
+                             G +G++G pGppG++G++ ++G++G++G +G++GppG++G++G  G++G++G
+  tr|X1WFI8|X1WFI8_DANRE 132 GTRGQRGLPGPPGPPGQS-QTGPPGPSGSPGPRGPPGQHGSSGVTGPPGPPG 182
+                             333333333333333332.334444444444444444444444444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (247 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       403  (0.0210126); expected 383.6 (0.02)
+Passed bias filter:                      279  (0.0145472); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.56
+# Mc/sec: 1418.01
+//
+[ok]

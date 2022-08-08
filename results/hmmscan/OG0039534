@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039534.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039534
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q14966|ZN638_HUMAN  [L=1978]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.4e-08   33.8   0.1    0.00018   21.4   0.0    3.2  1  RRM_1        RNA recognition motif. (a.k.a. RRM, RBD, or RNP 
+    7.1e-05   23.0   1.0    7.1e-05   23.0   1.0    3.1  1  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+
+
+Domain annotation for each model (and alignments):
+>> RRM_1  RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.0   1.8e-08   0.00018       2      57 ..     679     730 ..     678     737 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.8e-08
+                            EEESETTT.SSHHHHHHHHTTTSTEEEEEEEEETTTSEEEEEEEEESSHHHHHHHHH CS
+                  RRM_1   2 fVgnLppd.vteeeLkelFskfGpiksirlvrdetgrskgfafVeFedkedaekAle 57 
+                             ++ Lp+d +tee++++lF++fG+++++ +v+      ++ a+ e+e ke+ +++++
+  sp|Q14966|ZN638_HUMAN 679 LITELPEDgCTEEDVRKLFQPFGKVNDVLIVPY-----RKEAYLEMEFKEAITAIMK 730
+                            6788877559**********************6.....9999999999998888765 PP
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.0   1.0   7.4e-09   7.1e-05       2      27 .]    1928    1953 ..    1927    1953 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 23.0 bits;  conditional E-value: 7.4e-09
+                             CBBTTTTBBBSSHHHHHCCTTSHHHH CS
+            zf-C2H2_jaz    2 fYCvlCdKyFksenaldnHlkSKkHK 27  
+                             f+C++C+  ++ e+a+ nH+kS  HK
+  sp|Q14966|ZN638_HUMAN 1928 FFCPICSLFYSGEKAMTNHCKSTRHK 1953
+                             9************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1978 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1711  (0.0892122); expected 383.6 (0.02)
+Passed bias filter:                      412  (0.0214818); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.83u 0.29s 00:00:01.11 Elapsed: 00:00:00.92
+# Mc/sec: 6979.28
+//
+[ok]

@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035662.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035662
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F392|E7F392_DANRE  [L=610]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-43  147.5  12.7    1.7e-37  129.5   4.0    3.6  2  CKAP2_C   Cytoskeleton-associated protein 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> CKAP2_C  Cytoskeleton-associated protein 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.6   1.4     5e-12   9.6e-08      17      64 ..     259     306 ..     242     326 .. 0.83
+   2 !  129.5   4.0   8.8e-42   1.7e-37     191     348 .]     430     594 ..     393     594 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 31.6 bits;  conditional E-value: 5e-12
+                 CKAP2_C  17 ldqrrktiakatvdrsarpketaeeRkarlsewkaskgkvlkrPpasv 64 
+                             +dq+      +tv+++    etaeeR+a+l+ew askgk lkrPp s 
+  tr|E7F392|E7F392_DANRE 259 TDQNVSRPVTSTVSQYKVQMETAEERRAKLAEWLASKGKSLKRPPISD 306
+                             5666666677899999*****************************874 PP
+
+  == domain 2  score: 129.5 bits;  conditional E-value: 8.8e-42
+                 CKAP2_C 191 lgenleeakatkeeikevkie.dvgvelekekpeleskkeknvk.lkkeekeqddktkeatddlktpdketrasclikynvsttpyL 275
+                             ++ ++e  + t +++ e+  e ++g e+ +  +++++ + kn+  l+ +ek+  d  ++  ++++    et++++++kynv+ttpyL
+  tr|E7F392|E7F392_DANRE 430 MEMQVE--EHTTDRVFEILEEeELGDEE-DITDDIKKADIKNEDdLEPQEKKLFDSEDDDGEEMRCTTPETEGASIVKYNVKTTPYL 513
+                             222233..22333333333330222222.222222333333332144444444555666667999999******************* PP
+
+                 CKAP2_C 276 qsvkkklqldet.......nsalkeLkfLtPvRRsrRlqektskLPdmlkdhyPcvssleqLaelgs.etdafvcRpnaaL 348
+                             qsvkk+++++e        +s++k+LkfLtPvRRs R+q+k s+LP ml dh+ cvssl +L ++++ +++a+++R+n aL
+  tr|E7F392|E7F392_DANRE 514 QSVKKRIECEEApgsgsrrKSTIKDLKFLTPVRRSTRIQRKSSRLPGMLNDHDTCVSSLAELVQMEDaDANAYIYRKNPAL 594
+                             *********985333333379********************************************873689*******998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (610 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1064  (0.0554773); expected 383.6 (0.02)
+Passed bias filter:                      352  (0.0183534); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.20s 00:00:00.60 Elapsed: 00:00:00.81
+# Mc/sec: 2425.17
+//
+[ok]

@@ -1,0 +1,440 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0007399.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0007399
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O01503|ETKMT_CAEEL  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.5e-10   39.5   0.0    6.4e-10   39.0   0.0    1.2  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+    7.1e-08   32.5   0.0    9.7e-08   32.0   0.0    1.1  1  Methyltransf_16  Lysine methyltransferase
+    3.6e-05   23.6   0.0    5.5e-05   23.0   0.0    1.2  1  MTS              Methyltransferase small domain
+
+
+Domain annotation for each model (and alignments):
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.0   0.0     1e-13   6.4e-10     161     214 ..      76     130 ..      64     146 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 39.0 bits;  conditional E-value: 1e-13
+                   PrmA 161 egeevlDvGtGSGiLaiaaaklgakkvvavDlDevAvkaakeNaelNkvee.kle 214
+                            +g+e++D+G+G G  +i a+  gakk++a D+D  A+ ++k N++lN++++ k++
+  sp|O01503|ETKMT_CAEEL  76 QGSEIVDFGAGCGSASISASICGAKKILANDIDRYALLSTKLNFHLNNLRDsKIQ 130
+                            6789********************************************9995554 PP
+
+>> Methyltransf_16  Lysine methyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.0   0.0   1.5e-11   9.7e-08      43     172 ..      73     209 ..      56     211 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 32.0 bits;  conditional E-value: 1.5e-11
+        Methyltransf_16  43 nelsklsvlELGsGtGlvGlavaellpeakviltDlee.llellkknielnknalkskvkvevLdWgeeleedllekeevD......l 123
+                              +++ ++++ G+G+G   +++    +  k++  D++  +l   k n  ln+ + +sk++++ ++  ++ +e + ++   D      +
+  sp|O01503|ETKMT_CAEEL  73 PLFQGSEIVDFGAGCGSASISASIC-GAKKILANDIDRyALLSTKLNFHLNN-LRDSKIQYSSINFLDDKNERMSTQFFTDsknirkF 158
+                            4578999*************99888.89999999**9955666778999976.99***********9999887765433332222239 PP
+
+        Methyltransf_16 124 ilaaDcvYledslelLvkvLkellkkesk.vlvaykkrr.eaekkFfklle 172
+                            il  D+ Y+ d  elL + Lk++ +++ + vlv    r+  ae++++++ +
+  sp|O01503|ETKMT_CAEEL 159 ILLGDMFYDSDFAELLFSWLKKIQDAHMVrVLVGDPDRHpLAESEYLQRYK 209
+                            **************************9999999998886258889988765 PP
+
+>> MTS  Methyltransferase small domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.0   0.0   8.6e-09   5.5e-05      24      92 ..      69     138 ..      63     147 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 23.0 bits;  conditional E-value: 8.6e-09
+                            HHHCHCCTCSEEEEET-TTSHHHHHHHHHTTC.EEEEEESBHHHHHHHHHHHHHTTGCC..EEEEE-STTT CS
+                    MTS  24 letlpkelsgkvlDlGcGaGvlglalakespeaevtlvdenarAlesakenleanklea..vevvasdvle 92 
+                            l++ p  +  +++D+G+G G  ++++   +   ++ + d++++Al s+k n++ n+l++  +++   + l+
+  sp|O01503|ETKMT_CAEEL  69 LDNKPLFQGSEIVDFGAGCGSASISASI-CGAKKILANDIDRYALLSTKLNFHLNNLRDskIQYSSINFLD 138
+                            54444447789**********9998776.55559***********************99555555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       474  (0.0247145); expected 383.6 (0.02)
+Passed bias filter:                      364  (0.0189791); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.61
+# Mc/sec: 1292.94
+//
+Query:       sp|A3KP85|ETKMT_DANRE  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.5e-11   44.4   0.1      2e-11   44.0   0.1    1.1  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+    2.5e-09   37.2   0.0    6.3e-09   35.9   0.0    1.6  1  Methyltransf_16  Lysine methyltransferase
+    1.3e-06   28.2   0.0      3e-06   27.0   0.0    1.5  1  MTS              Methyltransferase small domain
+
+
+Domain annotation for each model (and alignments):
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.0   0.1   3.1e-15     2e-11     159     211 ..     105     157 ..      93     177 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 44.0 bits;  conditional E-value: 3.1e-15
+                   PrmA 159 vkegeevlDvGtGSGiLaiaaaklgakkvvavDlDevAvkaakeNaelNkvee 211
+                            v +g++vlD+G+G G  aiaa + ga+ vva D+D++A  a+k+N elN+++ 
+  sp|A3KP85|ETKMT_DANRE 105 VSAGRKVLDLGCGCGASAIAARLSGASCVVANDIDPIAAIATKMNCELNNLAP 157
+                            77899********************************************9876 PP
+
+>> Methyltransf_16  Lysine methyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.9   0.0   9.9e-13   6.3e-09      22     160 ..      89     213 ..      85     224 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 35.9 bits;  conditional E-value: 9.9e-13
+        Methyltransf_16  22 WdaavvlvkylekklakelganelsklsvlELGsGtGlvGlavaellpeakviltDleellell.kknielnknalkskvkvevLdWg 108
+                            W+ + +l+ yl++      + + +++++vl+LG G+G   +a+ ++ +   v+  D++ +  +  k+n eln+ a    v+ +++   
+  sp|A3KP85|ETKMT_DANRE  89 WPGGQALARYLLN------NPEVSAGRKVLDLGCGCGASAIAARLS-GASCVVANDIDPIAAIAtKMNCELNNLAPLPCVTDNMI--- 166
+                            999*********9......567899****************99998.66668889***977765278****88455555543333... PP
+
+        Methyltransf_16 109 eeleedllekeevDlilaaDcvYledslelLvkvLkellkkesk.vlvaykkr 160
+                                    e+  +Dlil  D+ Y+e   + L + L+ +++++++ vl+    r
+  sp|A3KP85|ETKMT_DANRE 167 ------GSETDGWDLILLGDMFYDEALADGLHQWLQTCTNTHGTqVLIGDPGR 213
+                            ......2234569**************************99887788865555 PP
+
+>> MTS  Methyltransferase small domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.0   0.0   4.7e-10     3e-06      24     103 ..      96     177 ..      90     184 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 27.0 bits;  conditional E-value: 4.7e-10
+                            HHHCHCC....TCSEEEEET-TTSHHHHHHHHHTTC.EEEEEESBHHHHHHHHHHHHHTTGCCEEEEE-STTTTSTTS-EEEEE CS
+                    MTS  24 letlpke....lsgkvlDlGcGaGvlglalakespeaevtlvdenarAlesakenleankleavevvasdvleeveekkfdlii 103
+                            ++ l ++    + +kvlDlGcG G+ + ++a+ s    v++ d++  A  ++k n+e n+l+ + +v+++++   + +  dli+
+  sp|A3KP85|ETKMT_DANRE  96 ARYLLNNpevsAGRKVLDLGCGCGASA-IAARLSGASCVVANDIDPIAAIATKMNCELNNLAPLPCVTDNMIGSET-DGWDLIL 177
+                            4444444444499***********955.5566677778************************99999999988777.7788876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       503  (0.0262266); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.55
+# Mc/sec: 1501.67
+//
+Query:       tr|A0A2R8RKB1|A0A2R8RKB1_DANRE  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.1e-10   41.5   0.1    1.5e-10   41.1   0.1    1.1  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+    1.3e-09   38.1   0.0    3.6e-09   36.7   0.0    1.6  1  Methyltransf_16  Lysine methyltransferase
+    2.2e-06   27.5   0.0    5.1e-06   26.3   0.0    1.5  1  MTS              Methyltransferase small domain
+    7.4e-05   22.7   0.0    0.00012   22.0   0.0    1.3  1  Met_10           Met-10+ like-protein
+
+
+Domain annotation for each model (and alignments):
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.1   0.1   3.1e-14   1.5e-10     159     211 ..     105     157 ..      93     177 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 41.1 bits;  conditional E-value: 3.1e-14
+                            PrmA 159 vkegeevlDvGtGSGiLaiaaaklgakkvvavDlDevAvkaakeNaelNkvee 211
+                                     v +g++vlD+G+G G  aiaa + ga+ vva D+D++A  a k+N elN+++ 
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE 105 VSAGRKVLDLGCGCGASAIAARLSGASCVVANDIDPIAAIAIKMNCELNNLAP 157
+                                     77899********************************************9876 PP
+
+>> Methyltransf_16  Lysine methyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.7   0.0   7.4e-13   3.6e-09      22     160 ..      89     213 ..      86     224 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 36.7 bits;  conditional E-value: 7.4e-13
+                 Methyltransf_16  22 WdaavvlvkylekklakelganelsklsvlELGsGtGlvGlavaellpeakviltDlee.llellkknielnknalksk 99 
+                                     W+ + +l+ yl++      + + +++++vl+LG G+G   +a+ ++ +   v+  D++  +   +k+n eln+ a    
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE  89 WPGGQALARYLLN------NPEVSAGRKVLDLGCGCGASAIAARLS-GASCVVANDIDPiAAIAIKMNCELNNLAPLPC 160
+                                     999*********9......567899****************99998.66668889**9944556899****88455555 PP
+
+                 Methyltransf_16 100 vkvevLdWgeeleedllekeevDlilaaDcvYledslelLvkvLkellkkesk.vlvaykkr 160
+                                     v+ +++           e+  +Dlil  D+ Y+e   + L + L+ +++++++ vl+    r
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE 161 VTDNMI---------GSETDGWDLILLGDMFYDEALADGLHQWLQTCTNTHGTqVLIGDPGR 213
+                                     543333.........2234569**************************99887788865555 PP
+
+>> MTS  Methyltransferase small domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.3   0.0   1.1e-09   5.1e-06      24     103 ..      96     177 ..      90     184 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 26.3 bits;  conditional E-value: 1.1e-09
+                                     HHHCHCC....TCSEEEEET-TTSHHHHHHHHHTTC.EEEEEESBHHHHHHHHHHHHHTTGCCEEEEE-STTTTSTTS- CS
+                             MTS  24 letlpke....lsgkvlDlGcGaGvlglalakespeaevtlvdenarAlesakenleankleavevvasdvleeveekk 98 
+                                     ++ l ++    + +kvlDlGcG G+ + ++a+ s    v++ d++  A  + k n+e n+l+ + +v+++++   + + 
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE  96 ARYLLNNpevsAGRKVLDLGCGCGASA-IAARLSGASCVVANDIDPIAAIAIKMNCELNNLAPLPCVTDNMIGSET-DG 172
+                                     4444444444499***********955.5566677778************************99999999988777.77 PP
+
+                                     EEEEE CS
+                             MTS  99 fdlii 103
+                                      dli+
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE 173 WDLIL 177
+                                     88876 PP
+
+>> Met_10  Met-10+ like-protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   0.0   2.5e-08   0.00012      81     150 ..      87     156 ..      82     183 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 2.5e-08
+                                     S---GGGHHHHHHHHTT.--TT-EEEETT-TTTCCHHHCCHHTTSSEEEEEES-HHHHHHHHHHHHHTT-T CS
+                          Met_10  81 vyfsskleaErerlakl.veegevVvdvfAGiGpfaipiakyskakrvlaidlnPesvkylkeniklNkve 150
+                                     +y+  + +  r  l +  v+ g  V+d+  G G  ai++  +s a+ v+a+d++P +   +k n +lN+++
+  tr|A0A2R8RKB1|A0A2R8RKB1_DANRE  87 IYWPGGQALARYLLNNPeVSAGRKVLDLGCGCGASAIAAR-LSGASCVVANDIDPIAAIAIKMNCELNNLA 156
+                                     667666666677676666999****************877.699************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       492  (0.0256531); expected 383.6 (0.02)
+Passed bias filter:                      442  (0.023046); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.50
+# Mc/sec: 1656.21
+//
+Query:       tr|X1WD06|X1WD06_DANRE  [L=158]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.6e-08   33.4   0.0     0.0031   17.4   0.0    2.1  0  Methyltransf_16  Lysine methyltransferase
+    5.6e-07   29.4   0.1    7.3e-07   29.0   0.1    1.1  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+
+
+Domain annotation for each model (and alignments):
+>> Methyltransf_16  Lysine methyltransferase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0   0.1   7.7e-11   7.3e-07     159     195 ..      27      63 ..      15      70 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 7.7e-11
+                    PrmA 159 vkegeevlDvGtGSGiLaiaaaklgakkvvavDlDev 195
+                             v +g++vlD+G+G G  aiaa + ga+ vva D+D+ 
+  tr|X1WD06|X1WD06_DANRE  27 VSAGKKVLDLGCGCGASAIAARLSGASCVVANDIDPN 63 
+                             78899******************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (158 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       495  (0.0258095); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.76
+# Mc/sec: 675.42
+//
+Query:       tr|F1Q6H5|F1Q6H5_DANRE  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    8.1e-11   42.0   0.2    1.1e-10   41.6   0.2    1.1  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+    7.9e-10   38.8   0.0      2e-09   37.5   0.0    1.6  1  Methyltransf_16  Lysine methyltransferase
+    2.6e-06   27.3   0.0      6e-06   26.1   0.0    1.5  1  MTS              Methyltransferase small domain
+    5.2e-05   23.2   0.0    8.6e-05   22.5   0.0    1.3  1  Met_10           Met-10+ like-protein
+
+
+Domain annotation for each model (and alignments):
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.6   0.2   2.2e-14   1.1e-10     159     211 ..     105     157 ..      93     177 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 41.6 bits;  conditional E-value: 2.2e-14
+                    PrmA 159 vkegeevlDvGtGSGiLaiaaaklgakkvvavDlDevAvkaakeNaelNkvee 211
+                             v +g++vlD+G+G G  aiaa + ga+ vva D+D++A  a k+N elN+++ 
+  tr|F1Q6H5|F1Q6H5_DANRE 105 VSAGKKVLDLGCGCGASAIAARLSGASCVVANDIDPIAAIAIKMNCELNNLAP 157
+                             77899********************************************9986 PP
+
+>> Methyltransf_16  Lysine methyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5   0.0   4.2e-13     2e-09      22     160 ..      89     213 ..      86     224 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 4.2e-13
+         Methyltransf_16  22 WdaavvlvkylekklakelganelsklsvlELGsGtGlvGlavaellpeakviltDlee.llellkknielnknalkskvkvevLdW 107
+                             W+ + +l+ yl++      + + +++++vl+LG G+G   +a+ ++ +   v+  D++  +   +k+n eln+ a    v+ + L  
+  tr|F1Q6H5|F1Q6H5_DANRE  89 WPGGQALARYLLN------NPEVSAGKKVLDLGCGCGASAIAARLS-GASCVVANDIDPiAAIAIKMNCELNNLAPLPCVT-DNLIG 167
+                             999*********9......567899****************99998.66668889**994455689*****8844444443.33332 PP
+
+         Methyltransf_16 108 geeleedllekeevDlilaaDcvYledslelLvkvLkellkkesk.vlvaykkr 160
+                                      e+  +Dlil  D+ Y+e   + L + L+ +++++++ vl+    r
+  tr|F1Q6H5|F1Q6H5_DANRE 168 --------SETDGWDLILLGDMFYDEALADGLHQWLQTCTNTHGTqVLIGDPGR 213
+                             ........234559**************************99887788865555 PP
+
+>> MTS  Methyltransferase small domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.0   1.2e-09     6e-06      24     103 ..      96     177 ..      90     184 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 1.2e-09
+                             HHHCHCC....TCSEEEEET-TTSHHHHHHHHHTTC.EEEEEESBHHHHHHHHHHHHHTTGCCEEEEE-STTTTSTTS-EEEEE CS
+                     MTS  24 letlpke....lsgkvlDlGcGaGvlglalakespeaevtlvdenarAlesakenleankleavevvasdvleeveekkfdlii 103
+                             ++ l ++    + +kvlDlGcG G+ + ++a+ s    v++ d++  A  + k n+e n+l+ + +v+++++   + +  dli+
+  tr|F1Q6H5|F1Q6H5_DANRE  96 ARYLLNNpevsAGKKVLDLGCGCGASA-IAARLSGASCVVANDIDPIAAIAIKMNCELNNLAPLPCVTDNLIGSET-DGWDLIL 177
+                             44444444444999**********955.5566677778***********************999999999987777.7778776 PP
+
+>> Met_10  Met-10+ like-protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5   0.0   1.8e-08   8.6e-05      81     150 ..      87     156 ..      82     174 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 1.8e-08
+                             S---GGGHHHHHHHHTT.--TT-EEEETT-TTTCCHHHCCHHTTSSEEEEEES-HHHHHHHHHHHHHTT-T CS
+                  Met_10  81 vyfsskleaErerlakl.veegevVvdvfAGiGpfaipiakyskakrvlaidlnPesvkylkeniklNkve 150
+                             +y+  + +  r  l +  v+ g+ V+d+  G G  ai++  +s a+ v+a+d++P +   +k n +lN+++
+  tr|F1Q6H5|F1Q6H5_DANRE  87 IYWPGGQALARYLLNNPeVSAGKKVLDLGCGCGASAIAAR-LSGASCVVANDIDPIAAIAIKMNCELNNLA 156
+                             677766666677776666999****************877.699************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       513  (0.026748); expected 383.6 (0.02)
+Passed bias filter:                      458  (0.0238803); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.62
+# Mc/sec: 1341.48
+//
+Query:       sp|Q8IXQ9|ETKMT_HUMAN  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.8e-10   40.8   0.0      3e-10   40.1   0.0    1.3  1  PrmA             Ribosomal protein L11 methyltransferase (Prm
+    5.4e-10   39.4   0.0    1.5e-09   38.0   0.0    1.6  1  Methyltransf_16  Lysine methyltransferase
+    0.00011   22.1   0.0    0.00015   21.7   0.0    1.2  1  Met_10           Met-10+ like-protein
+    0.00011   22.0   0.0    0.00016   21.4   0.0    1.2  1  MTS              Methyltransferase small domain
+
+
+Domain annotation for each model (and alignments):
+>> PrmA  Ribosomal protein L11 methyltransferase (PrmA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   0.0   6.2e-14     3e-10     159     230 ..     113     185 ..     101     191 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 6.2e-14
+                   PrmA 159 vkegeevlDvGtGSGiLaiaaaklgakkvvavDlDevAvkaakeNaelNkvee.klevylseellkekadvvv 230
+                            v  g++vlD+G G G  aiaa++ ga++++a D+D++A  a   N elN+++   + +++  +l + k d+vv
+  sp|Q8IXQ9|ETKMT_HUMAN 113 VVRGKSVLDLGSGCGATAIAAKMSGASRILANDIDPIAGMAITLNCELNRLNPfPILIQNILNLEQDKWDLVV 185
+                            56789************************************************87767778888899999998 PP
+
+>> Methyltransf_16  Lysine methyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.0   0.0   3.1e-13   1.5e-09      21     149 ..      96     209 ..      92     224 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 38.0 bits;  conditional E-value: 3.1e-13
+        Methyltransf_16  21 vWdaavvlvkylekklakelganelsklsvlELGsGtGlvGlavaellpeakviltDleelle.llkknielnknalkskvkvevLdW 107
+                             W+ + +l+ yl+       + + ++++svl+LGsG+G + +a++ + +  +++  D++ +    ++ n eln+ +       ++L+ 
+  sp|Q8IXQ9|ETKMT_HUMAN  96 YWPGGQALSRYLLD------NPDVVRGKSVLDLGSGCGATAIAAKMS-GASRILANDIDPIAGmAITLNCELNRLNPFPILIQNILN- 175
+                            5999********99......57889*****************99988.88899999*999655157889999772222223333333. PP
+
+        Methyltransf_16 108 geeleedllekeevDlilaaDcvYledslelLvkvLkellkk 149
+                                    le+ ++Dl++  D+ Y+ed  + L + Lk++  +
+  sp|Q8IXQ9|ETKMT_HUMAN 176 --------LEQDKWDLVVLGDMFYDEDLADSLHQWLKKCFWT 209
+                            ........345669***********************99754 PP
+
+>> Met_10  Met-10+ like-protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.7   0.0   3.1e-08   0.00015      82     151 ..      96     165 ..      92     217 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 21.7 bits;  conditional E-value: 3.1e-08
+                            ---GGGHHHHHHHHTT.--TT-EEEETT-TTTCCHHHCCHHTTSSEEEEEES-HHHHHHHHHHHHHTT-TT CS
+                 Met_10  82 yfsskleaErerlakl.veegevVvdvfAGiGpfaipiakyskakrvlaidlnPesvkylkeniklNkvek 151
+                            y+  + +  r  l +  v  g+ V+d+  G G  ai+++  s a+r+la+d++P +   ++ n +lN+++ 
+  sp|Q8IXQ9|ETKMT_HUMAN  96 YWPGGQALSRYLLDNPdVVRGKSVLDLGSGCGATAIAAKM-SGASRILANDIDPIAGMAITLNCELNRLNP 165
+                            5555555555555555577899**************9875.99999*********************9975 PP
+
+>> MTS  Methyltransferase small domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.0   3.4e-08   0.00016      20     103 ..     104     185 ..      99     194 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 3.4e-08
+                            HHHHHHHCHCCTCSEEEEET-TTSHHHHHHHHHTTC.EEEEEESBHHHHHHHHHHHHHTTGCCEEEEE-STTTTSTTS-EEEEE CS
+                    MTS  20 srlLletlpkelsgkvlDlGcGaGvlglalakespeaevtlvdenarAlesakenleankleavevvasdvleeveekkfdlii 103
+                            sr Ll++ +  + ++vlDlG+G G+ ++a ak+s   ++ + d++  A  +   n+e n+l+   ++ +++l+  + +k dl++
+  sp|Q8IXQ9|ETKMT_HUMAN 104 SRYLLDNPDVVRGKSVLDLGSGCGATAIA-AKMSGASRILANDIDPIAGMAITLNCELNRLNPFPILIQNILNLEQ-DKWDLVV 185
+                            566777777779999*********98776.56677779*********************************98777.9999998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       481  (0.0250795); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.35u 0.20s 00:00:00.55 Elapsed: 00:00:00.68
+# Mc/sec: 1243.58
+//
+[ok]

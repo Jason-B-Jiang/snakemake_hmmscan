@@ -1,0 +1,109 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019087.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019087
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAG0425545.1  [L=357]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.2e-15   56.9   0.0    6.9e-15   55.3   0.0    1.8  1  RT_RNaseH    RNase H-like domain found in reverse transcripta
+    1.1e-12   48.3   0.0    4.2e-12   46.3   0.0    1.9  1  rve          Integrase core domain
+    2.8e-09   37.0   0.0    7.8e-09   35.6   0.0    1.8  1  RT_RNaseH_2  RNase H-like domain found in reverse transcripta
+
+
+Domain annotation for each model (and alignments):
+>> RT_RNaseH  RNase H-like domain found in reverse transcriptase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.3   0.0   1.1e-18   6.9e-15      30     105 .]       4      76 ..       2      76 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 55.3 bits;  conditional E-value: 1.1e-18
+                   EEEEEEEEEE--HHHHTS-HHHHHHHHHHHHHHHHHHHHTS--EEEE-SS--TTTTT----.---HHHHHHHC-XX CS
+     RT_RNaseH  30 erpiafaSrklsgaernystiekellAivwalkkfrhylqgkkftvitDhknlkyllskkslngrlarwaleLsey 105
+                    +++  +S+k + +e+nys++eke+lAi++a+++++++++++++t++tD+kn+++     +l++r++rw l L+ey
+  KAG0425545.1   4 NKLVGLFSKKYNTQENNYSVVEKEVLAIIKAINHLKPLIYNAPITIMTDNKNITFDG---DLSRRINRWKLILEEY 76 
+                   478999**********************************************97544...4689**********99 PP
+
+>> rve  Integrase core domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.3   0.0   6.6e-16   4.2e-12       3     102 .]     206     309 ..     204     309 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 46.3 bits;  conditional E-value: 6.6e-16
+                   .TST--EEEEE.E--TSSS-........-EEEEEE-SSS--EEEEEES--.SHHHHHHHHHHHCCSS--..-SEE-BSS-HHHHSHHHHHHHHCCT- CS
+           rve   3 rpnelwqvDvt.viripdggg......kayllvviDdfSreilaeivsdemdastvlalleraiakfggvepervlsDngseytskafreflaelgi 92 
+                   + ne +++D++  ++  ++++         +lv++D ++r++ + i+ d  +++t++++  +   + +   p+++++Dng++++s +f++f  +++i
+  KAG0425545.1 206 EKNECVSIDIKgPVK-MKYFKtnmnknEFSILVMTDIYTRYTEVSILFDT-TTETIIKAFTASWISKHTS-PQKIITDNGRQFISTNFKKFMTKNNI 299
+                   578889999998777.445556778889**********************.8888888888666666665.************************** PP
+
+                   EE-B--SS-G CS
+           rve  93 rvsltrpgrp 102
+                   ++ lt+p +p
+  KAG0425545.1 300 KHILTAPNNP 309
+                   *******998 PP
+
+>> RT_RNaseH_2  RNase H-like domain found in reverse transcriptase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.6   0.0   1.2e-12   7.8e-09      55     100 .]       4      49 ..       1      49 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 35.6 bits;  conditional E-value: 1.2e-12
+   RT_RNaseH_2  55 erpiayaSrklskaeknysttekellaivfalkkfrhyllgrkftv 100
+                    + ++ +S+k + +e nys++eke+lai++a++++++++++ ++t+
+  KAG0425545.1   4 NKLVGLFSKKYNTQENNYSVVEKEVLAIIKAINHLKPLIYNAPITI 49 
+                   3699**************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (357 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1309  (0.0682517); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.23s 00:00:00.64 Elapsed: 00:00:00.70
+# Mc/sec: 1661.68
+//
+Query:       KAG0434292.1  [L=117]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (117 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1567  (0.0817039); expected 383.6 (0.02)
+Passed bias filter:                      664  (0.0346212); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.35u 0.19s 00:00:00.54 Elapsed: 00:00:00.63
+# Mc/sec: 603.15
+//
+[ok]

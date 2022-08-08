@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026470.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026470
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|O62354|O62354_CAEEL  [L=120]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.1e-05   24.7   0.1    2.4e-05   24.5   0.1    1.2  1  Peptidase_A17  Pao retrotransposon peptidase
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_A17  Pao retrotransposon peptidase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.1   1.3e-09   2.4e-05      54     105 ..      29      78 ..       7      88 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 1.3e-09
+           Peptidase_A17  54 klleeleeleelkipRkltkaekseevelhgfsDASekaygavvYlrveked 105
+                             ++ e++e+++    +R+     + +++elh f DAS +a gav+Ylr  + +
+  tr|O62354|O62354_CAEEL  29 QIAENCETISAEDHERQSH--LQAHRLELHLFGDASAAACGAVAYLRRVDYN 78 
+                             5566666666666677766..8899**********************98543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (120 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       561  (0.0292507); expected 383.6 (0.02)
+Passed bias filter:                      413  (0.021534); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.19s 00:00:00.51 Elapsed: 00:00:00.52
+# Mc/sec: 741.72
+//
+[ok]

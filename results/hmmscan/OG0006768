@@ -1,0 +1,414 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0006768.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0006768
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9N580|Q9N580_CAEEL  [L=350]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-52  177.1   0.5    3.5e-52  176.5   0.5    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+    2.2e-31  109.0   0.2    8.7e-31  107.0   0.1    2.0  1  ECSIT_C   C-terminal domain of the ECSIT protein
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  176.5   0.5   3.6e-56   3.5e-52       2     182 ..      32     213 ..      31     222 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 176.5 bits;  conditional E-value: 3.6e-56
+                   ECSIT   2 elfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaeflhyprqqec 88 
+                             + fe+   ek+dk  f+ ++ +f+++    r hvefi +aLk+++e+gv++D++ Yk ll+vfPk++++p+ ++q+ flhyp+qq+c
+  tr|Q9N580|Q9N580_CAEEL  32 KQFEAIEPEKRDKDAFMAAIATFKEKR--GRTHVEFINTALKYVKEYGVHKDIDTYKGLLEVFPKGKMIPQTVFQKVFLHYPQQQNC 116
+                             56999999***************9885..589******************************************************* PP
+
+                   ECSIT  89 gvavLeqmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpq...Dpvdlaklaleriasdlsakvtv 172
+                             +v+vL+ me +gv Pdke++ ++v+ fG+ +++ +k +r+ yW+pk+k++n +   ++++     p +la +al+ ++ d  + + +
+  tr|Q9N580|Q9N580_CAEEL 117 AVKVLDEMEWHGVQPDKEIHDIVVNAFGEWNFATKKVKRMLYWMPKLKHSNKYLDRRHVEGkslSPSELAGIALKMMSRDAASSISL 203
+                             ******************************************************99999861125779******************* PP
+
+                   ECSIT 173 yqtessedse 182
+                              + ++s+d +
+  tr|Q9N580|Q9N580_CAEEL 204 LKLSDSSDPQ 213
+                             9999888765 PP
+
+>> ECSIT_C  C-terminal domain of the ECSIT protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.0   0.1   9.1e-35   8.7e-31       1     129 []     222     341 ..     222     341 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 107.0 bits;  conditional E-value: 9.1e-35
+                 ECSIT_C   1 SpeQkeLLakhnknepvfveGpfkvwLrdkcvkYfvLradpkltppee.deddvsnlkllylelkldldkereeakkelavkksvhe 86 
+                             Sp Q+ L+++++k ++vfv+++ kv+L+d+++ +++L++++kl+p +e +++d++     y+++ +d++k+r eak+      s+he
+  tr|Q9N580|Q9N580_CAEEL 222 SPMQQILISELRKGDEVFVDAA-KVYLQDRVIPFITLTGNTKLEPLNEfKNEDMD---EDYTNWYADWQKQRGEAKR------SIHE 298
+                             8********************9.*******************9999998777666...7899**********99997......89** PP
+
+                 ECSIT_C  87 qedGtvfAmcatgtsskasllsWirlLqktnpiLaeipvlfrl 129
+                             q+++t+fAm+a+++ ++a++++Wi++Lqktnp++++++ ++rl
+  tr|Q9N580|Q9N580_CAEEL 299 QDHETIFAMGAMYKDDNATAIRWIDNLQKTNPNMENLRFRVRL 341
+                             *************************************999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (350 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       640  (0.0333698); expected 383.6 (0.02)
+Passed bias filter:                      409  (0.0213254); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.23s 00:00:00.63 Elapsed: 00:00:00.66
+# Mc/sec: 1722.74
+//
+Query:       sp|Q9U6M0|ECSIT_DROME  [L=409]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-90  302.1   1.8    1.5e-90  301.6   1.8    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+    1.1e-41  142.3   0.0    2.7e-41  141.0   0.0    1.7  1  ECSIT_C   C-terminal domain of the ECSIT protein
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  301.6   1.8   1.6e-94   1.5e-90       7     193 ..      59     241 ..      55     242 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 301.6 bits;  conditional E-value: 1.6e-94
+                  ECSIT   7 aagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaeflhyprqqecgvavLe 94 
+                            aa ++++k+++l++ve+f++r+v+rr+hvefiyaaLk+m +fgverDl+vYkal++v+Pk++f+p+n++qaef+hyp+qq+c++++Le
+  sp|Q9U6M0|ECSIT_DROME  59 AAAQDRTKNSYLTMVEIFQERDVHRRNHVEFIYAALKNMADFGVERDLEVYKALINVMPKGKFIPTNMFQAEFMHYPKQQQCIIDLLE 146
+                            44599*********************************************************************************** PP
+
+                  ECSIT  95 qmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpqDpvdlaklalerias.dlsakvtvyqtesseds 181
+                            qmed+gv+Pd+e+e++l+++fGr++hplrky+r++yW+pkfknl+P+p+P+++p+D++++aklaler+++ dl++k+tv++t++ +d+
+  sp|Q9U6M0|ECSIT_DROME 147 QMEDCGVMPDHEMEAMLLNVFGRQGHPLRKYWRMMYWMPKFKNLSPWPLPDPVPDDTLEMAKLALERMCTvDLRSKITVFETSELKDA 234
+                            **************************************************************************************** PP
+
+                  ECSIT 182 edaedrlkphiv 193
+                            +d     +++iv
+  sp|Q9U6M0|ECSIT_DROME 235 ID-----DTWIV 241
+                            99.....77777 PP
+
+>> ECSIT_C  C-terminal domain of the ECSIT protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.0   0.0   2.8e-45   2.7e-41       1     129 []     245     374 ..     245     374 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 141.0 bits;  conditional E-value: 2.8e-45
+                ECSIT_C   1 SpeQkeLLakhnknepvfveGpfkvwLrdkcvkYfvLradpkltppee......deddvsnlkllylelkldldkereeakkelavkk 82 
+                            SpeQ++LL++h++++ +++eGpf++wLr++ ++Yf+Lrad++++   e      deddvs++++++++      ++ ++++++l + +
+  sp|Q9U6M0|ECSIT_DROME 245 SPEQEKLLREHSRQKALYIEGPFHIWLRNRRINYFTLRADADSEFLSElderqlDEDDVSHIEVPFFG------RAPPRRHNQLGKLR 326
+                            9***************************************8844444447799***************......7788888888999* PP
+
+                ECSIT_C  83 svheqedGtvfAmcatgtsskasllsWirlLqk.tnpiLaeipvlfrl 129
+                            svh+q+dGt++A+catgts+k+sllsWirlL+   np+++e+pvlfr+
+  sp|Q9U6M0|ECSIT_DROME 327 SVHQQDDGTIMAICATGTSTKDSLLSWIRLLEAnGNPSIGEVPVLFRF 374
+                            ********************************999***********95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (409 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       501  (0.0261223); expected 383.6 (0.02)
+Passed bias filter:                      439  (0.0228896); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 2417.52
+//
+Query:       sp|Q08CK1|ECSIT_DANRE  [L=452]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-96  321.3   1.2    2.1e-96  320.7   1.2    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+    1.6e-46  157.9   0.0    3.6e-46  156.8   0.0    1.6  1  ECSIT_C   C-terminal domain of the ECSIT protein
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.7   1.2  2.2e-100   2.1e-96       2     194 .]      87     279 ..      86     279 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 320.7 bits;  conditional E-value: 2.2e-100
+                  ECSIT   2 elfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaeflhyprqqecg 89 
+                            ++f++aag++k+k +f++vv+vf+++++rrrghvefiyaaLkkm+efgve D++vY++lldvfPkevfvp+n++q++f+hyprqqecg
+  sp|Q08CK1|ECSIT_DANRE  87 DIFDRAAGDSKTKVEFNRVVDVFKSKDIRRRGHVEFIYAALKKMPEFGVECDVTVYNKLLDVFPKEVFVPQNFIQRMFNHYPRQQECG 174
+                            89************************************************************************************** PP
+
+                  ECSIT  90 vavLeqmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpqDpvdlaklaleriasdlsakvtvyqtes 177
+                            v+vLeqme+ygv+P+ et+vllvqifG+kshp+rk++r++yW+pkfk++nP+pvP+ lp+Dpvdla+++l+ria+dl+ak+t+yq++s
+  sp|Q08CK1|ECSIT_DANRE 175 VQVLEQMENYGVMPNIETKVLLVQIFGEKSHPIRKFQRIMYWFPKFKHTNPYPVPHVLPSDPVDLAQFSLTRIAADLDAKITIYQYPS 262
+                            **************************************************************************************** PP
+
+                  ECSIT 178 sedsedaedrlkphivg 194
+                            ++++e++e++++phivg
+  sp|Q08CK1|ECSIT_DANRE 263 TDITETGEEITRPHIVG 279
+                            ***************96 PP
+
+>> ECSIT_C  C-terminal domain of the ECSIT protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.8   0.0   3.8e-50   3.6e-46       1     129 []     282     411 ..     282     411 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 156.8 bits;  conditional E-value: 3.8e-50
+                ECSIT_C   1 SpeQkeLLakhnknepvfveGpfkvwLrdkcvkYfvLradpkltppee......deddvsnlkllylelkldldkereeakkelavkk 82 
+                            Sp+Q++LLakhn+ +pvfveGp+++wLr+kcv+Y++Lrad  ++ppee      d + ++++++l+++++++ld++ +++++++   +
+  sp|Q08CK1|ECSIT_DANRE 282 SPDQRSLLAKHNPCKPVFVEGPYPLWLRQKCVHYYLLRAD--PIPPEEkveeeiDPEMICPEQSLFFPQRVELDLKVDMGDDHS---F 364
+                            9***************************************..77777764456666666777*******************988...* PP
+
+                ECSIT_C  83 svheqedGtvfAmcatgtsskasllsWirlLqktnpiLaeipvlfrl 129
+                            +v+e+e+G v+Amc++g++++a+l +Wi++Lq+t+piL++ip++frl
+  sp|Q08CK1|ECSIT_DANRE 365 NVDEVEEGAVYAMCMAGQGDQATLSQWISGLQETCPILGQIPTVFRL 411
+                            *********************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (452 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       397  (0.0206997); expected 383.6 (0.02)
+Passed bias filter:                      329  (0.0171542); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.53
+# Mc/sec: 2741.72
+//
+Query:       tr|F1QSV0|F1QSV0_DANRE  [L=452]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-96  321.3   1.2    2.1e-96  320.7   1.2    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+    2.1e-46  157.5   0.0    4.7e-46  156.4   0.0    1.6  1  ECSIT_C   C-terminal domain of the ECSIT protein
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.7   1.2  2.2e-100   2.1e-96       2     194 .]      87     279 ..      86     279 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 320.7 bits;  conditional E-value: 2.2e-100
+                   ECSIT   2 elfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaeflhyprqqec 88 
+                             ++f++aag++k+k +f++vv+vf+++++rrrghvefiyaaLkkm+efgve D++vY++lldvfPkevfvp+n++q++f+hyprqqec
+  tr|F1QSV0|F1QSV0_DANRE  87 DIFDRAAGDSKTKVEFNRVVDVFKSKDIRRRGHVEFIYAALKKMPEFGVECDVTVYNKLLDVFPKEVFVPQNFIQRMFNHYPRQQEC 173
+                             89************************************************************************************* PP
+
+                   ECSIT  89 gvavLeqmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpqDpvdlaklaleriasdlsakvtvyqt 175
+                             gv+vLeqme+ygv+P+ et+vllvqifG+kshp+rk++r++yW+pkfk++nP+pvP+ lp+Dpvdla+++l+ria+dl+ak+t+yq+
+  tr|F1QSV0|F1QSV0_DANRE 174 GVQVLEQMENYGVMPNIETKVLLVQIFGEKSHPIRKFQRIMYWFPKFKHTNPYPVPHVLPSDPVDLAQFSLTRIAADLDAKITIYQY 260
+                             *************************************************************************************** PP
+
+                   ECSIT 176 essedsedaedrlkphivg 194
+                             +s++++e++e++++phivg
+  tr|F1QSV0|F1QSV0_DANRE 261 PSTDITETGEEITRPHIVG 279
+                             *****************96 PP
+
+>> ECSIT_C  C-terminal domain of the ECSIT protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.4   0.0   4.9e-50   4.7e-46       1     129 []     282     411 ..     282     411 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 156.4 bits;  conditional E-value: 4.9e-50
+                 ECSIT_C   1 SpeQkeLLakhnknepvfveGpfkvwLrdkcvkYfvLradpkltppee......deddvsnlkllylelkldldkereeakkelavk 81 
+                             Sp+Q++LLakhn+ +pvfveGp+++wLr+kcv+Y++Lrad  ++ppee      d + ++++++l+++++++ld++ +++++++   
+  tr|F1QSV0|F1QSV0_DANRE 282 SPDQRSLLAKHNPCKPVFVEGPYPLWLRQKCVHYYLLRAD--PIPPEEkveeeiDPEMICPEQSLFFPQRVELDLNVDMGDDHS--- 363
+                             9***************************************..77777764456666666777*******************988... PP
+
+                 ECSIT_C  82 ksvheqedGtvfAmcatgtsskasllsWirlLqktnpiLaeipvlfrl 129
+                             ++v+e+e+G v+Amc++g++++a+l +Wi++Lq+t+piL++ip++frl
+  tr|F1QSV0|F1QSV0_DANRE 364 FNVDEVEEGAVYAMCMAGQGDQATLSQWISGLQETCPILGQIPTVFRL 411
+                             **********************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (452 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       400  (0.0208561); expected 383.6 (0.02)
+Passed bias filter:                      339  (0.0176756); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.61
+# Mc/sec: 2407.45
+//
+Query:       tr|A0A1D5NSW3|A0A1D5NSW3_DANRE  [L=295]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-97  322.8   1.2    6.9e-97  322.3   1.2    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.3   1.2  3.6e-101   6.9e-97       2     194 .]      87     279 ..      86     279 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 322.3 bits;  conditional E-value: 3.6e-101
+                           ECSIT   2 elfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaefl 80 
+                                     ++f++aag++k+k +f++vv+vf+++++rrrghvefiyaaLkkm+efgve D++vY++lldvfPkevfvp+n++q++f+
+  tr|A0A1D5NSW3|A0A1D5NSW3_DANRE  87 DIFDRAAGDSKTKVEFNRVVDVFKSKDIRRRGHVEFIYAALKKMPEFGVECDVTVYNKLLDVFPKEVFVPQNFIQRMFN 165
+                                     89***************************************************************************** PP
+
+                           ECSIT  81 hyprqqecgvavLeqmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpqDpvdlaklal 159
+                                     hyprqqecgv+vLeqme+ygv+P+ et+vllvqifG+kshp+rk++r++yW+pkfk++nP+pvP+ lp+Dpvdla+++l
+  tr|A0A1D5NSW3|A0A1D5NSW3_DANRE 166 HYPRQQECGVQVLEQMENYGVMPNIETKVLLVQIFGEKSHPIRKFQRIMYWFPKFKHTNPYPVPHVLPSDPVDLAQFSL 244
+                                     ******************************************************************************* PP
+
+                           ECSIT 160 eriasdlsakvtvyqtessedsedaedrlkphivg 194
+                                     +ria+dl+ak+t+yq++s++++e++e++++phivg
+  tr|A0A1D5NSW3|A0A1D5NSW3_DANRE 245 TRIAADLDAKITIYQYPSTDITETGEEITRPHIVG 279
+                                     *********************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (295 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       500  (0.0260702); expected 383.6 (0.02)
+Passed bias filter:                      407  (0.0212211); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.61
+# Mc/sec: 1573.43
+//
+Query:       tr|F8W5R4|F8W5R4_DANRE  [L=139]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-19   68.6   0.2    6.6e-19   67.9   0.2    1.3  1  ECSIT     Evolutionarily conserved signalling intermediate in
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.9   0.2   3.5e-23   6.6e-19       2      54 ..      87     139 .]      86     139 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 67.9 bits;  conditional E-value: 3.5e-23
+                   ECSIT   2 elfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDl 54 
+                             ++f++aag++k+k +f++vv+vf+++++rrrghvefiyaaLkkm+efgve D+
+  tr|F8W5R4|F8W5R4_DANRE  87 DIFDRAAGDSKTKVEFNRVVDVFKSKDIRRRGHVEFIYAALKKMPEFGVECDV 139
+                             89************************************************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (139 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       487  (0.0253924); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 878.77
+//
+Query:       sp|Q9BQ95|ECSIT_HUMAN  [L=431]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-98  326.9   0.1    3.9e-98  326.4   0.1    1.2  1  ECSIT     Evolutionarily conserved signalling intermediate in
+    1.2e-45  155.1   0.0    1.8e-45  154.6   0.0    1.3  1  ECSIT_C   C-terminal domain of the ECSIT protein
+
+
+Domain annotation for each model (and alignments):
+>> ECSIT  Evolutionarily conserved signalling intermediate in Toll pathway
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.4   0.1  4.1e-102   3.9e-98       1     194 []      73     266 ..      73     266 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 326.4 bits;  conditional E-value: 4.1e-102
+                  ECSIT   1 eelfekaagekkdkatflkvvevfekrsvrrrghvefiyaaLkkmeefgverDlavYkalldvfPkevfvprnllqaeflhyprqqec 88 
+                            e+lf +a+g+++dka+fl++v+ f+++svr+rgh++fiy+aL+km+e+gverDlavY++ll++fPkevf+prn++q++f+hyprqqec
+  sp|Q9BQ95|ECSIT_HUMAN  73 EDLFGQAPGGERDKASFLQTVQKFAEHSVRKRGHIDFIYLALRKMREYGVERDLAVYNQLLNIFPKEVFRPRNIIQRIFVHYPRQQEC 160
+                            689************************************************************************************* PP
+
+                  ECSIT  89 gvavLeqmedygvlPdketevllvqifGrkshplrkyvrlkyWlpkfknlnPfpvPkdlpqDpvdlaklaleriasdlsakvtvyqte 176
+                            g+avLeqme++gv+P+kete+ll+qifGrks+p++k+vrlk+W+p+f+n+nPfpvP+dlpqDpv+la+++l+++++dlsa+vt+yq++
+  sp|Q9BQ95|ECSIT_HUMAN 161 GIAVLEQMENHGVMPNKETEFLLIQIFGRKSYPMLKLVRLKLWFPRFMNVNPFPVPRDLPQDPVELAMFGLRHMEPDLSARVTIYQVP 248
+                            **************************************************************************************** PP
+
+                  ECSIT 177 ssedsedaedrlkphivg 194
+                             ++ds++a+d+ +phivg
+  sp|Q9BQ95|ECSIT_HUMAN 249 LPKDSTGAADPPQPHIVG 266
+                            ****************96 PP
+
+>> ECSIT_C  C-terminal domain of the ECSIT protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  154.6   0.0   1.8e-49   1.8e-45       1     129 []     269     393 ..     269     393 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 154.6 bits;  conditional E-value: 1.8e-49
+                ECSIT_C   1 SpeQkeLLakhnknepvfveGpfkvwLrdkcvkYfvLradpkltppee.deddvsnlkllylelkldldkereeakkelavkksvheq 87 
+                            Sp+Q+  La+hn+ +pvfveGpf++wLr+kcv+Y++Lrad  l ppee + +++ ++ +ly++++ldl+  r+ +++ +   ++++e+
+  sp|Q9BQ95|ECSIT_HUMAN 269 SPDQQAALARHNPARPVFVEGPFSLWLRNKCVYYHILRAD--LLPPEErEVEETPEEWNLYYPMQLDLEYVRSGWDNYE---FDINEV 351
+                            9***************************************..9999997788899999******************987...****** PP
+
+                ECSIT_C  88 edGtvfAmcatgtsskasllsWirlLqktnpiLaeipvlfrl 129
+                            e+G+vfAmc++g++++a++++Wi++Lq+tnp+La+ipv+frl
+  sp|Q9BQ95|ECSIT_HUMAN 352 EEGPVFAMCMAGAHDQATMAKWIQGLQETNPTLAQIPVVFRL 393
+                            ****************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (431 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       262  (0.0136608); expected 383.6 (0.02)
+Passed bias filter:                      225  (0.0117316); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 2294.73
+//
+[ok]

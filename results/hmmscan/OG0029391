@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029391.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029391
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q554C5|WRKY1_DICDI  [L=1271]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-38  129.9  16.4      1e-20   73.8   7.6    4.2  2  WRKY      WRKY DNA -binding domain
+
+
+Domain annotation for each model (and alignments):
+>> WRKY  WRKY DNA -binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.8   7.6   5.4e-25     1e-20       2      59 ..     815     869 ..     814     870 .. 0.93
+   2 !   70.9   1.4   4.5e-24   8.6e-20       1      59 [.    1111    1164 ..    1111    1165 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 73.8 bits;  conditional E-value: 5.4e-25
+                   WRKY   2 DgyrWrKYGqKkikgskfprsYYrCthkkgCpakKqVqrsededpellevtYegeHtc 59 
+                            Dgy+WrKYGqK++kgs +pr+YY+Ct+ +gC+++KqV+r    d++   ++Y+geH +
+  sp|Q554C5|WRKY1_DICDI 815 DGYQWRKYGQKNVKGSLHPRHYYKCTF-QGCNVRKQVERIG--DTNQNSTVYKGEHCH 869
+                            ***************************.6**********84..678899*******99 PP
+
+  == domain 2  score: 70.9 bits;  conditional E-value: 4.5e-24
+                   WRKY    1 dDgyrWrKYGqKkikgskfprsYYrCthkkgCpakKqVqrsededpellevtYegeHtc 59  
+                             dDg+ WrKYGqK++kgs+fp+sY++C++   Cp+kKqV ++ d   +++  tY+g+H++
+  sp|Q554C5|WRKY1_DICDI 1111 DDGFFWRKYGQKSVKGSPFPKSYFKCAE-LTCPVKKQVIQQ-D---SKYINTYRGKHNH 1164
+                             7***************************.5**********8.3...6899********* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1271 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      6754  (0.352156); expected 383.6 (0.02)
+Passed bias filter:                     1486  (0.0774806); expected 383.6 (0.02)
+Passed Vit filter:                      1244  (0.0648626); expected 19.2 (0.001)
+Passed Fwd filter:                       326  (0.0169978); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 8.55u 0.66s 00:00:09.21 Elapsed: 00:00:05.53
+# Mc/sec: 748.42
+//
+[ok]

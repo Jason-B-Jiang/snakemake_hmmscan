@@ -1,0 +1,324 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0007850.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0007850
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9VQ91|TDRKH_DROME  [L=576]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-36  125.2   0.3    8.1e-36  122.8   0.1    2.2  1  TUDOR     Tudor domain
+    5.3e-24   83.9   2.7    3.5e-12   46.1   0.1    2.6  2  KH_1      KH domain
+
+
+Domain annotation for each model (and alignments):
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.8   0.1   8.5e-40   8.1e-36       3     122 .]     257     386 ..     255     386 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 122.8 bits;  conditional E-value: 8.5e-40
+                            CCGEEEEEEEEEEETTEEEE.EEGGHHHHHHHHHHHHHHHHTSSCC...TCSSS--TT-EEEEEETTTTEEEEEEE......EEECTT CS
+                  TUDOR   3 edktinvvvsaiespskfyi.qpkeqskkleklteelqeyyaskkk...aellapkvgegcvavfsedgkwyRAki......tesldd 80 
+                            e+k ++v+vsa++sp+kf++   ++qskkl+ +++e+++yy+s+++   ++l ap+vg++++avf++d+kwyRA+i      ++++++
+  sp|Q9VQ91|TDRKH_DROME 257 EGKPMEVYVSAVASPTKFWVqLIGPQSKKLDSMVQEMTSYYSSAENrakHVLTAPYVGQIVAAVFKFDEKWYRAEIvdimpnQYNPKE 344
+                            6899****************999***************************************************************** PP
+
+                            TEEEEEETTTSBEEEEEGGGEEE--GGGCSS-BSSEEEEETT CS
+                  TUDOR  81 qkveVlfiDyGntetvpvsdlrelpeeleelppqaikcrLag 122
+                            q ++++f+DyG++e++++ d++el++++++l++qa++c La+
+  sp|Q9VQ91|TDRKH_DROME 345 QVIDLYFVDYGDSEYISPADICELRTDFLTLRFQAVECFLAN 386
+                            ****************************************86 PP
+
+>> KH_1  KH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   0.1   3.6e-16   3.5e-12       3      65 ..      69     128 ..      68     129 .. 0.91
+   2 !   37.4   0.5   1.9e-13   1.8e-09       2      65 ..     139     200 ..     138     201 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 3.6e-16
+                            EEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T.CEEEEEEECSHHHHHHHHHHHH CS
+                   KH_1   3 rilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedegsderevtisGspeavekAkelie 65 
+                            +i v++++v++i+G+gGsnIk I+e+t akI++  ++d  s+ + + isG p+av++A++l+ 
+  sp|Q9VQ91|TDRKH_DROME  69 KIVVDNEHVPLIMGRGGSNIKLIEEKTLAKIRLR-DKD--SGHKFCDISGVPDAVKAARALLI 128
+                            689*****************************76.555..59*****************9985 PP
+
+  == domain 2  score: 37.4 bits;  conditional E-value: 1.9e-13
+                            EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T.CEEEEEEECSHHHHHHHHHHHH CS
+                   KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedegsderevtisGspeavekAkelie 65 
+                            ++++vP++l+++i G+gG+ ++eIr+ + ak ++  +    ++   +ti+G++++v+ A++++ 
+  sp|Q9VQ91|TDRKH_DROME 139 VELQVPQRLASKINGRGGELLQEIRSSSLAKLNIDLNGR--NGKAKITIIGNQKQVNIARKMLD 200
+                            689***********************88*****652444..499*****************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (576 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       924  (0.0481777); expected 383.6 (0.02)
+Passed bias filter:                      575  (0.0299807); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.85
+# Mc/sec: 2196.56
+//
+Query:       tr|F1R0M9|F1R0M9_DANRE  [L=573]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-25   89.7   0.0      5e-25   88.0   0.0    1.9  1  TUDOR     Tudor domain
+    4.7e-19   68.1   3.1      2e-14   53.3   1.6    2.5  1  KH_1      KH domain
+
+
+Domain annotation for each model (and alignments):
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.0   0.0   5.2e-29     5e-25       3     122 .]     322     444 ..     320     444 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 88.0 bits;  conditional E-value: 5.2e-29
+                             CCGEEEEEEEEEEETTEEEE.EEGGHHHHHHHHHHHHHHHHTSSCC..TCSSS--TT-EEEEEETTTTEEEEEEEEEECTTTEEEEE CS
+                   TUDOR   3 edktinvvvsaiespskfyi.qpkeqskkleklteelqeyyaskkk..aellapkvgegcvavfsedgkwyRAkiteslddqkveVl 86 
+                             +d++ +v+vsa e+p++f+i   +  s +l+klt e++ +y+   +  +  ++  vg++++a +++ g+w RA++   + +++v+++
+  tr|F1R0M9|F1R0M9_DANRE 322 PDEHLEVYVSASENPQHFWIqILGVRSLQLDKLTAEMSRFYNGDSSqeHRVETIIVGDIVAAPYRDHGTWNRARVLGIVGSGLVDLY 408
+                             68999***************88889999**************9999888999999******************************** PP
+
+                             ETTTSBEEEEEGGGEEE--GGGCSS-BSSEEEEETT CS
+                   TUDOR  87 fiDyGntetvpvsdlrelpeeleelppqaikcrLag 122
+                             ++D+G+  ++p+++lr +++++++lp+qai+c+Lag
+  tr|F1R0M9|F1R0M9_DANRE 409 YVDFGDNGELPREHLRSMRSDFLSLPFQAIECSLAG 444
+                             **********************************97 PP
+
+>> KH_1  KH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.3   1.6     2e-18     2e-14       2      66 .]     156     221 ..     155     221 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 53.3 bits;  conditional E-value: 2e-18
+                             EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T....CEEEEEEECSHHHHHHHHHHHHH CS
+                    KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedeg...sderevtisGspeavekAkeliee 66 
+                              +i vP+   griIG+gG+++k I + +gak++    +d+g   +++  +ti+G+++ ++ Ake+i+e
+  tr|F1R0M9|F1R0M9_DANRE 156 DVIDVPQTAFGRIIGRGGETLKFINRVSGAKVNCS--KDRGrtlEENGKITITGTRKEIQSAKEMIME 221
+                             6799*****************************65..444447***********9999********96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (573 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       569  (0.0296679); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.64
+# Mc/sec: 2873.88
+//
+Query:       tr|F1QM67|F1QM67_DANRE  [L=445]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (445 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       646  (0.0336827); expected 383.6 (0.02)
+Passed bias filter:                      276  (0.0143907); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.40u 0.14s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 2618.03
+//
+Query:       tr|A0A2R8QLW0|A0A2R8QLW0_DANRE  [L=573]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-25   89.5   0.0      5e-25   88.0   0.0    1.8  1  TUDOR     Tudor domain
+      6e-19   67.7   3.0    2.5e-14   52.9   1.5    2.5  1  KH_1      KH domain
+
+
+Domain annotation for each model (and alignments):
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.0   0.0   5.2e-29     5e-25       3     122 .]     322     444 ..     320     444 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 88.0 bits;  conditional E-value: 5.2e-29
+                                     CCGEEEEEEEEEEETTEEEE.EEGGHHHHHHHHHHHHHHHHTSSCC..TCSSS--TT-EEEEEETTTTEEEEEEEEEEC CS
+                           TUDOR   3 edktinvvvsaiespskfyi.qpkeqskkleklteelqeyyaskkk..aellapkvgegcvavfsedgkwyRAkitesl 78 
+                                     +d++ +v+vsa e+p++f+i   +  s +l+klt e++ +y+   +  +  ++  vg++++a +++ g+w RA++   +
+  tr|A0A2R8QLW0|A0A2R8QLW0_DANRE 322 PDEHLEVYVSASENPQHFWIqILGVRSLQLDKLTAEMSRFYNGDSSqeHRVETIIVGDIVAAPYRDHGTWNRARVLGIV 400
+                                     68999***************88889999**************9999888999999************************ PP
+
+                                     TTTEEEEEETTTSBEEEEEGGGEEE--GGGCSS-BSSEEEEETT CS
+                           TUDOR  79 ddqkveVlfiDyGntetvpvsdlrelpeeleelppqaikcrLag 122
+                                      +++v+++++D+G+  ++p+++lr +++++++lp+qai+c+Lag
+  tr|A0A2R8QLW0|A0A2R8QLW0_DANRE 401 GSGLVDLYYVDFGDNGELPREHLRSMRSDFLSLPFQAIECSLAG 444
+                                     ******************************************97 PP
+
+>> KH_1  KH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.9   1.5   2.6e-18   2.5e-14       2      66 .]     156     221 ..     155     221 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 52.9 bits;  conditional E-value: 2.6e-18
+                                     EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T....CEEEEEEECSHHHHHHHHHHHHH CS
+                            KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedeg...sderevtisGspeavekAkeliee 66 
+                                      +i vP+   griIG+gG+++k I + +ga+++    +d+g   +++  +ti+G+++ ++ Ake+i+e
+  tr|A0A2R8QLW0|A0A2R8QLW0_DANRE 156 DVIDVPQTAFGRIIGRGGETLKFINRVSGARVNCS--KDRGrtlEENGKITITGTRKEIQSAKEMIME 221
+                                     6799*****************************65..444447***********9999********96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (573 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       555  (0.0289379); expected 383.6 (0.02)
+Passed bias filter:                      481  (0.0250795); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.69
+# Mc/sec: 2677.27
+//
+Query:       tr|E9QJ41|E9QJ41_DANRE  [L=211]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-20   72.2   3.1    3.8e-15   55.6   1.6    2.4  1  KH_1      KH domain
+
+
+Domain annotation for each model (and alignments):
+>> KH_1  KH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.6   1.6     2e-19   3.8e-15       2      66 .]     124     189 ..     123     189 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 55.6 bits;  conditional E-value: 2e-19
+                             EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T....CEEEEEEECSHHHHHHHHHHHHH CS
+                    KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedeg...sderevtisGspeavekAkeliee 66 
+                              +i vP+   griIG+gG+++k I + +gak++    +d+g   +++  +ti+G+++ ++ Ake+i+e
+  tr|E9QJ41|E9QJ41_DANRE 124 DVIDVPQTAFGRIIGRGGETLKFINRVSGAKVNCS--KDRGrtlEENGKITITGTRKEIQSAKEMIME 189
+                             6799*****************************65..444447***********9999********96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (211 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1042  (0.0543303); expected 383.6 (0.02)
+Passed bias filter:                      704  (0.0367068); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.15s 00:00:00.51 Elapsed: 00:00:00.60
+# Mc/sec: 1127.35
+//
+Query:       sp|Q9Y2W6|TDRKH_HUMAN  [L=561]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-33  114.6   6.2    2.4e-16   59.4   0.6    2.3  2  KH_1      KH domain
+    1.1e-30  106.2   0.0    2.1e-29  102.1   0.0    2.3  1  TUDOR     Tudor domain
+    3.2e-07   30.1   6.2     0.0075   16.2   1.6    2.7  0  KH_2      KH domain
+
+
+Domain annotation for each model (and alignments):
+>> KH_1  KH domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.0   0.6     1e-19   6.5e-16       2      65 ..      55     116 ..      54     117 .. 0.90
+   2 !   59.4   0.6   3.7e-20   2.4e-16       2      66 .]     127     192 ..     126     192 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 58.0 bits;  conditional E-value: 1e-19
+                            EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T.CEEEEEEEC.SHHHHHHHHHHHH CS
+                   KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedegsderevtisG.speavekAkelie 65 
+                            +++ vP++ v +iIG++G+nIk++r++tga+I+v   ed   der++ isG + + v kAk+ i 
+  sp|Q9Y2W6|TDRKH_HUMAN  55 IEMRVPQEAVKLIIGRQGANIKQLRKQTGARIDVD-TEDV-GDERVLLISGfPVQ-VCKAKAAIH 116
+                            689******************************98.4444.6*********6666.******996 PP
+
+  == domain 2  score: 59.4 bits;  conditional E-value: 3.7e-20
+                            EEEEEGGGGHHHHHTCCCHHHHHHHHHHT-EEEEETSTT.T...CEEEEEEECSHHHHHHHHHHHHH CS
+                   KH_1   2 lrilvPsklvgriIGkgGsnIkeIreetgakIkvpkeedeg..sderevtisGspeavekAkeliee 66 
+                            ++++vP++ vgriIG+gG++I++I + +gakI+    e+eg    +r + isG+++ v++Ak+li+e
+  sp|Q9Y2W6|TDRKH_HUMAN 127 EQLSVPQRSVGRIIGRGGETIRSICKASGAKITCD-KESEGtlLLSRLIKISGTQKEVAAAKHLILE 192
+                            6899**********************99*****77.555556***********9999********86 PP
+
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.1   0.0   3.3e-33   2.1e-29       3     121 ..     304     422 ..     302     423 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 102.1 bits;  conditional E-value: 3.3e-33
+                            CCGEEEEEEEEEEETTEEEE.EEGGHHHHHHHHHHHHHHHHTSSCCTCSSS--TT-EEEEEETTTTEEEEEEEEEECTTTEEEEEETT CS
+                  TUDOR   3 edktinvvvsaiespskfyi.qpkeqskkleklteelqeyyaskkkaellapkvgegcvavfsedgkwyRAkiteslddqkveVlfiD 89 
+                             d++ +v+vsa e+p++f+i   ++ s +l+kl++e++++y++  + e l+ +vg++++a  + +g wyRA++   l++++++++f+D
+  sp|Q9Y2W6|TDRKH_HUMAN 304 ADEYLEVYVSASEHPNHFWIqIVGSRSLQLDKLVNEMTQHYENSVP-EDLTVHVGDIVAAPLPTNGSWYRARVLGTLENGNLDLYFVD 390
+                            6899****************77889999******************.***************************************** PP
+
+                            TSBEEEEEGGGEEE--GGGCSS-BSSEEEEET CS
+                  TUDOR  90 yGntetvpvsdlrelpeeleelppqaikcrLa 121
+                            +G+   +p++dlr+l++++++lp+qai+c+La
+  sp|Q9Y2W6|TDRKH_HUMAN 391 FGDNGDCPLKDLRALRSDFLSLPFQAIECSLA 422
+                            *******************************8 PP
+
+>> KH_2  KH domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (561 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       486  (0.0253402); expected 383.6 (0.02)
+Passed bias filter:                      451  (0.0235153); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.66
+# Mc/sec: 2765.68
+//
+[ok]

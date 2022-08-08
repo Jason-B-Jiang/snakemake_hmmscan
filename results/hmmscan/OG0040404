@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040404.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040404
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A6NCL2|LRCL1_HUMAN  [L=159]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.9e-53  178.7  24.7    3.8e-43  145.7  13.2    2.1  2  Colipase-like  Colipase-like
+
+
+Domain annotation for each model (and alignments):
+>> Colipase-like  Colipase-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.4   3.5   3.8e-16   7.3e-12      13      57 ..      36      80 ..      27      80 .. 0.92
+   2 !  145.7  13.2     2e-47   3.8e-43       1      89 []      66     153 ..      66     153 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 45.4 bits;  conditional E-value: 3.8e-16
+          Colipase-like 13 pneyrCskkselksqcCvklsellekfCklrsiflqCvklRkpeg 57
+                             +  C +++e++s+cC  +s  ++++C++++iflqC+++Rkp+g
+  sp|A6NCL2|LRCL1_HUMAN 36 GIGEPCRRHEECQSNCCTINSLAPHTLCTPKTIFLQCLPWRKPNG 80
+                           56788**************************************97 PP
+
+  == domain 2  score: 145.7 bits;  conditional E-value: 2e-47
+          Colipase-like   1 ktiflkClplrkpneyrCskkselksqcCvklsellekfCklrsiflqCvklRkpegefCskhkellsqcClkLrelseqrCvkrtgl 88 
+                            ktifl+Clp+rkpn+yrCs++se++s+cCv+++ +++++C+++s+flqCv++Rkp+g+fCs+h+e++sqcC++Lre+s++rC++rtg+
+  sp|A6NCL2|LRCL1_HUMAN  66 KTIFLQCLPWRKPNGYRCSHDSECQSSCCVRNN-SPQELCTPQSVFLQCVPWRKPNGDFCSSHQECHSQCCIQLREYSPFRCIPRTGI 152
+                            79*****************************99.9****************************************************9 PP
+
+          Colipase-like  89 L 89 
+                            L
+  sp|A6NCL2|LRCL1_HUMAN 153 L 153
+                            8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (159 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       792  (0.0412952); expected 383.6 (0.02)
+Passed bias filter:                      301  (0.0156942); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.21s 00:00:00.60 Elapsed: 00:00:00.63
+# Mc/sec: 811.15
+//
+[ok]

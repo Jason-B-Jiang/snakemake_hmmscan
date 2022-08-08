@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047026.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047026
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ31557.1  [L=293]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.9e-18   65.7   0.0      5e-11   42.6   0.0    2.2  1  Ras       Ras family
+    2.5e-10   40.7   0.0    5.5e-10   39.6   0.0    1.6  1  Roc       Ras of Complex, Roc, domain of DAPkinase
+
+
+Domain annotation for each model (and alignments):
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.6   0.0   5.2e-15     5e-11       2     100 ..      13     115 ..      12     168 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 42.6 bits;  conditional E-value: 5.2e-15
+                 EEEEESTTSSHHHHHHHHHHSSSSS.SCTTTSSEEEEEEEE.EETTEEEEEEEEEETTSGGG..HHHHHHHHTTESEEEEEEETTBHHHHHTHH.HHHH CS
+         Ras   2 lvlvGdsavGKtslllrfvkdkFke.eyesTigvdfytkei.evdgkevkleiwDTAGqeef..kslrslyyrdaegillvyditsresfenvk.kwve 95 
+                 +vl Gds+ GKts+ lr  ++++k+ +y+ Tig + + +++ +++gk ++ eiwD         +   ++ + +a++il +ydits   f+++  +w+ 
+  EPZ31557.1  13 IVLFGDSCSGKTSIALRLHEGDYKSkTYKRTIGLNTLDAKVlMYNGKYANAEIWDVGSH-VIgdRDALESLICGAHCILFCYDITSFGMFKSILeHWYP 110
+                 89*********************852699******9876652778**********8554.3311334566789*******************9769998 PP
+
+                 HHHHH CS
+         Ras  96 eikrv 100
+                  + r+
+  EPZ31557.1 111 VVARM 115
+                 88776 PP
+
+>> Roc  Ras of Complex, Roc, domain of DAPkinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.6   0.0   5.7e-14   5.5e-10       2     103 ..      13     113 ..      12     121 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 39.6 bits;  conditional E-value: 5.7e-14
+                 EEEESSTTTTHHHHHHCHCT-CCC.-EEETTTTEEEEEEECGGSTTCTTBCCCTCEEEEEEEESSGGCTTT.T-HHHHCTSCEEEEEEESCCC....CT CS
+         Roc   2 ivllGdsgvGKtsllkrfvedtfs.ekekstigvdfltkevtkikglendkklkkvklniWDtaGqerfrs.lhplylreaalailvydsrss....en 94 
+                 ivl Gds++GKts++ r+ e++++ +++k tig+++l+ +v   +        k  + +iWD++ +   +    ++ + +a++++++yd +s+    + 
+  EPZ31557.1  13 IVLFGDSCSGKTSIALRLHEGDYKsKTYKRTIGLNTLDAKVLMYN-------GKYANAEIWDVGSHVIGDRdALESLICGAHCILFCYDITSFgmfkSI 104
+                 89******************999726699********99985333.......356789******9988765488999************9987444234 PP
+
+                 CHHHHHHHH CS
+         Roc  95 lkeWlkelk 103
+                 l++W+  + 
+  EPZ31557.1 105 LEHWYPVVA 113
+                 688987665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (293 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       540  (0.0281558); expected 383.6 (0.02)
+Passed bias filter:                      471  (0.0245581); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.68
+# Mc/sec: 1392.68
+//
+[ok]

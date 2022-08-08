@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049904.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049904
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O74560|RAF2_SCHPO  [L=636]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.6e-29  101.8   1.9    7.2e-29  100.8   1.9    1.5  1  DNMT1-RFD  Cytosine specific DNA methyltransferase replicatio
+
+
+Domain annotation for each model (and alignments):
+>> DNMT1-RFD  Cytosine specific DNA methyltransferase replication foci domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.8   1.9   3.8e-33   7.2e-29       2     143 ..       8     147 ..       7     148 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 100.8 bits;  conditional E-value: 3.8e-33
+                           TSS-EEEEEEEEEEETTSBB--STTSTTTTT--EEEEEEE.EETT.----SSTT.SEEEEE....ES-ECEEEEEECS..SSSBEEEEE CS
+             DNMT1-RFD   2 eerplrkltdfelydkdgelvslevleieknadifisgvv.kdidsedeekkkekgiedkglqiklgpIkeWtisgvd..egekalivl 87 
+                           ++r++++++++++++k+gelv+le  ++ ++  ++++g++ +++d e+e+ ++e  + + g++ik++p+  Wt++++d  e+e++ i++
+  sp|O74560|RAF2_SCHPO   8 KKRKTDLIEQVCVTNKAGELVDLE--DVLEYGPYSLTGILsSEKD-EQEPLFDE--SIVLGYSIKISPV--WTYNLKDvpEKETMSIWI 89 
+                           789*********************..**************99999.99999999..889999*******..*********9******** PP
+
+                           EESS-EEEE-SB-TTTHHHHHHHHHHHHHHHHHHHHHHHHT....T--HHHHHHHHHH CS
+             DNMT1-RFD  88 sTetadYkLlkPsaeYapiyekviekarlsvevvkfLkrsp..daelsyeelikkvle 143
+                           +T++++Y +l+Ps+eY++iye+++ek+rl++ + +++k+++   + ++y+++i++++e
+  sp|O74560|RAF2_SCHPO  90 VTPQRRYGILSPSSEYKAIYEQISEKNRLFYLIKTKFKDDMisGTLEDYDNYIEVLKE 147
+                           ******************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (636 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       752  (0.0392096); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.20s 00:00:00.62 Elapsed: 00:00:00.63
+# Mc/sec: 3242.32
+//
+[ok]

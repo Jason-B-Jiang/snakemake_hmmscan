@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041010.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041010
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q14653|IRF3_HUMAN  [L=427]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-53  180.4   0.0    4.8e-53  179.7   0.0    1.4  1  IRF-3     Interferon-regulatory factor 3
+    7.7e-34  116.2   0.0    1.1e-33  115.7   0.0    1.3  1  IRF       Interferon regulatory factor transcription factor
+
+
+Domain annotation for each model (and alignments):
+>> IRF-3  Interferon-regulatory factor 3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  179.7   0.0   5.1e-57   4.8e-53       2     180 .]     202     380 ..     201     380 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 179.7 bits;  conditional E-value: 5.1e-57
+                           BEEEEEEEETTEEEEEEEEEETT-EEEESSSSSSTTS.....SSEEEE---GGG.STTHHHHHHHHHHHHTTTT-EEEEEETTEEEEEE CS
+                 IRF-3   2 lelevsvfYrgkevkeltvsspeGcrlsyessdeqeellgpeeleqvefPspea.isdekqreytkklLkvlerGllLevagqglyakR 89 
+                           +e+ev++fYrg++v+++t+s+peG+rl+ ++  +++        ++v++P+p + ++d+++++y++++L++l  Gl+L++agq+l+a+R
+  sp|Q14653|IRF3_HUMAN 202 WEFEVTAFYRGRQVFQQTISCPEGLRLVGSEVGDRTL-----PGWPVTLPDPGMsLTDRGVMSYVRHVLSCLGGGLALWRAGQWLWAQR 285
+                           89****************************9999998.....9***********9********************************** PP
+
+                           -SSB-EEEEEEBSSBSS...S-S.EE-SSS-EEEEEHHHHHHHHHHHHTTSS-----EEEEEESSSSTTSSCGGGSSEEEEEEEHHHHH CS
+                 IRF-3  90 lcqsrvfwsgpealekd...kPn.kLerekevklfdlekFlteLiqfqkgsrrsPeyeitLcfgeefpdekprekkLitvqvvplvarq 174
+                           l++++ +w+ +e+l ++    P+ +++++ke  +fdl  F+ +Li+f++gs+rsP+y +++c+ge++p+++p++k+L++v+vvp+++r 
+  sp|Q14653|IRF3_HUMAN 286 LGHCHTYWAVSEELLPNsghGPDgEVPKDKEGGVFDLGPFIVDLITFTEGSGRSPRYALWFCVGESWPQDQPWTKRLVMVKVVPTCLRA 374
+                           *************99888889999***************************************************************** PP
+
+                           HHHHHH CS
+                 IRF-3 175 llelas 180
+                           l+e+a+
+  sp|Q14653|IRF3_HUMAN 375 LVEMAR 380
+                           ***985 PP
+
+>> IRF  Interferon regulatory factor transcription factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.7   0.0   1.2e-37   1.1e-33       2     106 .]       8     110 ..       7     110 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 115.7 bits;  conditional E-value: 1.2e-37
+                   IRF   2 lrpWLleqiesgkyeglewldeektlfripWkhasrkdleeekdakiFkaWakatgkykegkdkpdpakwKtnfRcaLnklkdfeevkd 90 
+                           + pWL++q++ g++eg+ w+++++t fripWkh+ r+d + ++d+ iF+aWa+atg y +g+dkpd  +wK+nfR+aLn+ + ++  +d
+  sp|Q14653|IRF3_HUMAN   8 ILPWLVSQLDLGQLEGVAWVNKSRTRFRIPWKHGLRQDAQ-QEDFGIFQAWAEATGAYVPGRDKPDLPTWKRNFRSALNRKEGLRLAED 95 
+                           679************************************8.************************************************ PP
+
+                   IRF  91 kskekqedpykvYkll 106
+                           +sk+ ++dp+k+Y+++
+  sp|Q14653|IRF3_HUMAN  96 RSKD-PHDPHKIYEFV 110
+                           ***9.********985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (427 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       361  (0.0188227); expected 383.6 (0.02)
+Passed bias filter:                      320  (0.0166849); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.58
+# Mc/sec: 2365.48
+//
+[ok]

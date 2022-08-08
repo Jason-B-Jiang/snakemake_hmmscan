@@ -1,0 +1,610 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004119.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004119
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9U3C1|Q9U3C1_CAEEL  [L=549]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      3e-41  140.9   0.4      6e-41  139.9   0.4    1.5  1  Nup54           Nucleoporin complex subunit 54
+    5.7e-09   36.8  62.7    4.3e-07   30.8  33.6    3.1  2  Nucleoporin_FG  Nucleoporin FG repeat region
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.9   0.4   6.3e-45     6e-41       2     136 ..     353     486 ..     352     490 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 139.9 bits;  conditional E-value: 6.3e-45
+                             -TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                   Nup54   2 PagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                             P+g+de++W++A++enP+p+kl+Pvpv+G+e+L++R+++Q+ e+k+++e+++++ +r+ee + ++++++ v++e +++rh++ls+R+
+  tr|Q9U3C1|Q9U3C1_CAEEL 353 PDGIDERIWRQAIKENPAPNKLLPVPVRGWEALRDRQKAQVGESKLFHEAINALGNRVEEAN-HEHADAVVKMEIIRNRHKTLSYRI 438
+                             99************************************************************.************************ PP
+
+                             HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHH CS
+                   Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnel 136
+                             +r++ +++i++++++++d++E+ ++a+ +tl aq+n+++q+k++v++ 
+  tr|Q9U3C1|Q9U3C1_CAEEL 439 VRVMLAQWIVSRYSRQIDTDEDVIEAKADTLLAQMNRHNQVKFYVDKF 486
+                             *********************************************986 PP
+
+>> Nucleoporin_FG  Nucleoporin FG repeat region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8  33.6   4.5e-11   4.3e-07       4      93 .]      15      98 ..       2      98 .. 0.71
+   2 !   15.3  30.8   3.2e-06     0.031       6      83 ..      74     141 ..      73     162 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 4.5e-11
+          Nucleoporin_FG  4 G....aaatstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattatta.tgglFGsksatatqtt 87
+                                 +a+t++sg+lFG+++ +     + lFG  sta+a+++ + lfg+t +++++sgglFG+t ++t+tt+  g lFG++ +t+  t+
+  tr|Q9U3C1|Q9U3C1_CAEEL 15 TfptpNAPTTSSGTLFGSTTPS-----KPLFG--STAQASSTPS-LFGTT-NTSTPSGGLFGKTGTSTTTTStAGTLFGAAPTTS--TA 92
+                            1334345555566666666555.....78888..7777777776.***97.9*************999998878889**988888..99 PP
+
+          Nucleoporin_FG 88 sgglFG 93
+                            + +lFG
+  tr|Q9U3C1|Q9U3C1_CAEEL 93 TPSLFG 98
+                            99***9 PP
+
+  == domain 2  score: 15.3 bits;  conditional E-value: 3.2e-06
+          Nucleoporin_FG   6 aatstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattattatgglFGsksata 83 
+                             ++tst+g+lFG+a tt +tat +lFG      a+t+g++ fga+++ taa+++lFG+++a++a   tgg+FGs+s ++
+  tr|Q9U3C1|Q9U3C1_CAEEL  74 TTTSTAGTLFGAAPTT-STATPSLFG------ASTTGSTPFGAASTGTAAGSTLFGSSTAKPA---TGGFFGSSSGST 141
+                             5799999*********.999999***......5555556899998999999999999998776...577787665544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (549 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       749  (0.0390531); expected 383.6 (0.02)
+Passed bias filter:                      464  (0.0241931); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.21s 00:00:00.67 Elapsed: 00:00:00.78
+# Mc/sec: 2275.82
+//
+Query:       tr|Q9U3B9|Q9U3B9_CAEEL  [L=639]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-41  140.4   0.4    7.9e-41  139.5   0.4    1.5  1  Nup54     Nucleoporin complex subunit 54
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.5   0.4   4.1e-45   7.9e-41       2     136 ..     443     576 ..     442     580 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 139.5 bits;  conditional E-value: 4.1e-45
+                             -TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                   Nup54   2 PagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                             P+g+de++W++A++enP+p+kl+Pvpv+G+e+L++R+++Q+ e+k+++e+++++ +r+ee + ++++++ v++e +++rh++ls+R+
+  tr|Q9U3B9|Q9U3B9_CAEEL 443 PDGIDERIWRQAIKENPAPNKLLPVPVRGWEALRDRQKAQVGESKLFHEAINALGNRVEEAN-HEHADAVVKMEIIRNRHKTLSYRI 528
+                             99************************************************************.************************ PP
+
+                             HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHH CS
+                   Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnel 136
+                             +r++ +++i++++++++d++E+ ++a+ +tl aq+n+++q+k++v++ 
+  tr|Q9U3B9|Q9U3B9_CAEEL 529 VRVMLAQWIVSRYSRQIDTDEDVIEAKADTLLAQMNRHNQVKFYVDKF 576
+                             *********************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (639 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       897  (0.0467699); expected 383.6 (0.02)
+Passed bias filter:                      585  (0.0305021); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.50u 0.18s 00:00:00.68 Elapsed: 00:00:00.64
+# Mc/sec: 3243.08
+//
+Query:       tr|Q21295|Q21295_CAEEL  [L=612]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.7e-41  140.6   0.4    7.3e-41  139.6   0.4    1.5  1  Nup54     Nucleoporin complex subunit 54
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.6   0.4   3.8e-45   7.3e-41       2     136 ..     416     549 ..     415     553 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 139.6 bits;  conditional E-value: 3.8e-45
+                             -TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                   Nup54   2 PagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                             P+g+de++W++A++enP+p+kl+Pvpv+G+e+L++R+++Q+ e+k+++e+++++ +r+ee + ++++++ v++e +++rh++ls+R+
+  tr|Q21295|Q21295_CAEEL 416 PDGIDERIWRQAIKENPAPNKLLPVPVRGWEALRDRQKAQVGESKLFHEAINALGNRVEEAN-HEHADAVVKMEIIRNRHKTLSYRI 501
+                             99************************************************************.************************ PP
+
+                             HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHH CS
+                   Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnel 136
+                             +r++ +++i++++++++d++E+ ++a+ +tl aq+n+++q+k++v++ 
+  tr|Q21295|Q21295_CAEEL 502 VRVMLAQWIVSRYSRQIDTDEDVIEAKADTLLAQMNRHNQVKFYVDKF 549
+                             *********************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (612 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       809  (0.0421816); expected 383.6 (0.02)
+Passed bias filter:                      545  (0.0284165); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.48u 0.18s 00:00:00.65 Elapsed: 00:00:00.67
+# Mc/sec: 2961.36
+//
+Query:       sp|Q55BX5|NUP54_DICDI  [L=440]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      8e-33  113.6   2.4      8e-33  113.6   2.4    2.7  1  Nup54           Nucleoporin complex subunit 54
+    1.5e-14   54.8  92.4    1.4e-10   42.0  38.7    3.4  4  Nucleoporin_FG  Nucleoporin FG repeat region
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.6   2.4   8.3e-37     8e-33       1     139 [.     241     379 ..     241     380 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 113.6 bits;  conditional E-value: 8.3e-37
+                            --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                            kP++v   +W+ Al++nPdp+ l+Pv +k+F+dL +R   Qe+ + a+ +  +e  +r+++l+++ + +++++le ++k+++el +R+
+  sp|Q55BX5|NUP54_DICDI 241 KPPNVTVDQWAYALSNNPDPSILIPVAAKSFDDLINRRMKQEETIIALDQNTQEALKRMRDLENHLNFHIHTQLEMMRKKQIELIQRY 328
+                            79************************************************************************************** PP
+
+                            HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHHHHH CS
+                  Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnelwar 139
+                            ++++++lei++++g++ +++Ee++++++ +l +++n+p+++k++v+e+ ++
+  sp|Q55BX5|NUP54_DICDI 329 IEVWSNLEIYQSKGKTFTTSEERIMKKIYELFEEINQPNSIKSKVEEISNQ 379
+                            ************************************************987 PP
+
+>> Nucleoporin_FG  Nucleoporin FG repeat region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.0  38.7   1.4e-14   1.4e-10       1      93 []       2      86 ..       2      86 .. 0.92
+   2 !   22.7  36.5   1.5e-08   0.00014       8      92 ..      64     139 ..      61     139 .. 0.81
+   3 !   16.2  36.9   1.6e-06     0.016       1      93 []      83     172 ..      83     172 .. 0.80
+   4 !    5.3  28.5    0.0041        40      16      87 ..     125     194 ..     117     200 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 42.0 bits;  conditional E-value: 1.4e-14
+         Nucleoporin_FG  1 glFGaaatstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattatta.tgglFGsksatatqttsg 89
+                           +lFG ++t+ +gglFG+++t t+t++gglFG      +tt+ggglfg+t++ t+ +gglFG+t+++t tt  +gglFG+++a +  t +g
+  sp|Q55BX5|NUP54_DICDI  2 SLFG-NTTTGGGGLFGNTTTPTQTTGGGLFG------NTTTGGGLFGNTATPTTGGGGLFGNTATPTLTTGgGGGLFGNTTAPT--TGGG 82
+                           69**.99************************......5566667*****99999************999889******999888..8999 PP
+
+         Nucleoporin_FG 90 glFG 93
+                           glFG
+  sp|Q55BX5|NUP54_DICDI 83 GLFG 86
+                           9**9 PP
+
+  == domain 2  score: 22.7 bits;  conditional E-value: 1.5e-08
+         Nucleoporin_FG   8 tstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattattatgglFGsksatatqttsgglF 92 
+                            t  +gglFG++++  +t +gglFG  +t+++tt+gg lfg+   +++ +gglFG+t+++++++++++   +++++++q++s++lF
+  sp|Q55BX5|NUP54_DICDI  64 TGGGGGLFGNTTAP-TTGGGGLFG--NTPTQTTGGG-LFGN---TATGGGGLFGNTQQQQQQQQQQQ--QQQQQQQQQQPSTSLF 139
+                            66789*********.99*******..6666666666.***9...5999***********99986444..3555555569999999 PP
+
+  == domain 3  score: 16.2 bits;  conditional E-value: 1.6e-06
+         Nucleoporin_FG   1 glFG.aaatstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattatta.tgglFGsksatatqt 86 
+                            glFG + +++t+gglFG+++t     +gglFG+++++++++++++   ++++q+++s++lF +++  ++++  +++  Gs+s+   ++
+  sp|Q55BX5|NUP54_DICDI  83 GLFGnTPTQTTGGGLFGNTATG----GGGLFGNTQQQQQQQQQQQQQQQQQQQQQPSTSLFSQSSLGSQSSLgSQSSLGSQSSLG-SQ 165
+                            69**777778888*********....******66666666666645555589*************99988778888899877776.58 PP
+
+         Nucleoporin_FG  87 tsgglFG 93 
+                            +s g FG
+  sp|Q55BX5|NUP54_DICDI 166 SSLGSFG 172
+                            8888888 PP
+
+  == domain 4  score: 5.3 bits;  conditional E-value: 0.0041
+         Nucleoporin_FG  16 GqastttatatgglFGaastaaattsgg.glfgat.tsqtaasgglFGatnattattatgglFGsksatatqtt 87 
+                             q+++++++++++lF ++s  ++++ g+ ++ g++ +  +++s g FG+t++++    t++lFG+ +++++ ++
+  sp|Q55BX5|NUP54_DICDI 125 QQQQQQQQQPSTSLFSQSSLGSQSSLGSqSSLGSQsSLGSQSSLGSFGQTQQPQ----TSSLFGNLQQQQQLQQ 194
+                            233333689999****77777777777767888875666777788888887655....789***9999886544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (440 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3085  (0.160853); expected 383.6 (0.02)
+Passed bias filter:                      711  (0.0370718); expected 383.6 (0.02)
+Passed Vit filter:                       109  (0.0056833); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.21s 00:00:00.78 Elapsed: 00:00:00.70
+# Mc/sec: 2035.42
+//
+Query:       sp|Q9V6B9|NUP54_DROME  [L=610]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-43  148.5   1.1    2.5e-43  147.6   0.4    1.8  1  Nup54     Nucleoporin complex subunit 54
+    4.2e-07   29.9   0.1    7.4e-07   29.1   0.1    1.4  1  Nup54_C   Nup54 C-terminal interacting domain
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  147.6   0.4   2.6e-47   2.5e-43       1     140 []     409     547 ..     409     547 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 147.6 bits;  conditional E-value: 2.6e-47
+                            --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                            +P+gvd+++W++A ++nPdp+ ++Pvp++GF+dL++Rv++Qe+e++ h  ++k+++++l+el+ k+++++++++ e+k++ +elshR+
+  sp|Q9V6B9|NUP54_DROME 409 PPRGVDPRMWRQANSDNPDPTLYIPVPMVGFNDLKWRVKCQEQETDTHALYIKKVESELTELK-KRHATATAKILEHKRKLAELSHRI 495
+                            69*************************************************************.************************ PP
+
+                            HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHHHHHH CS
+                  Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnelwarl 140
+                            lr+++k+e+ r+ g +l++eEe lr++l+++ a +++p+q+kgr++el++++
+  sp|Q9V6B9|NUP54_DROME 496 LRIIVKQECTRKVGTSLTPEEEALRTKLQNMLAVVSAPTQFKGRLSELLSQM 547
+                            *************************************************997 PP
+
+>> Nup54_C  Nup54 C-terminal interacting domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.1   0.1   7.7e-11   7.4e-07       1      39 []     562     600 ..     562     600 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 29.1 bits;  conditional E-value: 7.7e-11
+                Nup54_C   1 YsmdadlqdEiKQfLkqqQeGlshLIeIIkdDledLklI 39 
+                            Y +d ++ dE+K fL++qQ +++ L +++  Dl  L++I
+  sp|Q9V6B9|NUP54_DROME 562 YALDKEAEDEMKTFLTMQQRAMEVLSDTVNKDLRALDVI 600
+                            899**********************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (610 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1121  (0.0584493); expected 383.6 (0.02)
+Passed bias filter:                      654  (0.0340998); expected 383.6 (0.02)
+Passed Vit filter:                        80  (0.00417123); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.18s 00:00:00.70 Elapsed: 00:00:00.71
+# Mc/sec: 2782.61
+//
+Query:       tr|Q6NYN9|Q6NYN9_DANRE  [L=353]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (353 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       537  (0.0279994); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 1975.27
+//
+Query:       tr|A0A2R8QAX6|A0A2R8QAX6_DANRE  [L=125]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.8e-26   90.6   7.2    1.1e-25   90.4   7.2    1.0  1  Nup54     Nucleoporin complex subunit 54
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.4   7.2   5.9e-30   1.1e-25      29     132 ..       2     104 ..       1     108 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 90.4 bits;  conditional E-value: 5.9e-30
+                                     ECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT-SS---S CS
+                           Nup54  29 kGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRllrllrkleilrnrgsalda 107
+                                     +GF++L +R+++Qe+ +k+h+ +++ is++++el+ ++q++t++++ ++k++ + lshR+l++l ++e+ r++g+a++ 
+  tr|A0A2R8QAX6|A0A2R8QAX6_DANRE   2 VGFRELLRRLKIQEQMTKQHQTRVDIISTDISELQ-RNQATTAAKITQYKRKLMDLSHRVLQVLIRQEVQRKSGYAVQL 79 
+                                     8**********************************.9****************************************** PP
+
+                                     SHHHHHHHHHHHHHHHS-HHH.HHH CS
+                           Nup54 108 eEeelrarletleaqlndpaqlkgr 132
+                                     +Ee+lr +let++++ln+p+q+k +
+  tr|A0A2R8QAX6|A0A2R8QAX6_DANRE  80 DEEHLRVQLETIQSELNAPTQFKVK 104
+                                     *********************9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (125 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2028  (0.105741); expected 383.6 (0.02)
+Passed bias filter:                      898  (0.046822); expected 383.6 (0.02)
+Passed Vit filter:                        82  (0.00427551); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.62
+# Mc/sec: 653.94
+//
+Query:       sp|Q7Z3B4|NUP54_HUMAN  [L=507]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-45  152.8   2.5    6.3e-45  152.8   2.5    2.1  1  Nup54     Nucleoporin complex subunit 54
+    2.6e-19   69.0   6.6    2.6e-19   69.0   6.6    2.8  1  Nup54_C   Nup54 C-terminal interacting domain
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.8   2.5   6.5e-49   6.3e-45       1     139 [.     300     437 ..     300     438 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 152.8 bits;  conditional E-value: 6.5e-49
+                            --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                            +Pagvd+ +We+A+ +nPd ekl+Pvp++GF++L +R++vQ++ +k+h+ +l+ is++++el+ k+q++  ++++++k++ + lshR+
+  sp|Q7Z3B4|NUP54_HUMAN 300 PPAGVDPIIWEQAKVDNPDSEKLIPVPMVGFKELLRRLKVQDQMTKQHQTRLDIISEDISELQ-KNQTTSVAKIAQYKRKLMDLSHRT 386
+                            69*************************************************************.************************ PP
+
+                            HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHHHHH CS
+                  Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnelwar 139
+                            l++l k+ei r++g+a++a+Ee+lr +l+t++ +ln+p+q+kgr+nel+++
+  sp|Q7Z3B4|NUP54_HUMAN 387 LQVLIKQEIQRKSGYAIQADEEQLRVQLDTIQGELNAPTQFKGRLNELMSQ 437
+                            *************************************************98 PP
+
+>> Nup54_C  Nup54 C-terminal interacting domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.0   6.6   2.7e-23   2.6e-19       1      38 [.     453     490 ..     453     491 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 69.0 bits;  conditional E-value: 2.7e-23
+                Nup54_C   1 YsmdadlqdEiKQfLkqqQeGlshLIeIIkdDledLkl 38 
+                            Y++dadl++EiKQ+LkqqQeGlshLI+IIkdDled+kl
+  sp|Q7Z3B4|NUP54_HUMAN 453 YYIDADLLREIKQHLKQQQEGLSHLISIIKDDLEDIKL 490
+                            9************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (507 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1629  (0.0849366); expected 383.6 (0.02)
+Passed bias filter:                      745  (0.0388446); expected 383.6 (0.02)
+Passed Vit filter:                        76  (0.00396267); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.19s 00:00:00.65 Elapsed: 00:00:00.66
+# Mc/sec: 2490.42
+//
+Query:       EPZ33296.1  [L=321]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-29  103.1   2.4    1.9e-29  102.6   2.4    1.2  1  Nup54     Nucleoporin complex subunit 54
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.6   2.4   9.8e-34   1.9e-29       1     136 [.     140     272 ..     140     276 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 102.6 bits;  conditional E-value: 9.8e-34
+                 --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+       Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRllrllrkleilr 99 
+                 kP +++e++W++Al+++Pd +++vPv+++G edL+kR+  Qek  ++++ kl+e+ ++++++++    +t++++e +kkrh e+s Rll+l    ++++
+  EPZ33296.1 140 KPVNMSERMWNQALKDSPDTSCMVPVLAVGVEDLQKRQVFQEKCFDLYQSKLSELVNKIDNIQRIMSVDTKTKIEVYKKRHLEISSRLLQL----QVIK 234
+                 699*************************************************************************************986....679* PP
+
+                 T-SS---SSHHHHHHHHHHHHHHHS-H.HH.HHHHHHH CS
+       Nup54 100 nrgsaldaeEeelrarletleaqlndp.aqlkgrvnel 136
+                 n++ +l+ eEe+lr+rle+++ +l+++ +++k  v+el
+  EPZ33296.1 235 NKSLPLTIEEENLRKRLEHMSVALSSNaNSVKVSVQEL 272
+                 *************************8668999999988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (321 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1240  (0.064654); expected 383.6 (0.02)
+Passed bias filter:                      444  (0.0231503); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.55
+# Mc/sec: 1875.84
+//
+Query:       P48837  [L=541]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    4.2e-36  124.2   4.4    4.2e-36  124.2   4.4    2.5  1  Nup54           Nucleoporin complex subunit 54
+    1.1e-18   67.9 153.3    3.4e-09   37.5  27.8    4.5  5  Nucleoporin_FG  Nucleoporin FG repeat region
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.2   4.4   4.3e-40   4.2e-36       1     140 []     326     463 ..     326     463 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 124.2 bits;  conditional E-value: 4.3e-40
+             --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT-SS CS
+   Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRllrllrkleilrnrgs 103
+             kP +v +e+W++A+e++P+p + +P+++ GFe L++R +vQ +++++ r  l+ i ++ ++l+qkh+l+t++r+ ++++r+ve+++R+l+l ++l  l+nrg 
+  P48837 326 KPGHVLQEEWDQAMEKKPSP-QTIPIQIYGFEGLNQRNQVQTENVAQARIILNHILEKSTQLQQKHELDTASRILKAQSRNVEIEKRILKLGTQLATLKNRGL 427
+             5888999*************.********************************************************************************** PP
+
+             ---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHHHHHH CS
+   Nup54 104 aldaeEeelrarletleaqlndpaqlkgrvnelwarl 140
+             +l   Ee+++++++tl ++ +dpa+  g++nelwarl
+  P48837 428 PLGIAEEKMWSQFQTLLQRSEDPAG-LGKTNELWARL 463
+             ***********************99.9********96 PP
+
+>> Nucleoporin_FG  Nucleoporin FG repeat region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.4  37.6   0.00022       2.1       2      79 ..      10      81 ..       1      84 [. 0.61
+   2 !   26.0  42.6   1.4e-09   1.4e-05       2      93 .]      55     150 ..      54     156 .. 0.80
+   3 !   37.5  27.8   3.6e-13   3.4e-09       7      93 .]     114     193 ..     113     193 .. 0.82
+   4 !   31.1  32.0   3.6e-11   3.5e-07      10      87 ..     155     233 ..     151     246 .. 0.85
+   5 !   15.9  26.9     2e-06     0.019       8      86 ..     185     263 ..     185     284 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 9.4 bits;  conditional E-value: 0.00022
+  Nucleoporin_FG  2 lFGaaatstsgglFGqastt...tatatgglFGaastaaattsggglfgattsqtaasgglFGatnattattatgglFGsk 79
+                     FG++++ ++g  FGq++++   +++a+g  FG +++++ t+++g  fga     +++++ FG+++++++   +gglFG+k
+          P48837 10 GFGNKPAGSTGFSFGQNNNNtntQPSASGFGFGGSQPNSGTATTG-GFGA-----NQATNTFGSNQQSST---GGGLFGNK 81
+                    577777777777777777776444444444555555555555555.6776.....466777777776554...67888876 PP
+
+  == domain 2  score: 26.0 bits;  conditional E-value: 1.4e-09
+  Nucleoporin_FG   2 lFGaaatstsgglFGqastttatatgglFG..........aastaaattsgg.glfgat...tsqtaasgglFGatnattattatgglFGsksat 82 
+                      FG   +++++++FG+++++  +++gglFG          +++ta+ tt++g glfg++    +q++ +gglFG++++tt    tgglFG+++++
+          P48837  55 GFG---ANQATNTFGSNQQS--STGGGLFGnkpalgslgsSSTTASGTTATGtGLFGQQtaqPQQSTIGGGLFGNKPTTT----TGGLFGNSAQN 140
+                     689...889999******99..99******99999999975566666666666999999544444455599999999776....68999988887 PP
+
+  Nucleoporin_FG  83 atqttsgglFG 93 
+                     + +ttsgglFG
+          P48837 141 N-STTSGGLFG 150
+                     7.799999**9 PP
+
+  == domain 3  score: 37.5 bits;  conditional E-value: 3.6e-13
+  Nucleoporin_FG   7 atstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattatta.tgglFGsksatatqttsgglFG 93 
+                     +++ +gglFG++ tt   +tgglFG+++++++ttsgg lfg++     ++g+l G+++++++++   gglFG+k +++ ++t+gglFG
+          P48837 114 QSTIGGGLFGNKPTT---TTGGLFGNSAQNNSTTSGG-LFGNK---VGSTGSLMGGNSTQNTSNMnAGGLFGAKPQNT-TATTGGLFG 193
+                     566789*********...9******766666666666.***95...78888888888888877768******998887.69999***9 PP
+
+  == domain 4  score: 31.1 bits;  conditional E-value: 3.6e-11
+  Nucleoporin_FG  10 tsgglFGqastt..tatatgglFGaastaaattsggglfgattsqtaasgglFGatnattattatgglFGsksatatqtt 87 
+                     ++g+l G++st+  ++ ++gglFG a+++++t+++gglfg++ + ++++gglFG+ +++++t  +gglFG++++ +t+t+
+          P48837 155 STGSLMGGNSTQntSNMNAGGLFG-AKPQNTTATTGGLFGSKPQGSTTNGGLFGSGTQNNNTLGGGGLFGQSQQPQTNTA 233
+                     789999999999888999******.677777777777*****9***************999988******9999986643 PP
+
+  == domain 5  score: 15.9 bits;  conditional E-value: 2e-06
+  Nucleoporin_FG   8 tstsgglFGqastttatatgglFGaastaaattsggglfgattsqtaasgglFGatnattatta.tgglFGsksatatqt 86 
+                     t+t+gglFG++ +  +t++gglFG+ +++++t +ggglfg++++ ++++ +  G+t +t+++ a ++   Gs+ ++++q+
+          P48837 185 TATTGGLFGSKPQG-STTNGGLFGSGTQNNNTLGGGGLFGQSQQPQTNTAPGLGNTVSTQPSFAwSKPSTGSNLQQQQQQ 263
+                     57899******999.99999****5555555555559****988899999999999999988889666667666666553 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (541 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1287  (0.0671046); expected 383.6 (0.02)
+Passed bias filter:                      368  (0.0191877); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.62
+# Mc/sec: 2837.23
+//
+Query:       sp|O42963|NUP44_SCHPO  [L=403]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-41  142.2   0.8    1.2e-41  142.2   0.8    1.7  1  Nup54     Nucleoporin complex subunit 54
+
+
+Domain annotation for each model (and alignments):
+>> Nup54  Nucleoporin complex subunit 54
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  142.2   0.8     6e-46   1.2e-41       1     139 [.     194     330 ..     194     331 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 142.2 bits;  conditional E-value: 6e-46
+                            --TT--HHHHHHHHHT-SST.TEEEEEEECHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  Nup54   1 kPagvdeekWeeAleenPdpeklvPvpvkGFedLakRvevQekelkahreklkeisdrleelaqkhqletsvrleelkkrhvelshRl 88 
+                            kP++++++kW+eA+ ++P+   +vPv+++GF d++kR+++Q ++++ +r ++ ei + l  l++kh+l+ s +l+e+k+rhv+ls+R+
+  sp|O42963|NUP44_SCHPO 194 KPPNYNQQKWDEAVANRPSN-SVVPVLAVGFPDVQKRINMQIQQVNTYRIRMREIVETLGRLSNKHDLDFSIKLAEAKNRHVRLSERI 280
+                            79****************87.******************************************************************* PP
+
+                            HHHHHHHHHHTT-SS---SSHHHHHHHHHHHHHHHS-HHH.HHHHHHHHHH CS
+                  Nup54  89 lrllrkleilrnrgsaldaeEeelrarletleaqlndpaqlkgrvnelwar 139
+                            lrl+ k+++lr rg+al+++Eeelr++l++l+++ln+p+   gr+ne+war
+  sp|O42963|NUP44_SCHPO 281 LRLAIKVHVLRHRGYALKPNEEELRKKLDDLTKSLNNPEI-FGRLNEIWAR 330
+                            ************************************8665.9********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (403 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       954  (0.0497419); expected 383.6 (0.02)
+Passed bias filter:                      625  (0.0325877); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.60
+# Mc/sec: 2159.65
+//
+[ok]

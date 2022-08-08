@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035431.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035431
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A2BGQ4|A2BGQ4_DANRE  [L=572]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.2e-32  111.3  12.7    3.2e-32  111.3  12.7    1.6  1  Occludin_ELL  Occludin homology domain
+    6.5e-13   49.0  10.7      9e-13   48.6  10.7    1.2  1  MARVEL        Membrane-associating domain
+
+
+Domain annotation for each model (and alignments):
+>> Occludin_ELL  Occludin homology domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  111.3  12.7   3.4e-36   3.2e-32       1     101 []     461     563 ..     461     563 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 111.3 bits;  conditional E-value: 3.4e-36
+            Occludin_ELL   1 ypeIkseeqreqYkkeFnkeYkeYkelhaelekvskkfkkleeelkslpegsk..eykkieeeilqeykklkkdpeylekkkrceyL 85 
+                             yp+I+++e+re+Yk++Fn++Y+eYkelhae++ +++kf+++++ +++lp++ +   +++++++i+qey+++k dp+y+ek++rceyL
+  tr|A2BGQ4|A2BGQ4_DANRE 461 YPTIRTDEERERYKAVFNDQYAEYKELHAEVQVLTQKFEEMDNLMRNLPQRPSsqMEQERISSIVQEYNRKKADPTYQEKRERCEYL 547
+                             99***********************************************9987778999**************************** PP
+
+            Occludin_ELL  86 kekLshiKklikeydk 101
+                             k+kL+hiK++i+eydk
+  tr|A2BGQ4|A2BGQ4_DANRE 548 KNKLAHIKQKIQEYDK 563
+                             **************96 PP
+
+>> MARVEL  Membrane-associating domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.6  10.7   9.4e-17     9e-13       6     143 ..     199     370 ..     194     371 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 48.6 bits;  conditional E-value: 9.4e-17
+                  MARVEL   6 lgilrilq...lvfaiiilgliaslia...........................kldqllgspssalnfavfvavfsflyalfllvl 62 
+                              g+lril    l++++ +++++ ++++                               +   + + ++f+++va++++++++++l+l
+  tr|A2BGQ4|A2BGQ4_DANRE 199 AGLLRILGcveLLLGAAVFACVCAYVHkdnewfnmygysmhqvyggasmggmygG--YGSSYSGPLTPFVLVVAGVAWIVTVIILIL 283
+                             45555554444***************************************97431..33444567899******************* PP
+
+                  MARVEL  63 ylfk...nsaftsilwplidlivdalaallwlvafialaag.lrdisca.fe..snqysasltvrcgqaqaavafgflavllfaasa 142
+                              ++    + +++s  wp+ +++v++ + ll+l+a+i+++   lr+   + ++   +  +a  ++     +aa++f f+++ll+++ a
+  tr|A2BGQ4|A2BGQ4_DANRE 284 GITMyyrTILLDSSWWPITECVVNVALGLLYLAAAIVYVRDtLRGGL-CyYQqfTVGPNAGFCRTEAGQNAAIIFLFVNMLLYLVGA 369
+                             *9999999999***************************976155533.24335668888899**********************998 PP
+
+                  MARVEL 143 v 143
+                             +
+  tr|A2BGQ4|A2BGQ4_DANRE 370 I 370
+                             7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (572 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1512  (0.0788362); expected 383.6 (0.02)
+Passed bias filter:                      854  (0.0445279); expected 383.6 (0.02)
+Passed Vit filter:                       109  (0.0056833); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.21s 00:00:00.69 Elapsed: 00:00:00.73
+# Mc/sec: 2539.82
+//
+[ok]

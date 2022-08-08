@@ -1,0 +1,376 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0006291.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0006291
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|A0JME2|MCAF1_DANRE  [L=815]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.9e-36  123.6   0.0    4.9e-36  122.9   0.0    1.4  1  fn3_4      Fibronectin-III type domain
+    1.1e-31  110.8   5.6    1.1e-31  110.8   5.6    4.7  1  ATF7IP_BD  ATF-interacting protein binding domain
+
+
+Domain annotation for each model (and alignments):
+>> fn3_4  Fibronectin-III type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.9   0.0   5.1e-40   4.9e-36       2     100 ..     698     802 ..     697     803 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 122.9 bits;  conditional E-value: 5.1e-40
+                  fn3_4   2 lPqkpelkisk..vpkgivlsWnvedldpklaevesYelyayqeeksatps...tse.WkkigdvkAlpLpmactLsqfkegkkyyfa 83 
+                            +Pq+p+lk+++  +++givlsW v ++d+++a v++Y+lyay+++++++ s   +++ Wkkig+vkAlpLpmactL+qf +g++yyfa
+  sp|A0JME2|MCAF1_DANRE 698 PPQQPQLKLARvqSQNGIVLSWCVAETDRNCAAVDTYHLYAYHQDHQSSVSgasAQMlWKKIGEVKALPLPMACTLTQFVSGSTYYFA 785
+                            8**********8899***************************7665555444544446****************************** PP
+
+                  fn3_4  84 vravdvygRvGpfskvk 100
+                            vra+dvygR+Gpf++++
+  sp|A0JME2|MCAF1_DANRE 786 VRAKDVYGRFGPFCEPQ 802
+                            **************986 PP
+
+>> ATF7IP_BD  ATF-interacting protein binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.8   5.6   1.2e-35   1.1e-31       3     196 ..     221     413 ..     219     437 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 110.8 bits;  conditional E-value: 1.2e-35
+              ATF7IP_BD   3 nvKRmKtse.....qinenIcvalekqtkLleqVkhLieqelcsinykvFDkklkelkerveKieCkkkheail...teLqaKIarLt 82 
+                              KR +  +     q++++I+++++   k+++ V++L+e++l++++++vFD++lkelk+rveKi+  +k + +l   ++LqaKI+rL 
+  sp|A0JME2|MCAF1_DANRE 221 DGKRARLEGeeleaQLELKITANGGNRDKIEKMVQQLVEERLRVLQLTVFDRSLKELKDRVEKIDNVTKQQNALqhiNTLQAKISRLA 308
+                            5799999999999********************************************************9988623379********* PP
+
+              ATF7IP_BD  83 krikaakedlkkkqeneclkpvspskaaaskvansntvllyrnaqtvrqmleskrsvleskpatfqspeeavkkinltsdqnevsses 170
+                            k+++aa++ +++ ++ +  +++++++a+a++++n++t++ + ++ tv++ l+s   v++s    + +p    + + l+++ + +ss  
+  sp|A0JME2|MCAF1_DANRE 309 KKFGAANQASENAKRTQD-AQAAAAAAQANNATNATTPQRTVKT-TVDSKLSSSPTVSNS----TAVP---AQPKPLSTPATPTSSAL 387
+                            ************755544.4666777777888888875555444.444444444444544....2333...34445555555566666 PP
+
+              ATF7IP_BD 171 npnddvmlisvespnlttpvtsnptd 196
+                            + +++++ i  +  + t + ts p +
+  sp|A0JME2|MCAF1_DANRE 388 ATTAPILQIISTTTSSTPSSTSLPGQ 413
+                            65666666655666666666666554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (815 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2642  (0.137755); expected 383.6 (0.02)
+Passed bias filter:                      690  (0.0359768); expected 383.6 (0.02)
+Passed Vit filter:                       108  (0.00563116); expected 19.2 (0.001)
+Passed Fwd filter:                        36  (0.00187705); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.90u 0.25s 00:00:01.14 Elapsed: 00:00:01.18
+# Mc/sec: 2238.20
+//
+Query:       tr|F8W2I7|F8W2I7_DANRE  [L=103]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (103 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       780  (0.0406695); expected 383.6 (0.02)
+Passed bias filter:                      467  (0.0243495); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.33u 0.14s 00:00:00.47 Elapsed: 00:00:00.56
+# Mc/sec: 595.68
+//
+Query:       tr|A0A0R4IKD6|A0A0R4IKD6_DANRE  [L=816]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.9e-36  123.6   0.0    4.9e-36  122.9   0.0    1.4  1  fn3_4      Fibronectin-III type domain
+    1.1e-31  110.8   5.6    1.1e-31  110.8   5.6    4.7  1  ATF7IP_BD  ATF-interacting protein binding domain
+
+
+Domain annotation for each model (and alignments):
+>> fn3_4  Fibronectin-III type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.9   0.0   5.2e-40   4.9e-36       2     100 ..     699     803 ..     698     804 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 122.9 bits;  conditional E-value: 5.2e-40
+                           fn3_4   2 lPqkpelkisk..vpkgivlsWnvedldpklaevesYelyayqeeksatps...tse.WkkigdvkAlpLpmactLsqf 74 
+                                     +Pq+p+lk+++  +++givlsW v ++d+++a v++Y+lyay+++++++ s   +++ Wkkig+vkAlpLpmactL+qf
+  tr|A0A0R4IKD6|A0A0R4IKD6_DANRE 699 PPQQPQLKLARvqSQNGIVLSWCVAETDRNCAAVDTYHLYAYHQDHQSSVSgasAQMlWKKIGEVKALPLPMACTLTQF 777
+                                     8**********8899***************************7665555444544446********************* PP
+
+                           fn3_4  75 kegkkyyfavravdvygRvGpfskvk 100
+                                      +g++yyfavra+dvygR+Gpf++++
+  tr|A0A0R4IKD6|A0A0R4IKD6_DANRE 778 VSGSTYYFAVRAKDVYGRFGPFCEPQ 803
+                                     ***********************986 PP
+
+>> ATF7IP_BD  ATF-interacting protein binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.8   5.6   1.2e-35   1.1e-31       3     196 ..     222     414 ..     220     438 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 110.8 bits;  conditional E-value: 1.2e-35
+                       ATF7IP_BD   3 nvKRmKtse.....qinenIcvalekqtkLleqVkhLieqelcsinykvFDkklkelkerveKieCkkkheail...te 73 
+                                       KR +  +     q++++I+++++   k+++ V++L+e++l++++++vFD++lkelk+rveKi+  +k + +l   ++
+  tr|A0A0R4IKD6|A0A0R4IKD6_DANRE 222 DGKRARLEGeeleaQLELKITANGGNRDKIEKMVQQLVEERLRVLQLTVFDRSLKELKDRVEKIDNVTKQQNALqhiNT 300
+                                     5799999999999********************************************************9988623379 PP
+
+                       ATF7IP_BD  74 LqaKIarLtkrikaakedlkkkqeneclkpvspskaaaskvansntvllyrnaqtvrqmleskrsvleskpatfqspee 152
+                                     LqaKI+rL k+++aa++ +++ ++ +  +++++++a+a++++n++t++ + ++ tv++ l+s   v++s    + +p  
+  tr|A0A0R4IKD6|A0A0R4IKD6_DANRE 301 LQAKISRLAKKFGAANQASENAKRTQD-AQAAAAAAQANNATNATTPQRTVKT-TVDSKLSSSPTVSNS----TAVP-- 371
+                                     *********************755544.4666777777888888875555444.444444444444544....2333.. PP
+
+                       ATF7IP_BD 153 avkkinltsdqnevssesnpnddvmlisvespnlttpvtsnptd 196
+                                       + + l+++ + +ss  + +++++ i  +  + t + ts p +
+  tr|A0A0R4IKD6|A0A0R4IKD6_DANRE 372 -AQPKPLSTPATPTSSALATTAPILQIISTTTSSTPSSTSLPGQ 414
+                                     .3444555555556666665666666655666666666666554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (816 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2611  (0.136138); expected 383.6 (0.02)
+Passed bias filter:                      691  (0.036029); expected 383.6 (0.02)
+Passed Vit filter:                       104  (0.0054226); expected 19.2 (0.001)
+Passed Fwd filter:                        34  (0.00177277); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.89u 0.25s 00:00:01.14 Elapsed: 00:00:00.89
+# Mc/sec: 2956.06
+//
+Query:       tr|F8W4P6|F8W4P6_DANRE  [L=103]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (103 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       780  (0.0406695); expected 383.6 (0.02)
+Passed bias filter:                      467  (0.0243495); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.17s 00:00:00.51 Elapsed: 00:00:00.55
+# Mc/sec: 599.77
+//
+Query:       tr|F8W5Q4|F8W5Q4_DANRE  [L=858]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      3e-36  123.5   0.0    5.3e-36  122.8   0.0    1.4  1  fn3_4      Fibronectin-III type domain
+    1.2e-31  110.7   5.6    1.2e-31  110.7   5.6    4.8  1  ATF7IP_BD  ATF-interacting protein binding domain
+
+
+Domain annotation for each model (and alignments):
+>> fn3_4  Fibronectin-III type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.8   0.0   5.5e-40   5.3e-36       2     100 ..     741     845 ..     740     846 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 122.8 bits;  conditional E-value: 5.5e-40
+                   fn3_4   2 lPqkpelkisk..vpkgivlsWnvedldpklaevesYelyayqeeksatps...tse.WkkigdvkAlpLpmactLsqfkegkkyyf 82 
+                             +Pq+p+lk+++  +++givlsW v ++d+++a v++Y+lyay+++++++ s   +++ Wkkig+vkAlpLpmactL+qf +g++yyf
+  tr|F8W5Q4|F8W5Q4_DANRE 741 PPQQPQLKLARvqSQNGIVLSWCVAETDRNCAAVDTYHLYAYHQDHQSSVSgasAQMlWKKIGEVKALPLPMACTLTQFVSGSTYYF 827
+                             8**********8899***************************7665555444544446***************************** PP
+
+                   fn3_4  83 avravdvygRvGpfskvk 100
+                             avra+dvygR+Gpf++++
+  tr|F8W5Q4|F8W5Q4_DANRE 828 AVRAKDVYGRFGPFCEPQ 845
+                             ***************986 PP
+
+>> ATF7IP_BD  ATF-interacting protein binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.7   5.6   1.3e-35   1.2e-31       3     196 ..     264     456 ..     262     480 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 110.7 bits;  conditional E-value: 1.3e-35
+               ATF7IP_BD   3 nvKRmKtse.....qinenIcvalekqtkLleqVkhLieqelcsinykvFDkklkelkerveKieCkkkheail...teLqaKIarL 81 
+                               KR +  +     q++++I+++++   k+++ V++L+e++l++++++vFD++lkelk+rveKi+  +k + +l   ++LqaKI+rL
+  tr|F8W5Q4|F8W5Q4_DANRE 264 DGKRARLEGeeleaQLELKITANGGNRDKIEKMVQQLVEERLRVLQLTVFDRSLKELKDRVEKIDNVTKQQNALqhiNTLQAKISRL 350
+                             5799999999999********************************************************9988623379******** PP
+
+               ATF7IP_BD  82 tkrikaakedlkkkqeneclkpvspskaaaskvansntvllyrnaqtvrqmleskrsvleskpatfqspeeavkkinltsdqnevss 168
+                              k+++aa++ +++ ++ +  +++++++a+a++++n++t++ + ++ tv++ l+s   v++s    + +p    + + l+++ + +ss
+  tr|F8W5Q4|F8W5Q4_DANRE 351 AKKFGAANQASENAKRTQD-AQAAAAAAQANNATNATTPQRTVKT-TVDSKLSSSPTVSNS----TAVP---AQPKPLSTPATPTSS 428
+                             *************755544.4666777777888888875555444.444444444444544....2333...344455555555666 PP
+
+               ATF7IP_BD 169 esnpnddvmlisvespnlttpvtsnptd 196
+                               + +++++ i  +  + t + ts p +
+  tr|F8W5Q4|F8W5Q4_DANRE 429 ALATTAPILQIISTTTSSTPSSTSLPGQ 456
+                             6665666666655666666666666554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (858 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2726  (0.142135); expected 383.6 (0.02)
+Passed bias filter:                      725  (0.0378018); expected 383.6 (0.02)
+Passed Vit filter:                       107  (0.00557902); expected 19.2 (0.001)
+Passed Fwd filter:                        32  (0.00166849); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.89u 0.22s 00:00:01.11 Elapsed: 00:00:00.90
+# Mc/sec: 3087.68
+//
+Query:       tr|F8W418|F8W418_DANRE  [L=144]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (144 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       701  (0.0365504); expected 383.6 (0.02)
+Passed bias filter:                      358  (0.0186662); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.31u 0.17s 00:00:00.48 Elapsed: 00:00:00.53
+# Mc/sec: 871.84
+//
+Query:       tr|F8W2R7|F8W2R7_DANRE  [L=234]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (234 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1799  (0.0938005); expected 383.6 (0.02)
+Passed bias filter:                      586  (0.0305543); expected 383.6 (0.02)
+Passed Vit filter:                        94  (0.00490119); expected 19.2 (0.001)
+Passed Fwd filter:                        23  (0.00119923); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.50u 0.15s 00:00:00.65 Elapsed: 00:00:00.69
+# Mc/sec: 1091.05
+//
+Query:       sp|Q6VMQ6|MCAF1_HUMAN  [L=1270]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      2e-74  250.6   7.6      2e-74  250.6   7.6    4.4  1  ATF7IP_BD  ATF-interacting protein binding domain
+    4.7e-39  132.6   0.0    8.6e-39  131.7   0.0    1.4  1  fn3_4      Fibronectin-III type domain
+
+
+Domain annotation for each model (and alignments):
+>> ATF7IP_BD  ATF-interacting protein binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  250.6   7.6   2.1e-78     2e-74       1     218 [.     564     776 ..     564     779 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 250.6 bits;  conditional E-value: 2.1e-78
+              ATF7IP_BD   1 kenvKRmKtse.....qinenIcvalekqtkLleqVkhLieqelcsinykvFDkklkelkerveKieCkkkheailteLqaKIarLtk 83 
+                            ++++KR++++e     +++++I++++++++kL++++++L+e++lc+++++vFDk+l+elk+rveKieC+k+h+++lteLqaKIarLtk
+  sp|Q6VMQ6|MCAF1_HUMAN 564 NVQSKRRRYMEeeyeaEFQVKITAKGDINQKLQKVIQWLLEEKLCALQCAVFDKTLAELKTRVEKIECNKRHKTVLTELQAKIARLTK 651
+                            579************************************************************************************* PP
+
+              ATF7IP_BD  84 rikaakedlkkkqeneclkpvspskaaaskvansntvllyrnaqtvrqmleskrsvleskpatfqspeeavkkinltsdqnevssesn 171
+                            r++aakedlkk++e+++++pvsp+k ++++v+++n+ ++yrna+tvrqmleskr+v+es+p++fq+p+++v+++nl+++++ vss+++
+  sp|Q6VMQ6|MCAF1_HUMAN 652 RFEAAKEDLKKRHEHPPNPPVSPGK-TVNDVNSNNN-MSYRNAGTVRQMLESKRNVSESAPPSFQTPVNTVSSTNLVTPPAVVSSQPK 737
+                            ************************9.6677876666.*************************************************** PP
+
+              ATF7IP_BD 172 pnddvmlisvespnlttpvtsnptdtrkvtsgnssnspsaetevmav 218
+                             +++v++ s+    + t+v+++p+++++v   +++++ps++++++ +
+  sp|Q6VMQ6|MCAF1_HUMAN 738 LQTPVTSGSL----TATSVLPAPNTATVV---ATTQVPSGNPQPT-I 776
+                            *********8....69*************...**********997.4 PP
+
+>> fn3_4  Fibronectin-III type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.7   0.0   8.9e-43   8.6e-39       2     101 .]    1160    1260 ..    1159    1260 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 131.7 bits;  conditional E-value: 8.9e-43
+                  fn3_4    2 lPqkpelkisk..vpkgivlsWnvedldpklaevesYelyayqeeksatpstseWkkigdvkAlpLpmactLsqfkegkkyyfavr 85  
+                             lPqkp+lk+++  +++givlsW+v ++d+++a+v+sY+lyay+ee sat + s+Wkkig+vkAlpLpmactL+qf +g+kyyfavr
+  sp|Q6VMQ6|MCAF1_HUMAN 1160 LPQKPHLKLARvqSQNGIVLSWSVLEVDRSCATVDSYHLYAYHEEPSATVP-SQWKKIGEVKALPLPMACTLTQFVSGSKYYFAVR 1244
+                             8**********8899******************************999999.56******************************** PP
+
+                  fn3_4   86 avdvygRvGpfskvkt 101 
+                             a+d+ygR+Gpf+++++
+  sp|Q6VMQ6|MCAF1_HUMAN 1245 AKDIYGRFGPFCDPQS 1260
+                             *************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1270 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1623  (0.0846238); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.17s 00:00:00.80 Elapsed: 00:00:00.80
+# Mc/sec: 5139.48
+//
+[ok]

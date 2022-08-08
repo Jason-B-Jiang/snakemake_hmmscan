@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030678.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030678
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54FW8|Q54FW8_DICDI  [L=686]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      8e-29  100.5   0.0    2.3e-28   99.0   0.0    1.8  1  TPP_enzyme_N  Thiamine pyrophosphate enzyme, N-terminal TPP b
+    2.9e-08   33.7   0.0    2.9e-08   33.7   0.0    2.6  1  TPP_enzyme_C  Thiamine pyrophosphate enzyme, C-terminal TPP b
+
+
+Domain annotation for each model (and alignments):
+>> TPP_enzyme_N  Thiamine pyrophosphate enzyme, N-terminal TPP binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.0   0.0   2.4e-32   2.3e-28       2     168 ..      88     247 ..      87     251 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 99.0 bits;  conditional E-value: 2.4e-32
+                             EHHHHHHHHHHHCT--EEEE---CCCHHHHCCHHCT.TSEEEE-SSHHHHHHHHHHHHHHHTS-EEEEE-CHHHHHHCHHHHHHHHH CS
+            TPP_enzyme_N   2 tvaealvrvLkalgvetvfgvpGstnlplldalseedgirlvlarhEqgAafaAdgyaratgkpgvvlvtsgpGatnaltalanAkv 88 
+                             ++++++ rvL +++++ +f +   +  + ++++s e++++++++ + ++A++aA g++r+tg++gvv+v  gp +++++++++nAkv
+  tr|Q54FW8|Q54FW8_DICDI  88 NGGNVISRVLNNHNIKFAFSLSELQDIKTINECSLENKMKVIQMKNYNNAIVAAGGVFRMTGQIGVVFVNGGPEIISMINGIVNAKV 174
+                             899************************************************************************************ PP
+
+                             HT--EEEEEEE--CCCHHS..TC--T-CCHHHCCCSSEEEE-SSGGGHHHHHHHHHHHH.HSSS--EEEEEEEHHHCC-EE CS
+            TPP_enzyme_N  89 eriPllviagqrprsergrgalqqeldqlalvrpvtkyaervtspeelpealrrAiraa.lsgrpgPvlLelpadvleeev 168
+                             ++iPl+via ++   e++   ++     ++l+++++ky ++vt+++e+ ++l++ ++++  s++++ vl+e+++ +l  e 
+  tr|Q54FW8|Q54FW8_DICDI 175 DNIPLVVIAINPIIGEQD---FD-----KKLLNNYFKYITEVTNINEISQVLEDSFAKSvESENSSSVLIEISQSLLLPEE 247
+                             ******************...87.....8999***************************99*************9988765 PP
+
+>> TPP_enzyme_C  Thiamine pyrophosphate enzyme, C-terminal TPP binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.7   0.0     3e-12   2.9e-08      23     141 ..     527     651 ..     515     671 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 33.7 bits;  conditional E-value: 3e-12
+                             CETTTS-TTTHHHHHHHHHHHSTTSEEEEEEEHHHHHHTGGGHHHHHHTT-SEEEEEEE-SBCCCHHHH.........HHHHTCCTT CS
+            TPP_enzyme_C  23 tsgglgtmGyglpaAiGaklakpdrevvaivGDGgflmilqelatavrrnlpitvvvlnNegygmtggq.........qepfggkrk 100
+                              ++ ++++  +++ Ai+ kl  p+ +v+ ++   +++ ++qe+ t  +++lpi+++v nNe    ++           q+p+     
+  tr|Q54FW8|Q54FW8_DICDI 527 QPSKFSSHSSSIGLAIASKLCFPETDVYMLTDNISIINCVQEFGTLSYYRLPINIIVANNEKHSIINPLgrdivnlqnQQPKN--LM 611
+                             566789999***********99*********99999999****************************9999998885533333..33 PP
+
+                             TTSBB..BS----HHHHHHHTTSEEEEESSH.HHHHHHHHHH CS
+            TPP_enzyme_C 101 sgpagk.dlkpvdfaklaealGakgarvekadveeleealke 141
+                              +++++ + + + f k++ a+G +g+ ++k+     ++ ++ 
+  tr|Q54FW8|Q54FW8_DICDI 612 DNQSKNhEAPRTAFHKIMNAYGGNGFIINKD--HGSKDDIEN 651
+                             33333347999*************8855555..333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (686 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       570  (0.02972); expected 383.6 (0.02)
+Passed bias filter:                      351  (0.0183013); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.59
+# Mc/sec: 3736.71
+//
+[ok]

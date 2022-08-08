@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031728.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031728
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9VFX1|WNT8_DROME  [L=309]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-40  139.7  21.1    8.9e-25   87.9  11.9    2.0  2  wnt       wnt family
+
+
+Domain annotation for each model (and alignments):
+>> wnt  wnt family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.4   1.8   9.3e-20   1.8e-15      24     100 ..      41     116 ..      21     138 .. 0.87
+   2 !   87.9  11.9   4.7e-29   8.9e-25     146     307 ..     145     308 ..     129     309 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 57.4 bits;  conditional E-value: 9.3e-20
+                   wnt  24 aegaklaieeCqeqfrnrrWnCstleekkkevfgkvlkrgsretafvyaitsagvvhsvaracsegkleeCscdkkk 100
+                            +g+k+a++ Cq+ f+++rWnC +++  +k   ++  ++ +re  +v ai+ a++vh++++ c++g +  C+c ++ 
+  sp|Q9VFX1|WNT8_DROME  41 GKGLKQALDSCQQSFQWQRWNCPSQDFVQK-NSKPEENSPNREDVYVAAISMAAIVHTLTKDCANGVIAGCGCTENA 116
+                           689*******************99998854.6778888999********************************9874 PP
+
+  == domain 2  score: 87.9 bits;  conditional E-value: 4.7e-29
+                   wnt 146 hnneaGrkavkkemkteckCh...GvsgscevktcwkklpefrevgkalkekydkavkvkkkkkkkkkklvpkekeekkptkkdLvyle 231
+                           hn ++    +++++++ec+C+    v g c+   c   l++f+ +++ l + yd a+++  +  +++ k++      ++   ++Lv+++
+  sp|Q9VFX1|WNT8_DROME 145 HNRRVVGALLQRSLEQECRCKqpgAVQGECQEEECVAVLKPFEAIAQDLLQMYDDAIQL--EGASSNLKIMW-----QNIPLDSLVFMQ 226
+                           899999999***********8554699********************************..33333333333.....4566789***** PP
+
+                   wnt 232 kSpdfCekdkklgslGtkgReCnktsegv....dgCdllC..CgrGynteeverkerCkCkfkwCCevkCkeCeekeevstC 307
+                           +Sp++Ce+d +    Gt+gR+C+k+ +g+     +C++lC  Cg   ++++v++++rC+Ck  w  +++C+ C + e+++ C
+  sp|Q9VFX1|WNT8_DROME 227 DSPNYCERDATGLWKGTRGRQCSKDGSGSleerLSCQQLCrvCGYRVRSQHVRTERRCNCKLVWGFRLQCDVCVQLERQYSC 308
+                           ************************97654211157*****6666666678888999************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (309 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       758  (0.0395224); expected 383.6 (0.02)
+Passed bias filter:                      393  (0.0204912); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.55
+# Mc/sec: 1805.58
+//
+[ok]

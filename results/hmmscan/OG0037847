@@ -1,0 +1,69 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037847.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037847
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651801.1  [L=264]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      4e-27   95.1   0.0    6.6e-27   94.4   0.0    1.3  1  LysR_substrate  LysR substrate binding domain
+    2.8e-16   59.3   0.2    4.8e-16   58.6   0.2    1.4  1  HTH_1           Bacterial regulatory helix-turn-helix protein
+
+
+Domain annotation for each model (and alignments):
+>> LysR_substrate  LysR substrate binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.4   0.0   6.9e-31   6.6e-27       4     168 ..      90     252 ..      87     258 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 94.4 bits;  conditional E-value: 6.9e-31
+                     SCEEEEEEEECCCHHHCHHHHHHHHHHHSTTEEEEEEEESHHHHHHHHHTTSSSEEEEESSSSSTTEEEEEEEEEEEEEEEETTSGGGG.SSSBC CS
+  LysR_substrate   4 lrgrLrigapptlalyllppllarfraryPeveleltegdseelldllaegelDlaivagppedsglearpLgeeplvlvappdhpLar.repvs 97 
+                      +g+Lri + +++a++ ++p+l++f+  yP++++e++ g   +++d+ ++g lD+ai +g +++s+ +a ++ge +++l+a+pd+ L++ ++p++
+  XP_002651801.1  90 VSGTLRIHTMTSFAKQQIVPWLPEFLDTYPGLDVEIQLGA--QFVDQFEQG-LDIAIHSGILPSSSRIAKKIGECEWLLCASPDY-LEKyGTPQQ 180
+                     79**************************************..*********.**********99999******************.********* PP
+
+                     GGGGCTSEEEEESTTSC.HHHHHHHHHHHTTEECEEEEEESSHHHHHHHHHTTS-EEEEEGGGHHCCCHTTT CS
+  LysR_substrate  98 ledLadeplilleegsg.lrdlledalreaglkprvalevnsleallalvaaGlGiallPrsavrdeladgr 168
+                     ++dL ++++  ++  s+   +++ +       +++++ ++++ e l++++++G Gi  l ++ + +e++ +r
+  XP_002651801.1 181 PQDLMNHRCFNFSFASPwNKWAFIQDGLGVTTPVKPRGSFTQGELLRDMAKSGAGIVRLADFHIGKEFRTDR 252
+                     ************98888888888888888888889999*************************999998887 PP
+
+>> HTH_1  Bacterial regulatory helix-turn-helix protein, lysR family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.6   0.2     5e-20   4.8e-16       3      59 ..       6      62 ..       4      63 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 58.6 bits;  conditional E-value: 5e-20
+                    HHHHHHHHHHHSSHHHHHHHHTS-HHHHHHHHHHHHHHHTS-SEEESSSEEEE-HHH CS
+           HTH_1  3 qlrlfvavaetgsftaAAeeLglsqpavsrqikrLEeelgvpLfeRtgrgvrLTeaG 59
+                    q+ +f    e+gsf+aAA++  ++++a+s+ i+rLE++l v+Lf+R +r ++LTe+G
+  XP_002651801.1  6 QMLAFIWSTECGSFSAAARAHEMTPSAISKLIARLEDRLRVRLFQRGSRVLTLTEEG 62
+                    677888899*************************************7777******9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (264 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       487  (0.0253924); expected 383.6 (0.02)
+Passed bias filter:                      458  (0.0238803); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.21s 00:00:00.56 Elapsed: 00:00:00.63
+# Mc/sec: 1359.67
+//
+[ok]

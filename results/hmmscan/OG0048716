@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048716.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048716
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P25366  [L=362]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    7.3e-56  188.4   3.3    9.6e-46  155.5   1.9    2.2  2  Y_phosphatase2  Tyrosine phosphatase family
+
+
+Domain annotation for each model (and alignments):
+>> Y_phosphatase2  Tyrosine phosphatase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.6   0.0     7e-13   1.4e-08       1      65 [.       2      66 ..       2      67 .. 0.95
+   2 !  155.5   1.9     5e-50   9.6e-46       1     164 [.      62     219 ..      62     220 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 34.6 bits;  conditional E-value: 7e-13
+                    B---TT-EEEETTEEEESS--HHHHHHHHHCT-SEEEE-SSS---HHHHHHHHHCT-EEEE---- CS
+  Y_phosphatase2  1 lvpplnFsaveselyrssyprasnfsflksLkLktiislspeeesqdelqfleeekiklyhiaie 65
+                    lvpp nF+ +e+++yr s  +  n+sfl++L+Lkt i +  +e s+  + f++   ik + + ++
+          P25366  2 LVPPANFGIAEEGIYRCSKVETLNLSFLETLNLKTAIFIGGQEPSKFFKDFFTRSSIKWIVLRMS 66
+                    69****************************************99999999********9988876 PP
+
+  == domain 2  score: 155.5 bits;  conditional E-value: 5e-50
+                     B---TT-EEEETTEEEESS--HHHHHHHHH.CT-SEEEE-SSS---HHHHHHHHHCT-EEEE----SSSCCC----HHHHHHHHHHHC-GGG-SE CS
+  Y_phosphatase2   1 lvpplnFsaveselyrssyprasnfsflks.LkLktiislspeeesqdelqfleeekiklyhiaiesnkeelveiksdllkkalklllnkenypv 94 
+                     ++++++Fsa+++++++ss+++a+++s+++s L+L++++++s+++ sq+++++ ++  ++++++++++n++ l+ iks++lk+++k+lln++ny+v
+          P25366  62 VLRMSDFSAAAVPVKSSSVSNANLYSNNNStLSLQEEKKKSTANGSQNSTTG-DPVIQEELAYHLTDNDD-LMLIKSTCLKRTFKTLLNVDNYNV 154
+                     689**************************99*********************.*****************.************************ PP
+
+                     EEE-SSSSSHHHHHHHHHHHHTTB-HHHHHHHHHHHHCCC--HHHHHHHHC--THHHHHHHH.HTT--S- CS
+  Y_phosphatase2  95 llhckrGkhrtglvigclRklqkWslasilnEyrrFsgskkrivdeefienfdselevekknkklkvlks 164
+                     ll++     +t+lvig+lRk+qkW++asi+nEyr+Fsg+++++++e+f+e++++e+e+ek+nk+++++k+
+          P25366 155 LLVD-----KTALVIGILRKIQKWNIASIINEYRLFSGKNRNYFAETFLEIINIEIEQEKDNKTIVDNKA 219
+                     ****.....9*****************************************************9998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (362 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       781  (0.0407216); expected 383.6 (0.02)
+Passed bias filter:                      398  (0.0207519); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.70
+# Mc/sec: 1677.88
+//
+[ok]

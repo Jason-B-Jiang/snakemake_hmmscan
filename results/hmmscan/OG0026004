@@ -1,0 +1,78 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026004.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026004
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q20351|TPSTB_CAEEL  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.7e-28   99.2   0.0      1e-27   98.1   0.0    1.5  1  Sulfotransfer_3  Sulfotransferase family
+    1.2e-08   34.8   0.4    3.8e-08   33.2   0.4    1.7  1  Sulfotransfer_1  Sulfotransferase domain
+
+
+Domain annotation for each model (and alignments):
+>> Sulfotransfer_3  Sulfotransferase family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.1   0.0   1.1e-31     1e-27      15     216 ..       1     172 [.       1     173 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 98.1 bits;  conditional E-value: 1.1e-31
+        Sulfotransfer_3  15 LhrlLaahpdvripeetlfvaprllarlqawskdgrelrrlleagvtqeeaelphlldadgpeedlqllraalasvilealarvpsya 102
+                            ++++L+ahpdvr+ +et  + p++l + + w+ d ++     + g+tqe                  ++++a+ ++i e +a++ + a
+  sp|Q20351|TPSTB_CAEEL   1 MRAILDAHPDVRCGGET-MLLPSFLTWQAGWRNDWVN-----NSGITQE------------------VFDDAVSAFITEIVAKHSELA 64 
+                            689**************.6779888888877666444.....5569999..................999****************** PP
+
+        Sulfotransfer_3 103 rwlvdKsPshlerldlllklfPdAkfihlvRdpvdtvissyvslfgktresysekdlreiedaleewsrayerllaaraelpperlle 190
+                            ++l++K+P +   l ++ +l+P+Akfi ++Rd  ++v+ s+++  ++  + y+    +ei ++  +w++++++++ ++ +  p++++ 
+  sp|Q20351|TPSTB_CAEEL  65 PRLCNKDPYTALWLPTIRRLYPNAKFILMIRDA-RAVVHSMIER-KVPVAGYN--TSDEI-SMFVQWNQELRKMTFQCNN-APGQCIK 146
+                            ********************************9.9999999887.45555555..44566.4889*********999987.79***** PP
+
+        Sulfotransfer_3 191 vrYedlvadpegtlrriyeflglpwd 216
+                            v+Ye l+++p +++ ri +fl+lp++
+  sp|Q20351|TPSTB_CAEEL 147 VYYERLIQKPAEEILRITNFLDLPFS 172
+                            ************************97 PP
+
+>> Sulfotransfer_1  Sulfotransferase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.2   0.4   3.9e-12   3.8e-08      92     256 ..      75     223 ..      51     227 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 33.2 bits;  conditional E-value: 3.9e-12
+                            .GGGS.CHHHHTT-EEEEEE--HHHHHHHHHHHHHHBTTSTTT-S-HHHHHHHHHTTHSTTC-HHHHHHHHHH..HTTTTTEEEEEHH CS
+        Sulfotransfer_1  92 plkllpkslldsnlKiiylvRnpkdvavSryhfsrslkklkepetpfeeffdlflegrvvcgsyfdhvkewlk..lrkkgnvlflrYE 177
+                             l+l     l +n+K i+++R++++v+ S+++ +  +  ++  +             +  + ++ + +++        +g+   + YE
+  sp|Q20351|TPSTB_CAEEL  75 ALWLPTIRRLYPNAKFILMIRDARAVVHSMIERKVPVAGYNTSD------------EISMFVQWNQELRKMTFqcNNAPGQCIKVYYE 150
+                            555555566789*********************97777544444............4556666666666555457899********** PP
+
+                            HHHHHHHHHHHHHHHHTT--..HHHHHHHHHHTSHHHHHTETTTSSTTSCTTTTSTSSEE--TTGGGGTSBHHHHHHHH CS
+        Sulfotransfer_1 178 dlkkdpakeikkiaeFlGiplteeelekivkhlsfenmksnpvsnksklskgekekffrkgqvgdWkneltveqaekld 256
+                            +l++ pa+ei +i  Fl++p++++ l+   ++l+ ++   n  + +++    ++++ ++     +W + +++e ++kld
+  sp|Q20351|TPSTB_CAEEL 151 RLIQKPAEEILRITNFLDLPFSQQMLRH--QDLIGDEVDLNDQEFSAS----QVKNSINTKALTSWFDCFSEETLRKLD 223
+                            ********************99766654..333333332222222211....235555555556666666666666666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       576  (0.0300328); expected 383.6 (0.02)
+Passed bias filter:                      496  (0.0258616); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.72
+# Mc/sec: 1161.02
+//
+[ok]

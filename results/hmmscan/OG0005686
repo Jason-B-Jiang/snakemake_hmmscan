@@ -1,0 +1,507 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0005686.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0005686
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P0DOY3|IGLC3_HUMAN  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-31  109.1   0.4    1.2e-31  108.9   0.4    1.1  1  C1-set    Immunoglobulin C1-set domain
+    3.7e-05   23.8   0.5    4.9e-05   23.4   0.5    1.2  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    0.00011   22.4   0.5    0.00015   22.0   0.5    1.2  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.9   0.4   1.9e-35   1.2e-31       1      85 [.       9      93 ..       9      94 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 108.9 bits;  conditional E-value: 1.9e-35
+                           EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85
+                           Vt++pps+eel+ +k+tL+Cl+++fyp  ++v W+ ++ +v+ gv+tt+p+k+s+++y +ss+L++tp++w+s+++y+C+V+he+
+  sp|P0DOY3|IGLC3_HUMAN  9 VTLFPPSSEELQANKATLVCLISDFYPGAVTVAWKADSSPVKAGVETTTPSKQSNNKYAASSYLSLTPEQWKSHKSYSCQVTHEG 93
+                           89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.4   0.5   7.7e-09   4.9e-05       6      86 ..      15      95 ..      10      98 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 23.4 bits;  conditional E-value: 7.7e-09
+                           SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86
+                           s ++l+a+  + ++ C+ ++ +P a++++W  d  p+  ++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|P0DOY3|IGLC3_HUMAN 15 SSEELQAN--KATLVCLISDFYPgAVTVAWKADSSPVkAGVETTTPSKQSNNKYAASSYLSLTPEQWKSHKSYSCQVTHEGST 95
+                           44666777..78888**9998886899**********5566666667777889**************************9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   0.5   2.3e-08   0.00015      11      85 ..      21     100 ..      13     101 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 2.3e-08
+                            TS-EEEEEEEE.SSSCTSEEEEEESSSSCSEEEE...EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEEEEE CS
+                     ig  11 GesatLtCsvs.tqtkptdvtWkkegqtkiesqk...vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvtlsv 85 
+                             ++atL C +s + +  ++v Wk + +  + + +    +k++n++   ss l     ++ ++ +Y C+v ++gs v+++v
+  sp|P0DOY3|IGLC3_HUMAN  21 ANKATLVCLISdFYPGAVTVAWKADSSPVKAGVEtttPSKQSNNKYAASSYLSLTPEQWKSHkSYSCQVTHEGSTVEKTV 100
+                            579********9999999****99988888777777767777777777788888888888888***********998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       432  (0.0225246); expected 383.6 (0.02)
+Passed bias filter:                      235  (0.012253); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.67
+# Mc/sec: 508.45
+//
+Query:       sp|P15814|IGLL1_HUMAN  [L=213]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-29  101.7   0.1    3.2e-29  101.2   0.1    1.2  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.2   0.1   1.7e-33   3.2e-29       1      85 [.     116     200 ..     116     201 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 101.2 bits;  conditional E-value: 1.7e-33
+                            EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85 
+                            Vt++pps+eel+ +k+tL+Cl+++fyp  ++vtW+ +g+++t+gv+ t+p+k+s+++y +ss+L++tp++w+s+ +y+C+V he+
+  sp|P15814|IGLL1_HUMAN 116 VTLFPPSSEELQANKATLVCLMNDFYPGILTVTWKADGTPITQGVEMTTPSKQSNNKYAASSYLSLTPEQWRSRRSYSCQVMHEG 200
+                            89*********************************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (213 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       312  (0.0162678); expected 383.6 (0.02)
+Passed bias filter:                      256  (0.0133479); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.59
+# Mc/sec: 1157.56
+//
+Query:       sp|A0A0A0MT76|LJ01_HUMAN  [L=42]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (42 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       143  (0.00745607); expected 383.6 (0.02)
+Passed bias filter:                      117  (0.00610042); expected 383.6 (0.02)
+Passed Vit filter:                         7  (0.000364983); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.54
+# Mc/sec: 252.66
+//
+Query:       sp|P0CF74|IGLC6_HUMAN  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.9e-32  110.2   0.2    5.6e-32  110.0   0.2    1.0  1  C1-set    Immunoglobulin C1-set domain
+    1.2e-06   28.5   0.4    1.7e-06   28.1   0.4    1.2  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    2.1e-05   24.7   0.4    2.7e-05   24.4   0.4    1.1  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.0   0.2   8.8e-36   5.6e-32       1      85 [.       9      93 ..       9      94 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 110.0 bits;  conditional E-value: 8.8e-36
+                           EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85
+                           Vt++pps+eel+ +k+tL+Cl+++fyp  +kv W+ +g +v++gv+tt+p+k+s+++y +ss+L++tp++w+s+ +y+C+V+he+
+  sp|P0CF74|IGLC6_HUMAN  9 VTLFPPSSEELQANKATLVCLISDFYPGAVKVAWKADGSPVNTGVETTTPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEG 93
+                           89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.1   0.4   2.6e-10   1.7e-06       6      86 ..      15      95 ..      10      98 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 28.1 bits;  conditional E-value: 2.6e-10
+                           SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86
+                           s ++l+a+  + ++ C+ ++ +P a++++W  dg p+ +++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|P0CF74|IGLC6_HUMAN 15 SSEELQAN--KATLVCLISDFYPgAVKVAWKADGSPVnTGVETTTPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEGST 95
+                           44666777..78888**999888689***********7777788888888899**************************9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   0.4   4.2e-09   2.7e-05      11      85 ..      21     100 ..      13     101 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 4.2e-09
+                            TS-EEEEEEEE.SSSCTSEEEEEESSSSCSEEEE...EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEEEEE CS
+                     ig  11 GesatLtCsvs.tqtkptdvtWkkegqtkiesqk...vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvtlsv 85 
+                             ++atL C +s + +  + v Wk +g+  +++ +    +k++n++   ss l     ++ ++ +Y C+v ++gs v+++v
+  sp|P0CF74|IGLC6_HUMAN  21 ANKATLVCLISdFYPGAVKVAWKADGSPVNTGVEtttPSKQSNNKYAASSYLSLTPEQWKSHrSYSCQVTHEGSTVEKTV 100
+                            579********999999*********9999998888877777777777788888888899999***********998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       342  (0.017832); expected 383.6 (0.02)
+Passed bias filter:                      227  (0.0118359); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.18s 00:00:00.51 Elapsed: 00:00:00.61
+# Mc/sec: 565.00
+//
+Query:       sp|P01834|IGKC_HUMAN  [L=107]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.8e-25   87.8   0.5    5.6e-25   87.6   0.5    1.0  1  C1-set    Immunoglobulin C1-set domain
+    9.9e-05   22.4   0.2    0.00012   22.2   0.2    1.1  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.6   0.5   5.9e-29   5.6e-25       1      86 []       8      94 ..       8      94 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 87.6 bits;  conditional E-value: 5.9e-29
+                          EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86
+                          V+++pps+e+l++ +++++Cl ++fyp++ kv+W++++  ++ +  ++ ++++++dsty+lss+L+++++++e++++y C+V+h++l
+  sp|P01834|IGKC_HUMAN  8 VFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNsQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGL 94
+                          89*************************************999987888899999******************************986 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.2   0.2   1.2e-08   0.00012       6      88 ..      14      97 ..       9      98 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 22.2 bits;  conditional E-value: 1.2e-08
+                          SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE..CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSSSE CS
+              C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl..eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealrgs 88
+                          s+++l+++ + v   C+  + +P +++++W  d+  +  ++ e+ +eqd++ ++++++s+l+l      +++   C+v++++l+ +
+  sp|P01834|IGKC_HUMAN 14 SDEQLKSGTASV--VCLLNNFYPrEAKVQWKVDNALQsgNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSP 97
+                          557777774444..599999999559********99988888999999******************988888889******99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (107 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       623  (0.0324834); expected 383.6 (0.02)
+Passed bias filter:                      370  (0.0192919); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 634.03
+//
+Query:       sp|P0DOY2|IGLC2_HUMAN  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-31  108.0   0.3    2.9e-31  107.7   0.3    1.1  1  C1-set    Immunoglobulin C1-set domain
+    2.7e-05   24.2   0.5    3.6e-05   23.8   0.5    1.2  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    0.00011   22.5   0.4    0.00015   22.0   0.4    1.2  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.7   0.3   4.5e-35   2.9e-31       1      85 [.       9      93 ..       9      94 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 107.7 bits;  conditional E-value: 4.5e-35
+                           EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85
+                           Vt++pps+eel+ +k+tL+Cl+++fyp  ++v W+ ++ +v+ gv+tt+p+k+s+++y +ss+L++tp++w+s+ +y+C+V+he+
+  sp|P0DOY2|IGLC2_HUMAN  9 VTLFPPSSEELQANKATLVCLISDFYPGAVTVAWKADSSPVKAGVETTTPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEG 93
+                           89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.8   0.5   5.7e-09   3.6e-05       6      86 ..      15      95 ..      10      98 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 23.8 bits;  conditional E-value: 5.7e-09
+                           SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86
+                           s ++l+a+  + ++ C+ ++ +P a++++W  d  p+  ++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|P0DOY2|IGLC2_HUMAN 15 SSEELQAN--KATLVCLISDFYPgAVTVAWKADSSPVkAGVETTTPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEGST 95
+                           44666777..78888**9998886899**********5566666667777889**************************9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   0.4   2.3e-08   0.00015      11      85 ..      21     100 ..      13     101 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 2.3e-08
+                            TS-EEEEEEEE.SSSCTSEEEEEESSSSCSEEEE...EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEEEEE CS
+                     ig  11 GesatLtCsvs.tqtkptdvtWkkegqtkiesqk...vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvtlsv 85 
+                             ++atL C +s + +  ++v Wk + +  + + +    +k++n++   ss l     ++ ++ +Y C+v ++gs v+++v
+  sp|P0DOY2|IGLC2_HUMAN  21 ANKATLVCLISdFYPGAVTVAWKADSSPVKAGVEtttPSKQSNNKYAASSYLSLTPEQWKSHrSYSCQVTHEGSTVEKTV 100
+                            579********9999999****99988887777777767777777777888888888899999***********998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       399  (0.020804); expected 383.6 (0.02)
+Passed bias filter:                      231  (0.0120444); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.54
+# Mc/sec: 637.69
+//
+Query:       sp|B9A064|IGLL5_HUMAN  [L=214]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-31  107.5   0.2    4.8e-31  107.1   0.2    1.2  1  C1-set    Immunoglobulin C1-set domain
+    2.4e-05   24.4   0.3    3.8e-05   23.7   0.3    1.3  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    0.00014   22.1   0.2    0.00022   21.5   0.2    1.3  0  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.1   0.2   7.5e-35   4.8e-31       1      85 [.     117     201 ..     117     202 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 107.1 bits;  conditional E-value: 7.5e-35
+                            EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85 
+                            Vt++pps+eel+ +k+tL+Cl+++fyp  ++v W+ +g +v+ gv+tt+p+k+s+++y +ss+L++tp++w+s+ +y+C+V+he+
+  sp|B9A064|IGLL5_HUMAN 117 VTLFPPSSEELQANKATLVCLISDFYPGAVTVAWKADGSPVKAGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEG 201
+                            89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.7   0.3     6e-09   3.8e-05       6      86 ..     123     203 ..     116     206 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 23.7 bits;  conditional E-value: 6e-09
+                            SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2   6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86 
+                            s ++l+a+  + ++ C+ ++ +P a++++W  dg p+  ++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|B9A064|IGLL5_HUMAN 123 SSEELQAN--KATLVCLISDFYPgAVTVAWKADGSPVkAGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEGST 203
+                            44666666..78888**8888886899**********6667777777778899**************************9876 PP
+
+>> ig  Immunoglobulin domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (214 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       330  (0.0172063); expected 383.6 (0.02)
+Passed bias filter:                      241  (0.0125658); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.61
+# Mc/sec: 1135.63
+//
+Query:       sp|A0M8Q6|IGLC7_HUMAN  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.2e-31  106.3   0.2    9.5e-31  106.1   0.2    1.0  1  C1-set    Immunoglobulin C1-set domain
+      3e-06   27.3   0.4    3.9e-06   26.9   0.4    1.1  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    9.6e-06   25.8   0.3    1.3e-05   25.4   0.3    1.2  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.1   0.2   1.5e-34   9.5e-31       1      85 [.       9      93 ..       9      94 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 106.1 bits;  conditional E-value: 1.5e-34
+                           EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85
+                           Vt++pps+eel+ +k+tL+Clv++f p  ++v W+ +g +v+ gv+tt+p+k+s+++y +ss+L++tp++w+s+ +y+C+V+he+
+  sp|A0M8Q6|IGLC7_HUMAN  9 VTLFPPSSEELQANKATLVCLVSDFNPGAVTVAWKADGSPVKVGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCRVTHEG 93
+                           89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.9   0.4   6.1e-10   3.9e-06       6      86 ..      15      95 ..      10      98 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 26.9 bits;  conditional E-value: 6.1e-10
+                           SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86
+                           s ++l+a+  + ++ C++++ +P a++++W  dg p+ +++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|A0M8Q6|IGLC7_HUMAN 15 SSEELQAN--KATLVCLVSDFNPgAVTVAWKADGSPVkVGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCRVTHEGST 95
+                           44667777..88888**888887589***********889999999999999***************************9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.4   0.3     2e-09   1.3e-05      10      85 ..      20     100 ..      13     101 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 25.4 bits;  conditional E-value: 2e-09
+                            TTS-EEEEEEEE.SSSCTSEEEEEESSSSCSEEEE...EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEEEEE CS
+                     ig  10 eGesatLtCsvs.tqtkptdvtWkkegqtkiesqk...vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvtlsv 85 
+                            + ++atL C vs +++  ++v Wk +g+  + + +    +k++n++   ss l     ++ ++ +Y C+v ++gs v+++v
+  sp|A0M8Q6|IGLC7_HUMAN  20 QANKATLVCLVSdFNPGAVTVAWKADGSPVKVGVEttkPSKQSNNKYAASSYLSLTPEQWKSHrSYSCRVTHEGSTVEKTV 100
+                            5579*********************998666666656677888888888888888889999999***********998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       383  (0.0199698); expected 383.6 (0.02)
+Passed bias filter:                      257  (0.0134001); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.54
+# Mc/sec: 632.53
+//
+Query:       sp|P0CG04|IGLC1_HUMAN  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-32  110.0   0.2    6.7e-32  109.8   0.2    1.1  1  C1-set    Immunoglobulin C1-set domain
+    4.1e-06   26.8   0.3      5e-06   26.6   0.3    1.2  1  C2-set_2  CD80-like C2-set immunoglobulin domain
+    2.3e-05   24.6   0.2    3.1e-05   24.2   0.2    1.2  1  ig        Immunoglobulin domain
+
+
+Domain annotation for each model (and alignments):
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.8   0.2     1e-35   6.7e-32       1      85 [.       9      93 ..       9      94 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 109.8 bits;  conditional E-value: 1e-35
+                           EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                 C1-set  1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85
+                           Vt++pps+eel+ +k+tL+Cl+++fyp  ++v W+ +g +v+ gv+tt+p+k+s+++y +ss+L++tp++w+s+ +y+C+V+he+
+  sp|P0CG04|IGLC1_HUMAN  9 VTLFPPSSEELQANKATLVCLISDFYPGAVTVAWKADGSPVKAGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEG 93
+                           89*********************************************************************************98 PP
+
+>> C2-set_2  CD80-like C2-set immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.6   0.3   7.8e-10     5e-06       6      86 ..      15      95 ..       7      98 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 26.6 bits;  conditional E-value: 7.8e-10
+                           SSSEECTSSEEEEEEEEEEEEBS.-EEEEEEETTEEE.CEEEEEEEEETTTSEEEEEEEEEEE--GGGTT-EEEEEEEETTSS CS
+               C2-set_2  6 saslleaeeeevvatCvsrggkP.apqitWyldgkpl.eaaetsseqdpesglvtvtselkltpsredhgqsltCsvsyealr 86
+                           s ++l+a+  + ++ C+ ++ +P a++++W  dg p+  ++et++ +++ +  +  +s l ltp +  +++s +C+v++e++ 
+  sp|P0CG04|IGLC1_HUMAN 15 SSEELQAN--KATLVCLISDFYPgAVTVAWKADGSPVkAGVETTKPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEGST 95
+                           44666666..88888**999888689***********6667777777778899**************************9876 PP
+
+>> ig  Immunoglobulin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.2   0.2   4.9e-09   3.1e-05      11      85 ..      21     100 ..      13     101 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 24.2 bits;  conditional E-value: 4.9e-09
+                            TS-EEEEEEEE.SSSCTSEEEEEESSSSCSEEEE...EEEEETTCEEEEEEEECSSTGGGTE.EEEEEEEETTEEEEEEE CS
+                     ig  11 GesatLtCsvs.tqtkptdvtWkkegqtkiesqk...vvkegnrrkgssslliskvteedaG.tYtCevnnsgssvtlsv 85 
+                             ++atL C +s + +  ++v Wk +g+  + + +    +k++n++   ss l     ++ ++ +Y C+v ++gs v+++v
+  sp|P0CG04|IGLC1_HUMAN  21 ANKATLVCLISdFYPGAVTVAWKADGSPVKAGVEttkPSKQSNNKYAASSYLSLTPEQWKSHrSYSCQVTHEGSTVEKTV 100
+                            579********999999*********9999998878877777777788888888888899999***********998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       364  (0.0189791); expected 383.6 (0.02)
+Passed bias filter:                      238  (0.0124094); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.19s 00:00:00.53 Elapsed: 00:00:00.54
+# Mc/sec: 636.64
+//
+[ok]

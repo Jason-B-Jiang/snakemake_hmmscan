@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031695.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031695
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9VL52|SOYB_DROME  [L=1476]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.4e-23   81.2   0.7    1.6e-14   54.0   0.1    3.0  2  TUDOR     Tudor domain
+      3e-06   27.2   0.0      4e-05   23.6   0.0    2.8  0  DEAD      DEAD/DEAH box helicase
+
+
+Domain annotation for each model (and alignments):
+>> TUDOR  Tudor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.6   0.0   2.3e-09   2.2e-05       4     110 ..       8     117 ..       5     150 .. 0.87
+   2 !   54.0   0.1   1.7e-18   1.6e-14       3     122 .]     928    1043 ..     926    1043 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 24.6 bits;  conditional E-value: 2.3e-09
+                           CGEEEEEEEEEEETTEEEE...EEGGHHHHH.HHHHHHHHHHHTSSCCTCSSS--TT-EEEEEETTTT..EEEEEEEEEECTTTEEEEE CS
+                 TUDOR   4 dktinvvvsaiespskfyi...qpkeqskkl.eklteelqeyyaskkkaellapkvgegcvavfsedg..kwyRAkiteslddqkveVl 86 
+                           d++ ++ ++++ +p +f +    ++e+s+ l  ++ ++l++y++s      + +  +e +++++++    k  R+ +   ++++++ V 
+  sp|Q9VL52|SOYB_DROME   8 DQEESILITHFVNPHQFSYvrcIDVENSAMLvRQIEQDLKDYCSSERT--KQVYVEDERVIVRYQRWSppKLVRGVV-RRRQNEEYLVW 93 
+                           6678899**********9978866666666437899999999999999..66666666777777766688*******.*********** PP
+
+                           ETTTSBEEEEEGGGEEE--GGGCS CS
+                 TUDOR  87 fiDyGntetvpvsdlrelpeelee 110
+                            +DyG   +++v dl++lp++l+ 
+  sp|Q9VL52|SOYB_DROME  94 ILDYGFNLCCSVWDLWPLPDHLSR 117
+                           *******************99975 PP
+
+  == domain 2  score: 54.0 bits;  conditional E-value: 1.7e-18
+                            CCGEEEEEEEEEE.ETTEEEEEEGGHHHHHHHHHHHHHHHHTSSCCTCSSS--TT-EEEEEETTTTEEEEEEEEEECTTTEEEEEET CS
+                 TUDOR    3 edktinvvvsaie.spskfyiqpkeqskkleklteelqeyyaskkkaellapkvgegcvavfsedgkwyRAkiteslddqkveVlfi 88  
+                            ++++++v+ ++++ ++s+++i ++++++  ++l+ +++   ++k +     + ++ + v+++++++   R++i +++ +++v+V+++
+  sp|Q9VL52|SOYB_DROME  928 DPAHMAVMPMKYKsKDSTIWI-DVPYPSYPSTLVFKMSFGVPRKVH-----NPCKINDVCFVQHKELLSRVRIVDNPARPQVTVQLM 1008
+                            57899********99******.************************.....99********************************** PP
+
+                            TTSBEEE.EEGGGEEE--GGGCSS-BSSEEEEETT CS
+                 TUDOR   89 DyGntet.vpvsdlrelpeeleelppqaikcrLag 122 
+                            DyG+    v++s+l e+pe++++l+ +a+ +rL+g
+  sp|Q9VL52|SOYB_DROME 1009 DYGTELLqVKASQLLECPEQFRDLQQLAMDIRLSG 1043
+                            *****999*************************97 PP
+
+>> DEAD  DEAD/DEAH box helicase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1476 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1287  (0.0671046); expected 383.6 (0.02)
+Passed bias filter:                      492  (0.0256531); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.24s 00:00:00.89 Elapsed: 00:00:00.81
+# Mc/sec: 5867.34
+//
+[ok]

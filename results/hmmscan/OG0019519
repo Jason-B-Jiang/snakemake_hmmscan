@@ -1,0 +1,128 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0019519.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0019519
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q5RG21|Q5RG21_DANRE  [L=198]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+   2.1e-130  432.9   5.5   2.3e-130  432.7   5.5    1.0  1  ICAP-1_inte_bdg  Beta-1 integrin binding protein
+    2.9e-05   24.2   0.0    4.8e-05   23.5   0.0    1.4  1  PID              Phosphotyrosine interaction domain (PTB/PID)
+
+
+Domain annotation for each model (and alignments):
+>> ICAP-1_inte_bdg  Beta-1 integrin binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  432.7   5.5  2.4e-134  2.3e-130       1     200 []       1     198 []       1     198 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 432.7 bits;  conditional E-value: 2.4e-134
+         ICAP-1_inte_bdg   1 mfrkvkkrhsssssqsseistksksvdsslgglsrsstvasldtdstkssgqsnavsdasaefrvkyvgaieklkldesktleepld 87 
+                             mfrkvkkrhsssssqsseistksksvdsslgglsrsstvasldtdstkssg  navsdasaefrvkyvgaiekl++d+sktl+epld
+  tr|Q5RG21|Q5RG21_DANRE   1 MFRKVKKRHSSSSSQSSEISTKSKSVDSSLGGLSRSSTVASLDTDSTKSSG--NAVSDASAEFRVKYVGAIEKLQFDMSKTLQEPLD 85 
+                             9**************************************************..********************************** PP
+
+         ICAP-1_inte_bdg  88 linyidvaqqdgklpfvpgeeelilgvskygvkvasldqydvlhrhalylivrmlcyddglgagksllalkttdakqeeyslwvyqc 174
+                             linyid+aqqdgklpfvpg+ee+ilgvskygvkvasldq+dvlhrh+lylivrmlcyddglgagk+llalkttd+kq+e+s+wvyqc
+  tr|Q5RG21|Q5RG21_DANRE  86 LINYIDAAQQDGKLPFVPGDEEMILGVSKYGVKVASLDQCDVLHRHPLYLIVRMLCYDDGLGAGKNLLALKTTDTKQQECSIWVYQC 172
+                             *************************************************************************************** PP
+
+         ICAP-1_inte_bdg 175 ssleqaqaickvlssafdsvlasekp 200
+                             ss+e+aqaickvlss+fd++lasekp
+  tr|Q5RG21|Q5RG21_DANRE 173 SSAEHAQAICKVLSSSFDCALASEKP 198
+                             *************************9 PP
+
+>> PID  Phosphotyrosine interaction domain (PTB/PID)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.0     5e-09   4.8e-05       1     134 [.      61     193 ..      61     197 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 5e-09
+                             EEEEEEEEEEECSSSCSSCHHHHHHHHHHHHHHHHHCCCSTCEEEEECCEC.EEEEEEEETTEEEEEETTTTSEEEEECGCCECEEE CS
+                     PID   1 FavrylGsvevleerapdkntRmqvareaisrvkaaklkkikkkegetqeg.tevdLeistdklkllnadtkelimdhalksIsfia 86 
+                             F+v+y+G +e l+    d +   +  +e  + +++ + ++ ++k   + +g  e++L +s+ ++k++  d+ ++++ h+l+ I  + 
+  tr|Q5RG21|Q5RG21_DANRE  61 FRVKYVGAIEKLQF---DMS---KTLQEPLDLINYIDAAQQDGKL-PFVPGdEEMILGVSKYGVKVASLDQCDVLHRHPLYLIVRML 140
+                             99********9998...444...6678888888888555555555.5555559****************************996544 PP
+
+                             C...TTSCCSSEEEEEEEESSSSSEEEEEEEESS..CHHHHHHHHHHHHHHHH CS
+                     PID  87 d...gdkdlkarfayiaakkktnklaChvfesee..laqaiaqsigqaFelay 134
+                             +   g    k+ +a+ + + k++  +  v+++     aqai + +   F+ a+
+  tr|Q5RG21|Q5RG21_DANRE 141 CyddGLGAGKNLLALKTTDTKQQECSIWVYQCSSaeHAQAICKVLSSSFDCAL 193
+                             42133334677778888888888888899999887799999999888887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (198 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       888  (0.0463006); expected 383.6 (0.02)
+Passed bias filter:                      532  (0.0277387); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.20s 00:00:00.57 Elapsed: 00:00:00.60
+# Mc/sec: 1065.82
+//
+Query:       sp|O14713|ITBP1_HUMAN  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+   1.8e-132  439.6   3.6     2e-132  439.4   3.6    1.0  1  ICAP-1_inte_bdg  Beta-1 integrin binding protein
+    0.00022   21.3   0.0    0.00049   20.3   0.0    1.6  0  PID              Phosphotyrosine interaction domain (PTB/PID)
+
+
+Domain annotation for each model (and alignments):
+>> ICAP-1_inte_bdg  Beta-1 integrin binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  439.4   3.6  2.1e-136    2e-132       1     200 []       1     200 []       1     200 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 439.4 bits;  conditional E-value: 2.1e-136
+        ICAP-1_inte_bdg   1 mfrkvkkrhsssssqsseistksksvdsslgglsrsstvasldtdstkssgqsnavsdasaefrvkyvgaieklkldesktleepldl 88 
+                            mfrk+kkrhsssssqsseistksksvdsslgglsrsstvasldtdstkssgqsn++sd++aefr+kyvgaieklkl+e+k+le+pldl
+  sp|O14713|ITBP1_HUMAN   1 MFRKGKKRHSSSSSQSSEISTKSKSVDSSLGGLSRSSTVASLDTDSTKSSGQSNNNSDTCAEFRIKYVGAIEKLKLSEGKGLEGPLDL 88 
+                            9*************************************************************************************** PP
+
+        ICAP-1_inte_bdg  89 inyidvaqqdgklpfvpgeeelilgvskygvkvasldqydvlhrhalylivrmlcyddglgagksllalkttdakqeeyslwvyqcss 176
+                            inyidvaqqdgklpfvp+eee+i+gvskyg+kv+++dqydvlhrhalyli+rm+cyddglgagksllalkttda++eeyslwvyqc+s
+  sp|O14713|ITBP1_HUMAN  89 INYIDVAQQDGKLPFVPPEEEFIMGVSKYGIKVSTSDQYDVLHRHALYLIIRMVCYDDGLGAGKSLLALKTTDASNEEYSLWVYQCNS 176
+                            **************************************************************************************** PP
+
+        ICAP-1_inte_bdg 177 leqaqaickvlssafdsvlasekp 200
+                            leqaqaickvls+afdsvl+sekp
+  sp|O14713|ITBP1_HUMAN 177 LEQAQAICKVLSTAFDSVLTSEKP 200
+                            ***********************9 PP
+
+>> PID  Phosphotyrosine interaction domain (PTB/PID)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       882  (0.0459878); expected 383.6 (0.02)
+Passed bias filter:                      548  (0.0285729); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.60
+# Mc/sec: 1076.98
+//
+[ok]

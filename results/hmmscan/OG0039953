@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039953.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039953
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P21854|CD72_HUMAN  [L=359]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-13   51.4   8.1    3.1e-13   50.4   8.1    1.5  1  Lectin_C  Lectin C-type domain
+
+
+Domain annotation for each model (and alignments):
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.4   8.1   1.6e-17   3.1e-13       2     109 .]     251     352 ..     250     352 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 50.4 bits;  conditional E-value: 1.6e-17
+                           EEEHHHHHHHHHHTTSEEB--SS....HHHHHHHHHHST..STTSEEEEEEEECSSTTEEEETTSTBCSTTTCSE-BSSTSSTTSEEEE CS
+              Lectin_C   2 kksweeAeeaCqkkggsLvsvns....keeldflssllk..ksaksfWigltdeknegewkwedgskvnttklyknwepsensenedCv 84 
+                           +k+w+e++++C++ +++L+++ +    +++  fl+sll+   s +s+W+gl    ++++wk++d+++ +           +++++++C 
+  sp|P21854|CD72_HUMAN 251 SKNWQESQKQCETLSSKLATFSEiypqSHSYYFLNSLLPngGSGNSYWTGL---SSNKDWKLTDDTQRT----------RTYAQSSKCN 326
+                           79********************99998899999****99999*********...9**************..........6889****** PP
+
+                           EE.GCSTTSEEEEEETTSEEEEEEEE CS
+              Lectin_C  85 el.rekssgkwndenCnkklpfvCek 109
+                           ++ +++s++++++e+C ++lp++Ce+
+  sp|P21854|CD72_HUMAN 327 KVhKTWSWWTLESESCRSSLPYICEM 352
+                           **999*******************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (359 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2244  (0.117003); expected 383.6 (0.02)
+Passed bias filter:                      795  (0.0414516); expected 383.6 (0.02)
+Passed Vit filter:                       124  (0.0064654); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.50u 0.24s 00:00:00.74 Elapsed: 00:00:00.62
+# Mc/sec: 1869.80
+//
+[ok]

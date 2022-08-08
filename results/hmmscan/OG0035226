@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035226.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035226
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A3KNJ7|A3KNJ7_DANRE  [L=319]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-10   39.8  37.2    1.3e-07   31.6   0.3    3.0  1  PP1c_bdg  Phosphatase-1 catalytic subunit binding region
+
+
+Domain annotation for each model (and alignments):
+>> PP1c_bdg  Phosphatase-1 catalytic subunit binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.6   0.3   6.9e-12   1.3e-07     223     287 .]     243     313 ..     233     313 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 31.6 bits;  conditional E-value: 6.9e-12
+                             XXXX---EE.....-S--EEEEETTSS--XX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CS
+                PP1c_bdg 223 sikrkkvtf.....leevteyyisgdedrkG.PWeelardgcrfrkriqetedaiGyCltlehrekifnrl 287
+                             ++  kkv f     ++ +  +++++   r G  W ++ard+ rfr+r+q  e  +  Cl  ehr ++ +rl
+  tr|A3KNJ7|A3KNJ7_DANRE 243 KSSGKKVCFservcVRPLLVWSYASRSARDGsCWLQMARDRERFRRRVQTLEPVLKPCLMPEHRARVWERL 313
+                             44569****77777777789**********945*********************************99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (319 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1773  (0.0924449); expected 383.6 (0.02)
+Passed bias filter:                      633  (0.0330048); expected 383.6 (0.02)
+Passed Vit filter:                       144  (0.00750821); expected 19.2 (0.001)
+Passed Fwd filter:                        60  (0.00312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.25s 00:00:00.93 Elapsed: 00:00:00.89
+# Mc/sec: 1158.29
+//
+[ok]

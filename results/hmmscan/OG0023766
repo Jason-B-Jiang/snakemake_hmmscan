@@ -1,0 +1,98 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0023766.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0023766
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P25554  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-35  122.5   0.0    2.7e-35  121.4   0.0    1.6  1  DUF1325   SGF29 tudor-like domain
+    5.7e-06   26.2   0.0    1.4e-05   24.9   0.0    1.7  0  Tudor_3   DNA repair protein Crb2 Tudor domain
+
+
+Domain annotation for each model (and alignments):
+>> DUF1325  SGF29 tudor-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.4   0.0   2.8e-39   2.7e-35       2     132 .]     128     250 ..     127     250 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 121.4 bits;  conditional E-value: 2.8e-39
+  DUF1325   2 gekVaakekkkkkeeeeewilaeVvkiegkknrYeveDadpde.ekekkeyklsakeiiplpkekakpesslaefpkgkkVLAlYPdTTtFYkAeVvaspkk 102
+              g++Va+k+++   + ++ewi++eV+k+ ++ +r+ev+D++pde +++ k yk+++ke++ +p    +     +++p+g+kVLA+YP+TTtFY+A+V++  +k
+   P25554 128 GSEVAYKPRR--GSADGEWIQCEVLKVVADGTRFEVRDPEPDElGNSGKVYKCNRKELLLIPPGFPT-----KNYPPGTKVLARYPETTTFYPAIVIG--TK 220
+              89****8777..799***********99999*************888899************88876.....69************************..67 PP
+
+  DUF1325 103 kegeyklkFeddeeedkereVerryVvelp 132
+              ++g+++l+F+++ee dke+eV+rr+V++ p
+   P25554 221 RDGTCRLRFDGEEEVDKETEVTRRLVLPSP 250
+              9*************************9865 PP
+
+>> Tudor_3  DNA repair protein Crb2 Tudor domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1295  (0.0675218); expected 383.6 (0.02)
+Passed bias filter:                      841  (0.04385); expected 383.6 (0.02)
+Passed Vit filter:                        68  (0.00354554); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.60
+# Mc/sec: 1385.82
+//
+Query:       sp|Q9USW9|SGF29_SCHPO  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-34  117.1   0.0    1.2e-33  116.1   0.0    1.5  1  DUF1325   SGF29 tudor-like domain
+
+
+Domain annotation for each model (and alignments):
+>> DUF1325  SGF29 tudor-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.1   0.0   6.2e-38   1.2e-33       2     131 ..     116     242 ..     115     243 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 116.1 bits;  conditional E-value: 6.2e-38
+                DUF1325   2 gekVaakekkkkkeeeeewilaeVvk..iegkknrYeveDadpde.ekekkeyklsakeiiplpkekakpesslaefpkgkkVLAlYP 86 
+                            g +Va+k   ++++e ++wi++ ++k  +eg k+r+ev+D++pd+ ++  + yk++a+++i++p + +     l+ ++++++VLA+YP
+  sp|Q9USW9|SGF29_SCHPO 116 GMSVAFKLPYTRHNEGGDWIQCIIIKvtGEGAKQRFEVQDPEPDDdGNAGQIYKTTANHLIQIPAKGTP----LPPISPKTNVLARYP 199
+                            789***999999**************999**************998777788************99998....99************* PP
+
+                DUF1325  87 dTTtFYkAeVvaspkkkegeyklkFeddeeedkereVerryVvel 131
+                            +TTtFY+AeV++  +  +g++kl+Fe++ee +ke+ Ver++V+e+
+  sp|Q9USW9|SGF29_SCHPO 200 ETTTFYRAEVIR--TLPDGSCKLRFEGEEEVGKETVVERHLVLEY 242
+                            ************..568*************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1082  (0.0564159); expected 383.6 (0.02)
+Passed bias filter:                      870  (0.0453621); expected 383.6 (0.02)
+Passed Vit filter:                       118  (0.00615256); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.56
+# Mc/sec: 1406.84
+//
+[ok]

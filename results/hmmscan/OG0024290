@@ -1,0 +1,125 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0024290.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0024290
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       RVD90623.1  [L=360]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.1e-16   60.5  15.9    2.7e-16   60.1  15.9    1.1  1  ABC_membrane  ABC transporter transmembrane region
+    1.2e-07   32.4   0.6    2.7e-07   31.2   0.6    1.6  1  ABC_tran      ABC transporter
+
+
+Domain annotation for each model (and alignments):
+>> ABC_membrane  ABC transporter transmembrane region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.1  15.9   2.8e-20   2.7e-16       4     269 ..       3     266 ..       2     270 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 60.1 bits;  conditional E-value: 2.8e-20
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHCSSTCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTSTHHHHHCSCHHHH CS
+  ABC_membrane   4 iillailagvlsplfplvlgrildtlldkgdpetealnvysllllllglaqfilallqsyllnvtgerlskrlrrklfkkilrqpmsffdtnsvGel 100
+                   i++la++ +v+ +++ + l  il+++ ++ ++e+ +  ++++ l+++gl+ ++++ l  y+     + + ++  ++ +k+ ++++   f +  vG++
+    RVD90623.1   3 ILFLAVAMTVIGIFTEVKLTEILKDIPEYFQDED-KFRILIVELAIFGLIYSFSSELTGYFVAGPLQTIFTKSMKDSLKAYINLNYTTFKEVGVGKI 98 
+                   6899*************************88888.89999**********************9999999999999********************** PP
+
+                   HHHHHHHHHHHHHHHHHHHHHHHH.HHHHHHHHHHHHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTHHHHHHH CS
+  ABC_membrane 101 lsrltndvsklrdglgeklglffq.slltfvgglivmfylgwkltlvllailpliilvsaviakilkklkkkeqkavakassvaeEslsgirtVkaf 196
+                   l  + +  s+  ++++  + +++  ++++f+ ++ ++  ++  +  ++ + ++l+i++++ i+ + +kl++  +++++k +++ +E+l +++ +kaf
+    RVD90623.1  99 LKNMDRISSSTGELIAVVINQILPiPIFIFFLSISILRNISLLVLTIISFHIFLYIIFTFKITDLRTKLRRIANEELNKTNNISNEILCNYEGIKAF 195
+                   99997666666666666666666424455555555555555555566666789******************************************** PP
+
+                   TTHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTSSTHHHHHHHHHHHHH CS
+  ABC_membrane 197 greeyflekfekaleeakkagikkaianglligitqllgllsyalalwfGttlvisgelsvgdlvvflslfai 269
+                   ++e+y+le+f+k+l++  k ++k   +  +l+ ++  +  ++ ++++    ++v+++++s+ +  +++++f i
+    RVD90623.1 196 NNESYELERFDKQLKKIIKPTRKLWQSLYFLNLVQKNVLICMDIVICI--LFFVKRNDPSITNQKIVIQYFLI 266
+                   ************************************999999999966..78899999988887788888865 PP
+
+>> ABC_tran  ABC transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.2   0.6   2.9e-11   2.7e-07       1      33 [.     328     360 .]     328     360 .] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 31.2 bits;  conditional E-value: 2.9e-11
+                 EEEEEEEEETTSEEEEEESTTSSHHHHHHHHTT CS
+                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+    ABC_tran   1 lknvslklkegekvaivGenGaGKStLlkllag 33 
+                 l n+s+ +++g k+ai+G+nG+GK+t++++l+g
+  RVD90623.1 328 LTNLSFVINKGDKIAIIGSNGCGKTTFIRALLG 360
+                 689***************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (360 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1191  (0.0620992); expected 383.6 (0.02)
+Passed bias filter:                      495  (0.0258095); expected 383.6 (0.02)
+Passed Vit filter:                        93  (0.00484905); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.23s 00:00:00.68 Elapsed: 00:00:00.84
+# Mc/sec: 1382.49
+//
+Query:       RVD90831.1  [L=350]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      2e-16   60.6  16.2    2.5e-16   60.2  16.2    1.1  1  ABC_membrane  ABC transporter transmembrane region
+
+
+Domain annotation for each model (and alignments):
+>> ABC_membrane  ABC transporter transmembrane region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.2  16.2   1.3e-20   2.5e-16       4     269 ..      28     291 ..      25     295 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 60.2 bits;  conditional E-value: 1.3e-20
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHCSSTCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTSTHHHHHCSCHHHH CS
+  ABC_membrane   4 iillailagvlsplfplvlgrildtlldkgdpetealnvysllllllglaqfilallqsyllnvtgerlskrlrrklfkkilrqpmsffdtnsvGel 100
+                   i++la++ +v+ +++ + l  il+++ ++ ++e+ +  ++++ l+++gl+ ++++ l  y+     + + ++  ++ +k+ ++++   f +  vG++
+    RVD90831.1  28 ILFLAVAMTVIGIFTEVKLTEILKDIPEYFQDED-KFRILIVELAIFGLIYSFSSELTGYFVAGPLQTIFTKSMKDSLKAYINLNYTTFKEVGVGKI 123
+                   689**************************88888.89999**********************9999999999999********************** PP
+
+                   HHHHHHHHHHHHHHHHHHHHHHHH.HHHHHHHHHHHHHHHSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTHHHHHHH CS
+  ABC_membrane 101 lsrltndvsklrdglgeklglffq.slltfvgglivmfylgwkltlvllailpliilvsaviakilkklkkkeqkavakassvaeEslsgirtVkaf 196
+                   l  + +  s+  ++++  + +++  ++++f+ ++ ++  ++  +  ++ + ++l+i++++ i+ + +kl++  +++++k +++ +E+l +++ +kaf
+    RVD90831.1 124 LKNMDRISSSTGELIAVVINQILPiPIFIFFLSISILRNISLLVLTIISFHIFLYIIFTFKITDLRTKLRRIANEELNKTNNISNEILCNYEGIKAF 220
+                   99997666666666666666666424455555555555555555566666789******************************************** PP
+
+                   TTHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTSSTHHHHHHHHHHHHH CS
+  ABC_membrane 197 greeyflekfekaleeakkagikkaianglligitqllgllsyalalwfGttlvisgelsvgdlvvflslfai 269
+                   ++e+y+le+f+k+l++  k ++k   +  +l+ ++  +  ++ ++++    ++v+++++s+ +  +++++f i
+    RVD90831.1 221 NNESYELERFDKQLKKIIKPTRKLWQSLYFLNLVQKNVLICMDIVICI--LFFVKRNDPSITNQKIVIQYFLI 291
+                   ************************************999999999966..78899999988887788888865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (350 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1049  (0.0546952); expected 383.6 (0.02)
+Passed bias filter:                      354  (0.0184577); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.14s 00:00:00.50 Elapsed: 00:00:00.76
+# Mc/sec: 1491.41
+//
+[ok]

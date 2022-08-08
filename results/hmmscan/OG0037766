@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037766.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037766
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651217.1  [L=157]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.2e-13   49.5  24.1      4e-13   49.1  24.1    1.0  1  MFS_1     Major Facilitator Superfamily
+
+
+Domain annotation for each model (and alignments):
+>> MFS_1  Major Facilitator Superfamily
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.1  24.1   2.1e-17     4e-13       3     145 ..       5     146 ..       4     155 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 49.1 bits;  conditional E-value: 2.1e-17
+           MFS_1   3 laaflsalarsilgpalplalaedlgispseigllltlyalgaavaslplGrlsdrfGrrrvlllglllfalglllllfa.sslwlllvlrvlqG 96 
+                     +a+f++++++++ +p++p + +    +s+ ++glll + ++g+++a++ +G+l+ r+G rrvl +g ++ +l+l +l+ + ss++ll+++ +l G
+  XP_002651217.1   5 IAFFIAGFGIAAWAPLVP-YAKARAELSEGTLGLLLLCLGVGSIIAMPAAGALASRYGCRRVLSAGTIMICLALPMLA-TvSSIPLLIAGLFLFG 97 
+                     689***************.8888888***********************************************44444.2499************ PP
+
+           MFS_1  97 lgagalfpa..gaaliadwfpkeergraigllsagfslGailg.pllgglla 145
+                     +g g++ ++   +a+i++ +++     +++ + + fslG i+g ++++gll 
+  XP_002651217.1  98 AGLGTVDSTvnLQAVIVERASG---KTMMSGFHGLFSLGGIVGaAGVAGLLG 146
+                     *****97651167888888887...677777777788888888789999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (157 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       602  (0.0313885); expected 383.6 (0.02)
+Passed bias filter:                      303  (0.0157985); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.22s 00:00:00.56 Elapsed: 00:00:00.59
+# Mc/sec: 863.58
+//
+[ok]

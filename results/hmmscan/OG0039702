@@ -1,0 +1,73 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039702.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039702
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q08722|CD47_HUMAN  [L=323]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    8.2e-54  181.2   1.0    1.2e-53  180.6   1.0    1.3  1  V-set_CD47  CD47 immunoglobulin-like domain
+    7.4e-53  178.8  25.3      1e-52  178.4  25.3    1.2  1  CD47        CD47 transmembrane region
+
+
+Domain annotation for each model (and alignments):
+>> V-set_CD47  CD47 immunoglobulin-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  180.6   1.0   1.3e-57   1.2e-53       1     130 []       8     142 ..       8     142 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 180.6 bits;  conditional E-value: 1.3e-57
+                           XXXXXXXXXXX---BE--SEEEE-TTSSEEEE--BBSS---SSGGGEEEEEEETTEEEEEEETTTTEEE.EGGGTT-BE..GGGGGTB- CS
+            V-set_CD47   1 lllglllivlaqlvfnkvksveytvCndtvvipCdvdnleyknisevyvkWkfknkdififnktekkst.sesfpsakl..sellkgda 86 
+                           lllg++++++aql+fnk+ksve+t+CndtvvipC+v+n+e++n++evyvkWkfk++di++f+++ +kst  ++f+sak+  s+llkgda
+  sp|Q08722|CD47_HUMAN   8 LLLGSACCGSAQLLFNKTKSVEFTFCNDTVVIPCFVTNMEAQNTTEVYVKWKFKGRDIYTFDGALNKSTvPTDFSSAKIevSQLLKGDA 96 
+                           5899*****************************************************************9******************* PP
+
+                           -EEEEHHHHH..-EEEEEEEEETTEEEEEEEEEEE--XXXXXXXXX CS
+            V-set_CD47  87 sLkldfsdal..sGnYtCevtelsneikttieLklrvvkwfseeek 130
+                           sLk+d+sda+  +GnYtCevtel++e++t+ieLk+rvv+wfs++e+
+  sp|Q08722|CD47_HUMAN  97 SLKMDKSDAVshTGNYTCEVTELTREGETIIELKYRVVSWFSPNEN 142
+                           *********9889******************************996 PP
+
+>> CD47  CD47 transmembrane region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  178.4  25.3     1e-56     1e-52       1     147 []     144     292 ..     144     292 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 178.4 bits;  conditional E-value: 1e-56
+                  CD47   1 livillilaiiLlwgqlgiitlkyks..vskklilllvagliitlivvvgaillipgeysvkkaiGlvLivlpavilivlqyllfkkvl 87 
+                           livi++i+ai+L+wgq+gi tlky+s  +++k+i llvagl+it+iv+vgail++pgeys+k+a+Gl+Liv++++ili+l+y++f++++
+  sp|Q08722|CD47_HUMAN 144 LIVIFPIFAILLFWGQFGIKTLKYRSggMDEKTIALLVAGLVITVIVIVGAILFVPGEYSLKNATGLGLIVTSTGILILLHYYVFSTAI 232
+                           79*************************************************************************************** PP
+
+                  CD47  88 kltsfviaililqvigyvlavvglalsvsaCkpvygsllisgLaiialaellgLvylvil 147
+                           +ltsfviail++qvi+y+lavvgl+l++ aC p++g+llisgL i+ala+llgLvy++++
+  sp|Q08722|CD47_HUMAN 233 GLTSFVIAILVIQVIAYILAVVGLSLCIAACIPMHGPLLISGLSILALAQLLGLVYMKFV 292
+                           *********************************************************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (323 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1446  (0.075395); expected 383.6 (0.02)
+Passed bias filter:                      617  (0.0321706); expected 383.6 (0.02)
+Passed Vit filter:                        62  (0.0032327); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.21s 00:00:00.61 Elapsed: 00:00:00.65
+# Mc/sec: 1596.40
+//
+[ok]

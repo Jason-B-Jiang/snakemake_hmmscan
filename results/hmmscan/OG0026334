@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0026334.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0026334
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|G5EER8|G5EER8_CAEEL  [L=210]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    6.8e-07   29.7   4.9      1e-06   29.1   4.9    1.4  1  Ly-6_related  Caenorhabditis elegans ly-6-related protein
+      1e-05   26.4   4.8    1.7e-05   25.7   4.8    1.4  1  QVR           Sleepless protein
+
+
+Domain annotation for each model (and alignments):
+>> Ly-6_related  Caenorhabditis elegans ly-6-related protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.1   4.9   1.1e-10     1e-06      27     124 ..      65     150 ..      25     151 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 29.1 bits;  conditional E-value: 1.1e-10
+            Ly-6_related  27 CddeeaeskiplvaCs..siCvtlvedkvvagvrigkkviRGClssvlreglnakktlslleeediCrklkaselfkleraekaess 111
+                               d+e+ + i+ ++Cs  siCvtl+ +         + v+RGC++++lr+   a+++l    ++d C+ l+   +++++      s 
+  tr|G5EER8|G5EER8_CAEEL  65 SIDPEDPHIIEGQICSkySICVTLFPN-----LPDSTFVVRGCFENILRHSRRAEEQL----QQDGCYLLRSLPMYSNT-----VSM 137
+                             335666799999***999*******98.....33334489*********998844433....5889*****99999944.....566 PP
+
+            Ly-6_related 112 evelCsCagdlCN 124
+                             +  +C+C+gd CN
+  tr|G5EER8|G5EER8_CAEEL 138 DYVVCTCNGDYCN 150
+                             777********** PP
+
+>> QVR  Sleepless protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.7   4.8   1.8e-09   1.7e-05       2      85 .]      25     150 ..      24     150 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 25.7 bits;  conditional E-value: 1.8e-09
+                     QVR   2 kCYeCksk.........................kekkCed..aeleaksskleeCe.kevCvklvtkekksktrvtRgC........ 52 
+                              C++C s+                         k++ C++  ++ + ++++ + C+ +++Cv l  +   ++t v RgC        
+  tr|G5EER8|G5EER8_CAEEL  25 SCFHCVSQdkqynatvrrqlatqtdiffypigvKSHYCSEsiDPEDPHIIEGQICSkYSICVTLFPN-LPDSTFVVRGCfenilrhs 110
+                             6****999999*******************9999999*998778888899999999888*****999.9************999987 PP
+
+                     QVR  53 lkelkekkkegCvkksseakelae.......ClCktdlCN 85 
+                                +++ +++gC+  +s   ++++       C+C+ d+CN
+  tr|G5EER8|G5EER8_CAEEL 111 RRAEEQLQQDGCYLLRSLPMYSNTvsmdyvvCTCNGDYCN 150
+                             7777788899***9999988888888999**********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (210 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       733  (0.0382189); expected 383.6 (0.02)
+Passed bias filter:                      446  (0.0232546); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.32u 0.22s 00:00:00.54 Elapsed: 00:00:00.64
+# Mc/sec: 1065.94
+//
+[ok]

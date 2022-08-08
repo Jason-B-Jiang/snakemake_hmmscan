@@ -1,0 +1,1786 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0002831.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0002831
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54S88|Q54S88_DICDI  [L=552]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-17   62.3  14.9     0.0038   17.3   0.4    7.1  4  LRR_6     Leucine Rich repeat
+    4.9e-09   36.1   0.0    4.9e-09   36.1   0.0    2.7  1  Ras       Ras family
+
+
+Domain annotation for each model (and alignments):
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.6   0.1   6.2e-06     0.059       7      24 .]      67      84 ..      65      84 .. 0.94
+   2 !   13.8   0.1   5.2e-06      0.05       1      24 []      89     112 ..      89     112 .. 0.95
+   3 !   17.3   0.4     4e-07    0.0038       2      21 ..     147     166 ..     146     169 .. 0.93
+   4 !   11.7   0.0   2.4e-05      0.23       2      23 ..     175     196 ..     174     197 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 6.2e-06
+                   LRR_6  7 tLdLsgNdIgdeGaeaLa 24
+                            +LdLs+N I+d G++ L+
+  tr|Q54S88|Q54S88_DICDI 67 SLDLSSNSITDIGIKHLC 84
+                            8**************998 PP
+
+  == domain 2  score: 13.8 bits;  conditional E-value: 5.2e-06
+                   LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                             sn++L  L L  N Igd G++ L+
+  tr|Q54S88|Q54S88_DICDI  89 SNRYLLFLKLDNNPIGDQGLKLLC 112
+                             69*******************998 PP
+
+  == domain 3  score: 17.3 bits;  conditional E-value: 4e-07
+                   LRR_6   2 nthLttLdLsgNdIgdeGae 21 
+                             n++L+t +L++N+I++eGa+
+  tr|Q54S88|Q54S88_DICDI 147 NHTLETIHLNSNKISNEGAI 166
+                             9*****************96 PP
+
+  == domain 4  score: 11.7 bits;  conditional E-value: 2.4e-05
+                   LRR_6   2 nthLttLdLsgNdIgdeGaeaL 23 
+                             ++ L+ L L +++Igd Ga a+
+  tr|Q54S88|Q54S88_DICDI 175 SSRLKNLSLFFCGIGDAGANAF 196
+                             578999************9765 PP
+
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   0.0   5.1e-13   4.9e-09      36     154 ..     421     544 ..     371     552 .] 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 5.1e-13
+                             EEEEEEEETTEEEEEEEEEETTSGGGHHHHHHHHTTESEEEEEEETTBHHHHHTHH.HHHHHHHHHSTTTSEEEEEEETTTGGG... CS
+                     Ras  36 fytkeievdgkevkleiwDTAGqeefkslrslyyrdaegillvyditsresfenvk.kwveeikrvaeenvpivLvGnKvDlee... 118
+                              +t  i++d+k ++++   T   +++++lr l y++a+++++ +  ++r sfe++  +w+ ei+ + +  +pi + G     ++   
+  tr|Q54S88|Q54S88_DICDI 421 IFTGIIQIDNKPIHFTFVNTSSDDRYSRLRALQYEQADAAVIAFTTNDRISFEDIPfQWIPEIEFMGK--IPIFITGMYPEKRSnpl 505
+                             4567899********************************************************97766..99**9998777776666 PP
+
+                             .G-SS-HHHHHHHHHHHT.SEEEE.EBTTTTTTHHHHHH CS
+                     Ras 119 .kravsteegeelakelg.lkfle.tSAktnenveeafe 154
+                                 +s eeg++++ ++g  +++e t   +  n++++++
+  tr|Q54S88|Q54S88_DICDI 506 kPTDISVEEGRTTSLKFGaSNYFEpTNSLDIRNISQIVY 544
+                             678999999999999999888888344455566766655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (552 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3179  (0.165754); expected 383.6 (0.02)
+Passed bias filter:                      543  (0.0283122); expected 383.6 (0.02)
+Passed Vit filter:                       105  (0.00547474); expected 19.2 (0.001)
+Passed Fwd filter:                        25  (0.00130351); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.56u 0.20s 00:00:00.76 Elapsed: 00:00:00.78
+# Mc/sec: 2290.44
+//
+Query:       sp|Q9NX02|NALP2_HUMAN  [L=1062]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    7.4e-46  156.2   0.0    2.3e-45  154.6   0.0    1.9  1  NACHT      NACHT domain
+    1.2e-19   70.4   2.6    1.1e-18   67.2   1.6    2.8  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    6.2e-18   65.7   0.1    2.4e-17   63.8   0.1    2.1  1  NLRC4_HD2  NLRC4 helical domain HD2
+    5.7e-13   49.0   0.1    2.6e-12   46.9   0.0    2.3  1  NOD2_WH    NOD2 winged helix domain
+    6.3e-11   41.5  24.0      0.017   15.3   0.4    7.3  4  LRR_6      Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  154.6   0.0   5.9e-49   2.3e-45       2     165 ..     208     374 ..     207     375 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 154.6 bits;  conditional E-value: 5.9e-49
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +v+l G+aG GKTtL+qkl+l+wae++l ++ fk+ F+ls+relsr g++ s+a+l+f+++pe+++++++    +l++++++L+++Dg
+  sp|Q9NX02|NALP2_HUMAN 208 TVVLYGPAGLGKTTLAQKLMLDWAEDNLIHK-FKYAFYLSCRELSRLGPC-SFAELVFRDWPELQDDIPH----ILAQARKILFVIDG 289
+                            89****************************7.****************99.*******************....************** PP
+
+                            STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT CS
+                  NACHT  90 lDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsd 165
+                            +Del + +g+         ++k+pv +lL++l+++ +lp+a ll+t+rpralrdl+ + ee+i++ vegf e++r++++ ++f d
+  sp|Q9NX02|NALP2_HUMAN 290 FDELGAAPGAliedicgdwEKKKPVPVLLGSLLNRVMLPKAALLVTTRPRALRDLRILAEEPIYIRVEGFLEEDRRAYFLRHFGD 374
+                            *********************************************************************************9987 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.2   1.6     3e-22   1.1e-18       2      75 .]      11      86 ..      10      86 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 67.2 bits;  conditional E-value: 3e-22
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           L+  Le+Ls++el+kFK l  +     +l++ip++e++kad+++l+++L+ ++ ++++ +  ++v+ek++++dl+e
+  sp|Q9NX02|NALP2_HUMAN 11 LQALLEQLSQDELSKFKYLITTFslAHELQKIPHKEVDKADGKQLVEILTTHCDSYWVEMASLQVFEKMHRMDLSE 86
+                           8999****************88778999**********************************************97 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.8   0.1   6.1e-21   2.4e-17       1     125 []     503     620 ..     503     620 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 63.8 bits;  conditional E-value: 6.1e-21
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hls+Q+F+ Al++ l++eee+++  +++      +    ++++l  + + ++ +l     + fGL++e+++++le+++g+++s+++kq
+  sp|Q9NX02|NALP2_HUMAN 503 HLSFQQFLTALFYTLEKEEEEDRDGHTWDIG---D----VQKLLSGVERLRNPDLIQAGYYSFGLANEKRAKELEATFGCRMSPDIKQ 583
+                            ****************999999944333222...2....27899******************************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelsserflnlfhcLyElqdeslvke 125
+                            ell++  +    + ++ ++ +l+ cLyE q+e+lvke
+  sp|Q9NX02|NALP2_HUMAN 584 ELLRCDISCKGGHSTVTDLQELLGCLYESQEEELVKE 620
+                            *****999999999999******************96 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.9   0.0   6.8e-16   2.6e-12       2      57 .]     446     501 ..     445     501 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 46.9 bits;  conditional E-value: 6.8e-16
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                             l++L+ LA++gLw++++v++ edL++ g++esd+  +l+  il+++  ++ +YsF
+  sp|Q9NX02|NALP2_HUMAN 446 ALRTLSLLAAQGLWAQTSVLHREDLERLGVQESDLRLFLDGDILRQDRVSKGCYSF 501
+                            599****************************************************9 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.3   0.4   4.3e-06     0.017       2      23 ..     810     831 ..     809     831 .. 0.93
+   2 !    9.6   0.0    0.0003       1.1       4      24 .]     869     889 ..     866     889 .. 0.90
+   3 !   12.6   0.2   3.2e-05      0.12       3      24 .]     925     946 ..     923     946 .. 0.92
+   4 !   14.1   0.0   1.1e-05     0.042       2      23 ..     981    1002 ..     980    1003 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 15.3 bits;  conditional E-value: 4.3e-06
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaL 23 
+                            n++Lt+++Ls+N++ deGa+ L
+  sp|Q9NX02|NALP2_HUMAN 810 NQSLTCVNLSDNELLDEGAKLL 831
+                            9******************865 PP
+
+  == domain 2  score: 9.6 bits;  conditional E-value: 0.0003
+                  LRR_6   4 hLttLdLsgNdIgdeGaeaLa 24 
+                             Lt+L L+ N Ig+ G++ L+
+  sp|Q9NX02|NALP2_HUMAN 869 ELTHLCLAKNPIGNTGVKFLC 889
+                            59****************997 PP
+
+  == domain 3  score: 12.6 bits;  conditional E-value: 3.2e-05
+                  LRR_6   3 thLttLdLsgNdIgdeGaeaLa 24 
+                            ++L +LdL+ N+Ig +G++ L+
+  sp|Q9NX02|NALP2_HUMAN 925 SSLLCLDLGLNHIGVKGMKFLC 946
+                            789***************9997 PP
+
+  == domain 4  score: 14.1 bits;  conditional E-value: 1.1e-05
+                  LRR_6    2 nthLttLdLsgNdIgdeGaeaL 23  
+                             n++L tLdL+ N +g  G+++L
+  sp|Q9NX02|NALP2_HUMAN  981 NQSLVTLDLGQNPLGSSGVKML 1002
+                             9*******************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1062 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       898  (0.046822); expected 383.6 (0.02)
+Passed bias filter:                      735  (0.0383232); expected 383.6 (0.02)
+Passed Vit filter:                       110  (0.00573544); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.63u 0.16s 00:00:00.79 Elapsed: 00:00:00.79
+# Mc/sec: 4357.13
+//
+Query:       sp|Q96P20|NLRP3_HUMAN  [L=1036]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    9.1e-49  165.7   0.1    3.2e-48  163.9   0.0    2.0  1  NACHT      NACHT domain
+    3.5e-30  105.3   1.4    1.4e-29  103.3   1.4    2.2  1  NLRC4_HD2  NLRC4 helical domain HD2
+    4.6e-22   78.1   0.0    1.8e-21   76.1   0.0    2.2  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    8.6e-20   70.8   0.3    1.7e-19   69.8   0.3    1.5  1  FISNA      Fish-specific NACHT associated domain
+    2.7e-19   69.3   7.5    2.7e-19   69.3   0.3    3.8  1  NOD2_WH    NOD2 winged helix domain
+    1.3e-19   68.6  26.8    0.00023   21.1   0.1    7.8  5  LRR_6      Leucine Rich repeat
+    2.7e-06   27.7  26.5      0.058   14.0   1.3    6.9  0  LRR_4      Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  163.9   0.0   1.2e-51   3.2e-48       1     166 []     220     389 ..     220     389 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 163.9 bits;  conditional E-value: 1.2e-51
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            ++v+ qG+aG+GKT+L++k++l+wa+g+l+q++f+++F++++re+s  ++  sl dl++s++p+p+ p+ +    +++ p r+L+++D
+  sp|Q96P20|NLRP3_HUMAN 220 HTVVFQGAAGIGKTILARKMMLDWASGTLYQDRFDYLFYIHCREVSLVTQR-SLGDLIMSCCPDPNPPIHK----IVRKPSRILFLMD 302
+                            589********************************************9877.*******************....************* PP
+
+                            -STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT- CS
+                  NACHT  89 glDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsda 166
+                            g+Del+  +++         +++++ + lLs+lirkkllpeasll+t+rp al++l+++l +++++e+ gfse +rk+++ kyfsd+
+  sp|Q96P20|NLRP3_HUMAN 303 GFDELQGAFDEhigplctdwQKAERGDILLSSLIRKKLLPEASLLITTRPVALEKLQHLLDHPRHVEILGFSEAKRKEYFFKYFSDE 389
+                            *******************999***************************************************************96 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.3   1.4   5.2e-33   1.4e-29       1     125 []     522     645 ..     522     645 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 103.3 bits;  conditional E-value: 5.2e-33
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            H+++QeFfAA+y++l+ee+e +     + +++ +  ++ ++ +l++  k ++g+l +++rFLfGL+++e+++ le+ l++k+s++++ 
+  sp|Q96P20|NLRP3_HUMAN 522 HMTFQEFFAAMYYLLEEEKEGRTN---VPGSRLKLPSRDVTVLLENYGKFEKGYLIFVVRFLFGLVNQERTSYLEKKLSCKISQQIRL 606
+                            ****************99888773...3444444322113689999999*************************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            ellkw++ k + +  +  ++ l+lf+cLyE+q+e++v++
+  sp|Q96P20|NLRP3_HUMAN 607 ELLKWIEVKAKAKKLQiqPSQLELFYCLYEMQEEDFVQR 645
+                            *******99999888889*******************85 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.1   0.0   6.8e-25   1.8e-21       2      75 .]      10      85 ..       9      85 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 76.1 bits;  conditional E-value: 6.8e-25
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           L  yLe+L++ +lkkFK++L+d+  ++g+ ++prg+ ekad vdla+l++ + ge++a+ +++ ++ +in++dl e
+  sp|Q96P20|NLRP3_HUMAN 10 LARYLEDLEDVDLKKFKMHLEDYppQKGCIPLPRGQTEKADHVDLATLMIDFNGEEKAWAMAVWIFAAINRRDLYE 85
+                           889******************999889999*******************************************976 PP
+
+>> FISNA  Fish-specific NACHT associated domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.8   0.3   6.3e-23   1.7e-19       1      72 []     140     210 ..     140     210 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 69.8 bits;  conditional E-value: 6.3e-23
+                  FISNA   1 lksnlkkkfqcifegnakqgestlLneiYTeLyitegesgevnreHEvrqiekasrkkaseetpIkcediFk 72 
+                            ++++++++fqci+++na+ ges+ Ln++YT+L ++++++++++re+E+++i+k+ ++ +s+ +pIk+e +F+
+  sp|Q96P20|NLRP3_HUMAN 140 YRKYVRSRFQCIEDRNARLGESVSLNKRYTRLRLIKEHRSQQEREQELLAIGKT-KTCESPVSPIKMELLFD 210
+                            6899**************************************************.***************96 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.3   0.3   9.8e-23   2.7e-19       3      57 .]     466     520 ..     464     520 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 69.3 bits;  conditional E-value: 9.8e-23
+                NOD2_WH   3 llkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            l++L++LA++g+w++k++F e+dL+ +gl+++dvs++l ++++qke ++ek+YsF
+  sp|Q96P20|NLRP3_HUMAN 466 LWGLCSLAADGIWNQKILFEESDLRNHGLQKADVSAFLRMNLFQKEVDCEKFYSF 520
+                            89***************************************************** PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.1   0.1   8.4e-08   0.00023       2      24 .]     740     762 ..     739     762 .. 0.93
+   2 !   15.5   0.2   5.1e-06     0.014       1      24 []     796     819 ..     796     819 .. 0.91
+   3 !    8.9   0.0   0.00067       1.8       2      20 ..     854     872 ..     853     876 .. 0.90
+   4 !   20.3   0.5   1.5e-07   0.00042       1      24 []     910     933 ..     910     933 .. 0.95
+   5 !   16.3   0.1     3e-06    0.0082       2      24 .]     968     990 ..     967     990 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 21.1 bits;  conditional E-value: 8.4e-08
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            +++Lt+LdLs+N +gd G+  L+
+  sp|Q96P20|NLRP3_HUMAN 740 SQSLTELDLSDNSLGDPGMRVLC 762
+                            79*****************9987 PP
+
+  == domain 2  score: 15.5 bits;  conditional E-value: 5.1e-06
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            sn++L +LdLs+N +gd G+  L+
+  sp|Q96P20|NLRP3_HUMAN 796 SNQKLVELDLSDNALGDFGIRLLC 819
+                            69***************9988776 PP
+
+  == domain 3  score: 8.9 bits;  conditional E-value: 0.00067
+                  LRR_6   2 nthLttLdLsgNdIgdeGa 20 
+                            +++Lt+L ++ N +gd G+
+  sp|Q96P20|NLRP3_HUMAN 854 SHSLTRLYVGENALGDSGV 872
+                            799***************8 PP
+
+  == domain 4  score: 20.3 bits;  conditional E-value: 1.5e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n++Lt+L L+gN +gd+G++ L+
+  sp|Q96P20|NLRP3_HUMAN 910 TNQNLTHLYLRGNTLGDKGIKLLC 933
+                            69******************9997 PP
+
+  == domain 5  score: 16.3 bits;  conditional E-value: 3e-06
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            +++L++L L+ Nd+gd G+++++
+  sp|Q96P20|NLRP3_HUMAN 968 SQSLRKLSLGNNDLGDLGVMMFC 990
+                            89******************987 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1036 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       781  (0.0407216); expected 383.6 (0.02)
+Passed bias filter:                      491  (0.0256009); expected 383.6 (0.02)
+Passed Vit filter:                        59  (0.00307628); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.55u 0.19s 00:00:00.74 Elapsed: 00:00:00.68
+# Mc/sec: 4910.54
+//
+Query:       sp|P59046|NAL12_HUMAN  [L=1061]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.6e-56  190.9   0.1    2.3e-54  183.9   0.0    2.5  1  NACHT      NACHT domain
+    1.1e-27   97.2   1.2      3e-27   95.8   1.2    1.8  1  NLRC4_HD2  NLRC4 helical domain HD2
+    1.5e-24   86.0   0.8    1.6e-23   82.7   0.1    2.8  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    7.2e-21   74.3   0.1    2.5e-20   72.6   0.1    2.0  1  NOD2_WH    NOD2 winged helix domain
+      6e-21   72.8  32.0    0.00054   19.9   0.8    9.0  5  LRR_6      Leucine Rich repeat
+    8.9e-14   51.5   0.5    1.6e-13   50.7   0.0    1.7  1  FISNA      Fish-specific NACHT associated domain
+    4.4e-06   27.0  24.0       0.19   12.3   0.2    7.4  0  LRR_4      Leucine Rich repeats (2 copies)
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  183.9   0.0   8.4e-58   2.3e-54       1     166 []     211     381 ..     211     381 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 183.9 bits;  conditional E-value: 8.4e-58
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            r+v++qG+aG+GK++L++k++l+wa+gkl+qg+f+++F++++re+++s +++s++dl+fs++pep+ap +e    l+++perlL+i+D
+  sp|P59046|NAL12_HUMAN 211 RTVVMQGAAGIGKSMLAHKVMLDWADGKLFQGRFDYLFYINCREMNQSATECSMQDLIFSCWPEPSAPLQE----LIRVPERLLFIID 294
+                            79***********************************************99********************....************* PP
+
+                            -STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT- CS
+                  NACHT  89 glDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsda 166
+                            g+Del+  ++          +ek+p++ lL++lirkkllpe sll+t+rp+al++l+++le+++++e+ gfse +rk++++kyf++a
+  sp|P59046|NAL12_HUMAN 295 GFDELKPSFHDpqgpwclcwEEKRPTELLLNSLIRKKLLPELSLLITTRPTALEKLHRLLEHPRHVEILGFSEAERKEYFYKYFHNA 381
+                            *******999999***********************************************************************985 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.8   1.2   1.1e-30     3e-27       1     125 []     514     628 ..     514     628 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 95.8 bits;  conditional E-value: 1.1e-30
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hls+QeFfAA+y++l+e e    +        +       +++l++   s++++l l+ rFLfGLl+ee++++le+ l  k+s+ +k 
+  sp|P59046|NAL12_HUMAN 514 HLSFQEFFAAMYYILDEGEGGAGPD-----QDV-------TRLLTEYAFSERSFLALTSRFLFGLLNEETRSHLEKSLCWKVSPHIKM 589
+                            ****************999998832.....222.......47899******************************************* PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            +ll+w+++k q++ s+  + +l++f+cLyE+q+e+++++
+  sp|P59046|NAL12_HUMAN 590 DLLQWIQSKAQSDGSTlqQGSLEFFSCLYEIQEEEFIQQ 628
+                            ***************999******************986 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.7   0.1   5.9e-27   1.6e-23       2      75 .]      13      87 ..      12      87 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 82.7 bits;  conditional E-value: 5.9e-27
+                           HCCCCCCC-HHHHHHHHHHHHH..--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde.eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           L  yLeeL++ elkkFK++L ++ e g  +ip+g +eka+++++a+lL+ ++g ++a++++++++e+in+kdl+e
+  sp|P59046|NAL12_HUMAN 13 LSTYLEELEAVELKKFKLYLGTAtELGEGKIPWGSMEKAGPLEMAQLLITHFGPEEAWRLALSTFERINRKDLWE 87
+                           7889****************9999*************************************************98 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.6   0.1   9.3e-24   2.5e-20       4      57 .]     459     512 ..     459     512 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 72.6 bits;  conditional E-value: 9.3e-24
+                NOD2_WH   4 lkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            ++L++LA++gLw++k++F e+dL+++gld +dvs++l+++i+qk+ ++e  YsF
+  sp|P59046|NAL12_HUMAN 459 RGLCSLAADGLWNQKILFEEQDLRKHGLDGEDVSAFLNMNIFQKDINCERYYSF 512
+                            68***************************************************9 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.4   0.1   0.00049       1.3       2      24 .]     769     791 ..     768     791 .. 0.93
+   2 !   17.7   0.4     1e-06    0.0029       1      24 []     825     848 ..     825     848 .. 0.94
+   3 !   19.9   0.8     2e-07   0.00054       2      24 .]     883     905 ..     882     905 .. 0.94
+   4 !   18.1   0.2   7.8e-07    0.0021       2      20 ..     940     958 ..     939     962 .. 0.90
+   5 !   15.7   0.4   4.5e-06     0.012       2      24 .]     997    1019 ..     997    1019 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 9.4 bits;  conditional E-value: 0.00049
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            n +Lt+ dLsgN++g  G++ L+
+  sp|P59046|NAL12_HUMAN 769 NKNLTRMDLSGNGVGFPGMMLLC 791
+                            99****************99997 PP
+
+  == domain 2  score: 17.7 bits;  conditional E-value: 1e-06
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n+hL +LdL+gN + d G+  L+
+  sp|P59046|NAL12_HUMAN 825 TNPHLVELDLTGNALEDLGLRLLC 848
+                            69******************9887 PP
+
+  == domain 3  score: 19.9 bits;  conditional E-value: 2e-07
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            n++L++LdLs N++gd G+  L+
+  sp|P59046|NAL12_HUMAN 883 NQSLRELDLSLNELGDLGVLLLC 905
+                            9******************9887 PP
+
+  == domain 4  score: 18.1 bits;  conditional E-value: 7.8e-07
+                  LRR_6   2 nthLttLdLsgNdIgdeGa 20 
+                            n++L++LdLs+Nd+gd G+
+  sp|P59046|NAL12_HUMAN 940 NHNLRELDLSFNDLGDWGL 958
+                            9***************765 PP
+
+  == domain 5  score: 15.7 bits;  conditional E-value: 4.5e-06
+                  LRR_6    2 nthLttLdLsgNdIgdeGaeaLa 24  
+                             n++Lt L L+ N +gd G+  L+
+  sp|P59046|NAL12_HUMAN  997 NQTLTDLYLTNNALGDTGVRLLC 1019
+                             99*****************9987 PP
+
+>> FISNA  Fish-specific NACHT associated domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.7   0.0     6e-17   1.6e-13       1      72 []     129     201 ..     129     201 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 50.7 bits;  conditional E-value: 6e-17
+                  FISNA   1 lksnlkkkfqcifegnakqgestlLneiYTeLyitegesgevnreHEvrqiekas.rkkaseetpIkcediFk 72 
+                            +++++++kf+ ++++na+ ge ++L+++YT+L++++++s+ ++ ++ ++++++ + r+  ++ +pIk+e++F+
+  sp|P59046|NAL12_HUMAN 129 YRDYVRRKFRLMEDRNARLGECVNLSHRYTRLLLVKEHSNPMQVQQQLLDTGRGHaRTVGHQASPIKIETLFE 201
+                            6899***********************************************9997477999***********6 PP
+
+>> LRR_4  Leucine Rich repeats (2 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1061 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       543  (0.0283122); expected 383.6 (0.02)
+Passed bias filter:                      468  (0.0244017); expected 383.6 (0.02)
+Passed Vit filter:                        67  (0.0034934); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.56u 0.22s 00:00:00.78 Elapsed: 00:00:00.75
+# Mc/sec: 4584.09
+//
+Query:       sp|P59044|NLRP6_HUMAN  [L=892]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.4e-45  153.4   0.0    1.3e-44  152.1   0.0    1.7  1  NACHT      NACHT domain
+    1.2e-19   70.3   0.0    4.1e-19   68.6   0.0    1.9  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    1.8e-18   67.5   0.0    1.2e-17   64.8   0.0    2.5  1  NLRC4_HD2  NLRC4 helical domain HD2
+    9.4e-08   32.3   0.3    5.2e-07   29.9   0.1    2.3  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.1   0.0   2.8e-48   1.3e-44       2     166 .]     197     365 ..     196     365 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 152.1 bits;  conditional E-value: 2.8e-48
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +v+lqG+aG+GKT+ ++k+  +wa+gkl+qg++++ Ff++++el ++  +rsladl+ +q+p+ +apv++    +l++p+rlL+ilDg
+  sp|P59044|NLRP6_HUMAN 197 TVVLQGPAGIGKTMAAKKILYDWAAGKLYQGQVDFAFFMPCGELLERPGTRSLADLILDQCPDRGAPVPQ----MLAQPQRLLFILDG 280
+                            89********************************************************************....************** PP
+
+                            STT-SS-TCH.................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT- CS
+                  NACHT  90 lDelvtdlgq........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsda 166
+                            +Del++  g+         e+++  ++L++l++k+llp+a ll+t+r  a  +l+  l++++++ev+gfs ++ k++++kyf+d+
+  sp|P59044|NLRP6_HUMAN 281 ADELPALGGPeaapctdpFEAASGARVLGGLLSKALLPTALLLVTTRAAAPGRLQGRLCSPQCAEVRGFSDKDKKKYFYKYFRDE 365
+                            ******9999************************************************************************986 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.6   0.0   8.6e-23   4.1e-19       2      74 ..      22      94 ..      21      95 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 68.6 bits;  conditional E-value: 8.6e-23
+                           HCCCCCCC-HHHHHHHHHHHHH.--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkdeeeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           Ll +LeeLs+e+lk+F+++L+d  ++ +sip+g+le+ad vdla++L ++yg + a+ev+ ++l++   +d+a
+  sp|P59044|NLRP6_HUMAN 22 LLAALEELSQEQLKRFRHKLRDVGPDGRSIPWGRLERADAVDLAEQLAQFYGPEPALEVARKTLKRADARDVA 94
+                           8888****************9998999***************************************9999987 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.8   0.0   2.5e-21   1.2e-17       3     125 .]     501     636 ..     500     636 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 64.8 bits;  conditional E-value: 2.5e-21
+              NLRC4_HD2   3 siQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkqel 90 
+                            s+QeF+AAl+++l++   ++       ++          ++l+    + ++hl l++rFLfGLls e++r +e+ +g+ +s+++kqe 
+  sp|P59044|NLRP6_HUMAN 501 SFQEFLAALSYLLEDGGVPRTAA---GGVG---------TLLRGD-AQPHSHLVLTTRFLFGLLSAERMRDIERHFGCMVSERVKQEA 575
+                            8*************888888722...3332.........244444.7899************************************** PP
+
+              NLRC4_HD2  91 lkwlkkkiqkelss..........................erflnlfhcLyElqdeslvke 125
+                            l+w++ + q    +                          ++ l+l++cLyE+q++ +v++
+  sp|P59044|NLRP6_HUMAN 576 LRWVQGQGQGCPGVapevtegakgledteepeeeeegeepNYPLELLYCLYETQEDAFVRQ 636
+                            ******9997666699***********************9999****************97 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.1   1.1e-10   5.2e-07       3      57 .]     442     497 ..     441     497 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 1.1e-10
+                NOD2_WH   3 llkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkes.seekvYsF 57 
+                            l++L++LA eg+  ++  F e++L++  l+ s+v++++l++       ++e +Y+F
+  sp|P59044|NLRP6_HUMAN 442 LRNLCRLAREGVLGRRAQFAEKELEQLELRGSKVQTLFLSKKELPGVlETEVTYQF 497
+                            89**************************************9877766688888888 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (892 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       627  (0.032692); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        65  (0.00338912); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.53u 0.16s 00:00:00.69 Elapsed: 00:00:00.73
+# Mc/sec: 3942.15
+//
+Query:       sp|Q86W24|NAL14_HUMAN  [L=1093]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.2e-41  142.4   0.0    2.6e-41  141.4   0.0    1.6  1  NACHT      NACHT domain
+    4.9e-27   95.1   3.8    2.5e-26   92.8   3.8    2.4  1  NLRC4_HD2  NLRC4 helical domain HD2
+    9.9e-26   89.8   1.9    4.1e-25   87.8   1.2    2.6  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    4.8e-19   68.5   0.0      3e-18   65.9   0.0    2.6  1  NOD2_WH    NOD2 winged helix domain
+    4.7e-19   66.9  54.4    0.00026   20.9   0.8   12.9  4  LRR_6      Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.4   0.0   6.7e-45   2.6e-41       2     165 ..     178     345 ..     177     346 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 141.4 bits;  conditional E-value: 6.7e-45
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +v+lqG+aG+GKTtL++k +l+waeg l+q++fk+vF+l+ re+++ ++  s+a+l+ +++p  ++p++e    ++ +p +lL+i+D+
+  sp|Q86W24|NAL14_HUMAN 178 IVVLQGAAGVGKTTLVRKAMLDWAEGSLYQQRFKYVFYLNGREINQLKER-SFAQLISKDWPSTEGPIEE----IMYQPSSLLFIIDS 260
+                            69********************************************9877.*******************....************** PP
+
+                            STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT CS
+                  NACHT  90 lDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsd 165
+                            +Del   +++          ++ pv  l+s+l+rk +lpeasll+t+r +++++l+++l+  +++e+ g+se+ r+++++++f+d
+  sp|Q86W24|NAL14_HUMAN 261 FDELNFAFEEpefalcedwTQEHPVSFLMSSLLRKVMLPEASLLVTTRLTTSKRLKQLLKNHHYVELLGMSEDAREEYIYQFFED 345
+                            *****999999*******99***************************************************************98 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   92.8   3.8   6.5e-30   2.5e-26       1     124 [.     480     596 ..     480     597 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 92.8 bits;  conditional E-value: 6.5e-30
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hl++QeFfAA++++l+ + e  +   +++  e         + l ++++ k+ hl+ + +FLfGLl+e + ++le+++++k+s ++k+
+  sp|Q86W24|NAL14_HUMAN 480 HLHVQEFFAAMFYMLKGSWEAGN--PSCQPFEDL-------KSLLQSTSYKDPHLTQMKCFLFGLLNEDRVKQLERTFNCKMSLKIKS 558
+                            ****************9999999..345555432.......346677799************************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvk 124
+                            +ll++++ + ++++s+    fl+lfhcLyE+qd+ ++ 
+  sp|Q86W24|NAL14_HUMAN 559 KLLQCMEVLGNSDYSPsqLGFLELFHCLYETQDKAFIS 596
+                            **********99999988999**************987 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.8   1.2   1.1e-28   4.1e-25       2      75 .]      15      89 ..      14      89 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 87.8 bits;  conditional E-value: 1.1e-28
+                           HCCCCCCC-HHHHHHHHHHHHH..--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde.eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           LllyLeeL++eel++FK++Lk++ e+++   p++e++ka r+dla+l+ ++y++++a+ v ++++ k+nlkdl+e
+  sp|Q86W24|NAL14_HUMAN 15 LLLYLEELNKEELNTFKLFLKETmEPEHGLTPWNEVKKARREDLANLMKKYYPGEKAWSVSLKIFGKMNLKDLCE 89
+                           9*******************9999**************************************************8 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.9   0.0   7.9e-22     3e-18       1      57 []     422     478 ..     422     478 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 65.9 bits;  conditional E-value: 7.9e-22
+                NOD2_WH   1 dtllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            ++l++L+++A++g+w++++vF+ e+L++ gl++sdvss+++++i+qk+++ e++Y F
+  sp|Q86W24|NAL14_HUMAN 422 AQLRRLCQVAAKGIWTMTYVFYRENLRRLGLTQSDVSSFMDSNIIQKDAEYENCYVF 478
+                            58*****************************************************99 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.7   1.1   1.6e-07   0.00063       1      24 []     727     750 ..     727     750 .. 0.97
+   2 !   10.9   0.3   0.00011      0.43       1      22 [.     841     862 ..     841     864 .. 0.91
+   3 !   20.9   0.8   6.7e-08   0.00026       1      24 []     898     921 ..     898     921 .. 0.96
+   4 !   19.2   1.0   2.4e-07   0.00091       1      21 [.     955     975 ..     955     978 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 19.7 bits;  conditional E-value: 1.6e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n +L +LdL+g dIgd G+++L+
+  sp|Q86W24|NAL14_HUMAN 727 HNKNLMHLDLKGSDIGDNGVKSLC 750
+                            89********************98 PP
+
+  == domain 2  score: 10.9 bits;  conditional E-value: 0.00011
+                  LRR_6   1 snthLttLdLsgNdIgdeGaea 22 
+                            sn  Lt+L L++N +gd G++ 
+  sp|Q86W24|NAL14_HUMAN 841 SNKRLTHLCLADNVLGDGGVKL 862
+                            5999***************985 PP
+
+  == domain 3  score: 20.9 bits;  conditional E-value: 6.7e-08
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n +Lt+LdL++N ++d G++ L+
+  sp|Q86W24|NAL14_HUMAN 898 HNKSLTHLDLGSNWLQDNGVKLLC 921
+                            89*******************998 PP
+
+  == domain 4  score: 19.2 bits;  conditional E-value: 2.4e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGae 21 
+                            +n++L++LdL+ Nd++d+G++
+  sp|Q86W24|NAL14_HUMAN 955 NNPNLRSLDLGNNDLQDDGVK 975
+                            69*****************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1093 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       633  (0.0330048); expected 383.6 (0.02)
+Passed bias filter:                      450  (0.0234632); expected 383.6 (0.02)
+Passed Vit filter:                        76  (0.00396267); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.59u 0.19s 00:00:00.78 Elapsed: 00:00:00.73
+# Mc/sec: 4837.72
+//
+Query:       sp|P59047|NALP5_HUMAN  [L=1200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.3e-45  153.4   0.0    1.5e-44  152.0   0.0    1.7  1  NACHT      NACHT domain
+    1.5e-23   80.9  47.8    1.5e-05   24.8   0.2   11.6  5  LRR_6      Leucine Rich repeat
+    4.9e-21   75.7   0.4    5.1e-20   72.5   0.0    2.6  1  NLRC4_HD2  NLRC4 helical domain HD2
+    1.1e-20   73.6   0.2    3.6e-20   72.0   0.2    2.0  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    2.2e-16   60.0   0.2    7.8e-15   55.0   0.0    3.2  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.0   0.0   3.8e-48   1.5e-44       1     161 [.     280     443 ..     280     446 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 152.0 bits;  conditional E-value: 3.8e-48
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            r+v+l+G++G+GK++L+++++l+wa+g l+qg+f++vFfl++re++r++++ s+ +++ +++p+++apv+e    ++++perlL+i+D
+  sp|P59047|NALP5_HUMAN 280 RTVVLHGKSGIGKSALARRIVLCWAQGGLYQGMFSYVFFLPVREMQRKKES-SVTEFISREWPDSQAPVTE----IMSRPERLLFIID 362
+                            79**********************************************999.*******************....************* PP
+
+                            -STT-SS-TCH.................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHH CS
+                  NACHT  89 glDelvtdlgq........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrk 161
+                            g+D+l + l++        +ekqp  tl+++l+rk llpe+ l++tvr  + ++l++ ++++++l v+g+s ++r +l+ +
+  sp|P59047|NALP5_HUMAN 363 GFDDLGSVLNNdtklckdwAEKQPPFTLIRSLLRKVLLPESFLIVTVRDVGTEKLKSEVVSPRYLLVRGISGEQRIHLLLE 443
+                            **************************************************************************9998765 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.5   0.0   3.9e-07    0.0015       2      24 .]     893     915 ..     892     915 .. 0.93
+   2 !   10.7   2.5   0.00013       0.5       1      23 [.     949     971 ..     949     972 .. 0.90
+   3 !   16.7   0.1   1.6e-06    0.0061       2      24 .]    1007    1029 ..    1006    1029 .. 0.95
+   4 !   24.8   0.2     4e-09   1.5e-05       2      24 .]    1064    1086 ..    1063    1086 .. 0.96
+   5 !   19.7   0.1   1.7e-07   0.00065       2      24 .]    1121    1143 ..    1120    1143 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 18.5 bits;  conditional E-value: 3.9e-07
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            +++L++L L+gN+++d G++ L+
+  sp|P59047|NALP5_HUMAN 893 SPSLKSLSLAGNKVTDQGVMPLS 915
+                            799*****************996 PP
+
+  == domain 2  score: 10.7 bits;  conditional E-value: 0.00013
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaL 23 
+                            sn++Lt+L Ls N +g+eG+  L
+  sp|P59047|NALP5_HUMAN 949 SNRSLTHLCLSNNSLGNEGVNLL 971
+                            69*****************9666 PP
+
+  == domain 3  score: 16.7 bits;  conditional E-value: 1.6e-06
+                  LRR_6    2 nthLttLdLsgNdIgdeGaeaLa 24  
+                             n++Lt+L Ls N + d G++ L+
+  sp|P59047|NALP5_HUMAN 1007 NSWLTHLSLSMNPVEDNGVKLLC 1029
+                             99******************998 PP
+
+  == domain 4  score: 24.8 bits;  conditional E-value: 4e-09
+                  LRR_6    2 nthLttLdLsgNdIgdeGaeaLa 24  
+                             ++hL++LdL++N +gd G+ aL+
+  sp|P59047|NALP5_HUMAN 1064 SRHLKSLDLTDNALGDGGVAALC 1086
+                             79********************8 PP
+
+  == domain 5  score: 19.7 bits;  conditional E-value: 1.7e-07
+                  LRR_6    2 nthLttLdLsgNdIgdeGaeaLa 24  
+                             n+hLt+L+L  N+++++G+++L+
+  sp|P59047|NALP5_HUMAN 1121 NRHLTSLNLVQNNFSPKGMMKLC 1143
+                             9*********************8 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   0.0   1.3e-23   5.1e-20       1     124 [.     584     701 ..     584     702 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 1.3e-23
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hls+Q F+AAly+vl+  e + + +  + e+ kr         ++ ++   + h  ++ rFLfGL+se  +r le llg+++   +kq
+  sp|P59047|NALP5_HUMAN 584 HLSLQDFCAALYYVLEGLEIEPALCPLYVEKTKR--------SMELKQAGFHIHSLWMKRFLFGLVSEDVRRPLEVLLGCPVPLGVKQ 663
+                            ******************9999966555544444........3455555556677788****************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvk 124
+                            +ll+w++ + q+   +   ++l  fhcL+E+qd+++v+
+  sp|P59047|NALP5_HUMAN 664 KLLHWVSLLGQQPNATtpGDTLDAFHCLFETQDKEFVR 701
+                            ******9988865554669*****************97 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.0   0.2   9.4e-24   3.6e-20       2      75 .]      65     140 ..      64     140 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 72.0 bits;  conditional E-value: 9.4e-24
+                            HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN   2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75 
+                            L+++L eL++ee+++FK+lLk++  e+  +sip+ e+e+a+ + la lL+e+yg++ a+   i+++e +nl+ l+e
+  sp|P59047|NALP5_HUMAN  65 LQWCLYELDKEEFQTFKELLKKKssESTTCSIPQFEIENANVECLALLLHEYYGASLAWATSISIFENMNLRTLSE 140
+                            9*******************888899999********************************************987 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.0   0.0     2e-18   7.8e-15       3      57 .]     528     582 ..     527     582 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 55.0 bits;  conditional E-value: 2e-18
+                NOD2_WH   3 llkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            l++++++A eg+w++k+vF+ +dL+  gl es++ ++++++il  +s++e+ Y+F
+  sp|P59047|NALP5_HUMAN 528 LKRFCRMAVEGVWNRKSVFDGDDLMVQGLGESELRALFHMNILLPDSHCEEYYTF 582
+                            899***************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1200 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1243  (0.0648105); expected 383.6 (0.02)
+Passed bias filter:                      752  (0.0392096); expected 383.6 (0.02)
+Passed Vit filter:                       114  (0.005944); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.67u 0.18s 00:00:00.85 Elapsed: 00:00:00.76
+# Mc/sec: 5103.72
+//
+Query:       sp|Q86W28|NALP8_HUMAN  [L=1048]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.2e-31  108.6   0.1    7.2e-31  107.4   0.1    1.6  1  NACHT      NACHT domain
+    1.5e-20   74.2   0.5      5e-20   72.5   0.2    2.2  1  NLRC4_HD2  NLRC4 helical domain HD2
+    1.7e-17   63.4   0.0    7.2e-17   61.4   0.0    2.2  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    1.2e-13   51.2   0.0    4.2e-13   49.4   0.0    2.0  1  NOD2_WH    NOD2 winged helix domain
+    2.2e-12   46.1  22.6    0.00046   20.1   0.4    7.4  3  LRR_6      Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.4   0.1   1.9e-34   7.2e-31       2     164 ..     205     371 ..     204     373 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 107.4 bits;  conditional E-value: 1.9e-34
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +v++qG++G+GKT+L++k++++wa++k ++ +    F+++++e+++ ++  s+ +l+ +++p +++ vs+    +++ p++lLl+lDg
+  sp|Q86W28|NALP8_HUMAN 205 TVAIQGAPGIGKTILAKKVMFEWARNKFYAHKRWCAFYFHCQEVNQTTDQ-SFSELIEQKWPGSQDLVSK----IMSKPDQLLLLLDG 287
+                            89****************************9999*************999.*******************....************** PP
+
+                            STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTT CS
+                  NACHT  90 lDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfs 164
+                            ++el + l            +k p  +lLs+l++k++lpea+ll+ +r ++++  + +l+ +  + ++gf+  +  +++  yf 
+  sp|Q86W28|NALP8_HUMAN 288 FEELTSTLIDrledlsedwRQKLPGSVLLSSLLSKTMLPEATLLIMIRFTSWQTCKPLLKCPSLVTLPGFNTMEKIKYFQMYFG 371
+                            ******99989*******99999********************************************************99986 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.5   0.2   1.3e-23     5e-20       2     125 .]     508     624 ..     508     624 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 72.5 bits;  conditional E-value: 1.3e-23
+              NLRC4_HD2   2 lsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkqe 89 
+                            +++QeFfAAl++vl++ ++ ++ ++ + +++        ++++    + ++++l+++ +FLfG+l+e++++ +e+ +++k+s  +k++
+  sp|Q86W28|NALP8_HUMAN 508 VTFQEFFAALFYVLCFPQRLKN-FHVLSHVNI-------QRLIASP-RGSKSYLSHMGLFLFGFLNEACASAVEQSFQCKVSFGNKRK 586
+                            59*****************999.655555544.......3455555.67899************************************ PP
+
+              NLRC4_HD2  90 llkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            llk++  + + + +s      +lf+cL+E+++e +v +
+  sp|Q86W28|NALP8_HUMAN 587 LLKVIPLLHKCDPPSpgSGVPQLFYCLHEIREEAFVSQ 624
+                            **********9999988888***************976 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.4   0.0   1.9e-20   7.2e-17       2      74 ..      41     114 ..      40     115 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 61.4 bits;  conditional E-value: 1.9e-20
+                            HCCCCCCC-HHHHHHHHHHHHH..--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN   2 LllyLeeLseeelkkFKslLkde.eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74 
+                            ++ly+ + s eel++FK lL +e   g  +i++ ++e+a++ ++++lL+e++++++a++vt +++  +n+ +++
+  sp|Q86W28|NALP8_HUMAN  41 VMLYMRNVSHEELQRFKQLLLTElSTGTMPITWDQVETASWAEVVHLLIERFPGRRAWDVTSNIFAIMNCDKMC 114
+                            7899****************9999999*******************************************9987 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.4   0.0   1.1e-16   4.2e-13       2      57 .]     450     505 ..     449     505 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 49.4 bits;  conditional E-value: 1.1e-16
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            +l++L++LA++ +w +k+v+ +edL+e+ ld++ v ++l + il++ ++ee +Y F
+  sp|Q86W28|NALP8_HUMAN 450 QLEGLCHLAADSMWHRKWVLGKEDLEEAKLDQTGVTAFLGMSILRRIAGEEDHYVF 505
+                            89********************************************99******99 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.5   0.0   1.7e-05     0.064       2      23 ..     866     887 ..     865     887 .. 0.91
+   2 !   20.1   0.4   1.2e-07   0.00046       1      24 []     922     945 ..     922     945 .. 0.95
+   3 !   16.6   0.2   1.6e-06    0.0062       1      23 [.     979    1001 ..     979    1002 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 13.5 bits;  conditional E-value: 1.7e-05
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaL 23 
+                            +  Lt+L L+ N + deGa+ +
+  sp|Q86W28|NALP8_HUMAN 866 SKMLTHLSLAENALKDEGAKHI 887
+                            678****************986 PP
+
+  == domain 2  score: 20.1 bits;  conditional E-value: 1.2e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n +L++LdLs+N + d+G++ L+
+  sp|Q86W28|NALP8_HUMAN 922 KNKTLKSLDLSFNSLKDDGVILLC 945
+                            699*****************9997 PP
+
+  == domain 3  score: 16.6 bits;  conditional E-value: 1.6e-06
+                  LRR_6    1 snthLttLdLsgNdIgdeGaeaL 23  
+                             +n+hL++LdLs N Ig  G+  L
+  sp|Q86W28|NALP8_HUMAN  979 KNQHLRHLDLSKNAIGVYGILTL 1001
+                             6**************97776666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1048 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       771  (0.0402002); expected 383.6 (0.02)
+Passed bias filter:                      588  (0.0306585); expected 383.6 (0.02)
+Passed Vit filter:                        76  (0.00396267); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.61u 0.19s 00:00:00.80 Elapsed: 00:00:00.68
+# Mc/sec: 4966.33
+//
+Query:       sp|Q9C000|NLRP1_HUMAN  [L=1473]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+   7.3e-107  356.6   0.0   4.7e-106  353.9   0.0    2.0  1  FIIND      Function to find
+    1.1e-46  158.9   0.2    8.6e-46  156.0   0.0    2.4  1  NACHT      NACHT domain
+    1.1e-19   70.3   0.5    3.3e-19   68.8   0.5    1.9  1  CARD       Caspase recruitment domain
+    9.6e-19   68.3   3.0    1.8e-18   67.5   1.4    2.4  1  NLRC4_HD2  NLRC4 helical domain HD2
+    2.6e-16   59.6   0.1    8.8e-16   57.9   0.1    2.0  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    5.4e-15   54.2  12.8    8.2e-06   25.6   0.2    5.6  2  LRR_6      Leucine Rich repeat
+    1.8e-13   50.6   0.0    6.4e-13   48.9   0.0    2.1  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> FIIND  Function to find
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  353.9   0.0  1.7e-109  4.7e-106       1     252 []    1100    1354 ..    1100    1354 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 353.9 bits;  conditional E-value: 1.7e-109
+                  FIIND    1 vqlpaaGlYecsetgLvFevreavtieyeflsWskfleaekeke.wvvaGPlFdikaepgavtaihlPHficlqasevdeslfkva 85  
+                             v++p+aG+Y++++tgL+F++reavt+e+ef++W++fl + ++++ w+vaGPl dikaepgav+a+hlPHf++lq+++vd+slf++a
+  sp|Q9C000|NLRP1_HUMAN 1100 VHFPVAGSYRWPNTGLCFVMREAVTVEIEFCVWDQFLGEINPQHsWMVAGPLLDIKAEPGAVEAVHLPHFVALQGGHVDTSLFQMA 1185
+                             79*****************************************9****************************************** PP
+
+                  FIIND   86 hvkdegmllekparveeshvvlevpslSpvGvvlr.isatsesipvtglvllYkkleaeestlhvylipsdvsirkaidkeekkkk 170 
+                             h+k+egmllekparve +h+vle+ps+Sp+Gv+l+ i++++++ipvt++vllY+++++ee+t+h+ylipsd+sirkaid+ e+k +
+  sp|Q9C000|NLRP1_HUMAN 1186 HFKEEGMLLEKPARVELHHIVLENPSFSPLGVLLKmIHNALRFIPVTSVVLLYHRVHPEEVTFHLYLIPSDCSIRKAIDDLEMK-F 1270
+                             ************************************************************************************.* PP
+
+                  FIIND  171 kfvkidkpppvesLeegsrYrlss..eaeleitPkelefvyrssgelqlfsevyleqlkeeikLslkekkseelvWeakvregd 252 
+                             +fv+i+kppp+++L++g rY++s+  +  lei Pkele++yrs+ge qlfse+y+++l+++i+L++k+kk+e+lvWea+v++gd
+  sp|Q9C000|NLRP1_HUMAN 1271 QFVRIHKPPPLTPLYMGCRYTVSGsgSGMLEILPKELELCYRSPGEDQLFSEFYVGHLGSGIRLQVKDKKDETLVWEALVKPGD 1354
+                             ***********************966777*****************************************************98 PP
+
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.0   0.0   3.2e-49   8.6e-46       1     166 []     328     497 ..     328     497 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 156.0 bits;  conditional E-value: 3.2e-49
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            r+vilqG+aG+GK+tL++++ +aw +g+l++++f++vF++s+rel +s+ + sla+l+ +++ +  ap+++    +l++perlL+ilD
+  sp|Q9C000|NLRP1_HUMAN 328 RIVILQGAAGIGKSTLARQVKEAWGRGQLYGDRFQHVFYFSCRELAQSKVV-SLAELIGKDGTATPAPIRQ----ILSRPERLLFILD 410
+                            689********************************************9888.*******************....************* PP
+
+                            -STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT- CS
+                  NACHT  89 glDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsda 166
+                            g+De  + l++         +++qp++ lL++l+ k++lpeas+l+t+r++al++l  +le+a+++ev gfses+rk+++++yf d+
+  sp|Q9C000|NLRP1_HUMAN 411 GVDEPGWVLQEpsselclhwSQPQPADALLGSLLGKTILPEASFLITARTTALQNLIPSLEQARWVEVLGFSESSRKEYFYRYFTDE 497
+                            ************************************************************************************986 PP
+
+>> CARD  Caspase recruitment domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.8   0.5   1.2e-22   3.3e-19       2      84 ..    1380    1461 ..    1379    1462 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 68.8 bits;  conditional E-value: 1.2e-22
+                             HHHHHTHHHHHHHSSHHHHHHHHHHHTTSS-HHHHHHHHTSSSHHHHHHHHHHHHHCTCHHHHHHHHHHHHHHTHHHHHHHHH CS
+                   CARD    2 elleknrvrLverlkslsglldyLlekkVLteeeeekikakttrlskareLldlvqkkgekaaqaFlealkegdpdlaslleg 84  
+                             ++++++r++L++r++s++ +ld+L+ + VL++e++e+++a++tr+s++r+L++l q++++k+++ +++alke++p+l ++l+ 
+  sp|Q9C000|NLRP1_HUMAN 1380 HFVDQYREQLIARVTSVEVVLDKLHGQ-VLSQEQYERVLAENTRPSQMRKLFSLSQSWDRKCKDGLYQALKETHPHLIMELWE 1461
+                             799************************.**************************************************99985 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.5   1.4   6.4e-22   1.8e-18       1     125 []     623     733 ..     623     733 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 67.5 bits;  conditional E-value: 6.4e-22
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hl++QeFfAA+++vl++e+ + ++ + + +lek+           +a++ +  +  +++rFL+GLls+e +r++e++++++ls+   +
+  sp|Q9C000|NLRP1_HUMAN 623 HLCFQEFFAAMSYVLEDEKGRGKHSNCIIDLEKT----------LEAYGIHGLFGASTTRFLLGLLSDEGEREMENIFHCRLSQ--GR 698
+                            ***********************88788877763..........57999******************************99996..59 PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelsserflnlfhcLyElqdeslvke 125
+                            +l++w+ ++    l ++++l+ +hcLyE++++ ++++
+  sp|Q9C000|NLRP1_HUMAN 699 NLMQWVPSLQL--LLQPHSLESLHCLYETRNKTFLTQ 733
+                            9*****99876..6677*****************976 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.9   0.1   3.2e-19   8.8e-16       2      74 ..       9      83 ..       8      84 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 57.9 bits;  conditional E-value: 3.2e-19
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           L  yLe L++eelk+F++lL ++   +  +  + ++ ek +++++a+ Lv++yge++a++++++++e+++l++l+
+  sp|Q9C000|NLRP1_HUMAN  9 LACYLEFLKKEELKEFQLLLANKahSRSSSGETPAQPEKTSGMEVASYLVAQYGEQRAWDLALHTWEQMGLRSLC 83
+                           7889****************66555555667779****************************************9 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.2     3e-09   8.2e-06       2      24 .]     864     886 ..     863     886 .. 0.96
+   2 !   17.8   0.1   9.8e-07    0.0027       2      24 .]     921     943 ..     920     943 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 3e-09
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            n++Lt+LdLs+N ++d Ga+ L+
+  sp|Q9C000|NLRP1_HUMAN 864 NQTLTELDLSFNVLTDAGAKHLC 886
+                            9********************98 PP
+
+  == domain 2  score: 17.8 bits;  conditional E-value: 9.8e-07
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            +++L++LdL+ N+++d+G+  L+
+  sp|Q9C000|NLRP1_HUMAN 921 SPSLKELDLQQNNLDDVGVRLLC 943
+                            799****************9987 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.9   0.0   2.3e-16   6.4e-13       2      49 ..     567     613 ..     566     621 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 48.9 bits;  conditional E-value: 2.3e-16
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkes 49 
+                            +l+ L++LA+eg+w++k++Fs +dL+++gld + +s++l + ilq+ +
+  sp|Q9C000|NLRP1_HUMAN 567 QLRDLCSLAAEGIWQKKTLFSPDDLRKHGLDGAIISTFLKMGILQE-H 613
+                            79*******************************************9.4 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1473 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       514  (0.0268001); expected 383.6 (0.02)
+Passed bias filter:                      452  (0.0235674); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.66u 0.18s 00:00:00.84 Elapsed: 00:00:00.68
+# Mc/sec: 6957.64
+//
+Query:       sp|Q8WX94|NALP7_HUMAN  [L=980]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.6e-42  143.6   0.0    1.3e-41  142.4   0.0    1.6  1  NACHT      NACHT domain
+    1.1e-20   74.6   0.4    5.4e-20   72.4   0.4    2.3  1  NLRC4_HD2  NLRC4 helical domain HD2
+    2.4e-20   72.6   3.7    2.6e-19   69.2   1.7    2.8  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    3.4e-14   53.0   0.6    1.6e-13   50.8   0.1    2.5  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  142.4   0.0   2.7e-45   1.3e-41       2     165 ..     173     339 ..     172     340 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 142.4 bits;  conditional E-value: 2.7e-45
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +v+l+G+aG+GKTtL++k +l+w + +l     ++ F+ls++elsr g++ s+a+l+ +++pe++++++     +l++++r+L+++Dg
+  sp|Q8WX94|NALP7_HUMAN 173 TVVLHGPAGVGKTTLAKKCMLDWTDCNLSPT-LRYAFYLSCKELSRMGPC-SFAELISKDWPELQDDIPS----ILAQAQRILFVVDG 254
+                            89*************************9997.6***************99.*******************....************** PP
+
+                            STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT CS
+                  NACHT  90 lDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsd 165
+                            lDel+  +g+         ++k+pv +lL++l+++k+lp+a ll+t+rpralrdl+ + +++i++ vegf e++r++++ ++f d
+  sp|Q8WX94|NALP7_HUMAN 255 LDELKVPPGAliqdicgdwEKKKPVPVLLGSLLKRKMLPRAALLVTTRPRALRDLQLLAQQPIYVRVEGFLEEDRRAYFLRHFGD 339
+                            *********************************************************************************9987 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.4   0.4   1.1e-23   5.4e-20       1     124 [.     468     585 ..     468     586 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 72.4 bits;  conditional E-value: 1.1e-23
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hls+Q+F+ Al+++l++ee +++  +        +    ++++l    + k+ +l  + +FLfGL++e+++++le+++g+++s+++kq
+  sp|Q8WX94|NALP7_HUMAN 468 HLSFQQFLTALFYALEKEEGEDRDGHA---WDIGD----VQKLLSGEERLKNPDLIQVGHFLFGLANEKRAKELEATFGCRMSPDIKQ 548
+                            ****************99999884422...22222....27899999999************************************** PP
+
+              NLRC4_HD2  89 ellkwlkk.kiqkelsserflnlfhcLyElqdeslvk 124
+                            ell++ +    +k ls+ ++ +++ cLyE q+e+l+k
+  sp|Q8WX94|NALP7_HUMAN 549 ELLQCKAHlHANKPLSVTDLKEVLGCLYESQEEELAK 585
+                            *****887255556666******************97 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.2   1.7   5.5e-23   2.6e-19       2      75 .]      10      85 ..       9      85 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 69.2 bits;  conditional E-value: 5.5e-23
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           L+  Le+L+e+elk+FKslL+    e+ l++ p++e+e+ad+++la++Lv++ +e+++ + t+++le++nl++l++
+  sp|Q8WX94|NALP7_HUMAN 10 LQTLLEQLNEDELKSFKSLLWAFplEDVLQKTPWSEVEEADGKKLAEILVNTSSENWIRNATVNILEEMNLTELCK 85
+                           7888****************987888999*********************************************96 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.8   0.1   3.3e-17   1.6e-13       2      57 .]     411     466 ..     410     466 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 50.8 bits;  conditional E-value: 3.3e-17
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                             l++L+ LA++gLw++++vF+ edL++ g++esd+  +l+  il+++  ++ +YsF
+  sp|Q8WX94|NALP7_HUMAN 411 ALRTLSLLAAQGLWAQMSVFHREDLERLGVQESDLRLFLDGDILRQDRVSKGCYSF 466
+                            599****************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (980 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       722  (0.0376453); expected 383.6 (0.02)
+Passed bias filter:                      564  (0.0294072); expected 383.6 (0.02)
+Passed Vit filter:                        78  (0.00406695); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.59u 0.18s 00:00:00.77 Elapsed: 00:00:00.75
+# Mc/sec: 4237.52
+//
+Query:       sp|Q86W26|NAL10_HUMAN  [L=655]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-42  144.8   0.7    6.5e-42  143.4   0.1    2.1  1  NACHT     NACHT domain
+    8.1e-20   70.9   0.5    8.1e-20   70.9   0.5    2.7  1  PYRIN     PAAD/DAPIN/Pyrin domain
+    8.5e-11   42.1   1.8    2.5e-10   40.6   0.1    2.6  1  NOD2_WH   NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  143.4   0.1     1e-45   6.5e-42       2     166 .]     168     331 ..     167     331 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 143.4 bits;  conditional E-value: 1e-45
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            lv+lqG aG GKTtL++k++l+wa+g+l+ g+f++vF++s++e+    ++  l +llf ++ + +apv+e    +l++perlL+ilDg
+  sp|Q86W26|NAL10_HUMAN 168 LVVLQGSAGTGKTTLARKMVLDWATGTLYPGRFDYVFYVSCKEVVLLLES-KLEQLLFWCCGDNQAPVTE----ILRQPERLLFILDG 250
+                            79********************************************9988.*******************....************** PP
+
+                            STT-SS-TCH.............HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT- CS
+                  NACHT  90 lDelvtdlgq....kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsda 166
+                            +Del++ +++     +  p + lL+ lir+  lp++sll+t+rp alr+le +l++a+++++ gfse++r+++++ yf d+
+  sp|Q86W26|NAL10_HUMAN 251 FDELQRPFEEklkkRGLSPKESLLHLLIRRHTLPTCSLLITTRPLALRNLEPLLKQARHVHILGFSEEERARYFSSYFTDE 331
+                            *******999997666678899********************************************************986 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.9   0.5   1.3e-23   8.1e-20       2      74 ..      13      87 ..      12      88 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 70.9 bits;  conditional E-value: 1.3e-23
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           Ll++L +L+e+++kk+K++L+d+   eg++++ rgele   +vdla+lL++kyge++av+v+++ l+ +nl +l+
+  sp|Q86W26|NAL10_HUMAN 13 LLWALSDLEENDFKKLKFYLRDMtlSEGQPPLARGELEGLIPVDLAELLISKYGEKEAVKVVLKGLKVMNLLELV 87
+                           9*******************99899**********************************************9997 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.6   0.1   3.9e-14   2.5e-10       2      57 .]     409     464 ..     408     464 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 40.6 bits;  conditional E-value: 3.9e-14
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            +l++L++LA+eg++ ++++F e +L++++ld   + ++l ++  q     +k+YsF
+  sp|Q86W26|NAL10_HUMAN 409 VLRSLCSLAAEGIQHQRFLFEEAELRKHNLDGPRLAAFLSSNDYQLGLAIKKFYSF 464
+                            69****************************************99998899999999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (655 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       976  (0.050889); expected 383.6 (0.02)
+Passed bias filter:                      631  (0.0329006); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.47u 0.16s 00:00:00.63 Elapsed: 00:00:00.63
+# Mc/sec: 3349.32
+//
+Query:       sp|Q86W25|NAL13_HUMAN  [L=1043]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    5.4e-33  114.3   0.0    1.3e-32  113.1   0.0    1.7  1  NACHT      NACHT domain
+    2.7e-26   92.7   3.5      1e-25   90.9   3.5    2.1  1  NLRC4_HD2  NLRC4 helical domain HD2
+    2.4e-20   72.6   0.6    2.3e-19   69.4   0.0    2.9  1  PYRIN      PAAD/DAPIN/Pyrin domain
+      3e-15   55.0  38.2    9.5e-05   22.3   0.1    9.4  4  LRR_6      Leucine Rich repeat
+    2.5e-08   34.1   0.2    2.5e-07   31.0   0.0    2.9  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.1   0.0   3.3e-36   1.3e-32       2     165 ..     230     401 ..     229     402 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 113.1 bits;  conditional E-value: 3.3e-36
+                            CEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE- CS
+                  NACHT   2 lvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDg 89 
+                            +++l G+aG+GKTtL+ + +l wa g l+q++f++vF+ls+++++  +++ ++a+l+  ++p+  ap++e     +++pe+lL+i+Dg
+  sp|Q86W25|NAL13_HUMAN 230 TIVLVGRAGVGKTTLAMQAMLHWANGVLFQQRFSYVFYLSCHKIRYMKET-TFAELISLDWPDFDAPIEE----FMSQPEKLLFIIDG 312
+                            89*********************************************999.*******************....************** PP
+
+                            STT-SS-TCH......................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTT CS
+                  NACHT  90 lDelvtdlgq.............kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfs 164
+                            ++e+    +               ++ pv + L++l++k+l+p a+ll+t+++  +rdl+ +l+ +  +++ gf+ ++ + +++++f 
+  sp|Q86W25|NAL13_HUMAN 313 FEEIIISESRseslddgspctdwYQELPVTKILHSLLKKELVPLATLLITIKTWFVRDLKASLVNPCFVQITGFTGDDLRVYFMRHFD 400
+                            ***9877766889*********99**************************************************************98 PP
+
+                            T CS
+                  NACHT 165 d 165
+                            d
+  sp|Q86W25|NAL13_HUMAN 401 D 401
+                            7 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.9   3.5   2.6e-29     1e-25       1     125 []     536     653 ..     536     653 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 90.9 bits;  conditional E-value: 2.6e-29
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hls+QeFfAA+++vl+e +e        ++++ +e    +k +l+++l  k+ +++++++F+fGLl+++ +r+le++l++k+s+++++
+  sp|Q86W25|NAL13_HUMAN 536 HLSFQEFFAAMSFVLEEPREFPP-----HSTKPQE----MKMLLQHVLLDKEAYWTPVVLFFFGLLNKNIARELEDTLHCKISPRVME 614
+                            ****************9999888.....2333333....3679********************************************* PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            ellkw +++ + e  s   ++l lfhcL+E q+e+++k+
+  sp|Q86W25|NAL13_HUMAN 615 ELLKWGEELGKAESASlqFHILRLFHCLHESQEEDFTKK 653
+                            *********999999998999***************985 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.4   0.0     6e-23   2.3e-19       2      75 .]      17      99 ..      16      99 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 69.4 bits;  conditional E-value: 6e-23
+                           HCCCCCCC-HHHHHHHHHHH........HH..--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslL........kde.eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdlae 75
+                           Ll yL+ L++++l++FK++L        + + + ++++ip+++l+ ad+++l  lL e++++ +a++v++ +++ +nl++l+e
+  sp|Q86W25|NAL13_HUMAN 17 LLPYLMALDQYQLEEFKLCLepqqlmdfWSApQGHFPRIPWANLRAADPLNLSFLLDEHFPKGQAWKVVLGIFQTMNLTSLCE 99
+                           9*******************99888555444888999*********************************************8 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.7   0.3   0.00027         1       2      16 ..     781     795 ..     780     795 .. 0.94
+   2 !    9.4   0.1   0.00033       1.3       3      24 .]     838     859 ..     836     859 .. 0.94
+   3 !   22.3   0.1   2.5e-08   9.5e-05       1      24 []     893     916 ..     893     916 .. 0.96
+   4 !   18.8   0.9   3.2e-07    0.0012       1      24 []     950     973 ..     950     973 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.00027
+                  LRR_6   2 nthLttLdLsgNdIg 16 
+                            n++Lt+L+ s+N++g
+  sp|Q86W25|NAL13_HUMAN 781 NSKLTHLNFSSNKLG 795
+                            99***********97 PP
+
+  == domain 2  score: 9.4 bits;  conditional E-value: 0.00033
+                  LRR_6   3 thLttLdLsgNdIgdeGaeaLa 24 
+                            +h+t+L L++N ++d+G++ L+
+  sp|Q86W25|NAL13_HUMAN 838 QHVTRLCLGFNRLQDDGIKLLC 859
+                            79****************9997 PP
+
+  == domain 3  score: 22.3 bits;  conditional E-value: 2.5e-08
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n++Lt+L+Ls N + deG++ L+
+  sp|Q86W25|NAL13_HUMAN 893 QNRSLTHLNLSKNSLRDEGVKFLC 916
+                            69*******************997 PP
+
+  == domain 4  score: 18.8 bits;  conditional E-value: 3.2e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n++++ LdL+ Nd++d+G++ L+
+  sp|Q86W25|NAL13_HUMAN 950 HNHNVKILDLGENDLQDDGVKLLC 973
+                            8********************998 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.0   0.0   6.6e-11   2.5e-07       2      53 ..     479     530 ..     478     535 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 31.0 bits;  conditional E-value: 6.6e-11
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseek 53 
+                            ++++L++LA egLw+++++F++ed +  gl++  ++s+   +ilqk +++  
+  sp|Q86W25|NAL13_HUMAN 479 QWRALCSLAIEGLWSMNFTFNKEDTEIEGLEVPFIDSLYEFNILQKINDCGG 530
+                            79************************************999****9885543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1043 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1000  (0.0521404); expected 383.6 (0.02)
+Passed bias filter:                      635  (0.0331091); expected 383.6 (0.02)
+Passed Vit filter:                        92  (0.00479691); expected 19.2 (0.001)
+Passed Fwd filter:                        19  (0.000990667); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.63u 0.17s 00:00:00.80 Elapsed: 00:00:00.68
+# Mc/sec: 4944.86
+//
+Query:       sp|P59045|NAL11_HUMAN  [L=1033]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.3e-19   70.8   0.3    4.5e-19   69.1   0.0    2.2  1  NACHT      NACHT domain
+    3.9e-15   55.9   1.2    2.2e-14   53.4   0.5    2.7  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    1.1e-10   42.3   0.2    4.9e-10   40.2   0.2    2.2  1  NLRC4_HD2  NLRC4 helical domain HD2
+    4.3e-07   29.6  31.5     0.0036   17.4   0.1   10.1  2  LRR_6      Leucine Rich repeat
+    7.5e-07   29.4   0.1    4.8e-06   26.9   0.1    2.6  1  NOD2_WH    NOD2 winged helix domain
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.1   0.0   1.2e-22   4.5e-19       3     165 ..     149     315 ..     147     316 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 69.1 bits;  conditional E-value: 1.2e-22
+                            EEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE-S CS
+                  NACHT   3 vilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilDgl 90 
+                            v+l Ge  sGKT+ +   +l w +g+  q++ ++v +l+ +e+++ +n+ sla+l+++++p+ +ap+      +l+ p++lL+il +l
+  sp|P59045|NAL11_HUMAN 149 VFLMGERASGKTIVINLAVLRWIKGEMWQNMISYVVHLTAHEINQMTNS-SLAELIAKDWPDGQAPIAD----ILSDPKKLLFILEDL 231
+                            7899*********************************************.*******************....*************** PP
+
+                            TT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT CS
+                  NACHT  91 Delvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsd 165
+                            D ++ +l+           +k p+ +lL +l+++k+ p++ +l+++rp++ ++++  l+e  +     +s  +r+ +++ +f+d
+  sp|P59045|NAL11_HUMAN 232 DNIRFELNVnesalcsnsTQKVPIPVLLVSLLKRKMAPGCWFLISSRPTRGNNVKTFLKEVDCCTTLQLSNGKREIYFNSFFKD 315
+                            ****9999999******99******************************************9*****************99987 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.4   0.5   5.9e-18   2.2e-14       2      74 ..      11      82 ..      10      83 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 53.4 bits;  conditional E-value: 5.9e-18
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           Ll+yLe+Ls++e+++FK +L  +  +    ++p+  l + ++++la++L   y+++++++++++++  ++ +dl+
+  sp|P59045|NAL11_HUMAN 11 LLWYLENLSDKEFQSFKKYLARKilDF---KLPQFPLIQMTKEELANVLPISYEGQYIWNMLFSIFSMMRKEDLC 82
+                           9*******************4433455...7777777777799*******************************9 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.2   0.2   1.3e-13   4.9e-10       1     124 [.     450     559 ..     450     560 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 40.2 bits;  conditional E-value: 1.3e-13
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellg.t.klssek 86 
+                            Hl +QeF+ A+ +++   +    +     +  +re          k  ++++++++ +  F+fGLl+ +++++le+ +g   ++ ++ 
+  sp|P59045|NAL11_HUMAN 450 HLNVQEFCTAIAFLMAVPNYLIPS-----G--SRE---------YKEKREQYSDFNQVFTFIFGLLNANRRKILETSFGyQlPMVDSF 521
+                            9**************977777772.....2..222.........2334678999999**********************533667777 PP
+
+              NLRC4_HD2  87 kqellkwlkkkiqkelsserflnlfhcLyElqdeslvk 124
+                            k   + ++k + ++  +  + + lf+cLyE ++e++vk
+  sp|P59045|NAL11_HUMAN 522 KWYSVGYMKHLDRDPEKLTHHMPLFYCLYENREEEFVK 559
+                            777888888888877777******************98 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   0.1   9.5e-07    0.0036       1      24 []     858     881 ..     858     881 .. 0.94
+   2 !   10.8   1.0   0.00012      0.47       1      23 [.     915     937 ..     915     938 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 9.5e-07
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            +n +L++L++++N+I d G++ L+
+  sp|P59045|NAL11_HUMAN 858 TNEKLRSLEIGSNKIEDAGMQLLC 881
+                            599*****************9997 PP
+
+  == domain 2  score: 10.8 bits;  conditional E-value: 0.00012
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaL 23 
+                            +n +L++L+L  N++g++G+ +L
+  sp|P59045|NAL11_HUMAN 915 TNKTLERLNLLQNHLGNDGVAKL 937
+                            599*****************998 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.9   0.1   1.2e-09   4.8e-06       2      57 .]     393     448 ..     392     448 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 26.9 bits;  conditional E-value: 1.2e-09
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            +l++L+ LA+ gL  ++l Fs edL+  g++e+dvs +   +il  ++ ++  Y F
+  sp|P59045|NAL11_HUMAN 393 LLKRLCLLAAGGLFLSTLNFSGEDLRCVGFTEADVSVLQAANILLPSNTHKDRYKF 448
+                            699***************************************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1033 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       705  (0.036759); expected 383.6 (0.02)
+Passed bias filter:                      510  (0.0265916); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.65u 0.22s 00:00:00.87 Elapsed: 00:00:00.49
+# Mc/sec: 6747.72
+//
+Query:       sp|Q96MN2|NALP4_HUMAN  [L=994]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    4.3e-47  160.2   0.1    7.3e-46  156.2   0.0    2.8  1  NACHT      NACHT domain
+    9.3e-28   96.3  10.6    9.9e-28   96.2   6.2    3.3  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    1.8e-24   86.8   2.8    1.8e-24   86.8   2.8    2.8  1  NLRC4_HD2  NLRC4 helical domain HD2
+    1.1e-14   54.6   0.7    1.6e-13   50.8   0.0    3.6  1  NOD2_WH    NOD2 winged helix domain
+    1.2e-12   46.9  19.5    0.00014   21.8   0.2    7.0  3  LRR_6      Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.2   0.0   1.9e-49   7.3e-46       1     165 [.     149     317 ..     149     318 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 156.2 bits;  conditional E-value: 1.9e-49
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            r+vi+qG++G+GKTtLl kl++aw ++k ++++f + F++++rel++  ++ sladl+ +++p+paap++e    ++++perlL+++D
+  sp|Q96MN2|NALP4_HUMAN 149 RTVIIQGPQGIGKTTLLMKLMMAWSDNKIFRDRFLYTFYFCCRELRELPPT-SLADLISREWPDPAAPITE----IVSQPERLLFVID 231
+                            79**********************************************988.*******************....************* PP
+
+                            -STT-SS-TCH..................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTTT CS
+                  NACHT  89 glDelvtdlgq.........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfsd 165
+                            +++el+  l++         +ek+pv++lLs+l+rkk+lpeasll++++p + ++l+ q+  +++++ +gf+es+r  +++++f+d
+  sp|Q96MN2|NALP4_HUMAN 232 SFEELQGGLNEpdsdlcgdlMEKRPVQVLLSSLLRKKMLPEASLLIAIKPVCPKELRDQVTISEIYQPRGFNESDRLVYFCCFFKD 317
+                            ***********************************************************************************987 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.2   6.2   2.6e-31   9.9e-28       2      74 ..      11      85 ..      10      86 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 96.2 bits;  conditional E-value: 2.6e-31
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           L++yLeeL++ee++kFK++Lk++  + +lk+ip++e++ka+r++la+lL+++y+e++a+++t+++++k+ +kdl+
+  sp|Q96MN2|NALP4_HUMAN 11 LMWYLEELKKEEFRKFKEHLKQMtlQLELKQIPWTEVKKASREELANLLIKHYEEQQAWNITLRIFQKMDRKDLC 85
+                           9*******************9988**************************************************9 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.8   2.8   4.7e-28   1.8e-24       1     125 []     452     568 ..     452     568 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 86.8 bits;  conditional E-value: 4.7e-28
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            H++iQeF+AAl+++l+++ ++ ++      ++  +     + ++ ++ k+++ h+ ++ +FL GLl++++q++l++++g +ls+e+kq
+  sp|Q96MN2|NALP4_HUMAN 452 HVCIQEFCAALFYLLKSHLDHPHPA-----VRCVQ-----ELLVANFEKARRAHWIFLGCFLTGLLNKKEQEKLDAFFGFQLSQEIKQ 529
+                            9***************999999955.....33222.....3468999999************************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            ++ ++lk++ ++  ++   ++l +f+cL+E+qd  +vk+
+  sp|Q96MN2|NALP4_HUMAN 530 QIHQCLKSLGERGNPQgqVDSLAIFYCLFEMQDPAFVKQ 568
+                            *********999888899*******************97 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.8   0.0   4.1e-17   1.6e-13       2      57 .]     395     450 ..     394     450 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 50.8 bits;  conditional E-value: 4.1e-17
+                NOD2_WH   2 tllkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekvYsF 57 
+                            +l++L++LA+eg+w+ ++ F+e+dL++ g+ ++d++++l t+il k  + e+ Y F
+  sp|Q96MN2|NALP4_HUMAN 395 QLKALCSLAAEGMWTDTFEFCEDDLRRNGVVDADIPALLGTKILLKYGERESSYVF 450
+                            89********************************************9999999999 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.9   0.6   0.00011      0.42       1      16 [.     749     764 ..     749     766 .. 0.91
+   2 !   14.6   0.0   7.5e-06     0.029       2      24 .]     806     828 ..     805     828 .. 0.95
+   3 !   21.8   0.2   3.5e-08   0.00014       1      24 []     862     885 ..     862     885 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 0.00011
+                  LRR_6   1 snthLttLdLsgNdIg 16 
+                            +n +Lt+L++s+N+++
+  sp|Q96MN2|NALP4_HUMAN 749 NNKKLTYLNVSCNQLD 764
+                            599***********97 PP
+
+  == domain 2  score: 14.6 bits;  conditional E-value: 7.5e-06
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            n ++++LdLs N + deG++ L+
+  sp|Q96MN2|NALP4_HUMAN 806 NKSVRYLDLSANVLKDEGLKTLC 828
+                            899*****************998 PP
+
+  == domain 3  score: 21.8 bits;  conditional E-value: 3.5e-08
+                  LRR_6   1 snthLttLdLsgNdIgdeGaeaLa 24 
+                            sn++L+ L +++N+Igd+G++ L+
+  sp|Q96MN2|NALP4_HUMAN 862 SNQNLKILQIGCNEIGDVGVQLLC 885
+                            69******************9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (994 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1025  (0.0534439); expected 383.6 (0.02)
+Passed bias filter:                      608  (0.0317013); expected 383.6 (0.02)
+Passed Vit filter:                        97  (0.00505762); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.58u 0.17s 00:00:00.75 Elapsed: 00:00:00.80
+# Mc/sec: 4041.22
+//
+Query:       sp|Q9Y2G2|CARD8_HUMAN  [L=537]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.9e-96  321.1   0.0    6.5e-96  320.7   0.0    1.2  1  FIIND     Function to find
+    1.2e-19   70.2   1.9      2e-19   69.5   1.9    1.4  1  CARD      Caspase recruitment domain
+
+
+Domain annotation for each model (and alignments):
+>> FIIND  Function to find
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  320.7   0.0  6.8e-100   6.5e-96       2     252 .]     183     436 ..     182     436 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 320.7 bits;  conditional E-value: 6.8e-100
+                  FIIND   2 qlpaaGlYecsetgLvFevreavtieyeflsWskfleaekeke..wvvaGPlFdikaep.gavtaihlPHficlqasevdeslfkvah 86 
+                             +p+aG+Y +s+tgL F vr++vt++++f sWs++l    +++  w+v+GPlFd++aep +av++ihlPHfi+lqa+evd s+f vah
+  sp|Q9Y2G2|CARD8_HUMAN 183 WFPTAGWYLWSATGLGFLVRDEVTVTIAFGSWSQHLALDLQHHeqWLVGGPLFDVTAEPeEAVAEIHLPHFISLQAGEVDVSWFLVAH 270
+                            59*********************************9887777777************9989*************************** PP
+
+                  FIIND  87 vkdegmllekparveeshvvlevpslSpvGvvlr.isatsesipvtglvllYkkleaeestlhvylipsdvsirkaidkeekkkkkfv 173
+                            +k+egm+le+parve++++vle ps+S++G++lr +s t  sip+t+++l+Y+++++e++++h+yl+psd  ++kaid+ee++ ++ v
+  sp|Q9Y2G2|CARD8_HUMAN 271 FKNEGMVLEHPARVEPFYAVLESPSFSLMGILLRiASGTRLSIPITSNTLIYYHPHPEDIKFHLYLVPSDALLTKAIDDEEDR-FHGV 357
+                            **********************************999**********************************************.**** PP
+
+                  FIIND 174 kidkpppvesLeegsrYrlsseaeleitPkelefvyrssgelqlfsevyleqlkeeikLslkekkseelvWeakvregd 252
+                            +++++pp+e+L++gs Y++s +a+l+++Pkel+++yrs+ge+q+fs++y++q+ke+i+L+++ek++++lvW+++v++ d
+  sp|Q9Y2G2|CARD8_HUMAN 358 RLQTSPPMEPLNFGSSYIVSNSANLKVMPKELKLSYRSPGEIQHFSKFYAGQMKEPIQLEITEKRHGTLVWDTEVKPVD 436
+                            ****************************************************************************987 PP
+
+>> CARD  Caspase recruitment domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   69.5   1.9   2.1e-23     2e-19       3      84 ..     453     534 ..     451     535 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 69.5 bits;  conditional E-value: 2.1e-23
+                            HHHHTHHHHHHHSSHHHHHHHHHHHTTSS-HHHHHHHHTSSSHHHHHHHHHHHHHCTCHHHHHHHHHHHHHHTHHHHHHHHH CS
+                   CARD   3 lleknrvrLverlkslsglldyLlekkVLteeeeekikakttrlskareLldlvqkkgekaaqaFlealkegdpdlaslleg 84 
+                            ++++n+++L +r+++l+g+ld+L  ++VLte+e e + +++tr+sk+++Ll++v+kkg+ a +++ +++ e dp+l+s+l +
+  sp|Q9Y2G2|CARD8_HUMAN 453 FVKENHRQLQARMGDLKGVLDDLQDNEVLTENEKELVEQEKTRQSKNEALLSMVEKKGDLALDVLFRSISERDPYLVSYLRQ 534
+                            899***************************************************************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (537 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       811  (0.0422858); expected 383.6 (0.02)
+Passed bias filter:                      626  (0.0326399); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.22s 00:00:00.72 Elapsed: 00:00:00.62
+# Mc/sec: 2787.82
+//
+Query:       sp|Q7RTR0|NLRP9_HUMAN  [L=991]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    3.6e-35  121.4   0.1    1.2e-34  119.7   0.1    2.0  1  NACHT      NACHT domain
+      7e-26   90.3   3.2    2.2e-25   88.7   3.2    2.0  1  PYRIN      PAAD/DAPIN/Pyrin domain
+    2.6e-19   70.1   0.3    1.4e-18   67.8   0.3    2.4  1  NLRC4_HD2  NLRC4 helical domain HD2
+    1.5e-10   41.3   2.6    3.7e-10   40.0   0.0    3.1  1  NOD2_WH    NOD2 winged helix domain
+    4.2e-07   29.6  32.1     0.0031   17.6   0.2    8.7  3  LRR_6      Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> NACHT  NACHT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  119.7   0.1   3.1e-38   1.2e-34       1     164 [.     146     312 ..     146     314 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 119.7 bits;  conditional E-value: 3.1e-38
+                            SCEEEEC-TTTCHHHHHHHHHHHHCTS-SCCCC-SEEEEEETTTTTTS-...-HCHHHCCCCTS--SSS-CCHHHHCCSCCCEEEEEE CS
+                  NACHT   1 rlvilqGeaGsGKTtLlqklalawaegklpqgafklvFflslrelsrsgnarsladllfsqlpepaapvsevwavllelperlLlilD 88 
+                            ++v+l+G+ G+GKTtLl+k++l+waeg+l +++f +vFfl++ e++ + ++ sl +ll +++pe++++++     + ++per+L+i+D
+  sp|Q7RTR0|NLRP9_HUMAN 146 HTVVLEGPDGIGKTTLLRKVMLDWAEGNLWKDRFTFVFFLNVCEMNGIAET-SLLELLSRDWPESSEKIED----IFSQPERILFIMD 228
+                            589*********************************************999.*******************....************* PP
+
+                            -STT-SS-TCH.................HHHHHCTTTTT--EEEEEEECCCHHHHCTTSSCE..EEEE--TCCHHHHHHHHCTT CS
+                  NACHT  89 glDelvtdlgq........kekqpvrtlLselirkkllpeasllltvrpralrdleeqleeaivlevegfsesrrkqlvrkyfs 164
+                            g+++l+  l+          ++qp+   Ls+l++kk+lpe+sll+++   a ++   +l++++ +++ gfses+ k +++ +f 
+  sp|Q7RTR0|NLRP9_HUMAN 229 GFEQLKFNLQLkadlsddwRQRQPMPIILSSLLQKKMLPESSLLIALGKLAMQKHYFMLRHPKLIKLLGFSESEKKSYFSYFFG 312
+                            ******9999999******9***********************************************************99886 PP
+
+>> PYRIN  PAAD/DAPIN/Pyrin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.7   3.2   5.8e-29   2.2e-25       2      74 ..      11      85 ..      10      86 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 88.7 bits;  conditional E-value: 5.8e-29
+                           HCCCCCCC-HHHHHHHHHHHHH...--SSSHTTHCCHCT-SHHHHHHHHHHHHTCCCCHHHHHHHHHHTTTHHHH CS
+                  PYRIN  2 LllyLeeLseeelkkFKslLkde..eeglksiprgelekadrvdladlLvekygedaavevtievlekinlkdla 74
+                           Ll+yL+eL +ee+ kFK+lLk+   + +lk+ip++el+ka+++d+a lL ++y++++a+evt++++ +in+kdl+
+  sp|Q7RTR0|NLRP9_HUMAN 11 LLWYLKELRKEEFWKFKELLKQPleKFELKPIPWAELKKASKEDVAKLLDKHYPGKQAWEVTLNLFLQINRKDLW 85
+                           9*******************9988999***********************************************8 PP
+
+>> NLRC4_HD2  NLRC4 helical domain HD2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.8   0.3   3.7e-22   1.4e-18       1     125 []     445     560 ..     445     560 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 67.8 bits;  conditional E-value: 3.7e-22
+              NLRC4_HD2   1 HlsiQeFfAAlyvvlseeeeksevlkeflelekretkellksaldkalksktghldlflrFLfGLlseenqrlleellgtklssekkq 88 
+                            Hl+iQeF+AA++++l+  +++ ++   + +         ++++++ ++ + +  l+ +  F+fG+++ee  ++le+ +g +ls++ kq
+  sp|Q7RTR0|NLRP9_HUMAN 445 HLCIQEFCAAMFYLLKRPKDDPNPA--IGS---------ITQLVRASVVQPQTLLTQVGIFMFGISTEEIVSMLETSFGFPLSKDLKQ 521
+                            **********************955..222.........357999999**************************************** PP
+
+              NLRC4_HD2  89 ellkwlkkkiqkelss..erflnlfhcLyElqdeslvke 125
+                            e++++l++++q e  +    f +lf  L+E+q++++v++
+  sp|Q7RTR0|NLRP9_HUMAN 522 EITQCLESLSQCEADReaIAFQELFIGLFETQEKEFVTK 560
+                            ***********9999988899***************985 PP
+
+>> NOD2_WH  NOD2 winged helix domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.0   0.0   9.7e-14   3.7e-10       3      54 ..     392     440 ..     390     443 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 40.0 bits;  conditional E-value: 9.7e-14
+                NOD2_WH   3 llkLgkLAfegLwkgklvFseedLkeygldesdvssgllteilqkesseekv 54 
+                            l++L+ LA+eg+w+ ++vFs  dL++ gl+es+  +++ +++lq+      +
+  sp|Q7RTR0|NLRP9_HUMAN 392 LKSLCALAAEGIWTYTFVFSHGDLRRNGLSESEGVMWVGMRLLQR---RGDC 440
+                            89******************************************9...4444 PP
+
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.9   0.1   5.9e-06     0.023       2      24 .]     741     763 ..     740     763 .. 0.95
+   2 !    9.4   0.6   0.00034       1.3       4      24 .]     800     820 ..     797     820 .. 0.89
+   3 !   17.6   0.2   8.1e-07    0.0031       4      24 .]     857     877 ..     854     877 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 5.9e-06
+                  LRR_6   2 nthLttLdLsgNdIgdeGaeaLa 24 
+                            n++L++L L  N + deG++ L+
+  sp|Q7RTR0|NLRP9_HUMAN 741 NSKLKHLSLVENPLRDEGMTLLC 763
+                            99*****************9997 PP
+
+  == domain 2  score: 9.4 bits;  conditional E-value: 0.00034
+                  LRR_6   4 hLttLdLsgNdIgdeGaeaLa 24 
+                            +L  LdL++N + d G+ +L+
+  sp|Q7RTR0|NLRP9_HUMAN 800 SLSLLDLGSNALEDNGVASLC 820
+                            6777**************998 PP
+
+  == domain 3  score: 17.6 bits;  conditional E-value: 8.1e-07
+                  LRR_6   4 hLttLdLsgNdIgdeGaeaLa 24 
+                            +L+tL L++N+Igd G+  L+
+  sp|Q7RTR0|NLRP9_HUMAN 857 KLKTLKLGHNEIGDTGVRQLC 877
+                            7****************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (991 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       813  (0.0423901); expected 383.6 (0.02)
+Passed bias filter:                      568  (0.0296157); expected 383.6 (0.02)
+Passed Vit filter:                        82  (0.00427551); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.56u 0.20s 00:00:00.76 Elapsed: 00:00:00.66
+# Mc/sec: 4867.78
+//
+[ok]

@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048228.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048228
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ36813.1  [L=422]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-09   37.8   9.5    1.6e-09   37.8   9.5    2.8  1  bZIP_1    bZIP transcription factor
+    4.6e-08   33.1   8.2    4.6e-08   33.1   8.2    3.2  1  bZIP_2    Basic region leucine zipper
+
+
+Domain annotation for each model (and alignments):
+>> bZIP_1  bZIP transcription factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.8   9.5   1.7e-13   1.6e-09       5      56 ..     368     419 ..     365     421 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 37.8 bits;  conditional E-value: 1.7e-13
+                 XXXXXX--HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+      bZIP_1   5 KrekrkqkNReaArrsRqRKqaeieeLerrvkaLekeNksLkseleelkkev 56 
+                 +r    +kNR+aA ++R+RK+++++ L++  ++Le+eN  L ++++ l+   
+  EPZ36813.1 368 QRRELQEKNRIAALKCRKRKKEYVATLKDSIETLEAENLLLEERIKMLESIL 419
+                 5666789***************************************998765 PP
+
+>> bZIP_2  Basic region leucine zipper
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.1   8.2   4.8e-12   4.6e-08       3      52 ..     366     416 ..     364     418 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 33.1 bits;  conditional E-value: 4.8e-12
+                 XXXXXXXX.XXXXXXXX-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+      bZIP_2   3 deyrerRr.kNreAArrsRekkkakeeeleervkeLeeeNaqLrqkveqLe 52 
+                 +e+r++   kNr+AA ++R++kk++ + l++ ++ Le+eN  L++++++Le
+  EPZ36813.1 366 EEQRRELQeKNRIAALKCRKRKKEYVATLKDSIETLEAENLLLEERIKMLE 416
+                 455555556*****************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (422 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2398  (0.125033); expected 383.6 (0.02)
+Passed bias filter:                      475  (0.0247667); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.23s 00:00:00.68 Elapsed: 00:00:00.64
+# Mc/sec: 2136.01
+//
+[ok]

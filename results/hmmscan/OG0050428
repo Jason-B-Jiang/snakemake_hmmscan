@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050428.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050428
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O42967|YB92_SCHPO  [L=603]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    1.1e-13   50.9   0.1      2e-13   50.0   0.1    1.5  1  ubiquitin  Ubiquitin family
+    1.6e-05   25.5   1.2    2.4e-05   24.9   0.1    1.8  0  DUF2407    DUF2407 ubiquitin-like domain
+
+
+Domain annotation for each model (and alignments):
+>> ubiquitin  Ubiquitin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.0   0.1   2.1e-17     2e-13       1      70 [.       6      77 ..       6      79 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 50.0 bits;  conditional E-value: 2.1e-17
+                          EEEEETTSEEEEEEEETTSBHHHHHHHHHHHHTSSGGGEEEEETTEEE-TTSBHGGH.TTSTT.EEEEEEES CS
+             ubiquitin  1 itVktldgkkitleveesdtveelKekiaekegipaeqqrLiysGkvLeddqtleey.giqdg.stihlvlr 70
+                          i V+t d+k   ++v++++tv+elKe ia +++ pa++++Li++G+vL+++ +lee+ + + +  t hlv+ 
+  sp|O42967|YB92_SCHPO  6 IRVTTVDQKVGIFQVPRTKTVLELKELIAVTFEAPADRLKLIHAGRVLRNETPLEEIlHDATDlVTFHLVIA 77
+                          7899999999999*******************************************9965555599999985 PP
+
+>> DUF2407  DUF2407 ubiquitin-like domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (603 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       806  (0.0420251); expected 383.6 (0.02)
+Passed bias filter:                      446  (0.0232546); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.21s 00:00:00.64 Elapsed: 00:00:00.78
+# Mc/sec: 2507.11
+//
+[ok]

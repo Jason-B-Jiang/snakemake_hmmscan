@@ -1,0 +1,317 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0009170.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0009170
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E1JHK3|E1JHK3_DROME  [L=677]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.2e-69  232.9   0.0    2.2e-69  232.9   0.0    2.6  1  RHD_DNA_bind  Rel homology DNA-binding domain
+    1.4e-38  131.1   0.0    1.4e-38  131.1   0.0    2.7  1  RHD_dimer     Rel homology dimerisation domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  232.9   0.0   2.3e-73   2.2e-69       1     169 []      49     219 ..      49     219 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 232.9 bits;  conditional E-value: 2.3e-73
+                             EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--SSEEEEEEEEESSSS--B-SSEEECTT.EETTEEEEEE-T CS
+            RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydgeakirvslvtkdeplrpHahslvgkd.ckdgvcevelkp 86 
+                             ++I+eqP  +++RfrY+cEgrsaGsipg +s+ ++kt+Pt++i++y+g+a+++vs+vtkd p+rpH+h+lvgk+ ck+gvc++e+++
+  tr|E1JHK3|E1JHK3_DROME  49 VKITEQPAGKALRFRYECEGRSAGSIPGVNSTPENKTYPTIEIVGYKGRAVVVVSCVTKDTPYRPHPHNLVGKEgCKKGVCTLEINS 135
+                             69***********************************************************************99************ PP
+
+                             TTSEEE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEE.ECSTTSEEEEEEEEEEEEEEET CS
+            RHD_DNA_bind  87 edmvasfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqafl.pdstgnfttalepvvSnpiydk 169
+                             e+m+a+f+nlGI+cvkkk++e+alk+r+e++++++++ ++++ + ++idln vrlcFq+f+ ++++g+ft +l+pvvS+pi+dk
+  tr|E1JHK3|E1JHK3_DROME 136 ETMRAVFSNLGIQCVKKKDIEAALKAREEIRVDPFKTGFSHRFQPSSIDLNSVRLCFQVFMeSEQKGRFTSPLPPVVSEPIFDK 219
+                             *************************************************************88999****************96 PP
+
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.1   0.0   1.5e-42   1.4e-38       2     102 ..     227     327 ..     226     328 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 131.1 bits;  conditional E-value: 1.5e-42
+               RHD_dimer   2 icrlsktsgsveGgeelillcekvqkddikvrFleekegkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrpsd 88 
+                             icrl+++s++v G++++illcekv+k+di+vrF+eek+g++vWea+++f+++dvhkq+ai+fktP+Y++ ditep++V +qlrrpsd
+  tr|E1JHK3|E1JHK3_DROME 227 ICRLCSCSATVFGNTQIILLCEKVAKEDISVRFFEEKNGQSVWEAFGDFQHTDVHKQTAITFKTPRYHTLDITEPAKVFIQLRRPSD 313
+                             9************************************************************************************** PP
+
+               RHD_dimer  89 ketsepleFtYlPe 102
+                             + tse+l+F+Y+P 
+  tr|E1JHK3|E1JHK3_DROME 314 GVTSEALPFEYVPM 327
+                             ************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (677 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4904  (0.255696); expected 383.6 (0.02)
+Passed bias filter:                     1105  (0.0576151); expected 383.6 (0.02)
+Passed Vit filter:                       273  (0.0142343); expected 19.2 (0.001)
+Passed Fwd filter:                        85  (0.00443193); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.09u 0.30s 00:00:01.39 Elapsed: 00:00:01.03
+# Mc/sec: 2123.41
+//
+Query:       tr|B3DHW2|B3DHW2_DANRE  [L=455]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    8.1e-66  221.2   0.1    1.2e-65  220.7   0.1    1.2  1  RHD_DNA_bind  Rel homology DNA-binding domain
+    6.1e-40  135.5   0.2    6.7e-39  132.2   0.0    2.6  1  RHD_dimer     Rel homology dimerisation domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  220.7   0.1   1.2e-69   1.2e-65       1     169 []      20     185 ..      20     185 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 220.7 bits;  conditional E-value: 1.2e-69
+                             EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--SSEEEEEEEEESSSS--B-SSEEECTTEETTEEEEEE-TT CS
+            RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydgeakirvslvtkdeplrpHahslvgkdckdgvcevelkpe 87 
+                             +eI+eqPk+rg+RfrYkcEgrsaGsipge+s++++kt+P ++++ny+g++++r+slvtk++p++pH+h+lvgkdck+g++e++l++ 
+  tr|B3DHW2|B3DHW2_DANRE  20 VEIIEQPKSRGMRFRYKCEGRSAGSIPGEKSNDTTKTHPAIRVHNYSGPVRVRISLVTKNQPYKPHPHELVGKDCKHGYYEADLQE- 105
+                             79**********************************************************************************87. PP
+
+                             TSEEE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEEECSTTSEEEEEEEEEEEEEEET CS
+            RHD_DNA_bind  88 dmvasfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqaflpdstgnfttalepvvSnpiydk 169
+                             ++++sfqnlGI+cvkkk+v ea++ r++++++++++ +++  e +e+dln+vrlcFq++++ s+g+   +lepvvS+piyd+
+  tr|B3DHW2|B3DHW2_DANRE 106 RRIHSFQNLGIQCVKKKDVGEAVSCRLQTQNNPFKIPDAKIWE-EEFDLNAVRLCFQVSITLSSGD-LFPLEPVVSQPIYDN 185
+                             899********************************87766555.9***************666665.579**********96 PP
+
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.2   0.0     7e-43   6.7e-39       1     102 [.     194     290 ..     194     291 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 132.2 bits;  conditional E-value: 7e-43
+               RHD_dimer   1 kicrlsktsgsveGgeelillcekvqkddikvrFleekegkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrps 87 
+                             kicr++++sgs++Gg+e++llc+kvqk+di+vrF+ ++     We++++fs++dvh+qvaivf+tPpY+d+++tep++Vk+qlrrps
+  tr|B3DHW2|B3DHW2_DANRE 194 KICRVNRNSGSCRGGDEIFLLCDKVQKEDIEVRFFLDS-----WESKGSFSQADVHRQVAIVFRTPPYCDTNLTEPLRVKMQLRRPS 275
+                             7************************************9.....******************************************** PP
+
+               RHD_dimer  88 dketsepleFtYlPe 102
+                             d+e+sep++F+YlP+
+  tr|B3DHW2|B3DHW2_DANRE 276 DREVSEPMDFQYLPS 290
+                             **************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (455 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       380  (0.0198133); expected 383.6 (0.02)
+Passed bias filter:                      306  (0.015955); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.14s 00:00:00.54 Elapsed: 00:00:00.62
+# Mc/sec: 2391.27
+//
+Query:       tr|Q6DGE6|Q6DGE6_DANRE  [L=596]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.9e-72  242.2   0.0    5.6e-72  241.3   0.0    1.5  1  RHD_DNA_bind  Rel homology DNA-binding domain
+    6.9e-40  135.3   0.0    1.6e-39  134.1   0.0    1.7  1  RHD_dimer     Rel homology dimerisation domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  241.3   0.0   5.8e-76   5.6e-72       1     169 []      20     188 ..      20     188 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 241.3 bits;  conditional E-value: 5.8e-76
+                             EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--SSEEEEEEEEESSSS--B-SSEEECTTEETTEEEEEE-TT CS
+            RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydgeakirvslvtkdeplrpHahslvgkdckdgvcevelkpe 87 
+                             ++I+eqPkqrg+RfrYkcEgrsaGsipge+s+++++t+P+++iln +g+ k+rv+lvtk+ep++pH+h+lvgkdckdg++e+e++pe
+  tr|Q6DGE6|Q6DGE6_DANRE  20 VQIFEQPKQRGMRFRYKCEGRSAGSIPGERSSDNNRTYPSIQILNVTGKGKVRVTLVTKSEPYKPHPHDLVGKDCKDGYYEAEFGPE 106
+                             69************************************************************************************* PP
+
+                             TSEEE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEEECSTTSEEEEEEEEEEEEEEET CS
+            RHD_DNA_bind  88 dmvasfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqaflpdstgnfttalepvvSnpiydk 169
+                             ++ + fqnlGI+cv+++ev++a+ +r++  ++++nv  e++ +++e+dlnvvrlcFq++l+d++g + t l+p+vSnpiyd+
+  tr|Q6DGE6|Q6DGE6_DANRE 107 RRAIAFQNLGIQCVRRREVKDAIMQRVTRGINPFNVPREQLLQTEEYDLNVVRLCFQIYLQDESGMYSTMLPPIVSNPIYDN 188
+                             ********************************************************************************96 PP
+
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  134.1   0.0   1.7e-43   1.6e-39       1     102 [.     197     293 ..     197     294 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 134.1 bits;  conditional E-value: 1.7e-43
+               RHD_dimer   1 kicrlsktsgsveGgeelillcekvqkddikvrFleekegkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrps 87 
+                             +icr++k+sgsv+Gg+e++llc+kvqkddi+vrF++++     Wea+++fs++dvh+qvaivfktP+Y+d++it pv+V++qlrrp+
+  tr|Q6DGE6|Q6DGE6_DANRE 197 RICRVNKNSGSVKGGDEIFLLCDKVQKDDIEVRFFTQT-----WEAKGSFSQADVHRQVAIVFKTPAYCDTSITAPVTVRMQLRRPT 278
+                             69**********************************98.....******************************************** PP
+
+               RHD_dimer  88 dketsepleFtYlPe 102
+                             d+e+sep+eF+YlP+
+  tr|Q6DGE6|Q6DGE6_DANRE 279 DQEVSEPMEFRYLPD 293
+                             **************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (596 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       506  (0.026383); expected 383.6 (0.02)
+Passed bias filter:                      344  (0.0179363); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.16s 00:00:00.57 Elapsed: 00:00:00.67
+# Mc/sec: 2866.53
+//
+Query:       sp|Q04206|TF65_HUMAN  [L=551]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.6e-69  233.3   0.0    2.2e-69  232.8   0.0    1.2  1  RHD_DNA_bind  Rel homology DNA-binding domain
+    1.3e-36  124.8   0.0    2.2e-36  124.1   0.0    1.3  1  RHD_dimer     Rel homology dimerisation domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  232.8   0.0   2.3e-73   2.2e-69       1     169 []      21     186 ..      21     186 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 232.8 bits;  conditional E-value: 2.3e-73
+                           EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--SSEEEEEEEEESSSS--B-SSEEECTTEETTEEEEEE-TTTS CS
+          RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydgeakirvslvtkdeplrpHahslvgkdckdgvcevelkpedm 89 
+                           +eI+eqPkqrg+RfrYkcEgrsaGsipge+s++++kt+Pt+ki++y+g+ ++r+slvtkd+p+rpH+h+lvgkdc+dg +e+el p+++
+  sp|Q04206|TF65_HUMAN  21 VEIIEQPKQRGMRFRYKCEGRSAGSIPGERSTDTTKTHPTIKINGYTGPGTVRISLVTKDPPHRPHPHELVGKDCRDGFYEAELCPDRC 109
+                           79*************************************************************************************** PP
+
+                           EEE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEEECSTTSEEEEEEEEEEEEEEET CS
+          RHD_DNA_bind  90 vasfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqaflpdstgnfttalepvvSnpiydk 169
+                           ++sfqnlGI+cvkk+++e+a+++ri++++++++v  e+++   ++dln+vrlcFq++++d +g    +l+pv+S+pi+d+
+  sp|Q04206|TF65_HUMAN 110 IHSFQNLGIQCVKKRDLEQAISQRIQTNNNPFQVPIEEQRG--DYDLNAVRLCFQVTVRDPSG-RPLRLPPVLSHPIFDN 186
+                           *********************************88887766..***************66665.5689**********96 PP
+
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.1   0.0   2.3e-40   2.2e-36       1     102 [.     195     291 ..     195     292 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 124.1 bits;  conditional E-value: 2.3e-40
+             RHD_dimer   1 kicrlsktsgsveGgeelillcekvqkddikvrFleekegkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrpsdk 89 
+                           kicr++++sgs+ Gg+e++llc+kvqk+di+v F+        Wea+++fs++dvh+qvaivf+tPpY d++++ pv+V++qlrrpsd+
+  sp|Q04206|TF65_HUMAN 195 KICRVNRNSGSCLGGDEIFLLCDKVQKEDIEVYFTGPG-----WEARGSFSQADVHRQVAIVFRTPPYADPSLQAPVRVSMQLRRPSDR 278
+                           7**********************************998.....********************************************** PP
+
+             RHD_dimer  90 etsepleFtYlPe 102
+                           e sep+eF+YlP+
+  sp|Q04206|TF65_HUMAN 279 ELSEPMEFQYLPD 291
+                           ************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (551 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       377  (0.0196569); expected 383.6 (0.02)
+Passed bias filter:                      275  (0.0143386); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.18s 00:00:00.64 Elapsed: 00:00:00.57
+# Mc/sec: 3141.77
+//
+Query:       sp|Q04864|REL_HUMAN  [L=619]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.7e-75  252.1   0.0    4.4e-75  251.4   0.0    1.3  1  RHD_DNA_bind  Rel homology DNA-binding domain
+      5e-37  126.2   0.0      1e-36  125.1   0.0    1.5  1  RHD_dimer     Rel homology dimerisation domain
+
+
+Domain annotation for each model (and alignments):
+>> RHD_DNA_bind  Rel homology DNA-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  251.4   0.0   4.6e-79   4.4e-75       1     169 []      10     178 ..      10     178 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 251.4 bits;  conditional E-value: 4.6e-79
+                          EEEEE-B-SSSE--BCGGGSSTSS---BTT-BSSS----EEEEES--SSEEEEEEEEESSSS--B-SSEEECTTEETTEEEEEE-TTTSE CS
+         RHD_DNA_bind   1 leIleqPkqrgfRfrYkcEgrsaGsipgessekskktfPtvkilnydgeakirvslvtkdeplrpHahslvgkdckdgvcevelkpedmv 90 
+                          +eI+eqP+qrg+RfrYkcEgrsaGsipge+s+++++t+P+++i+ny g+ k+r++lvtk++p++pH+h+lvgkdc+dg++e+e+++e++ 
+  sp|Q04864|REL_HUMAN  10 IEIIEQPRQRGMRFRYKCEGRSAGSIPGEHSTDNNRTYPSIQIMNYYGKGKVRITLVTKNDPYKPHPHDLVGKDCRDGYYEAEFGQERRP 99 
+                          69**************************************************************************************** PP
+
+                          EE-SSEEEEE--CGGHHHHHHHHHHCTHHTTCHCCGGCTSHCCS-TTEEEEEEEEEEECSTTSEEEEEEEEEEEEEEET CS
+         RHD_DNA_bind  91 asfqnlGIlcvkkkeveealkerielkekeknvekeakeeakeidlnvvrlcFqaflpdstgnfttalepvvSnpiydk 169
+                          + fqnlGI cvkkkev+ea+ +ri++ ++++nv ++++++++++dlnvvrlcFq+flpd++gn ttal+pvvSnpiyd+
+  sp|Q04864|REL_HUMAN 100 LFFQNLGIRCVKKKEVKEAIITRIKAGINPFNVPEKQLNDIEDCDLNVVRLCFQVFLPDEHGNLTTALPPVVSNPIYDN 178
+                          *****************************************************************************96 PP
+
+>> RHD_dimer  Rel homology dimerisation domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  125.1   0.0   1.1e-40     1e-36       1     102 [.     187     282 ..     187     283 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 125.1 bits;  conditional E-value: 1.1e-40
+            RHD_dimer   1 kicrlsktsgsveGgeelillcekvqkddikvrFleekegkevWeaeaefskedvhkqvaivfktPpYrdqditepveVklqlrrpsdke 90 
+                          +icr++k++gsv+Gg+e++llc+kvqkddi+vrF+ ++     Wea++ fs++dvh+qvaivfktPpY+ ++itepv+Vk+qlrrpsd+e
+  sp|Q04864|REL_HUMAN 187 RICRVNKNCGSVRGGDEIFLLCDKVQKDDIEVRFVLND-----WEAKGIFSQADVHRQVAIVFKTPPYC-KAITEPVTVKMQLRRPSDQE 270
+                          69***********************************9.....*************************9.59****************** PP
+
+            RHD_dimer  91 tsepleFtYlPe 102
+                          +se+++F+YlP+
+  sp|Q04864|REL_HUMAN 271 VSESMDFRYLPD 282
+                          ***********7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (619 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       448  (0.0233589); expected 383.6 (0.02)
+Passed bias filter:                      350  (0.0182491); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.19s 00:00:00.65 Elapsed: 00:00:00.57
+# Mc/sec: 3498.23
+//
+[ok]

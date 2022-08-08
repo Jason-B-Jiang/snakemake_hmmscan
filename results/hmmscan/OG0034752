@@ -1,0 +1,80 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034752.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034752
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1Q6P6|F1Q6P6_DANRE  [L=473]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-31  107.9   0.1    5.9e-31  107.3   0.1    1.3  1  SLED      SLED domain
+      2e-15   57.1   0.1    3.7e-15   56.2   0.1    1.5  1  SAM_1     SAM domain (Sterile alpha motif)
+    1.2e-07   32.4  11.0    1.2e-07   32.4  11.0    2.2  1  RBR       RNA binding Region
+
+
+Domain annotation for each model (and alignments):
+>> SLED  SLED domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.3   0.1   9.3e-35   5.9e-31       1     112 []     183     291 ..     183     291 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 107.3 bits;  conditional E-value: 9.3e-35
+                    SLED   1 tvtiYvNkkCkcGplldkkkiaeLPksvGpgpvslvlkevlqalvnaaykpkqvlkllkkgekgeveiikakiegksltvklpvves 87 
+                             tv+iYvNk+ ++Gp ld++k+ +LP+++Gp + s+vl++++q +++ a+++k v++ll +g +ge   i+a+++gk++  +lpvv+s
+  tr|F1Q6P6|F1Q6P6_DANRE 183 TVCIYVNKQVNTGPNLDRQKVLQLPDHLGPARPSVVLQQAVQGCIDSAFQQKAVFTLLTEGYGGE--KISATFDGKQHLLSLPVVNS 267
+                             69**********************************************************99666..9******************* PP
+
+                    SLED  88 akevaryleklceklecCenLlspe 112
+                               +v r+l+klc++l  CenL+s +
+  tr|F1Q6P6|F1Q6P6_DANRE 268 VGYVLRFLKKLCRSLL-CENLFSDQ 291
+                             ***************9.*****975 PP
+
+>> SAM_1  SAM domain (Sterile alpha motif)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.2   0.1   5.7e-19   3.7e-15       1      64 []     403     469 ..     403     469 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 56.2 bits;  conditional E-value: 5.7e-19
+                             CCTTHSSHHHHHHH...TTSGGGHHHHHTTTSSHHHHTTSCHHHHHH.TTTTSHHHHHHHHHHHHHHH CS
+                   SAM_1   1 skwsvedVgeWLes...iglgqYidlFrageidgdaLlllteddLek.lgvtllGHrkkIlyaIqrLk 64 
+                             s wsv++V+ ++++     lg++++lFr++eidgdaLlll++d ++k lg +l G+++k++y+I++Lk
+  tr|F1Q6P6|F1Q6P6_DANRE 403 SRWSVDEVVWFIKDadpQALGPHVELFRKHEIDGDALLLLKSDMIMKyLGLKL-GPALKLCYHIDKLK 469
+                             57************555566***************************676655.************98 PP
+
+>> RBR  RNA binding Region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.4  11.0   1.9e-11   1.2e-07       3      50 ..     100     144 ..      98     148 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 32.4 bits;  conditional E-value: 1.9e-11
+                     RBR   3 pgRkpg..RgrpPgsetapkkgsseknaaansaepikipKKrGpKPGsKr 50 
+                              g++pg  RgrpP++ ++  +++ ++++     +pik+pKKrG+KPG+K 
+  tr|F1Q6P6|F1Q6P6_DANRE 100 SGKVPGrkRGRPPLKRHPEYQSRYPESL-----PPIKVPKKRGRKPGFKV 144
+                             799************************7.....7***************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (473 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       370  (0.0192919); expected 383.6 (0.02)
+Passed bias filter:                      274  (0.0142865); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.23s 00:00:00.64 Elapsed: 00:00:00.72
+# Mc/sec: 2134.44
+//
+[ok]

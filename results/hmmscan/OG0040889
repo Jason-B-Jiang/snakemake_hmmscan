@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040889.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040889
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P49771|FLT3L_HUMAN  [L=235]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.5e-69  230.7   0.8    5.5e-69  230.5   0.8    1.1  1  Flt3_lig  flt3 ligand
+
+
+Domain annotation for each model (and alignments):
+>> Flt3_lig  flt3 ligand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  230.5   0.8   2.8e-73   5.5e-69       1     131 []      29     159 ..      29     159 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 230.5 bits;  conditional E-value: 2.8e-73
+               Flt3_lig   1 dcafsssPissdfavkikelsdyllkdyPvtvasnlqddelCkelWhlvlaqrklerlktvaGsklqellekvnteidfvtsCafqpl 88 
+                            dc+f++sPissdfavki+elsdyll+dyPvtvasnlqd+elC+ lW+lvlaqr++erlktvaGsk+q lle+vntei+fvt+Cafqp+
+  sp|P49771|FLT3L_HUMAN  29 DCSFQHSPISSDFAVKIRELSDYLLQDYPVTVASNLQDEELCGGLWRLVLAQRWMERLKTVAGSKMQGLLERVNTEIHFVTKCAFQPP 116
+                            6*************************************************************************************** PP
+
+               Flt3_lig  89 psClrfvqtniselledvsaqllalkpkitkrnfsrClelrCq 131
+                            psClrfvqtnis+ll+++s+ql+alkp+it++nfsrClel+Cq
+  sp|P49771|FLT3L_HUMAN 117 PSCLRFVQTNISRLLQETSEQLVALKPWITRQNFSRCLELQCQ 159
+                            ******************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (235 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       518  (0.0270087); expected 383.6 (0.02)
+Passed bias filter:                      407  (0.0212211); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.61
+# Mc/sec: 1253.08
+//
+[ok]

@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041007.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041007
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P24394|IL4RA_HUMAN  [L=825]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.9e-39  133.4   0.3    7.7e-39  132.0   0.3    1.8  1  IL4Ra_N   Interleukin-4 receptor alpha chain, N-terminal
+
+
+Domain annotation for each model (and alignments):
+>> IL4Ra_N  Interleukin-4 receptor alpha chain, N-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.0   0.3     4e-43   7.7e-39       1      94 []      28     121 ..      28     121 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 132.0 bits;  conditional E-value: 4e-43
+                IL4Ra_N   1 vlkeltCfsDylsestCewkveslvnCssellLsyelefelsenltCvpensedavCvCkikvdevvsadtyslelqagtqllwkksf 88 
+                            vl+e+tC+sDy+s+stCewk++ ++nCs+el+L y+l f lse++tC+pen+  a CvC++ +d+vvsad+y+l+l+ag+qllwk+sf
+  sp|P24394|IL4RA_HUMAN  28 VLQEPTCVSDYMSISTCEWKMNGPTNCSTELRLLYQLVFLLSEAHTCIPENNGGAGCVCHLLMDDVVSADNYTLDLWAGQQLLWKGSF 115
+                            699************************************************************************************* PP
+
+                IL4Ra_N  89 kPsenv 94 
+                            kPse+v
+  sp|P24394|IL4RA_HUMAN 116 KPSEHV 121
+                            ****98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (825 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       655  (0.0341519); expected 383.6 (0.02)
+Passed bias filter:                      396  (0.0206476); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.45u 0.23s 00:00:00.68 Elapsed: 00:00:00.72
+# Mc/sec: 3693.93
+//
+[ok]

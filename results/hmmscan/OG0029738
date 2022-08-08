@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029738.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029738
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54MI1|Q54MI1_DICDI  [L=770]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-08   33.4   0.2      0.022   14.8   0.0    3.5  0  Kelch_4   Galactose oxidase, central domain
+    8.8e-08   32.3  12.4    8.8e-08   32.3  12.4    3.7  1  zf-B_box  B-box zinc finger
+      9e-07   28.5   0.0      0.059   13.1   0.0    2.7  0  Kelch_1   Kelch motif
+    2.2e-06   27.8   0.0     0.0045   17.3   0.0    3.4  0  Kelch_6   Kelch motif
+
+
+Domain annotation for each model (and alignments):
+>> Kelch_4  Galactose oxidase, central domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-B_box  B-box zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3  12.4   1.8e-11   8.8e-08       2      38 ..     182     217 ..     181     221 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 1.8e-11
+                zf-B_box   2 eetkCpeHkekpatlyCtdCqqplCeeCstgaHrgHe 38 
+                             e+++C++H+ k+++ yC dC++ +C++C +++H++H+
+  tr|Q54MI1|Q54MI1_DICDI 182 ENDICNQHN-KQLISYCLDCNCNICQDCIDQIHKEHR 217
+                             789******.**************************7 PP
+
+>> Kelch_1  Kelch motif
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Kelch_6  Kelch motif
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (770 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5455  (0.284426); expected 383.6 (0.02)
+Passed bias filter:                      831  (0.0433286); expected 383.6 (0.02)
+Passed Vit filter:                       283  (0.0147557); expected 19.2 (0.001)
+Passed Fwd filter:                        46  (0.00239846); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.91u 0.25s 00:00:01.16 Elapsed: 00:00:01.02
+# Mc/sec: 2450.10
+//
+[ok]

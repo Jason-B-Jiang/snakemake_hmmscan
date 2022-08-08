@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030410.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030410
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q55CC3|Q55CC3_DICDI  [L=130]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      6e-22   77.3   4.3    1.3e-21   76.3   4.3    1.6  1  PPI_Ypi1  Protein phosphatase inhibitor
+
+
+Domain annotation for each model (and alignments):
+>> PPI_Ypi1  Protein phosphatase inhibitor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.3   4.3   6.6e-26   1.3e-21       2      59 ..      42      96 ..      41      97 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 76.3 bits;  conditional E-value: 6.6e-26
+                PPI_Ypi1  2 LrLraeekkkkkkkskrrVrWeedvvDNEgmnkkksKiCCIyhkprefdesSsessss 59
+                            LrL      k  kk+k+rV+W+e++vDNE++ kkksK CCI+hk++++desS+es+++
+  tr|Q55CC3|Q55CC3_DICDI 42 LRLVL---GKPPKKDKKRVQWNEGIVDNENLSKKKSKKCCIFHKKKPYDESSDESEDE 96
+                            56655...6778999****************************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (130 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1551  (0.0808697); expected 383.6 (0.02)
+Passed bias filter:                      440  (0.0229418); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.19s 00:00:00.52 Elapsed: 00:00:00.60
+# Mc/sec: 700.03
+//
+[ok]

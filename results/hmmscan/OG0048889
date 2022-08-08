@@ -1,0 +1,77 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048889.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048889
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P39113  [L=1433]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      6e-43  146.9  12.8    1.2e-42  145.9   4.1    2.9  1  Fungal_trans  Fungal specific transcription factor domain
+    1.1e-10   41.5  12.1    2.3e-10   40.5  12.1    1.5  1  Zn_clus       Fungal Zn(2)-Cys(6) binuclear cluster domain
+
+
+Domain annotation for each model (and alignments):
+>> Fungal_trans  Fungal specific transcription factor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  145.9   4.1   1.2e-46   1.2e-42       1     266 [.     403     692 ..     403     693 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 145.9 bits;  conditional E-value: 1.2e-46
+  Fungal_trans   1 ldrffsnfhpqfpilhkpsflpkt.................ssenssksayasplll...lailalGalfsesetkesnssltsesqefiafplrae 77 
+                   l++ff+ +++q pil+ + fl ++                 +++++s  + ++++++   l++l++G l + + +k++ +  ++ +++++    r +
+        P39113 403 LHLFFKFWSNQVPILNNDHFLIYFnnfvevvkhlstenletNNTTKSTVTTNHEIFAlklLMMLQMGLLVKIKMEKIKYTVPKNPKAKYA----RLM 495
+                   689*********************************999876666666666666666788*********************999994433....444 PP
+
+  Fungal_trans  78 ili..........hedfsspssslwilqsLlllelyektssdralherhhgvavrlarslgLhrnpsyvgkks.lwklweeeaesrrRlwwaaFylD 163
+                   +++           + ++ +++sl +lq L l+++y ++ +d+++ + ++g  v++a++l+Lhr+ps v + + +++l+++e+ +rr l+wa++y+D
+        P39113 496 AYYhqlsliipknPYFLNMSTTSLPSLQLLSLASFYYLNVGDISAIYGVRGRIVSMAQQLRLHRCPSAVLSVHsNPVLQKFEQSERRLLFWAIYYVD 592
+                   444555566799999*******************************************************9999*********************** PP
+
+  Fungal_trans 164 ktialklGrppllddsqinlpLPcddddlwesddaseetlvetk..lsneeksrkiasfllaLkkilskiagsllsiekqlqqrdlqseklswveel 258
+                   ++ +l+lG p ll+d++i+++LP +d ++ +++++++e+   +   ++ + + +++++++++++kil++i++s++ ++++ ++  ++       + +
+        P39113 593 VFASLQLGVPRLLKDFDIECALPISDVEYKDQLSMENEKADKKAkkIQLQGQVSSFSLQIIRFAKILGNILDSIFKRGMMDERITSE-----VALVH 684
+                   *********************************9999999886699******************************99999999999.....9**** PP
+
+  Fungal_trans 259 eraldnWr 266
+                   e+aldnWr
+        P39113 685 ENALDNWR 692
+                   *******9 PP
+
+>> Zn_clus  Fungal Zn(2)-Cys(6) binuclear cluster domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.5  12.1   2.4e-14   2.3e-10       1      38 [.      68     104 ..      68     106 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 40.5 bits;  conditional E-value: 2.4e-14
+              SS-HHHHHHTS--STSSSS-HHHHHTTHHHCCCCTCSC CS
+  Zn_clus   1 haCdnCrkkKvKCdakkPaCsnCkklnleCtfysessk 38 
+              +aCd+Cr+kK++Cd+k+P+Cs+C+ +++eC+ +s++  
+   P39113  68 QACDRCRSKKTRCDGKRPQCSQCAAVGFECR-ISDKLL 104
+              69*****************************.777765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1433 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1071  (0.0558423); expected 383.6 (0.02)
+Passed bias filter:                      345  (0.0179884); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.56u 0.22s 00:00:00.78 Elapsed: 00:00:00.81
+# Mc/sec: 5751.80
+//
+[ok]

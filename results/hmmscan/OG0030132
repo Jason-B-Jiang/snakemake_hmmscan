@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030132.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030132
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54BB8|Q54BB8_DICDI  [L=161]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.2e-16   58.2   0.0    1.2e-15   57.8   0.0    1.2  1  NUDIX     NUDIX domain
+    2.9e-12   46.6   0.0    1.6e-11   44.2   0.0    1.8  1  NUDIX_4   NUDIX domain
+
+
+Domain annotation for each model (and alignments):
+>> NUDIX  NUDIX domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.8   0.0   1.2e-19   1.2e-15       2     130 ..       7     155 ..       6     156 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 57.8 bits;  conditional E-value: 1.2e-19
+                             EEEEEEEE.EEETTSEEEEEEES..SSSTTT.EESSEEECBTTSHHHHHHHHHHHHHHSEEE.EEEEEEEEEEEEEEEEEEEEE... CS
+                   NUDIX   2 lrravgvv.llnekgevLlvrrs..kkpfpg.WelPgGkvepgEtpeeAArREleEEtGlep.elvellgrlhylapydgpygd... 80 
+                             +r+ v+v  + n+k+e+L+ +r+  +++  g +e+PgGk+e++Etp ++++REl EE+ ++    ++ ++  +++ ++     +   
+  tr|Q54BB8|Q54BB8_DICDI   7 KRVEVSVGiIENDKNEILICKRNkkGDHLYGlFEFPGGKIEKDETPIDCLIRELYEEVDIILsTSTTSTATATTTPSP-----Snls 88 
+                             5667777668999999*******76666666779*************************8665555555522222222.....1234 PP
+
+                             ................EEEEE...EEEEEEECSGCSSTSTTTEEEEEEEEHHHHHHHHTHCTHHHHHHH CS
+                   NUDIX  81 ................eheil...yvfleevegelepndegevsevrwvpleellkeklaaesrkllpw 130
+                                             + ei+   ++f  +++ +++p+ ++e +   w++ +el+  ++ ++++++++ 
+  tr|Q54BB8|Q54BB8_DICDI  89 nhnsmiklieivefefK-EIIcniHFFKVNLQQNIKPK-PKENQPMFWIKKTELNYLQFPEPNKDIIQL 155
+                             56788888887766642.33368666668888888888.99999**********999999999988875 PP
+
+>> NUDIX_4  NUDIX domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.2   0.0   1.7e-15   1.6e-11       2     108 ..      13     154 ..      12     155 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 44.2 bits;  conditional E-value: 1.7e-15
+                             EEEEEECTTEEEEEE--TTS.SSTT-EE-SEEE.-TTS-HHHHHH....HHHS-E..............EE.........EEEEEE. CS
+                 NUDIX_4   2 vllirrddgrvllekRpekg.llggLwefPggk.eegeeleeala....eelgle..............ve.........elepgt. 58 
+                             v +i +d++++l+ kR +kg +l gL+efPggk e++e++ ++l+    ee+ +               +           ++ ++ 
+  tr|Q54BB8|Q54BB8_DICDI  13 VGIIENDKNEILICKRNKKGdHLYGLFEFPGGKiEKDETPIDCLIrelyEEVDIIlststtstatatttPSpsnlsnhnsMIKLIEi 99 
+                             67999999***********99************888888887886545533332122333333333333013333443322233555 PP
+
+                             EEEEETTEEEEEEEEEEEEE.S..--......EEEEEEGGGGGGS---CCCHCCHH CS
+                 NUDIX_4  59 vkHtftHfrltlhvylvevaegeeep......elrwvtpeelekyalPaavrklle 108
+                             v++ f  +  ++h+++v ++ ++ +p       + w+++ el+ + +P +++ +++
+  tr|Q54BB8|Q54BB8_DICDI 100 VEFEFKEIICNIHFFKVNLQ-QNIKPkpkenqPMFWIKKTELNYLQFPEPNKDIIQ 154
+                             78*************99555.222223566789*******************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (161 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       739  (0.0385317); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.62
+# Mc/sec: 840.11
+//
+[ok]

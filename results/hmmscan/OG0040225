@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040225.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040225
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q14116|IL18_HUMAN  [L=193]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-36  124.6   0.6      3e-36  123.8   0.6    1.4  1  IL1       Interleukin-1 / 18
+
+
+Domain annotation for each model (and alignments):
+>> IL1  Interleukin-1 / 18
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.8   0.6   1.6e-40     3e-36       2     118 ..      73     184 ..      72     185 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 123.8 bits;  conditional E-value: 1.6e-40
+                           CCCCCTTTT-EEEEEECSESSTTCEEEEEEETTSSE.EEEEEEETEEEEEEEES-GCCCESTSSCCGGGEEEEEECTTEEE..EEESSS CS
+                   IL1   2 qlqnlkeevkfdmsavkseeedsklpvtLgikkkkL.ylScvkkdepvLqleevnipkliknkesdkrFvferseskntte..FeSaay 87 
+                           ++++++++++f++s++k ++++++++vt+++k++k+ +lSc++k   +++++e+n+p++ik+++sd++F f+rs+++++++  FeS++y
+  sp|Q14116|IL18_HUMAN  73 DCRDNAPRTIFIISMYK-DSQPRGMAVTISVKCEKIsTLSCENK---IISFKEMNPPDNIKDTKSDIIF-FQRSVPGHDNKmqFESSSY 156
+                           699**************.**************************...**********************.*********9999****** PP
+
+                           TTEEEEEESSTTEEEEEECSSSCTCSCTBEE CS
+                   IL1  88 pgwFlatkkeedkpvllvnlaegqdsitdfq 118
+                           +g+Fla++ke+d+++l+++   ++d++ d++
+  sp|Q14116|IL18_HUMAN 157 EGYFLACEKERDLFKLILK---KEDELGDRS 184
+                           *******************...677777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (193 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       450  (0.0234632); expected 383.6 (0.02)
+Passed bias filter:                      320  (0.0166849); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.62
+# Mc/sec: 1004.56
+//
+[ok]

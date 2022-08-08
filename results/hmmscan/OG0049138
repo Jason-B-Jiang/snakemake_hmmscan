@@ -1,0 +1,78 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049138.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049138
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q03153  [L=612]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.4e-91  304.9   9.5    6.9e-91  304.3   9.5    1.3  1  mRNA_stabil  mRNA stabilisation
+    7.4e-19   68.1   0.0    1.8e-18   66.9   0.0    1.7  1  RsfS         Ribosomal silencing factor during starvation
+
+
+Domain annotation for each model (and alignments):
+>> mRNA_stabil  mRNA stabilisation
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  304.3   9.5   7.2e-95   6.9e-91       3     288 .]     305     594 ..     303     594 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 304.3 bits;  conditional E-value: 7.2e-95
+  mRNA_stabil   3 salskqdfdsaskllkeeke..ensldllkvivdtlkqlpadqekevdiekwkklfdkawplvlpkesskyWsarlkflkllnvanpqayslkrffkd 98 
+                   +l+k+df+ a+k++++++    +++ +l+ +++tlk l   qe +vd+ +wk lfd+++ + ++++s+ yW +rl+   lln+a+pq ys ++f+kd
+       Q03153 305 YFLQKEDFKGANKIIQSSSGteTHNIRTLEHVKNTLKDLV-GQERKVDVVQWKSLFDEHSTFLTINQSAAYWPLRLEYAILLNKADPQFYSDRVFLKD 401
+                  579**************9998899***************5.********************************************************* PP
+
+  mRNA_stabil  99 ylllKkslgeeltkedlvefLkivltnlelsknyskLvkrnkvvveaLklykdeee....siikdeevislllktmitdeekkklnslyEvvdylvdt 192
+                  ylllKkslg+el +edl+++L++vl+++++s++y +Lvk+n+v+ +aL+l+k ++     s+++de vislll++m+ de++k l+slyE +d++ +t
+       Q03153 402 YLLLKKSLGQELIREDLIALLEMVLKTQHSSHSYFNLVKQNRVIIRALNLFKGLQTeddgSVVYDEVVISLLLNSMVADERVK-LRSLYETIDHIFQT 498
+                  ****************************************************9988889***********************7.************** PP
+
+  mRNA_stabil 193 fekkltrkviisileiLaeakdwkkllkfWetkikllepesDtrpWaeFlklivesndkellrkiiedGhLLwlkRnnvkiteeLkeqleklfekv 288
+                  f++klt+ +i sil+ La++kdw+kll++We+  +   +++D+rpW+eF+++i++s+d+++++ki+++GhLLw++R nv++t+eL +++++l++++
+       Q03153 499 FGDKLTSGMIVSILQNLAKIKDWNKLLQVWEAITPTEGEGQDKRPWNEFINVINQSGDSHVISKIVNNGHLLWIRRLNVNVTPELCNSIKALLKTA 594
+                  ********************************************************************************************9975 PP
+
+>> RsfS  Ribosomal silencing factor during starvation
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.9   0.0   1.9e-22   1.8e-18       2     100 .]     106     246 ..     105     246 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 66.9 bits;  conditional E-value: 1.9e-22
+             HHHHHHHHTT-E.EEEEEE-TT.......TTBSS-SEEEEEEESSHHHHHHHHHHHHHHHHHTT-.---EEECC............................. CS
+    RsfS   2 eiaealedkkae.divvldlse.......kkssladymviatakserhlkalaeelekklkeelekkkpsveGl............................. 67 
+             +ia++l+ k +  d  v+dl++       + ++l d+mvi+ta+s++h+++++ el+k+lk+e+  ++  veG+                             
+  Q03153 106 KIADLLTGKLGLdDFLVFDLRKkspnsvsAVNKLGDFMVICTARSTKHCHKSFLELNKFLKHEFC-SSAYVEGNfnerqesrrkrrlarksnlskllgrssec 207
+             6899999999999*********99999997789999***************************99.4557899999999999999999999999999999999 PP
+
+             ....TTT.SEEEEE-S..SEEEEEEETTHHHHHHHHHHT CS
+    RsfS  68 ....kngeeWllvdlg..dvvVhllteeaReeydLEelW 100
+                  n+e W+++d+    ++V++lt+++R+e++LEel+
+  Q03153 208 sakdLNSEAWYMIDCRvdGIFVNILTQRRRNELNLEELY 246
+             99996788*******999********************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (612 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       745  (0.0388446); expected 383.6 (0.02)
+Passed bias filter:                      483  (0.0251838); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.68
+# Mc/sec: 2908.83
+//
+[ok]

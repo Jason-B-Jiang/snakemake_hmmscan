@@ -1,0 +1,876 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003336.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003336
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P46561|ATPB_CAEEL  [L=538]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.7e-62  209.9   0.0    5.8e-62  209.2   0.0    1.3  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    3.2e-20   72.5   1.3    7.2e-20   71.4   1.3    1.7  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.2   0.0     6e-66   5.8e-62       1     214 []     195     414 ..     195     414 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 209.2 bits;  conditional E-value: 6e-66
+                           SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEETTS CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxxxx RF
+           ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvantsne 81 
+                           Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      ++  +++ lv+ ++ne
+  sp|P46561|ATPB_CAEEL 195 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYHEMIEggvidlKGKNSKVSLVYGQMNE 283
+                           89*****************************9999998777447***********************555544447779********** PP
+
+                           -HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEE CS
+                           xxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab  82 pvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaav 169
+                           p+ ar ++  tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ s++ER+++++   +Gs+t+v+a+
+  sp|P46561|ATPB_CAEEL 284 PPGARARVCLTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGSMQERITTTK---KGSITSVQAI 369
+                           *********************89****************************************************6...8********* PP
+
+                           E-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab 170 spaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                           +++++D++dp + +t++++d+++vL++ +a+  ++Pa+++l S+S
+  sp|P46561|ATPB_CAEEL 370 YVPADDLTDPAPATTFAHLDATTVLSRGIAELAIYPAVDPLDSTS 414
+                           *******************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.4   1.3   7.5e-24   7.2e-20       1      69 []      72     138 ..      72     138 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 71.4 bits;  conditional E-value: 7.5e-24
+                           EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+         ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                           +v+viG vvdv+f++  lp i+n l+v +++ ++l+l+v +hlg+++Vr+++m++t+Gl+rG++V +TG
+  sp|P46561|ATPB_CAEEL  72 IVAVIGAVVDVQFDEN-LPPILNGLEVVGRS-PRLILEVSQHLGDNVVRCIAMDGTEGLVRGQPVADTG 138
+                           89*************9.***********999.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (538 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       731  (0.0381146); expected 383.6 (0.02)
+Passed bias filter:                      594  (0.0309714); expected 383.6 (0.02)
+Passed Vit filter:                        71  (0.00370197); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.73
+# Mc/sec: 2393.43
+//
+Query:       sp|Q55CS9|ATPB_DICDI  [L=651]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    9.3e-62  208.6   0.1      4e-61  206.5   0.0    1.9  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    6.4e-16   58.7   1.2    1.3e-14   54.5   1.2    2.4  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.5   0.0   4.1e-65     4e-61       1     214 []     236     455 ..     236     455 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 206.5 bits;  conditional E-value: 4.1e-65
+                           SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHHCSHHG......GEEEEEEETTS CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxx RF
+           ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpegtimk......rtvlvantsne 81 
+                           Gi+v+D+l p+ +G++++++g++gvGktv++q+l+++  +++   ++++g+Ger++e +++++e+ e++++k      ++ lv+ ++ne
+  sp|Q55CS9|ATPB_DICDI 236 GIKVIDLLAPYSRGGKIGLFGGAGVGKTVLIQELINNIAKAHggFSVFTGVGERTREGNDLYHEMVEAGVIKkegpgsKVALVFGQMNE 324
+                           99**********************************99887447***********************665544555559********** PP
+
+                           -HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEE CS
+                           xxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab  82 pvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaav 169
+                           p+ ar ++  tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++  ++ER+++++   +Gs+t+v+av
+  sp|Q55CS9|ATPB_DICDI 325 PPGARARVTLTGLTVAEYFRDaEGQDVLLFIDNIFRFTQAGSEMSALLGRIPSAVGYQPTLATDMGCMQERIATTK---KGSITSVQAV 410
+                           ***************************************************************************6...8********* PP
+
+                           E-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab 170 spaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                           +++++D++dp + +t++++d+++vL++++ + +++P +++l S+S
+  sp|Q55CS9|ATPB_DICDI 411 YVPADDLTDPAPATTFAHLDATTVLSRAISELGIYPCVDPLDSTS 455
+                           *******************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.5   1.2   1.4e-18   1.3e-14       1      69 []      83     179 ..      83     179 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 54.5 bits;  conditional E-value: 1.4e-18
+                           EEEEETTEEEEECSTSCETCTTCEEEECCET..............................CSTEEEEEEEEEETTEEEEEESS-CTTB CS
+         ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelve..............................fgtlllgvalhlgedtVrvvvmgstdGl 59 
+                           v qviG vvdv f+ g+lp i++al v+  +                              + +l+l+va+hlg++ Vr+v+++ tdGl
+  sp|Q55CS9|ATPB_DICDI  83 VHQVIGAVVDVYFPHGKLPYINDALIVD--DfqaenvekviedlnnpslkgkidfnnvpisNIKLVLEVAQHLGDGIVRCVALDITDGL 169
+                           679*************************..999******************************************************** PP
+
+                           BTTSEEEEES CS
+         ATP-synt_ab_N  60 krGteVkrTG 69 
+                            rG+ V +TG
+  sp|Q55CS9|ATPB_DICDI 170 GRGALVLNTG 179
+                           *********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (651 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1314  (0.0685124); expected 383.6 (0.02)
+Passed bias filter:                      805  (0.041973); expected 383.6 (0.02)
+Passed Vit filter:                        96  (0.00500547); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.19s 00:00:00.69 Elapsed: 00:00:00.58
+# Mc/sec: 3637.62
+//
+Query:       sp|Q05825|ATPB_DROME  [L=505]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-63  214.7   0.0    2.2e-63  213.9   0.0    1.4  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    1.1e-22   80.4   0.7    2.3e-22   79.3   0.7    1.6  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.9   0.0   2.3e-67   2.2e-63       1     214 []     163     382 ..     163     382 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 213.9 bits;  conditional E-value: 2.3e-67
+                           SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEETTS CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxxxx RF
+           ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvantsne 81 
+                           Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      ++  +++ lv+ ++ne
+  sp|Q05825|ATPB_DROME 163 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYNEMIEggvislKDKTSKVALVYGQMNE 251
+                           89*****************************9999998777447***********************555544447789********** PP
+
+                           -HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEE CS
+                           xxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab  82 pvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaav 169
+                           p+ ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ s++ER+++++   +Gs+t+v+a+
+  sp|Q05825|ATPB_DROME 252 PPGARARVALTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGSMQERITTTK---KGSITSVQAI 337
+                           *********************89****************************************************6...8********* PP
+
+                           E-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab 170 spaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                           +++++D++dp + +t++++d+++vL++++a+ +++Pa+++l S+S
+  sp|Q05825|ATPB_DROME 338 YVPADDLTDPAPATTFAHLDATTVLSRAIAELGIYPAVDPLDSTS 382
+                           *******************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.3   0.7   2.4e-26   2.3e-22       1      69 []      40     106 ..      40     106 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 79.3 bits;  conditional E-value: 2.4e-26
+                           EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+         ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                           +v+viG vvdv+f+   lp i+nal+v+ ++ ++l+l+va+hlge+tVr+++m++t+Gl+rG++V +TG
+  sp|Q05825|ATPB_DROME  40 IVAVIGAVVDVQFDDN-LPPILNALEVDNRS-PRLVLEVAQHLGENTVRTIAMDGTEGLVRGQKVLDTG 106
+                           89*********99988.***********666.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (505 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       568  (0.0296157); expected 383.6 (0.02)
+Passed bias filter:                      500  (0.0260702); expected 383.6 (0.02)
+Passed Vit filter:                        71  (0.00370197); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.15s 00:00:00.54 Elapsed: 00:00:00.73
+# Mc/sec: 2235.64
+//
+Query:       tr|X2JH42|X2JH42_DROME  [L=505]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-63  214.7   0.0    2.2e-63  213.9   0.0    1.4  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    1.1e-22   80.4   0.7    2.3e-22   79.3   0.7    1.6  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.9   0.0   2.3e-67   2.2e-63       1     214 []     163     382 ..     163     382 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 213.9 bits;  conditional E-value: 2.3e-67
+                             SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEET CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxx RF
+             ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvants 79 
+                             Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      ++  +++ lv+ ++
+  tr|X2JH42|X2JH42_DROME 163 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYNEMIEggvislKDKTSKVALVYGQM 249
+                             89*****************************9999998777447***********************555544447789******** PP
+
+                             TS-HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab  80 nepvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvti 165
+                             nep+ ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ s++ER+++++   +Gs+t+
+  tr|X2JH42|X2JH42_DROME 250 NEPPGARARVALTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGSMQERITTTK---KGSITS 333
+                             ***********************89****************************************************6...8***** PP
+
+                             EEEEE-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab 166 vaavspaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                             v+a++++++D++dp + +t++++d+++vL++++a+ +++Pa+++l S+S
+  tr|X2JH42|X2JH42_DROME 334 VQAIYVPADDLTDPAPATTFAHLDATTVLSRAIAELGIYPAVDPLDSTS 382
+                             ***********************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.3   0.7   2.4e-26   2.3e-22       1      69 []      40     106 ..      40     106 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 79.3 bits;  conditional E-value: 2.4e-26
+                             EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+           ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                             +v+viG vvdv+f+   lp i+nal+v+ ++ ++l+l+va+hlge+tVr+++m++t+Gl+rG++V +TG
+  tr|X2JH42|X2JH42_DROME  40 IVAVIGAVVDVQFDDN-LPPILNALEVDNRS-PRLVLEVAQHLGENTVRTIAMDGTEGLVRGQKVLDTG 106
+                             89*********99988.***********666.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (505 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       568  (0.0296157); expected 383.6 (0.02)
+Passed bias filter:                      500  (0.0260702); expected 383.6 (0.02)
+Passed Vit filter:                        71  (0.00370197); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.78
+# Mc/sec: 2092.23
+//
+Query:       tr|L0MQ04|L0MQ04_DROME  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.4e-63  214.6   0.0    2.3e-63  213.8   0.0    1.4  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    1.1e-22   80.4   0.7    2.4e-22   79.3   0.7    1.6  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.8   0.0   2.4e-67   2.3e-63       1     214 []     169     388 ..     169     388 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 213.8 bits;  conditional E-value: 2.4e-67
+                             SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEET CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxx RF
+             ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvants 79 
+                             Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      ++  +++ lv+ ++
+  tr|L0MQ04|L0MQ04_DROME 169 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYNEMIEggvislKDKTSKVALVYGQM 255
+                             89*****************************9999998777447***********************555544447789******** PP
+
+                             TS-HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab  80 nepvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvti 165
+                             nep+ ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ s++ER+++++   +Gs+t+
+  tr|L0MQ04|L0MQ04_DROME 256 NEPPGARARVALTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGSMQERITTTK---KGSITS 339
+                             ***********************89****************************************************6...8***** PP
+
+                             EEEEE-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab 166 vaavspaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                             v+a++++++D++dp + +t++++d+++vL++++a+ +++Pa+++l S+S
+  tr|L0MQ04|L0MQ04_DROME 340 VQAIYVPADDLTDPAPATTFAHLDATTVLSRAIAELGIYPAVDPLDSTS 388
+                             ***********************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.3   0.7   2.5e-26   2.4e-22       1      69 []      46     112 ..      46     112 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 79.3 bits;  conditional E-value: 2.5e-26
+                             EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+           ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                             +v+viG vvdv+f+   lp i+nal+v+ ++ ++l+l+va+hlge+tVr+++m++t+Gl+rG++V +TG
+  tr|L0MQ04|L0MQ04_DROME  46 IVAVIGAVVDVQFDDN-LPPILNALEVDNRS-PRLVLEVAQHLGENTVRTIAMDGTEGLVRGQKVLDTG 112
+                             89*********99988.***********666.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       585  (0.0305021); expected 383.6 (0.02)
+Passed bias filter:                      503  (0.0262266); expected 383.6 (0.02)
+Passed Vit filter:                        73  (0.00380625); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.60
+# Mc/sec: 2736.96
+//
+Query:       tr|Q8T4C4|Q8T4C4_DROME  [L=622]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.8e-64  217.5   0.0    2.9e-64  216.7   0.0    1.4  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    4.2e-19   68.9   0.1      1e-18   67.7   0.1    1.7  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.7   0.0     3e-68   2.9e-64       1     214 []     230     449 ..     230     449 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 216.7 bits;  conditional E-value: 3e-68
+                             SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTS.S.EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEET CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.x.xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxx RF
+             ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsd.d.aiiyvgiGergnevaevleefpe......gtimkrtvlvants 79 
+                             Gi+v+D+l p+v+G++++++g++gvGktv++ +l+++  ++   ++++vg Ger++e +++++e+ e      ++  +++vlv+ ++
+  tr|Q8T4C4|Q8T4C4_DROME 230 GIKVIDLLAPYVKGGKIGLFGGAGVGKTVLIMELINNIAKShGgYSVFVGAGERTREGNDLYHEMIEskvislEDDSSKVVLVFGQM 316
+                             99*****************************8888776555347***********************44444433667********* PP
+
+                             TS-HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab  80 nepvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvti 165
+                             nep+ ar +++ tg+t+AEyfrd  g++vll++d+++r+++A  e+s++lg++p++ gy+++lg+++ +++ER++++   r+Gs+t+
+  tr|Q8T4C4|Q8T4C4_DROME 317 NEPPGARSRVVLTGLTIAEYFRDvDGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLGTDMGTMQERITST---RNGSITS 400
+                             ****************************************************************************9...59***** PP
+
+                             EEEEE-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab 166 vaavspaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                             v+av+++++D+sdp + at++++d+++vL++ +a+ +++Pa+++l S S
+  tr|Q8T4C4|Q8T4C4_DROME 401 VQAVYVPADDLSDPAPAATFSHLDATTVLSRPIAELGIYPAVDPLDSSS 449
+                             **********************************************988 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.7   0.1   1.1e-22     1e-18       1      69 []     106     173 ..     106     173 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 67.7 bits;  conditional E-value: 1.1e-22
+                             EEEEETTEEEEECSTSCETCTTCEEEECCET..CSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+           ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelve..fgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                             + +viGpv+dv f++  +p+++nal+v+  +    +l+l+v  hlg++ Vr+v+m+st+Gl+rG++V +TG
+  tr|Q8T4C4|Q8T4C4_DROME 106 IHAVIGPVIDVYFEEE-VPEVLNALQVQ--DapIANLVLEVFHHLGNNIVRCVAMDSTEGLRRGQPVLDTG 173
+                             568************9.***********..86689***********************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (622 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       988  (0.0515147); expected 383.6 (0.02)
+Passed bias filter:                      629  (0.0327963); expected 383.6 (0.02)
+Passed Vit filter:                       104  (0.0054226); expected 19.2 (0.001)
+Passed Fwd filter:                        14  (0.000729965); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.66
+# Mc/sec: 3027.02
+//
+Query:       tr|A8WGC6|A8WGC6_DANRE  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.9e-63  213.5   0.0      4e-63  213.0   0.0    1.2  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+      1e-23   83.7   2.0    2.1e-23   82.7   2.0    1.6  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.0   0.0   4.2e-67     4e-63       1     214 []     175     394 ..     175     394 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 213.0 bits;  conditional E-value: 4.2e-67
+                             SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEET CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxx RF
+             ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvants 79 
+                             Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      ++  +++ lv+ ++
+  tr|A8WGC6|A8WGC6_DANRE 175 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYHEMIEsgvinlKDTTSKVALVYGQM 261
+                             89*****************************9999998777447***********************666655558899******** PP
+
+                             TS-HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab  80 nepvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvti 165
+                             nep+ ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ +++ER+++++   +Gs+t+
+  tr|A8WGC6|A8WGC6_DANRE 262 NEPPGARARVALTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGTMQERITTTK---KGSITS 345
+                             ***********************89****************************************************6...8***** PP
+
+                             EEEEE-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+             ATP-synt_ab 166 vaavspaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                             v+a++++++D++dp + +t++++d+++vL++++a+ +++Pa+++l S+S
+  tr|A8WGC6|A8WGC6_DANRE 346 VQAIYVPADDLTDPAPATTFAHLDATTVLSRAIAELGIYPAVDPLDSTS 394
+                             ***********************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.7   2.0   2.2e-27   2.1e-23       1      69 []      52     118 ..      52     118 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 82.7 bits;  conditional E-value: 2.2e-27
+                             EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+           ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                             +v+viG vvdv+f++g lp i+nal+v +++ ++l+l+va+hlge+tVr+++m++t+Gl+rG++V +TG
+  tr|A8WGC6|A8WGC6_DANRE  52 IVAVIGAVVDVQFDEG-LPPILNALEVAGRD-SRLVLEVAQHLGENTVRTIAMDGTEGLVRGQKVLDTG 118
+                             89**************.***********999.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       539  (0.0281037); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.15s 00:00:00.60 Elapsed: 00:00:00.69
+# Mc/sec: 2419.23
+//
+Query:       sp|P06576|ATPB_HUMAN  [L=529]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      2e-63  214.0   0.0    2.8e-63  213.5   0.0    1.2  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+      5e-22   78.3   2.3    9.9e-22   77.3   2.3    1.5  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.5   0.0   2.9e-67   2.8e-63       1     214 []     186     405 ..     186     405 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 213.5 bits;  conditional E-value: 2.9e-67
+                           SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH......CSHHGGEEEEEEETTS CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx......xxxxxxxxxxxxxxxx RF
+           ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe......gtimkrtvlvantsne 81 
+                           Gi+v+D+l p+++G++++++g++gvGktv++ +l+++  +++  +++++g+Ger++e +++++e+ e      +++ +++ lv+ ++ne
+  sp|P06576|ATPB_HUMAN 186 GIKVVDLLAPYAKGGKIGLFGGAGVGKTVLIMELINNVAKAHggYSVFAGVGERTREGNDLYHEMIEsgvinlKDATSKVALVYGQMNE 274
+                           89*****************************9999998777447***********************66666555999*********** PP
+
+                           -HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEE CS
+                           xxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab  82 pvaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaav 169
+                           p+ ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ +++ER+++++   +Gs+t+v+a+
+  sp|P06576|ATPB_HUMAN 275 PPGARARVALTGLTVAEYFRDqEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGTMQERITTTK---KGSITSVQAI 360
+                           *********************89****************************************************6...8********* PP
+
+                           E-CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab 170 spaggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                           +++++D++dp + +t++++d+++vL++++a+ +++Pa+++l S+S
+  sp|P06576|ATPB_HUMAN 361 YVPADDLTDPAPATTFAHLDATTVLSRAIAELGIYPAVDPLDSTS 405
+                           *******************************************98 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.3   2.3     1e-25   9.9e-22       1      69 []      63     129 ..      63     129 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 77.3 bits;  conditional E-value: 1e-25
+                           EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+         ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                           +v+viG vvdv+f++g lp i+nal+v+++e  +l+l+va+hlge tVr+++m++t+Gl+rG++V + G
+  sp|P06576|ATPB_HUMAN  63 IVAVIGAVVDVQFDEG-LPPILNALEVQGRE-TRLVLEVAQHLGESTVRTIAMDGTEGLVRGQKVLDSG 129
+                           89**************.***********999.*********************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (529 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       530  (0.0276344); expected 383.6 (0.02)
+Passed bias filter:                      494  (0.0257573); expected 383.6 (0.02)
+Passed Vit filter:                        71  (0.00370197); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.59
+# Mc/sec: 2891.31
+//
+Query:       XP_013237261.1  [L=509]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.2e-60  204.1   0.0    3.2e-60  203.5   0.0    1.2  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    1.8e-22   79.7   0.6    4.1e-22   78.5   0.6    1.7  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  203.5   0.0   3.3e-64   3.2e-60       1     214 []     162     383 ..     162     383 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 203.5 bits;  conditional E-value: 3.3e-64
+                     SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHH........CSHHGGEEEEEEETTS-HHH CS
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxx........xxxxxxxxxxxxxxxxxxxx RF
+     ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpe........gtimkrtvlvantsnepvaa 85 
+                     Gi+v+D+l p+++G++++++g++gvGktv +q+l+++  + +   ++++g+Ger++e +++++e+          +   +++ lv+ ++nep+ a
+  XP_013237261.1 162 GIKVVDLLAPYARGGKIGLFGGAGVGKTVFIQELINNVAKGHggFSVFAGVGERTREGNDLYHEMIAtgviklgdKANESKAALVFGQMNEPPGA 256
+                     89**********************************98766447***********************66666643335669************** PP
+
+                     HHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEEE-CCSSTTSH CS
+                     xxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+     ATP-synt_ab  86 reasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaavspaggDfsdp 179
+                     r +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++  ++ER+++++   +Gs+t+v+a++++++D++dp
+  XP_013237261.1 257 RARVALTGLTVAEYFRDtEGQDVLLFVDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGAMQERITTTK---KGSITSVQAIYVPADDLTDP 348
+                     ***********************************************************************6...8******************* PP
+
+                     HHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+     ATP-synt_ab 180 vttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                      + +t++++d+++vL++++ +  ++Pa+++l S S
+  XP_013237261.1 349 APATTFAHLDATTVLSRAISELAIYPAVDPLDSNS 383
+                     ********************************987 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.5   0.6   4.3e-26   4.1e-22       1      69 []      38     105 ..      38     105 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 78.5 bits;  conditional E-value: 4.3e-26
+                     EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+   ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                     + ++iG +vdv+f++  lp i+nal+ve+ +  +l+l+va+hlge+tVr+++m++t+Gl+rG+ V++TG
+  XP_013237261.1  38 IKSIIGAIVDVQFDSSSLPSILNALEVEGHS-TRLVLEVAQHLGENTVRTIAMDGTEGLMRGQGVVDTG 105
+                     568*************************888.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (509 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       596  (0.0310757); expected 383.6 (0.02)
+Passed bias filter:                      536  (0.0279472); expected 383.6 (0.02)
+Passed Vit filter:                        68  (0.00354554); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.68
+# Mc/sec: 2425.33
+//
+Query:       PJF19876.1  [L=510]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.1e-61  207.4   0.0    3.3e-61  206.8   0.0    1.3  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    9.2e-23   80.7   4.4    1.2e-22   80.3   3.3    1.9  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.8   0.0   3.4e-65   3.3e-61       1     214 []     166     384 ..     166     384 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 206.8 bits;  conditional E-value: 3.4e-65
+                  SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHHCS.....HHGGEEEEEEETTS-HHHHHHHHH CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpegt.....imkrtvlvantsnepvaareasiy 91 
+                  Gi+v+D+l p+++G++++++g++gvGktv +q+l+++  +++  +++++g+Ger++e +++++e+  ++       +++ lv+ ++nep+ ar +++ 
+   PJF19876.1 166 GIKVVDMLAPYARGGKIGLFGGAGVGKTVFIQELINNVAKAHggYSVFAGVGERTREGNDLYHEMMATNvirldGESKAALVFGQMNEPPGARARVAL 263
+                  89**********************************98887447***********************7754445667********************* PP
+
+                  HHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEEE-CCSSTTSHHHHHHHHHS CS
+                  xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab  92 tgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaavspaggDfsdpvttatlgit 188
+                  tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++  ++ER+++++   +Gs+t+v+a++++++D++dp + +t++++
+   PJF19876.1 264 TGLTVAEYFRDdEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGAMQERITTTK---KGSITSVQAIYVPADDLTDPAPATTFAHL 358
+                  ***********9*****************************************************6...8**************************** PP
+
+                  SEEEEE-HHHHHTTBSSSECTTTEEE CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab 189 dgfivLdkklaqrkhfPainvlvSvS 214
+                  d+++vL++++ +  ++Pa+++l S S
+   PJF19876.1 359 DATTVLSRAISELAIYPAVDPLDSKS 384
+                  **********************9987 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.3   3.3   1.3e-26   1.2e-22       1      69 []      41     109 ..      41     109 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 80.3 bits;  conditional E-value: 1.3e-26
+                    EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+  ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                    v +viG vvdv+f++g+lp i+nal+v+  + g+l+l+v +hlge+tVr+++m++t+Gl+rG+eV++TG
+     PJF19876.1  41 VKSVIGAVVDVQFEQGELPLILNALEVKNHSGGRLVLEVSQHLGENTVRTIAMDGTEGLVRGQEVVDTG 109
+                    568*************************777*************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (510 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       557  (0.0290422); expected 383.6 (0.02)
+Passed bias filter:                      512  (0.0266959); expected 383.6 (0.02)
+Passed Vit filter:                        68  (0.00354554); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.19s 00:00:00.64 Elapsed: 00:00:00.59
+# Mc/sec: 2786.39
+//
+Query:       EPZ31023.1  [L=485]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.2e-59  200.3   0.0    4.8e-59  199.7   0.0    1.3  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    3.9e-15   56.2   0.3    1.3e-14   54.6   0.3    2.0  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.7   0.0     5e-63   4.8e-59       1     214 []     144     360 ..     144     360 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 199.7 bits;  conditional E-value: 5e-63
+                  SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHHCS.....HHGGEEEEEEETTS-HHHHHHHHH CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpegt.....imkrtvlvantsnepvaareasiy 91 
+                  Gi+v+D+l p+++G++++++g++gvGktv +q+l+++  +++  +++++g+Ger++e +++++e+ e++       +++ lv+ ++nep+ ar +++ 
+   EPZ31023.1 144 GIKVVDLLAPYARGGKIGLFGGAGVGKTVFIQELINNVAKAHggYSVFAGVGERTREGNDLYHEMIETKviqleGDSKAALVFGQMNEPPGARARVAL 241
+                  89**********************************98887447***********************7744333556********************* PP
+
+                  HHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEEE-CCSSTTSHHHHHHHHHS CS
+                  xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab  92 tgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaavspaggDfsdpvttatlgit 188
+                  tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++ s++ER+++++   +Gs+t+  av+++++D++dp + +t++++
+   EPZ31023.1 242 TGLTVAEYFRDdEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGSMQERITTTK---KGSITS--AVYVPADDLTDPAPATTFAHL 334
+                  ***********9*****************************************************6...7**996..899****************** PP
+
+                  SEEEEE-HHHHHTTBSSSECTTTEEE CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab 189 dgfivLdkklaqrkhfPainvlvSvS 214
+                  d+++vL++++ +  ++Pa+++l S S
+   EPZ31023.1 335 DATTVLSRAISEMAIYPAVDPLDSKS 360
+                  **********************9987 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.6   0.3   1.3e-18   1.3e-14       1      69 []      25      87 ..      25      87 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 54.6 bits;  conditional E-value: 1.3e-18
+                   EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+  ATP-synt_ab_N  1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69
+                   + +viG vvdv+f++  lp i+nal+v++ + ++l+l+v +hlg     +++m++t+Gl+rG++V +TG
+     EPZ31023.1 25 IKSVIGAVVDVQFDESSLPPILNALEVKGHS-SRLVLEVSQHLG-----TIAMDGTEGLVRGQKVLDTG 87
+                   568*************************888.***********6.....9******************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (485 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       556  (0.02899); expected 383.6 (0.02)
+Passed bias filter:                      518  (0.0270087); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.20s 00:00:00.65 Elapsed: 00:00:00.63
+# Mc/sec: 2478.01
+//
+Query:       P00830  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.6e-62  209.3   0.0      9e-62  208.6   0.0    1.3  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+      4e-24   85.0   1.0    1.1e-23   83.6   1.0    1.8  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.6   0.0   9.4e-66     9e-62       1     214 []     170     388 ..     170     388 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 208.6 bits;  conditional E-value: 9.4e-66
+                  SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHHCS.....HHGGEEEEEEETTS-HHHHHHHHH CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpegt.....imkrtvlvantsnepvaareasiy 91 
+                  Gi+v+D+l p+++G++++++g++gvGktv +q+l+++  +++   ++++g+Ger++e +++++e++e++       +++ lv+ ++nep+ ar +++ 
+       P00830 170 GIKVVDLLAPYARGGKIGLFGGAGVGKTVFIQELINNIAKAHggFSVFTGVGERTREGNDLYREMKETGvinleGESKVALVFGQMNEPPGARARVAL 267
+                  89*********************************999887447***********************6644444667********************* PP
+
+                  HHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEEE-CCSSTTSHHHHHHHHHS CS
+                  xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab  92 tgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaavspaggDfsdpvttatlgit 188
+                  tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++  l+ER+++++   +Gsvt+v+av+++++D++dp + +t++++
+       P00830 268 TGLTIAEYFRDeEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGLLQERITTTK---KGSVTSVQAVYVPADDLTDPAPATTFAHL 362
+                  ***********99****************************************************6...8**************************** PP
+
+                  SEEEEE-HHHHHTTBSSSECTTTEEE CS
+                  xxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  ATP-synt_ab 189 dgfivLdkklaqrkhfPainvlvSvS 214
+                  d+++vL++ + + +++Pa+++l S S
+       P00830 363 DATTVLSRGISELGIYPAVDPLDSKS 388
+                  **********************9987 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.6   1.0   1.2e-27   1.1e-23       1      69 []      46     113 ..      46     113 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 83.6 bits;  conditional E-value: 1.2e-27
+                    EEEEETTEEEEECSTSCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+  ATP-synt_ab_N   1 vvqviGpvvdvefgigrlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                    v++viG +vdv+f++ +lp+i+nal+++ ++ g+l+l+va+hlge+tVr+++m++t+Gl+rG++V +TG
+         P00830  46 VTAVIGAIVDVHFEQSELPAILNALEIKTPQ-GKLVLEVAQHLGENTVRTIAMDGTEGLVRGEKVLDTG 113
+                    799*************************888.************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       565  (0.0294593); expected 383.6 (0.02)
+Passed bias filter:                      530  (0.0276344); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.16s 00:00:00.61 Elapsed: 00:00:00.72
+# Mc/sec: 2286.63
+//
+Query:       sp|P22068|ATPB_SCHPO  [L=525]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.3e-62  211.4   0.0    1.9e-62  210.8   0.0    1.3  1  ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-bin
+    1.1e-23   83.6   0.4    3.5e-23   82.0   0.6    1.8  1  ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel do
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_ab  ATP synthase alpha/beta family, nucleotide-binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.8   0.0     2e-66   1.9e-62       1     214 []     183     401 ..     183     401 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 210.8 bits;  conditional E-value: 2e-66
+                           SSHHHHCCS-EBTT-EEEEEESTTSSHHHHHHHHHHHCSTSS..EEEEEEECEEHHHHHHHHHHHHHCSHHG.....GEEEEEEETTS- CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..xxxxxxxxxxxxxxxxxxxxxxxxxxxx.....xxxxxxxxxxxx RF
+           ATP-synt_ab   1 GirvlDalfpivqGqrtcipgafgvGktvisqslskqsnsdd..aiiyvgiGergnevaevleefpegtimk.....rtvlvantsnep 82 
+                           Gi+v+D+l p+++G++++++g++gvGktv +q+l+++  +++  +++++g+Ger++e +++++e++e++++k     ++ lv+ ++nep
+  sp|P22068|ATPB_SCHPO 183 GIKVVDLLAPYARGGKIGLFGGAGVGKTVFIQELINNIAKAHggYSVFTGVGERTREGNDLYREMQETGVIKlegesKAALVFGQMNEP 271
+                           89*********************************999887447***********************7744444444************ PP
+
+                           HHHHHHHHHHHHHHHHHHHH.TTSEEEEEEETHHHHHHHHHHHHHHTTTSBCGGGCETTHHHHHHHHHCTSEEEEESSEEEEEEEEEEE CS
+                           xxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab  83 vaareasiytgitlAEyfrd.qgknvlliadslsrwaeAlreislrlgempadqgypaylgaklaslyERagkavadrtGsvtivaavs 170
+                           + ar +++ tg+t+AEyfrd +g++vll++d+++r+++A  e+s++lg++p++ gy+++l++++  ++ER+++++   +Gs+t+v+av+
+  sp|P22068|ATPB_SCHPO 272 PGARARVALTGLTVAEYFRDiEGQDVLLFIDNIFRFTQAGSEVSALLGRIPSAVGYQPTLATDMGAMQERITTTK---KGSITSVQAVY 357
+                           **************************************************************************6...8********** PP
+
+                           -CCSSTTSHHHHHHHHHSSEEEEE-HHHHHTTBSSSECTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           ATP-synt_ab 171 paggDfsdpvttatlgitdgfivLdkklaqrkhfPainvlvSvS 214
+                           ++++D++dp + +t++++d+++vL++++ + +++Pa+++l S S
+  sp|P22068|ATPB_SCHPO 358 VPADDLTDPAPATTFAHLDATTVLSRSISELGIYPAVDPLDSKS 401
+                           ****************************************9987 PP
+
+>> ATP-synt_ab_N  ATP synthase alpha/beta family, beta-barrel domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.0   0.6   3.7e-27   3.5e-23       1      69 []      57     126 ..      57     126 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 82.0 bits;  conditional E-value: 3.7e-27
+                           EEEEETTEEEEECST.SCETCTTCEEEECCETCSTEEEEEEEEEETTEEEEEESS-CTTBBTTSEEEEES CS
+         ATP-synt_ab_N   1 vvqviGpvvdvefgi.grlpgiynalkvelvefgtlllgvalhlgedtVrvvvmgstdGlkrGteVkrTG 69 
+                           + qviG vvd +f+  + lp i+nal+v+l+++++l+l+va+h+ge+tVr+++m++t+Gl+rGt V++TG
+  sp|P22068|ATPB_SCHPO  57 IKQVIGAVVDCQFEDaDSLPSILNALEVKLPDNKRLVLEVAQHVGENTVRTIAMDGTEGLVRGTAVIDTG 126
+                           679************99****************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (525 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       664  (0.0346212); expected 383.6 (0.02)
+Passed bias filter:                      623  (0.0324834); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.69
+# Mc/sec: 2451.32
+//
+[ok]

@@ -1,0 +1,239 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0011218.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0011218
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q08BG0|Q08BG0_DANRE  [L=431]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.8e-47  158.8  50.3    1.5e-17   63.7   8.5    3.9  3  Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domai
+    2.6e-10   40.5   3.7    2.6e-10   40.5   3.7    3.6  1  MANEC        MANEC domain
+
+
+Domain annotation for each model (and alignments):
+>> Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.7   8.5   1.5e-21   1.5e-17       2      52 ..     133     183 ..     132     184 .. 0.98
+   2 !   54.0  10.8   1.6e-18   1.5e-14       2      52 ..     228     276 ..     227     277 .. 0.97
+   3 !   62.7   4.6     3e-21   2.9e-17       2      52 ..     304     354 ..     303     355 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 63.7 bits;  conditional E-value: 1.5e-21
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C+ p   G+C+a ++r++y+ ++++C++F+YgGcggneNnF+s++eCe+ C
+  tr|Q08BG0|Q08BG0_DANRE 133 CRFPSAVGNCRAAFPRFFYDITDQTCKSFIYGGCGGNENNFYSQAECEASC 183
+                             9************************************************** PP
+
+  == domain 2  score: 54.0 bits;  conditional E-value: 1.6e-18
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C+ pa +G+C+as++r+yyn  ++ C++F+YgGcggn+Nn+es+++C+++C
+  tr|Q08BG0|Q08BG0_DANRE 228 CQSPAVTGNCRASIKRFYYN--NGVCQQFIYGGCGGNKNNYESEDSCMTAC 276
+                             *******************9..799************************** PP
+
+  == domain 3  score: 62.7 bits;  conditional E-value: 3e-21
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C  p d+GpC+as++++++++++++C++F+YgGc+gn N++ s+eeC+s+C
+  tr|Q08BG0|Q08BG0_DANRE 304 CVVPSDSGPCRASFRMFFFEASSQSCQPFIYGGCRGNLNRYGSEEECMSVC 354
+                             999************************************************ PP
+
+>> MANEC  MANEC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.5   3.7   2.7e-14   2.6e-10      19      88 ..      38     106 ..      22     107 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 40.5 bits;  conditional E-value: 2.7e-14
+                   MANEC  19 dsvknGakfle.saevsseedCveaCcsekkCnlavleekkeeeekksCyLfnClsesefvCkfakkkgyt 88 
+                             +s+++ a +l+   e+++ e+C +aCc++++C+la++ +++  +  ++C L+nC++++++vC +++ ++++
+  tr|Q08BG0|Q08BG0_DANRE  38 KSFNDNAPYLThLSEIMNVEQCQRACCEREDCQLALIGKTA--DGPQECNLVNCMKDGKDVCVLSQTTQFQ 106
+                             57888888888678899********************9999..99********************999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (431 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       664  (0.0346212); expected 383.6 (0.02)
+Passed bias filter:                      392  (0.020439); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.20s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 2594.79
+//
+Query:       tr|F1QEV7|F1QEV7_DANRE  [L=431]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.8e-47  158.8  50.3    1.5e-17   63.7   8.5    3.9  3  Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domai
+    2.7e-10   40.4   3.7    2.7e-10   40.4   3.7    3.5  1  MANEC        MANEC domain
+
+
+Domain annotation for each model (and alignments):
+>> Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.7   8.5   1.5e-21   1.5e-17       2      52 ..     133     183 ..     132     184 .. 0.98
+   2 !   54.0  10.8   1.6e-18   1.5e-14       2      52 ..     228     276 ..     227     277 .. 0.97
+   3 !   62.7   4.6     3e-21   2.9e-17       2      52 ..     304     354 ..     303     355 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 63.7 bits;  conditional E-value: 1.5e-21
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C+ p   G+C+a ++r++y+ ++++C++F+YgGcggneNnF+s++eCe+ C
+  tr|F1QEV7|F1QEV7_DANRE 133 CRFPSAVGNCRAAFPRFFYDITDQTCKSFIYGGCGGNENNFYSQAECEASC 183
+                             9************************************************** PP
+
+  == domain 2  score: 54.0 bits;  conditional E-value: 1.6e-18
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C+ pa +G+C+as++r+yyn  ++ C++F+YgGcggn+Nn+es+++C+++C
+  tr|F1QEV7|F1QEV7_DANRE 228 CQSPAVTGNCRASIKRFYYN--NGVCQQFIYGGCGGNKNNYESEDSCMTAC 276
+                             *******************9..799************************** PP
+
+  == domain 3  score: 62.7 bits;  conditional E-value: 3e-21
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C  p d+GpC+as++++++++++++C++F+YgGc+gn N++ s+eeC+s+C
+  tr|F1QEV7|F1QEV7_DANRE 304 CVVPSDSGPCRASFRMFFFEASSQSCQPFIYGGCRGNLNRYGSEEECMSVC 354
+                             999************************************************ PP
+
+>> MANEC  MANEC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   3.7   2.8e-14   2.7e-10      19      88 ..      38     106 ..      23     107 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 2.8e-14
+                   MANEC  19 dsvknGakfle.saevsseedCveaCcsekkCnlavleekkeeeekksCyLfnClsesefvCkfakkkgyt 88 
+                             +s+++ a +l+   e+++ e+C +aCc++++C+la++ +++  +  ++C L+nC++++++vC +++ ++++
+  tr|F1QEV7|F1QEV7_DANRE  38 KSFNDNAPYLThLSEIMNVEQCQRACCEREDCQLALIGKTA--DGPQECNLVNCMKDGKDVCVLSQTTQFQ 106
+                             57888888888678899********************9999..99********************999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (431 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       667  (0.0347776); expected 383.6 (0.02)
+Passed bias filter:                      393  (0.0204912); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.19s 00:00:00.63 Elapsed: 00:00:00.67
+# Mc/sec: 2072.41
+//
+Query:       tr|R4GEK7|R4GEK7_DANRE  [L=265]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.1e-15   55.5  13.8    7.3e-15   55.0  10.8    3.1  1  Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domai
+    1.1e-10   41.7   3.7    1.1e-10   41.7   3.7    2.4  1  MANEC        MANEC domain
+
+
+Domain annotation for each model (and alignments):
+>> Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.0  10.8   7.6e-19   7.3e-15       2      52 ..     171     219 ..     170     220 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 55.0 bits;  conditional E-value: 7.6e-19
+                             GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+             Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                             C+ pa +G+C+as++r+yyn  ++ C++F+YgGcggn+Nn+es+++C+++C
+  tr|R4GEK7|R4GEK7_DANRE 171 CQSPAVTGNCRASIKRFYYN--NGVCQQFIYGGCGGNKNNYESEDSCMTAC 219
+                             *******************9..799************************** PP
+
+>> MANEC  MANEC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.7   3.7   1.2e-14   1.1e-10      19      88 ..      38     106 ..      22     107 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 41.7 bits;  conditional E-value: 1.2e-14
+                   MANEC  19 dsvknGakfle.saevsseedCveaCcsekkCnlavleekkeeeekksCyLfnClsesefvCkfakkkgyt 88 
+                             +s+++ a +l+   e+++ e+C +aCc++++C+la++ +++  +  ++C L+nC++++++vC +++ ++++
+  tr|R4GEK7|R4GEK7_DANRE  38 KSFNDNAPYLThLSEIMNVEQCQRACCEREDCQLALIGKTA--DGPQECNLVNCMKDGKDVCVLSQTTQFQ 106
+                             57888888888678899********************9999..99********************999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (265 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       891  (0.0464571); expected 383.6 (0.02)
+Passed bias filter:                      493  (0.0257052); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.14s 00:00:00.48 Elapsed: 00:00:00.51
+# Mc/sec: 1678.99
+//
+Query:       sp|O43291|SPIT2_HUMAN  [L=252]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      5e-35  119.6  21.2    9.5e-19   67.5   4.0    2.2  2  Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domai
+
+
+Domain annotation for each model (and alignments):
+>> Kunitz_BPTI  Kunitz/Bovine pancreatic trypsin inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.5   4.0     5e-23   9.5e-19       1      52 [.      37      88 ..      37      89 .. 0.97
+   2 !   58.1   9.3   4.1e-20   7.9e-16       2      52 ..     133     183 ..     132     184 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 67.5 bits;  conditional E-value: 5e-23
+                           GGGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+            Kunitz_BPTI  1 vCslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52
+                           +C  ++  G+C+as++r++yn ++++C+ FvYgGc+gn+Nn+ +keeC ++C
+  sp|O43291|SPIT2_HUMAN 37 FCLVSKVVGRCRASMPRWWYNVTDGSCQLFVYGGCDGNSNNYLTKEECLKKC 88
+                           5999************************************************ PP
+
+  == domain 2  score: 58.1 bits;  conditional E-value: 4.1e-20
+                            GGSSB-CTSBSSCEEEEEEETTTTEEEEEEETSSSCCSS-BSSHHHHHHHH CS
+            Kunitz_BPTI   2 CslpadeGpCkaseeryyynsetkeCekFvYgGcggneNnFeskeeCeslC 52 
+                            C+ +a +GpC+as++r+y++ e ++C++F+YgGc+gn+N + s+e+C+  C
+  sp|O43291|SPIT2_HUMAN 133 CTANAVTGPCRASFPRWYFDVERNSCNNFIYGGCRGNKNSYRSEEACMLRC 183
+                            ************************************************999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (252 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       937  (0.0488555); expected 383.6 (0.02)
+Passed bias filter:                      653  (0.0340477); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.59
+# Mc/sec: 1372.84
+//
+[ok]

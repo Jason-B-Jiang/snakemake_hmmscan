@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040403.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040403
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q6ZSY5|PPR3F_HUMAN  [L=799]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.9e-29   99.9   0.0    1.8e-28   99.0   0.0    1.4  1  CBM_21    Carbohydrate/starch-binding module (family 21)
+    8.7e-07   29.6   0.0    2.3e-06   28.2   0.0    1.7  1  CBM53     Starch/carbohydrate-binding module (family 53)
+
+
+Domain annotation for each model (and alignments):
+>> CBM_21  Carbohydrate/starch-binding module (family 21)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.0   0.0   1.9e-32   1.8e-28      17     112 ..     160     283 ..     151     284 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 99.0 bits;  conditional E-value: 1.9e-32
+                 CBM_21  17 dkkvlvGlvaVknlafeKavavrytldnWktilevpaeyvk.............................saeeslkennydrFkFki 75 
+                            +  vl+Glv+V n +feKav+vr+++d+W++++++pa+yv+                             sa++ +++ ++drF+F++
+  sp|Q6ZSY5|PPR3F_HUMAN 160 RPPVLRGLVRVLNRSFEKAVHVRASHDGWASFCDHPARYVPrsppwagaggtgagdpildpglglgpgqaSASSPDDGGRTDRFAFQL 247
+                            5679*****************************************************************9999*************** PP
+
+                 CBM_21  76 klkkllnsekaklelcikYevneeeyWdnNngkNYev 112
+                               ++ + ++a+l+++++Ye+ e+++W+nN+g+NY+v
+  sp|Q6ZSY5|PPR3F_HUMAN 248 -PFAEGAGDGARLDFVVRYETPEGTFWANNHGRNYTV 283
+                            .77888999**************************98 PP
+
+>> CBM53  Starch/carbohydrate-binding module (family 53)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.2   0.0   2.4e-10   2.3e-06       7      82 ..     173     283 ..     168     285 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 28.2 bits;  conditional E-value: 2.4e-10
+                  CBM53   7 kkleakevtlhygfngWkstqdvamtkv..........................e......assgdseedwfeaevtvpkea...sal 59 
+                            ++  +k v ++ +++gW s  d+++++v                                 ++++++ +d+f+++++  ++a    +l
+  sp|Q6ZSY5|PPR3F_HUMAN 173 RSF-EKAVHVRASHDGWASFCDHPARYVprsppwagaggtgagdpildpglglgPgqasasSPDDGGRTDRFAFQLPFAEGAgdgARL 259
+                            455.5569*********************999999999988888877776665505567777889999**************99778* PP
+
+                  CBM53  60 nfvfds.segeenwDNNngqnYkv 82 
+                            +fv+ + + ++++w NN+g+nY+v
+  sp|Q6ZSY5|PPR3F_HUMAN 260 DFVVRYeTPEGTFWANNHGRNYTV 283
+                            ****5558889***********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (799 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       424  (0.0221075); expected 383.6 (0.02)
+Passed bias filter:                      295  (0.0153814); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.29s 00:00:00.87 Elapsed: 00:00:00.79
+# Mc/sec: 3289.10
+//
+[ok]

@@ -1,0 +1,139 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0023499.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0023499
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF20074.1  [L=473]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.2e-82  275.1   0.0    4.4e-82  274.6   0.0    1.2  1  GTP_CH_N         GTP cyclohydrolase N terminal
+    1.6e-15   57.2   0.0    2.4e-15   56.6   0.0    1.2  1  GTP_cyclohydro2  GTP cyclohydrolase II
+
+
+Domain annotation for each model (and alignments):
+>> GTP_CH_N  GTP cyclohydrolase N terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  274.6   0.0   4.6e-86   4.4e-82       2     193 .]      57     249 ..      56     249 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 274.6 bits;  conditional E-value: 4.6e-86
+    GTP_CH_N   2 rvvlttypeqsgikpiplkWgakdakeRGpvvasrkk....sslkkrnaiGahsGsYsvYralavaageldaehrpdltntepavkigpqpsWsdp.ek 95 
+                 rv+lttyp+qsgi+p+pl+Wga++++eRGpv+asr++    ++lk+rna+Ga++GsYsvY+alav++g+l+a+hrpd+t+tep+v+igp+p+Ws++  k
+  PJF20074.1  57 RVILTTYPTQSGIRPVPLNWGASSSEERGPVLASRSQtgpiNNLKERNAMGAYGGSYSVYHALAVGSGALQATHRPDFTDTEPPVNIGPYPQWSESdMK 155
+                 89*********************************973333589*************************************************976269 PP
+
+    GTP_CH_N  96 ivslDpfghlvaevfkeelekgldirPtiavtkahlklaelkeavkkgrlkvDGkivlkekgevavtkvavepvWyLPgvaeRfgiseeeLRralfed 193
+                 ivs+Dp+gh+ ++vfk++l++g+d+rPtiavtkah++l+el+    +g+lk DG ivl+e+ge++vtk+avepvW+LPg+a+Rfgi+e++LRralfed
+  PJF20074.1 156 IVSMDPWGHIPQTVFKDYLDRGYDLRPTIAVTKAHMRLPELA----EGTLKQDGVIVLSEDGEINVTKAAVEPVWWLPGIASRFGIDETKLRRALFED 249
+                 ****************************************96....599***********************************************97 PP
+
+>> GTP_cyclohydro2  GTP cyclohydrolase II
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   0.0   2.5e-19   2.4e-15      37     164 .]     288     426 ..     257     426 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 2.5e-19
+                      ....EEEEEE--HHHHHS-B--TTTTTHHHHHHHHH.H...HH-.EEEEEE--TTTTTHHHHHHHHHHHHH..CT--HHH....HHHHHT--S- CS
+  GTP_cyclohydro2  37 depvlVRvHsecltgDvlgslrcdcgeqLdealrli.a...eegrGvlvylrqegrgiglleklkaynlqd..eglDtve....anlalgfkad 120
+                      ++++ VRvH ec  +Dv+gs  c c++ L   +++  +   + g G++vy r+egr  g + k+  yn ++   g D  +    + ++    +d
+       PJF20074.1 288 TKKLTVRVHDECNGSDVFGSDICTCRPYLIYGIQRCvEtaqKGGVGLIVYFRKEGRALGEVTKFLVYNARKrqAGGDRAStyfqHTENVAGVKD 381
+                      26889**********************9977776664333378889******************99999865358898877777777788899* PP
+
+                      ----HHHHHHHHHTT--EE.EEE-S-HHHHHHHCTT....SEEEE CS
+  GTP_cyclohydro2 121 lrdygiaaqILkdlgvkki.rLltnnpekveaLegfglevvervp 164
+                      +r  ++   +L+ lgv+ki ++++ ++ k+ a+ g+g+ + ervp
+       PJF20074.1 382 MRFQSLMPDVLHWLGVQKIdEMISMSNMKYDAIVGAGIPILERVP 426
+                      *******************55999999****************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (473 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       286  (0.0149121); expected 383.6 (0.02)
+Passed bias filter:                      274  (0.0142865); expected 383.6 (0.02)
+Passed Vit filter:                        20  (0.00104281); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.66
+# Mc/sec: 2334.07
+//
+Query:       sp|Q9US41|URG1_SCHPO  [L=439]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.7e-87  292.3   0.0    2.4e-87  291.8   0.0    1.2  1  GTP_CH_N         GTP cyclohydrolase N terminal
+    2.5e-16   59.8   0.0    3.6e-16   59.3   0.0    1.2  1  GTP_cyclohydro2  GTP cyclohydrolase II
+
+
+Domain annotation for each model (and alignments):
+>> GTP_CH_N  GTP cyclohydrolase N terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  291.8   0.0   2.5e-91   2.4e-87       3     193 .]      33     223 ..      31     223 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 291.8 bits;  conditional E-value: 2.5e-91
+              GTP_CH_N   3 vvlttypeqsgikpiplkWgakdakeRGpvvasrkksslkkrnaiGahsGsYsvYralavaageldaehrpdltntepavkigpqpsWs 91 
+                           vvlttyp+qs+i+p+p++Wga++a+eRGp+ ++r+ ++l +rna+Gah+GsYsvY+alava g l ++hrp+++ tep++++++ +sW+
+  sp|Q9US41|URG1_SCHPO  33 VVLTTYPSQSRIDPFPMNWGAATAEERGPITVARSIETLPHRNAVGAHGGSYSVYNALAVAGGFLPPDHRPNFELTEPTFDFPELDSWH 121
+                           89*************************************************************************************** PP
+
+              GTP_CH_N  92 dpekivslDpfghlvaevfkeelekgldirPtiavtkahlklaelkeavkkgrlkvDGkivlkekgevavtkvavepvWyLPgvaeRfg 180
+                           dp+kiv++Dp+ghl+++vfk++l++g+d+rPtia+t+ahl+++e++++v++g+l +DGkivl+ekg++avtkvavepvWyLPgvaeRfg
+  sp|Q9US41|URG1_SCHPO 122 DPKKIVAMDPYGHLTPSVFKKYLDEGYDVRPTIAITRAHLQVTEIQRSVENGSLPIDGKIVLNEKGDIAVTKVAVEPVWYLPGVAERFG 210
+                           ***************************************************************************************** PP
+
+              GTP_CH_N 181 iseeeLRralfed 193
+                           ++e +LRralfe+
+  sp|Q9US41|URG1_SCHPO 211 VDEVTLRRALFEQ 223
+                           ***********96 PP
+
+>> GTP_cyclohydro2  GTP cyclohydrolase II
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.3   0.0   3.7e-20   3.6e-16      36     163 ..     255     397 ..     226     398 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 59.3 bits;  conditional E-value: 3.7e-20
+                           ...........EEEEEE--HHHHHS-B--TTTTTHH....HHHHHHHHHH-.EEEEEE--TTTTTHHHHHHHHHHHHHCT--HHH.... CS
+       GTP_cyclohydro2  36 i.....d.epvlVRvHsecltgDvlgslrcdcgeqL....dealrliaeegrGvlvylrqegrgiglleklkaynlqdeglDtve.... 110
+                           +     + +++ VRvH ec  +Dv++s  c c++ L    +ea+++ ++ g+G++vy r+egr  g + k   yn +++  D  e    
+  sp|Q9US41|URG1_SCHPO 255 PeylsdTsKSLAVRVHDECNGSDVFQSDICTCRPYLtfgiEEAAKEAQNGGAGLVVYFRKEGRALGEVVKYLVYNKRKRTGDSAEnyfk 343
+                           455553246899*********************99844446777777799****************************99999998888 PP
+
+                           HHHHHT--S-----HHHHHHHHHTT--EE.EEE-S-HHHHHHHCTT....SEEE CS
+       GTP_cyclohydro2 111 anlalgfkadlrdygiaaqILkdlgvkki.rLltnnpekveaLegfglevverv 163
+                             ++l   +d+r   +   IL+ +g+kki r+l+ ++ k  a+ g+g+++ +r+
+  sp|Q9US41|URG1_SCHPO 344 RTEELAGVRDMRFQALMPDILHWFGIKKIdRMLSMSNMKHDAIVGQGIKILNRI 397
+                           889999999********************88*******************9886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (439 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       273  (0.0142343); expected 383.6 (0.02)
+Passed bias filter:                      270  (0.0140779); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.18s 00:00:00.59 Elapsed: 00:00:00.63
+# Mc/sec: 2250.64
+//
+[ok]

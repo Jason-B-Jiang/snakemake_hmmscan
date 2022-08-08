@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040379.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040379
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q92851|CASPA_HUMAN  [L=521]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-38  131.2  19.6    7.2e-20   71.0   4.3    2.8  2  DED            Death effector domain
+    8.4e-36  124.0   0.0    4.3e-35  121.7   0.0    1.9  1  Peptidase_C14  Caspase domain
+
+
+Domain annotation for each model (and alignments):
+>> DED  Death effector domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.0   4.3   7.5e-24   7.2e-20       1      81 [.      20     100 ..      20     101 .. 0.97
+   2 !   68.7   3.8     4e-23   3.8e-19       1      82 []     115     191 ..     115     191 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 71.0 bits;  conditional E-value: 7.5e-24
+                            HHHHHHHHCCCS-HHHHHHHHHHCCGGS-TTS.-TTSSHHHHHHHHHHCTSSSTTC-HHHHHHHCTTT-HHHHHHCCHHHH CS
+                    DED   1 frklLleiseeLteeelesLkfLlkdelpkrklekiksgldlfleLekrgllsednlslLkelLrrigrqdLlkkiekyer 81 
+                            fr+ Ll i+++L+ +++e+LkfL+   +p +klek++s+ d+f++L  ++llse+++++L+elL+ i++++Ll++++ +++
+  sp|Q92851|CASPA_HUMAN  20 FREKLLIIDSNLGVQDVENLKFLCIGLVPNKKLEKSSSASDVFEHLLAEDLLSEEDPFFLAELLYIIRQKKLLQHLNCTKE 100
+                            7999***********************************************************************998876 PP
+
+  == domain 2  score: 68.7 bits;  conditional E-value: 4e-23
+                            HHHHHHHHCCCS-HHHHHHHHHHCCGGS-TTS.-TTSSHHHHHHHHHHCTSSSTTC-HHHHHHHCTTT-HHHHHHCCHHHHH CS
+                    DED   1 frklLleiseeLteeelesLkfLlkdelpkrklekiksgldlfleLekrgllsednlslLkelLrrigrqdLlkkiekyere 82 
+                            fr+lL+e+se++++e+l+++ fLlkd+lpk+++    + l ++  Lek+g+++ednl++L++l++++ ++ Ll++ieky+re
+  sp|Q92851|CASPA_HUMAN 115 FRNLLYELSEGIDSENLKDMIFLLKDSLPKTEM----TSLSFLAFLEKQGKIDEDNLTCLEDLCKTVVPK-LLRNIEKYKRE 191
+                            89**************************99877....999******************************.********986 PP
+
+>> Peptidase_C14  Caspase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.7   0.0   4.5e-39   4.3e-35       1     183 [.     283     482 ..     283     510 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 121.7 bits;  conditional E-value: 4.5e-39
+                            EEEEEEEECTTTSTSTTESTTHHHHHHHHHHHHHHTTTEEEEEEESECHHHHHHHHHHHHCHSGGCTESEEEEEEESEEETEE.SCEE CS
+          Peptidase_C14   1 rkkAliignnkypgtknelkgcanDaealarlLvkrlgfevkvledptrknilkalkelvrdadhsasDvlvlyYSGhGiqvdnsgde 88 
+                            r++++i++n+ + ++k +++g+++Dae l+++++  lgf+v+ ++++t+ +++++l++   +  h+++D++v+   +hG         
+  sp|Q92851|CASPA_HUMAN 283 RGLCVIVNNHSFTSLK-DRQGTHKDAEILSHVFQW-LGFTVHIHNNVTKVEMEMVLQKQKCNPAHADGDCFVFCILTHGRF------- 361
+                            689**********998.9*****************.*********************************8888888*****....... PP
+
+                            TEEE..SSEEEEHHHHHHHCTSTTTHHGGGTTSSETTEEEEESESSBC............................TTSEEEEESSCT CS
+          Peptidase_C14  89 gdgy..deallpvdeniltlitdddllasLvskpkkgtiilDaCrgsg............................eadvlllsstap 146
+                            g +y  deal+p+ e i++++t  ++ + L++kpk  +++++aC+g +                            ead+ll  +t+p
+  sp|Q92851|CASPA_HUMAN 362 GAVYssDEALIPIRE-IMSHFTALQC-PRLAEKPK--LFFIQACQG-EeiqpsvsieadalnpeqaptslqdsipaEADFLLGLATVP 444
+                            999999*********.**********.99******..********7.23555566666777888889999999999************ PP
+
+                            TBSSEEETTTEEHHHHHHHHHHHHHT.S.SBHHHHHHH CS
+          Peptidase_C14 147 dqtSadetesgsafiqaLlqvlskga.hkldlssllnk 183
+                            +++S++++e+gs++iq+L+++l+k    +l++++  ++
+  sp|Q92851|CASPA_HUMAN 445 GYVSFRHVEEGSWYIQSLCNHLKKLVpRMLKFLEKTME 482
+                            ***********************754544444444333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (521 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       746  (0.0388967); expected 383.6 (0.02)
+Passed bias filter:                      558  (0.0290943); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.21s 00:00:00.60 Elapsed: 00:00:00.67
+# Mc/sec: 2531.31
+//
+[ok]

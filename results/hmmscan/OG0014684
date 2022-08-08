@@ -1,0 +1,129 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0014684.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0014684
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7FB55|E7FB55_DANRE  [L=2142]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.8e-24   85.1   0.0    1.2e-23   83.8   0.0    1.7  1  SPOC      SPOC domain
+    2.3e-14   53.9   0.7    8.6e-14   52.0   0.7    2.0  1  TFIIS_M   Transcription factor S-II (TFIIS), central domain
+
+
+Domain annotation for each model (and alignments):
+>> SPOC  SPOC domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.8   0.0   1.2e-27   1.2e-23       3     149 ..     975    1121 ..     973    1123 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 83.8 bits;  conditional E-value: 1.2e-27
+                              XXXXXX---EEEEEETTEEEEEEEEEE---------...-SEEEE-EEEEHHHHHHHHHH-S.....EEEEEEEEESSGGGHHHH CS
+                    SPOC    3 lasklpvvWqGalalksvssfqvqahlvsgdrslvs...pslLritqRlrldqvkkyldevsrritadllavalfpsdesdesgf 84  
+                              +  k +++W+G+l++ +v++f ++ +l+sg+ ++ +   p++++i +R+ +++v++y+d ++ + +++l++++++p+++++e+++
+  tr|E7FB55|E7FB55_DANRE  975 FLAKQSILWKGFLNMPTVAKFVTKGYLISGSPDILKeelPDTIHIGGRILPQTVWEYVDLIKTSEAKELSLIRFHPASDEEEVAY 1059
+                              667899****************************77788999******************************************* PP
+
+                              HHHHHHHHTTTEEEE.....EE-TTS.-EEEEE-S...STHHHHTS.......-----SSEEEEEE CS
+                    SPOC   85 aelvdYLkskqraGvvnlnksglnqn.gvlylfPpgalceflesllresapelekskddhLlivvv 149 
+                               +l++Y++s+ r+Gv     s+  ++ ++lyl+P+  ++ +   ll+  +p le+ ++++L+++ v
+  tr|E7FB55|E7FB55_DANRE 1060 VSLFSYFNSRRRFGV----VSNICKHiKDLYLIPLCTKQSIPAALLPIEGPGLEQDHPNLLIGLAV 1121
+                              ***************....34444445********99999**********************9876 PP
+
+>> TFIIS_M  Transcription factor S-II (TFIIS), central domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   0.7   8.9e-18   8.6e-14       5     100 ..     626     722 ..     625     735 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 8.9e-18
+                             HHHHHHHHHHHHTT----........--THHHHHHHHHHHHHHT------HHHHHHHHHHHHHS-TT-HHHHHTSSSS--STTTTS- CS
+                 TFIIS_M   5 vRdkcrelLlealekdseeank.etseedakelaaeiEealfekkketdkkykqkvRsllfNLkdkkNpeLrrrvlsgeispsklvk 90 
+                             +R+++r lL ++l ++ ++++    se++++++a+++E+++f+   +td++y++k+  l + Lkd++N+eL+ +vl+g++ +s+l++
+  tr|E7FB55|E7FB55_DANRE 626 IRQNIRCLLTKVLLERLNQSDGlIFSENEVEKFAVDLEKEMFSMCYTTDQEYRSKCQDLSLRLKDPQNKELCLQVLKGNLPVSRLIS 712
+                             69999999999999999866557677779**************8899**************************************** PP
+
+                             --TTTSS-HH CS
+                 TFIIS_M  91 mspeElasee 100
+                              s+++   e 
+  tr|E7FB55|E7FB55_DANRE 713 VSQQDIVKET 722
+                             ***9987765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2142 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2043  (0.106523); expected 383.6 (0.02)
+Passed bias filter:                      542  (0.0282601); expected 383.6 (0.02)
+Passed Vit filter:                        90  (0.00469263); expected 19.2 (0.001)
+Passed Fwd filter:                        21  (0.00109495); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.03u 0.25s 00:00:01.28 Elapsed: 00:00:01.10
+# Mc/sec: 6326.05
+//
+Query:       KAF9761899.1  [L=535]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (535 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2822  (0.14714); expected 383.6 (0.02)
+Passed bias filter:                      678  (0.0353512); expected 383.6 (0.02)
+Passed Vit filter:                        83  (0.00432765); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.53u 0.16s 00:00:00.69 Elapsed: 00:00:00.67
+# Mc/sec: 2572.91
+//
+Query:       KAF9762806.1  [L=821]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (821 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2180  (0.113666); expected 383.6 (0.02)
+Passed bias filter:                      642  (0.0334741); expected 383.6 (0.02)
+Passed Vit filter:                        70  (0.00364983); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.56u 0.18s 00:00:00.74 Elapsed: 00:00:00.71
+# Mc/sec: 3735.22
+//
+[ok]

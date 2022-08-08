@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025824.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025824
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|G5ECG0|TACC1_CAEEL  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.2e-09   35.6   6.9    1.2e-08   35.1   6.9    1.2  1  TACC_C    Transforming acidic coiled-coil-containing protein 
+
+
+Domain annotation for each model (and alignments):
+>> TACC_C  Transforming acidic coiled-coil-containing protein (TACC), C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   6.9     6e-13   1.2e-08      66     200 ..     109     243 ..     107     244 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 6e-13
+                 TACC_C  66 ekaeiqkvleekeqaladlnsveksfsdlfkryekqkevlsgykkneevlkkcaqeylarikkeeqRYqaLKahaeekLeqAneeiaq 153
+                            +++e++k l+++++a a+   + + ++ lf  +++ +e+ ++ +   e  + + +   a + + + ++ a K+ a+  Le+A+ e ++
+  sp|G5ECG0|TACC1_CAEEL 109 SSEELEKALKDRDAARAEADKLHANYATLFASFNTVREAANDIRGEYEDARDKLKLAAAEVDEWQAKFLAVKDNANSELERASVEYDD 196
+                            56899*********************************************************************************** PP
+
+                 TACC_C 154 vrskakaetaalqasLrkeqlkvqSLekqleqKtkeneeLtkicdeL 200
+                              ++++++t+ l+   ++++++  S + +++  t  + eL +icd+L
+  sp|G5ECG0|TACC1_CAEEL 197 LLRSHDENTKGLRLRVKRQEIELSSKNDEIKVLTNRVSELSQICDQL 243
+                            *********************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1307  (0.0681475); expected 383.6 (0.02)
+Passed bias filter:                      772  (0.0402524); expected 383.6 (0.02)
+Passed Vit filter:                        87  (0.00453621); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.61
+# Mc/sec: 1375.79
+//
+[ok]

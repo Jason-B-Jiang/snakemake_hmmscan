@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030101.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030101
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54MA2|Q54MA2_DICDI  [L=161]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.7e-05   22.0   0.9    0.00016   21.4   0.9    1.4  1  SWIM      SWIM zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> SWIM  SWIM zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.9   8.3e-09   0.00016       1      38 [.      51      88 ..      51      90 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 8.3e-09
+                    SWIM  1 yrVtldder.vrlnkatCsCpefqkngipCkHalAvlla 38
+                            +rV ++ +r   + k+ C+C+ef+ +  pC H++A + +
+  tr|Q54MA2|Q54MA2_DICDI 51 HRVMVEFKRdGLIKKSLCTCKEFE-FTSPCHHVAATCFE 88
+                            689999999999999*********.999*******9976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (161 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       722  (0.0376453); expected 383.6 (0.02)
+Passed bias filter:                      414  (0.0215861); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.69
+# Mc/sec: 755.59
+//
+[ok]

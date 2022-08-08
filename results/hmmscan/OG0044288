@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0044288.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0044288
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KAF9748552.1  [L=289]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    9.9e-60  201.1   1.4    1.4e-59  200.7   1.4    1.2  1  DDE_Tnp_1_3  Transposase DDE domain
+    7.2e-18   65.1   0.1    5.9e-17   62.1   0.1    2.0  1  DDE_Tnp_1    Transposase DDE domain
+
+
+Domain annotation for each model (and alignments):
+>> DDE_Tnp_1_3  Transposase DDE domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  200.7   1.4   1.4e-63   1.4e-59       2     154 ..     105     257 ..     104     258 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 200.7 bits;  conditional E-value: 1.4e-63
+   DDE_Tnp_1_3   2 gkvtgisfidstklavChnkrikrhkvfkglakrGkssmGWfyGfkLhlvindkGeilalkltpgnvddrkpveelskellgklfadkgyiskklae 98 
+                   g vt+  fid+t++avChn+r +rhkvfkglak+G++s+GWf+GfkLh + n +Gei+++++t gnv+dr+pv +l+++++ kl++dkgyiskkl+ 
+  KAF9748552.1 105 GVVTEYLFIDATPMAVCHNLRERRHKVFKGLAKKGRTSTGWFFGFKLHFIFNTHGEIVRMQITGGNVNDRSPVMNLMRGISAKLIGDKGYISKKLSA 201
+                   5678999****************************************************************************************** PP
+
+   DDE_Tnp_1_3  99 klledgielitkvrknmkkkllslldkllLrkrslietvndqlknisqiehtrhrs 154
+                   +l+e++ +litk+ k+mk+ l+ ++dk++L krs iet++ ++k +  + h rhrs
+  KAF9748552.1 202 ELFEQKATLITKITKKMKNCLMDVTDKMMLMKRSYIETIFSSIKLLGTLIHHRHRS 257
+                   *******************************************************9 PP
+
+>> DDE_Tnp_1  Transposase DDE domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.1   0.1   6.2e-21   5.9e-17       7     212 ..     111     272 ..     107     274 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 62.1 bits;  conditional E-value: 6.2e-21
+     DDE_Tnp_1   7 livDattvrvpgtk.........edarwgykggk....ykygyklhiavdtrsglilsvvitpgnvhdskglkqlldelrprkgklvlaDaGYasae 90 
+                   l +Dat++ v+++          + a++g    +    +++g+klh +++t+ g i++++it gnv+d+  +  l++++       +++D+GY s++
+  KAF9748552.1 111 LFIDATPMAVCHNLrerrhkvfkGLAKKG----RtstgWFFGFKLHFIFNTH-GEIVRMQITGGNVNDRSPVMNLMRGIS----AKLIGDKGYISKK 198
+                   78************665544443333333....33556**************.89***********************75....8************ PP
+
+     DDE_Tnp_1  91 lldtleekgvdyiirlkkntklyrkgaeskrrgrlrkhdrnkiltksqkrrnkskkekgdvyyvtntnsellsaeevaelyrlRwqiErvFkwlkrk 187
+                   l  +l                        +++ +l+ ++++k  +     ++k                          +  +R+ iE++F+++k  
+  KAF9748552.1 199 LSAELF-----------------------EQKATLITKITKKMKNCLMDVTDK-------------------------MMLMKRSYIETIFSSIKL- 246
+                   ******.......................555566666677777777777777.........................8888*************9. PP
+
+     DDE_Tnp_1 188 fg.ldrlryrglnrveaqllllllal 212
+                   +g l ++r+r++  ++++l++ l+++
+  KAF9748552.1 247 LGtLIHHRHRSPVNAFTHLFAGLISY 272
+                   777********************999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (289 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       713  (0.0371761); expected 383.6 (0.02)
+Passed bias filter:                      454  (0.0236717); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.22s 00:00:00.63 Elapsed: 00:00:00.65
+# Mc/sec: 1432.66
+//
+[ok]

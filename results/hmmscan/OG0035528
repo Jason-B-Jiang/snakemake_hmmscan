@@ -1,0 +1,52 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035528.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035528
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IAS2|A0A0R4IAS2_DANRE  [L=1754]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-18   66.2   0.2    7.6e-17   61.2   0.0    3.2  1  SH3_10    SH3 domain
+    5.5e-05   23.0   0.0      0.021   14.8   0.0    2.7  0  Plectin   Plectin repeat
+
+
+Domain annotation for each model (and alignments):
+>> SH3_10  SH3 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.2   0.0   7.9e-21   7.6e-17       1      65 []     384     447 ..     384     447 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 61.2 bits;  conditional E-value: 7.9e-21
+                          SH3_10   1 PLklRrskpgepiaveAlcdykqaevsiekGeevtLldnsdpekWkVqtssGatmtvPgvcllIP 65 
+                                     PLk Rr++p++  ++eAlc+y+ +e si +Ge++tLl n+ p kW V++ +G tm+ Pgvc++IP
+  tr|A0A0R4IAS2|A0A0R4IAS2_DANRE 384 PLKYRRETPQKLLPIEALCEYDAEEGSILRGERYTLLRNNGP-KWDVKDANGRTMSAPGVCFIIP 447
+                                     9**************************************996.8********************9 PP
+
+>> Plectin  Plectin repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1754 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2587  (0.134887); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                       146  (0.00761249); expected 19.2 (0.001)
+Passed Fwd filter:                        53  (0.00276344); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.96u 0.30s 00:00:02.25 Elapsed: 00:00:01.70
+# Mc/sec: 3357.97
+//
+[ok]

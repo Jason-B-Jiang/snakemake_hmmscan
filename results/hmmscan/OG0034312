@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034312.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034312
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F1QFK6|F1QFK6_DANRE  [L=301]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      3e-19   69.6   0.9    2.7e-15   56.7   1.2    2.1  1  Claudin_2      PMP-22/EMP/MP20/Claudin tight junction
+    1.3e-07   31.7  11.2    1.6e-05   25.0   2.8    3.0  0  PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+    0.00028   20.8   0.0    0.00089   19.2   0.0    1.8  0  GSG-1          GSG1-like protein
+
+
+Domain annotation for each model (and alignments):
+>> Claudin_2  PMP-22/EMP/MP20/Claudin tight junction
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.7   1.2   4.2e-19   2.7e-15      36     189 ..     114     277 ..      90     279 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 56.7 bits;  conditional E-value: 4.2e-19
+               Claudin_2  36 ahlGlwriCfksevdeesenktelfvvltqasn............pfekkeeeivsisatsllalarfvqvlliLslvlivlavvlg 110
+                             + +Glwr C+++  d++ ++ +   ++ + + +            + + +    +  +  +ll+l+r  + +l ++  +++++ +++
+  tr|F1QFK6|F1QFK6_DANRE 114 TYSGLWRKCYFQGMDRDIDKLIL-KGIAERCTSvkyhfsqpirlrNIPLNLTRTIQQDEWHLLHLRRITAGFLGMAAAVMLCGSIVA 199
+                             568***********999966666.6666667777999*9999998888888889999999*************************** PP
+
+               Claudin_2 111 llallkqsvlllkaagilfllagvlgllavvvfiesvkkvfeesfqqwmqelqnnvrisfgWSfalAvagvvlsllAgl 189
+                              +++  +++l   + g lfl+ag+++ +++ +++ sv  +  ++ +     l   v +s+gWS+++A+++  l++ +g 
+  tr|F1QFK6|F1QFK6_DANRE 200 AVGFFWEESLTQHVSGLLFLMAGIFCTISLCTYAASVSYDLSRN-PPFIYGLPSDVDHSYGWSIFCAWVSLGLTVASGC 277
+                             *************************************8877677.55557777788******************99996 PP
+
+>> PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> GSG-1  GSG1-like protein
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (301 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       764  (0.0398352); expected 383.6 (0.02)
+Passed bias filter:                      536  (0.0279472); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.21s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 1534.26
+//
+[ok]

@@ -1,0 +1,83 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031187.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031187
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q553Y9|Q553Y9_DICDI  [L=2107]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.6e-21   74.4   5.5    2.9e-15   56.2   0.9    3.0  1  GRAM      GRAM domain
+    2.3e-13   50.4   0.3    5.8e-07   29.9   0.0    3.0  2  C2        C2 domain
+
+
+Domain annotation for each model (and alignments):
+>> GRAM  GRAM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.2   0.9     3e-19   2.9e-15      10     109 ..     179     279 ..     172     282 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 56.2 bits;  conditional E-value: 3e-19
+                             --TT--EEEEEEEEEESS....SEEEEEEEEESSEEEEEE-STT---E.EEEEGGGEEEEEE....-TT-TT-EEEEESS-..EEEE CS
+                    GRAM  10 llpeEkllatykCyllrdg...gpvqGrlyltnyrlcFrskplgsskk.vvlpladikriekstsaanllengiqvetsskdlelaF 92 
+                             l+++E+++++++C+ + +    +   G++y+t+ ++ Frs ++  + k   + +++ik+i+k + ++ +l+n+iq++ts+k  ++ F
+  tr|Q553Y9|Q553Y9_DICDI 179 LPHQEQVISECYCTKQAKKmasMSHTGTMYITQGFIGFRSTSTLAKNKkTLISFKEIKSIKK-KIGTFYLPNAIQIRTSKK--KYLF 262
+                             99*******9999988777999*********************999997888**********.9*****************..8*** PP
+
+                             E--TTHHHHHHHHHHHH CS
+                    GRAM  93 agfvtrdeaiefieell 109
+                             a+f++r++a++++ +++
+  tr|Q553Y9|Q553Y9_DICDI 263 ASFIHRSKAFKVLNSQW 279
+                             ************99988 PP
+
+>> C2  C2 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   0.1   4.5e-07    0.0043      21      90 ..      19      90 ..       3     104 .. 0.83
+   2 !   29.9   0.0     6e-11   5.8e-07       4      93 ..     907     997 ..     904    1007 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 4.5e-07
+                            SCEEEEEEEEECEEEEEE-SCSSSSSSEEE.EEEEEEESC..HTTSEEEEEEEEECSSSSEEEEEEEEEEGHH CS
+                      C2 21 ssdpyvkvsldgkqkakTrviknslnPvWn.ekftfevae..leeskLeveVfdndrlskddfiGkveiplst 90
+                            +  + vk++l +++k+kT+ ++  +n +++ e+f fev+e   +  ++e++V+ +++l++ +    +++pl+ 
+  tr|Q553Y9|Q553Y9_DICDI 19 KQWVLVKLKL-HDSKYKTKYVNGGENVIFQkETFIFEVNEdvYPAGEMELKVKTWEMLKSGESFCFATLPLAP 90
+                            455789****.********99*99*****77***********99*************9888888888888876 PP
+
+  == domain 2  score: 29.9 bits;  conditional E-value: 6e-11
+                             EEEEEEEESSSSSST.TSSCEEEEEEEE......ECEEEEEE-SCSSSSSSEEEEEEEEEESCHTTSEEEEEEEEECSSSSEEEEEE CS
+                      C2   4 evtvieAknLpnkdk.kgssdpyvkvsl......dgkqkakTrviknslnPvWnekftfevaeleeskLeveVfdndrlskddfiGk 83 
+                              ++v++A +L+     +++ + y+ +s        +++ +kT++i+n  nP W+e+f +++++ ++skLe+ +++nd       iG 
+  tr|Q553Y9|Q553Y9_DICDI 907 FINVLQAIDLKLPSPtNNNNNCYIIISNggnslsGSEKFVKTTTISNDNNPLWSESFLIKIKK-PRSKLELLLMNNDE-----CIGI 987
+                             689*******666554788999***********88888899999988879*************.**********9988.....8*** PP
+
+                             EEEEGHHHHT CS
+                      C2  84 veiplstlls 93 
+                             vei++++ l+
+  tr|Q553Y9|Q553Y9_DICDI 988 VEINVKDELE 997
+                             ****999444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (2107 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2060  (0.107409); expected 383.6 (0.02)
+Passed bias filter:                      418  (0.0217947); expected 383.6 (0.02)
+Passed Vit filter:                        62  (0.0032327); expected 19.2 (0.001)
+Passed Fwd filter:                        27  (0.00140779); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.92u 0.23s 00:00:01.15 Elapsed: 00:00:00.94
+# Mc/sec: 7266.87
+//
+[ok]

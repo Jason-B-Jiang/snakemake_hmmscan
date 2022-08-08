@@ -1,0 +1,396 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008908.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008908
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54TC0|Q54TC0_DICDI  [L=1109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      8e-32  110.6   6.6      8e-32  110.6   6.6    4.0  1  ALMT      Aluminium activated malate transporter
+    1.3e-11   44.8   7.4    1.3e-11   44.8   7.4    3.4  1  FUSC_2    Fusaric acid resistance protein-like
+
+
+Domain annotation for each model (and alignments):
+>> ALMT  Aluminium activated malate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.6   6.6   8.3e-36     8e-32       2     219 ..     654     868 ..     653     879 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 110.6 bits;  conditional E-value: 8.3e-36
+                    ALMT   2 elgkedprrvvfslkvGlaltlvsllyflkplyke...lgknavWavlTVvvvlefsvGATlskGlnRalatliAGslalgvselas 85 
+                             + +k+d++r   ++ + l +  +++++    + ++   +++ +vW+v T+v ++  svGA +++G+    +tl + +++++vs l+s
+  tr|Q54TC0|Q54TC0_DICDI 654 NYFKDDKWRFPLQMSISLTSGTIPFFFVGDGVSDSsgmFVTFGVWTVTTIVFIIGPSVGASITQGFRESRGTLGGAIVGFAVSLLCS 740
+                             679**********************998666555422277889******************************************** PP
+
+                    ALMT  86 ssgkigeeivigvsvFiiaalatflrliPaikarydYgvlvflLTfclvvvsgyrteev.ielavkRlltiaiGaliclivsifvfP 171
+                             +++ + +eivi+v+vFi+++++++ ++     + +  ++ +  LTf lv+++++ ++++ ++ av R ++i+ G+++  ++ ++vfP
+  tr|Q54TC0|Q54TC0_DICDI 741 HIPTPYKEIVIIVFVFIFTFFISYPHQN----KIHSQSAEICELTFLLVLLGQNLSHDFdYMFAVLRTVHIIFGVIWNALICLIVFP 823
+                             ***********************97764....44889************************************************** PP
+
+                    ALMT 172 iwaGedLhklvaknleklakslegcvkeyleekeker.kiseieakeed 219
+                              ++    +k ++ ++ ++++sl++ + +++ +    + +i+++++++ d
+  tr|Q54TC0|Q54TC0_DICDI 824 FFS----YKNTRIKIFQITNSLSDTFINIIINGLRMNeQINHNHNQHGD 868
+                             ***....*****************9888775443333355544443332 PP
+
+>> FUSC_2  Fusaric acid resistance protein-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.8   7.4   1.4e-15   1.3e-11      12     125 ..     694     816 ..     677     817 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 44.8 bits;  conditional E-value: 1.4e-15
+                  FUSC_2  12 wrgeWalitaaivlsptlgasltravqRilGtvlGavlallvlyllpg.n.....lvlallvfllvfliafflkrny...alafif. 88 
+                               g+W ++t+++++ p++gas+t+++    Gt+ Ga+++++v +l ++ +     +v++++vf+++f+i++  +++    + a i+ 
+  tr|Q54TC0|Q54TC0_DICDI 694 TFGVWTVTTIVFIIGPSVGASITQGFRESRGTLGGAIVGFAVSLLCSHiPtpykeIVIIVFVFIFTFFISYPHQNKIhsqS-AEICe 779
+                             5689*************************************9987776423444678888999999999998888876534.44444 PP
+
+                  FUSC_2  89 ltltalllyslaasgnpieialhRlvavliGiliall 125
+                             lt++++ll +  +++ ++ +a++R+v++++G+++  l
+  tr|Q54TC0|Q54TC0_DICDI 780 LTFLLVLLGQNLSHDFDYMFAVLRTVHIIFGVIWNAL 816
+                             8888888888779999999***************766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1673  (0.0872308); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.68u 0.28s 00:00:00.96 Elapsed: 00:00:00.61
+# Mc/sec: 5869.54
+//
+Query:       tr|Q54KP4|Q54KP4_DICDI  [L=1144]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.3e-42  143.7  12.0    7.3e-42  143.7  12.0    4.4  1  ALMT      Aluminium activated malate transporter
+    3.6e-14   53.0  14.4    3.6e-14   53.0  14.4    3.1  1  FUSC_2    Fusaric acid resistance protein-like
+    2.2e-08   33.3   9.3    4.4e-08   32.3   9.3    1.3  1  FUSC      Fusaric acid resistance protein family
+
+
+Domain annotation for each model (and alignments):
+>> ALMT  Aluminium activated malate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  143.7  12.0   1.1e-45   7.3e-42       4     206 ..     657     852 ..     654     865 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 143.7 bits;  conditional E-value: 1.1e-45
+                    ALMT   4 gkedprrvvfslkvGlaltlvsllyflkplykelgknavWavlTVvvvlefsvGATlskGlnRalatliAGslalgvselasssgki 90 
+                              +++++r+  ++ ++     +++ yf  + ykel  ++vWa++TVv+v++ s GAT+ +G+ R+ at+++  l++++s l+s+++ +
+  tr|Q54KP4|Q54KP4_DICDI 657 KNNNKWRYPLQVSIASITVTIPFHYFQGQQYKELELYGVWACATVVLVMVPSCGATIYRGFLRFGATIVGAFLGFLISLLCSIIPTP 743
+                             56889**********999********************************************************************* PP
+
+                    ALMT  91 geeivigvsvFiiaalatflrliPaikarydYgvlvflLTfclvvvsgyrteev.ielavkRlltiaiGaliclivsifvfPiwaGe 176
+                             g+ei+i +++Fi+  +++f+++     +ry Y+ +v+ LTf ++v+++++++++ +++ v R ++i +G+++++i+ +f+fP+++  
+  tr|Q54KP4|Q54KP4_DICDI 744 GKEIIILLFIFIFVYMMSFIQQD----QRYSYAGAVSSLTFLIIVLGQHKSNSFdYMYPVLRAFHITLGIIWVIIIGLFIFPYFT-- 824
+                             ********************984....67********************************************************.. PP
+
+                    ALMT 177 dLhklvaknleklakslegcvkeyleekek 206
+                               +k+++ ++ ++++s+ +   +++e+   
+  tr|Q54KP4|Q54KP4_DICDI 825 --YKSTRIKIFNITNSITDTSINIIEKGLR 852
+                             ..******************9999996544 PP
+
+>> FUSC_2  Fusaric acid resistance protein-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.0  14.4   5.6e-18   3.6e-14      13     126 .]     693     815 ..     676     815 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 53.0 bits;  conditional E-value: 5.6e-18
+                  FUSC_2  13 rgeWalitaaivlsptlgasltravqRilGtvlGavlallvl...yllpgn...lvlallvfllvfliaffl...krnyalafiflt 90 
+                              g+Wa +t+++v+ p+ ga++ r++ R+ +t++Ga+l++l+     ++p++   + ++l++f++v +++f++   +++ya+a+  lt
+  tr|Q54KP4|Q54KP4_DICDI 693 YGVWACATVVLVMVPSCGATIYRGFLRFGATIVGAFLGFLISllcSIIPTPgkeIIILLFIFIFVYMMSFIQqdqRYSYAGAVSSLT 779
+                             589*************************************66223577776535666667777777778888433355699999999 PP
+
+                  FUSC_2  91 ltalllyslaasgnpieialhRlvavliGiliallv 126
+                             +++++l +  ++  ++   ++R++++++Gi++++++
+  tr|Q54KP4|Q54KP4_DICDI 780 FLIIVLGQHKSNSFDYMYPVLRAFHITLGIIWVIII 815
+                             999999998666667778999************996 PP
+
+>> FUSC  Fusaric acid resistance protein family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   9.3   6.9e-12   4.4e-08      29     152 ..     696     822 ..     694     840 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 6.9e-12
+                    FUSC  29 wAmtTVyiVaqPlsGavlsKsfyRllGTllGaaaavllvalfvqapllfl.lalalWiglclalall..drnfrsYafvLAGYTaai 112
+                             wA +TV+ V+ P  Ga++ ++f R+  T++Ga  + l+  l+   p +    ++ l+i+++++++++  + +  sYa +++  T  i
+  tr|Q54KP4|Q54KP4_DICDI 696 WACATVVLVMVPSCGATIYRGFLRFGATIVGAFLGFLISLLCSIIPTPGKeIIILLFIFIFVYMMSFiqQDQRYSYAGAVSSLTFLI 782
+                             **********************************9999777655555532144557778888877752234478************* PP
+
+                    FUSC 113 ialpavadPeaiFdlAvaRvseIllGIvcaalVsalvfPr 152
+                             i+l         +++ v R+  I+lGI+  +++++ +fP 
+  tr|Q54KP4|Q54KP4_DICDI 783 IVLGQHKSNSFDYMYPVLRAFHITLGIIWVIIIGLFIFPY 822
+                             ****999988899999**********************94 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1144 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3556  (0.185411); expected 383.6 (0.02)
+Passed bias filter:                      422  (0.0220032); expected 383.6 (0.02)
+Passed Vit filter:                       148  (0.00771677); expected 19.2 (0.001)
+Passed Fwd filter:                        53  (0.00276344); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.94u 0.20s 00:00:01.13 Elapsed: 00:00:00.88
+# Mc/sec: 4233.88
+//
+Query:       tr|Q552V8|Q552V8_DICDI  [L=1245]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      8e-39  133.7  17.6      8e-39  133.7  17.6    3.2  1  ALMT      Aluminium activated malate transporter
+    5.5e-16   58.9  14.8    5.5e-16   58.9  14.8    3.3  1  FUSC_2    Fusaric acid resistance protein-like
+      7e-08   31.7  11.0      7e-08   31.7  11.0    3.1  1  FUSC      Fusaric acid resistance protein family
+
+
+Domain annotation for each model (and alignments):
+>> ALMT  Aluminium activated malate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.7  17.6   1.3e-42     8e-39       3     219 ..     704     914 ..     701     951 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 133.7 bits;  conditional E-value: 1.3e-42
+                    ALMT   3 lgkedprrvvfslkvGlaltlvsllyflkplykelgknavWavlTVvvvlefsvGATlskGlnRalatliAGslalgvselasssgk 89 
+                             ++++ ++   f+++vG+   ++ + y+    y++l +n++W+++T v+v+  s GAT ++ + R+++t+ +G ++++vs+l+s++ +
+  tr|Q552V8|Q552V8_DICDI 704 FFANKRWVFPFQVAVGVIAMIILFHYYDGRTYHSLKVNGMWTCITTVIVFSPSLGATATRAIHRMMGTIAGGFIGFLVSWLTSTMNN 790
+                             4566777889***************************************************************************** PP
+
+                    ALMT  90 igeeivigvsvFiiaalatflrliPaikarydYgvlvflLTfclvvvsgyrteev.ielavkRlltiaiGaliclivsifvfPiwaG 175
+                              g+e+v+ +++Fi  + ++++++ P+    y Y+  v+ LTf++v+ ++y +++  +++av R l i  G++++li+s+ +fP ++ 
+  tr|Q552V8|Q552V8_DICDI 791 EGREVVLFICTFIWIFSISHIQQDPR----YSYAGSVSGLTFIMVAYGQYLSKDYtVMYAVMRCLFITGGIIWVLILSLAIFPFFT- 872
+                             *************************9....********************999988******************************. PP
+
+                    ALMT 176 edLhklvaknleklakslegcvkeyleekeker.kiseieakeed 219
+                                +k+++++  k a+s+ + +  +le+++ +  + ++ ++++e+
+  tr|Q552V8|Q552V8_DICDI 873 ---FKSTTEKAFKSASSITNTFITILENSSISVySFEQEKSQKEQ 914
+                             ...999999999999*****9999999777774322222222222 PP
+
+>> FUSC_2  Fusaric acid resistance protein-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.9  14.8   8.6e-20   5.5e-16      12     125 ..     740     862 ..     714     863 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 58.9 bits;  conditional E-value: 8.6e-20
+                  FUSC_2  12 wrgeWalitaaivlsptlgasltravqRilGtvlGavlallvlyllpg.n.....lvlallvfllvfliaffl...krnyalafifl 89 
+                              +g+W  it +iv sp+lga++tra++R++Gt++G ++++lv +l+++ n     +vl +++f+++f i+ ++   +++ya+ +  l
+  tr|Q552V8|Q552V8_DICDI 740 VNGMWTCITTVIVFSPSLGATATRAIHRMMGTIAGGFIGFLVSWLTSTmNnegreVVLFICTFIWIFSISHIQqdpRYSYAGSVSGL 826
+                             599****************************************9999642466689999**********99994434557999999* PP
+
+                  FUSC_2  90 tltalllyslaasgnpieialhRlvavliGiliall 125
+                             t+++++  ++ +++  +  a+ R++ ++ Gi+++l+
+  tr|Q552V8|Q552V8_DICDI 827 TFIMVAYGQYLSKDYTVMYAVMRCLFITGGIIWVLI 862
+                             *****99999988888889***************98 PP
+
+>> FUSC  Fusaric acid resistance protein family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.7  11.0   1.1e-11     7e-08      28     174 ..     743     896 ..     741     929 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 31.7 bits;  conditional E-value: 1.1e-11
+                    FUSC  28 ywAmtTVyiVaqPlsGavlsKsfyRllGTllGaaaavl...lvalfvqapllfllala..lWiglclalalldrn.frsYafvLAGY 108
+                             +w+ +T++iV +P  Ga+  ++  R++GT++G   + l   l+  + ++    +l ++  +Wi+    ++ ++++   sYa  ++G 
+  tr|Q552V8|Q552V8_DICDI 743 MWTCITTVIVFSPSLGATATRAIHRMMGTIAGGFIGFLvswLTSTMNNEGREVVLFICtfIWIFS---ISHIQQDpRYSYAGSVSGL 826
+                             7*******************************999987233344455544334444440155554...4555666256********* PP
+
+                    FUSC 109 TaaiialpavadPeaiFdlAvaRvseIllGIvcaalVsalvfP....rsvapalrarlrallrdalrlaa 174
+                             T +++a       + ++++Av+R+  I+ GI+  ++ s+ +fP    +s++++  ++++++ + + + ++
+  tr|Q552V8|Q552V8_DICDI 827 TFIMVAYGQYLSKDYTVMYAVMRCLFITGGIIWVLILSLAIFPfftfKSTTEKAFKSASSITNTFITILE 896
+                             *******************************************999988888877777777777776665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1245 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5544  (0.289066); expected 383.6 (0.02)
+Passed bias filter:                      828  (0.0431722); expected 383.6 (0.02)
+Passed Vit filter:                       483  (0.0251838); expected 19.2 (0.001)
+Passed Fwd filter:                       183  (0.00954169); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.78u 0.23s 00:00:02.01 Elapsed: 00:00:01.54
+# Mc/sec: 2632.89
+//
+Query:       tr|Q54R26|Q54R26_DICDI  [L=1222]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.9e-47  161.1  10.9    3.9e-47  161.1  10.9    4.8  1  ALMT      Aluminium activated malate transporter
+    3.6e-17   62.8  15.0    3.6e-17   62.8  15.0    2.4  1  FUSC_2    Fusaric acid resistance protein-like
+      8e-10   38.1   5.4    1.3e-09   37.4   5.4    1.2  1  FUSC      Fusaric acid resistance protein family
+
+
+Domain annotation for each model (and alignments):
+>> ALMT  Aluminium activated malate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.1  10.9   6.2e-51   3.9e-47       4     196 ..     743     948 ..     740     994 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 161.1 bits;  conditional E-value: 6.2e-51
+                    ALMT   4 gkedprrvvfslkvGlaltlvsllyflkplykelgknavWavlTVvvvlefsvGATlskGlnRalatliAGslalgvselasssgki 90 
+                              ++ ++ +   ++ Gl++++++++yf   +  +l+ +++W+++TV++v++ svGAT+++G nR ++t+++  +++++s l+s+++ +
+  tr|Q54R26|Q54R26_DICDI 743 IRDKKWGYPLKVAFGLMSSIIAFYYFEGRSHGDLVIHGIWTCATVMLVMVPSVGATITRGTNRIIGTIFGAFIGFLTSLLCSIIPTP 829
+                             57778888999999************************************************************************* PP
+
+                    ALMT  91 geeivigvsvFiiaalatflrliPaikarydYgvlvflLTfclvvvsgyrteev.ielavkRlltiaiGaliclivsifvfPiwaGe 176
+                             g+eiv+ +++Fi++ +++f ++      ry Y+ +v+  Tf ++v++++ ++++ +++av R ++i++G+++++++s+f+fP ++  
+  tr|Q54R26|Q54R26_DICDI 830 GKEIVMLIIIFIFTYIISFPQQ----DVRYSYAGAVSGVTFLIIVLGQNLSKKFeYMYAVLRAFHIVMGVVWVIFISLFIFPFFT-- 910
+                             *************999998665....567********************************************************.. PP
+
+                    ALMT 177 dLhklvaknleklaksleg....................c 196
+                               +k ++ ++ k+++ l++                     
+  tr|Q54R26|Q54R26_DICDI 911 --YKATRIKIFKVTNNLSDtfiniienglrlkepikdlkN 948
+                             ..*****************444444444444444444432 PP
+
+>> FUSC_2  Fusaric acid resistance protein-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.8  15.0   5.6e-21   3.6e-17       8     126 .]     770     901 ..     759     901 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 62.8 bits;  conditional E-value: 5.6e-21
+                  FUSC_2   8 llgl....wrgeWalitaaivlsptlgasltravqRilGtvlGavlall...vlyllpgn...lvlallvfllvfliaffl...krn 81 
+                              +++     +g+W  +t+++v+ p++ga++tr+ +Ri+Gt++Ga++++l   ++ ++p++   +v+++++f+++ +i+f +   +++
+  tr|Q54R26|Q54R26_DICDI 770 GRSHgdlvIHGIWTCATVMLVMVPSVGATITRGTNRIIGTIFGAFIGFLtslLCSIIPTPgkeIVMLIIIFIFTYIISFPQqdvRYS 856
+                             3444555569**************************************965444677765558999999999999999977544577 PP
+
+                  FUSC_2  82 yalafifltltalllyslaasgnpieialhRlvavliGiliallv 126
+                             ya+a+  +t+++++l +  ++  ++  a++R++++++G+++++++
+  tr|Q54R26|Q54R26_DICDI 857 YAGAVSGVTFLIIVLGQNLSKKFEYMYAVLRAFHIVMGVVWVIFI 901
+                             8************99998888889999***************986 PP
+
+>> FUSC  Fusaric acid resistance protein family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.4   5.4   2.1e-13   1.3e-09      29     157 ..     782     913 ..     779     941 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 37.4 bits;  conditional E-value: 2.1e-13
+                    FUSC  29 wAmtTVyiVaqPlsGavlsKsfyRllGTllGaaaavllval..fvqapllfllalalWiglclalall.drn.frsYafvLAGYTaa 111
+                             w+ +TV+ V+ P +Ga++ ++  R++GT++Ga  + l   l  ++  p   +++l + i++++++ ++ +++   sYa +++G T  
+  tr|Q54R26|Q54R26_DICDI 782 WTCATVMLVMVPSVGATITRGTNRIIGTIFGAFIGFLTSLLcsIIPTPGKEIVMLII-IFIFTYIISFpQQDvRYSYAGAVSGVTFL 867
+                             9*******************************9998854441145555555555543.44555554441444588************ PP
+
+                    FUSC 112 iialpavadPeaiFdlAvaRvseIllGIvcaalVsalvfPrsvapa 157
+                             ii+l         +++Av R+  I+ G+v  +++s+ +fP  + +a
+  tr|Q54R26|Q54R26_DICDI 868 IIVLGQNLSKKFEYMYAVLRAFHIVMGVVWVIFISLFIFPFFTYKA 913
+                             ****************************************554444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1222 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3848  (0.200636); expected 383.6 (0.02)
+Passed bias filter:                      526  (0.0274258); expected 383.6 (0.02)
+Passed Vit filter:                       136  (0.00709109); expected 19.2 (0.001)
+Passed Fwd filter:                        58  (0.00302414); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 1.04u 0.19s 00:00:01.23 Elapsed: 00:00:00.89
+# Mc/sec: 4430.31
+//
+Query:       tr|Q54WC9|Q54WC9_DICDI  [L=1284]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     3e-106  355.8   4.7     3e-106  355.8   4.7    3.8  1  ALMT      Aluminium activated malate transporter
+    1.4e-14   54.3  31.6    2.3e-14   53.7  13.8    2.4  1  FUSC_2    Fusaric acid resistance protein-like
+
+
+Domain annotation for each model (and alignments):
+>> ALMT  Aluminium activated malate transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  355.8   4.7  3.1e-110    3e-106       1     408 []     768    1163 ..     768    1163 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 355.8 bits;  conditional E-value: 3.1e-110
+                    ALMT    1 welgkedprrvvfslkvGlaltlvsllyflkplykelgknavWavlTVvvvlefsvGATlskGlnRalatliAGslalgvselas 85  
+                              ++++k++++++ f++++Gl++t+++++yf  ++y+el+ ++vW+++TV++v+++svGAT+++Gl+R++at+i+G++++++s l+s
+  tr|Q54WC9|Q54WC9_DICDI  768 FNFFKNAKWKYPFQVAIGLLSTIIPFYYFEGWSYNELVIHGVWTCATVMLVMVSSVGATIRRGLDRFMATVIGGIIGFLTSLLCS 852 
+                              589********************************************************************************** PP
+
+                    ALMT   86 ssgkigeeivigvsvFiiaalatflrliPaikarydYgvlvflLTfclvvvsgyrteev.ielavkRlltiaiGaliclivsifv 169 
+                              +++++g+eivi+v++Fi+++l++f +++Pa    ++Y+ +v+ LTf+lvv+++++t+++ +++av R+++i++G+++++i+s++v
+  tr|Q54WC9|Q54WC9_DICDI  853 IIPSPGKEIVIVVVTFIFTFLMSFPQQHPA----HTYAGAVSGLTFILVVFGQNFTKNFdYMYAVLRSFHILLGVIWVIILSMTV 933 
+                              ******************************....9************************************************** PP
+
+                    ALMT  170 fPiwaGedLhklvaknleklakslegcvkeyleekeker.kiseieakeedslysgyksvlnSksqeesLanfAkwEpehgrfkf 253 
+                              fP+++    +k ++ ++ ++++++++c+ ++le     + +isei++ e +sl+++y+++     q e++++f+k+E+e++++++
+  tr|Q54WC9|Q54WC9_DICDI  934 FPYFT----YKGTRIKIFQITNAMSDCFISILEAGLRLNeSISEINDPEFSSLFNYYIKI-----QGEEIITFGKDEKEETDEFL 1009
+                              *****....************************8777667********************.....******************** PP
+
+                    ALMT  254 rhpwkkyvkvgavlrqcaytveal............hgcikseiqapeelrkkfkeelqrlslesakvlrelaesvkkmkklsk. 325 
+                              +++++k+++++ +l+++++ ++++            +++++++i+++++l+++++++++++++++++++++++++++++kk++k 
+  tr|Q54WC9|Q54WC9_DICDI 1010 INEKRKKLILNIILNHKNDLINSYlnnnnnnnnnnnNNNNDQNIDSNSNLNNNNNNNFNENNINNIIKVQDKEFMKSERKKKKKl 1094
+                              ********************************998777779******************************************99 PP
+
+                    ALMT  326 veellkevkvaaeelkskl.dskskLlvnsekpeesleekqlskieelkelelsealslatfaslLielvarlekiveaveeLs 408 
+                              ++e+l++v+v+++++k++l d+ks+L+++s++               + e++ls a++l++++++L++l+++++ i++++ +Ls
+  tr|Q54WC9|Q54WC9_DICDI 1095 IFESLRNVRVGIDQVKASLfDVKSELQLISPR---------------KIEKYLSIAVNLDNSHTRLVALENSFDPIFSDLVKLS 1163
+                              9******************************9...............999*******************************997 PP
+
+>> FUSC_2  Fusaric acid resistance protein-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.7  13.8   2.4e-18   2.3e-14      12     125 ..     806     928 ..     787     929 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 53.7 bits;  conditional E-value: 2.4e-18
+                  FUSC_2  12 wrgeWalitaaivlsptlgasltravqRilGtvlGavlall...vlyllpgn...lvlallvfllvfliafflkrn...yalafifl 89 
+                              +g+W  +t+++v+  ++ga+++r++ R+++tv+G ++++l   ++ ++p++   +v+++++f+++fl++f ++ +   ya+a+  l
+  tr|Q54WC9|Q54WC9_DICDI 806 IHGVWTCATVMLVMVSSVGATIRRGLDRFMATVIGGIIGFLtslLCSIIPSPgkeIVIVVVTFIFTFLMSFPQQHPahtYAGAVSGL 892
+                             5***************************************9664557888866689999999999999999886443447******* PP
+
+                  FUSC_2  90 tltalllyslaasgnpieialhRlvavliGiliall 125
+                             t++++++ +  +++ ++  a++R +++l+G++++++
+  tr|Q54WC9|Q54WC9_DICDI 893 TFILVVFGQNFTKNFDYMYAVLRSFHILLGVIWVII 928
+                             ********9999999999****************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1284 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4967  (0.258981); expected 383.6 (0.02)
+Passed bias filter:                      646  (0.0336827); expected 383.6 (0.02)
+Passed Vit filter:                       162  (0.00844674); expected 19.2 (0.001)
+Passed Fwd filter:                        47  (0.0024506); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.08u 0.21s 00:00:01.29 Elapsed: 00:00:00.81
+# Mc/sec: 5159.82
+//
+[ok]

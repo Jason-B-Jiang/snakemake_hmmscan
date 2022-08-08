@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047265.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047265
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ32633.1  [L=302]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-06   25.6   4.8      0.023   14.6   0.2    2.9  2  IQ        IQ calmodulin-binding motif
+
+
+Domain annotation for each model (and alignments):
+>> IQ  IQ calmodulin-binding motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.9   0.9   8.8e-06      0.17       3      12 ..      26      35 ..      24      38 .. 0.89
+   2 !   14.6   0.2   1.2e-06     0.023       3      14 ..      52      63 ..      50      65 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 11.9 bits;  conditional E-value: 8.8e-06
+                HHHHHHHHHH CS
+          IQ  3 aaikIQaawR 12
+                aaikIQ+++R
+  EPZ32633.1 26 AAIKIQRWFR 35
+                9********* PP
+
+  == domain 2  score: 14.6 bits;  conditional E-value: 1.2e-06
+                HHHHHHHHHHHH CS
+          IQ  3 aaikIQaawRGy 14
+                aai+IQ++wR +
+  EPZ32633.1 52 AAITIQRFWRKH 63
+                9*********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (302 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       591  (0.030815); expected 383.6 (0.02)
+Passed bias filter:                      402  (0.0209604); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.21s 00:00:00.60 Elapsed: 00:00:00.63
+# Mc/sec: 1549.98
+//
+[ok]

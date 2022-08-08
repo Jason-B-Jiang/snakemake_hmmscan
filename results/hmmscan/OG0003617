@@ -1,0 +1,678 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003617.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003617
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q22744|RASF1_CAEEL  [L=615]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.6e-21   76.9   0.1    3.4e-21   75.8   0.1    1.6  1  RA           Ras association (RalGDS/AF-6) domain
+    5.4e-15   55.0   2.7    1.1e-14   54.1   2.7    1.5  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+    1.5e-12   47.3  10.4    2.9e-12   46.4  10.4    1.4  1  C1_1         Phorbol esters/diacylglycerol binding domain (C1
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.8   0.1   5.3e-25   3.4e-21       2      92 ..     397     495 ..     396     496 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 75.8 bits;  conditional E-value: 5.3e-25
+                            ECEEEEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE..........EE-TTSBCHHHHCCC-T CS
+                     RA   2 tgvlkVytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer..........kLsddecplqiqlqwgk 79 
+                            t++l+++t+   p++t k+i+++s++ta+++i +lL+kf+++d+p++++L  +++++++++          ++sdd+cpl+++l+w++
+  sp|Q22744|RASF1_CAEEL 397 TTSLRTITSFFLPRNTAKVINIDSKTTARKMIVTLLKKFRVADNPRKFAL--YECEQITDEatctlnrkltRISDDACPLKVVLNWQS 482
+                            6899**********************************************..7888888888888*********************** PP
+
+                            TTSTCEEEEEECT CS
+                     RA  80 reeslrfvLreke 92 
+                            +++++++vL+e++
+  sp|Q22744|RASF1_CAEEL 483 PHCGRALVLQEND 495
+                            ***********97 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.1   2.7   1.7e-18   1.1e-14       1      40 []     503     542 ..     503     542 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 54.1 bits;  conditional E-value: 1.7e-18
+            Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                            aF++PELenFLriL  EE++++ q+++KY+ +r +l+ +L
+  sp|Q22744|RASF1_CAEEL 503 AFEIPELENFLRILGMEEKQYVFQTQQKYQQYRYHLDAEL 542
+                            8***********************************9876 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.4  10.4   4.6e-16   2.9e-12       1      51 [.     165     215 ..     165     216 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 46.4 bits;  conditional E-value: 4.6e-16
+                            --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCTT CS
+                   C1_1   1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkecg 51 
+                            H ++ +++ +pt+C++Cg+f+wg  k +lkC+ C++++H +C  +v+  c+
+  sp|Q22744|RASF1_CAEEL 165 HSFKTHSLLHPTWCDKCGDFIWGILKEALKCEHCNYTCHARCRDLVTLDCR 215
+                            9***********************************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (615 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       762  (0.039731); expected 383.6 (0.02)
+Passed bias filter:                      506  (0.026383); expected 383.6 (0.02)
+Passed Vit filter:                        49  (0.00255488); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.18s 00:00:00.64 Elapsed: 00:00:00.65
+# Mc/sec: 3049.62
+//
+Query:       tr|Q66HV2|Q66HV2_DANRE  [L=363]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    9.3e-19   67.1   1.5    2.3e-18   65.8   1.5    1.7  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+    2.2e-18   66.8   0.1    5.5e-18   65.5   0.1    1.7  1  RA           Ras association (RalGDS/AF-6) domain
+    8.6e-10   38.4  11.4    1.5e-09   37.7  11.4    1.4  1  C1_1         Phorbol esters/diacylglycerol binding domain (C1
+
+
+Domain annotation for each model (and alignments):
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.8   1.5   3.7e-22   2.3e-18       1      40 []     317     356 ..     317     356 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 65.8 bits;  conditional E-value: 3.7e-22
+             Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                             aFs+PEL+nFLriL++EEe++++qi+r+Yt  r+k+++a+
+  tr|Q66HV2|Q66HV2_DANRE 317 AFSFPELQNFLRILQREEEDHVRQIIRRYTLARDKMKEAM 356
+                             8*************************************98 PP
+
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.5   0.1   8.6e-22   5.5e-18      13      92 ..     228     309 ..     217     310 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 65.5 bits;  conditional E-value: 8.6e-22
+                             -TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE..EE-TTSBCHHHHCCC-TTTSTCEEEEEECT CS
+                      RA  13 kpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer..kLsddecplqiqlqwgkreeslrfvLreke 92 
+                              p+ t+k++++ss++ a+eVi+alL+kf + d+p +y+L+e + r+++ +  kL ddecpl ++l++g++e+ l++vL+e+e
+  tr|Q66HV2|Q66HV2_DANRE 228 LPRDTVKHLHISSSTRAREVIQALLNKFTVVDNPAKYSLYERSQRDNQVYlrKLADDECPLFLRLCAGPNEKVLSLVLKENE 309
+                             34457**********************************8777777777699****************************98 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.7  11.4   2.3e-13   1.5e-09       1      51 [.      66     116 ..      66     118 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 37.7 bits;  conditional E-value: 2.3e-13
+                             --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCTT CS
+                    C1_1   1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkecg 51 
+                             H++++ +  q ++C+ Cgef+wg+ +q l+C+ C++++H +C + ++  c 
+  tr|Q66HV2|Q66HV2_DANRE  66 HDFQPCSQTQLSWCDLCGEFIWGLYRQSLRCTHCNYTCHYRCQPFIQLDCS 116
+                             99999999*************************************999996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (363 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1053  (0.0549038); expected 383.6 (0.02)
+Passed bias filter:                      590  (0.0307628); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.54
+# Mc/sec: 2160.30
+//
+Query:       tr|A0A2R8RWN2|A0A2R8RWN2_DANRE  [L=263]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.9e-18   66.4   0.8      1e-17   64.7   0.0    2.1  1  RA           Ras association (RalGDS/AF-6) domain
+    4.6e-17   61.6   5.2    4.6e-17   61.6   5.2    2.1  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.7   0.0     1e-21     1e-17       7      92 ..     125     208 ..     118     209 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 64.7 bits;  conditional E-value: 1e-21
+                                     EEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TTTS CS
+                              RA   7 VytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkree 82 
+                                     +y++ ++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++ +
+  tr|A0A2R8RWN2|A0A2R8RWN2_DANRE 125 FYLPADA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPDLD 198
+                                     4555555....9**********************************55555555.5599******************** PP
+
+                                     TCEEEEEECT CS
+                              RA  83 slrfvLreke 92 
+                                     +l+fvL+e+e
+  tr|A0A2R8RWN2|A0A2R8RWN2_DANRE 199 NLSFVLKENE 208
+                                     ********98 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.6   5.2   4.8e-21   4.6e-17       1      40 []     216     255 ..     216     255 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 61.6 bits;  conditional E-value: 4.8e-21
+                     Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                                     aFs+PEL+nFL iL++EE++ ++q++++Y+++r+kl+qaL
+  tr|A0A2R8RWN2|A0A2R8RWN2_DANRE 216 AFSVPELQNFLIILEKEEKERMRQVEQRYSTYREKLLQAL 255
+                                     8*************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (263 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1284  (0.0669482); expected 383.6 (0.02)
+Passed bias filter:                      838  (0.0436936); expected 383.6 (0.02)
+Passed Vit filter:                        57  (0.002972); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.23s 00:00:00.65 Elapsed: 00:00:00.59
+# Mc/sec: 1448.78
+//
+Query:       tr|E7EXR8|E7EXR8_DANRE  [L=482]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.8e-18   65.7   0.2    1.8e-17   63.9   0.0    2.0  1  RA           Ras association (RalGDS/AF-6) domain
+    1.1e-16   60.5   5.2    1.1e-16   60.5   5.2    1.9  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+    6.7e-07   29.2   7.5    1.2e-06   28.4   7.5    1.4  1  C1_1         Phorbol esters/diacylglycerol binding domain (C1
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.9   0.0   2.7e-21   1.8e-17       6      92 ..     343     427 ..     338     428 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 63.9 bits;  conditional E-value: 2.7e-21
+                             EEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TTTSTCEEEEE CS
+                      RA   6 kVytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkreeslrfvLr 89 
+                             ++y+++++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++ ++l+fvL+
+  tr|E7EXR8|E7EXR8_DANRE 343 SFYLPSDA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPDLDNLSFVLK 424
+                             56777777....9**********************************55555555.5599*************************** PP
+
+                             ECT CS
+                      RA  90 eke 92 
+                             e+e
+  tr|E7EXR8|E7EXR8_DANRE 425 ENE 427
+                             *98 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.5   5.2   1.7e-20   1.1e-16       1      40 []     435     474 ..     435     474 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 60.5 bits;  conditional E-value: 1.7e-20
+             Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                             aFs+PEL+nFL iL++EE++ ++q++++Y+++r+kl+qaL
+  tr|E7EXR8|E7EXR8_DANRE 435 AFSVPELQNFLIILEKEEKERMRQVEQRYSTYREKLLQAL 474
+                             8*************************************98 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.4   7.5   1.9e-10   1.2e-06       1      51 [.     191     237 ..     191     239 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 28.4 bits;  conditional E-value: 1.9e-10
+                             --EEEE--SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCTT CS
+                    C1_1   1 HhwvhrnfkqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkecg 51 
+                             H +  +   ++ +C+ C  ++   ++ +lkC++C++++H +C  +v+  c 
+  tr|E7EXR8|E7EXR8_DANRE 191 HSFTSTP-LSQDWCDACSRQI---SSAALKCQNCSYTCHLECQGLVQLDCN 237
+                             7777777.7899*********...***********************9996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (482 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1094  (0.0570416); expected 383.6 (0.02)
+Passed bias filter:                      605  (0.0315449); expected 383.6 (0.02)
+Passed Vit filter:                        70  (0.00364983); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 2703.26
+//
+Query:       tr|A0A0R4IG43|A0A0R4IG43_DANRE  [L=167]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-09   38.8   0.1    6.8e-09   36.3   0.0    2.1  1  RA        Ras association (RalGDS/AF-6) domain
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.3   0.0   3.6e-13   6.8e-09       6      52 ..     122     164 ..     117     167 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 36.3 bits;  conditional E-value: 3.6e-13
+                                     EEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEE CS
+                              RA   6 kVytedlkpgttyktikvsststaqeViealLekfgledspedyvLv 52 
+                                     ++y+++++    +k +++sst+t++eVi+ lL+kf + d+p++++L+
+  tr|A0A0R4IG43|A0A0R4IG43_DANRE 122 SFYLPSDA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALC 164
+                                     66777777....9*********************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (167 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1268  (0.066114); expected 383.6 (0.02)
+Passed bias filter:                      855  (0.04458); expected 383.6 (0.02)
+Passed Vit filter:                        79  (0.00411909); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.18s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 994.99
+//
+Query:       tr|A0A2R8Q459|A0A2R8Q459_DANRE  [L=319]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.3e-18   66.7   0.2    8.6e-18   64.9   0.0    2.0  1  RA           Ras association (RalGDS/AF-6) domain
+    6.1e-17   61.2   5.2    6.1e-17   61.2   5.2    2.0  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.9   0.0     9e-22   8.6e-18       6      92 ..     180     264 ..     175     265 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 64.9 bits;  conditional E-value: 9e-22
+                                     EEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TTT CS
+                              RA   6 kVytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkre 81 
+                                     ++y+++++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++ 
+  tr|A0A2R8Q459|A0A2R8Q459_DANRE 180 SFYLPSDA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPDL 253
+                                     56777777....9**********************************55555555.5599******************* PP
+
+                                     STCEEEEEECT CS
+                              RA  82 eslrfvLreke 92 
+                                     ++l+fvL+e+e
+  tr|A0A2R8Q459|A0A2R8Q459_DANRE 254 DNLSFVLKENE 264
+                                     *********98 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.2   5.2   6.4e-21   6.1e-17       1      40 []     272     311 ..     272     311 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 61.2 bits;  conditional E-value: 6.4e-21
+                     Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                                     aFs+PEL+nFL iL++EE++ ++q++++Y+++r+kl+qaL
+  tr|A0A2R8Q459|A0A2R8Q459_DANRE 272 AFSVPELQNFLIILEKEEKERMRQVEQRYSTYREKLLQAL 311
+                                     8*************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (319 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1065  (0.0555295); expected 383.6 (0.02)
+Passed bias filter:                      764  (0.0398352); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.21s 00:00:00.63 Elapsed: 00:00:00.66
+# Mc/sec: 1565.24
+//
+Query:       tr|A0A2R8RX31|A0A2R8RX31_DANRE  [L=257]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.3e-18   66.2   0.1    9.6e-18   64.7   0.0    1.8  1  RA           Ras association (RalGDS/AF-6) domain
+    2.1e-17   62.7   5.2    4.5e-17   61.7   5.2    1.6  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   64.7   0.0     1e-21   9.6e-18       7      92 ..     119     202 ..     112     203 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 64.7 bits;  conditional E-value: 1e-21
+                                     EEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TTTS CS
+                              RA   7 VytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkree 82 
+                                     +y++ ++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++ +
+  tr|A0A2R8RX31|A0A2R8RX31_DANRE 119 FYLPADA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPDLD 192
+                                     4555555....9**********************************55555555.5599******************** PP
+
+                                     TCEEEEEECT CS
+                              RA  83 slrfvLreke 92 
+                                     +l+fvL+e+e
+  tr|A0A2R8RX31|A0A2R8RX31_DANRE 193 NLSFVLKENE 202
+                                     ********98 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.7   5.2   4.7e-21   4.5e-17       1      40 []     210     249 ..     210     249 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 61.7 bits;  conditional E-value: 4.7e-21
+                     Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                                     aFs+PEL+nFL iL++EE++ ++q++++Y+++r+kl+qaL
+  tr|A0A2R8RX31|A0A2R8RX31_DANRE 210 AFSVPELQNFLIILEKEEKERMRQVEQRYSTYREKLLQAL 249
+                                     8*************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (257 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1154  (0.06017); expected 383.6 (0.02)
+Passed bias filter:                      840  (0.0437979); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.63
+# Mc/sec: 1312.46
+//
+Query:       tr|A0A2R8Q3N2|A0A2R8Q3N2_DANRE  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.5e-18   67.3   0.2    5.8e-18   65.4   0.0    2.0  1  RA           Ras association (RalGDS/AF-6) domain
+    4.6e-17   61.6   5.2    4.6e-17   61.6   5.2    2.1  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.4   0.0     6e-22   5.8e-18       6      92 ..     122     206 ..     117     207 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 65.4 bits;  conditional E-value: 6e-22
+                                     EEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TTT CS
+                              RA   6 kVytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkre 81 
+                                     ++y+++++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++ 
+  tr|A0A2R8Q3N2|A0A2R8Q3N2_DANRE 122 SFYLPSDA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPDL 195
+                                     56777777....9**********************************55555555.5599******************* PP
+
+                                     STCEEEEEECT CS
+                              RA  82 eslrfvLreke 92 
+                                     ++l+fvL+e+e
+  tr|A0A2R8Q3N2|A0A2R8Q3N2_DANRE 196 DNLSFVLKENE 206
+                                     *********98 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.6   5.2   4.8e-21   4.6e-17       1      40 []     214     253 ..     214     253 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 61.6 bits;  conditional E-value: 4.8e-21
+                     Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                                     aFs+PEL+nFL iL++EE++ ++q++++Y+++r+kl+qaL
+  tr|A0A2R8Q3N2|A0A2R8Q3N2_DANRE 214 AFSVPELQNFLIILEKEEKERMRQVEQRYSTYREKLLQAL 253
+                                     8*************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1362  (0.0710152); expected 383.6 (0.02)
+Passed bias filter:                      865  (0.0451014); expected 383.6 (0.02)
+Passed Vit filter:                        70  (0.00364983); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.20s 00:00:00.56 Elapsed: 00:00:00.62
+# Mc/sec: 1350.98
+//
+Query:       tr|F6P946|F6P946_DANRE  [L=321]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.7e-19   67.5   1.5      2e-18   66.0   1.5    1.9  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+    1.9e-18   67.0   0.1    4.4e-18   65.8   0.1    1.6  1  RA           Ras association (RalGDS/AF-6) domain
+
+
+Domain annotation for each model (and alignments):
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.0   1.5   2.1e-22     2e-18       1      40 []     275     314 ..     275     314 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 66.0 bits;  conditional E-value: 2.1e-22
+             Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                             aFs+PEL+nFLriL++EEe++++qi+r+Yt  r+k+++a+
+  tr|F6P946|F6P946_DANRE 275 AFSFPELQNFLRILQREEEDHVRQIIRRYTLARDKMKEAM 314
+                             8*************************************98 PP
+
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.8   0.1   4.6e-22   4.4e-18      13      92 ..     186     267 ..     175     268 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 65.8 bits;  conditional E-value: 4.6e-22
+                             -TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE..EE-TTSBCHHHHCCC-TTTSTCEEEEEECT CS
+                      RA  13 kpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer..kLsddecplqiqlqwgkreeslrfvLreke 92 
+                              p+ t+k++++ss++ a+eVi+alL+kf + d+p +y+L+e + r+++ +  kL ddecpl ++l++g++e+ l++vL+e+e
+  tr|F6P946|F6P946_DANRE 186 LPRDTVKHLHISSSTRAREVIQALLNKFTVVDNPAKYSLYERSQRDNQVYlrKLADDECPLFLRLCAGPNEKVLSLVLKENE 267
+                             34457**********************************8777777777699****************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (321 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1113  (0.0580322); expected 383.6 (0.02)
+Passed bias filter:                      739  (0.0385317); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.63
+# Mc/sec: 1641.76
+//
+Query:       tr|A0A0R4IDQ3|A0A0R4IDQ3_DANRE  [L=348]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-14   54.7   0.1    4.6e-14   52.9   0.0    1.9  1  RA        Ras association (RalGDS/AF-6) domain
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.9   0.0   2.4e-18   4.6e-14       6      80 ..     271     343 ..     266     348 .] 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 52.9 bits;  conditional E-value: 2.4e-18
+                                     EEEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE...EE-TTSBCHHHHCCC-TT CS
+                              RA   6 kVytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer...kLsddecplqiqlqwgkr 80 
+                                     ++y+++++    +k +++sst+t++eVi+ lL+kf + d+p++++L+   +r+++     kL+ ++cpl+++l +g++
+  tr|A0A0R4IDQ3|A0A0R4IDQ3_DANRE 271 SFYLPSDA----VKQLHISSTTTVREVIQGLLKKFMVQDNPRKFALCRLTRRDSQ-DlfqKLPLSDCPLYLRLLAGPD 343
+                                     56777777....9**********************************55555555.5599**************9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (348 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       562  (0.0293029); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.52
+# Mc/sec: 2168.68
+//
+Query:       sp|Q8WWW0|RASF5_HUMAN  [L=418]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.7e-17   63.0   5.3    4.1e-17   61.8   5.3    1.7  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+    4.6e-15   56.1   0.0    1.9e-14   54.1   0.0    2.1  1  RA           Ras association (RalGDS/AF-6) domain
+    1.4e-06   28.2   7.0    2.1e-06   27.6   7.0    1.3  1  C1_1         Phorbol esters/diacylglycerol binding domain (C1
+
+
+Domain annotation for each model (and alignments):
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.8   5.3   6.4e-21   4.1e-17       1      40 []     371     410 ..     371     410 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 61.8 bits;  conditional E-value: 6.4e-21
+            Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                            aFs+PEL+nFL+iL++EE+++iqq+++KY+++rqkl++aL
+  sp|Q8WWW0|RASF5_HUMAN 371 AFSIPELQNFLTILEKEEQDKIQQVQKKYDKFRQKLEEAL 410
+                            8*************************************98 PP
+
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.1   0.0     3e-18   1.9e-14       7      92 ..     280     363 ..     274     364 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 54.1 bits;  conditional E-value: 3e-18
+                            EEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE..EE-TTSBCHHHHCCC-TTTSTCEEEEEECT CS
+                     RA   7 VytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer..kLsddecplqiqlqwgkreeslrfvLreke 92 
+                            +y++ ++     k +++sst+t+ eVi+ lL+kf + d+p++++L++ ++++g+    kLs  ++pl+++l +g+++e l+fvL+e+e
+  sp|Q8WWW0|RASF5_HUMAN 280 FYLPLDA----IKQLHISSTTTVSEVIQGLLKKFMVVDNPQKFALFKRIHKDGQVLfqKLSIADRPLYLRLLAGPDTEVLSFVLKENE 363
+                            5556666....89********************************9666666666577****************************98 PP
+
+>> C1_1  Phorbol esters/diacylglycerol binding domain (C1 domain)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   7.0   3.3e-10   2.1e-06       1      51 [.     123     171 ..     123     173 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 3.3e-10
+                            --EEEE--.SS--B-TTT-SB--SSSS-EEEETTT--EE-CCCCTTS-SCTT CS
+                   C1_1   1 Hhwvhrnf.kqptfCkhCgeflwgkekqglkCswCkllvHkkChekvpkecg 51 
+                            H++++  +   p++C+ Cg  +    +q+l+C++Ck+++H +C ++++  c 
+  sp|Q8WWW0|RASF5_HUMAN 123 HCFAELVLpGGPGWCDLCGREV---LRQALRCTNCKFTCHPECRSLIQLDCS 171
+                            555555554679**********...9********************999996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (418 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1693  (0.0882736); expected 383.6 (0.02)
+Passed bias filter:                     1133  (0.059075); expected 383.6 (0.02)
+Passed Vit filter:                       130  (0.00677825); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.49u 0.17s 00:00:00.66 Elapsed: 00:00:00.66
+# Mc/sec: 2054.62
+//
+Query:       sp|Q9NS23|RASF1_HUMAN  [L=344]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.6e-19   68.7   0.4    1.4e-18   67.4   0.1    1.8  1  RA           Ras association (RalGDS/AF-6) domain
+    5.1e-18   64.7   4.6    1.2e-17   63.5   4.6    1.6  1  Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf
+
+
+Domain annotation for each model (and alignments):
+>> RA  Ras association (RalGDS/AF-6) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.4   0.1   1.4e-22   1.4e-18       7      92 ..     208     291 ..     202     292 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 67.4 bits;  conditional E-value: 1.4e-22
+                            EEETTT-TT..EEEEEEETTSBHHHHHHHHHHHCT-GGGGCCEEEECCCTTTTEEE..EE-TTSBCHHHHCCC-TTTSTCEEEEEECT CS
+                     RA   7 VytedlkpgttyktikvsststaqeViealLekfgledspedyvLvevkerggeer..kLsddecplqiqlqwgkreeslrfvLreke 92 
+                            +y+++++    +k+++v s++ a+eViealL+kf + d+p++++L+e  er+g+ +  kL+dde+pl ++l +g+++++l+fvL+e++
+  sp|Q9NS23|RASF1_HUMAN 208 FYLPKDA----VKHLHVLSRTRAREVIEALLRKFLVVDDPRKFALFERAERHGQVYlrKLLDDEQPLRLRLLAGPSDKALSFVLKEND 291
+                            5666666....9*******************************************999****************************97 PP
+
+>> Nore1-SARAH  Novel Ras effector 1 C-terminal SARAH (Sav/Rassf/Hpo) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.5   4.6   1.2e-21   1.2e-17       1      40 []     299     338 ..     299     338 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 63.5 bits;  conditional E-value: 1.2e-21
+            Nore1-SARAH   1 aFslPELenFLriLdeEEereiqqirrKYtalrqklqqaL 40 
+                            aFs+PEL+nFLriL++EEe++ +qi +KY+ +rqk+q+aL
+  sp|Q9NS23|RASF1_HUMAN 299 AFSMPELHNFLRILQREEEEHLRQILQKYSYCRQKIQEAL 338
+                            8*************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (344 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       693  (0.0361333); expected 383.6 (0.02)
+Passed bias filter:                      492  (0.0256531); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.14s 00:00:00.50 Elapsed: 00:00:00.56
+# Mc/sec: 1987.99
+//
+[ok]

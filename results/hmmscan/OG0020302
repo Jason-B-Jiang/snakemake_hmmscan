@@ -1,0 +1,138 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0020302.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0020302
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8QAP6|A0A2R8QAP6_DANRE  [L=321]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-46  156.6   0.0    7.4e-46  156.2   0.0    1.1  1  AIG1      AIG1 family
+    5.6e-06   26.5   0.1    3.3e-05   24.0   0.0    2.3  1  MMR_HSR1  50S ribosome-binding GTPase
+
+
+Domain annotation for each model (and alignments):
+>> AIG1  AIG1 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.2   0.0   7.7e-50   7.4e-46       1     204 [.      13     212 ..      13     219 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 156.2 bits;  conditional E-value: 7.7e-50
+                                     EEEEEESSTTSSHHHHHHHHHTS--SS--TTTS---SS-EEEEEEETTEEEEEEE--SCCCTTCCHHCHHHHHHHHHHH CS
+                            AIG1   1 ltivlvGktgnGkSaTgNsilgkkaFesklsaqsvtkkcqkksrtwdgkkinViDTPglfdlsvsadkiskeivrclll 79 
+                                     l++vl+G tg+G+S++gN++lg++aF + +s+ svt++cq++ ++++g++++ViDTPg f +  s ++++ e +r++ l
+  tr|A0A2R8QAP6|A0A2R8QAP6_DANRE  13 LRMVLLGVTGSGRSSAGNTLLGRSAFWTDTSSVSVTSRCQRAGGVVEGRSLQVIDTPGFFHTCLSPEEVRVELSRSVDL 91 
+                                     589**************************************************************************** PP
+
+                                     CTT-ESEEEEEEETTB-SHHHHHHHHHHHHHHCGGGGGGEEEEEEEGGGGTTCCHHHHHHHHH-HHHHHHHHHTTTSEE CS
+                            AIG1  80 seegihalllvlslgrfteedekalktlkelFGekilkylivvftrkddleddsledylsksspeaLkevlkecgnRvv 158
+                                      ++g+h+++lvl+  r+t e  + l+  ++ FG ++l ++iv++t +d l+ +  ed+l++ss   L e ++ec +   
+  tr|A0A2R8QAP6|A0A2R8QAP6_DANRE  92 LAPGPHVFVLVLRPCRLTPEQCASLHCTRATFGPHALTHTIVLLTCGDALGSKPEEDFLKESS--ELWEFVSECAGGFH 168
+                                     ************************************************************655..59************ PP
+
+                                     EEETTHHHHHHHHHHHHHHHHHHHHHHHHTTTT--B-HHHHHHHHC CS
+                            AIG1 159 lfnnktaskeekeeQvkellelveaivkenggkpytnelyekikee 204
+                                     +f+n   + +e ++Qv+ell++v+++v++n+g++yt +   +++  
+  tr|A0A2R8QAP6|A0A2R8QAP6_DANRE 169 VFDNT--KAHEDRSQVSELLQKVDRLVERNKGSHYTADRLLQAQAD 212
+                                     ****9..7788899**********************9987777665 PP
+
+>> MMR_HSR1  50S ribosome-binding GTPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.0   0.0   3.4e-09   3.3e-05       2      59 ..      15      77 ..      14     197 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 24.0 bits;  conditional E-value: 3.4e-09
+                                    EEEEESTTSSHHHHHHHHHTSTEEESSST...TSSSSEEEEEEEETTEEEEEEECGGGSS...H CS
+                        MMR_HSR1  2 vaivGrpNvGKStLinaltgekaivsdkp...gtTrdinegrvklkgkelelvDtpGlie...g 59
+                                    ++++G + +G S+  n+l+g+ a  +d+     t r  + g v ++g++l+++DtpG+++   +
+  tr|A0A2R8QAP6|A0A2R8QAP6_DANRE 15 MVLLGVTGSGRSSAGNTLLGRSAFWTDTSsvsVTSRCQRAGGV-VEGRSLQVIDTPGFFHtclS 77
+                                    789*****************97755555522044454444444.5789*********8652221 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (321 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       707  (0.0368632); expected 383.6 (0.02)
+Passed bias filter:                      562  (0.0293029); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.21s 00:00:00.61 Elapsed: 00:00:00.88
+# Mc/sec: 1186.17
+//
+Query:       tr|A0A2R8Q9V6|A0A2R8Q9V6_DANRE  [L=323]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.2e-46  157.4   0.0    4.3e-46  157.0   0.0    1.1  1  AIG1      AIG1 family
+    6.4e-06   26.3   0.0    3.3e-05   24.0   0.0    2.2  1  MMR_HSR1  50S ribosome-binding GTPase
+
+
+Domain annotation for each model (and alignments):
+>> AIG1  AIG1 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.0   0.0   4.5e-50   4.3e-46       1     204 [.      15     214 ..      15     221 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 157.0 bits;  conditional E-value: 4.5e-50
+                                     EEEEEESSTTSSHHHHHHHHHTS--SS--TTTS---SS-EEEEEEETTEEEEEEE--SCCCTTCCHHCHHHHHHHHHHH CS
+                            AIG1   1 ltivlvGktgnGkSaTgNsilgkkaFesklsaqsvtkkcqkksrtwdgkkinViDTPglfdlsvsadkiskeivrclll 79 
+                                     l++vl+G tg+G+S++gN++lg++aF + +s+ svt++cq++ ++++g++++ViDTPg f +  s ++++ e +r++ l
+  tr|A0A2R8Q9V6|A0A2R8Q9V6_DANRE  15 LRMVLLGVTGSGRSSAGNTLLGRSAFWTDTSSVSVTSRCQRAGGVVEGRSLQVIDTPGFFHTCLSPEEVRVELSRSVDL 93 
+                                     589**************************************************************************** PP
+
+                                     CTT-ESEEEEEEETTB-SHHHHHHHHHHHHHHCGGGGGGEEEEEEEGGGGTTCCHHHHHHHHH-HHHHHHHHHTTTSEE CS
+                            AIG1  80 seegihalllvlslgrfteedekalktlkelFGekilkylivvftrkddleddsledylsksspeaLkevlkecgnRvv 158
+                                      ++g+h+++lvl+  r+t e  + l+  ++ FG ++l ++iv++t  d l+ +  ed+l++ss   L e ++ec +   
+  tr|A0A2R8Q9V6|A0A2R8Q9V6_DANRE  94 LAPGPHVFVLVLRPCRLTPEQCASLHCTRATFGPHALTHTIVLLTCRDALGSKPAEDFLKESS--ELWEFVSECAGGFH 170
+                                     ************************************************************655..59************ PP
+
+                                     EEETTHHHHHHHHHHHHHHHHHHHHHHHHTTTT--B-HHHHHHHHC CS
+                            AIG1 159 lfnnktaskeekeeQvkellelveaivkenggkpytnelyekikee 204
+                                     +f+n   + +e ++Qv+ell++v+++v++n+g++yt +   +++  
+  tr|A0A2R8Q9V6|A0A2R8Q9V6_DANRE 171 VFDNT--KAHEDRSQVSELLQKVDRLVERNKGSHYTADRLLQAQAD 214
+                                     ****9..7788899**********************9987777665 PP
+
+>> MMR_HSR1  50S ribosome-binding GTPase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.0   0.0   3.4e-09   3.3e-05       2      59 ..      17      79 ..      16     205 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 24.0 bits;  conditional E-value: 3.4e-09
+                                    EEEEESTTSSHHHHHHHHHTSTEEESSST...TSSSSEEEEEEEETTEEEEEEECGGGSS...H CS
+                        MMR_HSR1  2 vaivGrpNvGKStLinaltgekaivsdkp...gtTrdinegrvklkgkelelvDtpGlie...g 59
+                                    ++++G + +G S+  n+l+g+ a  +d+     t r  + g v ++g++l+++DtpG+++   +
+  tr|A0A2R8Q9V6|A0A2R8Q9V6_DANRE 17 MVLLGVTGSGRSSAGNTLLGRSAFWTDTSsvsVTSRCQRAGGV-VEGRSLQVIDTPGFFHtclS 79
+                                    789*****************97755555522044454444444.5789*********8652221 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (323 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       697  (0.0363418); expected 383.6 (0.02)
+Passed bias filter:                      562  (0.0293029); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.15s 00:00:00.52 Elapsed: 00:00:00.61
+# Mc/sec: 1699.86
+//
+[ok]

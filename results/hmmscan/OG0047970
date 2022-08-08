@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047970.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047970
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ35594.1  [L=326]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.1e-46  156.8   0.2    3.8e-22   79.1   0.3    2.3  2  PGA_cap   Bacterial capsule synthesis protein PGA_cap
+
+
+Domain annotation for each model (and alignments):
+>> PGA_cap  Bacterial capsule synthesis protein PGA_cap
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.5   0.0   2.3e-25   4.4e-21      23      97 ..      46     130 ..      21     132 .. 0.86
+   2 !   79.1   0.3     2e-26   3.8e-22     188     257 .]     173     245 ..     139     245 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 75.5 bits;  conditional E-value: 2.3e-25
+     PGA_cap  23 ydfdpifadvkpllrkaDlaivNlEtpv.........teegepasgk.plfnappevlaaLkeagfdvvslAnNHtlDygeeGll 97 
+                   +d++++dvk l++++D+++vNlEtp+          e+ +++ gk ++f+++p++++aL++  +dvv+lAnNH++Dyg++Gl 
+  EPZ35594.1  46 ICYDYCWGDVKRLMETCDIRLVNLETPItgipykmnkRESTDKVAGKhYHFRMHPRNVRALTRSSIDVVNLANNHIMDYGIKGLI 130
+                 5699************************99999855534444555558***********************************96 PP
+
+  == domain 2  score: 79.1 bits;  conditional E-value: 2e-26
+     PGA_cap 188 r..keadlvivslHwgeeyqekpadeqrelaralid.aGadvvvGhhpHvlqgieiykgkliaYSlGNfifdq 257
+                 +  +++d++i+ +Hwg +y++ p+ + +++ar lid +G+++++Gh++H++q+ie+y++ li+Y+ G++i+d+
+  EPZ35594.1 173 KesNHVDVLIATVHWGPNYSWIPQRYFQHFARFLIDeCGVNIIHGHSAHHVQPIEVYHDALIIYGSGDLIDDY 245
+                 433469****************************************************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (326 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       473  (0.0246624); expected 383.6 (0.02)
+Passed bias filter:                      434  (0.0226289); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.52
+# Mc/sec: 2019.78
+//
+[ok]

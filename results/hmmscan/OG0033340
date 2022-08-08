@@ -1,0 +1,77 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0033340.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0033340
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VKS7|Q9VKS7_DROME  [L=652]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.3e-26   91.0  17.8    3.3e-07   30.6   0.0    4.9  4  zf-met       Zinc-finger of C2H2 type
+    1.3e-14   54.1   8.9      0.014   15.7   0.0    4.5  0  zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+    2.2e-10   40.2  11.2     0.0009   19.1   0.8    4.5  0  zf-U1        U1 zinc finger
+
+
+Domain annotation for each model (and alignments):
+>> zf-met  Zinc-finger of C2H2 type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.4   0.3   3.4e-07    0.0022       2      25 .]     413     436 ..     413     436 .. 0.99
+   2 !   25.1   1.3   2.8e-09   1.8e-05       1      25 []     469     493 ..     469     493 .. 0.99
+   3 !   30.6   0.0   5.1e-11   3.3e-07       3      25 .]     525     547 ..     522     547 .. 0.97
+   4 !   25.7   1.1   1.8e-09   1.1e-05       1      25 []     613     637 ..     613     637 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 18.4 bits;  conditional E-value: 3.4e-07
+                  zf-met   2 yCelCnvtftSesqlksHlqgKKH 25 
+                             yC lCn++  S +++++H++++ H
+  tr|Q9VKS7|Q9VKS7_DROME 413 YCALCNMVIRSTQSAIDHYSSRAH 436
+                             9*********************99 PP
+
+  == domain 2  score: 25.1 bits;  conditional E-value: 2.8e-09
+                  zf-met   1 fyCelCnvtftSesqlksHlqgKKH 25 
+                             fyC+lC+ ++tS s++++H+ g++H
+  tr|Q9VKS7|Q9VKS7_DROME 469 FYCKLCDLKLTSLSHAQQHFLGRRH 493
+                             8************************ PP
+
+  == domain 3  score: 30.6 bits;  conditional E-value: 5.1e-11
+                  zf-met   3 CelCnvtftSesqlksHlqgKKH 25 
+                             CelC+v  tSesq+ +Hl+g +H
+  tr|Q9VKS7|Q9VKS7_DROME 525 CELCDVIITSESQMAMHLAGARH 547
+                             *********************** PP
+
+  == domain 4  score: 25.7 bits;  conditional E-value: 1.8e-09
+                  zf-met   1 fyCelCnvtftSesqlksHlqgKKH 25 
+                             fyC++Cn+t+++ ++ ++H qg+ H
+  tr|Q9VKS7|Q9VKS7_DROME 613 FYCDACNITLNHLKSVNQHEQGRMH 637
+                             8***********************9 PP
+
+>> zf-C2H2_jaz  Zinc-finger double-stranded RNA-binding
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-U1  U1 zinc finger
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (652 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       510  (0.0265916); expected 383.6 (0.02)
+Passed bias filter:                      462  (0.0240888); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.44u 0.18s 00:00:00.62 Elapsed: 00:00:00.69
+# Mc/sec: 3052.12
+//
+[ok]

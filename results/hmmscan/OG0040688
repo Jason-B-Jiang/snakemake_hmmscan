@@ -1,0 +1,67 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040688.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040688
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q6H9L7|ISM2_HUMAN  [L=571]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-20   71.5   0.6    8.8e-20   71.5   0.6    1.7  1  AMOP      AMOP domain
+    0.00012   22.3  14.2     0.0002   21.6  13.2    2.0  1  TSP_1     Thrombospondin type 1 domain
+
+
+Domain annotation for each model (and alignments):
+>> AMOP  AMOP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.5   0.6   9.2e-24   8.8e-20       3     132 ..     402     533 ..     400     540 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 71.5 bits;  conditional E-value: 9.2e-24
+                  AMOP   3 ekCekWleed.ealknfle....elpsCPCtlkqallDlgrflpdlecdles......gkkekct.ykkgakhcvrsslsses..gagq 77 
+                           ++CekWl+++ ++l ++l+    +lpsCPC ++   +D+   l+d ++  ++      g++e+++ y+++a+ c+rs+ls es   a+q
+  sp|Q6H9L7|ISM2_HUMAN 402 DSCEKWLNCKsDFLIKYLSqmlrDLPSCPCAYPLEAMDSPVSLQDEHQGRSFrwrdasGPRERLDiYQPTARFCLRSMLSGESstLAAQ 490
+                           89*******98999999886666999********99999977766544433344777788899999*************9988778*** PP
+
+                  AMOP  78 qCCYdeegkllltadslqgstpkrahelgaapyreaekvpelShylnDvlpfllC 132
+                           +CCYde+ +ll           +r++ +g+++++++ ++p+l h++ D++p++lC
+  sp|Q6H9L7|ISM2_HUMAN 491 HCCYDEDSRLL-----------TRGKGAGMPNLISTDFSPKL-HFKFDTTPWILC 533
+                           ***********...........9*******************.************ PP
+
+>> TSP_1  Thrombospondin type 1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.6  13.2   2.1e-08    0.0002       2      49 .]     331     370 ..     330     370 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 21.6 bits;  conditional E-value: 2.1e-08
+                           SCCCSSS-SSSSSEEEEEEEECSETTSTTSS-BSSTSEEEEEEESSSC CS
+                 TSP_1   2 pwseWspCsvTCgkGsqvRqRtckspqkggeqCtgdaaetqaCkmqkC 49 
+                           +ws+WspCs  C+ G+q+R+R c         Ct++   t+ C+ + C
+  sp|Q6H9L7|ISM2_HUMAN 331 EWSPWSPCSGNCSTGKQQRTRPCGYG------CTATE--TRTCDLPSC 370
+                           7**********************877......88876..689998888 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (571 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       628  (0.0327441); expected 383.6 (0.02)
+Passed bias filter:                      405  (0.0211168); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.46u 0.19s 00:00:00.65 Elapsed: 00:00:00.75
+# Mc/sec: 2474.71
+//
+[ok]

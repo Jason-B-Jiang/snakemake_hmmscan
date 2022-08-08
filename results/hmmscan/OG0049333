@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049333.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049333
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P47139  [L=656]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-08   33.8   0.0    4.2e-08   32.9   0.0    1.6  1  LCAT      Lecithin:cholesterol acyltransferase
+    1.3e-06   28.4   1.6    4.9e-06   26.5   0.1    2.6  1  PGAP1     PGAP1-like protein
+    3.8e-06   26.6   0.0    8.3e-06   25.5   0.0    1.5  1  DUF900    Alpha/beta hydrolase of unknown function (DUF900)
+
+
+Domain annotation for each model (and alignments):
+>> LCAT  Lecithin:cholesterol acyltransferase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.9   0.0   6.5e-12   4.2e-08      82     175 ..     317     402 ..     304     573 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 32.9 bits;  conditional E-value: 6.5e-12
+    LCAT  82 eknktvvaapYDWRlsleerdkYfskLkelieealk..lsgkkvvliaHSmGnllvlyflkwveaeaWvdqhikafislgapllGsvkavkallsG 175
+             ++n +v    YDWRlsl+  +k+   L +++ee+++  +++k + +iaHSmG+l+    l+         + i ++i++g+p    ++++  +  G
+  P47139 317 NPNLNVQQFGYDWRLSLDISAKH---LTTKLEEIYNkqKNKKGIYIIAHSMGGLVAHKVLQDC------THLIRGIIYVGSPSQ-CPNILGPIRFG 402
+             5788899999*************...9999999998534556699************999983......356899998887743.44555555555 PP
+
+>> PGAP1  PGAP1-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.5   0.1   7.6e-10   4.9e-06      79     134 ..     344     395 ..     336     402 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 26.5 bits;  conditional E-value: 7.6e-10
+   PGAP1  79 IlslysssekeptsviliGHSmGGivaraaltlknyikqsvntiltlasPhalppl 134
+             + ++y +++k+++ + +i+HSmGG+va  +l   ++    ++ i+ ++sP + p +
+  P47139 344 LEEIY-NKQKNKKGIYIIAHSMGGLVAHKVLQDCTH---LIRGIIYVGSPSQCPNI 395
+             56789.8888999**************888877775...799********998875 PP
+
+>> DUF900  Alpha/beta hydrolase of unknown function (DUF900)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.5   0.0   1.3e-09   8.3e-06      67     114 ..     326     375 ..     318     381 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 25.5 bits;  conditional E-value: 1.3e-09
+  DUF900  67 nydke.saeysrkalekllrylankke.vkkitvlaHSmGsqlvlealeq 114
+              yd   s   s+k+l + l+++ nk++ +k i+++aHSmG  ++ ++l++
+  P47139 326 GYDWRlSLDISAKHLTTKLEEIYNKQKnKKGIYIIAHSMGGLVAHKVLQD 375
+             555444999*************998761566***************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (656 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       829  (0.0432244); expected 383.6 (0.02)
+Passed bias filter:                      572  (0.0298243); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.48u 0.24s 00:00:00.72 Elapsed: 00:00:00.67
+# Mc/sec: 3168.65
+//
+[ok]

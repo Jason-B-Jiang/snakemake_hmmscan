@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040850.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040850
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9BXY4|RSPO3_HUMAN  [L=272]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.3e-44  149.9  21.7    2.3e-44  149.9  21.7    1.9  1  Furin-like_2  Furin-like repeat, cysteine-rich
+    2.1e-13   50.4   6.5    2.1e-13   50.4   6.5    4.7  1  TSP1_spondin  Spondin-like TSP1 domain
+
+
+Domain annotation for each model (and alignments):
+>> Furin-like_2  Furin-like repeat, cysteine-rich
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  149.9  21.7   2.4e-48   2.3e-44       1     102 []      41     142 ..      41     142 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 149.9 bits;  conditional E-value: 2.4e-48
+           Furin-like_2   1 ck.gcvlcseenGclkckkrlfllleregirqiGvclkscpaGyfGvrgkevnkctkckaeecescfskdfcikckegfylhkGkclk 87 
+                            c+ gc++cs++nGcl+ck+rlf+ ler g++qiGvcl+scp+Gy+G+r++++nkctkcka +c++cf+k+fc+kck+gfylh Gkcl+
+  sp|Q9BXY4|RSPO3_HUMAN  41 CQgGCATCSDYNGCLSCKPRLFFALERIGMKQIGVCLSSCPSGYYGTRYPDINKCTKCKA-DCDTCFNKNFCTKCKSGFYLHLGKCLD 127
+                            5558********************************************************.9************************** PP
+
+           Furin-like_2  88 scpegtaaenstrec 102
+                            +cpeg++a+n+t+ec
+  sp|Q9BXY4|RSPO3_HUMAN 128 NCPEGLEANNHTMEC 142
+                            **************9 PP
+
+>> TSP1_spondin  Spondin-like TSP1 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.4   6.5   2.2e-17   2.1e-13       1      51 [.     148     203 ..     148     206 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 50.4 bits;  conditional E-value: 2.2e-17
+           TSP1_spondin   1 CvvseWseWseCs...ktC..gkGvqtRsRevivepenggkpCpelletrkCneek 51 
+                            C+vseW +Ws+C+   ktC  ++G++tR Re+i++p+ +g+ Cp+++etrkC+ ++
+  sp|Q9BXY4|RSPO3_HUMAN 148 CEVSEWNPWSPCTkkgKTCgfKRGTETRVREIIQHPSAKGNLCPPTNETRKCTVQR 203
+                            ************7333589999******************************8764 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (272 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1923  (0.100266); expected 383.6 (0.02)
+Passed bias filter:                      415  (0.0216383); expected 383.6 (0.02)
+Passed Vit filter:                        52  (0.0027113); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.21s 00:00:00.62 Elapsed: 00:00:00.73
+# Mc/sec: 1210.65
+//
+[ok]

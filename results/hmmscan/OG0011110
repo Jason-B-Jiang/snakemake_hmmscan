@@ -1,0 +1,385 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0011110.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0011110
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9I8V0|PRV2_DANRE  [L=109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.4e-11   44.0   0.3    3.2e-11   43.6   0.3    1.2  1  EF-hand_7  EF-hand domain pair
+      5e-11   41.4   5.4    1.6e-05   24.2   2.3    2.4  0  EF-hand_1  EF hand
+    3.4e-09   35.9   3.5    6.6e-05   22.5   1.0    2.6  0  EF-hand_6  EF-hand domain
+    4.2e-08   32.4   5.3     0.0018   17.7   0.1    2.3  2  EF-hand_5  EF hand
+    4.5e-07   29.6   1.6      1e-05   25.3   0.3    2.3  1  EF-hand_8  EF-hand domain pair
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   0.3   8.3e-15   3.2e-11       3      67 ..      43     104 ..      41     108 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 8.3e-15
+             EF-hand_7   3 klkeaFkelDtdgdgyldkeeLlrllrkifqgsgegkklsdeeleelfkefDldkdGvisfdEFl 67 
+                           ++k aF  +D+d++g+++++eL+ +l++++     +  l+d e + ++   D+d+dG+i  dEF 
+  sp|Q9I8V0|PRV2_DANRE  43 DIKKAFFVIDQDKSGFIEEDELKLFLQNFS---AGARALTDAETKAFLSAGDSDGDGKIGVDEFA 104
+                           799********************9999998...899999*************************7 PP
+
+>> EF-hand_1  EF hand
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> EF-hand_6  EF-hand domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> EF-hand_5  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.4   1.3   1.3e-06    0.0048       1      24 [.      44      67 ..      44      68 .. 0.89
+   2 !   17.7   0.1   4.8e-07    0.0018       3      24 ..      85     106 ..      83     107 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 16.4 bits;  conditional E-value: 1.3e-06
+                          HHHHHHHH-SS-SSCE-HHHHHHH CS
+             EF-hand_5  1 lkdtFqaiDlNgDGkIskeELktl 24
+                          +k++F  iD +++G+I+ +ELk +
+  sp|Q9I8V0|PRV2_DANRE 44 IKKAFFVIDQDKSGFIEEDELKLF 67
+                          5778999**************987 PP
+
+  == domain 2  score: 17.7 bits;  conditional E-value: 4.8e-07
+                           HHHHHH-SS-SSCE-HHHHHHH CS
+             EF-hand_5   3 dtFqaiDlNgDGkIskeELktl 24 
+                           ++ +a D +gDGkI ++E+  l
+  sp|Q9I8V0|PRV2_DANRE  85 AFLSAGDSDGDGKIGVDEFALL 106
+                           567788*************876 PP
+
+>> EF-hand_8  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   0.3   2.6e-09     1e-05       2      48 ..      56     104 ..      55     108 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 2.6e-09
+             EF-hand_8   2 kgkItreeLkrilrllglke..lsedevdilfrefDtdgdGyisfdEFc 48 
+                           +g I  +eLk +l +++     l++ e  + ++++D dgdG+i+ dEF 
+  sp|Q9I8V0|PRV2_DANRE  56 SGFIEEDELKLFLQNFSAGAraLTDAETKAFLSAGDSDGDGKIGVDEFA 104
+                           7999999999999777888899**************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       344  (0.0179363); expected 383.6 (0.02)
+Passed bias filter:                      301  (0.0156942); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.35u 0.20s 00:00:00.55 Elapsed: 00:00:00.59
+# Mc/sec: 598.42
+//
+Query:       tr|Q7ZT36|Q7ZT36_DANRE  [L=109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    9.5e-13   48.5   0.2    1.4e-12   47.9   0.2    1.3  1  EF-hand_7  EF-hand domain pair
+    8.4e-13   47.0   4.4    1.6e-06   27.4   1.3    2.5  1  EF-hand_1  EF hand
+    7.8e-11   41.0   2.5    8.9e-06   25.2   0.5    2.5  1  EF-hand_6  EF-hand domain
+    3.2e-10   39.1   4.6    0.00012   21.5   0.8    2.3  2  EF-hand_5  EF hand
+    1.5e-08   34.3   0.7    1.8e-05   24.5   0.0    2.3  1  EF-hand_8  EF-hand domain pair
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.9   0.2   3.7e-16   1.4e-12       3      70 ..      43     107 ..      41     108 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 47.9 bits;  conditional E-value: 3.7e-16
+               EF-hand_7   3 klkeaFkelDtdgdgyldkeeLlrllrkifqgsgegkklsdeeleelfkefDldkdGvisfdEFlkay 70 
+                             ++k aF  +D+d++g+++++eL+ +l++++     +  l+d e + ++k  D+d+dG+i  dEF  ++
+  tr|Q7ZT36|Q7ZT36_DANRE  43 DIKKAFAVIDQDKSGFIEEDELKLFLQNFS---AGARALTDAETKAFLKAGDSDGDGKIGVDEFASLV 107
+                             799********************9999998...899999*************************9876 PP
+
+>> EF-hand_1  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.4   1.3   4.1e-10   1.6e-06       1      28 [.      43      70 ..      43      71 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 27.4 bits;  conditional E-value: 4.1e-10
+                            HHHHHHHHHTTTSSSEEEHHHHHHHHHH CS
+               EF-hand_1  1 elkeiFrefDkDgdGkIdfeEfkellkk 28
+                            ++k++F+++D+D++G+I+ +E+k +l+ 
+  tr|Q7ZT36|Q7ZT36_DANRE 43 DIKKAFAVIDQDKSGFIEEDELKLFLQN 70
+                            69*********************99975 PP
+
+>> EF-hand_6  EF-hand domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   0.5   2.3e-09   8.9e-06       1      27 [.      43      69 ..      43      74 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 2.3e-09
+               EF-hand_6  1 elreaFklfDkdgdGkidkeElrkaLr 27
+                            ++++aF  +D+d++G+i  +El+ +L+
+  tr|Q7ZT36|Q7ZT36_DANRE 43 DIKKAFAVIDQDKSGFIEEDELKLFLQ 69
+                            589**********************98 PP
+
+>> EF-hand_5  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.5   0.8   3.1e-08   0.00012       1      24 [.      44      67 ..      44      68 .. 0.92
+   2 !   19.1   0.2   1.8e-07   0.00069       3      25 .]      85     107 ..      83     107 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 21.5 bits;  conditional E-value: 3.1e-08
+                            HHHHHHHH-SS-SSCE-HHHHHHH CS
+               EF-hand_5  1 lkdtFqaiDlNgDGkIskeELktl 24
+                            +k++F  iD +++G+I+ +ELk +
+  tr|Q7ZT36|Q7ZT36_DANRE 44 IKKAFAVIDQDKSGFIEEDELKLF 67
+                            6889*****************987 PP
+
+  == domain 2  score: 19.1 bits;  conditional E-value: 1.8e-07
+                             HHHHHH-SS-SSCE-HHHHHHHH CS
+               EF-hand_5   3 dtFqaiDlNgDGkIskeELktlv 25 
+                             ++ +a D +gDGkI ++E+  lv
+  tr|Q7ZT36|Q7ZT36_DANRE  85 AFLKAGDSDGDGKIGVDEFASLV 107
+                             678999*************9875 PP
+
+>> EF-hand_8  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.0   4.7e-09   1.8e-05      10      52 ..      71     108 ..      67     109 .] 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 4.7e-09
+               EF-hand_8  10 LkrilrllglkelsedevdilfrefDtdgdGyisfdEFcvlle 52 
+                             ++      g + l++ e  + ++++D dgdG+i+ dEF +l++
+  tr|Q7ZT36|Q7ZT36_DANRE  71 FSA-----GARALTDAETKAFLKAGDSDGDGKIGVDEFASLVK 108
+                             555.....7788**************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       368  (0.0191877); expected 383.6 (0.02)
+Passed bias filter:                      310  (0.0161635); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.48
+# Mc/sec: 730.37
+//
+Query:       tr|Q804W0|Q804W0_DANRE  [L=109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    9.2e-14   50.0   1.8    4.2e-07   29.2   0.6    2.4  1  EF-hand_1  EF hand
+      5e-12   46.2   0.2    6.3e-12   45.9   0.2    1.2  1  EF-hand_7  EF-hand domain pair
+    2.5e-11   42.6   2.0    0.00018   21.0   0.4    2.6  2  EF-hand_5  EF hand
+    3.3e-11   42.2   0.8    6.8e-06   25.6   0.2    2.5  1  EF-hand_6  EF-hand domain
+      4e-09   36.2   0.4    6.1e-06   26.0   0.1    2.2  1  EF-hand_8  EF-hand domain pair
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_1  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   0.6   1.1e-10   4.2e-07       1      28 [.      43      70 ..      43      71 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 1.1e-10
+                            HHHHHHHHHTTTSSSEEEHHHHHHHHHH CS
+               EF-hand_1  1 elkeiFrefDkDgdGkIdfeEfkellkk 28
+                            e+k++F+++D+D++G+I+ eE+k +l+ 
+  tr|Q804W0|Q804W0_DANRE 43 EVKKAFAIIDQDNSGFIEEEELKLFLQN 70
+                            79*********************99975 PP
+
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.9   0.2   1.7e-15   6.3e-12       3      70 ..      43     107 ..      41     108 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 45.9 bits;  conditional E-value: 1.7e-15
+               EF-hand_7   3 klkeaFkelDtdgdgyldkeeLlrllrkifqgsgegkklsdeeleelfkefDldkdGvisfdEFlkay 70 
+                             + k aF  +D+d++g++++eeL+ +l++++     + +l+d+e + ++   D+d+dG+i  +EF +++
+  tr|Q804W0|Q804W0_DANRE  43 EVKKAFAIIDQDNSGFIEEEELKLFLQNFK---ANARVLTDKETKAFLSAGDSDGDGKIGAEEFAALV 107
+                             57899******************9999999...9******************************9987 PP
+
+>> EF-hand_5  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.0   0.4   4.6e-08   0.00018       2      24 ..      45      67 ..      44      68 .. 0.90
+   2 !   20.6   0.1   6.1e-08   0.00023       3      25 .]      85     107 ..      83     107 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 21.0 bits;  conditional E-value: 4.6e-08
+                            HHHHHHH-SS-SSCE-HHHHHHH CS
+               EF-hand_5  2 kdtFqaiDlNgDGkIskeELktl 24
+                            k++F  iD +++G+I+ eELk +
+  tr|Q804W0|Q804W0_DANRE 45 KKAFAIIDQDNSGFIEEEELKLF 67
+                            678*****************987 PP
+
+  == domain 2  score: 20.6 bits;  conditional E-value: 6.1e-08
+                             HHHHHH-SS-SSCE-HHHHHHHH CS
+               EF-hand_5   3 dtFqaiDlNgDGkIskeELktlv 25 
+                             ++ +a D +gDGkI +eE+ +lv
+  tr|Q804W0|Q804W0_DANRE  85 AFLSAGDSDGDGKIGAEEFAALV 107
+                             567788*************9986 PP
+
+>> EF-hand_6  EF-hand domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.2   1.8e-09   6.8e-06       1      27 [.      43      69 ..      43      76 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 1.8e-09
+               EF-hand_6  1 elreaFklfDkdgdGkidkeElrkaLr 27
+                            e+++aF ++D+d++G+i  eEl+ +L+
+  tr|Q804W0|Q804W0_DANRE 43 EVKKAFAIIDQDNSGFIEEEELKLFLQ 69
+                            5799*********************98 PP
+
+>> EF-hand_8  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.0   0.1   1.6e-09   6.1e-06       3      52 ..      57     108 ..      57     109 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 26.0 bits;  conditional E-value: 1.6e-09
+               EF-hand_8   3 gkItreeLkrilrllglke..lsedevdilfrefDtdgdGyisfdEFcvlle 52 
+                             g I  eeLk +l +++ +   l+++e  + ++++D dgdG+i+ +EF +l++
+  tr|Q804W0|Q804W0_DANRE  57 GFIEEEELKLFLQNFKANArvLTDKETKAFLSAGDSDGDGKIGAEEFAALVK 108
+                             678889999999777777799**************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       553  (0.0288336); expected 383.6 (0.02)
+Passed bias filter:                      379  (0.0197612); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.33u 0.18s 00:00:00.51 Elapsed: 00:00:00.50
+# Mc/sec: 707.75
+//
+Query:       tr|Q6IMW7|Q6IMW7_DANRE  [L=109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    2.9e-13   48.4   3.6    5.9e-07   28.7   0.7    2.4  1  EF-hand_1  EF hand
+    1.5e-11   44.7   0.5    2.1e-11   44.2   0.5    1.3  1  EF-hand_7  EF-hand domain pair
+    4.7e-11   41.7   1.9      6e-06   25.8   0.2    2.4  1  EF-hand_6  EF-hand domain
+    1.5e-10   40.1   3.6    0.00011   21.7   0.4    2.4  2  EF-hand_5  EF hand
+    3.7e-08   33.1   1.1    3.8e-05   23.5   0.2    2.2  1  EF-hand_8  EF-hand domain pair
+
+
+Domain annotation for each model (and alignments):
+>> EF-hand_1  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.7   0.7   1.5e-10   5.9e-07       1      28 [.      43      70 ..      43      71 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 28.7 bits;  conditional E-value: 1.5e-10
+                            HHHHHHHHHTTTSSSEEEHHHHHHHHHH CS
+               EF-hand_1  1 elkeiFrefDkDgdGkIdfeEfkellkk 28
+                            e+k++F+++D+D++G+I+ eE+k +l+ 
+  tr|Q6IMW7|Q6IMW7_DANRE 43 EVKKAFAIIDQDKSGFIEEEELKLFLQN 70
+                            79*********************99975 PP
+
+>> EF-hand_7  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.2   0.5   5.5e-15   2.1e-11       3      70 ..      43     107 ..      41     108 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 44.2 bits;  conditional E-value: 5.5e-15
+               EF-hand_7   3 klkeaFkelDtdgdgyldkeeLlrllrkifqgsgegkklsdeeleelfkefDldkdGvisfdEFlkay 70 
+                             + k aF  +D+d++g++++eeL+ +l++++     +  l+d e ++++k  D+d+dG+i  dEF +++
+  tr|Q6IMW7|Q6IMW7_DANRE  43 EVKKAFAIIDQDKSGFIEEEELKLFLQNFK---ADARALTDGETKTFLKAGDSDGDGKIGIDEFAALV 107
+                             57899******************9999998...999999*************************9987 PP
+
+>> EF-hand_6  EF-hand domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.8   0.2   1.6e-09     6e-06       1      27 [.      43      69 ..      43      78 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 25.8 bits;  conditional E-value: 1.6e-09
+               EF-hand_6  1 elreaFklfDkdgdGkidkeElrkaLr 27
+                            e+++aF ++D+d++G+i  eEl+ +L+
+  tr|Q6IMW7|Q6IMW7_DANRE 43 EVKKAFAIIDQDKSGFIEEEELKLFLQ 69
+                            5799*********************98 PP
+
+>> EF-hand_5  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.7   0.4   2.8e-08   0.00011       2      24 ..      45      67 ..      44      68 .. 0.90
+   2 !   19.2   0.2   1.7e-07   0.00063       4      25 .]      86     107 ..      83     107 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 21.7 bits;  conditional E-value: 2.8e-08
+                            HHHHHHH-SS-SSCE-HHHHHHH CS
+               EF-hand_5  2 kdtFqaiDlNgDGkIskeELktl 24
+                            k++F  iD +++G+I+ eELk +
+  tr|Q6IMW7|Q6IMW7_DANRE 45 KKAFAIIDQDKSGFIEEEELKLF 67
+                            678*****************987 PP
+
+  == domain 2  score: 19.2 bits;  conditional E-value: 1.7e-07
+                             HHHHH-SS-SSCE-HHHHHHHH CS
+               EF-hand_5   4 tFqaiDlNgDGkIskeELktlv 25 
+                             + +a D +gDGkI ++E+ +lv
+  tr|Q6IMW7|Q6IMW7_DANRE  86 FLKAGDSDGDGKIGIDEFAALV 107
+                             56889*************9986 PP
+
+>> EF-hand_8  EF-hand domain pair
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.2     1e-08   3.8e-05       7      52 ..      61     108 ..      59     109 .] 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 1e-08
+               EF-hand_8   7 reeLkrilrllglke...lsedevdilfrefDtdgdGyisfdEFcvlle 52 
+                              eeLk +l +++  +   l++ e  + ++++D dgdG+i+ dEF +l++
+  tr|Q6IMW7|Q6IMW7_DANRE  61 EEELKLFLQNFKA-DaraLTDGETKTFLKAGDSDGDGKIGIDEFAALVK 108
+                             5778887755433.3588**************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       463  (0.024141); expected 383.6 (0.02)
+Passed bias filter:                      355  (0.0185098); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.67
+# Mc/sec: 527.66
+//
+[ok]

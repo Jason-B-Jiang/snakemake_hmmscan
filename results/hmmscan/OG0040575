@@ -1,0 +1,70 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040575.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040575
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8WTX7|CAST1_HUMAN  [L=329]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    7.3e-38  128.3   0.4      2e-17   62.8   0.9    2.5  2  ACT_7      ACT domain
+    8.1e-37  125.0   0.6    7.1e-34  115.6   0.0    3.0  1  Castor1_N  Cytosolic arginine sensor for mTORC1 subunit 1 N-t
+
+
+Domain annotation for each model (and alignments):
+>> ACT_7  ACT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.8   0.9   2.1e-21     2e-17       2      64 ..      72     138 ..      71     139 .. 0.93
+   2 !   62.7   0.0   2.2e-21   2.1e-17       2      64 ..     259     321 ..     258     322 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 62.8 bits;  conditional E-value: 2.1e-21
+                            EEEEEEEEEE-S-.....---SS--HHHHHHHHHHTTT---EEEE-SS-EEEEEEGGGHHHHHHHHH CS
+                  ACT_7   2 sedgwiklsvvgs....glpfdvtGivakltspLaeagIsifqiStyttdiiLVpeedlekAveaLh 64 
+                            +e +w++l+v+++     ++ +vt+i+ ++++pLae+++s++++Sty+td+iLV+e+dl  ++++L 
+  sp|Q8WTX7|CAST1_HUMAN  72 AEATWLVLNVSSHsgaaVQAAGVTKIARSVIAPLAEHHVSVLMLSTYQTDFILVREQDLSVVIHTLA 138
+                            6899*********999966667*******************************************96 PP
+
+  == domain 2  score: 62.7 bits;  conditional E-value: 2.2e-21
+                            EEEEEEEEEE-S-.---SS--HHHHHHHHHHTTT---EEEE-SS-EEEEEEGGGHHHHHHHHH CS
+                  ACT_7   2 sedgwiklsvvgsglpfdvtGivakltspLaeagIsifqiStyttdiiLVpeedlekAveaLh 64 
+                            s + w+++++ g+ l+fd++Giva++++pLa a+Is ++iSt++ d+ LVpe+ +  ++e+L+
+  sp|Q8WTX7|CAST1_HUMAN 259 SGELWRMVRIGGQPLGFDECGIVAQIAGPLAAADISAYYISTFNFDHALVPEDGIGSVIEVLQ 321
+                            5678**********************************************************8 PP
+
+>> Castor1_N  Cytosolic arginine sensor for mTORC1 subunit 1 N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.6   0.0   7.4e-38   7.1e-34       1      61 []       9      69 ..       9      69 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 115.6 bits;  conditional E-value: 7.4e-38
+              Castor1_N  1 rlrVasiaregialythpLikLaflsektrckFfSlTeTpedYtiivDeegfkeLPssefl 61
+                           r+rV+s+ar+g++lythpLikL+fl  ++rckFfSlTeTpedYt++vDeegfkeLP sefl
+  sp|Q8WTX7|CAST1_HUMAN  9 RVRVLSVARPGLWLYTHPLIKLLFLPRRSRCKFFSLTETPEDYTLMVDEEGFKELPPSEFL 69
+                           8**********************************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (329 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       426  (0.0222118); expected 383.6 (0.02)
+Passed bias filter:                      403  (0.0210126); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.70
+# Mc/sec: 1527.75
+//
+[ok]

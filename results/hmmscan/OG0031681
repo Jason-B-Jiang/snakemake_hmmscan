@@ -1,0 +1,113 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031681.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031681
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9VER6|MODSP_DROME  [L=628]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.5e-33  114.8  54.6    3.2e-11   43.3   3.8    5.6  3  Ldl_recept_a  Low-density lipoprotein receptor domain class A
+      2e-28   99.8   0.0    3.3e-28   99.1   0.0    1.4  1  Trypsin       Trypsin
+    1.3e-09   38.6  13.3    2.7e-05   24.8   1.7    3.3  2  Sushi         Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> Ldl_recept_a  Low-density lipoprotein receptor domain class A
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.5  11.1     7e-13   4.5e-09       2      37 .]      26      63 ..      25      63 .. 0.94
+   2 !   31.3   3.0   2.8e-11   1.8e-07       2      37 .]      69     106 ..      68     106 .. 0.92
+   3 !   43.3   3.8     5e-15   3.2e-11       2      35 ..     166     199 ..     165     203 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 36.5 bits;  conditional E-value: 7e-13
+                           SSSSTCEEETTSEEEEGGGTTSSSTTSSSSGCC..SST CS
+           Ldl_recept_a  2 tCepnefqCgsgeCIprswvCdgeaDCeDgSDE..enC 37
+                            C++++f+C++g+CI++  vC+ge+ C DgSDE   +C
+  sp|Q9VER6|MODSP_DROME 26 ACDSSQFECDNGSCISQYDVCNGEKNCPDGSDEtaLTC 63
+                           6********************************76666 PP
+
+  == domain 2  score: 31.3 bits;  conditional E-value: 2.8e-11
+                            SSSSTCEEETTSEEEEGGGTTSSSTTSSSSGCC..SST CS
+           Ldl_recept_a   2 tCepnefqCgsgeCIprswvCdgeaDCeDgSDE..enC 37 
+                             C +  fqC+ g C+     C+g ++C DgSDE   +C
+  sp|Q9VER6|MODSP_DROME  69 HCTKPYFQCTYGACVIGTAGCNGVNECADGSDEtrLRC 106
+                            69999****************************66666 PP
+
+  == domain 3  score: 43.3 bits;  conditional E-value: 5e-15
+                            SSSSTCEEETTSEEEEGGGTTSSSTTSSSSGCCS CS
+           Ldl_recept_a   2 tCepnefqCgsgeCIprswvCdgeaDCeDgSDEe 35 
+                            +C +  f+Cg+g CI+ s+ C+ge+DC DgSDE+
+  sp|Q9VER6|MODSP_DROME 166 ECPAYSFKCGTGGCISGSLSCNGENDCYDGSDEA 199
+                            69999****************************4 PP
+
+>> Trypsin  Trypsin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.1   0.0   5.2e-32   3.3e-28       3     221 .]     371     616 ..     369     616 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 99.1 bits;  conditional E-value: 5.2e-32
+                            SSEETTTTSSTTEEEEEETTC....EEEEEEEEEETTEEEEEGGGTTT........GGGEEEEESE..SBTTSCTTTEEEEEEEEEEE CS
+                Trypsin   3 ggeeaqkgsfpwqvslsvksg....khlCgGslisenwvlTAaHCvsn........asdvkvvlge..hnlkksegkeqklkvekviv 76 
+                            gg + + +  pw v l+v ++    +  CgGsl++++ v+TAaHCv++         + ++v++ +  +n  ++ ++e++++v+ + +
+  sp|Q9VER6|MODSP_DROME 371 GGYTINNTVVPWHVGLYVWHNekdyHFQCGGSLLTPDLVITAAHCVYDegtrlpysYDTFRVIAAKfyRNYGETTPEEKRRDVRLIEI 458
+                            7788888889********9999**9999*************************6665566667777556666666779********** PP
+
+                            ETTEBTTT..TTTTEEEEEESSSSTSBSSBHCCBBCS....TTHTTSTTTEEEEEESSBSSTSSBSSBEEEEEEEEEEHHHHHHHTTT CS
+                Trypsin  77 hpnynpst..ldnDiallklkepvklgdtvrpiclpa....assslpvgttclvsGwgrtkekgksdtlqevevpvvsretcksaykg 158
+                            +p+y+ +t  + +D+all l+ep++l++ +rpic       +++s++   +   +Gw  +     +++lq v     s++ c++++ +
+  sp|Q9VER6|MODSP_DROME 459 APGYKGRTenYYQDLALLTLDEPFELSHVIRPICVTFasfaEKESVTDDVQGKFAGWNIE----NKHELQFVPAVSKSNSVCRRNL-R 541
+                            *******964599*********************99844533333455555555555554....44679988888888889**975.4 PP
+
+                            TSTTTEEEEESTTSSSBCTTTTTTSEEEETTT............EEEEEEEEE...SSSSBTTSEEEEEEGGGGHHHH CS
+                Trypsin 159 kvtenmlcagakeggkdacqGDSGGPlvcsdg............elvGivswg...kgcakgnrpgvytkvssyldwi 221
+                            +++ + +c+ + +g+  acqGDSGG +  +              +l G++s     ++ca+    +v t+++++ d+i
+  sp|Q9VER6|MODSP_DROME 542 DIQADKFCIFT-QGKSLACQGDSGGGFTSELPtnafstwntarhFLFGVISNApnaDQCAHS--LTVMTNIQHFEDMI 616
+                            599********.699***************9999*****************88767888888..78*******99987 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.5   1.1   8.6e-08   0.00055      24      56 .]     251     283 ..     248     283 .. 0.89
+   2 !   24.8   1.7   4.2e-09   2.7e-05       9      56 .]     305     354 ..     300     354 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 20.5 bits;  conditional E-value: 8.6e-08
+                            EEEEEE-TTEEESTT-EEEB-TTSSB----.-SE CS
+                  Sushi  24 qveyeCkpGyrlegssvitCqedgtWspae.peC 56 
+                            +v+++Ck+Gy leg++  +C +  +Ws ++ p+C
+  sp|Q9VER6|MODSP_DROME 251 TVRFSCKQGYVLEGEESSYC-AKNKWSTSTiPKC 283
+                            79******************.7777**9955999 PP
+
+  == domain 2  score: 24.8 bits;  conditional E-value: 4.2e-09
+                            SE.EE-TTGS-BBTTEEEEEEE-TTEEESTT.-EEEB-TTSSB-----SE CS
+                  Sushi   9 ng.svsatkeeyqvgaqveyeCkpGyrlegs.svitCqedgtWspaepeC 56 
+                            ng  v+++k++ + g+ v++ C  G+++ ++ + ++C + g W++   +C
+  sp|Q9VER6|MODSP_DROME 305 NGqQVECRKPFHPPGTEVKFVCSTGFKTLSPlPEMRCMKGGYWNRGRQRC 354
+                            78899***********************8888************997777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (628 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       538  (0.0280515); expected 383.6 (0.02)
+Passed bias filter:                      258  (0.0134522); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.43u 0.19s 00:00:00.62 Elapsed: 00:00:00.57
+# Mc/sec: 3562.72
+//
+[ok]

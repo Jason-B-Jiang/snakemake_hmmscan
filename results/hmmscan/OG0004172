@@ -1,0 +1,679 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004172.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004172
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q93619|Q93619_CAEEL  [L=366]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      2e-40  138.5   0.0    2.7e-40  138.0   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    2.8e-37  127.5   0.0    4.7e-37  126.7   0.0    1.4  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.0   0.0   2.8e-44   2.7e-40       2     176 ..      44     219 ..      43     221 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 138.0 bits;  conditional E-value: 2.8e-44
+                             CEEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGG CS
+            Transket_pyr   2 kiawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFang 87 
+                             k++  + ++ea+   +++d++ vl+g+Dva gG+f    +l++++g++rv++++++Eq+++gf +G a+ag ++ i+e+qFgd++ +
+  tr|Q93619|Q93619_CAEEL  44 KMNLMQSVNEAMRIAMETDDSAVLFGEDVAfGGVFRCSLDLQKKFGKDRVFNTPLCEQGIAGFGIGVAAAG-ATAIAEIQFGDYIFP 129
+                             56778899***************************************************************.7************** PP
+
+                             G..HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE- CS
+            Transket_pyr  88 A..qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlp 171
+                             A  q+++++a+++++++ ++ +g +++r+  g+ + G+  +s+++ea ++++pglk v+P  p+++k+ll   ir  d++P+++++p
+  tr|Q93619|Q93619_CAEEL 130 AydQLVNEAAKFRYRSGNQFDCGkLTVRTTWGAVGHGALYHSQSPEANFTHTPGLKLVVPRGPVQAKGLLLSCIR--DPNPCIFFEP 214
+                             ***************************************************************************..99******** PP
+
+                             SSEEC CS
+            Transket_pyr 172 ksllr 176
+                             k l+r
+  tr|Q93619|Q93619_CAEEL 215 KILYR 219
+                             ***98 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.7   0.0   4.9e-41   4.7e-37       1     124 []     235     356 ..     235     356 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 126.7 bits;  conditional E-value: 4.9e-41
+                             TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHH CS
+         Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalae 86 
+                             g+ae++r+gkd+tlva+G++v++aleAa+ ++++ + ++eV+dl+t++p+D++ + esv+ktgrl+v++ea ++ G+g+e+a+++++
+  tr|Q93619|Q93619_CAEEL 235 GQAETVRSGKDLTLVAWGTQVHVALEAAQLAKEKlNADVEVIDLQTIQPWDEDHVVESVQKTGRLIVTHEAPISSGFGAEIASTVQK 321
+                             89**************************999999***************************************************** PP
+
+                             CCTTTESSEEEEEEESSSSSSSGHHHHHHHTT-SHHHH CS
+         Transketolase_C  87 eafdgldapvkrvggpdviepgsaeelekafgldaeki 124
+                             ++f +l+ p+ rv+g+d+  p++ +  e +++++++++
+  tr|Q93619|Q93619_CAEEL 322 RCFLNLESPIDRVAGFDT--PFP-HVHEPFYLPTVHRV 356
+                             ******************..998.88999999998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (366 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       414  (0.0215861); expected 383.6 (0.02)
+Passed bias filter:                      401  (0.0209083); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.23s 00:00:00.62 Elapsed: 00:00:00.66
+# Mc/sec: 1796.41
+//
+Query:       sp|Q55FN7|ODBB_DICDI  [L=370]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.5e-46  157.7   0.0    3.7e-46  157.1   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+      1e-37  128.9   0.0    2.4e-37  127.6   0.0    1.6  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.1   0.0   3.8e-50   3.7e-46       2     176 ..      48     223 ..      47     225 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 157.1 bits;  conditional E-value: 3.8e-50
+                           CEEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGGG. CS
+          Transket_pyr   2 kiawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFangA. 88 
+                           k++  +a+++ ++  +++d + v++g+Dv+ gG+f  + gl+++ g+ rv++++++Eq+++gfa+G+a++g +++i+e+qF+d++ +A 
+  sp|Q55FN7|ODBB_DICDI  48 KMNLFQAINNGMDIAMQKDSKAVVFGEDVGfGGVFRCTVGLRDKYGASRVFNTPLCEQGIAGFAIGLAAQG-ATPIAEIQFADYIFPAf 135
+                           678889*****************************************************************.7**************** PP
+
+                           .HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE-SSEE CS
+          Transket_pyr  89 .qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlpksll 175
+                            qi++++a+ +++++g++ +g +++r p+g+ + G   +s+++e+++ ++pglkvv Ps+p e+k+ll ++ir  +++Pv++++pk  +
+  sp|Q55FN7|ODBB_DICDI 136 dQIVNEAAKYRYRSGGQFDCGsLTIRSPYGAVGHGGHYHSQSPESYFGHTPGLKVVIPSTPIEAKGLLLASIR--EKDPVIFFEPKLMY 222
+                           *************************************************************************..789********999 PP
+
+                           C CS
+          Transket_pyr 176 r 176
+                           r
+  sp|Q55FN7|ODBB_DICDI 223 R 223
+                           8 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.6   0.0   2.5e-41   2.4e-37       1     120 [.     239     356 ..     239     359 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 127.6 bits;  conditional E-value: 2.5e-41
+                           TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHCC CS
+       Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaeea 88 
+                           gka+i++egkd+t++++G+++++ l+A++++e++ gis+e++dlrt++p+D et+ esvkktgr+v+ +ea k+gG ++e++a+++e++
+  sp|Q55FN7|ODBB_DICDI 239 GKARIVKEGKDITIIGWGAQMRVLLQAVNMAEEKlGISCELIDLRTIQPWDVETVVESVKKTGRVVISHEAPKTGGWAAEISATIQERC 327
+                           89*************************************************************************************** PP
+
+                           TTTESSEEEEEEESSSSSSSGHHHHHHHTT-S CS
+       Transketolase_C  89 fdgldapvkrvggpdviepgsaeelekafgld 120
+                           f +l+ap++rv+g+d+  p++    ek++ +d
+  sp|Q55FN7|ODBB_DICDI 328 FLHLEAPIQRVCGYDT--PFP-LIFEKFYVPD 356
+                           ****************..777.7788888776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (370 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       366  (0.0190834); expected 383.6 (0.02)
+Passed bias filter:                      356  (0.018562); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.16s 00:00:00.49 Elapsed: 00:00:00.52
+# Mc/sec: 2296.59
+//
+Query:       tr|A8QHW8|A8QHW8_DROME  [L=106]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    4.5e-09   36.3   0.0    5.2e-09   36.1   0.0    1.1  1  Transket_pyr  Transketolase, pyrimidine binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   0.0   2.7e-13   5.2e-09       3      63 ..      43     104 ..      41     106 .] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 2.7e-13
+                             EEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHH CS
+            Transket_pyr   3 iawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgf 63 
+                             +++ +a+++a++  l+e+++ +l+g+Dv+ gG+f    +l+++ g++rv++++++Eq+++g 
+  tr|A8QHW8|A8QHW8_DROME  43 MNMFNAINNAMDLALDENKSALLFGEDVGfGGVFRCSVNLRDKYGSQRVFNTPLCEQGIAGY 104
+                             78999******************************************************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (106 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       251  (0.0130872); expected 383.6 (0.02)
+Passed bias filter:                      243  (0.0126701); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.28u 0.16s 00:00:00.44 Elapsed: 00:00:00.53
+# Mc/sec: 641.42
+//
+Query:       tr|Q7PLE6|Q7PLE6_DROME  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    8.8e-41  139.6   0.0    1.2e-40  139.2   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    1.6e-34  118.5   0.0    2.4e-34  118.0   0.0    1.3  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.2   0.0   1.2e-44   1.2e-40       3     176 ..      43     217 ..      41     219 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 139.2 bits;  conditional E-value: 1.2e-44
+                             EEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGGG CS
+            Transket_pyr   3 iawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFangA 88 
+                             +++ +a+++a++  l+e+++ +l+g+Dv+ gG+f    +l+++ g++rv++++++Eq+++gfa+G a +g ++ i+e+qF+d++ ++
+  tr|Q7PLE6|Q7PLE6_DROME  43 MNMFNAINNAMDLALDENKSALLFGEDVGfGGVFRCSVNLRDKYGSQRVFNTPLCEQGIAGFAIGVANTG-ATAIAEIQFADYIFPS 128
+                             78999*****************************************************************.7*************** PP
+
+                             ..HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE-S CS
+            Transket_pyr  89 ..qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlpk 172
+                               qi++++a+ +++++g + +g +++r p+g+ + G+  +s+++ea+++++pgl+vv+P  p ++k+l+ + ir  d++P+++++pk
+  tr|Q7PLE6|Q7PLE6_DROME 129 fdQIVNEAAKYRYRSGGLFDCGsLTFRVPCGAVGHGALYHSQSPEAYFAHTPGLRVVVPRGPIKAKGLILACIR--DPNPCIVFEPK 213
+                             **************************************************************************..99********* PP
+
+                             SEEC CS
+            Transket_pyr 173 sllr 176
+                             +l+r
+  tr|Q7PLE6|Q7PLE6_DROME 214 TLYR 217
+                             ***9 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.0   0.0   2.5e-38   2.4e-34       1     122 [.     233     352 ..     233     354 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 118.0 bits;  conditional E-value: 2.5e-38
+                             TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHH CS
+         Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalae 86 
+                             gka+ilr gkdvtl+++G++v++ le+ae +++  +i++eV+dl ++ p+D  ti  s+kktgr+++ +ea  + G+gse+a++++e
+  tr|Q7PLE6|Q7PLE6_DROME 233 GKADILRHGKDVTLIGWGTQVHVLLEVAEIAKSTlNIDCEVIDLVSILPWDAITICTSAKKTGRVIIAHEAPLTQGFGSELASYIQE 319
+                             89************************************************************************************* PP
+
+                             CCTTTESSEEEEEEESSSSSSSGHHHHHHHTT-SHH CS
+         Transketolase_C  87 eafdgldapvkrvggpdviepgsaeelekafgldae 122
+                             ++f +l+apvkrv+g d+  p++ +  e ++++d++
+  tr|Q7PLE6|Q7PLE6_DROME 320 KCFLHLEAPVKRVAGWDT--PFP-HVFEPFYMPDKH 352
+                             ******************..999.999999999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       284  (0.0148079); expected 383.6 (0.02)
+Passed bias filter:                      276  (0.0143907); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.69
+# Mc/sec: 1694.65
+//
+Query:       tr|A0A2R8QUY1|A0A2R8QUY1_DANRE  [L=405]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.9e-42  145.1   0.0    2.7e-42  144.6   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    1.9e-34  118.3   0.0    3.4e-34  117.5   0.0    1.4  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.6   0.0   2.8e-46   2.7e-42       2     176 ..      83     258 ..      82     260 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 144.6 bits;  conditional E-value: 2.8e-46
+                                     CEEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEE CS
+                    Transket_pyr   2 kiawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllvivea 79 
+                                     k++  + ++ al+  l  dp  v++g+Dva gG+f  + gl+++ g++rv++++++Eq+++gf +Gaa+ag ++ i+e+
+  tr|A0A2R8QUY1|A0A2R8QUY1_DANRE  83 KMNLFQSVTSALDNTLSIDPTAVIFGEDVAfGGVFRCTVGLRDKYGKDRVFNTPLCEQGIVGFGIGAAAAG-ATAIAEI 160
+                                     5677788999*************************************************************.7****** PP
+
+                                     EEHHHHGGG..HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHH CS
+                    Transket_pyr  80 qFgdFangA..qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllr 155
+                                     qF+d++ +A  qi++++a+ +++++  + +g +++r p g  + G   +s+++eaf++++pglkvv+P  p+++k+ll 
+  tr|A0A2R8QUY1|A0A2R8QUY1_DANRE 161 QFADYIFPAfdQIVNEAAKYRYRSGNMYDCGkLTIRSPWGCVGHGSLYHSQSPEAFFAHCPGLKVVVPRGPVQAKGLLL 239
+                                     ******************************************************************************* PP
+
+                                     HHHHSSS.SEEEEEE-SSEEC CS
+                    Transket_pyr 156 rairrddrkPvvlrlpksllr 176
+                                       i+  d++P+++++pk l+r
+  tr|A0A2R8QUY1|A0A2R8QUY1_DANRE 240 SCIE--DKNPCIFFEPKILYR 258
+                                     ****..89************8 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.5   0.0   3.5e-38   3.4e-34       2     122 ..     275     393 ..     274     395 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 117.5 bits;  conditional E-value: 3.5e-38
+                                     EEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHH CS
+                 Transketolase_C   2 kaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigse 79 
+                                     +ae+l+eg+d+tlva+G++ +++ e+a++++++ g+s+e++dl+t+ p+Dket+ +sv+ktgrl++ +ea ++gG+++e
+  tr|A0A2R8QUY1|A0A2R8QUY1_DANRE 275 QAEVLQEGSDLTLVAWGTQIHVMREVAAMAQEKlGVSCELIDLQTILPWDKETVCKSVMKTGRLLISHEAPVTGGFAAE 353
+                                     799**************************************************************************** PP
+
+                                     HHHHHHHCCTTTESSEEEEEEESSSSSSSGHHHHHHHTT-SHH CS
+                 Transketolase_C  80 vaaalaeeafdgldapvkrvggpdviepgsaeelekafgldae 122
+                                     +++a++ee+f +l+ap++rv+g+d+  p++ +  e ++++d+ 
+  tr|A0A2R8QUY1|A0A2R8QUY1_DANRE 354 ISSAVQEECFLNLEAPISRVCGYDT--PFP-HIFEPFYIPDKW 393
+                                     *************************..998.889999999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (405 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       375  (0.0195526); expected 383.6 (0.02)
+Passed bias filter:                      347  (0.0180927); expected 383.6 (0.02)
+Passed Vit filter:                        25  (0.00130351); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.13s 00:00:00.52 Elapsed: 00:00:00.65
+# Mc/sec: 2025.41
+//
+Query:       tr|F8W368|F8W368_DANRE  [L=64]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (64 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       227  (0.0118359); expected 383.6 (0.02)
+Passed bias filter:                      184  (0.00959383); expected 383.6 (0.02)
+Passed Vit filter:                        12  (0.000625684); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.30u 0.13s 00:00:00.43 Elapsed: 00:00:00.43
+# Mc/sec: 482.98
+//
+Query:       tr|E7FDU0|E7FDU0_DANRE  [L=391]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.8e-42  145.2   0.0    2.4e-42  144.7   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    1.8e-34  118.4   0.0    3.1e-34  117.6   0.0    1.4  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.7   0.0   2.5e-46   2.4e-42       2     176 ..      69     244 ..      68     246 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 144.7 bits;  conditional E-value: 2.5e-46
+                             CEEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGG CS
+            Transket_pyr   2 kiawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFang 87 
+                             k++  + ++ al+  l  dp  v++g+Dva gG+f  + gl+++ g++rv++++++Eq+++gf +Gaa+ag ++ i+e+qF+d++ +
+  tr|E7FDU0|E7FDU0_DANRE  69 KMNLFQSVTSALDNTLSIDPTAVIFGEDVAfGGVFRCTVGLRDKYGKDRVFNTPLCEQGIVGFGIGAAAAG-ATAIAEIQFADYIFP 154
+                             5677788999*************************************************************.7************** PP
+
+                             G..HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE- CS
+            Transket_pyr  88 A..qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlp 171
+                             A  qi++++a+ +++++  + +g +++r p g  + G   +s+++eaf++++pglkvv+P  p+++k+ll   i+  d++P+++++p
+  tr|E7FDU0|E7FDU0_DANRE 155 AfdQIVNEAAKYRYRSGNMYDCGkLTIRSPWGCVGHGSLYHSQSPEAFFAHCPGLKVVVPRGPVQAKGLLLSCIE--DKNPCIFFEP 239
+                             ***************************************************************************..89******** PP
+
+                             SSEEC CS
+            Transket_pyr 172 ksllr 176
+                             k l+r
+  tr|E7FDU0|E7FDU0_DANRE 240 KILYR 244
+                             ****8 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.6   0.0   3.3e-38   3.1e-34       2     122 ..     261     379 ..     260     381 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 117.6 bits;  conditional E-value: 3.3e-38
+                             EEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHC CS
+         Transketolase_C   2 kaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaee 87 
+                             +ae+l+eg+d+tlva+G++ +++ e+a++++++ g+s+e++dl+t+ p+Dket+ +sv+ktgrl++ +ea ++gG+++e+++a++ee
+  tr|E7FDU0|E7FDU0_DANRE 261 QAEVLQEGSDLTLVAWGTQIHVMREVAAMAQEKlGVSCELIDLQTILPWDKETVCKSVMKTGRLLISHEAPVTGGFAAEISSAVQEE 347
+                             799************************************************************************************ PP
+
+                             CTTTESSEEEEEEESSSSSSSGHHHHHHHTT-SHH CS
+         Transketolase_C  88 afdgldapvkrvggpdviepgsaeelekafgldae 122
+                             +f +l+ap++rv+g+d+  p++ +  e ++++d+ 
+  tr|E7FDU0|E7FDU0_DANRE 348 CFLNLEAPISRVCGYDT--PFP-HIFEPFYIPDKW 379
+                             *****************..998.889999999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (391 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       343  (0.0178841); expected 383.6 (0.02)
+Passed bias filter:                      320  (0.0166849); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.57
+# Mc/sec: 2232.99
+//
+Query:       sp|P21953|ODBB_HUMAN  [L=392]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.5e-43  148.6   0.0    2.1e-43  148.2   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    8.1e-36  122.7   0.0    1.7e-35  121.7   0.0    1.6  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.2   0.0   2.2e-47   2.1e-43       2     176 ..      70     245 ..      69     247 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 148.2 bits;  conditional E-value: 2.2e-47
+                           CEEHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGGG. CS
+          Transket_pyr   2 kiawrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFangA. 88 
+                           k++  + ++ al+  l++dp  v++g+Dva gG+f  + gl+++ g++rv++++++Eq+++gf +G+a++g ++ i+e+qF+d++ +A 
+  sp|P21953|ODBB_HUMAN  70 KMNLFQSVTSALDNSLAKDPTAVIFGEDVAfGGVFRCTVGLRDKYGKDRVFNTPLCEQGIVGFGIGIAVTG-ATAIAEIQFADYIFPAf 157
+                           5677788999*************************************************************.7**************** PP
+
+                           .HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE-SSEE CS
+          Transket_pyr  89 .qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlpksll 175
+                            qi++++a+ +++++  +++g +++r p g  + G+  +s+++eaf++++pg+kvv P +p ++k+ll   i+  d++P+++++pk l+
+  sp|P21953|ODBB_HUMAN 158 dQIVNEAAKYRYRSGDLFNCGsLTIRSPWGCVGHGALYHSQSPEAFFAHCPGIKVVIPRSPFQAKGLLLSCIE--DKNPCIFFEPKILY 244
+                           *************************************************************************..89************ PP
+
+                           C CS
+          Transket_pyr 176 r 176
+                           r
+  sp|P21953|ODBB_HUMAN 245 R 245
+                           8 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.7   0.0   1.8e-39   1.7e-35       2     122 ..     262     380 ..     261     382 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 121.7 bits;  conditional E-value: 1.8e-39
+                           EEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHCCT CS
+       Transketolase_C   2 kaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaeeaf 89 
+                           +ae+++eg+dvtlva+G++v++  e+a +++++ g+s+eV+dlrt+ p+D +ti +sv ktgrl++ +ea  +gG++se++++++ee+f
+  sp|P21953|ODBB_HUMAN 262 QAEVIQEGSDVTLVAWGTQVHVIREVASMAKEKlGVSCEVIDLRTIIPWDVDTICKSVIKTGRLLISHEAPLTGGFASEISSTVQEECF 350
+                           799************************************************************************************** PP
+
+                           TTESSEEEEEEESSSSSSSGHHHHHHHTT-SHH CS
+       Transketolase_C  90 dgldapvkrvggpdviepgsaeelekafgldae 122
+                            +l+ap++rv+g+d+  p++ +  e ++++d+ 
+  sp|P21953|ODBB_HUMAN 351 LNLEAPISRVCGYDT--PFP-HIFEPFYIPDKW 380
+                           ***************..998.889999999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (392 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       374  (0.0195005); expected 383.6 (0.02)
+Passed bias filter:                      352  (0.0183534); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.17s 00:00:00.55 Elapsed: 00:00:00.54
+# Mc/sec: 2322.76
+//
+Query:       XP_013238040.1  [L=264]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.3e-30  105.7   0.0    3.3e-30  105.2   0.0    1.2  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    4.4e-30  104.2   0.0    6.3e-30  103.7   0.0    1.2  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.2   0.0   3.4e-34   3.3e-30      59     176 ..       4     121 ..       3     123 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 105.2 bits;  conditional E-value: 3.4e-34
+                     HHHHHHHHHHHHCTTEEEEEEEEHHHHGGG..HHGGHHHHHCHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHH CS
+    Transket_pyr  59 avlgfavGaalagpllviveaqFgdFangA..qiyadqairsgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaet 150
+                     +++gf +G+a++g ++ i+e+qF+d++ +A  qi++++a+ +++++g +++g +++r+p+++ + G   +s+++ea++ ++pg+k+v+P +p ++
+  XP_013238040.1   4 GIVGFGIGLAAQG-TTAIAEIQFVDYIFPAfdQIVNEAAKLRYRSGGDFNCGkLTIRAPYSAVGHGGHYHSQSPEAYFSHCPGIKIVTPRSPSQA 97 
+                     689**********.7******************************************************************************** PP
+
+                     HHHHHHHHHSSS.SEEEEEE-SSEEC CS
+    Transket_pyr 151 khllrrairrddrkPvvlrlpksllr 176
+                     k+llr++i   d++Pv++++pk l+r
+  XP_013238040.1  98 KGLLRASIL--DPNPVIFFEPKILYR 121
+                     *********..99************9 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.7   0.0   6.6e-34   6.3e-30       1     121 [.     137     251 ..     137     254 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 103.7 bits;  conditional E-value: 6.6e-34
+                      TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHCCTTTES CS
+  Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaeeafdgld 93 
+                      gkae++ eg+dvtlv++G++ ++  +A  +++ e g+s+e++dlrt++p+D+et++    ktgrlv+ +ea ++ G+g+e+aa+++e ++ +l 
+   XP_013238040.1 137 GKAEVVDEGNDVTLVGWGAQINVLKAASSMAKTElGVSCELIDLRTISPWDFETVE----KTGRLVISHEAPVTSGFGAEIAATIQEACLLSLC 226
+                      89*******************9988888888888*********************9....********************************** PP
+
+                      SEEEEEEESSSSSSSGHHHHHHHTT-SH CS
+  Transketolase_C  94 apvkrvggpdviepgsaeelekafglda 121
+                      ap++rv+g d+  +++    ek+++++a
+   XP_013238040.1 227 APIRRVCGWDT--HFP-LIFEKLYLPNA 251
+                      ***********..**9.999**999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (264 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       349  (0.018197); expected 383.6 (0.02)
+Passed bias filter:                      336  (0.0175192); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.48u 0.24s 00:00:00.72 Elapsed: 00:00:00.75
+# Mc/sec: 1135.11
+//
+Query:       PJF18609.1  [L=321]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.2e-44  150.8   0.0    5.9e-44  150.0   0.0    1.4  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    4.6e-34  117.1   0.0    6.7e-34  116.5   0.0    1.3  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.0   0.0   6.1e-48   5.9e-44       4     176 ..       2     175 ..       1     177 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 150.0 bits;  conditional E-value: 6.1e-48
+                   EHHHHHHHHHHHHHCTTTTEEEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGGG..HHGGHHHHH CS
+  Transket_pyr   4 awrkaeaealaellkedpevvligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFangA..qiyadqair 97 
+                   ++ +a+++ +   +++dp+ +++g+Dv+ gG+f  + +l++++g+ rv++++++Eq+++gfa+Gaa+ g ++vi+e+qF+d++ +A  qi+++ a+ 
+    PJF18609.1   2 NTFQAINDSMRLAMERDPNALIFGEDVGfGGVFRCTLDLRKKFGDMRVFNTPLTEQGIAGFAAGAAVMG-TTVIAEIQFADYIFPAfdQIVNEIAKY 97 
+                   6889*****************************************************************.7************************** PP
+
+                   CHHHHHT--EE.EEESBSGGGSTTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE-SSEEC CS
+  Transket_pyr  98 sgealgklkvg.vvtrlpigvgedGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlpksllr 176
+                   +++++g + vg +v+r+p+g+ + G   +s+++ea+++++pglkv++P  p ++k+ll  ai+  d++Pv +++pk l+r
+    PJF18609.1  98 RYRSGGMFDVGsLVIRAPCGAVGHGGLYHSQSPEAYFAHTPGLKVIVPRGPIQAKGLLTSAIK--DKNPVLFFEPKILYR 175
+                   ***************************************************************..89************8 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.5   0.0     7e-38   6.7e-34       1     120 [.     191     307 ..     191     311 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 116.5 bits;  conditional E-value: 7e-38
+                      TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCTTTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHCCTTTESS CS
+  Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLekegisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaeeafdglda 94 
+                      gkae+l egkd tlv++Gs++++  ++a+e+ek gis+e++dlr++ p+D et+ +sv+ktgrlv+ +ea k+gG+++e+a++++e++  +l+a
+       PJF18609.1 191 GKAEVLIEGKDCTLVGWGSQLYVLDAVAQEAEKSGISCELIDLRSIAPWDCETVTNSVRKTGRLVIAHEAPKTGGFAAEIASTIQETCSMDLKA 284
+                      89******************************************************************************************** PP
+
+                      EEEEEEESSSSSSSGHHHHHHHTT-S CS
+  Transketolase_C  95 pvkrvggpdviepgsaeelekafgld 120
+                      pv+rv+g d+  p++    ek++++d
+       PJF18609.1 285 PVLRVCGWDT--PFP-LIFEKFYLPD 307
+                      **********..888.7889999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (321 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       361  (0.0188227); expected 383.6 (0.02)
+Passed bias filter:                      352  (0.0183534); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.23s 00:00:00.70 Elapsed: 00:00:01.57
+# Mc/sec: 663.50
+//
+Query:       EPZ36043.1  [L=325]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.3e-36  125.3   0.0    3.3e-36  124.7   0.0    1.3  1  Transket_pyr     Transketolase, pyrimidine binding domain
+    1.3e-35  122.0   0.0      2e-35  121.5   0.0    1.3  1  Transketolase_C  Transketolase, C-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Transket_pyr  Transketolase, pyrimidine binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.7   0.0   3.4e-40   3.3e-36      24     176 ..      29     178 ..       7     180 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 124.7 bits;  conditional E-value: 3.4e-40
+                   EEEESSTH.HHHTTCHCCHHEGGTTEGEEE--S-HHHHHHHHHHHHHHCTTEEEEEEEEHHHHGGGHHGGHHHHHCHHHHHT--EE.EEESBSGGGS CS
+  Transket_pyr  24 vligaDva.gGtfsvrkgllhdqgegrvidsgisEqavlgfavGaalagpllviveaqFgdFangAqiyadqairsgealgklkvg.vvtrlpigvg 118
+                   v++g+Dva gG+f    +l++++g++rv++s+++Eq+ +gf +G+a+ g ++ i+e qF+d++     + ++a+ +++++  ++vg +++r+p+++ 
+    EPZ36043.1  29 VVFGEDVAfGGVFRCSVNLKDKFGSNRVFNSPLTEQGLVGFGIGMAAVG-STAIAEVQFADYIF--PAFDQAAKYRYRSGNMFNVGgLTIRAPCSAV 122
+                   799**********************************************.7*************..558889999********************** PP
+
+                   TTGTTTSBSSHHHHHHTSTTEEEE--SSHHHHHHHHHHHHHSSS.SEEEEEE-SSEEC CS
+  Transket_pyr 119 edGpehqsaeleaflrlipglkvvrPsdpaetkhllrrairrddrkPvvlrlpksllr 176
+                   + G   +s+++ea++ ++pglk+v+P +p ++k+ll  air  d++Pv +++pk+l+r
+    EPZ36043.1 123 GHGGHYHSQSPEAYFSHTPGLKIVMPRSPIQAKGLLLSAIR--DPNPVLVFEPKMLYR 178
+                   *****************************************..99************9 PP
+
+>> Transketolase_C  Transketolase, C-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.5   0.0   2.1e-39     2e-35       1     121 [.     194     312 ..     194     315 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 121.5 bits;  conditional E-value: 2.1e-39
+                      TEEEEEESSSSEEEEEETTHHHHHHHHHHHHHCT.TTCEEEEE-SEEESHHHHHHHHHHHHHSEEEEEEEEESTTSHHHHHHHHHHHCCTTTES CS
+  Transketolase_C   1 gkaeilregkdvtlvayGsmveealeAaeeLeke.gisaeVvdlrtvkplDketilesvkktgrlvvveeavkrgGigsevaaalaeeafdgld 93 
+                      gkae+l+egkd+t+v+yGs+ ++  +A++ +e++ g+s+e++dlr++ p+D+et+ +sv+ktgrlvv +ea ++ G+g+e+aa+++e++f +l+
+       EPZ36043.1 194 GKAEVLKEGKDITIVGYGSQIYVLEKAVKIAEEKlGVSCELIDLRSILPWDEETVVKSVNKTGRLVVSHEAPVTNGFGAEIAARIQEQCFLRLE 287
+                      89******************************************************************************************** PP
+
+                      SEEEEEEESSSSSSSGHHHHHHHTT-SH CS
+  Transketolase_C  94 apvkrvggpdviepgsaeelekafglda 121
+                      apv+rv+g d+  p++    e+ +++d+
+       EPZ36043.1 288 APVQRVCGWDT--PFP-LIFENVYLPDK 312
+                      ***********..887.77888888886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (325 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       397  (0.0206997); expected 383.6 (0.02)
+Passed bias filter:                      384  (0.0200219); expected 383.6 (0.02)
+Passed Vit filter:                        32  (0.00166849); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.16s 00:00:00.56 Elapsed: 00:00:00.55
+# Mc/sec: 1916.29
+//
+[ok]

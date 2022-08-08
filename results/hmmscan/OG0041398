@@ -1,0 +1,61 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0041398.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0041398
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_013236863.1  [L=413]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-10   39.6   0.4    2.5e-09   37.3   0.0    2.6  1  PPR_2     PPR repeat family
+    4.6e-06   26.7   0.1    4.8e-05   23.5   0.0    2.5  1  PPR_3     Pentatricopeptide repeat domain
+
+
+Domain annotation for each model (and alignments):
+>> PPR_2  PPR repeat family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.3   0.0   2.6e-13   2.5e-09       1      47 [.      30      76 ..      30      79 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 37.3 bits;  conditional E-value: 2.6e-13
+           PPR_2  1 pnvvtyNtlisglckkgkveeAfklfneMkkrgvePnsyTysilikg 47
+                    p+v +yNtl++gl  +g +  A+k+f +Mkkr + P+ ++y+ l+++
+  XP_013236863.1 30 PSVPVYNTLLKGLRDHGCSALAYKFFVDMKKRALVPDLISYNLLLDS 76
+                    78999***************************************996 PP
+
+>> PPR_3  Pentatricopeptide repeat domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.0     5e-09   4.8e-05      11      60 ..      28      77 ..      24      80 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 5e-09
+           PPR_3 11 ikldvvtYthLLtayanagnkklalevlermkkkgikPtvvtyNailgvi 60
+                    ++++v  Y++LL++    g   la + +  mkk  + P +++yN +l  i
+  XP_013236863.1 28 VRPSVPVYNTLLKGLRDHGCSALAYKFFVDMKKRALVPDLISYNLLLDSI 77
+                    689999****************************************9866 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (413 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       622  (0.0324313); expected 383.6 (0.02)
+Passed bias filter:                      505  (0.0263309); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.79
+# Mc/sec: 1696.19
+//
+[ok]

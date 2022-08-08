@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025722.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025722
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9XYB7|NHR8_CAEEL  [L=560]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.6e-24   83.9  13.9    8.6e-24   83.9  13.9    1.7  1  zf-C4          Zinc finger, C4 type (two domains)
+    1.1e-05   25.2   0.3    3.9e-05   23.5   0.3    2.0  0  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+
+
+Domain annotation for each model (and alignments):
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.9  13.9   8.9e-28   8.6e-24       2      69 ..      25      92 ..      24      93 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 83.9 bits;  conditional E-value: 8.9e-28
+                          B-TTTSSB-SEEETTEEE-HHHHHHHHHHHHTT-----SSSST---STTTCCT-HHHHHHHHHHTT-- CS
+                 zf-C4  2 lCkvCgdkasglhygvltCegCkgFFkRsiqkkakysCkkekkCvidkkkRnrCqaCRlkkClevGms 69
+                          +C+vC+d+a g+ +gvltCe+Ck+FF+R ++k+++ +C  +++C+i+  +R+ CqaCRl+kC++vGm+
+  sp|Q9XYB7|NHR8_CAEEL 25 ICTVCSDRANGYNFGVLTCESCKAFFRRNASKHKEIKCPFSDSCQITSASRKFCQACRLNKCFAVGMN 92
+                          7******************************************************************7 PP
+
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (560 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       934  (0.0486991); expected 383.6 (0.02)
+Passed bias filter:                      453  (0.0236196); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.17s 00:00:00.59 Elapsed: 00:00:00.64
+# Mc/sec: 2812.18
+//
+[ok]

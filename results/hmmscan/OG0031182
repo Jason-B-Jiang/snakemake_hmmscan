@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031182.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031182
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q86HR1|Q86HR1_DICDI  [L=291]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    0.00012   22.1   0.2    0.00034   20.6   0.2    1.7  1  SAM_PNT   Sterile alpha motif (SAM)/Pointed domain
+
+
+Domain annotation for each model (and alignments):
+>> SAM_PNT  Sterile alpha motif (SAM)/Pointed domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.6   0.2   1.8e-08   0.00034      19      80 ..      12      73 ..       4      75 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 20.6 bits;  conditional E-value: 1.8e-08
+                            G--HHHHHHHHHHHHHHTT-SS-HGGGC.TS-HHHHHHS-HHHHHHHSCHCCHHHHHHHHHHH CS
+                 SAM_PNT 19 eWtkehVleWlewavkefdlakidfskf.dmsGkeLcsltkeefleaapllaGdiLyehLqnl 80
+                            +W + h  +Wl    k+ ++ +  ++ +  ++Gk L+s+ ke f+   +  +G++Ly  +qn 
+  tr|Q86HR1|Q86HR1_DICDI 12 DWESIHTKQWLLDLQKSIKVDNHVLDMIgSLNGKFLLSMEKETFKYFDK-INGELLYDSIQNF 73
+                            79999999***9999998888877777779**************99999.**********985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (291 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       691  (0.036029); expected 383.6 (0.02)
+Passed bias filter:                      361  (0.0188227); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.69
+# Mc/sec: 1363.86
+//
+[ok]

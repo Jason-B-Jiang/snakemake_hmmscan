@@ -1,0 +1,85 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029095.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029095
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54SD0|RABS_DICDI  [L=221]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.9e-27   94.6   0.1    5.9e-27   94.3   0.1    1.1  1  Ras       Ras family
+      2e-17   63.6   0.0      3e-17   63.1   0.0    1.3  1  Roc       Ras of Complex, Roc, domain of DAPkinase
+    4.3e-05   23.1   0.0    8.5e-05   22.2   0.0    1.5  0  Arf       ADP-ribosylation factor family
+
+
+Domain annotation for each model (and alignments):
+>> Ras  Ras family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.3   0.1   9.2e-31   5.9e-27       2     160 ..      12     190 ..      11     192 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 94.3 bits;  conditional E-value: 9.2e-31
+                           EEEEESTTSSHHHHHHHHHHSSSSSSCTTT.SSEEEEEEEEEET......TEEEEEEEEEETTSGGGHHH.HHHHHTTESEEEEEEETT CS
+                   Ras   2 lvlvGdsavGKtslllrfvkdkFkeeyesT.igvdfytkeievd......gkevkleiwDTAGqeefksl.rslyyrdaegillvydit 82 
+                           +vlvGd+++GK+ ll r+ ++ F e+ ++   g++ ++k ie++        +vkl i+D  G  +fk+l  ++y+++ +g++++yd+t
+  sp|Q54SD0|RABS_DICDI  12 IVLVGDNQCGKSFLLSRYCDGMFVENGIQLwHGIEIKNKIIELKnqstneIVKVKLMIFDGNGGCKFKELfYENYLKHQHGFIIMYDVT 100
+                           8***********************9977652688999998888866655456899*************98357899999********** PP
+
+                           BHHHHHTHHHHHHHHHHHST.......TTSEEEEEEETTTGGG....G-SS-HHHHHHHHHHHTSE.EEEEBTTTTTTHHHHHHHHHHH CS
+                   Ras  83 sresfenvkkwveeikrvae.......envpivLvGnKvDlee....kravsteegeelakelglk.fletSAktnenveeafeellre 159
+                           + esf+n+++w+++ik+  +        +  + +vGnK+Dl +    +  v+ ++ +e++++l+++   ++S k+n nv+ +f++l + 
+  sp|Q54SD0|RABS_DICDI 101 NLESFNNLSNWISKIKNSYQtsnlypsPEPILFIVGNKCDLIDdskiTTIVDLKKPQEFCDSLSIPsIHNVSVKENINVDLIFQKLSQL 189
+                           *****************99999999875578899********967777778889**********7615689**************9887 PP
+
+                           H CS
+                   Ras 160 i 160
+                           i
+  sp|Q54SD0|RABS_DICDI 190 I 190
+                           7 PP
+
+>> Roc  Ras of Complex, Roc, domain of DAPkinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.1   0.0   4.7e-21     3e-17       2     119 .]      12     140 ..      11     140 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 63.1 bits;  conditional E-value: 4.7e-21
+                           EEEESSTTTTHHHHHHCHCT-CCC-E.EETTTTEEEEEEECGGSTTCTTBCCCTCEEEEEEEESSGGCTTTT.-HHHHCTSCEEEEEEE CS
+                   Roc   2 ivllGdsgvGKtsllkrfvedtfsek.ekstigvdfltkevtkikglendkklkkvklniWDtaGqerfrsl.hplylreaalailvyd 88 
+                           ivl+Gd++ GK+ ll+r++++ f e+  +  +g+++++k + ++k+  +++++ kvkl i+D  G  +f++l  + yl++++ +i++yd
+  sp|Q54SD0|RABS_DICDI  12 IVLVGDNQCGKSFLLSRYCDGMFVENgIQLWHGIEIKNKII-ELKNQ-STNEIVKVKLMIFDGNGGCKFKELfYENYLKHQHGFIIMYD 98 
+                           89*********************887256789****99866.78875.4567788***************96269************** PP
+
+                           ...SCCCCTCHHHHHHHHHHCSSS.......-.EEEEEE-TT CS
+                   Roc  89 ...srssenlkeWlkelkkvagks.......p.vilvgnkiD 119
+                               +s++nl++W++++k+  ++s       p +++vgnk+D
+  sp|Q54SD0|RABS_DICDI  99 vtnLESFNNLSNWISKIKNSYQTSnlypspePiLFIVGNKCD 140
+                           644446899*********9755432232223324699***98 PP
+
+>> Arf  ADP-ribosylation factor family
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (221 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       603  (0.0314406); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.34u 0.21s 00:00:00.55 Elapsed: 00:00:00.53
+# Mc/sec: 1334.48
+//
+[ok]

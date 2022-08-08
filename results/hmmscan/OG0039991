@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039991.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039991
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q5W0N0|CI057_HUMAN  [L=161]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-55  184.5  10.5    3.2e-46  155.5   8.9    2.1  2  DUF4723   Domain of unknown function (DUF4723)
+
+
+Domain annotation for each model (and alignments):
+>> DUF4723  Domain of unknown function (DUF4723)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.6   0.0   6.7e-11   1.3e-06      12      41 ..      45      74 ..      37      74 .. 0.89
+   2 !  155.5   8.9   1.7e-50   3.2e-46       1      82 []      75     160 ..      75     160 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 28.6 bits;  conditional E-value: 6.7e-11
+                DUF4723 12 lslpfhgclldlgicktkpgqyckkevhvk 41
+                           l + + g l dlg+c+tkpgqy k+evh++
+  sp|Q5W0N0|CI057_HUMAN 45 LGVILFGRLGDLGTCQTKPGQYWKEEVHIQ 74
+                           56778999********************97 PP
+
+  == domain 2  score: 155.5 bits;  conditional E-value: 1.7e-50
+                DUF4723   1 dvggvicracnlslpfhgclldlgicktkpgqyckkevhvkggiqwysikgctenasecfkkklvka....selvttycclrslcn 82 
+                            dvgg+icracnlslpfhgclldlg+c++ pgqyck+evh++ggiqwys+kgct+n+secfk +lvk+    +elvtt+cc++slcn
+  sp|Q5W0N0|CI057_HUMAN  75 DVGGLICRACNLSLPFHGCLLDLGTCQAEPGQYCKEEVHIQGGIQWYSVKGCTKNTSECFKSTLVKRilqlHELVTTHCCNHSLCN 160
+                            9*****************************************************************99999**************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (161 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       673  (0.0350905); expected 383.6 (0.02)
+Passed bias filter:                      324  (0.0168935); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.29u 0.22s 00:00:00.51 Elapsed: 00:00:00.63
+# Mc/sec: 821.88
+//
+[ok]

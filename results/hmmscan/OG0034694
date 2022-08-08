@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034694.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034694
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8Q0Z0|A0A2R8Q0Z0_DANRE  [L=1163]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.4e-18   66.9   0.1    6.6e-18   65.5   0.1    1.8  1  Mucin2_WxxW  Mucin-2 protein WxxW repeating region
+    1.2e-14   54.6   0.0    1.1e-13   51.6   0.0    2.4  1  ILEI         Interleukin-like EMT inducer
+
+
+Domain annotation for each model (and alignments):
+>> Mucin2_WxxW  Mucin-2 protein WxxW repeating region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.5   0.1   6.9e-22   6.6e-18       1      92 []     123     206 ..     123     206 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 65.5 bits;  conditional E-value: 6.9e-22
+                     Mucin2_WxxW   1 WteWfdsdspsesekeggdvetlenlr.ekgkksiCekptdiecrvateateleasetgqkve.cdveeglvCrnadqs 77 
+                                     WteWfd+d+ +    ++gd+e++++l+ + ++  +C++p d+e++ +     ++a++tg++++ +d ++g+vC n++q 
+  tr|A0A2R8Q0Z0|A0A2R8Q0Z0_DANRE 123 WTEWFDRDDER----GSGDWEKVSDLHkAFPE-RMCSNPLDMEAE-T--LDGIPANMTGEVFSkFDRNYGFVCLNKEQL 193
+                                     *********97....89**********66665.69**********.4..4589********877**99**********7 PP
+
+                     Mucin2_WxxW  78 segrlCedYevrvlC 92 
+                                     ++  +C++Y+vr+lC
+  tr|A0A2R8Q0Z0|A0A2R8Q0Z0_DANRE 194 DG--ICHNYHVRFLC 206
+                                     66..8********** PP
+
+>> ILEI  Interleukin-like EMT inducer
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.6   0.0   1.1e-17   1.1e-13       2      89 .]    1047    1132 ..    1046    1132 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 51.6 bits;  conditional E-value: 1.1e-17
+                            ILEI    2 GinvvvvdektgkvldsksFdty..eeeserlveylksipdgsiVlvavkdeassnlsdearkaleslGskkiknlk 76  
+                                      Gi+v v+d+++gk+l++k F  +   +   +l++y+ +++d s+Vl+++k++     +  ++k+l++lG+ ++ +l 
+  tr|A0A2R8Q0Z0|A0A2R8Q0Z0_DANRE 1047 GIHVTVIDGHSGKILETKGFRNSilMGIPAQLENYITNLKDESVVLITSKGKL--VSRGPWTKLLSTLGADQTVKL- 1120
+                                      9*********************88548999***********************..56778***********87777. PP
+
+                            ILEI   77 frdswafigrkGs 89  
+                                       +d++af+g+kGs
+  tr|A0A2R8Q0Z0|A0A2R8Q0Z0_DANRE 1121 -KDKLAFVGFKGS 1132
+                                      .9**********6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1163 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       359  (0.0187184); expected 383.6 (0.02)
+Passed bias filter:                      339  (0.0176756); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.21s 00:00:00.73 Elapsed: 00:00:00.83
+# Mc/sec: 4562.41
+//
+[ok]

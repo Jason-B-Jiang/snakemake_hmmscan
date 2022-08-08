@@ -1,0 +1,264 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0010092.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0010092
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q21006|NHR34_CAEEL  [L=631]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-25   89.8  14.0    2.7e-25   88.7  14.0    1.6  1  zf-C4          Zinc finger, C4 type (two domains)
+    2.8e-24   86.0   2.2    4.8e-24   85.3   2.2    1.3  1  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+
+
+Domain annotation for each model (and alignments):
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.7  14.0   2.8e-29   2.7e-25       2      69 ..     150     217 ..     149     218 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 88.7 bits;  conditional E-value: 2.8e-29
+                            B-TTTSSB-SEEETTEEE-HHHHHHHHHHHHTT-----SSSST---STTTCCT-HHHHHHHHHHTT-- CS
+                  zf-C4   2 lCkvCgdkasglhygvltCegCkgFFkRsiqkkakysCkkekkCvidkkkRnrCqaCRlkkClevGms 69 
+                            +C+vCgd+ +g hyg ++C+gCkgFF+Rsi ++++y C+  +kC + ++ RnrC+aCRl+kC++vGm+
+  sp|Q21006|NHR34_CAEEL 150 KCRVCGDSRAGRHYGTIACNGCKGFFRRSIWEQRDYVCRFGGKCLVVQEYRNRCRACRLRKCFTVGMD 217
+                            6******************************************************************6 PP
+
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.3   2.2     5e-28   4.8e-24      12     211 .]     372     565 ..     366     565 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 85.3 bits;  conditional E-value: 5e-28
+                            HHHHHHHHHHHHHHHHHHHHTTSTTGGGS-HHHHHHHHHCCHHHHHHHHHHHHCHHGTTSEEEEECTCEEE........HHHHCCTTH CS
+          Hormone_recep  12 nfkevfelwerqllltvewlkkfpeFqkLpeedqvaLlksvwlvllrlelaqrtakirgkkildekilllsddsankekiedskvske 99 
+                            + ++v+  w r+++l ++ +k + ++q+L+  dq +Ll++  + ++ l + +   k ++ ++++  + + s +        d + +k+
+  sp|Q21006|NHR34_CAEEL 372 TLEDVHIAWCRSFVLCIDYAKIMKDYQELSPTDQFTLLRNRVISVNWLCHTY---KTFKAGCDGVALVNGSWYPR------DKELQKQ 450
+                            66788889********************************************...99999999999988876554......4555555 PP
+
+                            HHHHHHHH..........HHHHHHHHCT--HHHHHHHHHHHHCTS..SS--STTH..HHHHHHHHHHHHHHHHHHHHH..STT..... CS
+          Hormone_recep 100 seeeqlllfgekidklfdeliqplqelkltetEfafllaillfnfnyagdrlqgetqeiveklqerlsneLheYysseenyss..... 182
+                             +   + +f+   + l+++l+ p++e++++e Ef+ l+a++lf    a +rl++e ++++ +++++++++L ++++ + ++ s     
+  sp|Q21006|NHR34_CAEEL 451 LDPGCNHYFRILSEHLMEDLVIPMREMDMDEGEFVILKALILFR---AHRRLSEEGRAHIKRVRDKYIEALYQHVQHQHRHFSsvqts 535
+                            555555556666777***************************99...8888************************8665333356666 PP
+
+                            .HHHHHHHHHHHCCCCHHHHHHHHHHHHX. CS
+          Hormone_recep 183 .Rlakllkilpelrkisrerreelelaklf 211
+                             R++k+l++lp+++++s++  + ++++ lf
+  sp|Q21006|NHR34_CAEEL 536 mRISKILLLLPSIEHLSQQEDDNVQFLALF 565
+                            6************************99887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (631 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       873  (0.0455185); expected 383.6 (0.02)
+Passed bias filter:                      532  (0.0277387); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.62
+# Mc/sec: 3301.40
+//
+Query:       tr|H2KZB8|H2KZB8_CAEEL  [L=528]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.1e-22   78.2   0.2    1.2e-21   77.4   0.2    1.3  1  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+    2.7e-20   72.7  12.5      7e-20   71.4  12.5    1.7  1  zf-C4          Zinc finger, C4 type (two domains)
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.4   0.2   1.2e-25   1.2e-21      15     199 ..     317     494 ..     310     503 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 77.4 bits;  conditional E-value: 1.2e-25
+                             HHHHHHHHHHHHHHHHHTTSTTGGGS-HHHHHHHHHCCHHHHHHHHHHHHCHHGTTSEEEEECTCEEE........HHHHCCTTHHH CS
+           Hormone_recep  15 evfelwerqllltvewlkkfpeFqkLpeedqvaLlksvwlvllrlelaqrtakirgkkildekilllsddsankekiedskvskese 101
+                             +++  w r+++ +++w++ +peF+ Lp  dq +L+k  ++ +  +  a+   + ++          l++++   +     + +k+ +
+  tr|H2KZB8|H2KZB8_CAEEL 317 DLYLSWYRSFVFAADWAMGIPEFRVLPLADQTTLFKQNFMAFGWITFAYKCFELKQHLTGM----PLGNGA---YIPYNDEDQKKLP 396
+                             67778***************************************99999544444332222....233333...3334444455555 PP
+
+                             HHHHHH..........HHHHHHHHCT--HHHHHHHHHHHHCTS..SS--.STTH..HHHHHHHHHHHHHHHHHHHHH..STT..... CS
+           Hormone_recep 102 eeqlllfgekidklfdeliqplqelkltetEfafllaillfnfnyagdr.lqgetqeiveklqerlsneLheYysseenyss..... 182
+                             e+ ++++g + +kl d +++ ++el++te+E+ +++ i lf+    +d  l++  q i+ ++++rl+++L  ++ ++  y+      
+  tr|H2KZB8|H2KZB8_CAEEL 397 ERWAQTYGVVCRKLIDLIVKAMIELQITEEEYCLIKTISLFQ----QDCiLSEAGQGICSRMRDRLLDALSAHIEKR--YPYhttsq 477
+                             5555555555555599************************99....888999999*******************988..77777788 PP
+
+                             HHHHHHHHHHHCCCCHH CS
+           Hormone_recep 183 Rlakllkilpelrkisr 199
+                             R+++ lki   l ++s+
+  tr|H2KZB8|H2KZB8_CAEEL 478 RMTRALKISLMLPSFSH 494
+                             77777777665555554 PP
+
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.4  12.5   7.3e-24     7e-20       2      69 ..      97     165 ..      96     166 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 71.4 bits;  conditional E-value: 7.3e-24
+                             B-TTTSSB-S.EEETTEEE-HHHHHHHHHHHHTT-----SSSST---STTTCCT-HHHHHHHHHHTT-- CS
+                   zf-C4   2 lCkvCgdkas.glhygvltCegCkgFFkRsiqkkakysCkkekkCvidkkkRnrCqaCRlkkClevGms 69 
+                              C+ Cg +++  +hyg+ +C gCk+FF+Rs+ + + y+C+++++C i++++RnrC+aCRl+ Cle Gm+
+  tr|H2KZB8|H2KZB8_CAEEL  97 RCVGCGSESAiRVHYGASSCHGCKAFFRRSVFEGRVYMCSADNHCDITNESRNRCRACRLRNCLEGGMN 165
+                             6999987655279*******************************************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (528 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       852  (0.0444236); expected 383.6 (0.02)
+Passed bias filter:                      456  (0.023776); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.15s 00:00:00.53 Elapsed: 00:00:00.55
+# Mc/sec: 3123.90
+//
+Query:       tr|Q95QR2|Q95QR2_CAEEL  [L=576]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.6e-22   78.1   0.2    1.4e-21   77.2   0.2    1.4  1  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+    3.5e-20   72.3  12.5    7.9e-20   71.2  12.5    1.6  1  zf-C4          Zinc finger, C4 type (two domains)
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   77.2   0.2   1.5e-25   1.4e-21      15     199 ..     365     542 ..     358     551 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 77.2 bits;  conditional E-value: 1.5e-25
+                             HHHHHHHHHHHHHHHHHTTSTTGGGS-HHHHHHHHHCCHHHHHHHHHHHHCHHGTTSEEEEECTCEEE........HHHHCCTTHHH CS
+           Hormone_recep  15 evfelwerqllltvewlkkfpeFqkLpeedqvaLlksvwlvllrlelaqrtakirgkkildekilllsddsankekiedskvskese 101
+                             +++  w r+++ +++w++ +peF+ Lp  dq +L+k  ++ +  +  a+   + ++          l++++   +     + +k+ +
+  tr|Q95QR2|Q95QR2_CAEEL 365 DLYLSWYRSFVFAADWAMGIPEFRVLPLADQTTLFKQNFMAFGWITFAYKCFELKQHLTGM----PLGNGA---YIPYNDEDQKKLP 444
+                             67778***************************************99999544444332222....233333...3334444455555 PP
+
+                             HHHHHH..........HHHHHHHHCT--HHHHHHHHHHHHCTS..SS--.STTH..HHHHHHHHHHHHHHHHHHHHH..STT..... CS
+           Hormone_recep 102 eeqlllfgekidklfdeliqplqelkltetEfafllaillfnfnyagdr.lqgetqeiveklqerlsneLheYysseenyss..... 182
+                             e+ ++++g + +kl d +++ ++el++te+E+ +++ i lf+    +d  l++  q i+ ++++rl+++L  ++ ++  y+      
+  tr|Q95QR2|Q95QR2_CAEEL 445 ERWAQTYGVVCRKLIDLIVKAMIELQITEEEYCLIKTISLFQ----QDCiLSEAGQGICSRMRDRLLDALSAHIEKR--YPYhttsq 525
+                             5555555555555599************************99....888999999*******************988..77777788 PP
+
+                             HHHHHHHHHHHCCCCHH CS
+           Hormone_recep 183 Rlakllkilpelrkisr 199
+                             R+++ lki   l ++s+
+  tr|Q95QR2|Q95QR2_CAEEL 526 RMTRALKISLMLPSFSH 542
+                             77777777665555554 PP
+
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.2  12.5   8.2e-24   7.9e-20       2      69 ..     145     213 ..     144     214 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 71.2 bits;  conditional E-value: 8.2e-24
+                             B-TTTSSB-S.EEETTEEE-HHHHHHHHHHHHTT-----SSSST---STTTCCT-HHHHHHHHHHTT-- CS
+                   zf-C4   2 lCkvCgdkas.glhygvltCegCkgFFkRsiqkkakysCkkekkCvidkkkRnrCqaCRlkkClevGms 69 
+                              C+ Cg +++  +hyg+ +C gCk+FF+Rs+ + + y+C+++++C i++++RnrC+aCRl+ Cle Gm+
+  tr|Q95QR2|Q95QR2_CAEEL 145 RCVGCGSESAiRVHYGASSCHGCKAFFRRSVFEGRVYMCSADNHCDITNESRNRCRACRLRNCLEGGMN 213
+                             6999987655279*******************************************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (576 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       784  (0.040878); expected 383.6 (0.02)
+Passed bias filter:                      440  (0.0229418); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.16s 00:00:00.55 Elapsed: 00:00:00.55
+# Mc/sec: 3388.07
+//
+Query:       tr|Q95QR3|Q95QR3_CAEEL  [L=395]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.9e-22   79.0   0.2    6.2e-22   78.4   0.2    1.2  1  Hormone_recep  Ligand-binding domain of nuclear hormone recep
+    1.7e-07   31.6   4.6    4.6e-07   30.3   4.6    1.7  1  zf-C4          Zinc finger, C4 type (two domains)
+
+
+Domain annotation for each model (and alignments):
+>> Hormone_recep  Ligand-binding domain of nuclear hormone receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.4   0.2   6.5e-26   6.2e-22      15     199 ..     184     361 ..     177     370 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 78.4 bits;  conditional E-value: 6.5e-26
+                             HHHHHHHHHHHHHHHHHTTSTTGGGS-HHHHHHHHHCCHHHHHHHHHHHHCHHGTTSEEEEECTCEEE........HHHHCCTTHHH CS
+           Hormone_recep  15 evfelwerqllltvewlkkfpeFqkLpeedqvaLlksvwlvllrlelaqrtakirgkkildekilllsddsankekiedskvskese 101
+                             +++  w r+++ +++w++ +peF+ Lp  dq +L+k  ++ +  +  a+   + ++          l++++   +     + +k+ +
+  tr|Q95QR3|Q95QR3_CAEEL 184 DLYLSWYRSFVFAADWAMGIPEFRVLPLADQTTLFKQNFMAFGWITFAYKCFELKQHLTGM----PLGNGA---YIPYNDEDQKKLP 263
+                             67778***************************************99999544444332222....233333...3334444455555 PP
+
+                             HHHHHH..........HHHHHHHHCT--HHHHHHHHHHHHCTS..SS--.STTH..HHHHHHHHHHHHHHHHHHHHH..STT..... CS
+           Hormone_recep 102 eeqlllfgekidklfdeliqplqelkltetEfafllaillfnfnyagdr.lqgetqeiveklqerlsneLheYysseenyss..... 182
+                             e+ ++++g + +kl d +++ ++el++te+E+ +++ i lf+    +d  l++  q i+ ++++rl+++L  ++ ++  y+      
+  tr|Q95QR3|Q95QR3_CAEEL 264 ERWAQTYGVVCRKLIDLIVKAMIELQITEEEYCLIKTISLFQ----QDCiLSEAGQGICSRMRDRLLDALSAHIEKR--YPYhttsq 344
+                             5555555555555599************************99....888999999*******************988..77777788 PP
+
+                             HHHHHHHHHHHCCCCHH CS
+           Hormone_recep 183 Rlakllkilpelrkisr 199
+                             R+++ lki   l ++s+
+  tr|Q95QR3|Q95QR3_CAEEL 345 RMTRALKISLMLPSFSH 361
+                             77777777665555554 PP
+
+>> zf-C4  Zinc finger, C4 type (two domains)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.3   4.6   4.8e-11   4.6e-07      38      69 ..       1      32 [.       1      33 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 30.3 bits;  conditional E-value: 4.8e-11
+                            --SSSST---STTTCCT-HHHHHHHHHHTT-- CS
+                   zf-C4 38 sCkkekkCvidkkkRnrCqaCRlkkClevGms 69
+                            +C+++++C i++++RnrC+aCRl+ Cle Gm+
+  tr|Q95QR3|Q95QR3_CAEEL  1 MCSADNHCDITNESRNRCRACRLRNCLEGGMN 32
+                            5******************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (395 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       677  (0.035299); expected 383.6 (0.02)
+Passed bias filter:                      452  (0.0235674); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.68
+# Mc/sec: 1892.55
+//
+[ok]

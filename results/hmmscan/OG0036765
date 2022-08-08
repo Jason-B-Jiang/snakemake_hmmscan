@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0036765.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0036765
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EJW03354.1  [L=59]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    0.00022   21.4   0.2    0.00022   21.4   0.2    1.2  1  Cauli_DNA-bind  Caulimovirus DNA-binding protein
+
+
+Domain annotation for each model (and alignments):
+>> Cauli_DNA-bind  Caulimovirus DNA-binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.2   1.1e-08   0.00022      40      70 ..      26      56 ..       3      59 .] 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.1e-08
+                    HHHHHHHHHHHHHHHHT-TTHHHHHHHHTXX CS
+  Cauli_DNA-bind 40 eevaakiikdltkkidececnkeiveildkk 70
+                    ++ a  ii+d+ + +++cec k++ e l kk
+      EJW03354.1 26 NSNAFEIINDVKDFLKKCECIKDVFEFLIKK 56
+                    577899*********************9886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (59 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       960  (0.0500547); expected 383.6 (0.02)
+Passed bias filter:                      463  (0.024141); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.18s 00:00:00.52 Elapsed: 00:00:00.51
+# Mc/sec: 371.32
+//
+[ok]

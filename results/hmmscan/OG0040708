@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040708.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040708
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q8WW34|TM239_HUMAN  [L=195]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-81  271.3  22.5    2.5e-81  271.0  22.5    1.0  1  TMEM239   Transmembrane protein 239 family
+
+
+Domain annotation for each model (and alignments):
+>> TMEM239  Transmembrane protein 239 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  271.0  22.5   1.3e-85   2.5e-81       1     151 []      45     193 ..      45     193 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 271.0 bits;  conditional E-value: 1.3e-85
+                TMEM239   1 mqrsrvevatdeigageglrqa..wrawvlrrawvrwwvs..pnssrrrwitwcsssnwrvplqrllwllesilylllalglchalft 84 
+                            mq++rve  td+igageg++qa  w+awv+r++wvrwwvs  p+s    wi+w+s+snwr+plqrllw+le+ilylllal+lchalft
+  sp|Q8WW34|TM239_HUMAN  45 MQQPRVE--TDTIGAGEGPQQAvpWSAWVTRHGWVRWWVShmPPS----WIQWWSTSNWRQPLQRLLWGLEGILYLLLALMLCHALFT 126
+                            9******..*******************************88888....*************************************** PP
+
+                TMEM239  85 tgshllrslwpvvaavwkhllpallllvlsalpallfaasfllllstllsllglltsmtrpgdvidl 151
+                            tgshll+slwpvvaavw+hllpallllvlsalpallf+asflll+stllsl+glltsmt+pgd++dl
+  sp|Q8WW34|TM239_HUMAN 127 TGSHLLSSLWPVVAAVWRHLLPALLLLVLSALPALLFTASFLLLFSTLLSLVGLLTSMTHPGDTQDL 193
+                            *****************************************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (195 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       747  (0.0389489); expected 383.6 (0.02)
+Passed bias filter:                      299  (0.01559); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.21s 00:00:00.57 Elapsed: 00:00:00.63
+# Mc/sec: 994.18
+//
+[ok]

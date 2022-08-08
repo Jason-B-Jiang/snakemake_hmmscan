@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0046312.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0046312
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PJF16972.1  [L=615]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-05   23.0   8.8      9e-05   22.2   0.9    2.9  2  UIM       Ubiquitin interaction motif
+
+
+Domain annotation for each model (and alignments):
+>> UIM  Ubiquitin interaction motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.2   0.9   4.7e-09     9e-05       1      16 [.     134     149 ..     134     150 .. 0.95
+   2 !    4.1   1.5    0.0028        54       1      16 [.     155     170 ..     155     171 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 22.2 bits;  conditional E-value: 4.7e-09
+         UIM   1 dEDedLqrAlalSlqE 16 
+                 +E++dL+rA++lSlq+
+  PJF16972.1 134 SEEDDLARAIRLSLQD 149
+                 7**************8 PP
+
+  == domain 2  score: 4.1 bits;  conditional E-value: 0.0028
+         UIM   1 dEDedLqrAlalSlqE 16 
+                 +ED+d++ Al+ Slq+
+  PJF16972.1 155 QEDDDIAEALRRSLQD 170
+                 7************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (615 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1121  (0.0584493); expected 383.6 (0.02)
+Passed bias filter:                      591  (0.030815); expected 383.6 (0.02)
+Passed Vit filter:                        65  (0.00338912); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.52u 0.23s 00:00:00.75 Elapsed: 00:00:00.68
+# Mc/sec: 2918.80
+//
+[ok]

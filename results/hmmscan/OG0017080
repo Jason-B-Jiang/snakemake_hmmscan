@@ -1,0 +1,144 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0017080.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0017080
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|M1ZJS7|M1ZJS7_CAEEL  [L=344]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.3e-26   90.6  92.5    1.6e-09   37.5  28.8    4.2  3  Collagen       Collagen triple helix repeat (20 copies)
+    3.4e-14   52.7   0.0    4.6e-14   52.4   0.0    1.2  1  Col_cuticle_N  Nematode cuticle collagen N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.8  29.0   5.5e-13   5.3e-09       6      59 ..     154     207 ..     149     208 .. 0.71
+   2 !   29.9  40.4   3.8e-11   3.6e-07       1      52 [.     194     245 ..     182     254 .. 0.44
+   3 !   37.5  28.8   1.7e-13   1.6e-09       1      59 [.     224     282 ..     224     287 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 35.8 bits;  conditional E-value: 5.5e-13
+                             XXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XX CS
+                Collagen   6 pGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapge 59 
+                             +G++Gp+GppG++G++G++G++G++G  Ge+G++G +G++G pGe+G++G+ ge
+  tr|M1ZJS7|M1ZJS7_CAEEL 154 NGPRGPTGPPGETGPSGPEGPPGNPGRIGEHGREGYPGQQGIPGEPGKPGKLGE 207
+                             677777777777777777777777777777777777777777777777777665 PP
+
+  == domain 2  score: 29.9 bits;  conditional E-value: 3.8e-11
+                             XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS---------------- CS
+                Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekG 52 
+                             G pGepG+pG+ G++G++G++G++G+kG+ Gp+G++GppG++G++G pG++G
+  tr|M1ZJS7|M1ZJS7_CAEEL 194 GIPGEPGKPGKLGEAGPNGRDGTRGQKGPIGPKGDSGPPGQKGPSGYPGRDG 245
+                             2333444444444444444444444444444444444444444444444444 PP
+
+  == domain 3  score: 37.5 bits;  conditional E-value: 1.7e-13
+                             XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XX CS
+                Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapge 59 
+                             Gp+G +G+pG++Gp+G +G++G++G++Ge+Gp G++G+ G +G+pG+ G  G++Gapg+
+  tr|M1ZJS7|M1ZJS7_CAEEL 224 GPKGDSGPPGQKGPSGYPGRDGQRGNDGESGPVGPSGQLGMPGEPGQIGMVGAPGAPGQ 282
+                             89999999999999999999999999999999999999999999999999999999997 PP
+
+>> Col_cuticle_N  Nematode cuticle collagen N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.4   0.0   4.8e-18   4.6e-14       1      50 []      11      60 ..      11      60 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 52.4 bits;  conditional E-value: 4.8e-18
+           Col_cuticle_N  1 yvavafStvailsslitlpsiyndiqelqsevldemdefkaraddaWseM 50
+                            ++a++fS+ ail++l+++ps++++iq++++++  + +ef+a ad +W+e+
+  tr|M1ZJS7|M1ZJS7_CAEEL 11 FTACVFSGGAILVCLVYVPSLVTKIQNINDQLKVDSEEFRAMADYTWREL 60
+                            68**********************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (344 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       355  (0.0185098); expected 383.6 (0.02)
+Passed bias filter:                      220  (0.0114709); expected 383.6 (0.02)
+Passed Vit filter:                        17  (0.000886386); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.18s 00:00:00.52 Elapsed: 00:00:00.75
+# Mc/sec: 1476.80
+//
+Query:       tr|Q18450|Q18450_CAEEL  [L=348]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.5e-26   90.5  92.5    1.6e-09   37.5  28.8    4.2  3  Collagen       Collagen triple helix repeat (20 copies)
+    3.5e-14   52.7   0.0    4.6e-14   52.3   0.0    1.2  1  Col_cuticle_N  Nematode cuticle collagen N-terminal domain
+
+
+Domain annotation for each model (and alignments):
+>> Collagen  Collagen triple helix repeat (20 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.8  29.0   5.6e-13   5.4e-09       6      59 ..     154     207 ..     149     208 .. 0.71
+   2 !   29.9  40.4   3.8e-11   3.7e-07       1      52 [.     194     245 ..     182     254 .. 0.44
+   3 !   37.5  28.8   1.7e-13   1.6e-09       1      59 [.     224     282 ..     224     287 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 35.8 bits;  conditional E-value: 5.6e-13
+                             XXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XX CS
+                Collagen   6 pGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapge 59 
+                             +G++Gp+GppG++G++G++G++G++G  Ge+G++G +G++G pGe+G++G+ ge
+  tr|Q18450|Q18450_CAEEL 154 NGPRGPTGPPGETGPSGPEGPPGNPGRIGEHGREGYPGQQGIPGEPGKPGKLGE 207
+                             677777777777777777777777777777777777777777777777777665 PP
+
+  == domain 2  score: 29.9 bits;  conditional E-value: 3.8e-11
+                             XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS---------------- CS
+                Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekG 52 
+                             G pGepG+pG+ G++G++G++G++G+kG+ Gp+G++GppG++G++G pG++G
+  tr|Q18450|Q18450_CAEEL 194 GIPGEPGKPGKLGEAGPNGRDGTRGQKGPIGPKGDSGPPGQKGPSGYPGRDG 245
+                             2333444444444444444444444444444444444444444444444444 PP
+
+  == domain 3  score: 37.5 bits;  conditional E-value: 1.7e-13
+                             XXXXXXXXXXXXXXXXXX-----XXXXEEEE-TTSS-----------------BB--XX CS
+                Collagen   1 GppGepGepGppGppGkrGepGeaGekGekGpaGekGppGaaGkpGapGekGeaGapge 59 
+                             Gp+G +G+pG++Gp+G +G++G++G++Ge+Gp G++G+ G +G+pG+ G  G++Gapg+
+  tr|Q18450|Q18450_CAEEL 224 GPKGDSGPPGQKGPSGYPGRDGQRGNDGESGPVGPSGQLGMPGEPGQIGMVGAPGAPGQ 282
+                             89999999999999999999999999999999999999999999999999999999997 PP
+
+>> Col_cuticle_N  Nematode cuticle collagen N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.3   0.0   4.8e-18   4.6e-14       1      50 []      11      60 ..      11      60 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 52.3 bits;  conditional E-value: 4.8e-18
+           Col_cuticle_N  1 yvavafStvailsslitlpsiyndiqelqsevldemdefkaraddaWseM 50
+                            ++a++fS+ ail++l+++ps++++iq++++++  + +ef+a ad +W+e+
+  tr|Q18450|Q18450_CAEEL 11 FTACVFSGGAILVCLVYVPSLVTKIQNINDQLKVDSEEFRAMADYTWREL 60
+                            68**********************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (348 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       380  (0.0198133); expected 383.6 (0.02)
+Passed bias filter:                      234  (0.0122008); expected 383.6 (0.02)
+Passed Vit filter:                        15  (0.000782105); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.19s 00:00:00.59 Elapsed: 00:00:00.61
+# Mc/sec: 1852.67
+//
+[ok]

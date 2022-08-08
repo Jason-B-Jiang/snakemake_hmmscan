@@ -1,0 +1,55 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040017.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040017
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q16617|NKG7_HUMAN  [L=165]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.1e-10   41.7   4.1    2.3e-09   37.5   4.1    2.0  1  PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+
+
+Domain annotation for each model (and alignments):
+>> PMP22_Claudin  PMP-22/EMP/MP20/Claudin family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5   4.1   1.2e-13   2.3e-09      16     165 ..      14     149 ..       1     150 [. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 1.2e-13
+                           HHHHHHHHS..-S-SEEEEE-SEEEEE-SSBEEEESS.SS-SBE-B--S---SSTTTTTHHHHHHHHHHHHHHHHHHHHHHHH..HTGG CS
+         PMP22_Claudin  16 villvvati..tdqWlvsrsvgvaasagLWrsCtlesctgklsckqidslleeedalqavqalmilsiilgilslivavlqlk..clkk 100
+                           ++l+++ ++  td W  + +    a++gLW +            +        ++++  +q ++i++++  ++s+ ++vl  +   +  
+  sp|Q16617|NKG7_HUMAN  14 LGLMFCLIAlsTDFWFEAVGPTHSAHSGLWPTGHG-------DII--------SGYIHVTQTFSIMAVLWALVSVSFLVLSCFpsLFPP 87 
+                           55555433333777776666666677777754332.......333........4789999999*****888887766666655226889 PP
+
+                           GTTTSSHHHHHHHHHHHHHHHHHHHHHHHHH----SS-SSSS-EE-TTHHHHHHHHHHHHHHHHH CS
+         PMP22_Claudin 101 gerfklaGiiflvsgLcvlvgasiYtsriaedlskslskkqkysfGysfilgwvafllallsGvl 165
+                           g    ++    ++++++++v++++Yts++ +++ +++    +  f++sf+lgwv+++l l  G l
+  sp|Q16617|NKG7_HUMAN  88 GHGPLVSTTAAFAAAISMVVAMAVYTSERWDQPPHPQ---IQTFFSWSFYLGWVSAILLLCTGAL 149
+                           999999**********************999999877...999*****************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (165 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       885  (0.0461442); expected 383.6 (0.02)
+Passed bias filter:                      456  (0.023776); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.32u 0.22s 00:00:00.54 Elapsed: 00:00:00.73
+# Mc/sec: 728.33
+//
+[ok]

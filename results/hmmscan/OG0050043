@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050043.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050043
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O59667|HIS2_SCHPO  [L=417]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-23   82.8   0.4    2.1e-23   82.0   0.4    1.4  1  PRA-CH    Phosphoribosyl-AMP cyclohydrolase
+    2.8e-17   63.0   0.1    6.8e-17   61.8   0.0    1.7  1  PRA-PH    Phosphoribosyl-ATP pyrophosphohydrolase
+
+
+Domain annotation for each model (and alignments):
+>> PRA-CH  Phosphoribosyl-AMP cyclohydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.0   0.4   2.2e-27   2.1e-23       2      73 ..     226     297 ..     225     298 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 82.0 bits;  conditional E-value: 2.2e-27
+                           EEEE-HHHHHHHHHHSB-EEEETTTTEEEETTTTTS--EEEEEEEE-TTSSEEEEEEEESS.-SSTTSBSSS- CS
+                PRA-CH   2 laymnkealektletgeavyySrsrqklwkkGetSgnvqkvkeirldcDqDalllkveqkg.aaCHtgeesCF 73 
+                           l+y++ke+++++l+tg+ vy+Sr+r +lw+kG++Sg+vq++ +i++dcD+D+l + v q+g ++CH+++  CF
+  sp|O59667|HIS2_SCHPO 226 LVYSSKESVAESLKTGTGVYQSRKR-GLWYKGASSGAVQHLIHIDVDCDEDCLRFVVYQTGkGFCHLDTLHCF 297
+                           69***********************.9*********************************846********** PP
+
+>> PRA-PH  Phosphoribosyl-ATP pyrophosphohydrolase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.8   0.0   7.1e-21   6.8e-17       1      80 [.     303     383 ..     303     386 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 61.8 bits;  conditional E-value: 7.1e-21
+                           HHHHHHHHT----SS----.-HHHHHH...HHHHHHHHHHHHHH---SGGGHHHHHHHHHHHHHHHHHHHHTT--HHHHHHHHH CS
+                PRA-PH   1 vrefhrligertpetPevs.taelasl...raallgEElvElleAasegdlaeladelaDllYvtygllvllgidldavfeevh 80 
+                           ++++++++ +r++++Pe+s ta+l+s+   ++a+++EE++El++A+   +++++++e+aDl+Y+++ ++v +g++l+++ ++++
+  sp|O59667|HIS2_SCHPO 303 LCQLEKTLIDRKNNAPEGSyTARLFSDpklLRAKIMEEAEELCDAT---TKENVIWEMADLMYFAITRCVGSGVSLNDISRHLD 383
+                           5789******************************************...8*****************************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (417 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       600  (0.0312842); expected 383.6 (0.02)
+Passed bias filter:                      572  (0.0298243); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.21s 00:00:00.63 Elapsed: 00:00:00.66
+# Mc/sec: 2039.06
+//
+[ok]

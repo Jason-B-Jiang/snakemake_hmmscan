@@ -1,0 +1,72 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025699.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025699
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q18317|CPB2_CAEEL  [L=570]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-22   80.0   0.0    4.5e-11   42.8   0.0    3.5  2  RRM_7     RNA recognition motif
+    1.1e-19   70.5  12.7    6.6e-19   68.0  12.8    2.3  1  CEBP_ZZ   Cytoplasmic polyadenylation element-binding protein
+    7.3e-09   35.4   0.0     0.0052   16.7   0.0    3.3  0  RRM_1     RNA recognition motif. (a.k.a. RRM, RBD, or RNP dom
+
+
+Domain annotation for each model (and alignments):
+>> RRM_7  RNA recognition motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.8   0.0     7e-15   4.5e-11       1      43 [.     235     277 ..     235     291 .. 0.92
+   2 !   28.9   0.0   1.5e-10   9.7e-07      45      97 .]     365     414 ..     350     414 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 42.8 bits;  conditional E-value: 7e-15
+                 RRM_7   1 srkvfvGGlPiDiteaelkatfkafGkllveWPgkdaeskska 43 
+                           srkvfvGGlP  ++e ++ + f+++G+l+v+WP k++e+ks +
+  sp|Q18317|CPB2_CAEEL 235 SRKVFVGGLPSCVKESDILNFFSRYGRLQVDWPSKHYECKSDS 277
+                           8***********************************9998765 PP
+
+  == domain 2  score: 28.9 bits;  conditional E-value: 1.5e-10
+                 RRM_7  45 eskaakGyvylvfeseksvksLleaceeeelagelylklssrrlkskevqvrp 97 
+                           + +   Gyv+l+fe+e+sv++L+ +c eee  + l++ l+s +  s  vq+rp
+  sp|Q18317|CPB2_CAEEL 365 KRQHHLGYVFLLFEKERSVRDLVLDCFEEE--EGLFITLESSTD-SIRVQIRP 414
+                           356789***********************9..899999999875.55699987 PP
+
+>> CEBP_ZZ  Cytoplasmic polyadenylation element-binding protein ZZ domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.0  12.8     1e-22   6.6e-19       1      57 [.     507     568 ..     507     569 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 68.0 bits;  conditional E-value: 1e-22
+               CEBP_ZZ   1 KkvqidPyleds.lCseCevqq....apyfCrdlsCfkYyCesCWelqHskeslkkHkplvr 57 
+                           K+v+i+Py+ ++  C+eC+++     apyfC +l+Cf+YyCe CW+++Hs+ s  +H+p+v+
+  sp|Q18317|CPB2_CAEEL 507 KRVEIKPYFFHNqSCEECSGRYhrqhAPYFCPSLECFQYYCEPCWHKMHSHPSRFHHMPVVK 568
+                           9********9998*****87655566**************************9999****97 PP
+
+>> RRM_1  RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (570 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       662  (0.0345169); expected 383.6 (0.02)
+Passed bias filter:                      384  (0.0200219); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.61
+# Mc/sec: 3030.34
+//
+[ok]

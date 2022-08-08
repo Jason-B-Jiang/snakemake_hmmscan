@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049529.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049529
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPR78046.1  [L=508]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      3e-31  108.9  15.6    2.4e-22   79.7   8.1    4.2  1  Pkinase         Protein kinase domain
+    3.5e-10   39.7  10.2    2.6e-09   36.8   8.4    2.8  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.7   8.1   2.5e-26   2.4e-22      54     175 ..     126     284 ..     106     288 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 79.7 bits;  conditional E-value: 2.5e-26
+                 HHS.CTTB--EEEEEEESSEEEEEEE--TTEBHHHHHH......HHSS--HH.......................................HHHHHHHH CS
+     Pkinase  54 klk.hpnivrlyevfeekdelylvleyveggeladlle......rkgslsee.......................................eakkiakq 106
+                 +++ +++i+++ye+ ++k++ y+vle +  + ++  ++      +      +                                        ++ki + 
+  EPR78046.1 126 NTNhSNYIIKMYEYATDKHNCYIVLERCYDNLMHYNISnrynnnD------NdnryrddgnnnhtnntitnnttnhttnnhiniiittdihMVSKISRM 218
+                 4553567*********************98876666664443330......23556666777778888888899999***********998999***** PP
+
+                 HHHHHHHHHHTTEE-SS-SGGGEEEETTTEEEE-SGTTSEESSSSCCBSCTTSGGGGS-HHHH.TTSCBS CS
+     Pkinase 107 ilegleylHsegvvHrDlKpeNiLidekgelKitDFGlakelessskltsfvgtseYlAPEvl.keneys 175
+                 +l ++ y+Hs+g +HrD+Kp+NiLi+ ++e+Ki+DFGl+++ ++    +s++gt++Y+APE+l ++n+y+
+  EPR78046.1 219 LLLSVYYIHSKGYIHRDIKPSNILIT-EKEIKISDFGLCTKEKE---PKSICGTKDYIAPEILyNNNRYD 284
+                 **************************.999*********99887...56**************8777775 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.8   8.4   2.8e-13   2.6e-09      59     178 ..     129     278 ..     106     287 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 36.8 bits;  conditional E-value: 2.8e-13
+                     -BTTB--EEEEEESSSSEEEEEE--TTEBHHHHHHHT.................................CTTTSEHHHHHHHHHHHHH....HH CS
+  PK_Tyr_Ser-Thr  59 khpnivkllgvctkeepllivteyvegGdLlefLrkk.................................ekekltlkdllkfalqiAk....Gm 116
+                     + + i+k++   t++++ +iv+e +  + ++  + ++                                 ++ ++ +++ ++++ +i++     +
+      EPR78046.1 129 HSNYIIKMYEYATDKHNCYIVLERCYDNLMHYNISNRynnndndnryrddgnnnhtnntitnnttnhttnNHINIIITTDIHMVSKISRmlllSV 223
+                     44569********************99888888888899****************************9875555555666666666666333378 PP
+
+                     HHHHHTTEEEST-SGGGEEEECTTEEEE-STTTHEETTTSSEEEETTSTCSGGGGS-HHHHH CS
+  PK_Tyr_Ser-Thr 117 eyLeskklvHrdlaarNvLlsenkvvkisDfGLardiekdseykkkeeaklpvkWmapEslk 178
+                      y++sk ++Hrd+   N+L++ +k +kisDfGL+ + ++       ++      ++apE+l 
+      EPR78046.1 224 YYIHSKGYIHRDIKPSNILIT-EKEIKISDFGLCTKEKEP------KSICGTKDYIAPEILY 278
+                     9********************.7889********998322......2223334566666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (508 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2071  (0.107983); expected 383.6 (0.02)
+Passed bias filter:                      300  (0.0156421); expected 383.6 (0.02)
+Passed Vit filter:                        21  (0.00109495); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.49u 0.22s 00:00:00.71 Elapsed: 00:00:00.67
+# Mc/sec: 2442.96
+//
+[ok]

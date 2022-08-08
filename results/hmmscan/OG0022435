@@ -1,0 +1,134 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0022435.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0022435
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9NRE1|MMP26_HUMAN  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.3e-55  187.6   0.4    2.2e-55  186.9   0.4    1.3  1  Peptidase_M10  Matrixin
+    3.9e-05   24.2   0.2    7.2e-05   23.3   0.1    1.5  1  Reprolysin_3   Metallo-peptidase family M12B Reprolysin-like
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  186.9   0.4   2.3e-59   2.2e-55       1     159 []      98     253 ..      98     253 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 186.9 bits;  conditional E-value: 2.3e-59
+                            STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEE CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdi 88 
+                            kw+k++ltyri n+ +d++ ++v++ i++A + ws+vtpl F++v++g+adik++F +  h+dg+pfdg+gg+l+haf p++g  g +
+  sp|Q9NRE1|MMP26_HUMAN  98 KWNKHTLTYRIINYPHDMKPSAVKDSIYNAVSIWSNVTPLIFQQVQNGDADIKVSFWQWAHEDGWPFDGPGGILGHAFLPNSGNPGVV 185
+                            7*************************************************************************************** PP
+
+                            EEETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+          Peptidase_M10  89 hfdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                            hfd++e+W+ +    ++g++lflVa+HEiGH+lGL+Hs +++++myp+y   + ++++ls dD++ iq+lYg
+  sp|Q9NRE1|MMP26_HUMAN 186 HFDKNEHWSAS----DTGYNLFLVATHEIGHSLGLQHSGNQSSIMYPTYWyHDPRTFQLSADDIQRIQHLYG 253
+                            *********98....68*********************************99999****************8 PP
+
+>> Reprolysin_3  Metallo-peptidase family M12B Reprolysin-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.3   0.1   7.5e-09   7.2e-05      44     124 .]     121     219 ..     102     219 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 23.3 bits;  conditional E-value: 7.5e-09
+           Reprolysin_3  44 seildeaaevlst......rergqagydlvhlftkrdv.........sgvgGlAyv.....gavcnsskkfgvnsgssvlgdtgadtf 111
+                            ++ + +a++++s+      ++ ++ ++d+ + f + +          +g  G A++      +v   +k+ + ++++++++     ++
+  sp|Q9NRE1|MMP26_HUMAN 121 KDSIYNAVSIWSNvtplifQQVQNGDADIKVSFWQWAHedgwpfdgpGGILGHAFLpnsgnPGVVHFDKNEHWSASDTGYN--LFLVA 206
+                            4445555555555566666668999********998778999*97777777788886665533333333344444444444..3499* PP
+
+           Reprolysin_3 112 aHEiGHnfGsnHt 124
+                            +HEiGH++G++H+
+  sp|Q9NRE1|MMP26_HUMAN 207 THEIGHSLGLQHS 219
+                            ************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       523  (0.0272694); expected 383.6 (0.02)
+Passed bias filter:                      464  (0.0241931); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.17s 00:00:00.52 Elapsed: 00:00:00.65
+# Mc/sec: 1305.86
+//
+Query:       sp|P09237|MMP7_HUMAN  [L=267]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      4e-58  195.8   0.0    5.1e-58  195.5   0.0    1.1  1  Peptidase_M10  Matrixin
+    2.5e-12   46.9   0.0      4e-12   46.3   0.0    1.3  1  PG_binding_1   Putative peptidoglycan binding domain
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M10  Matrixin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  195.5   0.0   5.3e-62   5.1e-58       1     159 []     103     259 ..     103     259 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 195.5 bits;  conditional E-value: 5.3e-62
+                           STSSSEEEEEESSS-TTS-HHHHHHHHHHHHHHHHTTSSSEEEEESSSCESEEEEEESSSSSSSSS-BSSSSESEEEBSSSSTTTTEEE CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10   1 kwekknltyrilnetpdleeeevrkairrAfkvwsevtplkFtevkkgeadikieFgrgehgdgypfdgkggvlahafapgeglggdih 89 
+                           kw++k +tyri+++t+dl++ +v++ +++A+++w +++pl+F++v  g+adi+i+F+rg hgd+ypfdg+g++lahafapg+glggd+h
+  sp|P09237|MMP7_HUMAN 103 KWTSKVVTYRIVSYTRDLPHITVDRLVSKALNMWGKEIPLHFRKVVWGTADIMIGFARGAHGDSYPFDGPGNTLAHAFAPGTGLGGDAH 191
+                           79*************************************************************************************** PP
+
+                           EETTS-EESSTS..SSSEEHHHHHHHHHHHHTTBES-SSTTSTTSSSCT.S-TTT-SS-HHHHHHHHHHHT CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M10  90 fdddeqWtlgeekveqgvslflVaaHEiGHalGLeHssdkdalmyplyk.veekkvrlskdDvkgiqelYg 159
+                           fd+de+Wt g+   + g+++++ a+HE+GH+lG+ Hssd++a+myp+y   + ++++ls+dD+kgiq+lYg
+  sp|P09237|MMP7_HUMAN 192 FDEDERWTDGS---SLGINFLYAATHELGHSLGMGHSSDPNAVMYPTYGnGDPQNFKLSQDDIKGIQKLYG 259
+                           ********997...68*********************************99999****************8 PP
+
+>> PG_binding_1  Putative peptidoglycan binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.3   0.0   4.1e-16     4e-12       5      57 .]      32      82 ..      28      82 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 46.3 bits;  conditional E-value: 4.1e-16
+                          HHHHHHHHHHTT---SSSSSB--HHHHHHHHHHHHHTTST-SSSBSHHHHHHH CS
+          PG_binding_1  5 vkelqryLsrlGylsgpadgtfgpateeaVrefQqffgLpvtGildpaTlaaL 57
+                           +++q+yL+r++ +  + ++++ +++e++++e+Q+ffgLp tG l+  +++++
+  sp|P09237|MMP7_HUMAN 32 WEQAQDYLKRFYLY--DSETKNANSLEAKLKEMQKFFGLPITGMLNSRVIEIM 82
+                          689********777..45699***************************99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (267 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       590  (0.0307628); expected 383.6 (0.02)
+Passed bias filter:                      567  (0.0295636); expected 383.6 (0.02)
+Passed Vit filter:                        47  (0.0024506); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.14s 00:00:00.51 Elapsed: 00:00:00.55
+# Mc/sec: 1561.40
+//
+[ok]

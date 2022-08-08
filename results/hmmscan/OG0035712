@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035712.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035712
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A140LGW1|A0A140LGW1_DANRE  [L=864]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-09   38.7   0.2    6.7e-08   33.3   0.0    2.9  1  Nexin_C   Sorting nexin C terminal
+    1.3e-09   38.5   8.8    3.3e-08   33.9   2.4    4.5  1  PXA       PXA domain
+
+
+Domain annotation for each model (and alignments):
+>> Nexin_C  Sorting nexin C terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.3   0.0     7e-12   6.7e-08      14      82 ..     732     800 ..     722     809 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 33.3 bits;  conditional E-value: 7e-12
+                         Nexin_C  14 lqqllgdtierwlkekiek.ltseesvaellkslrdalWpdgesksesaperseeekertraeakklLle 82 
+                                     ++++    +++++++ +++   +e ++a++++s+r+++Wp+g +  +++p+r++eek++t+++a +l+ +
+  tr|A0A140LGW1|A0A140LGW1_DANRE 732 ILKPVQPLVKKKINSFLKRmHPTEAQIASYIDSFRETMWPEG-NVPSPQPPRESEEKNETKEKALQLINS 800
+                                     555666788999999999988899****************99.55566689*************998866 PP
+
+>> PXA  PXA domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.9   2.4   3.4e-12   3.3e-08       3     180 ..      89     235 ..      87     237 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 33.9 bits;  conditional E-value: 3.4e-12
+                             PXA   3 evdeelhelislilrdyVtsWYs..kissdeeFvnevrqtlrkviralanrlkkvDliellltrlvdlltshlrdyrqa 79 
+                                     +v ++l ++++++    +++WY+  ++ +++   +++++ ++ v++++   +k+ Dl ++    ++ +lt+hl++ +  
+  tr|A0A140LGW1|A0A140LGW1_DANRE  89 NVHRSLLQVFKYAYLHLIQPWYNvpELVDSQPLHRALQKEFNLVVEKVICKAKNFDLSST-SVGCIRILTQHLHSAK-- 164
+                                     566777777888888888888852234456667788888888888888888888887764.4688888888886321.. PP
+
+                             PXA  80 eekvkgkkksesdldlaakffelelhpalsnllrdeieedkeaekeylrslverlLklllppedleseivrtllreila 158
+                                                        + ++   pa s         ++++e ++lr  +e+l++ l+p+  +e +  ++ll+eila
+  tr|A0A140LGW1|A0A140LGW1_DANRE 165 -------------------LSDR--PPAFS---------SRSEEMAVLRTFSEALVRNLFPEYLWEPKLYQCLLTEILA 213
+                                     ...................1222..34444.........45669*********************************** PP
+
+                             PXA 159 nlVlkplleklsdPdfinelii 180
+                                        l+ l++ l++Pd++n++i+
+  tr|A0A140LGW1|A0A140LGW1_DANRE 214 TKALDVLVKCLCNPDTLNHMIV 235
+                                     *********************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (864 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1419  (0.0739872); expected 383.6 (0.02)
+Passed bias filter:                      504  (0.0262787); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.49u 0.19s 00:00:00.68 Elapsed: 00:00:00.67
+# Mc/sec: 4191.12
+//
+[ok]

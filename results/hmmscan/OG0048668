@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048668.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048668
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P53117  [L=311]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.5e-07   29.8   0.1    9.8e-07   29.0   0.1    1.4  1  EMP24_GP25L  emp24/gp25L/p24 family/GOLD
+
+
+Domain annotation for each model (and alignments):
+>> EMP24_GP25L  emp24/gp25L/p24 family/GOLD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0   0.1   5.1e-11   9.8e-07      33     174 ..     145     295 ..     116     300 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 5.1e-11
+  EMP24_GP25L  33 ggaaldvdlsvkdpdpngerlvkkkgresegdfsfta.lesgeykvCfdnsfstkss......kkvsfdievgseasdykdsakkeklet.leselkk 122
+                  +g  + + +sv++ ++ng  l +kk+ +s+ ++   +     e+ +Cf n  ++ s+      k+v++ ++ ++   ++      +++++ + + l++
+       P53117 145 RG-RQSLGFSVFN-NKNGDLLRSKKNLASGTSVIEVNpGNCNEFLICFINLVYDGSWssidteKSVTIKMTYNDKLDPDMLLHLVNQMTPqVVKALNT 240
+                  34.68999****4.4457788888888888555555515667*****************************97654333334449999999******* PP
+
+  EMP24_GP25L 123 leekldsikreqkylrereerlrdtnestnsrvvw....wsilqllvlvlvavlqv 174
+                  +++ l++i ++ ++l ++e+  rd+ne t+s +++      ++ql+  ++v+ + +
+       P53117 241 VSDGLFQIVSDTTLL-QMESDRRDINEATYSYLIVgfvsLMVAQLISNIIVTTYLI 295
+                  **********98765.689999*********9986211134566666666666555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (311 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       624  (0.0325356); expected 383.6 (0.02)
+Passed bias filter:                      445  (0.0232025); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.21s 00:00:00.59 Elapsed: 00:00:00.69
+# Mc/sec: 1461.58
+//
+[ok]

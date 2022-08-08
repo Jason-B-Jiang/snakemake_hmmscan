@@ -1,0 +1,574 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004518.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004518
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q18169|LOVG_CAEEL  [L=221]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.3e-51  175.4   0.1    1.6e-51  175.1   0.1    1.1  1  FSH1           Serine hydrolase (FSH1)
+    8.7e-06   25.8   0.1    1.3e-05   25.2   0.1    1.5  1  Abhydrolase_2  Phospholipase/Carboxylesterase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.1   0.1   1.7e-55   1.6e-51       3     211 ..       5     205 ..       1     206 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 175.1 bits;  conditional E-value: 1.7e-55
+                           ---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHHHHHHTT--EESS---S..........SGG CS
+                  FSH1   3 kkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeeekseeeeesraWfrkkde.........kne 82 
+                            k++iLcLhGy+q ++ Fr+kt++ rkl+k+  +e+ ++++ +++a       +       +e+ + sraW+++++e         ++ 
+  sp|Q18169|LOVG_CAEEL   5 PKLRILCLHGYRQCDQSFRQKTGSTRKLVKS-LAEFEFVNGVHSVA-------V-------DEHVDSSRAWWFSNNEamsfssresTEV 78 
+                           789***************************9.*************2.......2.......5788899*******999*****99999* PP
+
+                           G---HHHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST..T----SEEEEES----EEE-GTTTT--TT-.--EEEEEEET CS
+                  FSH1  83 yegleesldavkdyikengpfdGiiGFSqGaalaallaslleellkeashpslkfailvsGfkleepkyeeyyeedki.qtptLhvlGe 170
+                           + g+ees++av+++i+engpfdG++GFSqGa +++ll+++ + ++   + p ++fai++sGf + ++k++++    +i ++p++hv+G+
+  sp|Q18169|LOVG_CAEEL  79 AVGFEESVAAVVKFIEENGPFDGLLGFSQGASMVHLLIAKAQLGEI--KLPGIRFAIFFSGFLSLSSKHDSLT-LLRIkEFPSMHVFGD 164
+                           ******************************************9988..89*********************88.555559********* PP
+
+                           T-SSS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHHH CS
+                  FSH1 171 lDtvvdeerseaLaeafknsskvlkHpggHfvPnkkeyvda 211
+                           +D++v++ +se++a++f+ ++  + H+ggH vP+ ++++++
+  sp|Q18169|LOVG_CAEEL 165 ADEIVARPKSEKMADMFDVEPLRIAHDGGHVVPSMSKHKEK 205
+                           ************************************99987 PP
+
+>> Abhydrolase_2  Phospholipase/Carboxylesterase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   0.1   1.4e-09   1.3e-05     109     173 ..     102     172 ..       3     200 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 1.4e-09
+                           EEEETHHHHHHHHHHHT-SS...--SEE...EEES---TTGGGTTTTS-GCG.GG-EEEEEEETT-SSS-HH CS
+         Abhydrolase_2 109 igGFSqGaalalylaltlpk...klggi...vafsgalplsqklessatavt.kklpilqiHgeeDpvvpla 173
+                           + GFSqGa ++  l+ + ++   kl gi   + fsg+l+ls+k  s  t++  k+ p ++++g+ D++v   
+  sp|Q18169|LOVG_CAEEL 102 LLGFSQGASMVHLLIAKAQLgeiKLPGIrfaIFFSGFLSLSSKHDS-LTLLRiKEFPSMHVFGDADEIVARP 172
+                           68********99999888888897777655489***********97.5555559**************9755 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (221 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       349  (0.018197); expected 383.6 (0.02)
+Passed bias filter:                      318  (0.0165806); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.16s 00:00:00.50 Elapsed: 00:00:00.59
+# Mc/sec: 1214.13
+//
+Query:       tr|Q55D01|Q55D01_DICDI  [L=299]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.7e-51  172.8   2.2    1.8e-36  125.9   0.7    2.6  2  FSH1      Serine hydrolase (FSH1)
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  125.9   0.7   9.6e-41   1.8e-36       4     174 ..      11     176 ..       7     214 .. 0.78
+   2 !   46.2   0.3   2.3e-16   4.4e-12     131     209 ..     206     282 ..     194     285 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 125.9 bits;  conditional E-value: 9.6e-41
+                             --EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHHHHHHTT--EESS---S.SGGG---HHHH CS
+                    FSH1   4 kkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeeekseeeeesraWfrkkdekneyegleesl 90 
+                              ++iLcLhGy q++  Fr+kt  lrk+lk+  +e++y+dap+ +                  e++ s +W+r +++ +ey+g+e++l
+  tr|Q55D01|Q55D01_DICDI  11 LLRILCLHGYKQNAVAFRSKTAVLRKSLKD-IAEFIYVDAPHMV-----------------DESKGSSSWWRASKDGKEYRGWEQTL 79 
+                             579**************************9.*************.................45678899****************** PP
+
+                             HHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST...........T----SEEEEES----EEE-GTTTT..--TT-...--E CS
+                    FSH1  91 davkdyikengpfdGiiGFSqGaalaallaslleellkea.........shpslkfailvsGfkleepkyeeyy..eedki...qtp 163
+                             d+++++++++gpfdG+iGFSqGa+la+l++s  +  + ++         s  ++kfa+l+sGf+++ + ++++y  ++++    ++ 
+  tr|Q55D01|Q55D01_DICDI  80 DYLRNVFETQGPFDGVIGFSQGAVLASLICSISSLNN-DNynynedsnnSCFQIKFALLFSGFQSRATAHQSLYpqSSPPPsssAIS 165
+                             ******************************9777544.4558999987666777********************7522222344666 PP
+
+                             EEEEEETT-SS CS
+                    FSH1 164 tLhvlGelDtv 174
+                             t    Ge+  +
+  tr|Q55D01|Q55D01_DICDI 166 TTLKNGENSGC 176
+                             66666666554 PP
+
+  == domain 2  score: 46.2 bits;  conditional E-value: 2.3e-16
+                             T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT-SSS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHH CS
+                    FSH1 131 shpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGelDtvvdeerseaLaeafknsskvlkHpggHfvPnkkeyv 209
+                             + p+   ++ + +  +++p   ++y   ki+tp+Lhv G++D++v+ ++ e+L+++f+n ++ + H+ gH +P++k  +
+  tr|Q55D01|Q55D01_DICDI 206 HSPPSPTSLSLTSSTSTTP-TTSFYPLAKINTPSLHVWGKADELVAASNCESLSHQFSN-PECYVHEFGHLIPTSKTDI 282
+                             4555556666666666666.6789999********************************.***************9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (299 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1001  (0.0521925); expected 383.6 (0.02)
+Passed bias filter:                      506  (0.026383); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.46u 0.19s 00:00:00.65 Elapsed: 00:00:00.57
+# Mc/sec: 1680.93
+//
+Query:       sp|Q9VDL1|LOVG_DROME  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.6e-57  194.7   0.0    2.2e-57  194.2   0.0    1.1  1  FSH1           Serine hydrolase (FSH1)
+    6.7e-06   26.2   0.1    0.00014   21.8   0.1    2.1  0  Abhydrolase_2  Phospholipase/Carboxylesterase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  194.2   0.0   2.3e-61   2.2e-57       2     210 ..      28     228 ..      27     230 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 194.2 bits;  conditional E-value: 2.3e-61
+                           X---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHHHHHHTT--EESS---S.........SGG CS
+                  FSH1   2 skkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeeekseeeeesraWfrkkde........kne 82 
+                           ++k ++LcLhGy+q+ge F++k++++rk  +k ++e+v+++ap+++   ++l+++       +e   e+r+W+ +kd+         + 
+  sp|Q9VDL1|LOVG_DROME  28 TEKVRVLCLHGYRQNGEAFKNKLGSFRKFANK-YAEFVFITAPHVA---KALESA-------AEPVPEQRSWWANKDDgsfkgtnkGGP 105
+                           5799***************************9.*************...556655.......8999*****************999999 PP
+
+                           G---HHHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST..T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT CS
+                  FSH1  83 yegleesldavkdyikengpfdGiiGFSqGaalaallaslleellkeashpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGel 171
+                           + g++esl++v+++++++gpf+G++GFSqGa++++l++ l +++l+     +  fa+l+sGf + ++ ++++y e+ i++ptLh++G++
+  sp|Q9VDL1|LOVG_DROME 106 AFGFQESLRCVEEAWRTQGPFQGLLGFSQGACFVGLICGLAKKKLT---SIRPEFAVLASGFLSGSLVHMSAY-EEAISIPTLHIYGQT 190
+                           9*****************************************9995...67889*******************.999************ PP
+
+                           -SSS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHH CS
+                  FSH1 172 DtvvdeerseaLaeafknsskvlkHpggHfvPnkkeyvd 210
+                           D+++++e+se+La  fkn ++vl+H+ggH++P+++++++
+  sp|Q9VDL1|LOVG_DROME 191 DEIIPKEMSESLAARFKN-AEVLEHSGGHYFPATAQQKQ 228
+                           ******************.***************99987 PP
+
+>> Abhydrolase_2  Phospholipase/Carboxylesterase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       532  (0.0277387); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.21s 00:00:00.63 Elapsed: 00:00:00.58
+# Mc/sec: 1564.82
+//
+Query:       sp|Q503Y4|OVCA2_DANRE  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.3e-65  219.4   0.0    4.8e-65  219.3   0.0    1.0  1  FSH1           Serine hydrolase (FSH1)
+    2.3e-05   24.4   0.0    6.4e-05   23.0   0.0    1.7  0  Abhydrolase_2  Phospholipase/Carboxylesterase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  219.3   0.0     5e-69   4.8e-65       2     211 ..       2     218 ..       1     219 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 219.3 bits;  conditional E-value: 5e-69
+                            X.---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHH.HHHHTT--EESS---S......... CS
+                   FSH1   2 s.kkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeee.kseeeeesraWfrkkde........ 79 
+                            s  +++iLc+hGy+q+g+ Fr+kt+alrkllkk +velv+++ap+++   ++ +  ++++++  s  +e++r+W++++ +        
+  sp|Q503Y4|OVCA2_DANRE   2 SaVPLRILCIHGYRQNGNSFREKTGALRKLLKK-QVELVFISAPHQVPAIQEENCGTNQQSQtVSVGDEDQRGWWFSDVQarsfnakq 88 
+                            55689***************************9.*************6655555444444445999************999******* PP
+
+                            .SGGG---HHHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST..T----SEEEEES----EEE-GTTTT--TT---EEEE CS
+                   FSH1  80 .kneyegleesldavkdyikengpfdGiiGFSqGaalaallaslleellkeashpslkfailvsGfkleepkyeeyyeedkiqtptLh 166
+                             +++  glees++avk ++k+ gpf Gi+GFSqGaal+a+l++l+e++l+   + +++failv+Gf++  ++++++ye + i++p+Lh
+  sp|Q503Y4|OVCA2_DANRE  89 dCESSLGLEESIEAVKAALKDLGPFSGILGFSQGAALVAMLCALQEQKLE--PDFNFRFAILVAGFRSACLEHQRFYEGPVITIPSLH 174
+                            ***********************************************998..78999********************99999****** PP
+
+                            EEETT-SSS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHHH CS
+                   FSH1 167 vlGelDtvvdeerseaLaeafknsskvlkHpggHfvPnkkeyvda 211
+                            v+G++D v++ee+s++L  af+  ++vl HpggHfvP+ ++++++
+  sp|Q503Y4|OVCA2_DANRE 175 VFGQDDRVIPEEMSRDLLPAFDG-AQVLLHPGGHFVPAASSHRQT 218
+                            ***********************.**************9998875 PP
+
+>> Abhydrolase_2  Phospholipase/Carboxylesterase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       395  (0.0205954); expected 383.6 (0.02)
+Passed bias filter:                      371  (0.0193441); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.17s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 1431.10
+//
+Query:       sp|Q8WZ82|OVCA2_HUMAN  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.6e-54  184.9   0.0    1.8e-54  184.8   0.0    1.0  1  FSH1           Serine hydrolase (FSH1)
+    4.9e-06   26.6   0.0    7.2e-06   26.1   0.0    1.2  1  Abhydrolase_2  Phospholipase/Carboxylesterase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  184.8   0.0   1.8e-58   1.8e-54       3     211 ..       5     217 ..       1     218 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 184.8 bits;  conditional E-value: 1.8e-58
+                            ---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHHHHHHTT--EESS---S..........SG CS
+                   FSH1   3 kkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeeekseeeeesraWfrkkde.........kn 81 
+                            +++++LcL G++qs++ Fr+kt+alrk+l+   +elv+l++p+++ +++  ++++s+   +   ee+ r+W+++++e         + 
+  sp|Q8WZ82|OVCA2_HUMAN   5 RPLRVLCLAGFRQSERGFREKTGALRKALRG-RAELVCLSGPHPVPDPPGPEGARSDFG-SCPPEEQPRGWWFSEQEadvfsaleePA 90 
+                            679***************************9.*************77777777655444.6*************************** PP
+
+                            GG---HHHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST..T----SEEEEES----EEE-GTTTT--TT---EEEEEEE CS
+                   FSH1  82 eyegleesldavkdyikengpfdGiiGFSqGaalaallaslleellkeashpslkfailvsGfkleepkyeeyyeedkiqtptLhvlG 169
+                             ++gleesl +v++++++ gpfdG++GFSqGaalaal+++l + +++  + p  +f++lvsGf +++  ++e   ++++++p+Lhv+G
+  sp|Q8WZ82|OVCA2_HUMAN  91 VCRGLEESLGMVAQALNRLGPFDGLLGFSQGAALAALVCALGQAGDP--RFPLPRFILLVSGFCPRGIGFKESILQRPLSLPSLHVFG 176
+                            **********************************************9..67989******************999************* PP
+
+                            TT-SSS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHHH CS
+                   FSH1 170 elDtvvdeerseaLaeafknsskvlkHpggHfvPnkkeyvda 211
+                            ++D+v+++++s +La +f   + +l+H+ggHf+P+ +++++a
+  sp|Q8WZ82|OVCA2_HUMAN 177 DTDKVIPSQESVQLASQFPG-AITLTHSGGHFIPAAAPQRQA 217
+                            ********************.***************999876 PP
+
+>> Abhydrolase_2  Phospholipase/Carboxylesterase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.0   7.5e-10   7.2e-06     109     179 ..     115     191 ..     114     213 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 7.5e-10
+                            EEEETHHHHHHHHHHHT-SS.....--.SEEEEES---TTGGGTTTTS-GCGGG-EEEEEEETT-SSS-HHHHHHHH CS
+          Abhydrolase_2 109 igGFSqGaalalylaltlpk.....kl.ggivafsgalplsqklessatavtkklpilqiHgeeDpvvplalgkaak 179
+                            + GFSqGaala   +   +      +l + i+ +sg++p  + +++s  + +  lp l+++g+ D+v+p++ + +++
+  sp|Q8WZ82|OVCA2_HUMAN 115 LLGFSQGAALAALVCALGQAgdprfPLpRFILLVSGFCPRGIGFKESILQRPLSLPSLHVFGDTDKVIPSQESVQLA 191
+                            67********865555444447777662568899************************************9987765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       243  (0.0126701); expected 383.6 (0.02)
+Passed bias filter:                      227  (0.0118359); expected 383.6 (0.02)
+Passed Vit filter:                        23  (0.00119923); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.62
+# Mc/sec: 1181.88
+//
+Query:       P38777  [L=243]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-64  217.5   0.0    1.9e-64  217.3   0.0    1.0  1  FSH1      Serine hydrolase (FSH1)
+    0.00017   21.8   0.1      0.068   13.3   0.0    2.2  0  BAAT_C    BAAT / Acyl-CoA thioester hydrolase C terminal
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  217.3   0.0     2e-68   1.9e-64       2     211 ..       2     229 ..       1     230 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 217.3 bits;  conditional E-value: 2e-68
+             X.---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHH.HHHHTT--EESS---S.SGGG---HHHHHHHHHHHHHH-- CS
+    FSH1   2 s.kkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeee.kseeeeesraWfrkkdekneyegleesldavkdyikengp 102
+             + + +k+L+LhG++q+g++F++k+s++rkllkk nv+++y+dap+ l ek+dlp+++++e++ ++ +++ +raWf++++  ++  +++e+l+ v+d+ik+ngp
+  P38777   2 TvQIPKLLFLHGFLQNGKVFSEKSSGIRKLLKKANVQCDYIDAPVLL-EKKDLPFEMDDEKWqATLDADVNRAWFYHSE-ISHELDISEGLKSVVDHIKANGP 102
+             55678******************************************.********9999998999************9.9999******************* PP
+
+             -SEEEEETHHHHHHHHHHHHHHHHST..T----SEEEEES----EEE-............GTTTT.--TT---EEEEEEETT-SSS-HHHHHHHHHHHHHH.. CS
+    FSH1 103 fdGiiGFSqGaalaallaslleellkeashpslkfailvsGfkleepk............yeeyy.eedkiqtptLhvlGelDtvvdeerseaLaeafkns.. 190
+             +dGi+GFSqGaal+++++++++el +  +hp++k+++++sG++++ep+            +++ +  +++++t++++++G +D+ v++ rs++L++ + +   
+  P38777 103 YDGIVGFSQGAALSSIITNKISELVP--DHPQFKVSVVISGYSFTEPDpehpgelritekFRDSFaVKPDMKTKMIFIYGASDQAVPSVRSKYLYDIYLKAqn 203
+             *************************9..9****************99999999999999988888899******************************99888 PP
+
+             .....EEEEEESSSSS----HHHHHH CS
+    FSH1 191 .....skvlkHpggHfvPnkkeyvda 211
+                     ++HpggH+vPnkk+++++
+  P38777 204 gnkekVLAYEHPGGHMVPNKKDIIRP 229
+             9986666789***********99876 PP
+
+>> BAAT_C  BAAT / Acyl-CoA thioester hydrolase C terminal
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (243 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       492  (0.0256531); expected 383.6 (0.02)
+Passed bias filter:                      455  (0.0237239); expected 383.6 (0.02)
+Passed Vit filter:                        36  (0.00187705); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 1344.70
+//
+Query:       Q99369  [L=266]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      9e-69  231.4   0.0    1.1e-68  231.2   0.0    1.0  1  FSH1      Serine hydrolase (FSH1)
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  231.2   0.0   5.5e-73   1.1e-68       1     212 []       1     221 [.       1     221 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 231.2 bits;  conditional E-value: 5.5e-73
+             .X---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHH.......HHHHTT--EESS---S..SGGG---HHHHHHHHH CS
+    FSH1   1 mskkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeee.......kseeeeesraWfrkkde.kneyegleesldavkd 95 
+             ms+kkk+L+LhG++qs++iF+akt++lrk+lkkl+++l+y++ap+++ +k++l +sese+ +       +s  ++e ++Wf+++ e  n+++  ++ ++++++
+  Q99369   1 MSEKKKVLMLHGFVQSDKIFSAKTGGLRKNLKKLGYDLYYPCAPHSI-DKKALFQSESEKGRdaakefnTSATSDEVYGWFFRNPEsFNSFQIDQKVFNYLRN 102
+             899********************************************.66666666666666799***999999********99987999999999******* PP
+
+             HHHHH---SEEEEETHHHHHHHHHHHHHHHHST....T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT-SSS-HHHHHHHHHHHHHH.EEEEE CS
+    FSH1  96 yikengpfdGiiGFSqGaalaallaslleellkea..shpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGelDtvvdeerseaLaeafkns.skvlk 195
+             y+ engpfdG+iGFSqGa l+++l++++++ l+ +  ++p lkf+i +sGfkle+++y++ y ++ iq+p+Lhv GelD+vv+e+r +aL+e++ ++ +++l 
+  Q99369 103 YVLENGPFDGVIGFSQGAGLGGYLVTDFNRILNLTdeQQPALKFFISFSGFKLEDQSYQKEY-HRIIQVPSLHVRGELDEVVAESRIMALYESWPDNkRTLLV 204
+             *******************************998899*************************.9999***************************9999***** PP
+
+             ESSSSS----HHHHHH. CS
+    FSH1 196 HpggHfvPnkkeyvdav 212
+             Hpg+HfvPn+k++v++v
+  Q99369 205 HPGAHFVPNSKPFVSQV 221
+             *************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (266 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       571  (0.0297721); expected 383.6 (0.02)
+Passed bias filter:                      519  (0.0270608); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 1504.60
+//
+Query:       Q05015  [L=223]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.1e-59  199.1   0.0    7.9e-59  199.0   0.0    1.0  1  FSH1           Serine hydrolase (FSH1)
+    5.4e-05   23.2   0.0     0.0014   18.6   0.1    2.2  0  Abhydrolase_2  Phospholipase/Carboxylesterase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.0   0.0   8.3e-63   7.9e-59       4     211 ..       2     214 ..       1     215 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 199.0 bits;  conditional E-value: 8.3e-63
+             --EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHH...HHHHTT--EESS---S.SGGG---HHHHHHHHHHHHHH--- CS
+    FSH1   4 kkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeee...kseeeeesraWfrkkdekneyegleesldavkdyikengpf 103
+             +k++L+LhG +qsg++F++kt+++r +++kl+++l+y++ap e  ++ad+p+   e       + e++   aW++++  ++ y   + ++d++++y+ engpf
+  Q05015   2 TKNVLMLHGLAQSGDYFASKTKGFRAEMEKLGYKLYYPTAPNEF-PPADVPDFLGEVIAdapGDGENTGVLAWLENDPSTGGYFIPQTTIDYLHNYVLENGPF 103
+             589*****************************************.******985554446778999999********************************** PP
+
+             SEEEEETHHHHHHHHHHHHHHHHST....T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT-SSS-HHHHHHHHHHHHHH.EEEEEESSSSS-- CS
+    FSH1 104 dGiiGFSqGaalaallaslleellkea..shpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGelDtvvdeerseaLaeafkns.skvlkHpggHfvP 203
+              Gi+GFSqGa +a++la++++ ll  +  ++p+l f+++vsGf++++++y+e y+ ++i++p+Lhv GelDt+ ++++ + L+++++++ +++l H+ggHfvP
+  Q05015 104 AGIVGFSQGAGVAGYLATDFNGLLGLTteEQPPLEFFMAVSGFRFQPQQYQEQYDLHPISVPSLHVQGELDTITEPAKVQGLYNSCTEDsRTLLMHSGGHFVP 206
+             **********************9998888***********************************************************99************* PP
+
+             --HHHHHH CS
+    FSH1 204 nkkeyvda 211
+             n++ +v++
+  Q05015 207 NSRGFVRK 214
+             ***99876 PP
+
+>> Abhydrolase_2  Phospholipase/Carboxylesterase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (223 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       269  (0.0140258); expected 383.6 (0.02)
+Passed bias filter:                      262  (0.0136608); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.19s 00:00:00.56 Elapsed: 00:00:00.58
+# Mc/sec: 1233.91
+//
+Query:       sp|P36591|DYR_SCHPO  [L=461]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-67  227.8   0.0    1.7e-67  227.2   0.0    1.3  1  FSH1      Serine hydrolase (FSH1)
+    2.5e-24   85.9   0.0    4.9e-23   81.7   0.0    2.3  1  DHFR_1    Dihydrofolate reductase
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  227.2   0.0   1.8e-71   1.7e-67       1     210 [.       1     213 [.       1     215 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 227.2 bits;  conditional E-value: 1.8e-71
+                          .X---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-.-GGG-SS---HHHH...HHHHTT--EESS---S.SGGG---H CS
+                 FSH1   1 mskkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplelaekadlpkseseeee...kseeeeesraWfrkkdekneyegle 87 
+                          msk++k+LcLhG+ qsg +F++k+++++k l+k ++el+++++p++++e+ad +++e++++      e++  +++Wf+ +d kn+y +++
+  sp|P36591|DYR_SCHPO   1 MSKPLKVLCLHGWIQSGPVFSKKMGSVQKYLSK-YAELHFPTGPVVADEEADPNDEEEKKRLaalGGEQNGGKFGWFEVEDFKNTYGSWD 89 
+                          899*****************************9.*************999999988666666999999********************** PP
+
+                          HHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST.....T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT-SS CS
+                 FSH1  88 esldavkdyikengpfdGiiGFSqGaalaallaslleellkea...shpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGelDtv 174
+                          esl+++++y++e+gpfdG+iGFSqGa ++a+la++l+++++ +   +hp++kf+++v Gf++e+p+++++y ++k++tp+Lh+ G++Dt+
+  sp|P36591|DYR_SCHPO  90 ESLECINQYMQEKGPFDGLIGFSQGAGIGAMLAQMLQPGQPPNpyvQHPPFKFVVFVGGFRAEKPEFDHFY-NPKLTTPSLHIAGTSDTL 178
+                          ****************************************9999***************************.****************** PP
+
+                          S-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHH CS
+                 FSH1 175 vdeerseaLaeafknsskvlkHpggHfvPnkkeyvd 210
+                          v+ +rs++L+e ++n ++vl Hpg+H vP+++ y++
+  sp|P36591|DYR_SCHPO 179 VPLARSKQLVERCEN-AHVLLHPGQHIVPQQAVYKT 213
+                          ***************.***************99875 PP
+
+>> DHFR_1  Dihydrofolate reductase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   81.7   0.0   5.1e-27   4.9e-23       2     137 ..     234     409 ..     233     418 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 81.7 bits;  conditional E-value: 5.1e-27
+                          EEEEEEEET.T-EEEBTTB-SS--HHHHHHHHHHHTT...............CEEEEEHHHHHCC-...S--TTCEEEEE-S-TT---.. CS
+               DHFR_1   2 islivAvde.ngvIGkdnklpwhlpeDlkrFkklTlg...............kavimGrkTfeslg...kpLpnRknivltrnkdlkv.. 70 
+                          +++ivAv++ n  IGk+n++pwh+++++++F ++T+                ++vimGr  ++sl+   +pL++R niv+trn+++++  
+  sp|P36591|DYR_SCHPO 234 LTMIVAVSSpNLGIGKKNSMPWHIKQEMAYFANVTSStessgqleegkskimNVVIMGRSCYDSLPkknRPLKDRINIVITRNSNYNFgl 323
+                          6788888653889********************9964222223333333333579**********98788***************87755 PP
+
+                          .......TTEEEESSHHHHC.....CCCTTS....SEEEEEE-HHHHHHCG..GG-SEEEEEEESS----SEE--..---CCCEEE CS
+               DHFR_1  71 .......egvevvksleeal.....alakek...eeevfiiGGaeiykqal..pladklylTeidaefegdtffP..eideeewel 137
+                                 e+   ++ +++al     ++ +++     +vfiiGG+ +y +al  pl+++l  T+i++e+ +d ffP    + ++w  
+  sp|P36591|DYR_SCHPO 324 tkkekmpENLYAADCIDSALdlvaeKYGADSdiqVGKVFIIGGSFLYGSALyhPLTKNLLFTRIHKEYPCDSFFPfePAESSDWVR 409
+                          5443332234456666777754444222222344579**********88765599********************65556667765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (461 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       363  (0.018927); expected 383.6 (0.02)
+Passed bias filter:                      353  (0.0184055); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.22s 00:00:00.65 Elapsed: 00:00:00.62
+# Mc/sec: 2389.35
+//
+Query:       sp|O13897|YF36_SCHPO  [L=429]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.8e-49  166.0   0.0    1.5e-48  165.4   0.0    1.3  1  FSH1      Serine hydrolase (FSH1)
+
+
+Domain annotation for each model (and alignments):
+>> FSH1  Serine hydrolase (FSH1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.4   0.0   7.8e-53   1.5e-48       3     210 ..       5     216 ..       1     218 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 165.4 bits;  conditional E-value: 7.8e-53
+                           ---EEEEE--TT--HHHHHHHTHHHHHHHHHTT-EEEEE--SEE-..-GGG-SS---HHHH...HHHHTT--EESS---S..SGGG--- CS
+                  FSH1   3 kkkkiLcLhGytqsgeiFraktsalrkllkklnvelvyldaplel.aekadlpkseseeee...kseeeeesraWfrkkde.kneyegl 86 
+                           +k kiLc+hGy++sge+F+ k++alr+ + +  v+++++++p+el + k +l++s  ++ +   +s+ ++  r+W+r ++  + +  + 
+  sp|O13897|YF36_SCHPO   5 TKSKILCIHGYAESGELFSVKLRALRERMAD-SVDFYFPTGPIELdKAKDELNGSGFDALStvfSSSPASHRRGWWRINEYaDTKQLEP 92 
+                           799***************************9.*************3344456665555555999*************988778899999 PP
+
+                           HHHHHHHHHHHHHH---SEEEEETHHHHHHHHHHHHHHHHST....T----SEEEEES----EEE-GTTTT--TT---EEEEEEETT-S CS
+                  FSH1  87 eesldavkdyikengpfdGiiGFSqGaalaallaslleellkea..shpslkfailvsGfkleepkyeeyyeedkiqtptLhvlGelDt 173
+                            +++++++ yike+gpfdGi+GFSqG+ laa la+l+   + ++  s+p+++fa+++sG+  + + ++ +++ +k+ +ptLh+lG+ Dt
+  sp|O13897|YF36_SCHPO  93 TKAFEYLASYIKEHGPFDGILGFSQGTNLAANLAALVTIPKYQEyfSQPPFRFALFFSGYFRPLL-MDGAVHATKLDLPTLHLLGKYDT 180
+                           9**********************************99987776688*************998666.7777889**************** PP
+
+                           SS-HHHHHHHHHHHHHHEEEEEESSSSS----HHHHH CS
+                  FSH1 174 vvdeerseaLaeafknsskvlkHpggHfvPnkkeyvd 210
+                           v + e s +L++a+k+ ++vl+Hp +H +P+ + yv+
+  sp|O13897|YF36_SCHPO 181 VLSTETSTTLVRACKD-AQVLFHPAAHQIPAPHAYVE 216
+                           ****************.*************9998887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (429 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       419  (0.0218468); expected 383.6 (0.02)
+Passed bias filter:                      375  (0.0195526); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.20s 00:00:00.61 Elapsed: 00:00:00.65
+# Mc/sec: 2142.30
+//
+[ok]

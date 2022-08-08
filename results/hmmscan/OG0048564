@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048564.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048564
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P38799  [L=552]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-58  197.8   4.2    1.3e-58  197.8   4.2    2.0  1  ABA_GPCR  Abscisic acid G-protein coupled receptor
+    1.6e-14   53.8   0.0    5.9e-14   52.0   0.0    2.1  1  GPHR_N    The Golgi pH Regulator (GPHR) Family N-terminal
+
+
+Domain annotation for each model (and alignments):
+>> ABA_GPCR  Abscisic acid G-protein coupled receptor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  197.8   4.2   1.4e-62   1.3e-58       4     182 .]     311     542 ..     308     542 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 197.8 bits;  conditional E-value: 1.4e-62
+  ABA_GPCR   4 stllgkllkvlgvvfaiYCvyrilktllvllpliill..............kssssDplavtlakll..llrhfdldldeealsrqiSllLsgvlflcsls 88 
+               s  +++++k ++v+f+iYC+++++ t+l+++p+ii++              +++ sDpla+t+a++l   +++f++++d+++l++qiSl+Ls++lflc ls
+    P38799 311 SPQVRTFKKAFEVGFIIYCLHKLIITFLKRIPYIIYHslkypddydyenfsENAASDPLAITIANILdfSFFRFNYQHDLDSLTKQISLFLSISLFLCCLS 411
+               55678999*******************************************99***************99******************************* PP
+
+  ABA_GPCR  89 svlttissllrllpsslqll....................................kssllnLllsellgiYvistllllrsnLPpevssklselLgelpt 153
+                v+ttis++++llp+++q+l                                     s ++nL++sel+g+Yv++t+l++rs+LP+evs+ l+elLg ++t
+    P38799 412 AVNTTISYVVTLLPIKFQILalfamqnddtanvlpeytnnssykgkkrnysqeqkgISLIKNLVVSELTGVYVLATTLMVRSHLPFEVSQRLKELLGGKFT 512
+               ******************99***********************************99******************************************** PP
+
+  ABA_GPCR 154 vpr.vidrwFDkvFllsciltavvilvaer 182
+               vp+ vid+wFD+v++++c++t+++i +aer
+    P38799 513 VPNiVIDSWFDEVYAFACVFTFICIRIAER 542
+               *************************99875 PP
+
+>> GPHR_N  The Golgi pH Regulator (GPHR) Family N-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   0.0   6.2e-18   5.9e-14       1      67 [.     183     261 ..     183     262 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 6.2e-18
+  GPHR_N   1 fflieavlsrvsviGvtlmAiLSGfGavstpyktfslf........krpvt.......esdinsaeaslehtrellakkrke 67 
+             f++++++l+r+s+ Gvt+mA LSG + vs++y++f ++            +       ++  n+ ++ l++t++ + +k ++
+  P38799 183 FQYTKNILTRLSIGGVTVMASLSGLATVSSLYYNFLVIwhkfrntpM---SdpsfrniNNSNNNSKSLLWTTDAYIEEKIQD 261
+             789********************************995555565441...33334444566677778888888888888775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (552 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1023  (0.0533396); expected 383.6 (0.02)
+Passed bias filter:                      392  (0.020439); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.21s 00:00:00.64 Elapsed: 00:00:00.68
+# Mc/sec: 2609.15
+//
+[ok]

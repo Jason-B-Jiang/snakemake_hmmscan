@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040829.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040829
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q9UIG4|PS1C2_HUMAN  [L=136]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.1e-52  175.3  51.6    5.7e-52  175.1  51.6    1.0  1  SPR1      Psoriasis susceptibility locus 2
+
+
+Domain annotation for each model (and alignments):
+>> SPR1  Psoriasis susceptibility locus 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.1  51.6     3e-56   5.7e-52       1     114 []      23     136 .]      23     136 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 175.1 bits;  conditional E-value: 3e-56
+                   SPR1   1 sedhpsppsteareeegsptlplgppipgdpwpgapplfeeppppgpsrpwrdlpesgvwppeppstdppqpplpddpwpagsqppen 88 
+                            se hps+p++e+ree+gsptlp+gpp+pgdpwpgapplfe+ppp++psrpwrdlpe+gvw pepp+tdppqpp+pddpwpag+qppen
+  sp|Q9UIG4|PS1C2_HUMAN  23 SEGHPSHPPAEDREEAGSPTLPQGPPVPGDPWPGAPPLFEDPPPTRPSRPWRDLPETGVWLPEPPRTDPPQPPRPDDPWPAGPQPPEN 110
+                            578************************************************************************************* PP
+
+                   SPR1  89 pwppapevdhksqeepdldppreeyr 114
+                            pwppapevd+++qeepdldppreeyr
+  sp|Q9UIG4|PS1C2_HUMAN 111 PWPPAPEVDNRPQEEPDLDPPREEYR 136
+                            *************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (136 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       196  (0.0102195); expected 383.6 (0.02)
+Passed bias filter:                       88  (0.00458835); expected 383.6 (0.02)
+Passed Vit filter:                        13  (0.000677825); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.20s 00:00:00.54 Elapsed: 00:00:00.54
+# Mc/sec: 811.09
+//
+[ok]

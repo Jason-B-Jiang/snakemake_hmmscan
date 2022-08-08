@@ -1,0 +1,263 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0012222.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0012222
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ31399.1  [L=335]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.6e-10   40.2   1.2    1.6e-09   37.7   0.1    2.1  1  Pkinase         Protein kinase domain
+    3.3e-06   26.7   0.0    5.9e-06   25.8   0.0    1.5  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+    2.2e-05   24.3   2.7     0.0002   21.2   0.1    2.5  1  Choline_kinase  Choline/ethanolamine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.7   0.1   2.4e-13   1.6e-09      70     146 ..      11      86 ..       7      92 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 37.7 bits;  conditional E-value: 2.4e-13
+                 SSEEEEEEE--TTEBHHHHHHHHSS--HHHHHHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEETTTEEEE-SGTTSE CS
+     Pkinase  70 kdelylvleyveggeladllerkgslseeeakkiakqilegleylHsegvvHrDlKpeNiLidekgelKitDFGlak 146
+                 +++ly  +ey++g++l ++ ++ + l ++++  i ++++ +le + + g+ H Dl  eNiL+ +   +Ki+DFG ++
+  EPZ31399.1  11 ESQLYYAMEYIDGEDLYEATSKTRFLFSQQV-AIYAKLIFALEDMRRVGLTHNDLRMENILLVNGSIVKIIDFGYSC 86 
+                 578999**************97666555555.566677789**********************7777*******986 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.8   0.0   9.3e-10   5.9e-06      74     151 ..      12      86 ..       5     124 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 25.8 bits;  conditional E-value: 9.3e-10
+                     SSEEEEEE--TTEBHHHHHHHTCTTTSEHHHHHHHHHHHHHHHHHHHHTTEEEST-SGGGEEEECTTEEEE-STTTHE CS
+  PK_Tyr_Ser-Thr  74 epllivteyvegGdLlefLrkkekekltlkdllkfalqiAkGmeyLeskklvHrdlaarNvLlsenkvvkisDfGLar 151
+                     ++l+  +ey++g dL e   k+   ++ +++ + + +++  ++e + +  l H dl+  N+Ll ++++vki DfG + 
+      EPZ31399.1  12 SQLYYAMEYIDGEDLYEATSKT---RFLFSQQVAIYAKLIFALEDMRRVGLTHNDLRMENILLVNGSIVKIIDFGYSC 86 
+                     5688899********9987776...9999**********************************************864 PP
+
+>> Choline_kinase  Choline/ethanolamine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.2   0.1   3.1e-08    0.0002     128     175 ..      38      86 ..      12      91 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 21.2 bits;  conditional E-value: 3.1e-08
+                     HHHHHTHHHHHH..CHGG-EEEE-S--SGGGEEE.-CTTEEEE--GTT-E CS
+  Choline_kinase 128 ekeiekleklle..elespvvfcHnDlqegNillnkeekklvlIDFEYas 175
+                      ++++ + kl+   e    v + HnDl  +Nill  + + +++IDF Y++
+      EPZ31399.1  38 SQQVAIYAKLIFalEDMRRVGLTHNDLRMENILL-VNGSIVKIIDFGYSC 86 
+                     44455555555333445559**************.89999*********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (335 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       765  (0.0398874); expected 383.6 (0.02)
+Passed bias filter:                      461  (0.0240367); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.64
+# Mc/sec: 1684.79
+//
+Query:       EPZ33024.1  [L=449]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.2e-25   89.1   0.1      6e-25   88.2   0.1    1.4  1  Pkinase         Protein kinase domain
+    6.3e-20   71.6   0.0      1e-19   70.9   0.0    1.5  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+    3.5e-10   39.5   0.3    1.4e-06   27.7   0.1    2.5  1  ABC1            ABC1 atypical kinase-like domain
+    6.9e-06   25.9   1.4    2.9e-05   23.9   1.4    1.9  1  RIO1            RIO1 family
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.2   0.1   1.3e-28     6e-25       2     151 ..      34     192 ..      33     203 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 88.2 bits;  conditional E-value: 1.3e-28
+                 EEEEEEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHH...HHHHHHHHHHHHHS....CTTB--EEEEEEESSEEEEEEE--TTEBHHHHHH..H CS
+     Pkinase   2 ekleklGeGsfGkVykaveketgkivAvKkikkekakkkke...kkvlrEikilkklk....hpnivrlyevfeekdelylvleyveggeladlle..r 91 
+                 + +e+lGeGs+G+Vy+av+k+++ +vA K++k ++++ +++   +++lrEi+ l  l+     pn++ +    +   e y v+ey++g +l+++    r
+  EPZ33024.1  34 TFIETLGEGSYGTVYRAVRKSDQLQVAFKVMKIQDTETRQQaadSAFLREIRALDLLRfsnfFPNLICMSPLNNAYVEKYYVMEYINGITLHRVQWqhR 132
+                 6789*****************************9999999999999*******999987778899***********9*************999876668 PP
+
+                 HSS--HHHHHHHHHHHHHHHHHHHHTTEE-SS-SGGGEEEETTTEEEE-SGTTSEESSSS CS
+     Pkinase  92 kgslseeeakkiakqilegleylHsegvvHrDlKpeNiLidekgelKitDFGlakeless 151
+                 + +ls++  k ++++++ +le + + g++H+Dl  +Ni+i+ k+ +Ki+DFG++++++ +
+  EPZ33024.1 133 ENKLSPQWQKIVFAKLIIALEEMRKVGLCHKDLSEANIMITGKNIVKIIDFGISEHVNDK 192
+                 888**************************************9999**********99986 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.9   0.0   2.2e-23     1e-19       2     160 ..      34     199 ..      33     255 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 70.9 bits;  conditional E-value: 2.2e-23
+                     EEEEEEEEESSEEEEEEEEETTTTSTEEEEEEEEESTTSSHHH....HHHHHHHHHHHHTS-BTTB--EEEEEE....SSSSEEEEEE--TTEBH CS
+  PK_Tyr_Ser-Thr   2 elgkklGeGafGeVvegtlkgekekkevkVavKtlkeeaeeee....keefleeakimkklkhpnivkllgvct....keepllivteyvegGdL 88 
+                     ++ ++lGeG++G+V+++  k    +++++Va K++k + +e++     ++fl+e++ +  l+  n    l +++       + + v+ey++g +L
+      EPZ33024.1  34 TFIETLGEGSYGTVYRAVRK----SDQLQVAFKVMKIQDTETRqqaaDSAFLREIRALDLLRFSNFFPNLICMSplnnAYVEKYYVMEYINGITL 124
+                     6889**************99....88999999999743333221123789**********9998887776666655324445899********** PP
+
+                     HHHHHHTCTTTSEHHHHHHHHHHHHHHHHHHHHTTEEEST-SGGGEEEECTTEEEE-STTTHEETTTSSEE...E CS
+  PK_Tyr_Ser-Thr  89 lefLrkkekekltlkdllkfalqiAkGmeyLeskklvHrdlaarNvLlsenkvvkisDfGLardiekdsey...k 160
+                     +    +++++kl+ ++   + +++  ++e + +  l H+dl+  N++++ +++vki DfG++++++++ +     
+      EPZ33024.1 125 HRVQWQHRENKLSPQWQKIVFAKLIIALEEMRKVGLCHKDLSEANIMITGKNIVKIIDFGISEHVNDKAYFippM 199
+                     *******9********999999*******************************************6555544443 PP
+
+>> ABC1  ABC1 atypical kinase-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.1     3e-10   1.4e-06     142     220 ..     111     192 ..     103     196 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 3e-10
+        ABC1 142 krvLtmeyvdGikvddleale.eagisr..keiaeklvelfleqifedgffhaDphpGNllvrkdgelvllDfGlvgeldek 220
+                 +++ +mey++Gi ++ ++  + e+++s+  ++i+   + + le++ + g+ h D +++N++++ ++ + ++DfG+++++++k
+  EPZ33024.1 111 EKYYVMEYINGITLHRVQWQHrENKLSPqwQKIVFAKLIIALEEMRKVGLCHKDLSEANIMITGKNIVKIIDFGISEHVNDK 192
+                 6788**********999865534555442268888888899************************************99887 PP
+
+>> RIO1  RIO1 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.9   1.4     6e-09   2.9e-05      45     150 ..      70     184 ..      46     193 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 23.9 bits;  conditional E-value: 6e-09
+                 CHHHHHHHHHHHHHHHHHHHHHHTT......-SS--EEEEETTEEEEE--EETTEEGGCHHHCC.-...HHHHHH.HHHHHHHHHHHHHHCTTEEESS- CS
+        RIO1  45 tnprklvklwaekEfrnLkrleeag......vpvPkpielkrhvlvmefigedgvaapklkdve.e...eeeaee.lyeevleemrklykeaglvHaDL 132
+                   +++ +  +  +E+r+L  l+ ++         P   ++ +   vme+i+  g+ + +++  + e   + ++++ ++++++ +++ + +++gl H DL
+  EPZ33024.1  70 ETRQQAADSAFLREIRALDLLRFSNffpnliCMSPLNNAYVEKYYVMEYIN--GITLHRVQWQHrEnklSPQWQKiVFAKLIIALEEM-RKVGLCHKDL 165
+                 344444555556777777666655421111112344556777889******..99999998776322232233331344444444444.4899****** PP
+
+                 STTSEEEETT.EEEE--GT CS
+        RIO1 133 SeyNvlvded.kvviIDvs 150
+                 Se N++++ +  v iID++
+  EPZ33024.1 166 SEANIMITGKnIVKIIDFG 184
+                 *******99846679**96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (449 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       731  (0.0381146); expected 383.6 (0.02)
+Passed bias filter:                      391  (0.0203869); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.42u 0.19s 00:00:00.61 Elapsed: 00:00:00.75
+# Mc/sec: 1949.91
+//
+Query:       EPZ33622.1  [L=362]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (362 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       567  (0.0295636); expected 383.6 (0.02)
+Passed bias filter:                      327  (0.0170499); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.57
+# Mc/sec: 2054.70
+//
+Query:       EPZ35580.1  [L=131]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      1e-10   41.6   0.0    1.2e-10   41.3   0.0    1.0  1  Pkinase         Protein kinase domain
+      3e-07   30.1   0.0    3.4e-07   29.9   0.0    1.0  1  PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+
+
+Domain annotation for each model (and alignments):
+>> Pkinase  Protein kinase domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.3   0.0   1.2e-14   1.2e-10       3     114 ..       6     120 ..       4     126 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 41.3 bits;  conditional E-value: 1.2e-14
+                 EEEEEEEESSEEEEEEEETTTTEEEEEEEEECHCHCHHHH.HHHHHHHHHHHHHSCTTB-.-EEEEEEE..SSEEEEEEE--TTEBHHHHHHHHSS--H CS
+     Pkinase   3 kleklGeGsfGkVykaveketgkivAvKkikkekakkkke.kkvlrEikilkklkhpniv.rlyevfee..kdelylvleyveggeladllerkgslse 97 
+                  l++lG+G+fG+Vyka++ +++ i+A+K + ++ ++ ++  +++  E++ l  l+ +n   +l+ + ++   +el+ v+e+v+g  l++++ +    + 
+  EPZ35580.1   6 LLRRLGSGTFGTVYKAKRMSDESIFALKYMHNRIMTGEDLkHALHVEVRALDLLSFSNFFpKLVCMNKDesIRELFYVMELVDGVALDQYVMQ-NRPTF 103
+                 6799*****************************9998887456667*********5555515555555533456789*************985.56678 PP
+
+                 HHHHHHHHHHHHHHHHH CS
+     Pkinase  98 eeakkiakqilegleyl 114
+                 +++k i++++l +le l
+  EPZ35580.1 104 KQVKLIFAKTLLALEDL 120
+                 899********999865 PP
+
+>> PK_Tyr_Ser-Thr  Protein tyrosine and serine/threonine kinase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   0.0   3.5e-11   3.4e-07       3     105 ..       6     108 ..       4     124 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 3.5e-11
+                     EEEEEEEESSEEEEEEEEETTTTSTEEEEEEEEESTTSSHHH..HHHHHHHHHHHHTS-BTTB--EEEEEESSSS...EEEEEE--TTEBHHHHH CS
+  PK_Tyr_Ser-Thr   3 lgkklGeGafGeVvegtlkgekekkevkVavKtlkeeaeeee..keefleeakimkklkhpnivkllgvctkeep...llivteyvegGdLlefL 92 
+                     l ++lG+G+fG+V++++      ++e   a+K ++++ +  e  k+++  e++ +  l+  n    l ++ k+e+   l+ v+e+v+g  L++++
+      EPZ35580.1   6 LLRRLGSGTFGTVYKAKRM----SDESIFALKYMHNRIMTGEdlKHALHVEVRALDLLSFSNFFPKLVCMNKDESireLFYVMELVDGVALDQYV 96 
+                     6799*************99....788899*****8876655545889999************999887777665566699*************** PP
+
+                     HHTCTTTSEHHHH CS
+  PK_Tyr_Ser-Thr  93 rkkekekltlkdl 105
+                      ++ +++++  +l
+      EPZ35580.1  97 MQN-RPTFKQVKL 108
+                     *99.666665554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (131 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       501  (0.0261223); expected 383.6 (0.02)
+Passed bias filter:                      405  (0.0211168); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.17s 00:00:00.51 Elapsed: 00:00:00.58
+# Mc/sec: 734.94
+//
+[ok]

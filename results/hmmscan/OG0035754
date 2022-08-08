@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035754.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035754
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A2R8RYF0|A0A2R8RYF0_DANRE  [L=127]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    0.00016   22.7  10.2    0.00023   22.3  10.2    1.3  1  Activin_recp  Activin types I and II receptor domain
+     0.0014   19.4  11.9     0.0014   19.4  11.9    1.5  1  UPAR_LY6      u-PAR/Ly-6 domain
+
+
+Domain annotation for each model (and alignments):
+>> Activin_recp  Activin types I and II receptor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3  10.2   2.4e-08   0.00023      11      81 ..      34     102 ..      21     104 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 2.4e-08
+                    Activin_recp  11 eeienetCetdkagscytsveenkeeeeivskgClseeeaespleCkl..antasssqgklieCCcetdlCNk 81 
+                                     + + ++tC   ++  c++ + +  + + +++kgCl+  + + + e  +  an++ + ++++  CC  tdlCN+
+  tr|A0A2R8RYF0|A0A2R8RYF0_DANRE  34 CFTTKKTCD--AGQLCFSGLGKAGGLVDVKTKGCLELSKCN-KTESTTfpANSSTQIYQMTKTCC-ATDLCNS 102
+                                     234588999..679*********************776654.33333346888889999******.******7 PP
+
+>> UPAR_LY6  u-PAR/Ly-6 domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.4  11.9   1.5e-07    0.0014       1      77 []      23     101 ..      23     101 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 19.4 bits;  conditional E-value: 1.5e-07
+                                     EEEEEEBTTTBCCCC.EEEETTB-EEEEEEEEECCTTEEEEEEEEEEESCCGG.....CCCCCCSTSECEEEEEEEESS CS
+                        UPAR_LY6   1 CysClgessesClpe.veCpeadsvCvsatlklqagnlettlvvkgCaressc.....rlladfinigsikvsesccqs 73 
+                                     Cy+C+  +   C +  ++C  ++ +C+s+  k++       +++kgC++ s+c     ++   +++ ++ +++ +cc +
+  tr|A0A2R8RYF0|A0A2R8RYF0_DANRE  23 CYECKLGFWDVCFTTkKTCDAGQ-LCFSGLGKAG---GLVDVKTKGCLELSKCnktesTTFPANSSTQIYQMTKTCCAT 97 
+                                     *****99*****98878998776.5****99999...5789************988775666677889999******** PP
+
+                                     TTTT CS
+                        UPAR_LY6  74 dlcn 77 
+                                     dlcn
+  tr|A0A2R8RYF0|A0A2R8RYF0_DANRE  98 DLCN 101
+                                     ***9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (127 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       822  (0.0428594); expected 383.6 (0.02)
+Passed bias filter:                      329  (0.0171542); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.61
+# Mc/sec: 675.23
+//
+[ok]

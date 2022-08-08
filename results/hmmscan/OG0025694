@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0025694.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0025694
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q17802|CPG1_CAEEL  [L=584]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-29  102.5  21.7    3.2e-11   43.3   2.8    3.3  3  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.5   1.0   2.6e-14     5e-10       1      53 []      61     113 ..      61     113 .. 0.99
+   2 !   43.3   2.8   1.7e-15   3.2e-11       1      53 []     214     266 ..     214     266 .. 0.99
+   3 !   30.8   3.3   1.3e-11   2.6e-07       9      53 .]     532     576 ..     527     576 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 39.5 bits;  conditional E-value: 2.6e-14
+                CBM_14   1 CagkedglfadptdC.skyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                           C+ kedgl+a  + C  +++ Cs g +  ++Cp++l++d++   C+y+ nv qC
+  sp|Q17802|CPG1_CAEEL  61 CSTKEDGLYAI-GGCsPQFLTCSGGISRIMDCPADLIYDPRIVACEYSYNVPQC 113
+                           9**********.***9************************************** PP
+
+  == domain 2  score: 43.3 bits;  conditional E-value: 1.7e-15
+                CBM_14   1 CagkedglfadptdC.skyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                           C gk dg++   + C + y  Csng ++ ++Cp+ l+Fde++ +Cdy  nv +C
+  sp|Q17802|CPG1_CAEEL 214 CVGKADGFYSF-GECsDHYTACSNGYLIPMQCPARLAFDEARVICDYVMNVPEC 266
+                           9**********.**************************************9999 PP
+
+  == domain 3  score: 30.8 bits;  conditional E-value: 1.3e-11
+                CBM_14   9 fadptdC.skyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                            a  + C + y  C+ng++  f C++gl+F++e+ +C ++++ ++C
+  sp|Q17802|CPG1_CAEEL 532 TAI-EPCsQHYKNCVNGQEAIFICENGLFFSPEQARCAPADQIAEC 576
+                           555.79*9**********************************9999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (584 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       448  (0.0233589); expected 383.6 (0.02)
+Passed bias filter:                      215  (0.0112102); expected 383.6 (0.02)
+Passed Vit filter:                        24  (0.00125137); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.44u 0.20s 00:00:00.64 Elapsed: 00:00:00.68
+# Mc/sec: 2797.04
+//
+[ok]

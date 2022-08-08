@@ -1,0 +1,318 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0008906.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0008906
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54MN6|Q54MN6_DICDI  [L=506]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-22   80.7   0.1    1.7e-22   80.2   0.1    1.3  1  Peptidase_M28  Peptidase family M28
+    3.5e-08   33.5   0.4    8.2e-08   32.3   0.1    1.8  1  Peptidase_M20  Peptidase family M20/M25/M40
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.2   0.1   1.8e-26   1.7e-22       1     196 [.     308     493 ..     308     495 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 80.2 bits;  conditional E-value: 1.8e-26
+                             EEEEEESTTS..SCEEEEEEE----SSTTGGT---TTTTHHHHHHHHHHHHHCHHGGCCSSCEEEEEEESSSS-S-HHHHHHHHHCC CS
+           Peptidase_M28   1 Nviatlegkat.devlllgAHyDsvgvgrgpifvGAdDnAsgvaalLelarvlaasgsrpkrgvrflffdaEEagllGSkafakakp 86 
+                             Nv+a+++g++  dev+++g+H Ds+ v  ++   GA+D++ g+++ +e +r++++ g  pkr++r++ ++ EE+g  G  a+a  + 
+  tr|Q54MN6|Q54MN6_DICDI 308 NVMAQINGSTYpDEVVVIGGHTDSWDV--AQ---GAMDDGGGIVVAWEALRLIKSLGIIPKRTIRVVGWTNEENGAAGGAAYA--QL 387
+                             9**********999************9..99...*********************99999***********************..45 PP
+
+                             TTCCECEEEEEES-SCTT--EEEHHHHHHHHHHHHHHHHHHHHTT-TTSCTEEEEECS---STCHHHHCCT--EEEECSSSC-TTT. CS
+           Peptidase_M28  87 elkkiaavlnlDmvgsggkellfesgdkssselekelkalakpvgraaaedpfdersgrgrsDhspflkagvpvldlaetgfpevy. 172
+                              ++++ + ++ D+  ++   + +  ++++  +l+  ++++ +p++++     + e  g + +D   ++ +g p+++l++++ ++ + 
+  tr|Q54MN6|Q54MN6_DICDI 388 YTNETFFSIESDIGVTQPLGFNVMASEQTITDLQLIADKVLSPIKTT----SIVE--GEVGTDNGFLVSNGKPGAQLITDESKYFWy 468
+                             78889999999999999999999888888888888888888888775....3444..679*************************99 PP
+
+                             .TSTTSSGGGB-HHHHHHHHHHHHH CS
+           Peptidase_M28 173 .HtprDtldnidkdtlariaelvle 196
+                              Ht+ D +d++d+++++++ ++++ 
+  tr|Q54MN6|Q54MN6_DICDI 469 hHTAGDAMDKMDPSQMNQCVAAMAT 493
+                             9***************999888765 PP
+
+>> Peptidase_M20  Peptidase family M20/M25/M40
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   0.1   8.6e-12   8.2e-08      32      83 ..     335     386 ..     324     493 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 8.6e-12
+                             STTTTTTHHHHHHHHHHHHHHHHHTTT-SSEEEEEEESTTSSTTCHHHHHHH CS
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+           Peptidase_M20  32 GrGaddmkggvlaalealralkdegikpkgtivllfqpdEEggrgGakalle 83 
+                             + Ga d+ gg++ a ealr +k  gi pk+ti+++ +++EE g +G +a+++
+  tr|Q54MN6|Q54MN6_DICDI 335 AQGAMDDGGGIVVAWEALRLIKSLGIIPKRTIRVVGWTNEENGAAGGAAYAQ 386
+                             679**************************************87777778777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (506 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       900  (0.0469263); expected 383.6 (0.02)
+Passed bias filter:                      633  (0.0330048); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.18s 00:00:00.59 Elapsed: 00:00:00.62
+# Mc/sec: 2643.29
+//
+Query:       sp|Q9Y646|CBPQ_HUMAN  [L=472]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    8.5e-25   87.7   0.0    1.2e-24   87.2   0.0    1.2  1  Peptidase_M28  Peptidase family M28
+    6.3e-07   29.4   0.0    1.3e-06   28.3   0.0    1.7  1  Peptidase_M20  Peptidase family M20/M25/M40
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.2   0.0   1.3e-28   1.2e-24       1     195 [.     270     456 ..     270     459 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 87.2 bits;  conditional E-value: 1.3e-28
+                           EEEEEESTTS..SCEEEEEEE----SSTTGGT---TTTTHHHHHHHHHHHHHCHHGGCCSSCEEEEEEESSSS-S-HHHHHHHH.HCC. CS
+         Peptidase_M28   1 Nviatlegkat.devlllgAHyDsvgvgrgpifvGAdDnAsgvaalLelarvlaasgsrpkrgvrflffdaEEagllGSkafak.akp. 86 
+                           N +a++ g++  ++v+l+++H+Ds+ v  g+   GA+D++ g+ + +e + ++++ g rpkr++r+++++aEE+g +G+ ++ + + + 
+  sp|Q9Y646|CBPQ_HUMAN 270 NTVAEITGSKYpEQVVLVSGHLDSWDV--GQ---GAMDDGGGAFISWEALSLIKDLGLRPKRTLRLVLWTAEEQGGVGAFQYYQlH-Kv 352
+                           89*******99788*************..**...*********************999*************************844.55 PP
+
+                           TTCCECEEEEEES-SCTT--EEEHHHHHHHHHHHHHHHHHHHHTT-TTSCTEEEEECS---STCHHHHCCT--EEEECSSSC-TTT..T CS
+         Peptidase_M28  87 elkkiaavlnlDmvgsggkellfesgdkssselekelkalakpvgraaaedpfdersgrgrsDhspflkagvpvldlaetgfpevy..H 173
+                           +++++ +v++ D+     + l f +g+++++++ +e+ +l +p++ +   +++ +++    +D   +++agvp+++l ++ +++ +  H
+  sp|Q9Y646|CBPQ_HUMAN 353 NISNYSLVMESDAGTFLPTGLQF-TGSEKARAIMEEVMSLLQPLNIT---QVLSHGE---GTDINFWIQAGVPGASLLDDLYKYFFfhH 434
+                           *************9999999997.9*******************987...6666655...7****************999999998878 PP
+
+                           STTSSGGGB-HHHHHHHHHHHH CS
+         Peptidase_M28 174 tprDtldnidkdtlariaelvl 195
+                           +  Dt+  +d+++++  a++++
+  sp|Q9Y646|CBPQ_HUMAN 435 SHGDTMTVMDPKQMNVAAAVWA 456
+                           8889999899998888777765 PP
+
+>> Peptidase_M20  Peptidase family M20/M25/M40
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3   0.0   1.4e-10   1.3e-06      32      80 ..     297     345 ..     286     456 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 1.4e-10
+                           STTTTTTHHHHHHHHHHHHHHHHHTTT-SSEEEEEEESTTSSTTCHHHH CS
+                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+         Peptidase_M20  32 GrGaddmkggvlaalealralkdegikpkgtivllfqpdEEggrgGaka 80 
+                           G Ga d+ gg ++  eal  +kd g++pk+t++l+++++EE g+ Ga  
+  sp|Q9Y646|CBPQ_HUMAN 297 GQGAMDDGGGAFISWEALSLIKDLGLRPKRTLRLVLWTAEEQGGVGAFQ 345
+                           88***************************************76577633 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (472 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       524  (0.0273215); expected 383.6 (0.02)
+Passed bias filter:                      487  (0.0253924); expected 383.6 (0.02)
+Passed Vit filter:                        35  (0.00182491); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.18s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 2503.58
+//
+Query:       PJF18051.1  [L=356]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      9e-14   51.7   0.0    1.4e-13   51.1   0.0    1.2  1  Peptidase_M28  Peptidase family M28
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.1   0.0   7.1e-18   1.4e-13      38     177 ..     187     327 ..     175     343 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 51.1 bits;  conditional E-value: 7.1e-18
+                    THHHHHHHHHHHHHCHHGGCCSSCEEEEEEESSSS-S-HHHHHHHHHCCTTCCECEEE...EEES-SCTT--EEE.HHHHHHHHHHHHHHHHHHHH CS
+  Peptidase_M28  38 nAsgvaalLelarvlaasgsrpkrgvrflffdaEEagllGSkafakakpelkkiaavl...nlDmvgsggkellf.esgdkssselekelkalakp 129
+                     +++v+a Le++r++a+   + +r + flff+aE agllGS+  + ++ ++k+i a +   ++D   ++g e  +  ++d++++++++ l+ l+  
+     PJF18051.1 187 GGASVVAQLEVLRLVASTAVQITRPIEFLFFSAEKAGLLGSQSVI-RHYQKKNISAAVlhtDIDSHTASGAEAAIgLIRDNTDRRMNRLLQILIGS 281
+                    5899*************99999***********************.777777775555111689988888888888*******************9 PP
+
+                    TT-TTSCTEEEEECS---STCHHHHCCT--EEEE.CSSSC-TTTTSTTS CS
+  Peptidase_M28 130 vgraaaedpfdersgrgrsDhspflkagvpvldl.aetgfpevyHtprD 177
+                    +++     + + ++g+ +sD+++++ ag pv+ l + t  +++ Ht + 
+     PJF18051.1 282 YSTL---PVRNIKCGYACSDYYSWHVAGYPVAGLsSGTMTKRRSHTLAK 327
+                    9885...5555678******************99666666777787655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (356 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       463  (0.024141); expected 383.6 (0.02)
+Passed bias filter:                      387  (0.0201783); expected 383.6 (0.02)
+Passed Vit filter:                        37  (0.00192919); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.60
+# Mc/sec: 1911.86
+//
+Query:       EPZ36688.1  [L=284]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    6.6e-34  117.4   0.0    8.3e-34  117.1   0.0    1.1  1  Peptidase_M28  Peptidase family M28
+    1.8e-09   37.7   0.0    5.7e-09   36.1   0.0    1.8  1  Peptidase_M20  Peptidase family M20/M25/M40
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.1   0.0   8.7e-38   8.3e-34       2     197 ..      77     276 ..      76     277 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 117.1 bits;  conditional E-value: 8.7e-38
+                    EEEEESTTS..SCEEEEEEE----SST.....TGGT---TTTTHHHHHHHHHHHHHCHHGGCCSSCEEEEEEESSSS-S-HHHHHHHH.HCCTTCC CS
+  Peptidase_M28   2 viatlegkat.devlllgAHyDsvgvg.....rgpifvGAdDnAsgvaalLelarvlaasgsrpkrgvrflffdaEEagllGSkafak.akpelkk 90 
+                    +i+++ g +t +e+++l+AH+Ds++       r+p   GAdD++sg  ++Le++++l++++ rp+  v + f++aEE gllGS+  ++  k ++ k
+     EPZ36688.1  77 IIVKFDGVKTdQETVILSAHLDSTAGFfgaynRAP---GADDDGSGSITVLEVLQILVQKKFRPNLPVEIHFYSAEEGGLLGSQDVVSsMKRKNRK 169
+                    6888888888789***********97699999999...*************************************************744459*** PP
+
+                    ECEEEEEES-SCTT--EEEHHHHHHHHHHHHHHHHHHHHTT-TTSCTEEEEECS---STCHHHHCCT--EEEE...CSSSC-TTTTSTTSSGGGB- CS
+  Peptidase_M28  91 iaavlnlDmvgsggkellfesgdkssselekelkalakpvgraaaedpfdersgrgrsDhspflkagvpvldl...aetgfpevyHtprDtldnid 183
+                    ia  l++Dm g + + ++  ++d + ++l++ lk +a++++++   d+++ ++g+ +sDh++f+kag p + +   ++++  + +H+ +D +++id
+     EPZ36688.1 170 IAGTLQIDMDGFNSEDVIALVTDFTNKQLTGFLKDVAETYTSK---DVIETQCGYACSDHASFTKAGYPSTFAieaSFKNTSPFIHSDKDVVSRID 262
+                    ******************99********************987...9**********************9999776666667788*********** PP
+
+                    HHHHHHHHHHHHHH CS
+  Peptidase_M28 184 kdtlariaelvlel 197
+                     + ++++ +++l +
+     EPZ36688.1 263 FPHVEEFVKMALGF 276
+                    *9999998887765 PP
+
+>> Peptidase_M20  Peptidase family M20/M25/M40
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   0.0     6e-13   5.7e-09      31     116 ..     109     226 ..      92     277 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 6e-13
+                    ESTTTTTTHHHHHHHHHHHHHHHHHTTT-SSEEEEEEESTTSSTTCHHHHHHHHHH.TTTCESEEEEEEEESSSBTTHSTETEEEE.......... CS
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxx.......... RF
+  Peptidase_M20  31 yGrGaddmkggvlaalealralkdegikpkgtivllfqpdEEggrgGakallegle.erekvdavfelhieepgileagklaigvv.......... 115
+                     ++Gadd+  g +++le+l+ l +++++p+ ++++ f  +EEgg  G++ ++ +++ +++k+ + + +  +++ ++e +   i +v          
+     EPZ36688.1 109 RAPGADDDGSGSITVLEVLQILVQKKFRPNLPVEIHFYSAEEGGLLGSQDVVSSMKrKNRKIAGTLQI-DMDGFNSE-DV--IALVtdftnkqltg 200
+                    699***************************************988********999999999998855.56688887.33..33334455555555 PP
+
+                    .........................E CS
+                    .........................x RF
+  Peptidase_M20 116 .........................k 116
+                                             +
+     EPZ36688.1 201 flkdvaetytskdvietqcgyacsdH 226
+                    55555555555555555554444441 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (284 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       559  (0.0291465); expected 383.6 (0.02)
+Passed bias filter:                      392  (0.020439); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.15s 00:00:00.51 Elapsed: 00:00:00.53
+# Mc/sec: 1717.82
+//
+Query:       Q04033  [L=374]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.3e-28   98.5   0.0    9.1e-28   97.4   0.0    1.6  1  Peptidase_M28  Peptidase family M28
+    1.6e-06   28.1   0.0    2.4e-06   27.5   0.0    1.4  1  Peptidase_M20  Peptidase family M20/M25/M40
+
+
+Domain annotation for each model (and alignments):
+>> Peptidase_M28  Peptidase family M28
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.4   0.0   9.5e-32   9.1e-28       2     196 ..     158     363 ..     157     365 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 97.4 bits;  conditional E-value: 9.5e-32
+                    EEEEESTTS..SCEEEEEEE----SST.....TGGT---TTTTHHHHHHHHHHHHHCHH....GGCCSSCEEEEEEESSSS-S-HHHHHHHH.HCC CS
+  Peptidase_M28   2 viatlegkat.devlllgAHyDsvgvg.....rgpifvGAdDnAsgvaalLelarvlaa....sgsrpkrgvrflffdaEEagllGSkafak.akp 86 
+                    +i+++ g++t +  +++g+H Ds+         +p   GAdDn+sg+++ +e +r+ ++    +g rp+++v f f++aEE gllGS   ++   +
+         Q04033 158 IIVRVTGSTTpEDIIIIGSHQDSINLLlpsimAAP---GADDNGSGTVTNMEALRLYTEnflkRGFRPNNTVEFHFYSAEEGGLLGSLDVFTaYAK 250
+                    7999999999666************9898888888...********************99999888************************997778 PP
+
+                    TTCCECEEEEEES-SCTT--EEE...HHHHHHHHHHHHHHHHHHHHTT-TTSCTEEEEECS---STCHHHHCCT--EEEE...CSSSC-TTT.TST CS
+  Peptidase_M28  87 elkkiaavlnlDmvgsggkellf...esgdkssselekelkalakpvgraaaedpfdersgrgrsDhspflkagvpvldl...aetgfpevy.Htp 175
+                    ++k ++a+l+ Dm+g   +  +     ++d + ++l++ +k  ++ + ++    + d ++g+ +sDh + +++g+p+  +   ++++ + +y H++
+         Q04033 251 QKKHVRAMLQQDMTGYVSDPEDEhvgIVTDYTTPALTDFIKLIINSYLSI---PYRDTQCGYACSDHGSATRNGFPGSFViesEFKKTN-KYiHST 342
+                    ***************9887777767789999**************99987...8999999********************664444445.555*** PP
+
+                    TSSGGGB-HHHHHHHHHHHHH CS
+  Peptidase_M28 176 rDtldnidkdtlariaelvle 196
+                     Dtld+++ + +a+++++vl 
+         Q04033 343 MDTLDRLSLAHMAEHTKIVLG 363
+                    ***************999976 PP
+
+>> Peptidase_M20  Peptidase family M20/M25/M40
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.0   2.5e-10   2.4e-06      29     115 ..     188     278 ..     173     367 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 2.5e-10
+                    EEESTTTTTTHHHHHHHHHHH....HHHHHHTTT-SSEEEEEEESTTSSTTCHHHHHHHHHH.TTTCESEEEEEEEESSSBTTHSTETEEEE CS
+                    xxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxx RF
+  Peptidase_M20  29 klyGrGaddmkggvlaaleal....ralkdegikpkgtivllfqpdEEggrgGakallegle.erekvdavfelhieepgileagklaigvv 115
+                     + ++Gadd+  g ++ +eal    +++ ++g++p+ t+++ f  +EEgg  G+  ++  +  ++++v+a++      + +++ +  ++g+v
+         Q04033 188 IMAAPGADDNGSGTVTNMEALrlytENFLKRGFRPNNTVEFHFYSAEEGGLLGSLDVFTAYAkQKKHVRAMLQQDMT-GYVSDPEDEHVGIV 278
+                    5899*****************4444455556999**************88899966666444488888887744322.33333333334444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (374 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       531  (0.0276865); expected 383.6 (0.02)
+Passed bias filter:                      452  (0.0235674); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.18s 00:00:00.53 Elapsed: 00:00:00.60
+# Mc/sec: 2004.37
+//
+[ok]

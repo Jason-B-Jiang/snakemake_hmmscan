@@ -1,0 +1,53 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048186.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048186
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ36611.1  [L=265]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.5e-09   36.7   0.0    6.5e-09   36.2   0.0    1.2  1  PseudoU_synth_2  RNA pseudouridylate synthase
+
+
+Domain annotation for each model (and alignments):
+>> PseudoU_synth_2  RNA pseudouridylate synthase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.2   0.0   3.4e-13   6.5e-09       1     159 [.      19     165 ..      19     166 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 36.2 bits;  conditional E-value: 3.4e-13
+  PseudoU_synth_2   1 dlvvvnKPagvpvqpeak....dgsekekettatssraeeekkelklvhRLDkatsGllllAksseaanklakafeerkvrKkYlalvfgapee 90 
+                      d+++v KP+gv ++         +++  + ++++ + +e + + l ++  + k++ G++ + +++++++++     e ++ K+Y alv+  p+e
+       EPZ36611.1  19 DFLFVVKPHGVKSTENCPnsitREPSLAHYLERQLKAEEFKYEVLEPCYGISKNSHGIMAYIHNYNTLERFKS--GEISFMKHYAALVHSSPVE 110
+                      5899********998877799888888899999999999********************************99..9****************** PP
+
+  PseudoU_synth_2  91 eegaikkkiskdtekqegarrkaeeldgkkavtylkvlksgsseksakvslveleletGrkhQiRvhla 159
+                      +eg+i+ +i            ++ + +g +a+ty++v  +       k+sl+ +  +t   +Qi  hl 
+       EPZ36611.1 111 KEGIIRLPIRN----------SKIDFKGDEAETYYRVENRL----TDKYSLLHVACKTNISNQIELHLD 165
+                      ***********..........78888999999999998888....99*****************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (265 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       701  (0.0365504); expected 383.6 (0.02)
+Passed bias filter:                      505  (0.0263309); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.22s 00:00:00.59 Elapsed: 00:00:00.76
+# Mc/sec: 1129.63
+//
+[ok]

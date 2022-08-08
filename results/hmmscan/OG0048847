@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0048847.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0048847
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       P31755  [L=480]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.9e-19   69.6   0.0    6.9e-19   68.4   0.0    1.7  1  Gly_transf_sug  Glycosyltransferase sugar-binding region cont
+    4.4e-06   26.4   0.4    1.4e-05   24.7   0.3    1.9  1  Caps_synth      Capsular polysaccharide synthesis protein
+
+
+Domain annotation for each model (and alignments):
+>> Gly_transf_sug  Glycosyltransferase sugar-binding region containing DXD motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.4   0.0   7.2e-23   6.9e-19       1      98 []     114     206 ..     114     206 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 68.4 bits;  conditional E-value: 7.2e-23
+  Gly_transf_sug   1 perekkaiesla.kahpdyqvvvlskelekvrvaildlefllsdtpwfeeakkllplfialsDllRlaiLykyGGiYlDtDvivlkslrnsigae 94 
+                     p++++++++++  +++pdyq+ ++s++++     i+ le l+   p++ +a+kl+p +i ++D+lR+++L++ GGiY+D+D+++lk++ +s++++
+          P31755 114 PSSFRTYQKTWSgSYSPDYQYSLISDDSI-----IPFLENLYAPVPIVIQAFKLMPGNILKADFLRYLLLFARGGIYSDMDTMLLKPI-DSWPSQ 202
+                     56788999999999*************99.....4555555555559*****************************************.****** PP
+
+  Gly_transf_sug  95 erfl 98 
+                     ++++
+          P31755 203 NKSW 206
+                     9876 PP
+
+>> Caps_synth  Capsular polysaccharide synthesis protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.7   0.3   1.5e-09   1.4e-05      12     149 ..      60     205 ..      49     236 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 24.7 bits;  conditional E-value: 1.5e-09
+  Caps_synth  12 kseekkekvilkklkkklkkkleefdkkkkkeeenekk..IWvlWlqGldna..PeiVkkciksvkkna.edyevvlLtkdNieeYvd.lpdfiiekle 104
+                 +  + k++++ +k k++l++  ++ ++  +   +      +W+ W  G d+   P   +++ k++   + +dy++ l+++d i  +++ l + +   ++
+      P31755  60 QDINLKKQITVNKKKNQLHNLRDQLSFAFPYDSQAPIPqrVWQTWKVGADDKnfPSSFRTYQKTWSGSYsPDYQYSLISDDSIIPFLEnLYAPVPIVIQ 158
+                 4455566666666677777776666666665555543345*********76557************9998*************8776433333333333 PP
+
+  Caps_synth 105 kgki..saahfSDllRleLLkkyGGvWiDaTifltkklpsellkkdf 149
+                 + k+   +   +D+lR  LL   GG+  D  + l k+++s+  +++ 
+      P31755 159 AFKLmpGNILKADFLRYLLLFARGGIYSDMDTMLLKPIDSWPSQNKS 205
+                 333334888999*****************999999999999776654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (480 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       664  (0.0346212); expected 383.6 (0.02)
+Passed bias filter:                      409  (0.0213254); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.40u 0.18s 00:00:00.58 Elapsed: 00:00:00.64
+# Mc/sec: 2410.24
+//
+[ok]

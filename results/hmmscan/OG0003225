@@ -1,0 +1,838 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003225.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003225
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q9VW93|Q9VW93_DROME  [L=359]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.3e-38  129.7  45.0    4.1e-10   39.7   3.5    5.2  5  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   1.3   8.9e-10   1.7e-05       5      50 ..      38      86 ..      33      89 .. 0.83
+   2 !   39.7   3.5   2.2e-14   4.1e-10       1      53 []     103     157 ..     103     157 .. 0.96
+   3 !   26.9   2.8   2.2e-10   4.2e-06       5      53 .]     174     221 ..     169     221 .. 0.89
+   4 !   31.4   1.3   8.9e-12   1.7e-07       6      53 .]     245     298 ..     241     298 .. 0.89
+   5 !   30.4   6.0   1.9e-11   3.6e-07       1      48 [.     303     351 ..     303     357 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 8.9e-10
+                  CBM_14  5 edglfadptdCskyyvCsngepv..eftCpeglvFdeetqtCdypen.v 50
+                            +++ f  p+ C+++++C+++ +v  +  C++gl +++e+++C  +++ +
+  tr|Q9VW93|Q9VW93_DROME 38 QETSFLRPNTCDNWVRCASNYSVleQGGCAAGLNYNKELGRCILASSsA 86
+                            45667779**********999888899***************9988744 PP
+
+  == domain 2  score: 39.7 bits;  conditional E-value: 2.2e-14
+                  CBM_14   1 Cagkedglfad...ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             Ca++++g+f+    ++dC++y+ C++ + ++ +Cp++l+F++ +++C+y ++   C
+  tr|Q9VW93|Q9VW93_DROME 103 CANETEGAFIVdpsSSDCRGYILCKSHKQIKANCPNELIFHPVSRSCVYEKQ-YRC 157
+                             999*99999998999************************************9.888 PP
+
+  == domain 3  score: 26.9 bits;  conditional E-value: 2.2e-10
+                  CBM_14   5 edglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +++ +adp  C++yy C++  ++++ Cp   ++d++++ C+  ++ v C
+  tr|Q9VW93|Q9VW93_DROME 174 NNTRLADPVHCDQYYECVSEVLHSRACPVASAYDANLGYCVDVAE-VSC 221
+                             5677888**********************************9998.888 PP
+
+  == domain 4  score: 31.4 bits;  conditional E-value: 8.9e-12
+                  CBM_14   6 dglfadptdCskyyvCs.......ngepveftCpeglvFdeetqtCdypenvvqC 53 
+                              g+fad+++Cs yy+C        + ep   +Cp g++Fd e+ +C  + n v C
+  tr|Q9VW93|Q9VW93_DROME 245 VGYFADDESCSHYYICGspvagkhDTEPKHLSCPLGQYFDFEKLSCRDRLN-VRC 298
+                             69***************777777666777*******************999.988 PP
+
+  == domain 5  score: 30.4 bits;  conditional E-value: 1.9e-11
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepv.eftCpeglvFdeetqtCdype 48 
+                             C g ++ ++++  +dC+ y +Cs g +v   +Cp g +Fde++q C+   
+  tr|Q9VW93|Q9VW93_DROME 303 CVG-TNITYVNvAGDCQSYGRCSGGVTVsLGQCPTGYYFDERNQGCTQTN 351
+                             887.67777777****************9*****************9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (359 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       439  (0.0228896); expected 383.6 (0.02)
+Passed bias filter:                      205  (0.0106888); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.18s 00:00:00.54 Elapsed: 00:00:00.64
+# Mc/sec: 1812.65
+//
+Query:       tr|Q8IQV7|Q8IQV7_DROME  [L=351]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-20   73.0  59.4    4.4e-08   33.3   6.6    5.5  1  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.3   6.6   2.3e-12   4.4e-08       5      53 .]      35      83 ..      30      83 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 33.3 bits;  conditional E-value: 2.3e-12
+                  CBM_14  5 edglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53
+                              g++ +p++C  + +C+n+e v   tCp+glvF++++++Cdy+ + + C
+  tr|Q8IQV7|Q8IQV7_DROME 35 GYGYIGNPSNCHAWGYCKNQEVVaWGTCPNGLVFNAQAGSCDYANT-TVC 83
+                            7899999****************89*******************98.777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (351 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       584  (0.03045); expected 383.6 (0.02)
+Passed bias filter:                      182  (0.00948955); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.17s 00:00:00.54 Elapsed: 00:00:00.66
+# Mc/sec: 1717.54
+//
+Query:       tr|Q9VW95|Q9VW95_DROME  [L=334]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.7e-28   97.6  63.5    1.5e-09   38.0   9.3    5.2  3  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.0   9.3   7.8e-14   1.5e-09       1      53 []      90     142 ..      90     142 .. 0.97
+   2 !   25.6   6.9   5.6e-10   1.1e-05       5      53 .]     219     273 ..     211     273 .. 0.85
+   3 !   25.2   6.1   7.8e-10   1.5e-05       1      53 []     278     332 ..     278     332 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 38.0 bits;  conditional E-value: 7.8e-14
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53 
+                             Ca++ ++++adp++C +yy+C++ e+    tCp++++F+++tq+C  +++ ++C
+  tr|Q9VW95|Q9VW95_DROME  90 CADRAKQFVADPKSCYGYYYCADEETAlYGTCPQETHFNATTQMCSRQHE-SDC 142
+                             9*********************9998889********************9.999 PP
+
+  == domain 2  score: 25.6 bits;  conditional E-value: 5.6e-10
+                  CBM_14   5 edglfadptdCskyyvCs...ngepv....eftCpeglvFdeetqtCdypenvvqC 53 
+                             e+ ++ad+  C++y++C+   +g+p      ++Cp++ +Fd+++q+C  p++ v C
+  tr|Q9VW95|Q9VW95_DROME 219 ENKFVADEATCRGYFYCAkqkDGTPDpnpvWNQCPQDRFFDASSQMCITPSS-VYC 273
+                             7999**************8884444455659*******************98.888 PP
+
+  == domain 3  score: 25.2 bits;  conditional E-value: 7.8e-10
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypen.vvqC 53 
+                             C+g++  ++++ ++ C++y+ Cs+g +v+++   + +Fd++++ C+++ + ++ C
+  tr|Q9VW95|Q9VW95_DROME 278 CDGRTASFVVSaTKGCRNYLSCSDGVTVSERSCGNYFFDDQQGACTPSVQtYTAC 332
+                             999999999999****************88888899**********998855555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (334 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       799  (0.0416601); expected 383.6 (0.02)
+Passed bias filter:                      274  (0.0142865); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.58
+# Mc/sec: 1866.41
+//
+Query:       tr|Q9VW90|Q9VW90_DROME  [L=369]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-29  100.0  61.9      8e-08   32.4   6.4    5.3  3  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.4   6.8   3.3e-10   6.3e-06      12      53 .]      46      86 ..      34      86 .. 0.90
+   2 !   30.0   5.8   2.3e-11   4.5e-07       1      48 [.     231     277 ..     231     285 .. 0.89
+   3 !   32.4   6.4   4.2e-12     8e-08       1      49 [.     288     339 ..     288     345 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 26.4 bits;  conditional E-value: 3.3e-10
+                  CBM_14 12 ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53
+                             ++C+ yyvC++ +pv+ +C++g  +d ++ +C ++++ v+C
+  tr|Q9VW90|Q9VW90_DROME 46 IESCQTYYVCQSTGPVQSSCQSGYSYDYKRSSCYPSSE-VDC 86
+                            579**********************************9.999 PP
+
+  == domain 2  score: 30.0 bits;  conditional E-value: 2.3e-11
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdype 48 
+                             C+  ++g+  + p+ C  yyvC+ng+ v+  Cp g ++d++++ C+ ++
+  tr|Q9VW90|Q9VW90_DROME 231 CS--TNGAKSAdPKVCGTYYVCTNGKNVATYCPTGDYYDDSLGYCVSRQ 277
+                             77..77877777*********************************9765 PP
+
+  == domain 3  score: 32.4 bits;  conditional E-value: 4.2e-12
+                  CBM_14   1 Cagkedglfad..ptdCskyyvCs.ngepveftCpeglvFdeetqtCdypen 49 
+                             C+  + +++ +  +++Cs yy+C+ +ge++ +tCp++++Fde++q C  +++
+  tr|Q9VW90|Q9VW90_DROME 288 CQYATSTFVNAvdSNNCSTYYYCNsQGEATLNTCPADTFFDESRQGCKSDDD 339
+                             55555555555669**********778888*****************98876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (369 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       613  (0.031962); expected 383.6 (0.02)
+Passed bias filter:                      187  (0.00975025); expected 383.6 (0.02)
+Passed Vit filter:                         8  (0.000417123); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 1851.78
+//
+Query:       tr|Q9VTR2|Q9VTR2_DROME  [L=751]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     2e-107  351.4 175.7    1.9e-12   47.3  10.4   13.3  9  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.9  10.6   2.2e-10   4.2e-06       5      53 .]      32      77 ..      28      77 .. 0.84
+   2 !   36.0   1.2   3.3e-13   6.3e-09       6      47 ..      84     126 ..      79     131 .. 0.86
+   3 !   36.6   6.0     2e-13   3.9e-09       6      50 ..     140     187 ..     131     190 .. 0.84
+   4 !   37.5   4.9   1.1e-13     2e-09       7      50 ..     248     293 ..     242     296 .. 0.84
+   5 !   38.8   5.1   4.4e-14   8.4e-10       7      50 ..     354     399 ..     348     402 .. 0.84
+   6 !   38.8   5.1   4.4e-14   8.4e-10       7      50 ..     460     505 ..     454     508 .. 0.84
+   7 !   29.8   6.9   2.7e-11   5.2e-07       1      53 []     562     611 ..     562     616 .. 0.92
+   8 !   37.8  12.5   8.5e-14   1.6e-09       1      53 []     621     672 ..     620     672 .. 0.92
+   9 !   47.3  10.4   9.8e-17   1.9e-12       1      53 []     697     751 .]     697     751 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 26.9 bits;  conditional E-value: 2.2e-10
+                  CBM_14  5 edglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53
+                             d+  +d +dC+ky++C +ge v+++C++g +++ e+++C+ ++   qC
+  tr|Q9VTR2|Q9VTR2_DROME 32 GDTK-VDADDCTKYLICCHGEFVSKSCASGSYWNSELNICVVDDG--QC 77
+                            3444.4459********************************9975..66 PP
+
+  == domain 2  score: 36.0 bits;  conditional E-value: 3.3e-13
+                  CBM_14   6 dglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdyp 47 
+                             dg +   p+dC +y+ C++g  v  tCp+g +F+ ++++C+ +
+  tr|Q9VTR2|Q9VTR2_DROME  84 DGEITPnPDDCAGYLECVDGIIVILTCPDGDYFNSTLNRCVED 126
+                             4555555*********************************976 PP
+
+  == domain 3  score: 36.6 bits;  conditional E-value: 2e-13
+                  CBM_14   6 dglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypen..v 50 
+                             dg +   pt+C +y+ Csng++v+++C++g +F++ ++tC+ +++   
+  tr|Q9VTR2|Q9VTR2_DROME 140 DGELKVdPTNCAGYLACSNGNWVSKQCADGAYFNAILETCVQDDEgiC 187
+                             4444444***********************************998554 PP
+
+  == domain 4  score: 37.5 bits;  conditional E-value: 1.1e-13
+                  CBM_14   7 glfadptdCskyyvCsngepveftCpeglvFdeetqtCdypen..v 50 
+                              l +dpt+C +y+ Csng++v+++C++g +F+ +++tC+ +++   
+  tr|Q9VTR2|Q9VTR2_DROME 248 ELKVDPTNCAGYLACSNGNWVSKQCADGAYFNVTLETCVQDDEgiC 293
+                             34456***********************************998554 PP
+
+  == domain 5  score: 38.8 bits;  conditional E-value: 4.4e-14
+                  CBM_14   7 glfadptdCskyyvCsngepveftCpeglvFdeetqtCdypen..v 50 
+                              l +dpt+C +y+ Csng++v+++C++g +F+++++tC+ +++   
+  tr|Q9VTR2|Q9VTR2_DROME 354 ELKVDPTNCAGYLACSNGNWVSKQCADGAYFNATLETCVQDDEgiC 399
+                             34456***********************************998554 PP
+
+  == domain 6  score: 38.8 bits;  conditional E-value: 4.4e-14
+                  CBM_14   7 glfadptdCskyyvCsngepveftCpeglvFdeetqtCdypen..v 50 
+                              l +dpt+C +y+ Csng++v+++C++g +F+++++tC+ +++   
+  tr|Q9VTR2|Q9VTR2_DROME 460 ELKVDPTNCAGYLACSNGNWVSKQCADGAYFNATLETCVQDDEgiC 505
+                             34456***********************************998554 PP
+
+  == domain 7  score: 29.8 bits;  conditional E-value: 2.7e-11
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C+  e+   ++p dC +y++C ng  v+++C++ ++F++++++C+ +++ + C
+  tr|Q9VTR2|Q9VTR2_DROME 562 CT--ENEVKVNPADCAGYLQCINGVFVARKCSATQFFNTTLKECEVDTE-NVC 611
+                             66..77888889**********************************998.666 PP
+
+  == domain 8  score: 37.8 bits;  conditional E-value: 8.5e-14
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C+  ++  ++ +++Cs +y+C+ng+++e++C+++l ++   ++Cdypen vqC
+  tr|Q9VTR2|Q9VTR2_DROME 621 CDVPNNSIWPVEKNCSAFYQCVNGNKYEQRCSNNLQYNSIIEQCDYPEN-VQC 672
+                             55447888899**************************************.*** PP
+
+  == domain 9  score: 47.3 bits;  conditional E-value: 9.8e-17
+                  CBM_14   1 Cagkedglfad..ptdC.skyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C g++dg++++  ++dC s+y+vC++ ++v+ftC++gl+F+ + ++Cd+p+n v+C
+  tr|Q9VTR2|Q9VTR2_DROME 697 CVGQRDGTMFAdaSGDCsSNYVVCQCECEVNFTCSSGLLFNLQVKSCDWPDN-VKC 751
+                             99*****99999****************************************.*99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (751 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       527  (0.027478); expected 383.6 (0.02)
+Passed bias filter:                      133  (0.00693467); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                        17  (0.000886386); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.19s 00:00:00.77 Elapsed: 00:00:00.70
+# Mc/sec: 3453.74
+//
+Query:       tr|Q9VW81|Q9VW81_DROME  [L=353]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-31  108.6  33.1    5.6e-10   39.3   3.7    4.3  4  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   3.4   8.9e-10   1.7e-05       8      46 ..      38      79 ..      30      88 .. 0.86
+   2 !   24.6   1.9   1.2e-09   2.2e-05      12      47 ..      99     135 ..      89     143 .. 0.84
+   3 !   39.3   3.7   2.9e-14   5.6e-10       1      51 [.     145     194 ..     145     196 .. 0.90
+   4 !   37.3   1.4   1.2e-13   2.3e-09       4      53 .]     219     267 ..     216     267 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 8.9e-10
+                  CBM_14  8 lfadptdCskyyvCs..ngepv.eftCpeglvFdeetqtCdy 46
+                            ++++++ C+++yvC+  +  p  ef+Cp++ +F++++ +C++
+  tr|Q9VW81|Q9VW81_DROME 38 MLPHKDHCQRFYVCTgdDDMPFqEFNCPAEYHFSKKLMICVP 79
+                            5789***********77444547*****************86 PP
+
+  == domain 2  score: 24.6 bits;  conditional E-value: 1.2e-09
+                  CBM_14  12 ptdCskyyvCsngepv.eftCpeglvFdeetqtCdyp 47 
+                             ++dC++y +C  g++  + +C+ g +Fd++++ C + 
+  tr|Q9VW81|Q9VW81_DROME  99 QSDCTRYRQCLEGGSFaVAKCSVGNYFDPARRACLPV 135
+                             68*********999999*****************875 PP
+
+  == domain 3  score: 39.3 bits;  conditional E-value: 2.9e-14
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvv 51 
+                             C   ++ ++a+p+dC+ y++C++g+++  +Cp+g +Fde+  +C+++++  
+  tr|Q9VW81|Q9VW81_DROME 145 CVLPDNATLANPSDCETYFRCHSGQAELVQCPSGDYFDERVSSCVPDHT-G 194
+                             66557889999**********************************9987.5 PP
+
+  == domain 4  score: 37.3 bits;  conditional E-value: 1.2e-13
+                  CBM_14   4 kedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +   l ++++dC++yy+C++++  e++Cp g++Fd  ++ C  +   ++C
+  tr|Q9VW81|Q9VW81_DROME 219 TGSRLAPHSRDCQRYYICAKKRVLEMRCPRGQYFDVVRRYCALDLG-SEC 267
+                             55667899*********************************88765.655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (353 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       656  (0.0342041); expected 383.6 (0.02)
+Passed bias filter:                      333  (0.0173627); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.19s 00:00:00.58 Elapsed: 00:00:00.53
+# Mc/sec: 2134.35
+//
+Query:       tr|Q8IMQ3|Q8IMQ3_DROME  [L=988]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-93  306.3 125.8    8.2e-09   35.6   6.3   13.5 13  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.7   4.6   2.6e-10     5e-06       6      48 ..      38      81 ..      35      85 .. 0.87
+   2 !   25.5   3.5   6.2e-10   1.2e-05       9      53 .]      98     141 ..      92     141 .. 0.88
+   3 !   30.1   0.8   2.2e-11   4.2e-07      10      53 .]     155     197 ..     148     204 .. 0.88
+   4 !   35.6   6.3   4.3e-13   8.2e-09       5      48 ..     205     249 ..     197     253 .. 0.86
+   5 !   34.1   3.4   1.2e-12   2.4e-08       5      53 .]     262     309 ..     258     309 .. 0.88
+   6 !   25.3   0.8   7.2e-10   1.4e-05      11      47 ..     324     360 ..     317     365 .. 0.88
+   7 !   26.5   7.0   2.9e-10   5.5e-06      11      53 .]     438     480 ..     424     480 .. 0.84
+   8 !   25.1   2.5   8.4e-10   1.6e-05       7      53 .]     490     536 ..     487     536 .. 0.87
+   9 !   27.9   3.4   1.1e-10   2.1e-06      11      53 .]     653     694 ..     638     694 .. 0.90
+  10 !   32.1   2.5   5.2e-12     1e-07       6      53 .]     727     774 ..     723     774 .. 0.88
+  11 !   24.4   0.7   1.3e-09   2.5e-05      11      53 .]     789     830 ..     782     830 .. 0.90
+  12 !   32.2   1.9     5e-12   9.6e-08       7      48 ..     876     918 ..     871     924 .. 0.85
+  13 !   27.7   1.9   1.3e-10   2.4e-06       6      53 .]     931     978 ..     926     978 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 26.7 bits;  conditional E-value: 2.6e-10
+                  CBM_14  6 dglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdype 48
+                            +g +a+  +dC  y++C + e+v  +C++g +F +++++C+ +e
+  tr|Q8IMQ3|Q8IMQ3_DROME 38 EGSVAAdIDDCASYFQCIDDETVHLNCANGSYFEASNEICVVDE 81
+                            56666669********************************9876 PP
+
+  == domain 2  score: 25.5 bits;  conditional E-value: 6.2e-10
+                  CBM_14   9 fadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             f d +dC  y++C  g +v+++Cp+g  F+  +++C+ +++   C
+  tr|Q8IMQ3|Q8IMQ3_DROME  98 FEDINDCMSYVKCIRGDLVRQRCPAGSNFNVISKNCQMSRT-GSC 141
+                             55679*******************************99886.666 PP
+
+  == domain 3  score: 30.1 bits;  conditional E-value: 2.2e-11
+                  CBM_14  10 adptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +d++dC +y+ C ng++v+++Cp g +F +  + C+ +en   C
+  tr|Q8IMQ3|Q8IMQ3_DROME 155 VDSEDCAGYLECLNGGLVKEKCPIGSYFEPIFKLCQLDEN-GVC 197
+                             4589**********************************99.665 PP
+
+  == domain 4  score: 35.6 bits;  conditional E-value: 4.3e-13
+                  CBM_14   5 edglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdype 48 
+                             +dg +   p++C +y+ C ng+++ +tCp+g++F ++ +tC+ + 
+  tr|Q8IMQ3|Q8IMQ3_DROME 205 TDGEVRVdPNNCAGYFNCENGRLITKTCPSGTYFEPTYKTCTVDL 249
+                             46666666*********************************9875 PP
+
+  == domain 5  score: 34.1 bits;  conditional E-value: 1.2e-12
+                  CBM_14   5 edglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             e +l +dp++C +y++C +ge ve++Cp g+++d +++tC  +++   C
+  tr|Q8IMQ3|Q8IMQ3_DROME 262 EGQLKIDPNNCAGYLKCIDGEFVEEKCPGGTYYDFKLETCLVDTE-GVC 309
+                             4556678*********************************99887.555 PP
+
+  == domain 6  score: 25.3 bits;  conditional E-value: 7.2e-10
+                  CBM_14  11 dptdCskyyvCsngepveftCpeglvFdeetqtCdyp 47 
+                             dp+dC  y +C  g+ ++  C +g +F+ ++++C  +
+  tr|Q8IMQ3|Q8IMQ3_DROME 324 DPKDCAAYTQCIRGRVESVMCDSGRYFNVTQGECLAD 360
+                             49********************************766 PP
+
+  == domain 7  score: 26.5 bits;  conditional E-value: 2.9e-10
+                  CBM_14  11 d.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                                ++C +y++C +ge ve++Cpe++++d +++tC  +     C
+  tr|Q8IMQ3|Q8IMQ3_DROME 438 RdINNCAGYLKCIDGEFVEEECPESTYYDSNLETCLVDNY-GAC 480
+                             4468*******************************98875.665 PP
+
+  == domain 8  score: 25.1 bits;  conditional E-value: 8.4e-10
+                  CBM_14   7 glfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             g +   p+dC +y +C+ g+ +  +C+ g +F+ ++++C  + + + C
+  tr|Q8IMQ3|Q8IMQ3_DROME 490 GIVEEdPKDCAGYNQCVRGKVEPLKCAFGRYFNGTQGECLIDLD-EVC 536
+                             5566669********************************88766.555 PP
+
+  == domain 9  score: 27.9 bits;  conditional E-value: 1.1e-10
+                  CBM_14  11 dptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +p+dC +y+ C  g + e +C +g +F+e++++C  + + + C
+  tr|Q8IMQ3|Q8IMQ3_DROME 653 NPQDCAGYIECFGGVAKELKCDSGRYFNETQRNCSVDVD-EIC 694
+                             389*******************************99987.666 PP
+
+  == domain 10  score: 32.1 bits;  conditional E-value: 5.2e-12
+                  CBM_14   6 dglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             dg +   p++C ++++C++ge+ e+ Cp+g +++ ++ +C+ +   + C
+  tr|Q8IMQ3|Q8IMQ3_DROME 727 DGQLRLdPKNCAGFLKCVDGELKEEMCPSGFFYNSTSSKCMVDIR-ATC 774
+                             6666666*********************************99875.666 PP
+
+  == domain 11  score: 24.4 bits;  conditional E-value: 1.3e-09
+                  CBM_14  11 dptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             dp++C +y +C  g  ++ +Cp g++F+ + + C  +   + C
+  tr|Q8IMQ3|Q8IMQ3_DROME 789 DPNNCAGYRQCIRGLVQNLNCPLGQYFNVAERDCLMDVH-KVC 830
+                             59********************************98876.666 PP
+
+  == domain 12  score: 32.2 bits;  conditional E-value: 5e-12
+                  CBM_14   7 glfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdype 48 
+                             g +   p++C +y++C+nge++e+ Cp+g ++d   ++C  ++
+  tr|Q8IMQ3|Q8IMQ3_DROME 876 GQHKLdPNNCAGYLKCQNGELIEELCPNGFYYDFLMKICLVDR 918
+                             4444459********************************8776 PP
+
+  == domain 13  score: 27.7 bits;  conditional E-value: 1.3e-10
+                  CBM_14   6 dglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             +g++   p dC +y +C +g+ ++ +Cp g++F+  ++ C  + + + C
+  tr|Q8IMQ3|Q8IMQ3_DROME 931 EGALEEdPHDCAGYRQCIDGQVENLKCPFGTYFNVPLRDCLIDVD-EIC 978
+                             56666669********************************98877.655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (988 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       642  (0.0334741); expected 383.6 (0.02)
+Passed bias filter:                      312  (0.0162678); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.51u 0.15s 00:00:00.66 Elapsed: 00:00:00.77
+# Mc/sec: 4144.18
+//
+Query:       tr|Q9VW94|Q9VW94_DROME  [L=363]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-20   72.7  59.4    4.6e-08   33.2   6.6    5.5  1  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.2   6.6   2.4e-12   4.6e-08       5      53 .]      47      95 ..      42      95 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 33.2 bits;  conditional E-value: 2.4e-12
+                  CBM_14  5 edglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53
+                              g++ +p++C  + +C+n+e v   tCp+glvF++++++Cdy+ + + C
+  tr|Q9VW94|Q9VW94_DROME 47 GYGYIGNPSNCHAWGYCKNQEVVaWGTCPNGLVFNAQAGSCDYANT-TVC 95
+                            7899999****************89*******************98.777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (363 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       623  (0.0324834); expected 383.6 (0.02)
+Passed bias filter:                      213  (0.0111059); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.14s 00:00:00.47 Elapsed: 00:00:00.54
+# Mc/sec: 2152.79
+//
+Query:       tr|Q9VTR0|Q9VTR0_DROME  [L=339]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-30  104.4  55.5    5.2e-10   39.4   5.1    5.3  3  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.4   4.6   4.3e-12   8.3e-08       1      53 []      95     147 ..      95     147 .. 0.93
+   2 !   39.4   5.1   2.7e-14   5.2e-10       9      53 .]     163     206 ..     154     206 .. 0.89
+   3 !   26.4   5.9   3.1e-10     6e-06       5      53 .]     224     278 ..     216     278 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 32.4 bits;  conditional E-value: 4.3e-12
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53 
+                             C+g   g++ d+ +C ++y+C+   +  + tC  g +Fd+ +++C+y+e+ + C
+  tr|Q9VTR0|Q9VTR0_DROME  95 CKGSGTGYIGDTINCANWYYCDADALLgKGTCNLGMYFDQVSKSCVYSED-TVC 147
+                             999*******************666666*********************9.888 PP
+
+  == domain 2  score: 39.4 bits;  conditional E-value: 2.7e-14
+                  CBM_14   9 fadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             f d+ +C kyy Cs++ +ve+tC++gl+++ +t+tC+ +++ v C
+  tr|Q9VTR0|Q9VTR0_DROME 163 FRDDANCHKYYTCSSKSLVENTCENGLYYNVATGTCVRKKD-VIC 206
+                             45599***********************************9.888 PP
+
+  == domain 3  score: 26.4 bits;  conditional E-value: 3.1e-10
+                  CBM_14   5 edglfadptdCskyyvCs.......ngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             ++ ++ d   C++yy+C        +  p+ ++C e+ +F++e+q C+++e+ ++C
+  tr|Q9VTR0|Q9VTR0_DROME 224 RNKFVSDMATCRGYYYCRdlgsgipDTDPIYQQCDENNFFNQERQACMPRES-QKC 278
+                             6788888999********888666666666*********************9.999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (339 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       666  (0.0347255); expected 383.6 (0.02)
+Passed bias filter:                      279  (0.0145472); expected 383.6 (0.02)
+Passed Vit filter:                        16  (0.000834246); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.33u 0.14s 00:00:00.47 Elapsed: 00:00:00.48
+# Mc/sec: 2272.14
+//
+Query:       tr|F3YDE1|F3YDE1_DROME  [L=337]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-33  115.2  57.9    1.9e-10   40.9   2.8    5.3  4  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.9   6.1   2.5e-11   4.8e-07       5      46 ..      36      78 ..      32      87 .. 0.88
+   2 !   40.9   2.8   9.8e-15   1.9e-10       1      53 []      91     142 ..      91     142 .. 0.89
+   3 !   24.8   4.1     1e-09   1.9e-05       1      53 []     215     273 ..     215     273 .. 0.84
+   4 !   29.4   5.2   3.6e-11   6.9e-07       1      53 []     278     332 ..     278     332 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 29.9 bits;  conditional E-value: 2.5e-11
+                  CBM_14  5 edglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdy 46
+                            ++g+ +  p+ C++y++C +g+ ++ tCp+++ F++++++C+ 
+  tr|F3YDE1|F3YDE1_DROME 36 KNGTKVRkPGTCDQYIQCYDGNGTVLTCPSNQSFNPSKGSCVD 78
+                            67888888*********************************86 PP
+
+  == domain 2  score: 40.9 bits;  conditional E-value: 9.8e-15
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C+g +   +adpt C ky++C ng p +  Cp g++Fde++q+C y  + + C
+  tr|F3YDE1|F3YDE1_DROME  91 CEGLDGEWVADPTECHKYFYCMNGVPLAGMCPVGQHFDERSQSCLYGVD-SMC 142
+                             88865566666**********************************9887.766 PP
+
+  == domain 3  score: 24.8 bits;  conditional E-value: 1e-09
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepv......eftCpeglvFdeetqtCdypenvvqC 53 
+                             C++ +  +f + +  C++y+vC+   pv        +Cpeg +Fde++q C  p++ v C
+  tr|F3YDE1|F3YDE1_DROME 215 CTSSTTMTFKSdQATCRGYFVCKALYPVadldplWTQCPEGYFFDEDRQLCANPTT-VVC 273
+                             77776677777799*********666666666669*******************98.888 PP
+
+  == domain 4  score: 29.4 bits;  conditional E-value: 3.6e-11
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53 
+                             C+g+   l+ + +++C +y++C+++++v e+tC  + +Fde+ + C  +  +++C
+  tr|F3YDE1|F3YDE1_DROME 278 CDGRGTMLVTSsSNNCHNYIRCVDNKEVtEETCHWDHFFDETVEACSSKIIYDKC 332
+                             888888888889***********888888*****************988766666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (337 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1049  (0.0546952); expected 383.6 (0.02)
+Passed bias filter:                      383  (0.0199698); expected 383.6 (0.02)
+Passed Vit filter:                        22  (0.00114709); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.15s 00:00:00.50 Elapsed: 00:00:00.51
+# Mc/sec: 2124.76
+//
+Query:       tr|B7FNL9|B7FNL9_DROME  [L=343]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      6e-28   96.9  56.3    1.1e-08   35.2   3.4    6.0  4  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   3.0   1.4e-10   2.7e-06       5      53 .]      34      82 ..      29      82 .. 0.93
+   2 !   23.5   3.3   2.5e-09   4.8e-05       1      46 [.      90     137 ..      90     142 .. 0.81
+   3 !   35.2   3.4   5.6e-13   1.1e-08       1      47 [.     148     195 ..     148     200 .. 0.92
+   4 !   24.1   5.7   1.7e-09   3.2e-05       1      47 [.     283     332 ..     283     339 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 1.4e-10
+                  CBM_14  5 edglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53
+                              g++ dp+dC+ + +C++++++ +++C egl+++ + +tC  +++ + C
+  tr|B7FNL9|B7FNL9_DROME 34 GTGYIGDPSDCQAWGYCQDNKLIdRRSCTEGLLYSFRDGTCKRASD-TIC 82
+                            57999******************9******************9998.776 PP
+
+  == domain 2  score: 23.5 bits;  conditional E-value: 2.5e-09
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCs.ngepveftCpeglvFdeetqtCdy 46 
+                             Ca+ e  ++++ p dC+++++C+    p+  +C+ g+vF++++qtC  
+  tr|B7FNL9|B7FNL9_DROME  90 CASLEPWNYVAnPADCRRFVKCAdLDDPTWGDCGVGQVFSNKKQTCLE 137
+                             565544445555***********558899*****************75 PP
+
+  == domain 3  score: 35.2 bits;  conditional E-value: 5.6e-13
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdyp 47 
+                             C++ +dg f+  p++C+ yy+C+ng  ++ +C+ g +F+++t++C+ +
+  tr|B7FNL9|B7FNL9_DROME 148 CSHMKDGSFVGdPKSCQIYYKCHNGFGTMLNCSVGRYFNRKTGNCQSW 195
+                             898999999999*********************************876 PP
+
+  == domain 4  score: 24.1 bits;  conditional E-value: 1.7e-09
+                  CBM_14   1 Cagkedglfad..ptdCskyyvCsngepv.eftCpeg.lvFdeetqtCdyp 47 
+                             Ca+ +++l+++  +t C+++ +C+++++  +++Cpe+  +F+e +++C+  
+  tr|B7FNL9|B7FNL9_DROME 283 CAN-RNQLMVAtiNTGCREFTICQDNRSKsSQKCPEDyPYFNELLRQCTDE 332
+                             998.56666666************999999*******67*********875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (343 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       477  (0.024871); expected 383.6 (0.02)
+Passed bias filter:                      212  (0.0110538); expected 383.6 (0.02)
+Passed Vit filter:                        19  (0.000990667); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.34u 0.15s 00:00:00.49 Elapsed: 00:00:00.67
+# Mc/sec: 1645.20
+//
+Query:       tr|Q9VW92|Q9VW92_DROME  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-39  133.8  53.7    5.9e-11   42.5   7.0    5.2  4  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   2.0   2.9e-13   5.6e-09       1      53 []      29      81 ..      29      81 .. 0.88
+   2 !   27.9   7.1   1.1e-10     2e-06       1      46 [.      87     132 ..      87     137 .. 0.95
+   3 !   42.5   7.0   3.1e-15   5.9e-11       1      53 []     146     198 ..     146     198 .. 0.97
+   4 !   33.3   2.7   2.2e-12   4.1e-08      11      48 ..     285     325 ..     273     331 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 2.9e-13
+                  CBM_14  1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53
+                            C+   +g+  + p+ C+ +++C +g pv+ +C+ gl++d+e+q+C  +++  +C
+  tr|Q9VW92|Q9VW92_DROME 29 CSLVVNGTKMNdPRACNAWIQCIDGSPVSGSCATGLFYDRESQKCLSSSS-IKC 81
+                            555566766666*********************************99998.888 PP
+
+  == domain 2  score: 27.9 bits;  conditional E-value: 1.1e-10
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdy 46 
+                             Ca  + g+ adp++C++yy+C++g+ +   C  g  F+  tq C  
+  tr|Q9VW92|Q9VW92_DROME  87 CAALPTGFAADPYSCNGYYYCKDGKGTHGVCNTGMNFNSGTQDCIR 132
+                             99999***************************************75 PP
+
+  == domain 3  score: 42.5 bits;  conditional E-value: 3.1e-15
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C+  +dg f++ +++C++y  C +g+ ++ tCp   +F ++t +Cdyp+n v+C
+  tr|Q9VW92|Q9VW92_DROME 146 CNILPDGVFVKdTDNCNGYQLCWDGQVINGTCPGTFYFKASTAQCDYPQN-VEC 198
+                             888899*999999*************************************.*99 PP
+
+  == domain 4  score: 33.3 bits;  conditional E-value: 2.2e-12
+                  CBM_14  11 d..ptdCskyyvCsngepv.eftCpeglvFdeetqtCdype 48 
+                             +  ++ C++y +C++g  + + tCp++ +Fde tq+C+ + 
+  tr|Q9VW92|Q9VW92_DROME 285 NesDDGCRGYSICQDGIVIgQGTCPQDEYFDEITQRCTTQV 325
+                             256899*******************************9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       500  (0.0260702); expected 383.6 (0.02)
+Passed bias filter:                      211  (0.0110016); expected 383.6 (0.02)
+Passed Vit filter:                        18  (0.000938527); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.37u 0.16s 00:00:00.53 Elapsed: 00:00:00.62
+# Mc/sec: 1913.03
+//
+Query:       tr|Q9VW91|Q9VW91_DROME  [L=419]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-43  147.4  60.1    2.1e-09   37.5   8.3    5.3  5  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.5   8.3   1.1e-13   2.1e-09       4      47 ..      35      79 ..      32      84 .. 0.88
+   2 !   35.3   4.9   5.4e-13     1e-08       1      53 []      91     143 ..      91     143 .. 0.96
+   3 !   35.3   5.8   5.5e-13   1.1e-08       1      53 []     160     212 ..     160     212 .. 0.95
+   4 !   34.4   5.4   9.9e-13   1.9e-08       1      53 []     230     281 ..     230     281 .. 0.90
+   5 !   30.0   3.9   2.5e-11   4.7e-07       1      45 [.     284     331 ..     284     335 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 37.5 bits;  conditional E-value: 1.1e-13
+                  CBM_14  4 kedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdyp 47
+                             ++g++++ ++dCs yy+C+ +  ++++Cp+g +Fd+++q+C+  
+  tr|Q9VW91|Q9VW91_DROME 35 VSNGNYVAsQSDCSTYYQCQGSSFTAMSCPQGYYFDKNAQQCTGT 79
+                            578999988*********************************865 PP
+
+  == domain 2  score: 35.3 bits;  conditional E-value: 5.4e-13
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C gk  g fa+ +++C +yy+C  +++v+ +Cp+g  F+++t  C+y+ n   C
+  tr|Q9VW91|Q9VW91_DROME  91 CLGKAVGSFAAsSSSCGGYYYCGASGAVRGNCPAGENFNPTTMACVYKNN-YPC 143
+                             889999999999*************************************9.877 PP
+
+  == domain 3  score: 35.3 bits;  conditional E-value: 5.5e-13
+                  CBM_14   1 Cagkedglfad.ptdCskyyvCsngepveftCpeglvFdeetqtCdypenvvqC 53 
+                             C+  ++g+++  p+dCs++  C+++ +++ +C++glvF+ ++ +C y+   + C
+  tr|Q9VW91|Q9VW91_DROME 160 CNLVKNGFYFGsPSDCSGWNFCQDNVLHSGSCEDGLVFNVQASNCGYKMA-SSC 212
+                             88789*****99***********************************986.877 PP
+
+  == domain 4  score: 34.4 bits;  conditional E-value: 9.9e-13
+                  CBM_14   1 CagkedglfadptdCskyyvCsngepveftCpeglvFdeetqtCdypen.vvqC 53 
+                             C+  + g+ ++ t C++yy Cs g+ + +tCp+g ++d+ ++ C+ + + +++C
+  tr|Q9VW91|Q9VW91_DROME 230 CS--SSGATIAATACNQYYLCSAGNYQLMTCPSGYYYDTISKACVTRMEaRNDC 281
+                             77..78888889*********************************998866666 PP
+
+  == domain 5  score: 30.0 bits;  conditional E-value: 2.5e-11
+                  CBM_14   1 Cagkedglfad..ptdCskyyvCsngepv.eftCpeglvFdeetqtCd 45 
+                             C g++ +++ +   t+Cs y++C+ng    +++Cp + +F+e++++C+
+  tr|Q9VW91|Q9VW91_DROME 284 CVGTTATFVNAysATNCSDYLYCVNGVQKaVESCPTNYYFNENLGSCV 331
+                             77777777777789**************99*****************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (419 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1331  (0.0693988); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                       104  (0.0054226); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.51u 0.16s 00:00:00.67 Elapsed: 00:00:00.64
+# Mc/sec: 2111.63
+//
+Query:       tr|Q8MR04|Q8MR04_DROME  [L=351]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-20   73.0  59.4    4.4e-08   33.3   6.6    5.5  1  CBM_14    Chitin binding Peritrophin-A domain
+
+
+Domain annotation for each model (and alignments):
+>> CBM_14  Chitin binding Peritrophin-A domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.3   6.6   2.3e-12   4.4e-08       5      53 .]      35      83 ..      30      83 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 33.3 bits;  conditional E-value: 2.3e-12
+                  CBM_14  5 edglfadptdCskyyvCsngepv.eftCpeglvFdeetqtCdypenvvqC 53
+                              g++ +p++C  + +C+n+e v   tCp+glvF++++++Cdy+ + + C
+  tr|Q8MR04|Q8MR04_DROME 35 GYGYIGNPSNCHAWGYCKNQEVVaWGTCPNGLVFNAQAGSCDYANT-TVC 83
+                            7899999****************89*******************98.777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (351 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       584  (0.03045); expected 383.6 (0.02)
+Passed bias filter:                      183  (0.00954169); expected 383.6 (0.02)
+Passed Vit filter:                        14  (0.000729965); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.42u 0.18s 00:00:00.60 Elapsed: 00:00:00.59
+# Mc/sec: 1932.63
+//
+[ok]

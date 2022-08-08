@@ -1,0 +1,218 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0020742.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0020742
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|F8W3I7|F8W3I7_DANRE  [L=468]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    6.6e-24   83.6  51.6    2.1e-06   27.6   1.4    7.2  1  cEGF            Complement Clr-like EGF-like
+      3e-20   72.3  78.9    5.5e-06   26.7   6.7    7.1  0  FXa_inhibition  Coagulation Factor Xa inhibitory site
+    4.2e-16   59.0  76.7    1.2e-08   35.1   8.9    6.9  2  EGF_CA          Calcium-binding EGF domain
+    2.4e-13   50.8   1.0    2.4e-13   50.8   1.0    2.0  1  Lectin_C        Lectin C-type domain
+    5.3e-10   39.5  74.5      0.011   16.2   7.6    7.8  0  EGF             EGF-like domain
+    1.2e-07   31.5  10.3    1.2e-07   31.5  10.3    7.0  1  Tme5_EGF_like   Thrombomodulin like fifth domain, EGF-like
+
+
+Domain annotation for each model (and alignments):
+>> cEGF  Complement Clr-like EGF-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.6   1.4   6.5e-10   2.1e-06       2      20 ..     241     259 ..     240     259 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 27.6 bits;  conditional E-value: 6.5e-10
+                             EEEE-STTEEE.ETTTEEE CS
+                    cEGF   2 YrCsCppGYkltpdGrsCt 20 
+                             + C+C+pG++l++dG+sC+
+  tr|F8W3I7|F8W3I7_DANRE 241 FACTCRPGFTLSADGKSCK 259
+                             67****************5 PP
+
+>> FXa_inhibition  Coagulation Factor Xa inhibitory site
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   8.9   3.9e-12   1.2e-08       1      42 []     275     313 ..     275     313 .. 0.90
+   2 !   30.6  10.2   9.4e-11     3e-07       1      34 [.     351     381 ..     351     392 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 3.9e-12
+                  EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegye.nnedetkC 42 
+                             DvdECa+g+  C+    C NteGs++CvC +gy+ + +d +kC
+  tr|F8W3I7|F8W3I7_DANRE 275 DVDECATGP--CE--HDCANTEGSYQCVCFDGYKpAAKDMHKC 313
+                             9******99..98..89*****************766777777 PP
+
+  == domain 2  score: 30.6 bits;  conditional E-value: 9.4e-11
+                  EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegye 34 
+                             DvdEC+s t++C+  + C+Nt GsfeC C+egy 
+  tr|F8W3I7|F8W3I7_DANRE 351 DVDECIS-TNDCD--QNCTNTPGSFECFCHEGYV 381
+                             9*****9.66**9..78****************8 PP
+
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.8   1.0   7.6e-17   2.4e-13       3     109 .]      12     120 ..      10     120 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 50.8 bits;  conditional E-value: 7.6e-17
+                             EEHHHHHHHHHHTTSEEB--SSHHHHHHHHHHST.STTSEEEEEE.....EECSSTTEEEETTSTBCSTTTCSE-BSSTSSTTSEEE CS
+                Lectin_C   3 ksweeAeeaCqkkggsLvsvnskeeldflssllk.ksaksfWigl.....tdeknegewkwedgskvnttklyknwepsensenedC 83 
+                              +++ A++ C++  g+L+++++++  d+ls ll   ++ +fWigl     + +++ + +kw++g++ ++   ++nw + e+    +C
+  tr|F8W3I7|F8W3I7_DANRE  12 ANFDAAQKVCEERTGHLMTIRTAKLADVLSRLLLkGESGNFWIGLryvgnECSDRLKGYKWITGDDTSH---FSNW-KRESDCAPSC 94 
+                             699***************************998779999******998887788999*********995...5799.7788889999 PP
+
+                             EEEGCSTTSEEEEEETTS.EEEEEEEE CS
+                Lectin_C  84 velrekssgkwndenCnk.klpfvCek 109
+                             v++ ++ ++kw + +C++    +vCe+
+  tr|F8W3I7|F8W3I7_DANRE  95 VSV-SQNDHKWTERPCSDrIDGYVCEY 120
+                             999.*************96789***95 PP
+
+>> EGF  EGF-like domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Tme5_EGF_like  Thrombomodulin like fifth domain, EGF-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.5  10.3   3.9e-11   1.2e-07       1      31 [.     315     345 ..     315     350 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 31.5 bits;  conditional E-value: 3.9e-11
+           Tme5_EGF_like   1 lhCeekkCpaqCDpnsqgsCfCPEGfIldds 31 
+                             +hC + +C a+CDpn   +C CP Gf  d+ 
+  tr|F8W3I7|F8W3I7_DANRE 315 MHCPDMRCKAECDPNNDYQCDCPDGFLFDED 345
+                             8**************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (468 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       897  (0.0467699); expected 383.6 (0.02)
+Passed bias filter:                      448  (0.0233589); expected 383.6 (0.02)
+Passed Vit filter:                        59  (0.00307628); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.46u 0.23s 00:00:00.69 Elapsed: 00:00:00.63
+# Mc/sec: 2384.95
+//
+Query:       sp|P07204|TRBM_HUMAN  [L=575]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.9e-21   75.6  77.4    1.3e-08   35.1   6.9    7.1  1  FXa_inhibition  Coagulation Factor Xa inhibitory site
+    1.1e-17   63.7   9.3    1.1e-17   63.7   9.3    6.8  1  Tme5_EGF_like   Thrombomodulin like fifth domain, EGF-like
+    5.9e-16   58.2  32.3      2e-06   27.7   1.0    6.2  1  cEGF            Complement Clr-like EGF-like
+    5.7e-10   39.3  69.9    2.2e-06   27.9   7.2    7.0  2  EGF_CA          Calcium-binding EGF domain
+    2.4e-07   31.0  78.6       0.13   12.7   3.7    7.3  0  EGF             EGF-like domain
+    2.9e-06   28.0   0.0    5.6e-06   27.1   0.0    1.5  1  Lectin_C        Lectin C-type domain
+
+
+Domain annotation for each model (and alignments):
+>> FXa_inhibition  Coagulation Factor Xa inhibitory site
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   6.9     4e-12   1.3e-08       1      36 []     245     280 ..     245     280 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 4e-12
+                           TTTCCCCSSSEEEEETTCEEEE--TTEEE-TTSS-E CS
+        FXa_inhibition   1 CsdnNggCshlClptpggytCsCpegykLaeDgrtC 36 
+                           Cs+ NggC+h C + pg  +C Cp g  L++Dgr+C
+  sp|P07204|TRBM_HUMAN 245 CSVENGGCEHACNAIPGAPRCQCPAGAALQADGRSC 280
+                           ************************************ PP
+
+>> Tme5_EGF_like  Thrombomodulin like fifth domain, EGF-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.7   9.3   3.3e-21   1.1e-17       1      34 []     406     439 ..     406     439 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 63.7 bits;  conditional E-value: 3.3e-21
+         Tme5_EGF_like   1 lhCeekkCpaqCDpnsqgsCfCPEGfIlddsnvc 34 
+                           ++C+++ Cpa+CDpn+q sC+CPEG+Ildd+++c
+  sp|P07204|TRBM_HUMAN 406 MFCNQTACPADCDPNTQASCECPEGYILDDGFIC 439
+                           8*******************************99 PP
+
+>> cEGF  Complement Clr-like EGF-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   1.0   6.2e-10     2e-06       1      23 [.     305     327 ..     305     328 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 6.2e-10
+                           SEEEE-STTEEE.ETTTEEEE-- CS
+                  cEGF   1 SYrCsCppGYkltpdGrsCtDID 23 
+                           SY+C C  GY+l++d ++C+D+D
+  sp|P07204|TRBM_HUMAN 305 SYSCMCETGYRLAADQHRCEDVD 327
+                           9*********************9 PP
+
+>> EGF_CA  Calcium-binding EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.9   7.2   6.9e-10   2.2e-06       1      40 [.     325     360 ..     325     362 .. 0.89
+   2 !   21.6   6.4   6.2e-08    0.0002       1      34 [.     441     471 ..     441     480 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 27.9 bits;  conditional E-value: 6.9e-10
+                EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegyennedet 40 
+                           Dvd C+ ++  Cp  + CvNt+G+feC C ++y    ++ 
+  sp|P07204|TRBM_HUMAN 325 DVDDCILEPSPCP--QRCVNTQGGFECHCYPNYD--LVDG 360
+                           9***********9..89****************8..5554 PP
+
+  == domain 2  score: 21.6 bits;  conditional E-value: 6.2e-08
+                EGF_CA   1 DvdECasgthnCpentvCvNteGsfeCvCeegye 34 
+                           D+dEC++g   C+  +vC+N  G+feC C +   
+  sp|P07204|TRBM_HUMAN 441 DIDECENGG-FCS--GVCHNLPGTFECICGPDSA 471
+                           9******99.9*9..9*************87655 PP
+
+>> EGF  EGF-like domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Lectin_C  Lectin C-type domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.1   0.0   1.7e-09   5.6e-06       3     109 .]      43     169 ..      41     169 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 27.1 bits;  conditional E-value: 1.7e-09
+                           EEHHHHHHHHHHTTSEEB--SSHHHHHHHHHHST....STTSEEEEEE.........EECSSTTEEEETTSTBCSTTTCSE-BSSTSST CS
+              Lectin_C   3 ksweeAeeaCqkkggsLvsvnskeeldflssllk....ksaksfWigl.........tdeknegewkwedgskvnttklyknwepsens 78 
+                            ++ +A + C+  +g+L++v+s+   d++s ll+       +++Wigl         ++      ++w++g+ +++   y+ w + + +
+  sp|P07204|TRBM_HUMAN  43 ATFLNASQICDGLRGHLMTVRSSVAADVISLLLNgdggVGRRRLWIGLqlppgcgdpKRLGPLRGFQWVTGDNNTS---YSRWARLDLN 128
+                           58899******************************999999*************9999999999*********994...8899666666 PP
+
+                           TSEEEEEE.........GCSTTSEEEEEETTS.EEEEEEEE CS
+              Lectin_C  79 enedCvel.........rekssgkwndenCnk.klpfvCek 109
+                               C  l         +  s   w++++C+     f+Ce+
+  sp|P07204|TRBM_HUMAN 129 GAPLCGPLcvavsaaeaTVPSEPIWEEQQCEVkADGFLCEF 169
+                           666666666666999888889999*******9456899996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (575 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       596  (0.0310757); expected 383.6 (0.02)
+Passed bias filter:                      255  (0.0132958); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.46u 0.18s 00:00:00.64 Elapsed: 00:00:00.66
+# Mc/sec: 2821.17
+//
+[ok]

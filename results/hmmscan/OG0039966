@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039966.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039966
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q504Y3|ZCPW2_HUMAN  [L=356]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-15   56.9   5.7    4.2e-15   55.5   5.7    1.8  1  zf-CW     CW-type Zinc Finger
+    1.2e-10   41.8   1.7    2.3e-10   40.9   0.1    2.2  1  PWWP      PWWP domain
+
+
+Domain annotation for each model (and alignments):
+>> zf-CW  CW-type Zinc Finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   55.5   5.7   4.4e-19   4.2e-15       2      47 ..      30      76 ..      29      77 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 55.5 bits;  conditional E-value: 4.4e-19
+                  zf-CW  2 wVqCd..kClKWRrlpkev.ekeelipekWvCsmnpsdpkynsCdapee 47
+                           wVqC+  +ClKWR+l++e  +k +  +e+W+C mn+ d++yn+C+++ee
+  sp|Q504Y3|ZCPW2_HUMAN 30 WVQCEneNCLKWRLLSSEDsAKVDH-DEPWYCFMNT-DSRYNNCSISEE 76
+                           ******************8555555.78********.***********9 PP
+
+>> PWWP  PWWP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.9   0.1   2.4e-14   2.3e-10       1      85 [.      99     183 ..      99     187 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 40.9 bits;  conditional E-value: 2.4e-14
+                            TEEEEEEESSSEEEEEEEEECCCCCCCCHCT...SSSEEEEEETTTTEE.EEE-GGGEEE-SHHHHHHHHHTTSS-HHHHHHHHHH CS
+                   PWWP   1 gdlvwaKvkgypwWPavVvdpeevpekvlkkkekskelylVkFfgdkey.awvkekdlkpfteeddeeylekkkkkkskkkfkkAl 85 
+                            g+lv++K+++ p WP++ ++++  ++ v   ++ + e+y+++F+gd ++ +w+k + +  ++   + e+ ++kkk++++ ++++A+
+  sp|Q504Y3|ZCPW2_HUMAN  99 GSLVLVKLQNWPSWPGILCPDRFKGKYVTYDPDGNVEEYHIEFLGDPHSrSWIKATFVGHYSITLKPEKCKNKKKWYKS-ALQEAC 183
+                            789*************************9999999999**********99******99999999988888888887654.355554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (356 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1463  (0.0762813); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.35u 0.23s 00:00:00.57 Elapsed: 00:00:00.63
+# Mc/sec: 1830.71
+//
+[ok]

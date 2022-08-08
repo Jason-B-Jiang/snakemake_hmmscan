@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030292.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030292
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54GJ1|Q54GJ1_DICDI  [L=838]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-05   24.6  61.0      0.013   15.7   0.3   10.8  3  LRR_6     Leucine Rich repeat
+
+
+Domain annotation for each model (and alignments):
+>> LRR_6  Leucine Rich repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3   0.1   1.8e-06     0.035       1      23 [.     246     268 ..     246     268 .. 0.93
+   2 !   15.7   0.3   6.6e-07     0.013       1      23 [.     576     598 ..     576     599 .. 0.92
+   3 !    8.9   0.7   9.9e-05       1.9       2      15 ..     649     662 ..     648     671 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 1.8e-06
+                   LRR_6   1 snthLttLdLsgNdIgdeGaeaL 23 
+                             +n++L+ L+Ls+N++   G++a+
+  tr|Q54GJ1|Q54GJ1_DICDI 246 HNHTLKILNLSFNEFKISGLKAI 268
+                             8*************999999987 PP
+
+  == domain 2  score: 15.7 bits;  conditional E-value: 6.6e-07
+                   LRR_6   1 snthLttLdLsgNdIgdeGaeaL 23 
+                             +n++L+ LdLs+N+++  G++ L
+  tr|Q54GJ1|Q54GJ1_DICDI 576 KNSNLKILDLSDNNFQSIGCKQL 598
+                             69***************999887 PP
+
+  == domain 3  score: 8.9 bits;  conditional E-value: 9.9e-05
+                   LRR_6   2 nthLttLdLsgNdI 15 
+                             n +L+ LdLs+N++
+  tr|Q54GJ1|Q54GJ1_DICDI 649 NKSLEILDLSFNNL 662
+                             89***********5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (838 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2574  (0.134209); expected 383.6 (0.02)
+Passed bias filter:                      435  (0.0226811); expected 383.6 (0.02)
+Passed Vit filter:                        72  (0.00375411); expected 19.2 (0.001)
+Passed Fwd filter:                        20  (0.00104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.20s 00:00:00.81 Elapsed: 00:00:00.84
+# Mc/sec: 3233.91
+//
+[ok]

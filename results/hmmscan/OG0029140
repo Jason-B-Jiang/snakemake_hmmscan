@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029140.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029140
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54QB9|GACG_DICDI  [L=1312]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-22   79.7  13.9    5.3e-19   68.4   0.2    4.4  1  FERM_f0   N-terminal or F0 domain of Talin-head FERM
+    7.1e-16   58.5   0.0    7.1e-16   58.5   0.0    2.2  1  RhoGAP    RhoGAP domain
+
+
+Domain annotation for each model (and alignments):
+>> FERM_f0  N-terminal or F0 domain of Talin-head FERM
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.4   0.2   5.5e-23   5.3e-19       3      82 .]     177     251 ..     175     251 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 68.4 bits;  conditional E-value: 5.5e-23
+               FERM_f0   3 lkislveknvtKtiqFdpetlvydacklirekvaeaelgnakeygLFladedpkkgvWlesertleyYllrngdeleYkk 82 
+                           l++++ e ++tK+i Fd+ ++++da+ l+ ek+++++  +a+ey+LFl++    k++W+++++++++Y++++++e+e+kk
+  sp|Q54QB9|GACG_DICDI 177 LTVKVPEVGLTKKILFDKVETIKDAILLVIEKLPPGC-LDASEYNLFLPQ----KNQWCKIDSRFSKYQFKENQEIEFKK 251
+                           67888889*****************************.5***********....*************************8 PP
+
+>> RhoGAP  RhoGAP domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.5   0.0   7.4e-20   7.1e-16       9     149 ..    1050    1185 ..    1044    1189 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 58.5 bits;  conditional E-value: 7.4e-20
+                            HHHHHHTTTSTTTTTS-S-.HHHHHHHHHHHHHTGGGCTTTTTSCHHHHHHHHHHHHHHSSSTTTTGGHHHHHHHHHTSSSHHHHHH CS
+                RhoGAP    9 efiekrgldtegiyRvsgs.ksrvkelreafdkgkavdsdleeedvhavaslLKrfLrelpepLltkelyeelieaaksedeeerle 94  
+                            +fie +g   egi++ +     ++ e+ +++++g+  +s+  + d   +a  +Kr++++lp+++ +    e+l+       ++++ +
+  sp|Q54QB9|GACG_DICDI 1050 KFIELDGFSIEGIFKTNNYyDLTFTEIIKEIENGTLLTSNNPNVDAIGIACFIKRWFSKLPKKICSLLDDETLL------YASTQES 1130
+                            69*************998626789****************************************9998888877......3455666 PP
+
+                            HHHHHHTTS-HHHHHHHHHHHHHHHHHHHTHHHH---HHHHHHHHHHHHHT-TSS CS
+                RhoGAP   95 alkellekLPkenrdtLryLlehLkrvaenskenkMtaknLaivfaPtllrpkse 149 
+                            + ++ l++ P++ r++L  L+++L++v++ +  nk +ak Laiv+aP+l++ + +
+  sp|Q54QB9|GACG_DICDI 1131 TAEASLDSIPQPYRSLLLWLVRFLSEVSQSAYTNKCSAKILAIVIAPNLISISPN 1185
+                            67899*********************************************98765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1312 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3051  (0.15908); expected 383.6 (0.02)
+Passed bias filter:                      432  (0.0225246); expected 383.6 (0.02)
+Passed Vit filter:                       107  (0.00557902); expected 19.2 (0.001)
+Passed Fwd filter:                        49  (0.00255488); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.18u 0.28s 00:00:01.46 Elapsed: 00:00:00.96
+# Mc/sec: 4440.84
+//
+[ok]

@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0039745.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0039745
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P48551|INAR2_HUMAN  [L=515]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.6e-25   89.1   1.6    1.7e-24   85.8   0.1    2.3  1  Tissue_fac     Tissue factor
+    7.7e-18   64.8   0.1    1.5e-17   63.9   0.1    1.5  1  Interfer-bind  Interferon-alpha/beta receptor, fibronectin ty
+
+
+Domain annotation for each model (and alignments):
+>> Tissue_fac  Tissue factor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.8   0.1   1.8e-28   1.7e-24       3     104 ..      10     118 ..       8     121 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 85.8 bits;  conditional E-value: 1.8e-28
+                            XXXXXXXXXXXXXXXTCCSTCSSE......EEEEEEETTEEEEEEEESTTSSTTEEEEEEEE.ETTTTCEEEEEEEEEESSSEEECTT CS
+             Tissue_fac   3 llllsllllalastastaelpaPq......nvtfqsrnfkniLtWepgqnspesvvYtVqyk.mykseqwknvedCtniteteCDLte 83 
+                            +  l+l+l++++s  ++ ++ +P+      ++++++rnf++iL+We++++s ++++Yt+ y+ m+k e++k v++C+n+t+++CDLt+
+  sp|P48551|INAR2_HUMAN  10 FRSLNLVLMVYISLVFGISYDSPDytdescTFKISLRNFRSILSWELKNHSIVPTHYTLLYTiMSKPEDLKVVKNCANTTRSFCDLTD 97 
+                            567899******************9***99********************************************************** PP
+
+                            THTTTTSEEEEEEEEEETTEE CS
+             Tissue_fac  84 etsdltetyyarVraasagst 104
+                            e+++++e+y++  +++s+++t
+  sp|P48551|INAR2_HUMAN  98 EWRSTHEAYVTVLEGFSGNTT 118
+                            *****************9987 PP
+
+>> Interfer-bind  Interferon-alpha/beta receptor, fibronectin type III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.9   0.1   1.6e-21   1.5e-17       2     102 ..     133     229 ..     132     231 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 63.9 bits;  conditional E-value: 1.6e-21
+                            BE-SSEEEEEEESSEEEEEEEESCECTSSTSCEHHHHSTT-EEEEEEEETTTCEEEEEEEESSSEEEEES--TT-EEEEEEEEEESSS CS
+          Interfer-bind   2 elgpPevelesedkklnvtvkdpetlkegknlslrelyqslsYkvsywknssneekkelestnslvvlekLepetnYCvsVqaesrks 89 
+                            +++pPe+e++++++++nv+vk+p++ +e+ +  l+ +++  + +  + k+++ e k ++++++++ +++kL p+tnYCvsV++ ++++
+  sp|P48551|INAR2_HUMAN 133 SFEPPEFEIVGFTNHINVMVKFPSIVEEELQFDLSLVIE--EQSEGIVKKHKPEIKGNMSGNFTY-IIDKLIPNTNYCVSVYL-EHSD 216
+                            699********************9667777777777777..445556677788888899888888.*****************.**** PP
+
+                            TEEEEE-CEEEEE CS
+          Interfer-bind  90 nkkserSevkCik 102
+                            ++++++S++kC+ 
+  sp|P48551|INAR2_HUMAN 217 EQAVIKSPLKCTL 229
+                            ***********96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (515 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       588  (0.0306585); expected 383.6 (0.02)
+Passed bias filter:                      504  (0.0262787); expected 383.6 (0.02)
+Passed Vit filter:                        38  (0.00198133); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.38u 0.19s 00:00:00.57 Elapsed: 00:00:00.64
+# Mc/sec: 2583.68
+//
+[ok]

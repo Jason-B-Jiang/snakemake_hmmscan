@@ -1,0 +1,57 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049934.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049934
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O13795|POF8_SCHPO  [L=402]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-32  111.2   0.2      8e-32  110.1   0.2    1.7  1  xRRM      xRRM domain
+    1.9e-05   24.7   0.2      9e-05   22.6   0.2    2.2  0  RRM_3     RNA binding motif
+
+
+Domain annotation for each model (and alignments):
+>> xRRM  xRRM domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.1   0.2   8.3e-36     8e-32       2     115 ..     289     400 ..     288     402 .] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 110.1 bits;  conditional E-value: 8.3e-36
+                  xRRM   2 ypkgclvfvrnlhpetnkttlrtllskaldrkeeksekeaegidYvDyeKgldscylRlstpehaellvsafkerktkqtegldkegek 90 
+                           + k++l++++nlhp tnk+t+++lls +++r++++ ++e    +Y+Dy+K+ +++++R++tp hae++++af+++++kq++++d ++++
+  sp|O13795|POF8_SCHPO 289 FTKNLLTRIKNLHPLTNKSTIHSLLSYVFSRQTQNIACE---PMYIDYRKDETEAIIRWKTPLHAETCINAFRTQERKQNSHDDIRAHR 374
+                           899*******************************99998...*********************************************** PP
+
+                  xRRM  91 kesaska.itaelvkGerEelYWekv 115
+                           k+ +s++ + ael++Ge+E+ YW+++
+  sp|O13795|POF8_SCHPO 375 KKGSSRPfLIAELITGEEEKNYWRML 400
+                           ***998889**************976 PP
+
+>> RRM_3  RNA binding motif
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (402 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1089  (0.0567809); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.68
+# Mc/sec: 1924.40
+//
+[ok]

@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050336.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050336
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O14195|YF07_SCHPO  [L=235]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.8e-08   33.4   0.0    1.1e-07   32.0   0.0    1.7  1  Acetyltransf_10  Acetyltransferase (GNAT) domain
+    6.7e-07   29.6   0.0      4e-06   27.1   0.0    2.0  1  Acetyltransf_1   Acetyltransferase (GNAT) family
+
+
+Domain annotation for each model (and alignments):
+>> Acetyltransf_10  Acetyltransferase (GNAT) domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.0   0.0   1.1e-11   1.1e-07      52     110 ..     145     203 ..     118     214 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 32.0 bits;  conditional E-value: 1.1e-11
+       Acetyltransf_10  52 s...hisllfVdkeyrgqGigkaLlkaleeeaekqeiklkeltvnaspyavpfYeklGFkat 110
+                           +   hi+ ++Vd++ +g+G+g  Ll+ + + a++ +i      + as+ a ++Ye+lG+k++
+  sp|O14195|YF07_SCHPO 145 KgfiHIHFVCVDPALQGNGVGGYLLDMAHDLADEYQI---PCFLMASKMAFKMYEHLGYKTS 203
+                           4556***************************977755...69*****************986 PP
+
+>> Acetyltransf_1  Acetyltransferase (GNAT) family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.1   0.0   4.2e-10     4e-06      28     117 .]      61     200 ..      34     200 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 27.1 bits;  conditional E-value: 4.2e-10
+                           HHSTTEEEEEEEETTE.EEEEE........................................................EEEEEETTSTT CS
+        Acetyltransf_1  28 fsleaegllvaeedge.liGfi........................................................sllkipdekgg 59 
+                            ++++ +++va+ d +  +Gf+                                                        +llk+p   +g
+  sp|O14195|YF07_SCHPO  61 YFDPHVTCIVAYTDSNpYVGFLafkkfppdpnvsyrdwilkslnkyysnflywwygaqivqkrfhynelqygaalyktGLLKNP---KG 146
+                           455556666666664448888877777777777777777777777777777777777666666666666666555554444444...59 PP
+
+                           EEEEEEEEESGGGTTSSHHHHHHHHHHHHHHHTTCSEEEEEEETTEHHHHHHHHHTTE CS
+        Acetyltransf_1  60 vayieslaVspeyrgkGlGsaLlealeerareegikkivlaveedndaairlYeklGF 117
+                            ++i+++ V+p+ +g+G+G  Ll+ + + a e +i   +l   +  + a ++Ye lG+
+  sp|O14195|YF07_SCHPO 147 FIHIHFVCVDPALQGNGVGGYLLDMAHDLADEYQIPC-FL---MASKMAFKMYEHLGY 200
+                           ******************************9999988.77...668899999998997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (235 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       404  (0.0210647); expected 383.6 (0.02)
+Passed bias filter:                      360  (0.0187705); expected 383.6 (0.02)
+Passed Vit filter:                        31  (0.00161635); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.59
+# Mc/sec: 1284.40
+//
+[ok]

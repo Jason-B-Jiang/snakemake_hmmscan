@@ -1,0 +1,66 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034635.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034635
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IN88|A0A0R4IN88_DANRE  [L=1694]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.2e-35  122.8  14.2    2.2e-35  122.8  14.2    8.0  1  CENP-F_N         Cenp-F N-terminal domain
+    1.4e-20   72.6   0.0    3.2e-20   71.4   0.0    1.6  1  CENP-F_C_Rb_bdg  Rb-binding domain of kinetochore protein Cen
+
+
+Domain annotation for each model (and alignments):
+>> CENP-F_N  Cenp-F N-terminal domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.8  14.2   2.3e-39   2.2e-35       1     153 [.       1     151 [.       1     171 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 122.8 bits;  conditional E-value: 2.3e-39
+                        CENP-F_N   1 msWaveeWkeGLstkaLqkiqelesqldklkkerqqkqfqLesLeaalqkqkqkvesekteaaaLkrenqsLvesCdnl 79 
+                                     msWa ++W  GL++++Lqk+++l +q +kl ke+qq+q+qL+  e al kqkqk e+ + e aa++re   + e  +  
+  tr|A0A0R4IN88|A0A0R4IN88_DANRE   1 MSWAGDDWTVGLTGHVLQKVKQLLAQNEKLNKEKQQRQLQLDNSEVALHKQKQKHEEVRVELAAVQRELGGVREAAQAE 79 
+                                     9****************************************************************************** PP
+
+                        CENP-F_N  80 ekarqkishdlqvkesqvnylegqLssskkqiekLeqelkrykselersqqallagdvslqpystPqksfatpl 153
+                                      ++r ++shdlqvk  qv  legqL+s+kk ++ L qe+kr  +ele+ q+   +g+++l   stP  + ++p 
+  tr|A0A0R4IN88|A0A0R4IN88_DANRE  80 VRTRERLSHDLQVKTGQVHSLEGQLESAKKLTQSLTQEIKRLEAELEKLQKGNGSGESTLF--STPCWNTSSPW 151
+                                     *********************************************************8776..89988887776 PP
+
+>> CENP-F_C_Rb_bdg  Rb-binding domain of kinetochore protein Cenp-F/LEK1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.4   0.0   3.4e-24   3.2e-20       3      45 ..    1632    1674 ..    1630    1676 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 71.4 bits;  conditional E-value: 3.4e-24
+                 CENP-F_C_Rb_bdg    3 aeqddeefepeGLPevVqkGFADIPsgevsPYIvRRttlklrc 45  
+                                      a+ d++e+ep+GLPevV+kGFADIPsg+++PY++RR++l +  
+  tr|A0A0R4IN88|A0A0R4IN88_DANRE 1632 AAYDETEYEPYGLPEVVMKGFADIPSGPACPYVLRRGLLGTDA 1674
+                                      6789**********************************98765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1694 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      4355  (0.227071); expected 383.6 (0.02)
+Passed bias filter:                      741  (0.038636); expected 383.6 (0.02)
+Passed Vit filter:                       348  (0.0181448); expected 19.2 (0.001)
+Passed Fwd filter:                       142  (0.00740393); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 4.19u 0.38s 00:00:04.57 Elapsed: 00:00:03.20
+# Mc/sec: 1720.03
+//
+[ok]

@@ -1,0 +1,76 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035149.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035149
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|X1WGQ3|X1WGQ3_DANRE  [L=256]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-75  254.3   7.0    1.3e-75  254.1   7.0    1.0  1  SNAD1     Secreted Novel AID/APOBEC-like Deaminase 1
+    1.9e-08   34.5   0.7    2.2e-08   34.2   0.7    1.2  1  SNAD2     Secreted Novel AID/APOBEC-like Deaminase 2
+
+
+Domain annotation for each model (and alignments):
+>> SNAD1  Secreted Novel AID/APOBEC-like Deaminase 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  254.1   7.0   1.3e-79   1.3e-75       1     213 [.      31     238 ..      31     239 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 254.1 bits;  conditional E-value: 1.3e-79
+                   SNAD1   1 aaaLakvvqev....krkglgnkQYAvavllpqaaCtq.nadiedvlseeqladvkdkltndravyvgk.sgrlvaarpreevtask 81 
+                             +aaLak++q++    ++k+++++QYA+a+++pqa Ct+ ++di++v+s+e++a+vkd ltn++++++++ s++++aarp++     k
+  tr|X1WGQ3|X1WGQ3_DANRE  31 PAALAKMIQYFdenvQPKTKPDVQYAIAIVVPQALCTDeQSDIQTVFSTEEAAHVKDLLTNGQTCVLCTnSQNVIAARPTQ-----K 112
+                             69********99999***********************9*****************************989*********8.....8 PP
+
+                   SNAD1  82 kteHaEyvLlggeenspnklkallaaakpnatsClvffslnSPClekClnedgatnIlsflaavfngidnnykaFvFkkiwdedtrk 168
+                             ++eHaE++Ll++ +ns  ++++lla+a+pn  sC+vf+s+nSPC++kC+++++  nIl+ la+++n++++++++FvF+kiw++d+++
+  tr|X1WGQ3|X1WGQ3_DANRE 113 PKEHAEHILLYPLSNS--PMDKLLAKADPN--SCVVFYSYNSPCVTKCIQSTD--NILAGLANWKNIRKDAMNVFVFGKIWQKDAWR 193
+                             9***************..************..*********************..******************************** PP
+
+                   SNAD1 169 kvtrqevlkafkriddylplyrcdn...ngCkrCvetntk.etneCLag 213
+                                 ++++k++ +i+d++plyrcd+   ++Ck+Cve+ntk ++++CL++
+  tr|X1WGQ3|X1WGQ3_DANRE 194 ----KDMAKDLLMIYDQVPLYRCDSsngMQCKNCVEKNTKiVDSFCLPK 238
+                             ....*******************99999*******************97 PP
+
+>> SNAD2  Secreted Novel AID/APOBEC-like Deaminase 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.2   0.7   2.3e-12   2.2e-08      81     195 ..     116     230 ..      48     235 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 34.2 bits;  conditional E-value: 2.3e-12
+                   SNAD2  81 haearllngkggapspvqnllninqdkgcvlfytlnspctrycakvggrynilsrldifngiqnral...vynevyhdefdknetdv 164
+                             hae  ll     + sp+++ll   + + cv+fy+ nspc   c +     nil+ l  ++ i++ a+   v+ ++++   d    d+
+  tr|X1WGQ3|X1WGQ3_DANRE 116 HAEHILLYPL--SNSPMDKLLAKADPNSCVVFYSYNSPCVTKCIQ--STDNILAGLANWKNIRKDAMnvfVFGKIWQ--KDAWRKDM 196
+                             6666666543..5799***************************76..567************998863224555554..34556788 PP
+
+                   SNAD2 165 waawaainrridfyrctnn...qcyrcfeyntgs 195
+                                   i  ++ +yrc      qc  c+e nt  
+  tr|X1WGQ3|X1WGQ3_DANRE 197 AKDLLMIYDQVPLYRCDSSngmQCKNCVEKNTKI 230
+                             899999**********7532459********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (256 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       923  (0.0481256); expected 383.6 (0.02)
+Passed bias filter:                      579  (0.0301893); expected 383.6 (0.02)
+Passed Vit filter:                        41  (0.00213775); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.34u 0.25s 00:00:00.59 Elapsed: 00:00:00.56
+# Mc/sec: 1473.95
+//
+[ok]

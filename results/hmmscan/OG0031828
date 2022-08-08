@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0031828.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0031828
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q7K2J4|Q7K2J4_DROME  [L=603]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.7e-07   30.3   0.1    5.8e-07   29.3   0.1    1.5  1  F-box       F-box domain
+    6.1e-06   26.1   0.0    1.4e-05   25.0   0.0    1.6  1  F-box-like  F-box-like
+
+
+Domain annotation for each model (and alignments):
+>> F-box  F-box domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.3   0.1     6e-11   5.8e-07       3      35 ..     124     156 ..     122     159 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 29.3 bits;  conditional E-value: 6e-11
+                             HSHHHHHHHHHTTS-HHHHHHHTTT-HHHHHHH CS
+                   F-box   3 rLPsevlrhILerLpfsdllalrrVSkgwrili 35 
+                             +LP+e++++IL++++ + + +lr+VS ++++++
+  tr|Q7K2J4|Q7K2J4_DROME 124 DLPNELIEKILSYVDYKKVSNLRLVSHRMNDIC 156
+                             8*****************************998 PP
+
+>> F-box-like  F-box-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.0   0.0   1.4e-09   1.4e-05       3      35 ..     124     156 ..     122     160 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 25.0 bits;  conditional E-value: 1.4e-09
+              F-box-like   3 rLPdEiLlqIFsyLppsdLlrlalVCrrWrrva 35 
+                             +LP+E++ +I+sy++ +  ++l+lV+ r ++++
+  tr|Q7K2J4|Q7K2J4_DROME 124 DLPNELIEKILSYVDYKKVSNLRLVSHRMNDIC 156
+                             7******************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (603 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2012  (0.104906); expected 383.6 (0.02)
+Passed bias filter:                      702  (0.0366025); expected 383.6 (0.02)
+Passed Vit filter:                        89  (0.00464049); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.50u 0.26s 00:00:00.76 Elapsed: 00:00:00.81
+# Mc/sec: 2414.47
+//
+[ok]

@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029113.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029113
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|Q54PT9|MRFA_DICDI  [L=932]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-35  123.5   0.2    1.2e-35  123.5   0.2    5.2  1  NDT80_PhoG     NDT80 / PhoG like DNA-binding  family
+    2.8e-10   40.5   0.1    7.5e-10   39.1   0.1    1.8  1  Peptidase_S74  Chaperone of endosialidase
+
+
+Domain annotation for each model (and alignments):
+>> NDT80_PhoG  NDT80 / PhoG like DNA-binding  family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.5   0.2   1.3e-39   1.2e-35       1     182 [.     370     545 ..     370     549 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 123.5 bits;  conditional E-value: 1.3e-39
+                           EEEEETTS-EEEEEEEEETTS-HHHHHHS-EEEEEE.............TTSCEEEEEEEEEEEEEEE.EETTT....TEEEEEEEE-T CS
+            NDT80_PhoG   1 ewvcyrRNyfqvvasfeleglslekfvkhsftilen.............elesgeklpikyfalkikatknsed....dseielvqhta 72 
+                           +w+++rRN+fq+++++ +++l++e+++ h+ ++l+n             +l+sg+k+pi++++l+ik++kn++d    +se+el+q+++
+  sp|Q54PT9|MRFA_DICDI 370 QWIYCRRNHFQLDITAVYPKLFQETQYGHNGVTLSNssssvdptqtpsyMLISGVKTPINGLTLTIKGIKNRADmsqqESEVELFQTNS 458
+                           7**************************************************************************9999********** PP
+
+                           TGGGS-EE--SSEEB-------HHHHHHTTTSSSHHHHHHHSEEESSEEEEEEEEETTTTSBSTTST.....BEEEEEEEEEEEEE-SS CS
+            NDT80_PhoG  73 krdkgpqfaPeivalvpkelpkhqlireasnvrnesklkkfdeikkvarfeRlqFksatannkrrkq.....qrffkLvvkllaiveke 156
+                           kr+k+ ++aP++va+                           ++ + ++++Rl+F++at nn+rr++     q+f++Lvv+l++     
+  sp|Q54PT9|MRFA_DICDI 459 KREKQGEHAPKPVAI---------------------------QFGSLVSIQRLHFRKATLNNARRHGqpnphQEFNQLVVSLYG----- 515
+                           ***************...........................89***************************************8..... PP
+
+                           SSEEEEEEEEEEE-S-EEEE-S-....GGG CS
+            NDT80_PhoG 157 eskgteikiaelespplIVRGrs....Psn 182
+                           +++g+e++i++++sp+lIVR+++    P++
+  sp|Q54PT9|MRFA_DICDI 516 RCMGQEYCIVSYVSPALIVRTATqvtpPGD 545
+                           9********************986666665 PP
+
+>> Peptidase_S74  Chaperone of endosialidase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.1   0.1   7.8e-14   7.5e-10       1      58 []     767     829 ..     767     829 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 39.1 bits;  conditional E-value: 7.8e-14
+                           -TTTTBSS-EC-.HHH.HHHHCT---EEE-BCCHH.....HHHGGGGS-BEEE--HHHHHHHHHH CS
+         Peptidase_S74   1 SDrRlKtnIrpl.eda.lakvlklrpvtYrykdes.....irkskdsgrrevGfIAQeveavlpe 58 
+                           SD R K +++++ +++ l++v+++++++Y+y++++      ++    ++ + G+IAQ+++ +lp+
+  sp|Q54PT9|MRFA_DICDI 767 SDLRIKYDLKSIdSKSnLDNVNRMKLYDYKYNPQWthmngRDPY--LDNCDRGVIAQDLQRILPN 829
+                           9***********54448****************99555543333..334556***********96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (932 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      3803  (0.19829); expected 383.6 (0.02)
+Passed bias filter:                      679  (0.0354033); expected 383.6 (0.02)
+Passed Vit filter:                       276  (0.0143907); expected 19.2 (0.001)
+Passed Fwd filter:                        98  (0.00510976); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 1.51u 0.28s 00:00:01.79 Elapsed: 00:00:01.51
+# Mc/sec: 2004.37
+//
+[ok]

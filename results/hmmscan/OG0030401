@@ -1,0 +1,56 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030401.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030401
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54XH8|Q54XH8_DICDI  [L=792]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.3e-15   55.6  30.2    1.1e-06   29.2   1.8    6.5  1  FG-GAP_3  FG-GAP-like repeat
+    2.3e-14   52.9  17.6     0.0057   16.6   0.3    5.6  0  FG-GAP    FG-GAP repeat
+    8.9e-05   22.2   8.7       0.42   10.6   0.0    6.0  0  PQQ       PQQ enzyme repeat
+
+
+Domain annotation for each model (and alignments):
+>> FG-GAP_3  FG-GAP-like repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   1.8   1.7e-10   1.1e-06       1      60 [.     433     488 ..     433     489 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 1.7e-10
+                FG-GAP_3   1 DfdgDGdlDlvvandgrlrlyrnngdGtftdvtktslggggngagvavgDlDgDGdlDll 60 
+                             D+d DG+l+l+v++  ++++ +n+ dG   +++++ ++g    + + +gDlDgDG lD++
+  tr|Q54XH8|Q54XH8_DICDI 433 DLDSDGRLELIVIDTKGNVVCFNS-DG--DEIWSQQVTGK-TEFPPSIGDLDGDGILDVV 488
+                             9************96555555554.44..36677766665.5678*************98 PP
+
+>> FG-GAP  FG-GAP repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> PQQ  PQQ enzyme repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (792 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       950  (0.0495333); expected 383.6 (0.02)
+Passed bias filter:                      483  (0.0251838); expected 383.6 (0.02)
+Passed Vit filter:                        39  (0.00203347); expected 19.2 (0.001)
+Passed Fwd filter:                        12  (0.000625684); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.52u 0.22s 00:00:00.74 Elapsed: 00:00:00.71
+# Mc/sec: 3588.45
+//
+[ok]

@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0037786.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0037786
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       XP_002651322.1  [L=252]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.3e-14   53.1   0.5    5.8e-14   52.7   0.5    1.2  1  Glyco_trans_1_4  Glycosyl transferases group 1
+    1.1e-12   47.9   0.0    1.4e-12   47.5   0.0    1.1  1  Glycos_transf_1  Glycosyl transferases group 1
+
+
+Domain annotation for each model (and alignments):
+>> Glyco_trans_1_4  Glycosyl transferases group 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.7   0.5   6.1e-18   5.8e-14       3     131 ..      66     205 ..      64     208 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 52.7 bits;  conditional E-value: 6.1e-18
+                      EEEEES---GG.GTHHHHHHHHHHHH.H.HTEEEEEES---..HHHHHHHT..T-T.TEEEE---..THHHHHHHH-SEEEE--......-.-- CS
+  Glyco_trans_1_4   3 vllfvGrleenvkgvdllleavplirkr.edvrllivGdgprpeeleelae..gleerveftGfv..edlaellaaadvfvaPs......e.gf 84 
+                      ++lf G+l  + + +  +leav++ r++ + vr +ivG+g  +e l e+++  ++ ++v ++G+   e++++l+aaad +++ +      e ++
+   XP_002651322.1  66 TILFAGNL-GEAQDFPTILEAVKATRAElP-VRWVIVGSGRASEWLIEQVAehKM-DNVLLLGRHplEKMPALFAAADALLVSLktnevfEkTI 156
+                      79******.55699************8855.*******99744688777754555.8********9999***************9986653699 PP
+
+                      SHHHHHHHHTT-EEEE-TGGGTTT--..TTSSEE--TT-HHHHHHHHHH CS
+  Glyco_trans_1_4  85 glkllEAmaaglpvVatdvggiaevv..gengllvppgdpealaeailr 131
+                      + k+  ++a+g+p++a   g +a+vv    +g+ +++g+++ lae + +
+   XP_002651322.1 157 PGKVQAYLASGKPIIAMIDGEAARVVveSAAGMACSSGNAQGLAEIVRK 205
+                      *****************555567777777889************98876 PP
+
+>> Glycos_transf_1  Glycosyl transferases group 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.5   0.0   1.5e-16   1.4e-12      15     168 ..      64     220 ..      55     224 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 47.5 bits;  conditional E-value: 1.5e-16
+                      -EEEEEESS-TTTTTHHHHHHHHHCCCCCHCSCEEEEEES-STTHHHHHHHHHHHCTTCGGGEEECCHSSSHHHHHHCESEEEEEESS.....B CS
+  Glycos_transf_1  15 kkiilsvgrlekeKgvdllikafallkkqlnpnvklviaGngeeekelkklaeelelsdnviflgevsredleellknadifvlpsis.....E 103
+                        +il+ g+l + +++ ++++a++  ++  + +v+ vi+G+g   + l +++ e++  dnv +lg+ + e++++l+ +ad+++++  +      
+   XP_002651322.1  64 VFTILFAGNLGEAQDFPTILEAVKATRA--ELPVRWVIVGSGRASEWLIEQVAEHKM-DNVLLLGRHPLEKMPALFAAADALLVSLKTnevfeK 154
+                      5689********************9864..7**************************.***************************999*99999 PP
+
+                      SS-HHHHHHHHTT--EEEETTTTHCHHCHTTTSEEEE-TT-HHHHHHHHHHHHHSH.HHHHHHHHH CS
+  Glycos_transf_1 104 gfGivllEAmaaglpviasnvggpaevvkdgetGllvkpnnaealaeairkllede.elrerlgen 168
+                        +  +  ++a g+p+ia   g +a vv++   G  + ++na+ lae +rk+   +  + e +g+ 
+   XP_002651322.1 155 TIPGKVQAYLASGKPIIAMIDGEAARVVVESAAGMACSSGNAQGLAEIVRKMSALPvRELEGMGQS 220
+                      99*************************************************988776555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (252 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       412  (0.0214818); expected 383.6 (0.02)
+Passed bias filter:                      382  (0.0199176); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.20s 00:00:00.57 Elapsed: 00:00:00.74
+# Mc/sec: 1104.10
+//
+[ok]

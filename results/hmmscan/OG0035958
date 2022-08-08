@@ -1,0 +1,63 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035958.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035958
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A0A0R4IVA0|A0A0R4IVA0_DANRE  [L=103]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+      3e-12   46.0   0.2    5.3e-12   45.2   0.2    1.4  1  S_100      S-100/ICaBP type calcium binding domain
+    1.6e-07   30.5   0.2    1.4e-06   27.5   0.1    2.3  1  EF-hand_1  EF hand
+
+
+Domain annotation for each model (and alignments):
+>> S_100  S-100/ICaBP type calcium binding domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.2   0.2   5.5e-16   5.3e-12       1      39 [.       4      42 ..       4      43 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 45.2 bits;  conditional E-value: 5.5e-16
+                                    HHHHHHHHHHHHHHHHTSSSSTTSEEHHHHHHHHHHHST CS
+                           S_100  1 LEraietlIdvFhkYagkegdkdtLsKkELkeLlekElp 39
+                                    LE+ai ++++vF  Yagk+  k+ Ls +EL+ L+++El 
+  tr|A0A0R4IVA0|A0A0R4IVA0_DANRE  4 LEKAIVSIVEVFEEYAGKDEQKSQLSNAELRDLIKTELK 42
+                                    8************************************95 PP
+
+>> EF-hand_1  EF hand
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.5   0.1   1.4e-10   1.4e-06       2      27 ..      55      80 ..      54      82 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 27.5 bits;  conditional E-value: 1.4e-10
+                                    HHHHHHHHTTTSSSEEEHHHHHHHHH CS
+                       EF-hand_1  2 lkeiFrefDkDgdGkIdfeEfkellk 27
+                                    +ke+++e+Dk++dG ++f Ef ++++
+  tr|A0A0R4IVA0|A0A0R4IVA0_DANRE 55 IKEVMEELDKNHDGEVNFREFSQCIA 80
+                                    79*******************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (103 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1388  (0.0723708); expected 383.6 (0.02)
+Passed bias filter:                      864  (0.0450493); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.33u 0.21s 00:00:00.54 Elapsed: 00:00:00.55
+# Mc/sec: 599.99
+//
+[ok]

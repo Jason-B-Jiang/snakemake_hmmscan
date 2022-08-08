@@ -1,0 +1,68 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029705.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029705
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q7KWM0|Q7KWM0_DICDI  [L=312]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.4e-09   38.4   0.0      4e-09   37.0   0.0    1.8  1  gag-asp_proteas  gag-polyprotein putative aspartyl protease
+    5.7e-07   30.2   0.0    1.2e-06   29.1   0.0    1.5  1  Asp_protease_2   Aspartyl protease
+
+
+Domain annotation for each model (and alignments):
+>> gag-asp_proteas  gag-polyprotein putative aspartyl protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.0   0.0   4.1e-13     4e-09       3      92 .]     151     240 ..     149     240 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 37.0 bits;  conditional E-value: 4.1e-13
+                             EEETTEEEEEEEETT-SS-EEEHHHHHHTTGGGGEB..TT--EE-TTSTT-EEEEEEEEEE.EETTEEEEEEEEEES..SSSEEEEH CS
+         gag-asp_proteas   3 vtingkpvkflvDTGAsstviseelaerlglsrkpdkgkvevktangeveakrvrlesvkiggielrnveavvlege..ldelLLGl 87 
+                             ++i gkp+k lvD+G   +++ +++a++l l+  p+  +v+++ta g++  +++  e +   g  ++n+e+++++++  +d +++Gl
+  tr|Q7KWM0|Q7KWM0_DICDI 151 LNIFGKPIKGLVDSGSLLSILWSSVAKQLSLQVIPK--RVKFTTAYGQEIYSTGSAEAIVSLGTAINNCEFIIVQDKvlNDSCIFGL 235
+                             5788***************************99995..89*****************8766667899*******999745999**** PP
+
+                             HHHHH CS
+         gag-asp_proteas  88 dfLkr 92 
+                             ++Lk+
+  tr|Q7KWM0|Q7KWM0_DICDI 236 SVLKN 240
+                             ***96 PP
+
+>> Asp_protease_2  Aspartyl protease
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.1   0.0   1.3e-10   1.2e-06       3      88 ..     151     235 ..     149     237 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 29.1 bits;  conditional E-value: 1.3e-10
+          Asp_protease_2   3 vtinGkpvrflvDTGasttlispelaeklglkvraskvpvrvsgaggevtadlvrldslklggltlknvpalvldlge.esdglLGm 88 
+                             ++i Gkp++ lvD+G+  +++ +++a++l l+v ++  +v++++a g++  +++ ++ +   g  ++n+++++++++  ++  + G+
+  tr|Q7KWM0|Q7KWM0_DICDI 151 LNIFGKPIKGLVDSGSLLSILWSSVAKQLSLQVIPK--RVKFTTAYGQEIYSTGSAEAIVSLGTAINNCEFIIVQDKVlNDSCIFGL 235
+                             6789*******************************9..6******************9655555999***99998665244566665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (312 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2203  (0.114865); expected 383.6 (0.02)
+Passed bias filter:                      549  (0.0286251); expected 383.6 (0.02)
+Passed Vit filter:                       108  (0.00563116); expected 19.2 (0.001)
+Passed Fwd filter:                        13  (0.000677825); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.23s 00:00:00.70 Elapsed: 00:00:00.77
+# Mc/sec: 1316.16
+//
+[ok]

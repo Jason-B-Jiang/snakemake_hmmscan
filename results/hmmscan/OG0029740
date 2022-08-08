@@ -1,0 +1,62 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0029740.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0029740
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|C7G006|C7G006_DICDI  [L=771]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-12   46.5   2.5    3.1e-12   46.5   2.5    2.9  1  TIG       IPT/TIG domain
+    8.4e-06   26.0   0.0    3.3e-05   24.1   0.0    2.0  1  TIG_SUH   TIG domain
+
+
+Domain annotation for each model (and alignments):
+>> TIG  IPT/TIG domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.5   2.5   3.2e-16   3.1e-12       1      78 [.     686     761 ..     686     767 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 46.5 bits;  conditional E-value: 3.2e-16
+                             --EEEESS-EEETT--SEEEEEES--...TT--EEEEE-------.----EE-EEE-----...------EEEEEE.TTEEE CS
+                     TIG   1 PvissisPnsgsasgGttititGtnFgtnsedssvtiggtectvtssvssttlvcqtPpga...sgllnvsvlvdg.aqlss 78 
+                             P++s+i P+s +a   t++ i G+nF +n+ d++v++g+t +t+t +  + t++cq+Pp a   +  +nv+++v +  +++s
+  tr|C7G006|C7G006_DICDI 686 PTVSEIIPASAKA--RTRVVILGSNF-SNTGDLKVYFGSTSVTAT-FYEQGTIICQVPPNApnqP--SNVNIKVSNdGSQCS 761
+                             9*******99999..***********.******************.***************6444..555555555324444 PP
+
+>> TIG_SUH  TIG domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.0   3.4e-09   3.3e-05       2      60 ..     686     746 ..     685     762 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 3.4e-09
+                 TIG_SUH   2 pvvsslelnkkseeatleLtGenftrd..lkVWfgdieaeteyrsrellvctvPdleelks 60 
+                             p+vs++   + + ++ + + G+nf++   lkV+fg++++  ++  + +++c+vP     + 
+  tr|C7G006|C7G006_DICDI 686 PTVSEIIPASAKARTRVVILGSNFSNTgdLKVYFGSTSVTATFYEQGTIICQVPPNAPNQP 746
+                             6777777777888999********88555**********7777779********7655444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (771 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      5439  (0.283591); expected 383.6 (0.02)
+Passed bias filter:                      774  (0.0403566); expected 383.6 (0.02)
+Passed Vit filter:                       287  (0.0149643); expected 19.2 (0.001)
+Passed Fwd filter:                        37  (0.00192919); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.89u 0.24s 00:00:01.12 Elapsed: 00:00:00.91
+# Mc/sec: 2746.68
+//
+[ok]

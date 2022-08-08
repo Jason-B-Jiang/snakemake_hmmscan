@@ -1,0 +1,74 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030185.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030185
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|B0G184|B0G184_DICDI  [L=334]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.4e-14   53.4  30.4    0.00015   22.0   3.4    3.3  0  Pentapeptide_4  Pentapeptide repeats (9 copies)
+    2.1e-10   40.1  19.8    3.6e-05   23.4   3.2    4.3  2  Pentapeptide    Pentapeptide repeats (8 copies)
+    3.9e-08   33.4  24.3    2.2e-06   27.8   5.3    3.9  1  Pentapeptide_3  Pentapeptide repeats (9 copies)
+
+
+Domain annotation for each model (and alignments):
+>> Pentapeptide_4  Pentapeptide repeats (9 copies)
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Pentapeptide  Pentapeptide repeats (8 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.3   0.6   1.1e-07    0.0007       1      36 [.     198     233 ..     198     234 .. 0.96
+   2 !   23.4   3.2   5.7e-09   3.6e-05       1      33 [.     282     314 ..     278     315 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 19.3 bits;  conditional E-value: 1.1e-07
+                             -B-TT-B-CCSCCEECCCESEEECT-B-TT-EECCE CS
+            Pentapeptide   1 AnLsgAnLsganLsganlsgAnLtgAnlsgAdLsga 36 
+                             ++++++n   ++++++ + ++ + ++n++g+d+s++
+  tr|B0G184|B0G184_DICDI 198 CIFQECNINSSSFIESAFIDCIFMNCNINGCDFSKS 233
+                             99*******************************986 PP
+
+  == domain 2  score: 23.4 bits;  conditional E-value: 5.7e-09
+                             -B-TT-B-CCSCCEECCCESEEECT-B-TT-EE CS
+            Pentapeptide   1 AnLsgAnLsganLsganlsgAnLtgAnlsgAdL 33 
+                             +nL++A++s++nLs++ +  + L++An+  A +
+  tr|B0G184|B0G184_DICDI 282 CNLTNAQFSNCNLSKTRFKISQLNYANFVSAYF 314
+                             99************************9998876 PP
+
+>> Pentapeptide_3  Pentapeptide repeats (9 copies)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.8   5.3   3.5e-10   2.2e-06       2      48 .]     191     234 ..     190     234 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 27.8 bits;  conditional E-value: 3.5e-10
+          Pentapeptide_3   2 sganFsgaadFrgatFsgaasFrnadFgsadFrgarFtgdvdFegat 48 
+                             ++++F+g+  F +++ +++ sF ++ F ++ F +++++ ++dF+ +t
+  tr|B0G184|B0G184_DICDI 191 QHTRFEGC-IFQECNINSS-SFIESAFIDCIFMNCNIN-GCDFSKST 234
+                             589*****.**********.******************.*****987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (334 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1816  (0.0946869); expected 383.6 (0.02)
+Passed bias filter:                      565  (0.0294593); expected 383.6 (0.02)
+Passed Vit filter:                        81  (0.00422337); expected 19.2 (0.001)
+Passed Fwd filter:                        15  (0.000782105); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.54u 0.24s 00:00:00.78 Elapsed: 00:00:00.87
+# Mc/sec: 1238.89
+//
+[ok]

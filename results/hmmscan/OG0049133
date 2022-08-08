@@ -1,0 +1,71 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0049133.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0049133
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Q12365  [L=385]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.9e-53  179.3   1.0    8.9e-53  179.3   1.0    2.6  1  BBP1_N    Spindle pole body component BBP1, Mps2-binding prot
+    4.3e-28   98.5  24.6    4.3e-28   98.5  24.6    1.9  1  BBP1_C    Spindle pole body component BBP1, C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> BBP1_N  Spindle pole body component BBP1, Mps2-binding protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  179.3   1.0   9.3e-57   8.9e-53       1     152 []      10     170 ..      10     170 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 179.3 bits;  conditional E-value: 9.3e-57
+  BBP1_N   1 ggisglfkWTkDALFGskvsPsrkyke.........faqDDTNyklkkkeknkeksseesrsRsnSwsgldssfykkydLLedseeeeqd.....dskrkkkl 89 
+             ggi glfkWTkDALFG+++sPs+kyk+         +aqDDTN+++k+   n++++++++ sRsnSwsglds++++ky+LL++++e+  +     d+++k+++
+  Q12365  10 GGIFGLFKWTKDALFGTDISPSMKYKDqeerrdrsrYAQDDTNFSMKF--GNDSNRRSTNLSRSNSWSGLDSTLHRKYELLPEYNENGFNsivngDHHSKERI 110
+             79*******************************************998..7778899999****************************999************ PP
+
+  BBP1_N  90 esLlspvelkpkevsneankeptDTFankknnnrskaeslddeaikfkspkkddpllskLFkk 152
+             +sL+sp++++p+e+ ++   eptDTF ++ +++r+++++l++++i+f +p++ddpllskLF+k
+  Q12365 111 RSLRSPAPIVPREPLRN---EPTDTFGHRLHTKRRTINELSNSQIPFIPPQEDDPLLSKLFNK 170
+             *************9988...*****************************************97 PP
+
+>> BBP1_C  Spindle pole body component BBP1, C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.5  24.6   4.4e-32   4.3e-28       1     164 [.     218     383 ..     218     385 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 98.5 bits;  conditional E-value: 4.4e-32
+  BBP1_C   1 dytseYlelldkldkNsraLelldkdlrerkeevkeqeesykkkYlelrneLinelkqskklyDnYykLysKYqelkkiskesldLqskitnlekqlvdqaie 103
+             +y + Y +l+ ++d+Nsr+Le+l +d+re++e+ +++e++yk+ Y+e+r+eL+nelk+sk l+ nYy L +KY+ lkk+  ++++ + ++++ +++l ++   
+  Q12365 218 EYKKAYFDLFAQMDLNSRDLEDLCEDVREQREQFHRNEQTYKQAYEEMRAELVNELKKSKTLFENYYSLGQKYKSLKKVLDQTISHEAELATSRERLYQEEDL 320
+             68899************************************************************************************************** PP
+
+  BBP1_C 104 kdreikkleekilslelrnkeleekrekdkikYesrikeLerklleketr..eksssspafst 164
+             k+ ei++l++++ +lel+  +l+ ++ +++ +Yes i++L  +l  ++++  ++s +s+ fst
+  Q12365 321 KNFEIQTLKQRLSDLELKYTNLQIEKDMQRDNYESEIHDLLLQLSLRNNErkDTSAGSNIFST 383
+             ***************************************999888776653367777777765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (385 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1751  (0.0912978); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        58  (0.00302414); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.24s 00:00:00.68 Elapsed: 00:00:00.60
+# Mc/sec: 2065.05
+//
+[ok]

@@ -1,0 +1,60 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0030701.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0030701
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q54LP5|Q54LP5_DICDI  [L=1019]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-09   37.1  10.8    0.00019   21.7   0.2    5.9  0  Kelch_6   Kelch motif
+      6e-08   32.8  12.6      6e-08   32.8  12.6    2.1  1  zf-B_box  B-box zinc finger
+    1.5e-06   28.5   9.4      0.024   15.0   0.0    4.7  0  Kelch_3   Galactose oxidase, central domain
+    2.9e-05   24.0  11.7     0.0079   16.2   0.2    5.5  0  Kelch_4   Galactose oxidase, central domain
+
+
+Domain annotation for each model (and alignments):
+>> Kelch_6  Kelch motif
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> zf-B_box  B-box zinc finger
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.8  12.6   1.2e-11     6e-08       2      40 ..       7      45 ..       6      47 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 32.8 bits;  conditional E-value: 1.2e-11
+                zf-B_box  2 eetkCpeHkekpatlyCtdCqqplCeeCstgaHrgHevv 40
+                            +++ C++Hke+++  +C++C++++C+ C  g H+gH+ +
+  tr|Q54LP5|Q54LP5_DICDI  7 RQKECKIHKEQKYYSFCQECECLVCKACLLGVHKGHKHK 45
+                            5789********************************975 PP
+
+>> Kelch_3  Galactose oxidase, central domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Kelch_4  Galactose oxidase, central domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1019 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      6186  (0.32254); expected 383.6 (0.02)
+Passed bias filter:                     1142  (0.0595443); expected 383.6 (0.02)
+Passed Vit filter:                       824  (0.0429637); expected 19.2 (0.001)
+Passed Fwd filter:                       239  (0.0124615); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 3.24u 0.47s 00:00:03.71 Elapsed: 00:00:03.35
+# Mc/sec: 990.93
+//
+[ok]

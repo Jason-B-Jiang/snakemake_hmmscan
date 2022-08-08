@@ -1,0 +1,713 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0004023.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0004023
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P34714|SPRC_CAEEL  [L=264]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.5e-37  128.5   3.4    1.5e-37  128.5   3.4    1.7  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    6.4e-14   51.9   9.6    6.4e-14   51.9   9.6    2.4  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    7.3e-06   26.2   7.6    7.3e-06   26.2   7.6    3.2  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  128.5   3.4   2.3e-41   1.5e-37       2     113 .]     139     252 ..     138     252 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 128.5 bits;  conditional E-value: 2.3e-41
+          SPARC_Ca_bdg   2 eeCteeelaelpeRlrdWlkvlleelkereeek.eeleelekkeeekelkeckesvawkFsklDtn.kdkvlsksELaslraplvkleh 88 
+                           +eCtee++a++peR+ dWl+++++elk+r+e +  e+eel +++e++ +k+++++v wkF++lDt+ +dk++s++EL +++ap++++e+
+  sp|P34714|SPRC_CAEEL 139 DECTEEHMAQFPERMADWLFQVMKELKKRRELHkLEWEELLSEAENDDEKKHVYPVIWKFCELDTKpHDKSVSHHELIPITAPVIPMES 227
+                           69**************************9998725789999************************************************ PP
+
+          SPARC_Ca_bdg  89 CikpflescDankdkkislkEwceC 113
+                           Cikpfle cDan+d++is kEw++C
+  sp|P34714|SPRC_CAEEL 228 CIKPFLEGCDANNDGNISIKEWGKC 252
+                           ************************* PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.9   9.6     1e-17   6.4e-14       1      49 []      75     135 ..      75     135 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 51.9 bits;  conditional E-value: 1e-17
+                           EECCCCCT----...-EEETTSEEESSHHHHHHHHHHHTTT--...........EEEESS- CS
+               Kazal_2   1 nceckCpeleyd...pVCGsDgktYtseCkLqaagCllkrksk...ke......lkydGsC 49 
+                           +c++kCpel++d   +VC+++++t+ts+C+L++++Cl+krksk   k+      l+y G+C
+  sp|P34714|SPRC_CAEEL  75 ECISKCPELDGDpmdKVCANNNQTFTSLCDLYRERCLCKRKSKecsKAfnakvhLEYLGEC 135
+                           69**********9955***************************99833445678******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.2   7.6   1.1e-09   7.3e-06       1      22 []      53      74 ..      53      74 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 26.2 bits;  conditional E-value: 1.1e-09
+                  FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                          Ce++qC++GK+C v k+g+P C
+  sp|P34714|SPRC_CAEEL 53 CEDHQCGWGKECVVGKKGEPTC 74
+                          ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (264 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1271  (0.0662704); expected 383.6 (0.02)
+Passed bias filter:                      618  (0.0322227); expected 383.6 (0.02)
+Passed Vit filter:                        62  (0.0032327); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.36u 0.19s 00:00:00.55 Elapsed: 00:00:00.66
+# Mc/sec: 1287.10
+//
+Query:       tr|U4PF73|U4PF73_CAEEL  [L=177]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    5.2e-38  130.0   3.4    5.2e-38  130.0   3.4    1.6  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    2.7e-11   43.5   9.5    3.4e-11   43.2   6.3    2.4  1  Kazal_2       Kazal-type serine protease inhibitor domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.0   3.4   5.4e-42   5.2e-38       2     113 .]      52     165 ..      51     165 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 130.0 bits;  conditional E-value: 5.4e-42
+            SPARC_Ca_bdg   2 eeCteeelaelpeRlrdWlkvlleelkereeek.eeleelekkeeekelkeckesvawkFsklDtn.kdkvlsksELaslraplvkl 86 
+                             +eCtee++a++peR+ dWl+++++elk+r+e +  e+eel +++e++ +k+++++v wkF++lDt+ +dk++s++EL +++ap++++
+  tr|U4PF73|U4PF73_CAEEL  52 DECTEEHMAQFPERMADWLFQVMKELKKRRELHkLEWEELLSEAENDDEKKHVYPVIWKFCELDTKpHDKSVSHHELIPITAPVIPM 138
+                             69**************************9998725789999********************************************** PP
+
+            SPARC_Ca_bdg  87 ehCikpflescDankdkkislkEwceC 113
+                             e+Cikpfle cDan+d++is kEw++C
+  tr|U4PF73|U4PF73_CAEEL 139 ESCIKPFLEGCDANNDGNISIKEWGKC 165
+                             *************************** PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.2   6.3   3.6e-15   3.4e-11      12      49 .]       2      48 ..       1      48 [. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 43.2 bits;  conditional E-value: 3.6e-15
+                            --EEETTSEEESSHHHHHHHHHHHTTT--...........EEEESS- CS
+                 Kazal_2 12 dpVCGsDgktYtseCkLqaagCllkrksk...ke......lkydGsC 49
+                            d+VC+++++t+ts+C+L++++Cl+krksk   k+      l+y G+C
+  tr|U4PF73|U4PF73_CAEEL  2 DKVCANNNQTFTSLCDLYRERCLCKRKSKecsKAfnakvhLEYLGEC 48
+                            67***************************99833445678******* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (177 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       959  (0.0500026); expected 383.6 (0.02)
+Passed bias filter:                      474  (0.0247145); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.31u 0.19s 00:00:00.50 Elapsed: 00:00:00.62
+# Mc/sec: 923.61
+//
+Query:       tr|O97365|O97365_DROME  [L=304]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.7e-39  133.7   2.6    7.5e-39  132.7   2.6    1.5  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.7   2.6   3.9e-43   7.5e-39       2     113 .]     169     280 ..     168     280 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 132.7 bits;  conditional E-value: 3.9e-43
+            SPARC_Ca_bdg   2 eeCteeelaelpeRlrdWlkvlleelkereeekeeleelekkeeekelkeckesvawkFsklDtnkdkvlsksELaslraplvkleh 88 
+                             ++C+ e+l+++p+R+rdWl++++++l+er+e +e+++++e ++e+++++++++++ wk+++lD ++d+++s++EL ++raplv+leh
+  tr|O97365|O97365_DROME 169 RSCEGEDLKDFPRRMRDWLFNVMRDLAERDELTEHYMQMELEAETNNSRRWSNAAVWKWCDLDGDTDRSVSRHELFPIRAPLVSLEH 255
+                             58************************************************************************************* PP
+
+            SPARC_Ca_bdg  89 CikpflescDankdkkislkEwceC 113
+                             Ci+pflescD+nkd++i+l Ew+ C
+  tr|O97365|O97365_DROME 256 CIAPFLESCDSNKDHRITLVEWGAC 280
+                             ************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (304 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       966  (0.0503676); expected 383.6 (0.02)
+Passed bias filter:                      512  (0.0266959); expected 383.6 (0.02)
+Passed Vit filter:                        44  (0.00229418); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.16s 00:00:00.54 Elapsed: 00:00:00.60
+# Mc/sec: 1640.84
+//
+Query:       tr|B3DJ32|B3DJ32_DANRE  [L=606]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    5.2e-37  126.7   0.3    5.2e-37  126.7   0.3    3.2  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    9.5e-12   44.8   5.5    9.5e-12   44.8   5.5    2.3  1  Kazal_1       Kazal-type serine protease inhibitor domain
+    1.9e-10   40.8   3.4    1.9e-10   40.8   3.4    2.7  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    4.3e-10   39.7   7.2    4.3e-10   39.7   7.2    2.0  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.7   0.3   1.1e-40   5.2e-37       3     113 .]     456     592 ..     454     592 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 126.7 bits;  conditional E-value: 1.1e-40
+            SPARC_Ca_bdg   3 eCteeelaelpeRlrdWlkvlleelkereeek.........................eeleelekkeeekelkeckesvawkFsklD 64 
+                              C e+el ++p R+rdWlk++l +l+e+++ +                         ++ +e  ++++ek+++++ ++v+w+F ++D
+  tr|B3DJ32|B3DJ32_DANRE 456 PCVESELVQFPLRMRDWLKNVLLQLYEHDSMSpgfltakqrirvqkiyeserrlhagDHPVEILQQDFEKNYNMYIYPVHWQFAQMD 542
+                             6*****************************99******************************************************* PP
+
+            SPARC_Ca_bdg  65 tn.kdkvlsksELaslraplvklehCikpflescDankdkkislkEwceC 113
+                             ++ +d++l++sELa+lr plv++ehC++ f++ cDa+kdk +s kEwc+C
+  tr|B3DJ32|B3DJ32_DANRE 543 QHpSDRFLTHSELAPLRVPLVPMEHCTSVFFQMCDADKDKLVSFKEWCSC 592
+                             ************************************************** PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.8   5.5     2e-15   9.5e-12       1      49 []     397     451 ..     397     451 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 44.8 bits;  conditional E-value: 2e-15
+                             CCCCTTTSEC...SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+                 Kazal_1   1 CseykekaCp...reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                             C+e++e  Cp    ++e vCGtD+kTY+++C+l    C ++g k g+ l+l++ G C
+  tr|B3DJ32|B3DJ32_DANRE 397 CQEPTE--CPpnvNDFEHVCGTDNKTYDSSCHLfatkCGLEGtKLGHRLHLDYTGSC 451
+                             999999..**********************************999************ PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.8   3.4   3.9e-14   1.9e-10       3      49 .]     400     451 ..     398     451 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 40.8 bits;  conditional E-value: 3.9e-14
+                             CCCCCT----..-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+                 Kazal_2   3 eckCpeleyd..pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                             +  Cp +  d  +VCG+D+ktY+s C+L+a++C l+ ++  ++  l+y GsC
+  tr|B3DJ32|B3DJ32_DANRE 400 PTECPPNVNDfeHVCGTDNKTYDSSCHLFATKCGLEGTKLgHRlhLDYTGSC 451
+                             568**99999967********************887776666677******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.7   7.2   8.9e-14   4.3e-10       1      22 []     374     395 ..     374     395 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 39.7 bits;  conditional E-value: 8.9e-14
+                    FOLN   1 CenfqCKrGKvCkvDkegkPrC 22 
+                             Cenf+CKrGK+Ck+++e+kP C
+  tr|B3DJ32|B3DJ32_DANRE 374 CENFRCKRGKTCKLNDENKPLC 395
+                             *********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (606 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2321  (0.121018); expected 383.6 (0.02)
+Passed bias filter:                      528  (0.0275301); expected 383.6 (0.02)
+Passed Vit filter:                        99  (0.0051619); expected 19.2 (0.001)
+Passed Fwd filter:                        37  (0.00192919); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.80u 0.20s 00:00:01.00 Elapsed: 00:00:00.89
+# Mc/sec: 2214.68
+//
+Query:       tr|Q6PVV8|Q6PVV8_DANRE  [L=291]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.2e-38  131.1   0.8    4.9e-38  130.0   0.8    1.6  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    2.5e-13   49.9   8.0    4.6e-13   49.0   4.9    2.4  1  Kazal_1       Kazal-type serine protease inhibitor domain
+    1.2e-11   44.7   1.9    1.2e-11   44.7   1.9    2.5  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    7.3e-10   38.9   7.4    7.3e-10   38.9   7.4    2.0  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.0   0.8     1e-41   4.9e-38       3     113 .]     142     277 ..     140     277 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 130.0 bits;  conditional E-value: 1e-41
+            SPARC_Ca_bdg   3 eCteeelaelpeRlrdWlkvlleelkereeek........................eeleelekkeeekelkeckesvawkFsklDt 65 
+                              C e+el+e+p R+rdWlk++l +l+er+e++                        +++ +l + ++ek+++++  +v+w+F +lD+
+  tr|Q6PVV8|Q6PVV8_DANRE 142 PCLENELNEFPLRMRDWLKNVLVTLYERDEDNnlltekqklrvkkiyenekrlqagDHSLDLLALDFEKNYNMYIFPVHWQFGQLDQ 228
+                             6************************************************************************************** PP
+
+            SPARC_Ca_bdg  66 n.kdkvlsksELaslraplvklehCikpflescDankdkkislkEwceC 113
+                             + +d++ls++ELa+lrapl+++ehC++ f+e+cDa++dk i+l+Ew++C
+  tr|Q6PVV8|Q6PVV8_DANRE 229 HpIDGFLSHTELAPLRAPLIPMEHCTTSFFEQCDADQDKYIALEEWANC 277
+                             ************************************************9 PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.0   4.9   9.6e-17   4.6e-13       1      49 []      83     137 ..      83     137 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 49.0 bits;  conditional E-value: 9.6e-17
+                             CCCCTTTSEC...SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+                 Kazal_1   1 CseykekaCp...reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                             C+++ +  Cp    ++e vCGt++kTY+++C++    C+++g kkg+kl++++ G+C
+  tr|Q6PVV8|Q6PVV8_DANRE  83 CQDPLT--CPapiGDFEHVCGTNNKTYESSCHFfatkCSLEGtKKGHKLHMDYIGPC 137
+                             889988..**9999******************************************* PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.7   1.9   2.4e-15   1.2e-11       5      49 .]      88     137 ..      84     137 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 44.7 bits;  conditional E-value: 2.4e-15
+                             CCCT----..-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+                 Kazal_2   5 kCpeleyd..pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                             +Cp + +d  +VCG+++ktY s C+++a++C+l+ ++k ++   +y+G+C
+  tr|Q6PVV8|Q6PVV8_DANRE  88 TCPAPIGDfeHVCGTNNKTYESSCHFFATKCSLEGTKKgHKlhMDYIGPC 137
+                             79999999967***************************84468******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.9   7.4   1.5e-13   7.3e-10       1      22 []      60      81 ..      60      81 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 38.9 bits;  conditional E-value: 1.5e-13
+                    FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                            C n++CK+GKvC+vD++++P+C
+  tr|Q6PVV8|Q6PVV8_DANRE 60 CLNHHCKKGKVCEVDDSNQPMC 81
+                            ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (291 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       734  (0.038271); expected 383.6 (0.02)
+Passed bias filter:                      459  (0.0239324); expected 383.6 (0.02)
+Passed Vit filter:                        46  (0.00239846); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.40u 0.15s 00:00:00.55 Elapsed: 00:00:00.63
+# Mc/sec: 1485.30
+//
+Query:       tr|E9QJA9|E9QJA9_DANRE  [L=237]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.3e-15   57.8   0.1    3.4e-15   56.4   0.1    1.7  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    1.3e-13   50.8   4.9    3.3e-13   49.5   4.9    1.7  1  Kazal_1       Kazal-type serine protease inhibitor domain
+    8.2e-12   45.2   1.9    8.2e-12   45.2   1.9    2.1  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    5.6e-10   39.3   7.4    5.6e-10   39.3   7.4    1.9  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.4   0.1   7.2e-19   3.4e-15       3      70 ..     142     234 ..     140     236 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 56.4 bits;  conditional E-value: 7.2e-19
+            SPARC_Ca_bdg   3 eCteeelaelpeRlrdWlkvlleelkereeek........................eeleelekkeeekelkeckesvawkFsklDt 65 
+                              C e+el+e+p R+rdWlk++l +l+er+e++                        +++ +l + ++ek+++++  +v+w+F +lD+
+  tr|E9QJA9|E9QJA9_DANRE 142 PCLENELNEFPLRMRDWLKNVLVTLYERDEDNnlltekqklrvkkiyenekrlqagDHSLDLLALDFEKNYNMYIFPVHWQFGQLDQ 228
+                             6************************************************************************************** PP
+
+            SPARC_Ca_bdg  66 n.kdkv 70 
+                             + +d++
+  tr|E9QJA9|E9QJA9_DANRE 229 HpIDGY 234
+                             *99986 PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   49.5   4.9   6.8e-17   3.3e-13       1      49 []      83     137 ..      83     137 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 49.5 bits;  conditional E-value: 6.8e-17
+                             CCCCTTTSEC...SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+                 Kazal_1   1 CseykekaCp...reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                             C+++ +  Cp    ++e vCGt++kTY+++C++    C+++g kkg+kl++++ G+C
+  tr|E9QJA9|E9QJA9_DANRE  83 CQDPLT--CPapiGDFEHVCGTNNKTYESSCHFfatkCSLEGtKKGHKLHMDYIGPC 137
+                             889988..**9999******************************************* PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.2   1.9   1.7e-15   8.2e-12       5      49 .]      88     137 ..      84     137 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 45.2 bits;  conditional E-value: 1.7e-15
+                             CCCT----..-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+                 Kazal_2   5 kCpeleyd..pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                             +Cp + +d  +VCG+++ktY s C+++a++C+l+ ++k ++   +y+G+C
+  tr|E9QJA9|E9QJA9_DANRE  88 TCPAPIGDfeHVCGTNNKTYESSCHFFATKCSLEGTKKgHKlhMDYIGPC 137
+                             79999999967***************************84468******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   7.4   1.2e-13   5.6e-10       1      22 []      60      81 ..      60      81 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 1.2e-13
+                    FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                            C n++CK+GKvC+vD++++P+C
+  tr|E9QJA9|E9QJA9_DANRE 60 CLNHHCKKGKVCEVDDSNQPMC 81
+                            ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (237 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       805  (0.041973); expected 383.6 (0.02)
+Passed bias filter:                      501  (0.0261223); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.62
+# Mc/sec: 1238.27
+//
+Query:       tr|E9QCC2|E9QCC2_DANRE  [L=157]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      6e-14   51.9   4.9    1.5e-13   50.6   4.9    1.6  1  Kazal_1   Kazal-type serine protease inhibitor domain
+    3.8e-12   46.2   1.9    3.8e-12   46.2   1.9    2.2  1  Kazal_2   Kazal-type serine protease inhibitor domain
+    3.2e-10   40.1   7.4    3.2e-10   40.1   7.4    2.1  1  FOLN      Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.6   4.9   2.3e-17   1.5e-13       1      49 []      88     142 ..      88     142 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 50.6 bits;  conditional E-value: 2.3e-17
+                             CCCCTTTSEC...SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+                 Kazal_1   1 CseykekaCp...reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                             C+++ +  Cp    ++e vCGt++kTY+++C++    C+++g kkg+kl++++ G+C
+  tr|E9QCC2|E9QCC2_DANRE  88 CQDPLT--CPapiGDFEHVCGTNNKTYESSCHFfatkCSLEGtKKGHKLHMDYIGPC 142
+                             889998..**9999******************************************* PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.2   1.9     6e-16   3.8e-12       5      49 .]      93     142 ..      89     142 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 46.2 bits;  conditional E-value: 6e-16
+                             CCCT----..-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+                 Kazal_2   5 kCpeleyd..pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                             +Cp + +d  +VCG+++ktY s C+++a++C+l+ ++k ++   +y+G+C
+  tr|E9QCC2|E9QCC2_DANRE  93 TCPAPIGDfeHVCGTNNKTYESSCHFFATKCSLEGTKKgHKlhMDYIGPC 142
+                             79999999967***************************84468******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   7.4     5e-14   3.2e-10       1      22 []      65      86 ..      65      86 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 5e-14
+                    FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                            C n++CK+GKvC+vD++++P+C
+  tr|E9QCC2|E9QCC2_DANRE 65 CLNHHCKKGKVCEVDDSNQPMC 86
+                            ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (157 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       722  (0.0376453); expected 383.6 (0.02)
+Passed bias filter:                      425  (0.0221597); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.33u 0.16s 00:00:00.49 Elapsed: 00:00:00.67
+# Mc/sec: 754.27
+//
+Query:       tr|E9QJC0|E9QJC0_DANRE  [L=109]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.4e-11   41.9   7.4    1.8e-10   40.9   7.4    1.6  1  FOLN      Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.9   7.4   9.3e-15   1.8e-10       1      22 []      72      93 ..      72      93 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 40.9 bits;  conditional E-value: 9.3e-15
+                    FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                            C n++CK+GKvC+vD++++P+C
+  tr|E9QJC0|E9QJC0_DANRE 72 CLNHHCKKGKVCEVDDSNQPMC 93
+                            ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (109 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       556  (0.02899); expected 383.6 (0.02)
+Passed bias filter:                      366  (0.0190834); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.36u 0.16s 00:00:00.52 Elapsed: 00:00:00.62
+# Mc/sec: 569.10
+//
+Query:       tr|A0A0R4IIF9|A0A0R4IIF9_DANRE  [L=246]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (246 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2333  (0.121643); expected 383.6 (0.02)
+Passed bias filter:                      614  (0.0320142); expected 383.6 (0.02)
+Passed Vit filter:                        83  (0.00432765); expected 19.2 (0.001)
+Passed Fwd filter:                        33  (0.00172063); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.64u 0.19s 00:00:00.83 Elapsed: 00:00:00.79
+# Mc/sec: 1013.08
+//
+Query:       sp|P09486|SPRC_HUMAN  [L=303]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      1e-39  135.5   0.2    2.9e-39  134.0   0.2    1.8  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    1.4e-13   50.7   4.4    1.4e-13   50.7   4.4    2.6  1  Kazal_1       Kazal-type serine protease inhibitor domain
+    2.8e-11   43.5   2.2    2.8e-11   43.5   2.2    2.9  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    5.2e-10   39.4   8.3    1.7e-09   37.8   8.3    2.0  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  134.0   0.2   6.1e-43   2.9e-39       3     113 .]     154     289 ..     152     289 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 134.0 bits;  conditional E-value: 6.1e-43
+          SPARC_Ca_bdg   3 eCteeelaelpeRlrdWlkvlleelkereeek........................eeleelekkeeekelkeckesvawkFsklDtn. 66 
+                            C ++el+e+p R+rdWlk++l +l+er+e++                        ++ +el ++++ek+++++  +v+w+F +lD++ 
+  sp|P09486|SPRC_HUMAN 154 PCLDSELTEFPLRMRDWLKNVLVTLYERDEDNnlltekqklrvkkihenekrleagDHPVELLARDFEKNYNMYIFPVHWQFGQLDQHp 242
+                           7**************************************************************************************** PP
+
+          SPARC_Ca_bdg  67 kdkvlsksELaslraplvklehCikpflescDankdkkislkEwceC 113
+                           +d++ls++ELa+lrapl+++ehC+++f+e+cD+++dk i+l Ew+ C
+  sp|P09486|SPRC_HUMAN 243 IDGYLSHTELAPLRAPLIPMEHCTTRFFETCDLDNDKYIALDEWAGC 289
+                           *********************************************99 PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.7   4.4     3e-17   1.4e-13       1      49 []      95     149 ..      95     149 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 50.7 bits;  conditional E-value: 3e-17
+                           CCCCTTTSEC...SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+               Kazal_1   1 CseykekaCp...reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                           C+++++  Cp    e+e+vC++D+kT++++C++    C+++g kkg+kl+l++ G+C
+  sp|P09486|SPRC_HUMAN  95 CQDPTS--CPapiGEFEKVCSNDNKTFDSSCHFfatkCTLEGtKKGHKLHLDYIGPC 149
+                           999999..**9999******************************************* PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.5   2.2   5.8e-15   2.8e-11       3      49 .]      98     149 ..      96     149 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 43.5 bits;  conditional E-value: 5.8e-15
+                           CCCCCT----..-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+               Kazal_2   3 eckCpeleyd..pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                           + +Cp + ++  +VC +D+kt++s C+++a++C l+ ++k ++  l+y+G+C
+  sp|P09486|SPRC_HUMAN  98 PTSCPAPIGEfeKVCSNDNKTFDSSCHFFATKCTLEGTKKgHKlhLDYIGPC 149
+                           679***9999966***************************84468******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.8   8.3   3.6e-13   1.7e-09       1      22 []      72      93 ..      72      93 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 37.8 bits;  conditional E-value: 3.6e-13
+                  FOLN  1 CenfqCKrGKvCkvDkegkPrC 22
+                          C+n++CK+GKvC++D+ ++P+C
+  sp|P09486|SPRC_HUMAN 72 CQNHHCKHGKVCELDENNTPMC 93
+                          ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (303 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       814  (0.0424423); expected 383.6 (0.02)
+Passed bias filter:                      489  (0.0254966); expected 383.6 (0.02)
+Passed Vit filter:                        50  (0.00260702); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.40u 0.17s 00:00:00.57 Elapsed: 00:00:00.63
+# Mc/sec: 1561.79
+//
+Query:       sp|Q14515|SPRL1_HUMAN  [L=664]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    7.5e-41  139.1   0.4    7.5e-41  139.1   0.4    3.7  1  SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca
+    1.7e-13   50.4   4.6    1.7e-13   50.4   4.6    2.3  1  Kazal_1       Kazal-type serine protease inhibitor domain
+    8.1e-12   45.2   2.2    8.1e-12   45.2   2.2    2.3  1  Kazal_2       Kazal-type serine protease inhibitor domain
+    1.4e-11   44.4   6.1    3.5e-11   43.2   6.1    1.8  1  FOLN          Follistatin/Osteonectin-like EGF domain
+
+
+Domain annotation for each model (and alignments):
+>> SPARC_Ca_bdg  Secreted protein acidic and rich in cysteine Ca binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.1   0.4   1.6e-44   7.5e-41       2     113 .]     513     650 ..     512     650 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 139.1 bits;  conditional E-value: 1.6e-44
+           SPARC_Ca_bdg   2 eeCteeelaelpeRlrdWlkvlleelkereeek.........................eeleelekkeeekelkeckesvawkFsklD 64 
+                            ++Ct+ e+ ++p R+rdWlk++l++l+e ++e+                         ++ ++l  ++++k++++++++v+w+Fs+lD
+  sp|Q14515|SPRL1_HUMAN 513 PTCTDFEVIQFPLRMRDWLKNILMQLYEANSEHagylnekqrnkvkkiyldekrllagDHPIDLLLRDFKKNYHMYVYPVHWQFSELD 600
+                            68************************************************************************************** PP
+
+           SPARC_Ca_bdg  65 tn.kdkvlsksELaslraplvklehCikpflescDankdkkislkEwceC 113
+                            ++  d+vl++sELa+lra+lv++ehCi++f+e+cD nkdk+i+lkEw++C
+  sp|Q14515|SPRL1_HUMAN 601 QHpMDRVLTHSELAPLRASLVPMEHCITRFFEECDPNKDKHITLKEWGHC 650
+                            ************************************************** PP
+
+>> Kazal_1  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.4   4.6   3.6e-17   1.7e-13       1      49 []     456     509 ..     456     509 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 50.4 bits;  conditional E-value: 3.6e-17
+                            CCCCTTTSEC..SSS--EEETTSEEESSHHHH....HHHHH.CCSSS--EEECSS- CS
+                Kazal_1   1 CseykekaCp..reyepvCGtDgkTYsneCll....Caeng.kkgtklqlehdGeC 49 
+                            C+++ +  Cp  + +++vCGtD++TY+++C+l    C ++g kkg++lql+++G+C
+  sp|Q14515|SPRL1_HUMAN 456 CQDPVT--CPptKPLDQVCGTDNQTYASSCHLfatkCRLEGtKKGHQLQLDYFGAC 509
+                            899999..**99******************************************** PP
+
+>> Kazal_2  Kazal-type serine protease inhibitor domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.2   2.2   1.7e-15   8.1e-12       5      49 .]     461     509 ..     457     509 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 45.2 bits;  conditional E-value: 1.7e-15
+                            CCCT----.-EEETTSEEESSHHHHHHHHHHHTTT--.....EEEESS- CS
+                Kazal_2   5 kCpeleyd.pVCGsDgktYtseCkLqaagCllkrksk.ke..lkydGsC 49 
+                            +Cp ++   +VCG+D++tY+s C+L+a++C+l+ ++k ++  l+y G+C
+  sp|Q14515|SPRL1_HUMAN 461 TCPPTKPLdQVCGTDNQTYASSCHLFATKCRLEGTKKgHQlqLDYFGAC 509
+                            6997777757***************************96678******* PP
+
+>> FOLN  Follistatin/Osteonectin-like EGF domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.2   6.1   7.2e-15   3.5e-11       1      22 []     433     454 ..     433     454 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 43.2 bits;  conditional E-value: 7.2e-15
+                   FOLN   1 CenfqCKrGKvCkvDkegkPrC 22 
+                            C++fqCKrG++Ck+D++gkP+C
+  sp|Q14515|SPRL1_HUMAN 433 CMSFQCKRGHICKADQQGKPHC 454
+                            ********************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (664 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      2299  (0.119871); expected 383.6 (0.02)
+Passed bias filter:                      457  (0.0238281); expected 383.6 (0.02)
+Passed Vit filter:                        89  (0.00464049); expected 19.2 (0.001)
+Passed Fwd filter:                        35  (0.00182491); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.91u 0.23s 00:00:01.14 Elapsed: 00:00:01.00
+# Mc/sec: 2155.37
+//
+[ok]

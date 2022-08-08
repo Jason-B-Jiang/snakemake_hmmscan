@@ -1,0 +1,79 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0034674.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0034674
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|R4GDW7|R4GDW7_DANRE  [L=202]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.2e-17   62.6   0.0    6.7e-17   61.6   0.0    1.6  1  NAD_binding_8  NAD(P)-binding Rossmann-like domain
+      3e-08   33.7   0.2     0.0011   18.7   0.1    2.1  0  DAO            FAD dependent oxidoreductase
+      9e-08   32.4   0.0    2.6e-06   27.7   0.0    2.3  1  NAD_binding_9  FAD-NAD(P)-binding
+      7e-08   32.3   0.0    0.00059   19.3   0.0    2.0  0  Amino_oxidase  Flavin containing amine oxidoreductase
+    6.3e-06   26.7   0.0        0.2   12.3   0.0    2.2  0  Pyr_redox      Pyridine nucleotide-disulphide oxidoreductase
+
+
+Domain annotation for each model (and alignments):
+>> NAD_binding_8  NAD(P)-binding Rossmann-like domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.6   0.0   1.8e-20   6.7e-17       1      68 []       6      80 ..       6      80 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 61.6 bits;  conditional E-value: 1.8e-20
+                            EE--SHHHHHHHHHHHCC...TEEEEEE-SSSSSSGGG-EECETT...CEECTS---EEETTHHHHCH.HHHCCC CS
+           NAD_binding_8  1 IVGaGlaGlaaAalLaka...gfdvlllekrdrlGGraasyevpg...vrvdygahifngsgyypnlr.rlldel 68
+                            IVGaGl+G+++A+lL+++   ++++++++k ++ GGr+++ + p+   + vd+ga+++  ++yy ++   +++el
+  tr|R4GDW7|R4GDW7_DANRE  6 IVGAGLTGSLCACLLRRElpnKVNIVVWDKSRGAGGRMSTSRSPNnpsCSVDLGAQYISATQYYAQIHsSFYEEL 80
+                            9****************778799********************65577************9***98663677775 PP
+
+>> DAO  FAD dependent oxidoreductase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> NAD_binding_9  FAD-NAD(P)-binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.7   0.0   6.8e-10   2.6e-06       2     152 ..       6     162 ..       5     163 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 27.7 bits;  conditional E-value: 6.8e-10
+           NAD_binding_9   2 iVGaGprGlsllerLlarakkepleitlfdp.spp.gaggvyrtdqseelllNvpasemslfpddp...ptfaeWlrergalee.ae 82 
+                             iVGaG +G +++  L +++ +++++i + d+ +++ g++ + r+ +++   + + a+ +s+ +       +f+e l +++ l+  ++
+  tr|R4GDW7|R4GDW7_DANRE   6 IVGAGLTGSLCACLLRREL-PNKVNIVVWDKsRGAgGRMSTSRSPNNPSCSVDLGAQYISATQYYAqihSSFYEELLAQDILKPlSA 91 
+                             9*******99999888887.***********77785555556666788888888888888776555555777776666666555444 PP
+
+           NAD_binding_9  83 eldpddfvpRalyGeYlr.dlleellarl.pegvtvevhraevtdleeradgqavlladgaslaadaVvLAl 152
+                              + ++ +v+ + +  Y++ + ++++++ + +e+    +++ +vt ++++++g++v+ ++ga  ++d VvL++
+  tr|R4GDW7|R4GDW7_DANRE  92 PV-EGLMVKEEGMVNYVTpHGVSSIVKHYlKESGAEVFYNRHVTHIHRKDTGWEVCRKEGAPERFDVVVLTM 162
+                             44.45666666666666526688888888544444456899*****************************95 PP
+
+>> Amino_oxidase  Flavin containing amine oxidoreductase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Pyr_redox  Pyridine nucleotide-disulphide oxidoreductase
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (202 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       470  (0.024506); expected 383.6 (0.02)
+Passed bias filter:                      447  (0.0233067); expected 383.6 (0.02)
+Passed Vit filter:                        51  (0.00265916); expected 19.2 (0.001)
+Passed Fwd filter:                        11  (0.000573544); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.38u 0.23s 00:00:00.61 Elapsed: 00:00:00.56
+# Mc/sec: 1155.54
+//
+[ok]

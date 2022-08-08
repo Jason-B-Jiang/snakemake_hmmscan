@@ -1,0 +1,671 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0005465.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0005465
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|Q21225|Q21225_CAEEL  [L=694]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    5.6e-57  192.3   9.3    1.6e-56  190.8   9.3    1.8  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    1.3e-40  138.0   0.1    3.3e-37  127.1   0.0    3.5  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    1.6e-07   31.1   0.8      0.061   13.7   0.0    5.5  0  HEAT           HEAT repeat
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  190.8   9.3   2.4e-60   1.6e-56       2     179 .]     457     634 ..     456     634 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 190.8 bits;  conditional E-value: 2.4e-60
+           Vac14_Fig4_bd   2 klleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchna 88 
+                             +ll+erg liir+Lclll++ ++y+ ++ +le+e++ +fa++mv+tL+ +Llt++el  lR++L+ l++e++++lF+++f+ w+  +
+  tr|Q21225|Q21225_CAEEL 457 TLLRERGVLIIRQLCLLLEPAHIYRVICVLLERESKHNFAQEMVSTLHGVLLTATELFILRDELRALSNESSRSLFECIFRVWSNRP 543
+                             599************************************************************************************ PP
+
+           Vac14_Fig4_bd  89 vaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkr 175
+                             +a+l LcLl+q+Y++a+++   l+++++tv++l+++dkLv+l+Espv+a++r++Ll++ ++p+l+  l +llmlLPqseaf tL+kr
+  tr|Q21225|Q21225_CAEEL 544 IALLGLCLLSQHYQQAADIALLLSQVDITVDVLLEIDKLVNLVESPVLAYVRMDLLSSIHRPPLCTVLSALLMLLPQSEAFVTLHKR 630
+                             *************************************************************************************** PP
+
+           Vac14_Fig4_bd 176 Lksv 179
+                             L++v
+  tr|Q21225|Q21225_CAEEL 631 LQAV 634
+                             *986 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.1   0.0   5.2e-41   3.3e-37       1      96 [.      65     161 ..      65     162 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 127.1 bits;  conditional E-value: 5.2e-41
+           Vac14_Fab1_bd   1 narkGglialaavaialkkk.ikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkn 86 
+                             n+rkGgli++aa++ial++k +  y+ ++v+p++ c++D+d ++RyyacEslyniak++k++vl +f++ifd+l++++aDsd++v+ 
+  tr|Q21225|Q21225_CAEEL  65 NQRKGGLIGMAAASIALGNKnAPPYTAKLVEPIIPCFHDADLQIRYYACESLYNIAKICKTSVLAHFEDIFDVLWRVTADSDQNVRG 151
+                             78***************9997999*************************************************************** PP
+
+           Vac14_Fab1_bd  87 gaelldrllk 96 
+                             gaell+rl++
+  tr|Q21225|Q21225_CAEEL 152 GAELLNRLIT 161
+                             *******997 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (694 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       444  (0.0231503); expected 383.6 (0.02)
+Passed bias filter:                      334  (0.0174149); expected 383.6 (0.02)
+Passed Vit filter:                        29  (0.00151207); expected 19.2 (0.001)
+Passed Fwd filter:                         5  (0.000260702); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.41u 0.20s 00:00:00.61 Elapsed: 00:00:00.61
+# Mc/sec: 3689.07
+//
+Query:       tr|Q54HT3|Q54HT3_DICDI  [L=801]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.5e-72  241.5   1.2    1.2e-71  240.0   1.2    1.8  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    1.7e-42  144.0   3.4    4.6e-39  133.0   0.0    5.0  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    3.8e-09   36.1   2.2       0.13   12.7   0.0    7.0  0  HEAT           HEAT repeat
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  240.0   1.2   1.9e-75   1.2e-71       2     179 .]     428     624 ..     427     624 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 240.0 bits;  conditional E-value: 1.9e-75
+           Vac14_Fig4_bd   2 klleergsliirkLclllnaekvyktlaevl...................ekeedlefasamvqtLnliLltsselaelRkkLknlk 69 
+                             +ll++rg++iir+Lcl ln+e ++++++++l                   +ke + efas+mvqtLnliLlts+e+ e+R++L++l+
+  tr|Q54HT3|Q54HT3_DICDI 428 QLLRTRGNFIIRQLCLFLNPELIFRRFSNILgnsgsgsggngnqdgngenSKEINPEFASVMVQTLNLILLTSDECVEIRRNLRSLS 514
+                             79******************************99999999999999988777889******************************** PP
+
+           Vac14_Fig4_bd  70 seeaaelFaaLfkswchnavaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallksl 156
+                             + e+++lF+ L++sw+h++++++sLc+l+q Ye++++l+++++e+e++v++l+++d+LvqllEsp f+ lrLqLlepek+p+l+ksl
+  tr|Q54HT3|Q54HT3_DICDI 515 TPESRDLFSVLYTSWAHSPASLFSLCMLCQVYEHSCALLSKFTEIEINVNFLMEMDRLVQLLESPKFMALRLQLLEPEKYPSLFKSL 601
+                             *************************************************************************************** PP
+
+           Vac14_Fig4_bd 157 ygllmlLPqseafktLkkrLksv 179
+                             ygllm+LPqs+af+tLk+rL+++
+  tr|Q54HT3|Q54HT3_DICDI 602 YGLLMILPQSSAFETLKNRLTCI 624
+                             ********************997 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.0   0.0   7.2e-43   4.6e-39       1      97 []      64     160 ..      64     160 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 133.0 bits;  conditional E-value: 7.2e-43
+           Vac14_Fab1_bd   1 narkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkng 87 
+                             n++kGgli+la+vai+l++++  y++eiv+pvl+c+ D+dsr+R+yacEsl+niakv+++++l +fneifd+l+kl++D d++vk g
+  tr|Q54HT3|Q54HT3_DICDI  64 NNKKGGLIGLASVAIGLGTDAYLYIQEIVPPVLRCFIDHDSRIRFYACESLFNIAKVTRSKILFFFNEIFDVLCKLSSDLDPQVKGG 150
+                             689************************************************************************************ PP
+
+           Vac14_Fab1_bd  88 aelldrllkd 97 
+                             ++l+drllkd
+  tr|Q54HT3|Q54HT3_DICDI 151 VQLFDRLLKD 160
+                             *********8 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (801 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1733  (0.0903592); expected 383.6 (0.02)
+Passed bias filter:                      505  (0.0263309); expected 383.6 (0.02)
+Passed Vit filter:                        55  (0.00286772); expected 19.2 (0.001)
+Passed Fwd filter:                        10  (0.000521404); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.53u 0.18s 00:00:00.71 Elapsed: 00:00:00.76
+# Mc/sec: 3410.63
+//
+Query:       tr|Q9VG59|Q9VG59_DROME  [L=687]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      6e-65  218.3  10.7      6e-65  218.3  10.7    2.4  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    9.5e-39  132.0   0.2    6.8e-36  122.9   0.0    4.1  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    9.9e-09   34.8   0.1      0.002   18.3   0.0    6.5  1  HEAT           HEAT repeat
+    2.5e-06   28.0   1.0      0.015   15.9   0.0    4.8  0  HEAT_EZ        HEAT-like repeat
+    0.00046   20.5   0.2     0.0059   16.9   0.1    2.8  0  TAF6_C         TAF6 C-terminal HEAT repeat domain
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  218.3  10.7   1.6e-68     6e-65       3     179 .]     451     632 ..     449     632 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 218.3 bits;  conditional E-value: 1.6e-68
+           Vac14_Fig4_bd   3 lleergsliirkLclllnaekvyktlaevlek.eedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchna 88 
+                             +le+r+sliirkLc+llnae +y+t+ae++ +   +l+fas++v+ Ln+iLlts+el elR++L+n+++e++a+lF++L+ksw+h +
+  tr|Q9VG59|Q9VG59_DROME 451 ILENRASLIIRKLCVLLNAEYIYRTFAEIIAEgVPNLKFASTVVRLLNMILLTSTELFELRTSLRNISNEKSADLFQCLYKSWAHCP 537
+                             69****************************65267**************************************************** PP
+
+           Vac14_Fig4_bd  89 vaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekh....pallkslygllmlLPqseafkt 171
+                             v++lsLcLl+q+Y++ ++l++ +a++e+t+ell++ dkLvql+Esp+fa lrL+L++++++    ++l+++l+g+lmlLPq+eaf+t
+  tr|Q9VG59|Q9VG59_DROME 538 VSTLSLCLLTQSYQHVSRLVTLFADVEITLELLTEFDKLVQLIESPIFAPLRLTLVSKANNcadaQYLAHALFGILMLLPQTEAFDT 624
+                             *********************************************************999889999********************* PP
+
+           Vac14_Fig4_bd 172 LkkrLksv 179
+                             L++rL++v
+  tr|Q9VG59|Q9VG59_DROME 625 LRNRLQCV 632
+                             ******97 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.9   0.0   1.8e-39   6.8e-36       1      97 []      65     161 ..      65     161 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 122.9 bits;  conditional E-value: 1.8e-39
+           Vac14_Fab1_bd   1 narkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkng 87 
+                             n+rkG+li+laa+ ++l+k++ +y++ +v+p+++clsD+d rvRy+acEslyn++kva+++++++f e+f al++lv+Dsd+ vk+g
+  tr|Q9VG59|Q9VG59_DROME  65 NRRKGALIGLAAMGLGLGKDSGKYVQGMVTPIMTCLSDPDIRVRYFACESLYNVVKVARSAIIPFFPELFAALSRLVTDSDQMVKDG 151
+                             689************************************************************************************ PP
+
+           Vac14_Fab1_bd  88 aelldrllkd 97 
+                             +elldrllkd
+  tr|Q9VG59|Q9VG59_DROME 152 SELLDRLLKD 161
+                             *********8 PP
+
+>> HEAT  HEAT repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.3   0.0   5.2e-07     0.002       4      30 ..      95     121 ..      92     122 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 18.3 bits;  conditional E-value: 5.2e-07
+                             HHHHHHT-SSHHHHHHHHHHHHHHHHH CS
+                    HEAT   4 lllkllsDpspeVReaAakaLgalaev 30 
+                             +++++lsDp+ +VR+ A+++L ++++v
+  tr|Q9VG59|Q9VG59_DROME  95 PIMTCLSDPDIRVRYFACESLYNVVKV 121
+                             6899******************99986 PP
+
+>> HEAT_EZ  HEAT-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> TAF6_C  TAF6 C-terminal HEAT repeat domain
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (687 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       877  (0.0457271); expected 383.6 (0.02)
+Passed bias filter:                      466  (0.0242974); expected 383.6 (0.02)
+Passed Vit filter:                        43  (0.00224204); expected 19.2 (0.001)
+Passed Fwd filter:                        16  (0.000834246); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.48u 0.15s 00:00:00.63 Elapsed: 00:00:00.64
+# Mc/sec: 3482.99
+//
+Query:       sp|Q66L58|VAC14_DANRE  [L=771]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      3e-79  264.9  11.7      6e-79  263.9  11.7    1.5  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    7.9e-46  154.7   0.0    4.8e-40  136.2   0.0    4.1  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    3.4e-10   39.4   1.0     0.0059   16.9   0.0    6.0  0  HEAT           HEAT repeat
+    7.4e-08   32.9   0.3      0.046   14.4   0.0    5.5  0  HEAT_EZ        HEAT-like repeat
+    1.6e-06   28.3   5.1        1.4    9.1   0.1    4.8  0  Cnd1           non-SMC mitotic condensation complex subunit 1
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  263.9  11.7   1.6e-82     6e-79       1     179 []     532     710 ..     532     710 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 263.9 bits;  conditional E-value: 1.6e-82
+          Vac14_Fig4_bd   1 rklleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchna 88 
+                            rklle rg++iir+Lclll+ae++++++a++l keedl+fas+mvqtLn+iLlts el +lR++Lk+l+++e+++lF++L++swchn+
+  sp|Q66L58|VAC14_DANRE 532 RKLLEMRGAFIIRQLCLLLHAENIFHSMADILLKEEDLKFASTMVQTLNTILLTSAELFQLRNQLKDLRTQESCALFCCLYRSWCHNP 619
+                            589************************************************************************************* PP
+
+          Vac14_Fig4_bd  89 vaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkrL 176
+                            va++sLc+l+q+Y++ay+li+++++levtv++l+++dkLvql+Esp+f++lrLqLl++e++p+l+k+lygllmlLPqs+af++L++rL
+  sp|Q66L58|VAC14_DANRE 620 VATVSLCFLTQNYRHAYDLIQKFGDLEVTVDFLMEVDKLVQLIESPIFTYLRLQLLDVEHNPYLIKALYGLLMLLPQSQAFQLLSHRL 707
+                            **************************************************************************************** PP
+
+          Vac14_Fig4_bd 177 ksv 179
+                            ++v
+  sp|Q66L58|VAC14_DANRE 708 SCV 710
+                            *97 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.2   0.0   1.3e-43   4.8e-40       2      97 .]      68     163 ..      67     163 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 136.2 bits;  conditional E-value: 1.3e-43
+          Vac14_Fab1_bd   2 arkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkngae 89 
+                            +rkGgli+laa++ial+k++  yl+e+++pvl+c++D+dsr+RyyacE+lyni+kva+g+vl++fn +fd l+kl+aD d++vk+g+e
+  sp|Q66L58|VAC14_DANRE  68 SRKGGLIGLAACSIALGKDSGLYLKELIDPVLTCFNDSDSRLRYYACEALYNIVKVARGAVLPHFNVLFDGLSKLAADPDPNVKSGSE 155
+                            79************************************************************************************** PP
+
+          Vac14_Fab1_bd  90 lldrllkd 97 
+                            lldrllkd
+  sp|Q66L58|VAC14_DANRE 156 LLDRLLKD 163
+                            *******8 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> HEAT_EZ  HEAT-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Cnd1  non-SMC mitotic condensation complex subunit 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (771 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       851  (0.0443714); expected 383.6 (0.02)
+Passed bias filter:                      568  (0.0296157); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.49u 0.18s 00:00:00.67 Elapsed: 00:00:00.67
+# Mc/sec: 3734.94
+//
+Query:       tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE  [L=782]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.1e-79  264.8  11.7    6.2e-79  263.8  11.7    1.5  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    8.5e-46  154.6   0.0    4.9e-40  136.2   0.0    4.1  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    3.8e-10   39.2   1.0      0.006   16.8   0.0    6.0  0  HEAT           HEAT repeat
+      8e-08   32.8   0.3      0.047   14.3   0.0    5.4  0  HEAT_EZ        HEAT-like repeat
+    1.5e-06   28.4   4.8        1.3    9.2   0.1    4.9  0  Cnd1           non-SMC mitotic condensation complex subunit 1
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  263.8  11.7   1.6e-82   6.2e-79       1     179 []     543     721 ..     543     721 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 263.8 bits;  conditional E-value: 1.6e-82
+                   Vac14_Fig4_bd   1 rklleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaa 79 
+                                     rklle rg++iir+Lclll+ae++++++a++l keedl+fas+mvqtLn+iLlts el +lR++Lk+l+++e+++lF++
+  tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE 543 RKLLEMRGAFIIRQLCLLLHAENIFHSMADILLKEEDLKFASTMVQTLNTILLTSAELFQLRNQLKDLRTQESCALFCC 621
+                                     589**************************************************************************** PP
+
+                   Vac14_Fig4_bd  80 LfkswchnavaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslyg 158
+                                     L++swchn+va++sLc+l+q+Y++ay+li+++++levtv++l+++dkLvql+Esp+f++lrLqLl++e++p+l+k+lyg
+  tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE 622 LYRSWCHNPVATVSLCFLTQNYRHAYDLIQKFGDLEVTVDFLMEVDKLVQLIESPIFTYLRLQLLDVEHNPYLIKALYG 700
+                                     ******************************************************************************* PP
+
+                   Vac14_Fig4_bd 159 llmlLPqseafktLkkrLksv 179
+                                     llmlLPqs+af++L++rL++v
+  tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE 701 LLMLLPQSQAFQLLSHRLSCV 721
+                                     *******************97 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.2   0.0   1.3e-43   4.9e-40       2      97 .]      68     163 ..      67     163 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 136.2 bits;  conditional E-value: 1.3e-43
+                   Vac14_Fab1_bd   2 arkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDs 80 
+                                     +rkGgli+laa++ial+k++  yl+e+++pvl+c++D+dsr+RyyacE+lyni+kva+g+vl++fn +fd l+kl+aD 
+  tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE  68 SRKGGLIGLAACSIALGKDSGLYLKELIDPVLTCFNDSDSRLRYYACEALYNIVKVARGAVLPHFNVLFDGLSKLAADP 146
+                                     79***************************************************************************** PP
+
+                   Vac14_Fab1_bd  81 desvkngaelldrllkd 97 
+                                     d++vk+g+elldrllkd
+  tr|A0A0R4ITZ2|A0A0R4ITZ2_DANRE 147 DPNVKSGSELLDRLLKD 163
+                                     ****************8 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> HEAT_EZ  HEAT-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> Cnd1  non-SMC mitotic condensation complex subunit 1
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (782 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       864  (0.0450493); expected 383.6 (0.02)
+Passed bias filter:                      592  (0.0308671); expected 383.6 (0.02)
+Passed Vit filter:                        48  (0.00250274); expected 19.2 (0.001)
+Passed Fwd filter:                         8  (0.000417123); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.50u 0.17s 00:00:00.67 Elapsed: 00:00:00.80
+# Mc/sec: 3156.21
+//
+Query:       sp|Q08AM6|VAC14_HUMAN  [L=782]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    3.2e-77  258.2  10.6    7.3e-77  257.1  10.6    1.6  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    1.3e-45  154.0   0.2    4.2e-40  136.4   0.0    4.3  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    2.8e-07   30.3   1.1      0.017   15.5   0.0    5.0  0  HEAT           HEAT repeat
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  257.1  10.6   1.1e-80   7.3e-77       1     179 []     542     720 ..     542     720 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 257.1 bits;  conditional E-value: 1.1e-80
+          Vac14_Fig4_bd   1 rklleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchna 88 
+                            rklle rg +iir+Lclllnae++++++a++l +eedl+fas+mv++Ln+iLlts+el +lR++Lk+lk+ e+++lF++L++swchn+
+  sp|Q08AM6|VAC14_HUMAN 542 RKLLEVRGPFIIRQLCLLLNAENIFHSMADILLREEDLKFASTMVHALNTILLTSTELFQLRNQLKDLKTLESQNLFCCLYRSWCHNP 629
+                            589************************************************************************************* PP
+
+          Vac14_Fig4_bd  89 vaalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkrL 176
+                            v+++sLc+l+q+Y++ay+li+++++levtv++l ++dkLvql+E p+f++lrLqLl+++++p+l+k+lygllmlLPqs+af++L++rL
+  sp|Q08AM6|VAC14_HUMAN 630 VTTVSLCFLTQNYRHAYDLIQKFGDLEVTVDFLAEVDKLVQLIECPIFTYLRLQLLDVKNNPYLIKALYGLLMLLPQSSAFQLLSHRL 717
+                            **************************************************************************************** PP
+
+          Vac14_Fig4_bd 177 ksv 179
+                            ++v
+  sp|Q08AM6|VAC14_HUMAN 718 QCV 720
+                            *97 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.4   0.0   6.6e-44   4.2e-40       2      97 .]      68     163 ..      67     163 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 136.4 bits;  conditional E-value: 6.6e-44
+          Vac14_Fab1_bd   2 arkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkngae 89 
+                            +rkGgli+laa++ial+k++  yl+e+++pvl+c++D+dsr+RyyacE+lyni+kva+g+vl++fn +fd l+kl+aD d++vk+g+e
+  sp|Q08AM6|VAC14_HUMAN  68 SRKGGLIGLAACSIALGKDSGLYLKELIEPVLTCFNDADSRLRYYACEALYNIVKVARGAVLPHFNVLFDGLSKLAADPDPNVKSGSE 155
+                            79************************************************************************************** PP
+
+          Vac14_Fab1_bd  90 lldrllkd 97 
+                            lldrllkd
+  sp|Q08AM6|VAC14_HUMAN 156 LLDRLLKD 163
+                            *******8 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (782 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       667  (0.0347776); expected 383.6 (0.02)
+Passed bias filter:                      508  (0.0264873); expected 383.6 (0.02)
+Passed Vit filter:                        34  (0.00177277); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.46u 0.17s 00:00:00.63 Elapsed: 00:00:00.66
+# Mc/sec: 3815.63
+//
+Query:       EPZ34458.1  [L=1035]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.5e-70  236.5  11.4    1.5e-70  236.5  11.4    2.2  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    1.3e-32  112.3   1.5    3.7e-31  107.7   0.5    3.1  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+      7e-08   32.2   0.2     0.0011   19.1   0.0    4.3  1  HEAT           HEAT repeat
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  236.5  11.4   2.4e-74   1.5e-70       1     179 []     354     536 ..     354     536 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 236.5 bits;  conditional E-value: 2.4e-74
+  Vac14_Fig4_bd   1 rklleergsliirkLclllnaekvyktlaevlekee....dlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchnavaal 92 
+                    rklle++gsliir+Lc +l++ekv+++++e+le e+    dlefas +vq+L++iLlt++el +lR+kLk ++ +++ +lF+aL+ksw hn+v++l
+     EPZ34458.1 354 RKLLETKGSLIIRQLCISLQPEKVFCSFSEFLEIENvmiyDLEFASFIVQHLTIILLTATELVDLRRKLKFMDLKDNISLFHALYKSWVHNPVSTL 449
+                    589*****************************88777777******************************************************** PP
+
+  Vac14_Fig4_bd  93 sLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkrLksv 179
+                    +Lc+laq Ye+ay li +++e+e+tv++lvq+dkLvql+Esp+f+ lrLqLlep+k+ +l+kslygllmlLPqs+af+tL++rL+sv
+     EPZ34458.1 450 ALCFLAQMYEHAYYLIMTFSEYEITVNFLVQVDKLVQLIESPIFSFLRLQLLEPDKYFFLYKSLYGLLMLLPQSSAFATLRNRLNSV 536
+                    ************************************************************************************986 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.7   0.5   5.8e-35   3.7e-31      21      97 .]       3      79 ..       1      79 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 107.7 bits;  conditional E-value: 5.8e-35
+  Vac14_Fab1_bd 21 ikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkngaelldrllkd 97
+                   ++++l++i +p+l+c+sD+dsrvRyyacE++yniak++++++l yfneifd+l+kl++D++ sv+ngaelldrll+d
+     EPZ34458.1  3 ADQILKDICPPILACFSDQDSRVRYYACEAMYNIAKTTRHNILIYFNEIFDCLCKLCTDVELSVRNGAELLDRLLRD 79
+                   67899**********************************************************************97 PP
+
+>> HEAT  HEAT repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.1   0.0   1.7e-07    0.0011       1      29 [.      10      38 ..      10      40 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 19.1 bits;  conditional E-value: 1.7e-07
+                HHHHHHHHHT-SSHHHHHHHHHHHHHHHH CS
+        HEAT  1 llPlllkllsDpspeVReaAakaLgalae 29
+                + P++l ++sD++++VR+ A++a+ ++a+
+  EPZ34458.1 10 ICPPILACFSDQDSRVRYYACEAMYNIAK 38
+                689************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (1035 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1218  (0.063507); expected 383.6 (0.02)
+Passed bias filter:                      458  (0.0238803); expected 383.6 (0.02)
+Passed Vit filter:                        45  (0.00234632); expected 19.2 (0.001)
+Passed Fwd filter:                         7  (0.000364983); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.57u 0.18s 00:00:00.75 Elapsed: 00:00:00.63
+# Mc/sec: 5282.61
+//
+Query:       Q06708  [L=880]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    4.3e-66  222.0   6.5    1.1e-65  220.7   6.5    1.7  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    2.1e-46  156.6   0.8    1.9e-37  127.9   0.1    4.6  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    3.3e-10   39.4   3.3     0.0013   18.9   0.0    6.8  1  HEAT           HEAT repeat
+    1.9e-08   34.8   0.1       0.31   11.7   0.0    6.0  0  HEAT_EZ        HEAT-like repeat
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  220.7   6.5   2.3e-69   1.1e-65       2     178 ..     573     746 ..     572     747 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 220.7 bits;  conditional E-value: 2.3e-69
+  Vac14_Fig4_bd   2 klleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchnavaalsLcLl 97 
+                    kl+++r+++i+r+++++l++e+vyk ++++l++ +d++f+++m+q+L+++L+ts+e+++lR+kL++    e+ ++F++Lfkswc n+v+++sLc++
+         Q06708 573 KLVKTRANFIMRQISSRLSPERVYKVISSILDNYNDTTFVKMMIQILSTNLITSPEMSSLRNKLRTC---EDGMFFNSLFKSWCPNPVSVISLCFV 665
+                    799**************************************************************88...899*********************** PP
+
+  Vac14_Fig4_bd  98 aqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkrLks 178
+                    a++Yelay++++++a++e++++ lvqld L+ql+Espvf+++rLqLle++khp+l k+l+g+lm++Pqs+af+tL++rL+s
+         Q06708 666 AENYELAYTVLQTYANYELKLNDLVQLDILIQLFESPVFTRMRLQLLEQQKHPFLHKCLFGILMIIPQSKAFETLNRRLNS 746
+                    *******************************************************************************86 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.9   0.1   3.9e-41   1.9e-37       2      97 .]      60     156 ..      59     156 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 127.9 bits;  conditional E-value: 3.9e-41
+  Vac14_Fab1_bd   2 arkGglialaavaialkkk.ikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkngaelldrllk 96 
+                    ar++gl++laa+aial+ + + +yl +i++pvl+c+ D++++vR+yacEslyniak+akge+l+yfneifd+l+k++aD+++sv+ +aelldrl+k
+         Q06708  60 ARNAGLMGLAATAIALGINdVGRYLRNILPPVLACFGDQNDQVRFYACESLYNIAKIAKGEILVYFNEIFDVLCKISADTENSVRGAAELLDRLIK 155
+                    799**************877**************************************************************************** PP
+
+  Vac14_Fab1_bd  97 d 97 
+                    d
+         Q06708 156 D 156
+                    8 PP
+
+>> HEAT  HEAT repeat
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.9   0.0   2.7e-07    0.0013       1      30 [.      87     116 ..      87     117 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 18.9 bits;  conditional E-value: 2.7e-07
+             HHHHHHHHHT-SSHHHHHHHHHHHHHHHHH CS
+    HEAT   1 llPlllkllsDpspeVReaAakaLgalaev 30 
+             +lP++l ++ D++ +VR  A+++L ++a++
+  Q06708  87 ILPPVLACFGDQNDQVRFYACESLYNIAKI 116
+             89**************************96 PP
+
+>> HEAT_EZ  HEAT-like repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (880 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       743  (0.0387403); expected 383.6 (0.02)
+Passed bias filter:                      421  (0.0219511); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.52u 0.16s 00:00:00.68 Elapsed: 00:00:00.72
+# Mc/sec: 3942.55
+//
+Query:       sp|P87145|VAC14_SCHPO  [L=811]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.6e-72  242.9   5.7    1.6e-72  242.9   5.7    2.1  1  Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+    4.1e-45  152.4   3.9    4.9e-38  129.7   0.1    5.1  1  Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+    1.9e-11   43.3   2.1       0.34   11.4   0.0    7.5  0  HEAT           HEAT repeat
+    9.5e-05   22.7   0.5      0.031   14.5   0.2    3.3  0  ParcG          Parkin co-regulated protein
+
+
+Domain annotation for each model (and alignments):
+>> Vac14_Fig4_bd  Vacuolar protein 14 C-terminal Fig4p binding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  242.9   5.7   3.4e-76   1.6e-72       2     178 ..     529     704 ..     528     705 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 242.9 bits;  conditional E-value: 3.4e-76
+          Vac14_Fig4_bd   2 klleergsliirkLclllnaekvyktlaevlekeedlefasamvqtLnliLltsselaelRkkLknlkseeaaelFaaLfkswchnav 89 
+                            k+l++rg+liir+Lc+ ++ e+vy+++a +le+ee+le as+mv++Ln++L t++el +lRkkLk++   + +++F++L+++wchn++
+  sp|P87145|VAC14_SCHPO 529 KFLNSRGNLIIRQLCNYIEGERVYTSFAGILETEENLELASIMVEVLNNNLFTAPELYDLRKKLKQS-APKLQNIFTTLYTAWCHNSI 615
+                            789**************************************************************77.67999*************** PP
+
+          Vac14_Fig4_bd  90 aalsLcLlaqaYelayelikslaelevtvellvqldkLvqllEspvfaklrLqLlepekhpallkslygllmlLPqseafktLkkrLk 177
+                            a++sLcLl+q+Ye+a++l++++ae+e+++++l+qldkLvql+Espvf+++rLqLlepek+p+l k+lyg+lmlLPqs+af+tL++rL+
+  sp|P87145|VAC14_SCHPO 616 AVFSLCLLSQNYEHAANLLSVFAEIEFNIDMLIQLDKLVQLIESPVFTYMRLQLLEPEKYPYLHKALYGILMLLPQSSAFRTLRDRLQ 703
+                            ***************************************************************************************9 PP
+
+          Vac14_Fig4_bd 178 s 178
+                            +
+  sp|P87145|VAC14_SCHPO 704 C 704
+                            8 PP
+
+>> Vac14_Fab1_bd  Vacuolar 14 Fab1-binding region
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.7   0.1     1e-41   4.9e-38       2      97 .]      61     156 ..      60     156 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 129.7 bits;  conditional E-value: 1e-41
+          Vac14_Fab1_bd   2 arkGglialaavaialkkkikeyleeivkpvlkclsDkdsrvRyyacEslyniakvakgevlkyfneifdalvklvaDsdesvkngae 89 
+                            a  Ggli+laavaial+ ki++y+e+i+ pvl c++D+ds++RyyacEs+yni kvakgev++yfn ifd+l+kl+aD++  vkngae
+  sp|P87145|VAC14_SCHPO  61 ATFGGLIGLAAVAIALGPKIDSYMESILLPVLYCFNDSDSKIRYYACESMYNIGKVAKGEVFRYFNLIFDVLCKLFADTEITVKNGAE 148
+                            567************************************************************************************* PP
+
+          Vac14_Fab1_bd  90 lldrllkd 97 
+                            lldrl+kd
+  sp|P87145|VAC14_SCHPO 149 LLDRLIKD 156
+                            *******8 PP
+
+>> HEAT  HEAT repeat
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> ParcG  Parkin co-regulated protein
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (811 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       810  (0.0422337); expected 383.6 (0.02)
+Passed bias filter:                      575  (0.0299807); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         9  (0.000469263); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.48u 0.17s 00:00:00.65 Elapsed: 00:00:00.62
+# Mc/sec: 4209.28
+//
+[ok]

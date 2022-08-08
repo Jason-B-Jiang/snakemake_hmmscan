@@ -1,0 +1,75 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0050087.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0050087
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|O43059|SYP1_SCHPO  [L=818]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.8e-16   58.8   0.0    1.2e-15   57.8   0.0    1.5  1  muHD      Muniscin C-terminal mu homology domain
+    5.1e-11   42.8   2.3    1.5e-10   41.3   2.3    1.9  1  FCH       Fes/CIP4, and EFC/F-BAR homology domain
+
+
+Domain annotation for each model (and alignments):
+>> muHD  Muniscin C-terminal mu homology domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.8   0.0   1.2e-19   1.2e-15       2     215 ..     553     761 ..     552     800 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 57.8 bits;  conditional E-value: 1.2e-19
+                           EEEEEEEEEEEEEEETTEEEEEEEEEEEEEEEE--SSS-----SEEEEEEETGGGEEEEEE-TTTE..EEEETTEEEE-TTTTBT-E.E CS
+                  muHD   2 gLnasiiEtvnAwFkdgevtkskvvGelaLaynaspaasltlpdkltvrlenfeklekvapNpafvteekqkdgeykinlsalarktkt 90 
+                           gL asi+E  +   ++  + + +  G + + y+++ +++   p ++ vr+ +   +    +N + v+    +++  ++ ++ l ++   
+  sp|O43059|SYP1_SCHPO 553 GLSASIVEKYSGELSEDGLLHPSCSGHIFMKYTSDFNTP---PPEMGVRVASEFPMSFTHLNDHAVK-YGPSENTLSLIPELLLSPI-- 635
+                           99************************************9...99**********************5.5566777999999999999.. PP
+
+                           EEEEEEEES......---SEEEEEEEEE-SSEEEEEEEEEE-TT.TT--E.EEEEEEEEEEEB-SS.-EEEEEESSS--B-SSS-EEEE CS
+                  muHD  91 valkYqvhadpskasascPlilkpvWkleehqasviltyslnps.laiasavtLenlvlvvnldgs.ratsvqskPqatfskeksrvtW 177
+                           +   +++h d+ + ++  Pl++ + Wk +e++ s+i +++ np   ++ s++ +e lv++v l ++  ++s+qs P++ fs+++s++  
+  sp|O43059|SYP1_SCHPO 636 KVTDFNLHLDSINGASCIPLTVVQKWKHDESSSSMIAFVKPNPVwRNLGSSLHIEKLVIIVYLGENvLVKSCQSSPAGEFSRKTSKLKL 724
+                           667789999999999****************************999999**************99989********************* PP
+
+                           E-SSEEEETT---EEEEEEEEESS---.-SS-EEEEEEE CS
+                  muHD 178 klpeleltsdsdegkllarfsteesae.kpgkVevkFev 215
+                            l++++++s +   k+la+f+++ sa  ++  +e +  +
+  sp|O43059|SYP1_SCHPO 725 HLSNINISSSG--FKILAKFAISPSAAiRKPVIEFRIRM 761
+                           *********99..7***********99555555554444 PP
+
+>> FCH  Fes/CIP4, and EFC/F-BAR homology domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.3   2.3   1.6e-14   1.5e-10       3      78 .]      24      95 ..      22      95 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 41.3 bits;  conditional E-value: 1.6e-14
+                          HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCTTSS-T..T-.-..HHHHHHHHHHHHHHHHHHHHHHH CS
+                   FCH  3 kvllkrlkqgldlledlqeflkeRaeiEeeYakkLqklakkylkkkksseeeegtlkkawtvlleeteklaqshla 78
+                          + + +rl+q    ++ l+++++eR+ iE++Y+ +L+kla ++++k ++s +   +++ aw++l  et +++++h++
+  sp|O43059|SYP1_SCHPO 24 SIFRQRLEQVRLDNDMLSQWIRERMDIERQYSDQLHKLAMNMQEK-NNS-S--FAFNYAWKQLEGETLEISRYHSQ 95
+                          6778999999999*******************************5.455.5..9********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (818 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       962  (0.050159); expected 383.6 (0.02)
+Passed bias filter:                      373  (0.0194484); expected 383.6 (0.02)
+Passed Vit filter:                        30  (0.00156421); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.47u 0.18s 00:00:00.64 Elapsed: 00:00:00.76
+# Mc/sec: 3467.12
+//
+[ok]

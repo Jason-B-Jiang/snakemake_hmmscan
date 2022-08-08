@@ -1,0 +1,49 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0040300.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0040300
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P04196|HRG_HUMAN  [L=525]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-11   43.6   0.0    1.2e-05   25.6   0.0    2.3  1  Cystatin  Cystatin domain
+
+
+Domain annotation for each model (and alignments):
+>> Cystatin  Cystatin domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   0.0   6.3e-10   1.2e-05      11      76 ..      25      93 ..      18     107 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 6.3e-10
+                         HHHHHHHHHHHHHHHHHT.TTCEEEEEEEEEEEEEESSSE.EEEEEEEEEEEEEES.CEEEECEEEECS CS
+             Cystatin 11 pelqealdfAlaeyNkkt.dnsyfelvevveaksQvVaGt.nyfikvevgetncsk.skklledcelkd 76
+                         + +++ +++Al   Nk   d+++f+l ++  a+   V  t  y++ ++v+e +cs+ s k ++dce+ d
+  sp|P04196|HRG_HUMAN 25 SAVEPEAEKALDLINKRRrDGYLFQLLRIADAHLDRVENTtVYYLVLDVQESDCSVlSRKYWNDCEPPD 93
+                         67888999*************************98888887************************9865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (525 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       814  (0.0424423); expected 383.6 (0.02)
+Passed bias filter:                      532  (0.0277387); expected 383.6 (0.02)
+Passed Vit filter:                        53  (0.00276344); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.20s 00:00:00.63 Elapsed: 00:00:00.73
+# Mc/sec: 2320.47
+//
+[ok]

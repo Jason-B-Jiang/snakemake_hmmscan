@@ -1,0 +1,927 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0003039.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0003039
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|A4FUM4|A4FUM4_DANRE  [L=364]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-41  142.3   4.7    1.6e-41  141.9   4.7    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    1.7e-09   38.0   0.2    4.4e-09   36.7   0.0    1.8  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.9   4.7   1.6e-45   1.6e-41       2     179 .]      23     205 ..      22     205 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 141.9 bits;  conditional E-value: 1.6e-45
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++ta+srp+   g  +f+a+g +dd+q   +++ ++  +  p+++W++++  + yWe+ tq+ k+keq f +n++ l +++
+  tr|A4FUM4|A4FUM4_DANRE  23 KHSLYYIYTALSRPVDqsGIYQFTAMGLLDDRQIDYYNNIDQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVNVNILMDRM 107
+                             8*************8622567899******************..99*******9997588**************************9 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              + +++ h+lq+++GC++e +g   r+++g  ++ ydG++++++++   +w+a   aa  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|A4FUM4|A4FUM4_DANRE 108 RHNNSDLHVLQWRHGCEIEIQGnehRFSKGIDEYSYDGRNFLSFDDAESQWVAPVDAALPTKRKWDNVPILNQyTKGYLEKECVDWL 194
+                             99999*************8554223899*******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e+g ++l
+  tr|A4FUM4|A4FUM4_DANRE 195 NKFREYGDQEL 205
+                             ******99876 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.7   0.0   4.6e-13   4.4e-09       1      86 []     213     295 ..     213     295 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 36.7 bits;  conditional E-value: 4.6e-13
+                             EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             V+v+ ++  +  k k  LtC++tgfyp+d+ +t  k  ++++++  +++  ++++d+t+ql ++ ++ +   +++ ey+C V+h +l
+  tr|A4FUM4|A4FUM4_DANRE 213 VYVFARRIISG-KIKLKLTCMATGFYPKDMILTIRKYRTTLPDNdLDSSGVRPNQDGTFQLRKSTNIYE---DEKAEYDCYVNHRTL 295
+                             66777776666.77889*************************999************************...************975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (364 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1041  (0.0542781); expected 383.6 (0.02)
+Passed bias filter:                      690  (0.0359768); expected 383.6 (0.02)
+Passed Vit filter:                        61  (0.00318056); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.22s 00:00:00.64 Elapsed: 00:00:00.63
+# Mc/sec: 1857.35
+//
+Query:       tr|A8E7F4|A8E7F4_DANRE  [L=398]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-43  146.8   4.3    6.3e-43  146.5   4.3    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    5.5e-10   39.6   0.7    9.6e-10   38.8   0.0    1.8  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  146.5   4.3   6.6e-47   6.3e-43       2     179 .]      23     205 ..      22     205 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 146.5 bits;  conditional E-value: 6.6e-47
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++ta+srp++  g   f+a+g +dd+q   ++s+++  +  p+++W++++  + yWe+ tq+ k+keq f +n++ l e++
+  tr|A8E7F4|A8E7F4_DANRE  23 KHSLYYIYTALSRPVNlpGIYEFTAMGLLDDRQIDYYNSEQQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVNVNILMERM 107
+                             8*************95448889********************..99*******9997588**************************9 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              + +++ h+lq+++GC++es+g   r++rg  ++ ydG++++++++   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|A8E7F4|A8E7F4_DANRE 108 RHNKSDVHVLQWRHGCEIESQGndvRFSRGIDEYSYDGRNFLSFDDAESQWVAPVEEALPTKRKWDNVPILNQyTKGYLEKECVDWL 194
+                             99999*************9765333899*******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e+g ++l
+  tr|A8E7F4|A8E7F4_DANRE 195 NKFREYGDKEL 205
+                             ******98875 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.8   0.0     1e-13   9.6e-10       2      86 .]     214     295 ..     213     295 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 38.8 bits;  conditional E-value: 1e-13
+                             EEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   2 tvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             +v+ ++  +  k k  LtCl+tgfyp+d+ ++  k   +++++ v++t  ++++d+t+ql +++++ +   +++ ey+C V+h++l
+  tr|A8E7F4|A8E7F4_DANRE 214 HVFAKRIING-KIKLKLTCLATGFYPKDVILNIRKYRITLPDNeVESTGVRPNEDGTFQLRKSINIYE---DEKAEYDCYVSHTTL 295
+                             5666666666.77889*************************999************************...************975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (398 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1144  (0.0596486); expected 383.6 (0.02)
+Passed bias filter:                      755  (0.039366); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.18s 00:00:00.63 Elapsed: 00:00:00.69
+# Mc/sec: 1860.82
+//
+Query:       tr|F1Q8P0|F1Q8P0_DANRE  [L=371]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-41  141.5   2.5    2.9e-41  141.1   2.5    1.2  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    9.8e-09   35.5   0.1    9.8e-09   35.5   0.1    1.9  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  141.1   2.5   3.1e-45   2.9e-41       2     179 .]      27     209 ..      26     209 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 141.1 bits;  conditional E-value: 3.1e-45
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++t++srp+   g   f a+g +dd+q   ++s ++  r  p+++W++++  + yWe+ tq+ k+keq f +n++ l +++
+  tr|F1Q8P0|F1Q8P0_DANRE  27 KHSLYYIYTGLSRPVDlpGIYEFSAMGLLDDRQIDSYNSREQ--RKIPKQQWMKEKMqEDYWEKGTQSRKSKEQWFNVNVHILMDRM 111
+                             8*************84337889********************..*********9997588*************************** PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              + + + h+lq+++GC+ve +g   ++++g  ++ ydG++++a++e   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|F1Q8P0|F1Q8P0_DANRE 112 RHNRLDLHVLQWRHGCEVEIKGsevKFSKGIDEYGYDGENFLAFDEAESQWVAPVEEALPTKRKWDSVPILNQyTKGYLEKECVDWL 198
+                             ******************98773235889******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e+++e+l
+  tr|F1Q8P0|F1Q8P0_DANRE 199 NKFREYANEEL 209
+                             *****999976 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.5   0.1     1e-12   9.8e-09       1      86 []     217     297 ..     217     297 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 35.5 bits;  conditional E-value: 1e-12
+                             EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             V+v+  ++ +  k+k  LtCl+tgfy +d  +   +n  ++++ +++t  +++ d+t+ql +++e+++   +++dey+C  +h +l
+  tr|F1Q8P0|F1Q8P0_DANRE 217 VHVFAVKSISD-KTKLKLTCLATGFYSKDTMLVIRRNRLPEKK-TESTGVRPNHDQTFQLRKSVEIEQ---DETDEYDCYMTHRTL 297
+                             67777777777.89999************************98.************************...************875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (371 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       907  (0.0472913); expected 383.6 (0.02)
+Passed bias filter:                      606  (0.0315971); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.17s 00:00:00.61 Elapsed: 00:00:00.65
+# Mc/sec: 1836.62
+//
+Query:       tr|F1R6J5|F1R6J5_DANRE  [L=383]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-36  125.9   5.1    1.8e-36  125.5   5.1    1.2  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    8.6e-11   42.1   0.1    8.6e-11   42.1   0.1    1.9  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  125.5   5.1   1.8e-40   1.8e-36       2     179 .]      27     209 ..      26     209 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 125.5 bits;  conditional E-value: 1.8e-40
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl +++t++srp+   g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ tq+ k+k+  f  n++ l ++ 
+  tr|F1R6J5|F1R6J5_DANRE  27 KHSLYFIYTGLSRPVDlpGIYEFSAMGLLDDRQIDSYNSEEQ--RNIPKQQWMKEKMqEDYWENRTQSRKEKQLWFYDNVHLLIDRN 111
+                             8*************84337889********************..*********9997588*************************** PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              qs +  h+lq+++GC+ve++g   ++ ++  ++ ydG+d++ +++    w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|F1R6J5|F1R6J5_DANRE 112 RQSTSVLHVLQWRHGCEVEKQGnehSFNKSIDEYGYDGEDFLYYDDAESRWVAPVEEALPTKRKWDNLPILNQyTKDYLEKECVDWL 198
+                             ******************988722246788999**************************************999************* PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e++ e+l
+  tr|F1R6J5|F1R6J5_DANRE 199 NKFREYADEEL 209
+                             ***99988775 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.1   0.1     9e-15   8.6e-11       6      85 ..     220     298 ..     216     299 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 42.1 bits;  conditional E-value: 9e-15
+                             SSHHHTT.TSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                  C1-set   6 pspeela.kkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85 
+                               +++++ ++k  LtCl+tgfyp+d+ ++  +  + ++e+ + +t  +++ d+t+qls+++e+++   ++ d y+C+V+h +
+  tr|F1R6J5|F1R6J5_DANRE 220 LTRKSTKdETKLKLTCLATGFYPNDVMLNIRRYRVYLPEQeTISTGVRPNHDQTFQLSKSVEIKE---DQIDNYDCSVSHRT 298
+                             4444444488999*************************998999*********************...999*********75 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (383 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1069  (0.055738); expected 383.6 (0.02)
+Passed bias filter:                      696  (0.0362897); expected 383.6 (0.02)
+Passed Vit filter:                        54  (0.00281558); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.18s 00:00:00.62 Elapsed: 00:00:00.66
+# Mc/sec: 1879.45
+//
+Query:       tr|F1QEW6|F1QEW6_DANRE  [L=269]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.7e-42  143.4   4.7    6.8e-42  143.1   4.7    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  143.1   4.7   3.5e-46   6.8e-42       2     179 .]      23     205 ..      22     205 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 143.1 bits;  conditional E-value: 3.5e-46
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++ta+srp+   g  +f+a+g +dd+q   +++ ++  +  p+++W++++  + yWe+ tq+ k+keq f +n++ l +++
+  tr|F1QEW6|F1QEW6_DANRE  23 KHSLYYIYTALSRPVDqsGIYQFTAMGLLDDRQIDYYNNIDQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVNVNILMDRM 107
+                             8*************8622567899******************..99*******9997588**************************9 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              + +++ h+lq+++GC++e +g   r+++g  ++ ydG++++++++   +w+a   aa  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|F1QEW6|F1QEW6_DANRE 108 RHNNSDLHVLQWRHGCEIEIQGnehRFSKGIDEYSYDGRNFLSFDDAESQWVAPVDAALPTKRKWDNVPILNQyTKGYLEKECVDWL 194
+                             99999*************8554223899*******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e+g ++l
+  tr|F1QEW6|F1QEW6_DANRE 195 NKFREYGDQEL 205
+                             ******99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (269 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1072  (0.0558945); expected 383.6 (0.02)
+Passed bias filter:                      654  (0.0340998); expected 383.6 (0.02)
+Passed Vit filter:                        69  (0.00359768); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.18s 00:00:00.61 Elapsed: 00:00:00.65
+# Mc/sec: 1335.21
+//
+Query:       tr|A8E7F2|A8E7F2_DANRE  [L=350]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.4e-43  145.9   4.2    1.3e-42  145.5   4.2    1.2  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    1.3e-09   38.4   0.0    3.3e-09   37.1   0.0    1.7  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  145.5   4.2   1.3e-46   1.3e-42       2     179 .]      23     206 ..      22     206 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 145.5 bits;  conditional E-value: 1.3e-46
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++ta+srp++  g   f+a+g +dd+q   ++s+++  +  p+++W++++  + yWe+ tq+ k+keq f +nl+ l e++
+  tr|A8E7F2|A8E7F2_DANRE  23 KHSLYYIYTALSRPVHlpGIYEFTAMGLLDDRQIDYYNSQEQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVNLKILMERM 107
+                             8************985448889********************..99*******9997588***********************9987 PP
+
+                             TTT.TTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHH CS
+                   MHC_I  86 Nqs.eagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvew 167
+                              +  +++ h+lq+++GC++ s+g   r+++g  ++ ydG++++a+++   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+w
+  tr|A8E7F2|A8E7F2_DANRE 108 RHNnNSDVHVLQWRHGCEIDSQGndvRFSKGIDEYSYDGRNFLAFDDADSQWVAPVEEALPTKRKWDNVPILNQyTKGYLEKECVDW 194
+                             54414689***********86553338999******************************************9999*********** PP
+
+                             HHHHHHHTHHHH CS
+                   MHC_I 168 Lrrylengketl 179
+                             L ++ e+g ++l
+  tr|A8E7F2|A8E7F2_DANRE 195 LNKFREYGDQEL 206
+                             *******99876 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.1   0.0   3.4e-13   3.3e-09       1      86 []     214     294 ..     214     294 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 37.1 bits;  conditional E-value: 3.4e-13
+                             EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             V+v+ ++  +  k k  LtC+vtgfyp+d+ +t  k  + ++++ v+++  +++ d+t+ql ++ ++ +     + ey+C V+h +l
+  tr|A8E7F2|A8E7F2_DANRE 214 VHVFAKKIISG-KAKLKLTCMVTGFYPKDVILTIRKYRTALSDNeVESSGVRPNPDGTFQLRKSTNIYE-----KAEYDCYVAHRTL 294
+                             67888888888.89999*************************999******************999998.....899*******975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (350 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       940  (0.0490119); expected 383.6 (0.02)
+Passed bias filter:                      614  (0.0320142); expected 383.6 (0.02)
+Passed Vit filter:                        64  (0.00333698); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.44u 0.13s 00:00:00.57 Elapsed: 00:00:00.61
+# Mc/sec: 1843.18
+//
+Query:       tr|U6BNE9|U6BNE9_DANRE  [L=382]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.5e-40  137.2   3.0      6e-40  136.8   3.0    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    9.9e-13   48.3   0.2    9.9e-13   48.3   0.2    1.9  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.8   3.0   6.2e-44     6e-40       2     177 ..      30     210 ..      29     212 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 136.8 bits;  conditional E-value: 6.2e-44
+                             EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ tq+ k+keq f +n++ l +++
+  tr|U6BNE9|U6BNE9_DANRE  30 KHSLYYIYTGLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTQSRKSKEQWFNVNVHILMDRM 114
+                             8************962257779********************..*********9997588**************************9 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              + +++ h+lq+++GC+ve +g   ++++g +++ ydG++ ++++e   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|U6BNE9|U6BNE9_DANRE 115 RHNKSDLHVLQWRHGCEVEIQGsevKFSKGVSEYGYDGENLLSFDETESQWVAPVKEALPTKRKWDNVPILNQyTKGYLEKECVDWL 201
+                             99999*************98873335889******************************************9999************ PP
+
+                             HHHHHHTHH CS
+                   MHC_I 169 rrylengke 177
+                              ++ e++ +
+  tr|U6BNE9|U6BNE9_DANRE 202 NKFREYADA 210
+                             ***998765 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   48.3   0.2     1e-16   9.9e-13       1      85 [.     220     301 ..     220     302 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 48.3 bits;  conditional E-value: 1e-16
+                             EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETT CS
+                  C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVehea 85 
+                             V+ +++++ +  ++k  LtCl+tgfyp+d+ ++  +n + ++e+ + +t  +++ d+t+qls+++e+++   ++ dey+C+V+h +
+  tr|U6BNE9|U6BNE9_DANRE 220 VYKFTKKSTKD-ETKLKLTCLATGFYPSDVMLNIRRNRVYLPEQeTISTGVRPNHDQTFQLSKSVEIKE---DQIDEYDCSVSHRT 301
+                             56667777777.8999***************************98999*********************...999*********75 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (382 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1058  (0.0551645); expected 383.6 (0.02)
+Passed bias filter:                      723  (0.0376975); expected 383.6 (0.02)
+Passed Vit filter:                        56  (0.00291986); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.19s 00:00:00.60 Elapsed: 00:00:00.65
+# Mc/sec: 1906.76
+//
+Query:       tr|E9QGM2|E9QGM2_DANRE  [L=192]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.4e-13   50.9   0.5    1.9e-13   50.5   0.5    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.5   0.5   9.7e-18   1.9e-13       2      92 ..      27     118 ..      26     127 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 50.5 bits;  conditional E-value: 9.7e-18
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl +++t++srp+   g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ tq+ k+k+  f  n++ l ++ 
+  tr|E9QGM2|E9QGM2_DANRE  27 KHSLYFIYTGLSRPVDlpGIYEFSAMGLLDDRQIDSYNSEEQ--RNIPKQQWMKEKMqEDYWENRTQSRKEKQLWFYDNVHLLIDRN 111
+                             8*************84337889********************..*********9997588***********************9999 PP
+
+                             TTTTTS- CS
+                   MHC_I  86 Nqseags 92 
+                              qs ++ 
+  tr|E9QGM2|E9QGM2_DANRE 112 RQSTSDG 118
+                             9997654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (192 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1284  (0.0669482); expected 383.6 (0.02)
+Passed bias filter:                      854  (0.0445279); expected 383.6 (0.02)
+Passed Vit filter:                        63  (0.00328484); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.41u 0.15s 00:00:00.55 Elapsed: 00:00:00.64
+# Mc/sec: 974.98
+//
+Query:       tr|F1QLW2|F1QLW2_DANRE  [L=358]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-40  139.2   3.0    1.4e-40  138.8   3.0    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+      3e-10   40.4   0.2      3e-10   40.4   0.2    1.8  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.8   3.0   1.5e-44   1.4e-40       2     179 .]      71     253 ..      70     253 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 138.8 bits;  conditional E-value: 1.5e-44
+                             EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ tq+ k+keq f +n++ l +++
+  tr|F1QLW2|F1QLW2_DANRE  71 KHSLYYIYTGLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTQSRKSKEQWFNVNVNILMDRM 155
+                             8************962257779********************..*********9997588*************************99 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              +  ++ h+lq+++GC+ve +g   ++++g  ++ ydG+++++++e   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|F1QLW2|F1QLW2_DANRE 156 RHNMSDLHILQWRTGCEVEIQGsevKFSKGIDEYGYDGENFLSFDEAESQWVAPVKEALPTKRKWDNVPILNQyTKGYLEKECVDWL 242
+                             99999*************98873335889******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e++ e+l
+  tr|F1QLW2|F1QLW2_DANRE 243 NKFREYADEEL 253
+                             ***99988775 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.4   0.2   3.1e-14     3e-10       4      86 .]     264     341 ..     261     341 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 40.4 bits;  conditional E-value: 3.1e-14
+                             EESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   4 lppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             l++++ +  ++k  LtCl+tgfy +d+ ++  +n  ++ e +++t  +++ d+t+ql +++e+++   ++ dey+C+ +h +l
+  tr|F1QLW2|F1QLW2_DANRE 264 LTKKSTKD-ETKLKLTCLATGFYDKDVMLNIRRNCLPEDE-TESTGVRPNHDQTFQLRKSVEIKE---DQIDEYDCHLTHRTL 341
+                             44444444.89999************************98.************************...999*********875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (358 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       692  (0.0360811); expected 383.6 (0.02)
+Passed bias filter:                      403  (0.0210126); expected 383.6 (0.02)
+Passed Vit filter:                        27  (0.00140779); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.39u 0.18s 00:00:00.57 Elapsed: 00:00:00.78
+# Mc/sec: 1485.14
+//
+Query:       tr|X1WGP2|X1WGP2_DANRE  [L=331]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-40  138.3   3.7    2.8e-40  137.9   3.7    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    2.3e-10   40.7   0.2    2.3e-10   40.7   0.2    1.7  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  137.9   3.7   2.9e-44   2.8e-40       2     179 .]      30     212 ..      29     212 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 137.9 bits;  conditional E-value: 2.9e-44
+                             EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ t++ k+keq f +n++ l e++
+  tr|X1WGP2|X1WGP2_DANRE  30 KHSLYYIYTSLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTWSRKSKEQWFNVNVHILMERM 114
+                             8************962257779********************..*********9997588*************************99 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              +  ++ h+lq+++GC+ve +g   ++++g  ++ ydG++++a++e   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|X1WGP2|X1WGP2_DANRE 115 RHNMSDLHILQWRHGCEVEIQGsevKFSKGIDEYGYDGENFLAFDEAESQWVAPVEEALPTKRKWNNIPILNQyTKGYLEKECVDWL 201
+                             99999*************98873335889******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e++ e+l
+  tr|X1WGP2|X1WGP2_DANRE 202 NKFREYADEEL 212
+                             ***99988775 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.7   0.2   2.4e-14   2.3e-10       4      86 .]     223     300 ..     219     300 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 40.7 bits;  conditional E-value: 2.4e-14
+                             EESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   4 lppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             l++++ +  ++k  LtCl+tgfy +d+ ++  +n  ++ e +++t  +++ d+t+ql +++e+++   ++ dey+C+ +h +l
+  tr|X1WGP2|X1WGP2_DANRE 223 LTKKSTKD-ETKLKLTCLATGFYDKDVMLNIRRNCLPEDE-TESTGVRPNHDQTFQLRKSVEIKE---DQIDEYDCHLTHRTL 300
+                             34444444.89999************************98.************************...999*********875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (331 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       877  (0.0457271); expected 383.6 (0.02)
+Passed bias filter:                      475  (0.0247667); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.41u 0.17s 00:00:00.57 Elapsed: 00:00:00.58
+# Mc/sec: 1846.82
+//
+Query:       tr|A0A0R4IIW1|A0A0R4IIW1_DANRE  [L=340]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.7e-43  146.0   4.2    1.2e-42  145.6   4.2    1.2  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    1.2e-09   38.5   0.0    3.1e-09   37.1   0.0    1.7  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  145.6   4.2   1.2e-46   1.2e-42       2     179 .]      19     202 ..      18     202 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 145.6 bits;  conditional E-value: 1.2e-46
+                                     EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHH CS
+                           MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfren 77 
+                                     +hsl Y++ta+srp++  g   f+a+g +dd+q   ++s+++  +  p+++W++++  + yWe+ tq+ k+keq f +n
+  tr|A0A0R4IIW1|A0A0R4IIW1_DANRE  19 KHSLYYIYTALSRPVHlpGIYEFTAMGLLDDRQIDYYNSQEQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVN 95 
+                                     8************985448889********************..99*******9997588******************* PP
+
+                                     HHHHHHHTTTT.TTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTH CS
+                           MHC_I  78 lrtlleyyNqs.eagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaee 152
+                                     l+ l e++ +  +++ h+lq+++GC++ s+g   r+++g  ++ ydG++++a+++   +w+a   +a  tkrkw++ + 
+  tr|A0A0R4IIW1|A0A0R4IIW1_DANRE  96 LKILMERMRHNnNSDVHVLQWRHGCEIDSQGndvRFSKGIDEYSYDGRNFLAFDDADSQWVAPVEEALPTKRKWDNVPI 174
+                                     ****998754414689***********86553338999***************************************** PP
+
+                                     HHH.HHHHHHTHHHHHHHHHHHHTHHHH CS
+                           MHC_I 153 aer.erayLeeecvewLrrylengketl 179
+                                      ++ ++ yLe+ecv+wL ++ e+g ++l
+  tr|A0A0R4IIW1|A0A0R4IIW1_DANRE 175 LNQyTKGYLEKECVDWLNKFREYGDQEL 202
+                                     *9999******************99876 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.1   0.0   3.3e-13   3.1e-09       1      86 []     210     290 ..     210     290 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 37.1 bits;  conditional E-value: 3.3e-13
+                                     EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEE CS
+                          C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeyt 78 
+                                     V+v+ ++  +  k k  LtC+vtgfyp+d+ +t  k  + ++++ v+++  +++ d+t+ql ++ ++ +     + ey+
+  tr|A0A0R4IIW1|A0A0R4IIW1_DANRE 210 VHVFAKKIISG-KAKLKLTCMVTGFYPKDVILTIRKYRTALSDNeVESSGVRPNPDGTFQLRKSTNIYE-----KAEYD 282
+                                     67888888888.89999*************************999******************999998.....899** PP
+
+                                     EEEEETTS CS
+                          C1-set  79 CkVeheal 86 
+                                     C V+h +l
+  tr|A0A0R4IIW1|A0A0R4IIW1_DANRE 283 CYVAHRTL 290
+                                     *****975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (340 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       833  (0.0434329); expected 383.6 (0.02)
+Passed bias filter:                      529  (0.0275823); expected 383.6 (0.02)
+Passed Vit filter:                        60  (0.00312842); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.14s 00:00:00.56 Elapsed: 00:00:00.67
+# Mc/sec: 1652.08
+//
+Query:       tr|A0A0N4SU34|A0A0N4SU34_DANRE  [L=331]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-38  131.0   3.5    4.6e-38  130.6   3.5    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+      3e-11   43.6   0.2      3e-11   43.6   0.2    1.7  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.6   3.5   4.8e-42   4.6e-38       2     179 .]      30     212 ..      29     212 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 130.6 bits;  conditional E-value: 4.8e-42
+                                     EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHH CS
+                           MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfren 77 
+                                     +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ t++ k+keq f +n
+  tr|A0A0N4SU34|A0A0N4SU34_DANRE  30 KHSLYYIYTSLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTWSRKSKEQWFNVN 106
+                                     8************962257779********************..*********9997588******************* PP
+
+                                     HHHHHHHTTTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHH CS
+                           MHC_I  78 lrtlleyyNqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeea 153
+                                     ++ l e++ +  ++ h+lq+++GC+ve +g   ++++g +++ ydG++ + +++    w+a   +a  tkrkw++ +  
+  tr|A0A0N4SU34|A0A0N4SU34_DANRE 107 VHILMERMRHNMSDLHILQWRHGCEVEIQGsevKFSKGVSEYGYDGENLLYFDDAESRWVAPVEEALPTKRKWDNIPIL 185
+                                     ******9999999*************98873335889****************************************** PP
+
+                                     HH.HHHHHHTHHHHHHHHHHHHTHHHH CS
+                           MHC_I 154 er.erayLeeecvewLrrylengketl 179
+                                     ++ ++ yLe+ecv+wL ++ e++ e+l
+  tr|A0A0N4SU34|A0A0N4SU34_DANRE 186 NQyTKGYLEKECVDWLNKFREYADEEL 212
+                                     9999***************99988775 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.6   0.2   3.1e-15     3e-11       4      86 .]     223     300 ..     219     300 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 43.6 bits;  conditional E-value: 3.1e-15
+                                     EESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEE CS
+                          C1-set   4 lppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVe 82 
+                                     l++++ +  ++k  LtCl+tgfyp+d+ ++  +n  ++ e +++t  +++ d+t+ql +++e+++   ++ dey+C+ +
+  tr|A0A0N4SU34|A0A0N4SU34_DANRE 223 LTKKSTKD-ETKLKLTCLATGFYPNDVMLNIRRNCLPEDE-TESTGVRPNHDQTFQLRKSVEIKE---DQIDEYDCHLT 296
+                                     34444444.89999************************98.************************...999******** PP
+
+                                     ETTS CS
+                          C1-set  83 heal 86 
+                                     h +l
+  tr|A0A0N4SU34|A0A0N4SU34_DANRE 297 HRTL 300
+                                     *875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (331 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       831  (0.0433286); expected 383.6 (0.02)
+Passed bias filter:                      478  (0.0249231); expected 383.6 (0.02)
+Passed Vit filter:                        26  (0.00135565); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.42u 0.15s 00:00:00.56 Elapsed: 00:00:00.64
+# Mc/sec: 1682.36
+//
+Query:       tr|F1R7X4|F1R7X4_DANRE  [L=246]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-38  132.1   3.5    1.9e-38  131.9   3.5    1.0  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.9   3.5     1e-42   1.9e-38       2     179 .]      61     243 ..      60     243 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 131.9 bits;  conditional E-value: 1e-42
+                             EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ t++ k+keq f +n++ l e++
+  tr|F1R7X4|F1R7X4_DANRE  61 KHSLYYIYTSLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTWSRKSKEQWFNVNVHILMERM 145
+                             8************962257779********************..*********9997588*************************99 PP
+
+                             TTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHHH CS
+                   MHC_I  86 NqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvewL 168
+                              +  ++ h+lq+++GC+ve +g   ++++g +++ ydG++ + +++    w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+wL
+  tr|F1R7X4|F1R7X4_DANRE 146 RHNMSDLHILQWRHGCEVEIQGsevKFSKGVSEYGYDGENLLYFDDAESRWVAPVEEALPTKRKWDNIPILNQyTKGYLEKECVDWL 232
+                             99999*************98873335889******************************************9999************ PP
+
+                             HHHHHHTHHHH CS
+                   MHC_I 169 rrylengketl 179
+                              ++ e++ e+l
+  tr|F1R7X4|F1R7X4_DANRE 233 NKFREYADEEL 243
+                             ***99988775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (246 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       764  (0.0398352); expected 383.6 (0.02)
+Passed bias filter:                      480  (0.0250274); expected 383.6 (0.02)
+Passed Vit filter:                        33  (0.00172063); expected 19.2 (0.001)
+Passed Fwd filter:                         1  (5.21404e-05); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.17s 00:00:00.56 Elapsed: 00:00:00.61
+# Mc/sec: 1301.67
+//
+Query:       tr|A0A0R4IIT0|A0A0R4IIT0_DANRE  [L=331]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-38  131.0   3.5    4.6e-38  130.6   3.5    1.1  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    2.3e-10   40.7   0.2    2.3e-10   40.7   0.2    1.7  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.6   3.5   4.8e-42   4.6e-38       2     179 .]      30     212 ..      29     212 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 130.6 bits;  conditional E-value: 4.8e-42
+                                     EEEEEEEEEEEEETT..SSSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHH CS
+                           MHC_I   2 shslrYfltavsrpg..lgePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfren 77 
+                                     +hsl Y++t++s+p    g   f a+g +dd+q   ++s+++  r  p+++W++++  + yWe+ t++ k+keq f +n
+  tr|A0A0R4IIT0|A0A0R4IIT0_DANRE  30 KHSLYYIYTSLSKPLdlPGIYEFSAMGLLDDRQIDSYNSEEQ--RKIPKQQWMKEKMqEDYWEKGTWSRKSKEQWFNVN 106
+                                     8************962257779********************..*********9997588******************* PP
+
+                                     HHHHHHHTTTTTTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHH CS
+                           MHC_I  78 lrtlleyyNqseagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeea 153
+                                     ++ l e++ +  ++ h+lq+++GC+ve +g   ++++g +++ ydG++ + +++    w+a   +a  tkrkw++ +  
+  tr|A0A0R4IIT0|A0A0R4IIT0_DANRE 107 VHILMERMRHNMSDLHILQWRHGCEVEIQGsevKFSKGVSEYGYDGENLLYFDDAESRWVAPVEEALPTKRKWDNIPIL 185
+                                     ******9999999*************98873335889****************************************** PP
+
+                                     HH.HHHHHHTHHHHHHHHHHHHTHHHH CS
+                           MHC_I 154 er.erayLeeecvewLrrylengketl 179
+                                     ++ ++ yLe+ecv+wL ++ e++ e+l
+  tr|A0A0R4IIT0|A0A0R4IIT0_DANRE 186 NQyTKGYLEKECVDWLNKFREYADEEL 212
+                                     9999***************99988775 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.7   0.2   2.4e-14   2.3e-10       4      86 .]     223     300 ..     219     300 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 40.7 bits;  conditional E-value: 2.4e-14
+                                     EESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTTEEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEE CS
+                          C1-set   4 lppspeelakkkntLtClvtgfyppdikvtWlkngqevtegvkttqplkesdstyqlsskLevtpsewesgdeytCkVe 82 
+                                     l++++ +  ++k  LtCl+tgfy +d+ ++  +n  ++ e +++t  +++ d+t+ql +++e+++   ++ dey+C+ +
+  tr|A0A0R4IIT0|A0A0R4IIT0_DANRE 223 LTKKSTKD-ETKLKLTCLATGFYDKDVMLNIRRNCLPEDE-TESTGVRPNHDQTFQLRKSVEIKE---DQIDEYDCHLT 296
+                                     34444444.89999************************98.************************...999******** PP
+
+                                     ETTS CS
+                          C1-set  83 heal 86 
+                                     h +l
+  tr|A0A0R4IIT0|A0A0R4IIT0_DANRE 297 HRTL 300
+                                     *875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (331 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                       871  (0.0454143); expected 383.6 (0.02)
+Passed bias filter:                      477  (0.024871); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         2  (0.000104281); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.61
+# Mc/sec: 1743.42
+//
+Query:       tr|Q7YP14|Q7YP14_DANRE  [L=326]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.5e-43  146.3   4.2      1e-42  145.8   4.2    1.2  1  MHC_I     Class I Histocompatibility antigen, domains alpha 1
+    1.4e-09   38.3   0.4    2.9e-09   37.2   0.0    1.8  1  C1-set    Immunoglobulin C1-set domain
+
+
+Domain annotation for each model (and alignments):
+>> MHC_I  Class I Histocompatibility antigen, domains alpha 1 and 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  145.8   4.2   1.1e-46     1e-42       2     179 .]      23     206 ..      22     206 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 145.8 bits;  conditional E-value: 1.1e-46
+                             EEEEEEEEEEEEETTS..SSEEEEEEEEETTEEEEEEETTSSSBSEEESSGGGGTSS.HHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                   MHC_I   2 shslrYfltavsrpgl..gePrfiavgyvddtqfvrfdsdaespraepraeWieqeg.peyWeretqkakakeqlfrenlrtlleyy 85 
+                             +hsl Y++ta+srp++  g   f+a+g +dd+q   ++s+++  +  p+++W++++  + yWe+ tq+ k+keq f +nl+ l e++
+  tr|Q7YP14|Q7YP14_DANRE  23 KHSLYYIYTALSRPVHlpGIYEFTAMGLLDDRQIDYYNSQEQ--KKIPKQHWMKEKMqEDYWEKGTQSRKSKEQWFNVNLKILMERM 107
+                             8************985448889********************..99*******9997588***********************9987 PP
+
+                             TTT.TTS-EEEEEEEEEEEETTS...SEEEEEEEEEETTEEEEEEETTSSEEEESSHHHHHHHHHHHHTTHHHH.HHHHHHTHHHHH CS
+                   MHC_I  86 Nqs.eagshtlqgmyGCdvesdg...rllrgyeqfaydGkdyialnedlkswtaadtaaqitkrkweaaeeaer.erayLeeecvew 167
+                              +  +++ h+lq+++GC++ s+g   r+++g  ++ ydG++++a+++   +w+a   +a  tkrkw++ +  ++ ++ yLe+ecv+w
+  tr|Q7YP14|Q7YP14_DANRE 108 RHNnNSDVHVLQWRHGCEIDSQGndvRFSKGIDEYSYDGRNFLAFDDADSQWVAPVEEALPTKRKWDNVPILNQyTKGYLEKECVDW 194
+                             54414689***********86553338999******************************************9999*********** PP
+
+                             HHHHHHHTHHHH CS
+                   MHC_I 168 Lrrylengketl 179
+                             L ++ e+g ++l
+  tr|Q7YP14|Q7YP14_DANRE 195 LNKFREYGDQEL 206
+                             *******99876 PP
+
+>> C1-set  Immunoglobulin C1-set domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.2   0.0     3e-13   2.9e-09       1      86 []     214     294 ..     214     294 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 37.2 bits;  conditional E-value: 3e-13
+                             EEEEESSHHHTTTSEEEEEEEEEEEBSSEEEEEEEETTEEESTT.EEEEEEEEETTSEEEEEEEEEEEHHHHHTTSEEEEEEEETTS CS
+                  C1-set   1 VtvlppspeelakkkntLtClvtgfyppdikvtWlkngqevteg.vkttqplkesdstyqlsskLevtpsewesgdeytCkVeheal 86 
+                             V+v+ ++  +  k k  LtC+vtgfyp+d+ +t  k  + ++++ v+++  +++ d+t+ql ++ ++ +     + ey+C V+h +l
+  tr|Q7YP14|Q7YP14_DANRE 214 VHVFAKKIISG-KAKLKLTCMVTGFYPKDVILTIRKYRTALSDNeVESSGVRPNPDGTFQLRKSTNIYE-----KAEYDCYVAHRTL 294
+                             67888888888.89999*************************999******************999998.....899*******975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (326 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1024  (0.0533917); expected 383.6 (0.02)
+Passed bias filter:                      591  (0.030815); expected 383.6 (0.02)
+Passed Vit filter:                        40  (0.00208561); expected 19.2 (0.001)
+Passed Fwd filter:                         3  (0.000156421); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.36u 0.17s 00:00:00.53 Elapsed: 00:00:00.57
+# Mc/sec: 1841.80
+//
+[ok]

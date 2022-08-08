@@ -1,0 +1,48 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0047906.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0047906
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       EPZ35308.1  [L=236]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      9e-09   35.7   0.1      2e-08   34.6   0.1    1.5  1  BRCT_2    BRCT domain, a BRCA1 C-terminus domain
+
+
+Domain annotation for each model (and alignments):
+>> BRCT_2  BRCT domain, a BRCA1 C-terminus domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   34.6   0.1     1e-12     2e-08       9      85 .]       9      76 ..       7      76 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 34.6 bits;  conditional E-value: 1e-12
+      BRCT_2  9 sFyisnarpspsrkklkklIeknGGklvdkitsavtiviaesnkkelaentkldvvspeyIkdCvekgklldlenyl 85
+                 Fyi     + +++++ +l +++G  ++++ ++a  +v+ae+     +  ++++v++p+yI+dC++ g++l++++y+
+  EPZ35308.1  9 YFYI----SNRTDRQFVTLLKDYGVPITRNLEKA-DFVLAEKD----QNYEGQKVIKPSYITDCIKDGTVLEINDYV 76
+                59**....235789*****************876.66677776....6789************************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (236 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1388  (0.0723708); expected 383.6 (0.02)
+Passed bias filter:                      686  (0.0357683); expected 383.6 (0.02)
+Passed Vit filter:                        66  (0.00344126); expected 19.2 (0.001)
+Passed Fwd filter:                         4  (0.000208561); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.38u 0.20s 00:00:00.58 Elapsed: 00:00:00.67
+# Mc/sec: 1143.72
+//
+[ok]

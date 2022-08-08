@@ -1,0 +1,65 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ../data/Orthogroup_Sequences/OG0035232.fa
+# target HMM database:             ../data/pfam_hmm_lib/Pfam-A.hmm
+# output directed to file:         ../results/hmmscan/OG0035232
+# model-specific thresholding:     GA cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|E7F5U7|E7F5U7_DANRE  [L=287]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-23   81.0  38.3    2.8e-11   43.7  11.5    2.1  2  MARVEL    Membrane-associating domain
+
+
+Domain annotation for each model (and alignments):
+>> MARVEL  Membrane-associating domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   43.5  18.8   1.8e-15   3.4e-11       4     144 .]      11     131 ..       8     131 .. 0.96
+   2 !   43.7  11.5   1.4e-15   2.8e-11       1     143 [.     142     272 ..     142     273 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 43.5 bits;  conditional E-value: 1.8e-15
+                  MARVEL   4 splgilrilqlvfaiiilgliasliakldqllgspssalnfavfvavfsflyalfllvlylfknsaftsilwplidlivdalaallw 90 
+                              p gi r+l++++++i+++l+as++     + ++ ss + +++f+ +f+ +++l++l+l ++   +  +i+w+   +++  l +l++
+  tr|E7F5U7|E7F5U7_DANRE  11 VPVGIARMLEVLLTCICFALAASAG-----IPDHGSSHWAWSMFCWCFCCFTTLLILILEFTNLHTKVPISWEDYTMAFAMLSTLMM 92 
+                             4889*********************.....99999****************************77889******************* PP
+
+                  MARVEL  91 lvafialaaglrdiscafesnqysasltvrcgqaqaavafgflavllfaasavl 144
+                             ++ +i++   + +                +c +++ a+a ++l++ l+aa +++
+  tr|E7F5U7|E7F5U7_DANRE  93 VTISIVYPTFFAC---------------ASCAKEIGASAVSWLCFGLYAAEVWF 131
+                             ************9...............6899*********************8 PP
+
+  == domain 2  score: 43.7 bits;  conditional E-value: 1.4e-15
+                  MARVEL   1 fllsplgilrilqlvfaiiilgliasliakldqllgspssalnfavfvavfsflyalfllvlylfknsaftsilwplidlivdalaa 87 
+                             fl++ +g+l+il+ + a++i+ + +  +       ++  + ++++v+v  ++f+++l++++l++ +   + ++++ ++++ ++ la+
+  tr|E7F5U7|E7F5U7_DANRE 142 FLTTIPGLLKILETFIACLIFTSLSPDG-------YRGFPGTQWCVAVYSICFIFSLIIILLTIARLLSVFPFSFDFVVISFNMLAV 221
+                             68899**********************9.......677999***********************999999***************** PP
+
+                  MARVEL  88 llwlvafialaaglrdiscafesnqysasltvrcgqaqaavafgflavllfaasav 143
+                             +++ +a +++  +    +      + ++++ + ++ + + +++++++ l+++a++ 
+  tr|E7F5U7|E7F5U7_DANRE 222 VMYATAVVVWPLYAFKDK-----PRPDDCNHCEWDDLVVVTFMTVFNLLVYIADMA 272
+                             **********99999822.....2445555667899*****************996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (287 residues searched)
+Target model(s):                       19179  (3258786 nodes)
+Passed MSV filter:                      1081  (0.0563637); expected 383.6 (0.02)
+Passed bias filter:                      289  (0.0150686); expected 383.6 (0.02)
+Passed Vit filter:                        28  (0.00145993); expected 19.2 (0.001)
+Passed Fwd filter:                         6  (0.000312842); expected 0.2 (1e-05)
+Initial search space (Z):              19179  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.39u 0.20s 00:00:00.59 Elapsed: 00:00:00.74
+# Mc/sec: 1257.26
+//
+[ok]
