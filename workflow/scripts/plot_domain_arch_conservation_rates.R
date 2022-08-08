@@ -27,25 +27,16 @@ main <- function() {
   #   $1 = filepath to aligned ortholog domain architectures, produced by
   #   align_ortholog_domain_archs.R
   #
-  #   $2 = file of microsporidia species w/ poorly sequenced genomes to exclude
-  #
-  #   $3 = file of essential yeast genes, for annotating orthogroups based on
-  #   essentiality of the yeast ortholog
-  #
-  #   $4 = output directory to save plots in
+  #   $2 = output directory to save plots in
   # ----------------------------------------------------------------------------
   args <- commandArgs(trailingOnly = T)
   aligned_domain_archs <- read_csv(args[1], show_col_types = F)
-  excluded_microsp <- readLines(args[2])
-  essential_yeast_genes <- readLines(args[3])
-  out_dir <- args[4]
+  out_dir <- args[2]
   
   # format aligned domain archs dataframe so microsporidia species with low quality
   # genomes are excluded from the dataframe, all ortholog pairs are annotated with
   # the essentiality of their yeast orthologs and 
-  aligned_domain_archs <- format_aligned_domain_archs_df(aligned_domain_archs,
-                                                         essential_yeast_genes,
-                                                         excluded_microsp)
+  aligned_domain_archs <- format_aligned_domain_archs_df(aligned_domain_archs)
   
   # split dataframe by species and plot domain arch conservation rates individually
   # for each species
@@ -71,21 +62,22 @@ main <- function() {
 
 # Helper functions
 
-format_aligned_domain_archs_df <- function(aligned_domain_archs,
-                                           essential_yeast_genes,
-                                           excluded_microsp) {
+format_aligned_domain_archs_df <- function(aligned_domain_archs) {
   # ----------------------------------------------------------------------------
   # Docstring goes here.
   # ----------------------------------------------------------------------------
   return(
     aligned_domain_archs %>%
-      filter(!(species %in% excluded_microsp)) %>%
-      # add column indicating if yeast ortholog in ortholog pair is essential
-      mutate(essential = yeast_ortholog %in% essential_yeast_genes,
-             # add columns indicating whether a particular microsporidia ortholog
-             # has undergone domain gain, swap and/or loss
-             # use these columns for domain arch conservation rates later
-             lost = as.integer(!is.na(lost_doms)),
+      # remove orthologs from microsporidia species w/ poor quality genomes
+      #
+      # also exclude cases of lost domain orthologs that are not short enough
+      # to have confidently lost their domains
+      filter(!exclude_species, is.na(ortholog_short_enough_for_dom_loss) |
+               ortholog_short_enough_for_dom_loss) %>%
+      # add columns indicating whether a particular microsporidia ortholog
+      # has undergone domain gain, swap and/or loss
+      # use these columns for domain arch conservation rates later
+      mutate(lost = as.integer(!is.na(lost_doms)),
              gain = as.integer(!is.na(gained_doms)),
              swap = as.integer(!is.na(swapped_doms)),
              DA_conservation = get_DA_conservation(lost, gain, swap)) %>%

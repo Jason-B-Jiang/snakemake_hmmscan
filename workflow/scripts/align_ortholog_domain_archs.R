@@ -3,7 +3,7 @@
 # Align ortholog domain architectures
 #
 # Jason Jiang - Created: 2022/07/29
-#               Last edited: 2022/08/07
+#               Last edited: 2022/08/08
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -23,8 +23,8 @@ require(NameNeedle)
 ## Define global variables
 
 # Column names for cath-resolve-hits output files
-CRH_HEADER = c('query_id', 'match_id', 'score', 'boundaries',
-               'resolved', 'cond_evalue', 'indp_evalue')
+CRH_HEADER = c('query_id', 'match_id', 'score', 'boundaries', 'resolved',
+               'cond_evalue', 'indp_evalue')
 
 # Parameters for Needleman-Wunsch alignments of domain architectures
 NW_PARAMS = list(MATCH = 0, MISMATCH = -3, GAP = -10, GAPCHAR = '*')
@@ -35,10 +35,18 @@ main <- function() {
   # ---------------------------------------------------------------------------
   # Command line arguments:
   #   $1 = directory with cath-resolve-hits output files
+  #
   #   $2 = filepath to dataframe of all pairwise single-copy orthologs
+  #
   #   $3 = filepath to tsv of Pfam families and their clans (from Pfam ftp
-  #        site)
-  #   $4 = filepath to save dataframe of aligned domain architectures to
+  #   site)
+  #
+  #   $4 = file of microsporidia species w/ poorly sequenced genomes to exclude
+  #
+  #   $5 = file of essential yeast genes, for annotating orthogroups based on
+  #   essentiality of the yeast ortholog
+  #
+  #   $6 = filepath to save dataframe of aligned domain architectures to
   # ---------------------------------------------------------------------------
   args <- commandArgs(trailingOnly = T)
   
@@ -53,18 +61,40 @@ main <- function() {
   # make hashtable mapping Pfam domain families back to their clans
   fam_to_clan <- make_pfam_clan_hashtables(args[3])
   
+  # load in lists of microsporidia species w/ poor quality genomes (to exclude
+  # from analysis eventually), and essential genes in yeast
+  excluded_microsp <- readLines(args[4])
+  essential_yeast_genes <- readLines(args[5])
+  
   # get hashtable of orthogroups and their ortholog domain architectures
-  orthogroup_domain_archs <- get_orthogroup_domain_arch_hash(domain_arch_dir,
-                                                             fam_to_clan)
+  #
+  # if this hashtable was previously constructed and stored in the resources
+  # folder, load it in and use it instead of building it from scratch
+  if (file.exists(str_c(dirname(dirname(domain_arch_dir)),
+                        '/resources/orthogroup_domain_archs.rds'))) {
+    orthogroup_domain_archs <- 
+      readRDS(str_c(dirname(dirname(domain_arch_dir)),
+                    '/resources/orthogroup_domain_archs.rds'))
+    
+  } else {
+    orthogroup_domain_archs <- get_orthogroup_domain_arch_hash(domain_arch_dir,
+                                                               fam_to_clan)
+    
+    saveRDS(orthogroup_domain_archs,
+            str_c(dirname(dirname(domain_arch_dir)),
+                  '/resources/orthogroup_domain_archs.rds'))
+  }
   
   # assign domain architectures to ortholog pairs in orthogroups_df, and
   # align all pairs of single-copy orthologs with Needleman-Wunsch alignment
   aligned_domain_archs <- assign_and_align_domain_archs(orthogroups_df,
                                                         orthogroup_domain_archs,
-                                                        fam_to_clan)
+                                                        fam_to_clan,
+                                                        essential_yeast_genes,
+                                                        excluded_microsp)
   
   # write modified orthogroups_df dataframe to specified filepath
-  write_csv(aligned_domain_archs, args[4])
+  write_csv(aligned_domain_archs, args[6])
 }
 
 ################################################################################
@@ -73,8 +103,16 @@ main <- function() {
 
 make_pfam_clan_hashtables <- function(pfam_clans) {
   # ---------------------------------------------------------------------------
+  # Docstring goes here.
   # ---------------------------------------------------------------------------
   file_name = pfam_clans
+  out <- str_c(dirname(dirname(file_name)),  # file to save this hashtable to
+               '/resources/pfam_fam_to_clan.rds')
+  
+  if (file.exists(out)) {
+    return(readRDS(out))
+  }
+  
   pfam_clans <- read_tsv(pfam_clans, show_col_types = F)
   
   # create hashtables mapping both pfam families back to their clans
@@ -83,8 +121,7 @@ make_pfam_clan_hashtables <- function(pfam_clans) {
       pfam_clans$Family_ID, pfam_clans$Clan_name)
   
   # write hashtable to resources folder
-  saveRDS(fam_to_clan, str_c(dirname(dirname(file_name)),
-                             '/resources/pfam_fam_to_clan.rds'))
+  saveRDS(fam_to_clan, out)
   
   return(fam_to_clan)
 }
@@ -185,12 +222,16 @@ get_domain_clans <- function(domains, fam_to_clan) {
 
 assign_and_align_domain_archs <- function(orthogroups_df,
                                           orthogroup_domain_archs,
-                                          fam_to_clan) {
+                                          fam_to_clan,
+                                          essential_yeast_genes,
+                                          excluded_microsp) {
   # ---------------------------------------------------------------------------
   # ---------------------------------------------------------------------------
   return(
     orthogroups_df %>%
       select(-median_diff, -species_p_val, -species_p_val_adj) %>%
+      mutate(essential = yeast_ortholog %in% essential_yeast_genes,
+             exclude_species = species %in% excluded_microsp) %>%
       rowwise() %>%
       mutate(yeast_domain_archs = get_ortholog_domain_arch(orthogroup,
                                                            yeast_ortholog,
@@ -199,9 +240,11 @@ assign_and_align_domain_archs <- function(orthogroups_df,
                                                              species_ortholog,
                                                              orthogroup_domain_archs)) %>%
       ungroup() %>%
-      separate(yeast_domain_archs, c('yeast_domain_arch', 'yeast_domain_arch_clan',
+      separate(yeast_domain_archs, c('yeast_domain_arch',
+                                     'yeast_domain_arch_clan',
                                      'yeast_domain_bounds'), sep = ' ::: ') %>%
-      separate(species_domain_archs, c('species_domain_arch', 'species_domain_arch_clan',
+      separate(species_domain_archs, c('species_domain_arch',
+                                       'species_domain_arch_clan',
                                        'species_domain_bounds'), sep = ' ::: ') %>%
       rowwise() %>%
       mutate(aligned_ortholog_domain_archs = align_domain_archs(species_domain_arch,
@@ -215,7 +258,13 @@ assign_and_align_domain_archs <- function(orthogroups_df,
                                            species_domain_arch,
                                            yeast_domain_arch),
              swapped_doms = get_swapped_doms(aligned_ortholog_domain_archs,
-                                             fam_to_clan))
+                                             fam_to_clan)) %>%
+      ungroup() %>%
+      mutate(lost_doms_len = get_lost_doms_len(aligned_ortholog_domain_archs,
+                                               yeast_domain_bounds,
+                                               species_domain_arch),
+             ortholog_short_enough_for_dom_loss =
+               species_len <= (yeast_len - 0.85 * lost_doms_len))
   )
 }
 
@@ -427,6 +476,50 @@ get_swapped_doms <- function(aligned_DA, fam_to_clan) {
                 str_c(swapped_doms, collapse = '; '),
                 NA))
 }
+
+################################################################################
+
+### Helper functions for verifying domain losses heuristically
+
+get_lost_doms_len <- Vectorize(function(aligned_DA, yeast_domain_bounds,
+                                        species_domain_arch) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  # if no domain assignments for this species ortholog, return the length of
+  # all domains in the yeast ortholog
+  if (is.na(species_domain_arch)) {
+    lost_dom_lens <- str_split(yeast_domain_bounds, '; ')[[1]]
+    
+  } else {
+    # otherwise, get length of all lost domains only from the yeast ortholog
+    species_DA <- str_split(str_split(aligned_DA, '; ')[[1]][1], ' -> ')[[1]]
+    lost_dom_posns <- which(species_DA == '*')
+    
+    if (length(lost_dom_posns) == 0) {
+      # no lost domains in this species ortholog, so return NA
+      return(NA)
+    }
+    
+    lost_dom_lens <- str_split(yeast_domain_bounds, '; ')[[1]][lost_dom_posns]
+  }
+  
+  return(sum(sapply(lost_dom_lens, function(x) {get_domain_len(x)})))
+}, vectorize.args = c('aligned_DA', 'yeast_domain_bounds', 'species_domain_arch'))
+
+
+get_domain_len <- Vectorize(function(dom_bounds) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  dom_fragments <- str_split(dom_bounds, ',')[[1]]
+  
+  sum(
+    sapply(dom_fragments,
+           function(x) {as.integer(str_split(x, '-')[[1]][2]) - 
+               as.integer(str_split(x, '-')[[1]][1]) + 1})
+  )
+})
 
 ################################################################################
 
