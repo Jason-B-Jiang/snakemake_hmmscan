@@ -4,7 +4,7 @@
 # Microsporidia + other species
 #
 # Jason Jiang - Created: 2022/01/25
-#               Last edited: 2022/08/08
+#               Last edited: 2022/08/09
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -82,9 +82,10 @@ format_aligned_domain_archs_df <- function(aligned_domain_archs) {
              swap = as.integer(!is.na(swapped_doms)),
              DA_conservation = get_DA_conservation(lost, gain, swap)) %>%
       separate_rows(DA_conservation, sep = ',') %>%
-      mutate(essential = ifelse(essential, 'Essential', 'Non-essential'))
+      select(-lost, -gain, -swap)
     )
 }
+
 
 get_DA_conservation <- Vectorize(function(lost, gain, swap) {
   # ----------------------------------------------------------------------------
@@ -135,8 +136,7 @@ draw_DA_conservation_plot <- function(sp_df, sp_name, out_dir) {
     theme(legend.position = c(0.73, 0.85),
           axis.title = element_text(size = 12, color = 'black'),
           axis.text = element_text(size = 12, color = 'black'),
-          legend.text = element_text(size = 12),
-          legend.title = element_blank())
+          legend.text = element_text(size = 12))
   
   ggsave(str_c(out_dir, '/', sp_name, '.svg'),
          plot=plot,
@@ -147,5 +147,16 @@ draw_DA_conservation_plot <- function(sp_df, sp_name, out_dir) {
 }
 
 ################################################################################
+
+# aligned_domain_archs <- read_csv('../../results/aligned_domain_archs.csv')
+# out_dir <- '../../results/domain_arch_conservation_plots'
+# aligned_domain_archs <- format_aligned_domain_archs_df(aligned_domain_archs)
+# microsp_domain_archs <- filter(aligned_domain_archs, is_microsp, species != 'R_allo')
+# outgroup_domain_archs <- filter(aligned_domain_archs, !is_microsp)
+# 
+# p_val <- prop.test(x = c(nrow(filter(microsp_domain_archs, DA_conservation == 'Loss')),
+#                          nrow(filter(outgroup_domain_archs, DA_conservation == 'Loss'))),
+#                    n = c(nrow(filter(microsp_domain_archs, !is.na(aligned_ortholog_domain_archs))),
+#                          nrow(filter(outgroup_domain_archs, !is.na(aligned_ortholog_domain_archs)))))$p.value
 
 main()  # run the script

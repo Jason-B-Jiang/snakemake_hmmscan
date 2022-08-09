@@ -29,6 +29,9 @@ CRH_HEADER = c('query_id', 'match_id', 'score', 'boundaries', 'resolved',
 # Parameters for Needleman-Wunsch alignments of domain architectures
 NW_PARAMS = list(MATCH = 0, MISMATCH = -3, GAP = -10, GAPCHAR = '*')
 
+# List of abbreviated outgroup species names
+OUTGROUPS <- c('C_eleg', 'D_disc', 'D_reri', 'D_mela', 'H_sapi', 'S_pomb')
+
 ################################################################################
 
 main <- function() {
@@ -92,6 +95,21 @@ main <- function() {
                                                         fam_to_clan,
                                                         essential_yeast_genes,
                                                         excluded_microsp)
+  
+  # verify domain losses in outgroups
+  outgroups_DA <- get_outgroups_domain_arch_hashtable(aligned_domain_archs,
+                                                      OUTGROUPS)
+  
+  aligned_domain_archs <- aligned_domain_archs %>%
+    rowwise() %>%
+    mutate(dom_losses_in_outgroups =
+             ifelse(!is.na(lost_doms) & is_microsp & species != 'R_allo' &
+                      !is.na(aligned_ortholog_domain_archs),
+                    verify_dom_losses_in_outgroups(aligned_ortholog_domain_archs,
+                                                   orthogroup,
+                                                   OUTGROUPS,
+                                                   outgroups_DA),
+                    NA))
   
   # write modified orthogroups_df dataframe to specified filepath
   write_csv(aligned_domain_archs, args[6])
@@ -520,6 +538,104 @@ get_domain_len <- Vectorize(function(dom_bounds) {
                as.integer(str_split(x, '-')[[1]][1]) + 1})
   )
 })
+
+################################################################################
+
+## Helper functions for verifying that lost domains in Microsporidia are conserved
+## in outgroup species
+
+get_outgroups_domain_arch_hashtable <- function(aligned_domain_archs, outgroups) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  outgroups_DA_hash <- new.env()
+  for (sp in outgroups) {
+    sp_DA_df <- filter(aligned_domain_archs, species == sp,
+                       !is.na(aligned_ortholog_domain_archs))
+    sp_orthogroup_domain_archs <- new.env()
+    
+    Map(function(og, domain_arch) {sp_orthogroup_domain_archs[[og]] <- domain_arch},
+        sp_DA_df$orthogroup,
+        sp_DA_df$aligned_ortholog_domain_archs)
+    
+    outgroups_DA_hash[[sp]] <- sp_orthogroup_domain_archs
+  }
+  
+  return(outgroups_DA_hash)
+}
+
+
+verify_dom_losses_in_outgroups <- function(aligned_DA, orthogroup, outgroups,
+                                           outgroups_DA_hash) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  # positions of lost domains in the ortholog, relative to the yeast ortholog
+  lost_dom_idx <- get_lost_dom_idx(aligned_DA)
+  dom_loss_verified <- c()
+  
+  for (i in lost_dom_idx) {
+    dom_loss_verified <- c(dom_loss_verified,
+                           is_dom_conserved_in_outgroups(i, orthogroup, outgroups,
+                                                         outgroups_DA_hash))
+  }
+  
+  return(str_c(dom_loss_verified, collapse = '; '))
+}
+
+
+get_lost_dom_idx <- function(aligned_DA) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  sp_1_DA <- str_split(str_split(aligned_DA, '; ')[[1]][1], ' -> ')[[1]]
+  return(which(sp_1_DA == '*'))
+}
+
+
+is_dom_conserved_in_outgroups <- function(i, orthogroup, outgroups, outgroups_DA_hash) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  is_conserved_in_outgroup <- c()
+  for (sp in outgroups) {
+    outgroup_DA_alignment <- outgroups_DA_hash[[sp]][[orthogroup]]
+    
+    if (is.null(outgroup_DA_alignment)) {
+      is_conserved_in_outgroup <- c(is_conserved_in_outgroup, FALSE)
+      
+    } else {
+      sp_DA <- str_split(str_split(outgroup_DA_alignment, '; ')[[1]][1], ' -> ')[[1]]
+      yeast_DA <- str_split(str_split(outgroup_DA_alignment, '; ')[[1]][2], ' -> ')[[1]]
+      yeast_dom_idx <- get_yeast_dom_idx(i, yeast_DA)
+      
+      is_conserved_in_outgroup <- c(is_conserved_in_outgroup,
+                                    sp_DA[yeast_dom_idx] != '*')
+    }
+  }
+  
+  return(sum(is_conserved_in_outgroup) >= 2)
+}
+
+
+get_yeast_dom_idx <- function(i, yeast_DA) {
+  # ---------------------------------------------------------------------------
+  # Docstring goes here.
+  # ---------------------------------------------------------------------------
+  non_gaps <- 0
+  j = 1
+  
+  while (non_gaps < i) {
+    if (yeast_DA[j] == '*') {
+      j <- j + 1
+    } else {
+      non_gaps <- non_gaps + 1
+      j <- j + 1
+    }
+  }
+  
+  return(j - 1)
+}
 
 ################################################################################
 
