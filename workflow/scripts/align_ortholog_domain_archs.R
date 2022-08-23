@@ -614,7 +614,7 @@ is_dom_conserved_in_outgroups <- function(i, orthogroup, outgroups, outgroups_DA
     }
   }
   
-  return(sum(is_conserved_in_outgroup) >= 2)
+  return(sum(is_conserved_in_outgroup) >= 1)
 }
 
 
