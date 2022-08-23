@@ -3,7 +3,7 @@
 # Plot ortholog domain and linker lengths
 #
 # Jason Jiang - Created: 2022/08/22
-#               Last edited: 2022/08/22
+#               Last edited: 2022/08/23
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -26,7 +26,9 @@ main <- function() {
   #   $1 = csv of species + yeast domain architectures, with domain lengths
   #   $2 = directory to save resulting plots to
   # ---------------------------------------------------------------------------
-  aligned_domain_archs <- read_csv(args[1], show_col_types = F)
+  aligned_domain_archs <- read_csv(args[1], show_col_types = F) %>%
+    filter(!excluded_species)  # remove orthologs from species w/ low qual genomes
+  
   out_dir <- args[2]
   
   # create output directory if not already existing
@@ -40,7 +42,7 @@ main <- function() {
   # create boxplots comparing linker and domain lengths between ortholog pairs
   # for each group of species w/ yeast
   Map(function(domain_archs, name, out) {
-    plot_domain_and_linker_lengths(domain_archs, name, out)},
+    plot_domain_and_linker_lengths(domain_archs, name, out_dir)},
       list(microsp_domain_archs, rozella_domain_archs, outgroup_domain_archs),
       list('All microsporidia', 'Rosella', 'Outgroup species'))
 }
@@ -60,10 +62,82 @@ plot_domain_and_linker_lengths <- function(domain_archs, name, out) {
   #   out:
   #
   # ---------------------------------------------------------------------------
-  domain_archs <- get_orthololog_domain_and_linker_lengths(domain_archs)
+  domain_archs <- get_ortholog_domain_and_linker_lengths(domain_archs)
+  
+  # dataframe just for unique linker values
+  linkers <- distinct(domain_archs, species_ortholog, .keep_all = T) %>%
+    select(species, essential, yeast_ortholog, species_ortholog,
+           species_linker_len, yeast_linker_len, linker_ratio) %>%
+    rename(length_ratio = linker_ratio,
+           species_len = species_linker_len,
+           yeast_len = yeast_linker_len) %>%
+    mutate(type = 'linker')
+  
+  # dataframe just for aligned domain lengths
+  domains <- domain_archs %>%
+    select(species, essential, yeast_ortholog, species_ortholog,
+           aligned_species_domain_len, aligned_yeast_domain_len,
+           domain_ratio) %>%
+    rename(length_ratio = domain_ratio,
+           species_len = aligned_species_domain_len,
+           yeast_len = aligned_yeast_domain_len) %>%
+    mutate(type = 'domain')
   
   # p-values for difference between species + yeast ortholog linker and domain
   # lengths
+  p_domains <- wilcox.test(domains$species_len,
+                           domains$yeast_len,
+                           paired = T)$p.value  # -4 AA med diff, 97% of length
+  p_linkers <- wilcox.test(linkers$species_len,
+                           linkers$yeast_len,
+                           paired = T)$p.value
+  
+  # p-values for differences in domain/linker lengths between essential and
+  # non-essential ortholog pairs
+  
+  # 97% in essential, 95.5% in non-essential
+  # greater significance than linkers due to larger sample size
+  p_domains_essential <- wilcox.test(filter(domains, essential)$length_ratio,
+                                     filter(domains, !essential)$length_ratio)$p.value
+  
+  # 73.6% in essential, 71.3% in non-essential
+  p_linkers_essential <- wilcox.test(filter(linkers, essential)$length_ratio,
+                                     filter(linkers, !essential)$length_ratio)$p.value
+  
+  # do some really weird stuff for plotting
+  dom_linkers <- rbind(domains, linkers)  # combine dataframes for plotting
+  
+  boxplt <- ggplot(data = dom_linkers, aes(x = essential, y = log(length_ratio, base = 2))) +
+    geom_boxplot() +
+    geom_signif(comparisons = list(c('TRUE', 'FALSE'))) +
+    labs(x = 'Essential?',
+         y = 'log2(length in species ortholog / length in yeast ortholog)',
+         title = str_c(name, '\nn = ', nrow(linkers),
+                       ' species-yeast ortholog pairs\n')) +
+    theme(axis.title = element_text(color = 'black', size = 24),
+          axis.text = element_text(color = 'black', size = 24),
+          plot.title = element_text(size = 24)) +
+    facet_wrap(~type) +
+    theme_bw()
+  
+  # helper function to round p values to n significant digits
+  # taken from https://stackoverflow.com/questions/43050903/round-to-significant-digits-only-with-decimal-portion-of-number-in-r
+  my_signif = function(x, digits) floor(x) + signif(x %% 1, digits)
+  
+  # dataframe holding overall N. parisii vs yeast domain and linker length diffs
+  # p values
+  f_labels <- data.frame(type = c('domain', 'linker'),
+                         label = c(str_c('overall: p = ', my_signif(p_domains, 2)),
+                                   str_c('overall: p = ', my_signif(p_linkers, 2))))
+  
+  # add overall p-values for microsporidia domains vs yeast domains lengths,
+  # microsporidia linkers vs yeast linkers lengths to the boxplot
+  boxplt <- boxplt +
+    geom_label(x = 1.9, y = -5.5, aes(label = label), data = f_labels)
+  
+  # save the plot to desired output directory
+  ggsave(plot = boxplt, filename = str_c(out, '/', name, '.svg'), units = 'in',
+         width = 5.38, height = 6.88, dpi = 600)
 }
 
 
@@ -73,7 +147,7 @@ get_ortholog_domain_and_linker_lengths <- function(domain_archs) {
   return(
     domain_archs %>%
       filter(!is.na(aligned_ortholog_domain_archs)) %>%
-      select(species, yeast_ortholog, species_ortholog,
+      select(species, essential, yeast_ortholog, species_ortholog,
              yeast_len, species_len,
              yeast_domain_bounds, species_domain_bounds,
              aligned_ortholog_domain_archs) %>%
@@ -93,7 +167,11 @@ get_ortholog_domain_and_linker_lengths <- function(domain_archs) {
                     aligned_species_domain_len,
                     sep = '; ') %>%
       mutate(aligned_yeast_domain_len = as.integer(aligned_yeast_domain_len),
-             aligned_species_domain_len = as.integer(aligned_species_domain_len))
+             aligned_species_domain_len = as.integer(aligned_species_domain_len),
+             domain_ratio = aligned_species_domain_len / aligned_yeast_domain_len,
+             linker_ratio = ifelse(yeast_linker_len != 0,
+                                   species_linker_len / yeast_linker_len,
+                                   NA))
   )
 }
 
