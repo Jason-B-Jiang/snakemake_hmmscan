@@ -1,0 +1,161 @@
+# -----------------------------------------------------------------------------
+#
+# Get species-yeast ortholog c-terminal differences and PTC tolerances
+#
+# Jason Jiang - Created: 2022/08/31
+#               Last edited: 2022/08/31
+#
+# Reinke Lab - Microsporidia Orthologs Project
+#
+# Goal: Check how much C-terminal truncation has occurred in orthologs from
+#       various species (Microsporidia or outgroups) to yeast, and plot
+#       relationship between extent of ortholog C-terminus truncation and
+#       premature stop codon (PTC) tolerance in the yeast ortholog.
+#
+# Thanks to Brandon Murareanu for this RScript layout
+#
+# -----------------------------------------------------------------------------
+
+suppressMessages(library(tidyverse))
+suppressMessages(library(readxl))
+
+################################################################################
+
+main <- function() {
+  args <- commandArgs(trailingOnly = T)
+  
+  # TODO - replace hardcoded arguments
+  orthogroups <- read_csv('../../data/orthogroups.csv', show_col_types = F)
+  yeast_ptc_tolerance <- get_ptc_tolerance_hashtable(readxl::read_xls('../../data/supp_12.xls'),
+                                                     read_rds('../../data/yeast_genome_to_uniprot.rds'))
+  ortholog_alignments <- read_rds('../../resources/ortholog_alignments.rds')
+  out <- NA
+  
+  # calculate extent of c-terminus truncation for ortholog in each species to
+  # yeast
+  #
+  # get number of PTCs tolerated by the corresponding yeast ortholog, if PTC
+  # data for that yeast gene is available
+  orthogroups <- orthogroups %>%
+    rowwise() %>%
+    mutate(c_term_truncation = get_c_term_truncation(species_ortholog,
+                                                     ortholog_alignments),
+           yeast_ptc_tolerated = ifelse(!is_null(yeast_ptc_tolerance[[yeast_ortholog]]),
+                                        yeast_ptc_tolerance[[yeast_ortholog]],
+                                        NA)) %>%
+    ungroup() %>%
+    # remove species-yeast ortholog pairs where the yeast gene doesn't have
+    # PTC data (ex: the yeast gene is non-essential)
+    filter(!is.na(yeast_ptc_tolerated))
+  
+  # plot c-term truncation of orthologs to number of PTCs tolerated by yeast
+  # orthologs
+  microsp_orthogroups <- filter(orthogroups, is_microsp, species != 'R_allo')
+  rozella_orthogroups <- filter(orthogroups, species == 'R_allo')
+  outgroup_orthogroups <- filter(orthogroups, !is_microsp)
+  
+  plot_c_term_truncations_vs_ptc_tolerance(microsp_orthogroups,
+                                           'Microsporidia',
+                                           out)
+  
+  plot_c_term_truncations_vs_ptc_tolerance(rozella_orthogroups,
+                                           'Rozella allomycis',
+                                           out)
+  
+  plot_c_term_truncations_vs_ptc_tolerance(outgroup_orthogroups,
+                                           'Outgroup species',
+                                           out)
+}
+
+################################################################################
+
+## Helper functions
+
+get_ptc_tolerance_hashtable <- function(ptc_tolerance_data, sgd_to_uniprot) {
+  # ---------------------------------------------------------------------------
+  # Create a hashtable mapping each yeast gene to the number of premature stop
+  # codons they tolerate.
+  #
+  # Arguments:
+  #   ptc_tolerance_data: dataframe for supplementary table 12 of X et al's
+  #   paper, mapping each yeast gene to the number of PTCs they tolerate
+  #
+  #   sgd_to_uniprot: hashtable mapping systematic yeast genome gene names to
+  #   uniprot gene names
+  #
+  # ---------------------------------------------------------------------------
+  ptc_tolerance_data <- ptc_tolerance_data %>%
+    rowwise() %>%
+    mutate(uniprot_id = sgd_to_uniprot[[GENEID]])
+  
+  # create hashtable w/ keys as uniprot yeast gene names, and values as number
+  # of PTCs tolerated by that gene
+  ptc_tolerance_hashtable <- new.env()
+  Map(function(gene, ptc_tolerance) {ptc_tolerance_hashtable[[gene]] <- ptc_tolerance},
+      ptc_tolerance_data$uniprot_id,
+      ptc_tolerance_data$`HMM count of PTCs tolerated per gene`)
+  
+  return(ptc_tolerance_hashtable)
+}
+
+
+get_c_term_truncation <- function(species_ortholog, ortholog_alignments) {
+  # ---------------------------------------------------------------------------
+  # From the alignment of this species ortholog to its yeast ortholog, get the
+  # number of residues between the last residue in the yeast ortholog, to the
+  # last aligned residue from the species ortholog
+  #
+  # Arguments:
+  #   species_ortholog: name of gene from species to get alignment with yeast
+  #   ortholog for
+  #
+  #   ortholog_alignments: hashtable mapping each species ortholog to alignment
+  #   with yeast ortholog
+  # Note to self:
+  # Can instead return ratio of % N-terminus truncated / % C-terminus truncated?
+  # 
+  # ---------------------------------------------------------------------------
+  species_alignment <- ortholog_alignments[[species_ortholog]]$species_alignment
+  yeast_alignment <- ortholog_alignments[[species_ortholog]]$yeast_alignment
+  i <- str_length(species_alignment)
+  
+  # yeast ortholog has a truncated c-terminus relative to the species ortholog,
+  # so return 0
+  if (substr(yeast_alignment, i, i) == '-') {
+    return(0)
+  }
+  
+  c_term_truncation <- 0
+  while (i > 0) {
+    if (!(substr(species_alignment, i, i) %in% c('-', '*'))) {
+      break
+    }
+    
+    c_term_truncation <- c_term_truncation + 1
+    i = i - 1
+  }
+  
+  return(c_term_truncation)
+}
+
+
+plot_c_term_truncations_vs_ptc_tolerance <- function(orthogroups, name, out) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  plot <- ggplot(orthogroups, aes(x = factor(yeast_ptc_tolerated),
+                                  y = species_len / yeast_len)) +
+    geom_violin(aes(colour = factor(yeast_ptc_tolerated)), show.legend = F) +
+    stat_summary(fun = "median", fun.min = "median", fun.max= "median",
+                 size= 0.3, geom = "crossbar") +
+    labs(x = 'Number of PTCs tolerated by yeast gene',
+         y = 'Species ortholog length / Yeast ortholog length',
+         title = str_c(name, '\nn = ', nrow(orthogroups), ' species-yeast ortholog pairs')) +
+    theme_bw() +
+    theme(axis.text = element_text(size = 18, color = 'black'),
+          axis.title = element_text(size = 18),
+          title = element_text(size = 18))
+}
+
+################################################################################
+
+main()
