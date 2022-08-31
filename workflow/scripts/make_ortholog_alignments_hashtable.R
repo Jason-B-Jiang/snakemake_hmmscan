@@ -3,7 +3,7 @@
 # Create hashtable of single-copy ortholog sequence alignments
 #
 # Jason Jiang - Created: 2022/08/23
-#               Last edited: 2022/08/23
+#               Last edited: 2022/08/31
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -15,10 +15,10 @@
 #
 # -----------------------------------------------------------------------------
 
-require(tidyverse)
-require(seqinr)
-require(glue)
-require(Biostrings)
+suppressMessages(library(tidyverse))
+suppressMessages(library(seqinr))
+suppressMessages(library(glue))
+suppressMessages(library(Biostrings))
 
 ################################################################################
 
@@ -121,7 +121,7 @@ NW_align_orthologs <- function(species_seq, yeast_seq, is_microsp) {
   
   return(list(species_alignment = toString(pattern(NW_alignment)),
               yeast_alignment = toString(subject(NW_alignment)),
-              percent_id = pid(NW_alignment, type = 'PID1')))
+              percent_id = pid(NW_alignment, type = 'PID2')))
 }
 
 ################################################################################
