@@ -3,7 +3,7 @@
 # Plot ortholog domain and linker lengths
 #
 # Jason Jiang - Created: 2022/08/22
-#               Last edited: 2022/08/23
+#               Last edited: 2022/09/02
 #
 # Reinke Lab - Microsporidia Orthologs Project
 #
@@ -26,9 +26,9 @@ main <- function() {
   #   $1 = csv of species + yeast domain architectures, with domain lengths
   #   $2 = directory to save resulting plots to
   # ---------------------------------------------------------------------------
+  args <- commandArgs(trailingOnly = T)
   aligned_domain_archs <- read_csv(args[1], show_col_types = F) %>%
-    filter(!excluded_species)  # remove orthologs from species w/ low qual genomes
-  
+    filter(!exclude_species)  # remove orthologs from species w/ low qual genomes
   out_dir <- args[2]
   
   # create output directory if not already existing
@@ -71,7 +71,11 @@ plot_domain_and_linker_lengths <- function(domain_archs, name, out) {
     rename(length_ratio = linker_ratio,
            species_len = species_linker_len,
            yeast_len = yeast_linker_len) %>%
-    mutate(type = 'linker')
+    mutate(type = 'linker') %>%
+    group_by(essential) %>%
+    mutate(sd_by_essential = sd(length_ratio, na.rm=T),
+           mean_by_essential = mean(length_ratio, na.rm=T),
+           is_outlier = abs(length_ratio - mean(domains$length_ratio, na.rm = T)) > 1.5 * sd_by_essential)
   
   # dataframe just for aligned domain lengths
   domains <- domain_archs %>%
@@ -81,7 +85,11 @@ plot_domain_and_linker_lengths <- function(domain_archs, name, out) {
     rename(length_ratio = domain_ratio,
            species_len = aligned_species_domain_len,
            yeast_len = aligned_yeast_domain_len) %>%
-    mutate(type = 'domain')
+    mutate(type = 'domain') %>%
+    group_by(essential) %>%
+    mutate(sd_by_essential = sd(length_ratio, na.rm=T),
+           mean_by_essential = mean(length_ratio, na.rm=T),
+           is_outlier = abs(length_ratio - mean(domains$length_ratio, na.rm = T)) > 1.5 * sd_by_essential)
   
   # p-values for difference between species + yeast ortholog linker and domain
   # lengths
@@ -107,37 +115,57 @@ plot_domain_and_linker_lengths <- function(domain_archs, name, out) {
   # do some really weird stuff for plotting
   dom_linkers <- rbind(domains, linkers)  # combine dataframes for plotting
   
-  boxplt <- ggplot(data = dom_linkers, aes(x = essential, y = log(length_ratio, base = 2))) +
-    geom_boxplot() +
+  dom_plot <- ggplot(data = filter(dom_linkers, type == 'domain', !is_outlier),
+                     aes(x = essential, y = length_ratio)) +
+    geom_violin(show.legend = F, aes(fill = essential)) +
+    stat_summary(fun = "median", fun.min = "median", fun.max= "median",
+                 size= 0.3, geom = "crossbar") +
     geom_signif(comparisons = list(c('TRUE', 'FALSE'))) +
     labs(x = 'Essential?',
-         y = 'log2(length in species ortholog / length in yeast ortholog)',
+         y = 'ln(domain length in species ortholog / domain length in yeast ortholog)',
          title = str_c(name, '\nn = ', nrow(linkers),
                        ' species-yeast ortholog pairs\n')) +
     theme(axis.title = element_text(color = 'black', size = 24),
           axis.text = element_text(color = 'black', size = 24),
           plot.title = element_text(size = 24)) +
-    facet_wrap(~type) +
+    theme_bw()
+  
+  linker_plot <- ggplot(data = filter(dom_linkers, type == 'linker', !is_outlier),
+                         aes(x = essential, y = length_ratio)) +
+    geom_violin(show.legend = F, aes(fill = essential)) +
+    stat_summary(fun = "median", fun.min = "median", fun.max= "median",
+                 size= 0.3, geom = "crossbar") +
+    geom_signif(comparisons = list(c('TRUE', 'FALSE'))) +
+    labs(x = 'Essential?',
+         y = 'ln(linker length in species ortholog / linker length in yeast ortholog)',
+         title = str_c(name, '\nn = ', nrow(linkers),
+                       ' species-yeast ortholog pairs\n')) +
+    theme(axis.title = element_text(color = 'black', size = 24),
+          axis.text = element_text(color = 'black', size = 24),
+          plot.title = element_text(size = 24)) +
     theme_bw()
   
   # helper function to round p values to n significant digits
   # taken from https://stackoverflow.com/questions/43050903/round-to-significant-digits-only-with-decimal-portion-of-number-in-r
   my_signif = function(x, digits) floor(x) + signif(x %% 1, digits)
   
-  # dataframe holding overall N. parisii vs yeast domain and linker length diffs
+  # dataframe holding overall species vs yeast domain and linker length diffs
   # p values
-  f_labels <- data.frame(type = c('domain', 'linker'),
-                         label = c(str_c('overall: p = ', my_signif(p_domains, 2)),
-                                   str_c('overall: p = ', my_signif(p_linkers, 2))))
+  # f_labels <- data.frame(type = c('domain', 'linker'),
+  #                        label = c(str_c('overall: p = ', my_signif(p_domains, 2)),
+  #                                  str_c('overall: p = ', my_signif(p_linkers, 2))))
   
   # add overall p-values for microsporidia domains vs yeast domains lengths,
   # microsporidia linkers vs yeast linkers lengths to the boxplot
-  boxplt <- boxplt +
-    geom_label(x = 1.9, y = -5.5, aes(label = label), data = f_labels)
+  # boxplt <- boxplt +
+  #   geom_label(x = 1.9, y = -5.5, aes(label = label), data = f_labels)
   
-  # save the plot to desired output directory
-  ggsave(plot = boxplt, filename = str_c(out, '/', name, '.svg'), units = 'in',
-         width = 5.38, height = 6.88, dpi = 600)
+  # save the plots to desired output directory
+  ggsave(plot = dom_plot, filename = str_c(out, '/', name, ' domains', '.svg'),
+         units = 'in', width = 5.38, height = 6.88, dpi = 600)
+  
+  ggsave(plot = linker_plot, filename = str_c(out, '/', name, ' linkers', '.svg'),
+         units = 'in', width = 5.38, height = 6.88, dpi = 600)
 }
 
 
