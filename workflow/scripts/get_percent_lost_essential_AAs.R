@@ -3,7 +3,7 @@
 # Clean microsporidia name + host data for predictions
 #
 # Jason Jiang - Created: 2022/07/29
-#               Last edited: 2022/09/12
+#               Last edited: 2022/09/13
 #
 # Reinke Lab - Microsporidia orthologs
 #
@@ -28,12 +28,15 @@ main <- function() {
                               sgd_to_uniprot_names)
   ortholog_alignments <- read_rds('../../resources/ortholog_alignments.rds')
   orthogroups <- read_csv('../../data/orthogroups.csv')
+  out <- '../../results/lost_residues_essential.svg'
   
   # add columns to orthogroups dataframe indicating number of lost residues
   # in species orthologs to yeast, and number of such residues that are
   # essential
   orthogroups <- annotate_essential_lost_residues(orthogroups, ptc_data,
                                                   ortholog_alignments)
+  
+  plot_percent_lost_residues(orthogroups, out)
 }
 
 ################################################################################
@@ -103,9 +106,22 @@ annotate_essential_lost_residues <- function(orthogroups, ptc_data,
       rowwise() %>%
       mutate(species_lost_residues =
                get_lost_residues_in_species_ortholog(ortholog_alignments[[species_ortholog]]$species_alignment,
-                                                     ortholog_alignments[[species_ortholog]]$yeast_alignment)) %>%
+                                                     ortholog_alignments[[species_ortholog]]$yeast_alignment),
+             essential_dispensable_unclassified = get_lost_amino_acid_types(species_lost_residues,
+                                                                            critical_ptc_position,
+                                                                            ptc_tolerance,
+                                                                            ptc_position)) %>%
       ungroup() %>%
-      mutate()
+      separate(essential_dispensable_unclassified,
+               c('num_lost_essential', 'num_lost_dispensable', 'num_lost_unclassified'),
+               sep = ', ') %>%
+      mutate(num_lost = ifelse(!is.na(species_lost_residues),
+                                        lengths(str_split(species_lost_residues, ', ')),
+                                        0),
+             num_lost_essential = as.integer(num_lost_essential),
+             num_lost_dispensable = as.integer(num_lost_dispensable),
+             num_lost_unclassified = as.integer(num_lost_unclassified)) %>%
+      filter(species_len < yeast_len, !is.na(species_lost_re))
   )
 }
 
@@ -136,11 +152,36 @@ get_lost_residues_in_species_ortholog <- function(species_alignment,
   
   return(ifelse(length(lost_residues) == 0,
                 NA,
-                str_c(lost_residues, collapse = '; ')))
+                str_c(lost_residues, collapse = ', ')))
 }
 
 
-classify_lost_amino_acid <- Vectorize(function(lost_residue, ptc_tolerance,
+get_lost_amino_acid_types <- function(species_lost_residues,
+                                      critical_ptc_position,
+                                      ptc_tolerance,
+                                      ptc_position) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  if (is.na(species_lost_residues)) {
+    return(NA)
+  }
+  
+  species_lost_residues <- as.integer(str_split(species_lost_residues, ', ')[[1]])
+  lost_residue_types <- sapply(species_lost_residues,
+                               function(a) {classify_lost_amino_acid(a,
+                                                                     ptc_tolerance,
+                                                                     ptc_position,
+                                                                     critical_ptc_position)})
+  
+  num_essential <- length(lost_residue_types[lost_residue_types == 'essential'])
+  num_dispensable <- length(lost_residue_types[lost_residue_types == 'dispensable'])
+  num_unclassified <- length(lost_residue_types[lost_residue_types == 'unclassified'])
+  
+  return(str_c(num_essential, num_dispensable, num_unclassified, sep = ', '))
+}
+
+
+classify_lost_amino_acid <- function(lost_residue, ptc_tolerance,
                                      ptc_position, critical_ptc_position) {
   # ---------------------------------------------------------------------------
   # ---------------------------------------------------------------------------
@@ -154,7 +195,7 @@ classify_lost_amino_acid <- Vectorize(function(lost_residue, ptc_tolerance,
   
   if (is.na(critical_ptc_position)) {
     # all PTCs are tolerated
-    first_ptc <- as.integer(str_split(ptc_position, '; ')[[1]][1])
+    first_ptc <- as.integer(str_split(ptc_position, ', ')[[1]][1])
     if (lost_residue >= first_ptc) {
       return('dispensable')
     }
@@ -162,12 +203,40 @@ classify_lost_amino_acid <- Vectorize(function(lost_residue, ptc_tolerance,
   }
   
   # at least one lethal PTC occurs in the gene, and not all PTCs are lethal
-  if (lost_residue <= critical_ptc) {
+  if (lost_residue <= critical_ptc_position) {
     return('essential')
   }
   
   return('dispensable')
-}, vectorize.args = c('lost_residue', 'ptc_tolerance', 'ptc_position',
-                      'critical_ptc_position'))
+}
+
+
+plot_percent_lost_residues <- function(orthogroups, out) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  microsp_orthogroups <- filter(orthogroups, is_microsp, species != 'R_allo')
+  outgroup_orthogroups <- filter(orthogroups, !is_microsp)
+  
+  table_to_plot <- data.frame(group = c('Microsporidia', 'Outgroups'),
+                              essential = c(sum(microsp_orthogroups$num_lost_essential) / sum(microsp_orthogroups$num_lost),
+                                                    sum(outgroup_orthogroups$num_lost_essential) / sum(outgroup_orthogroups$num_lost)),
+                              dispensible = c(sum(microsp_orthogroups$num_lost_dispensable) / sum(microsp_orthogroups$num_lost),
+                                                     sum(outgroup_orthogroups$num_lost_dispensable) / sum(outgroup_orthogroups$num_lost)),
+                              unclassified = c(sum(microsp_orthogroups$num_lost_unclassified) / sum(microsp_orthogroups$num_lost),
+                                                       sum(outgroup_orthogroups$num_lost_unclassified) / sum(outgroup_orthogroups$num_lost))) %>%
+    pivot_longer(cols = c('essential', 'dispensible', 'unclassified'),
+                 names_to = 'type',
+                 values_to = 'percent')
+  
+  ggplot(table_to_plot, aes(x = group, y = percent, fill = type)) +
+    geom_bar(stat = 'identity') +
+    labs(y = '% Lost amino acids in orthologs to yeast') +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+          legend.title = element_blank(),
+          axis.title.y = element_text(size = 18),
+          axis.text = element_text(size = 18, color = 'black'),
+          legend.text = element_text(size = 18))
+}
 
 ################################################################################
