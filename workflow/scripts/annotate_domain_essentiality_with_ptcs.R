@@ -4,7 +4,7 @@
 # PTC data
 #
 # Jason Jiang - Created: 2022/09/19
-#               Last edited: 2022/09/19
+#               Last edited: 2022/09/20
 #
 # Reinke Lab - Microsporidia orthologs
 #
@@ -46,7 +46,12 @@ format_ptc_data <- function(ptc_data, sgd_to_uniprot_names) {
       filter(!is.na(ptc_tolerance)) %>%
       mutate(ptc_position = protein_length - dist_from_cds_end,
              # original CDS_length column included stop codon in length
-             protein_length = protein_length - 1) %>%
+             protein_length = protein_length - 1,
+             # replace D/A classifications of PTCs w/ survival = FALSE and survival =
+             # TRUE
+             ptc_tolerance = ifelse(!is.na(ptc_tolerance),
+                                    ifelse(ptc_tolerance == 'A', T, F),
+                                    NA)) %>%
       group_by(gene) %>%
       arrange(ptc_position, .by_group = T) %>%
       mutate(ptc_tolerance = str_c(ptc_tolerance, collapse = ', '),
@@ -66,11 +71,11 @@ get_critical_ptc_position <- Vectorize(function(ptc_tolerance, ptc_position) {
   # ---------------------------------------------------------------------------
   # Return corresponding position of the last lethal PTC in a gene
   # ---------------------------------------------------------------------------
-  ptc_tolerance <- str_split(ptc_tolerance, ', ')[[1]]
+  ptc_tolerance <- as.logical(str_split(ptc_tolerance, ', ')[[1]])
   ptc_position <- str_split(ptc_position, ', ')[[1]]
   
   # corresponding ptc position in gene for last lethal ptc
-  critical_ptc_position <- ptc_position[tail(which(ptc_tolerance == 'D'), n = 1)]
+  critical_ptc_position <- ptc_position[tail(which(!ptc_tolerance), n = 1)]
   
   if (length(critical_ptc_position) == 0) {
     # all PTCs in this gene are tolerated
@@ -122,6 +127,40 @@ get_domain_starts_or_ends <- Vectorize(function(domain_bounds, get_ends) {
   
   return(str_c(bounds, collapse = ', '))
 }, vectorize.args = c('domain_bounds', 'get_ends'))
+
+
+annotate_domains_with_ptc_data <- function(ptc_tolerance, ptc_position,
+                                           domain_starts, domain_ends,
+                                           critical_ptc_position) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  if (is.na(domain_starts) | is.na(domain_ends)) {
+    # NA values for domain starts/ends = no domain assignments for this gene
+    return(NA)
+  }
+  
+  # convert inputs into right types
+  ptc_tolerance <- as.logical(str_split(ptc_tolerance, ', '))
+  ptc_position <- as.integer(str_split(ptc_position, ', '))
+  domain_starts <- as.integer(str_split(domain_starts, ', '))
+  domain_ends <- as.integer(str_split(domain_ends, ', '))
+  critical_ptc_position <- as.integer(critical_ptc_position)
+  
+  return(
+    str_c(
+      map2_chr(domain_starts, domain_ends, ptc_tolerance, ptc_position,
+               critical_ptc_position),
+      collapse = ', '
+    )
+  )
+}
+
+
+classify_domain <- function(domain_start, domain_end, ptc_tolerance,
+                            ptc_position, critical_ptc_position) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+}
 
 ################################################################################
 
