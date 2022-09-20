@@ -148,8 +148,14 @@ annotate_domains_with_ptc_data <- function(ptc_tolerance, ptc_position,
   
   return(
     str_c(
-      map2_chr(domain_starts, domain_ends, ptc_tolerance, ptc_position,
-               critical_ptc_position),
+      map2_chr(domain_starts, domain_ends,
+               function(domain_start, domain_end) {
+                 classify_domain(domain_start,
+                                 domain_end,
+                                 ptc_tolerance,
+                                 ptc_position,
+                                 critical_ptc_position)
+               }),
       collapse = ', '
     )
   )
@@ -160,6 +166,35 @@ classify_domain <- function(domain_start, domain_end, ptc_tolerance,
                             ptc_position, critical_ptc_position) {
   # ---------------------------------------------------------------------------
   # ---------------------------------------------------------------------------
+  if (any(ptc_position < domain_start & ptc_tolerance)) {
+    # Non-lethal PTCs come before the start of the domain, so dispensable
+    return('Dispensable')
+    
+  } else {
+    # index of first lethal PTC disrupting this domain
+    first_disrupting_ptc <- tail(which(ptc_position < domain_end & !ptc_tolerance),
+                                 n = 1)
+    
+    # Essential domain:
+    # 1) lethal PTC comes before domain end, and all PTCs after the first lethal
+    #    PTC disrupting the domain are tolerated
+    #
+    # OR
+    #
+    # 2) lethal PTC coming before the domain end is the last PTC in the gene
+    #
+    # OR
+    #
+    # 3) lethal PTC coming before the domain end is the second to last PTC in
+    #    the gene
+    if ((first_disrupting_ptc < length(ptc_position) & 
+        all(ptc_tolerance[first_disrupting_ptc : length(ptc_tolerance)])) |
+        (length(ptc_position) == first_disrupting_ptc | length(ptc_position) == first_disrupting_ptc + 1)) {
+          return('Essential')
+    }
+    
+    return('Ambiguous')
+  }
 }
 
 ################################################################################
