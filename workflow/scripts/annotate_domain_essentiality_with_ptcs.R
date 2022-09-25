@@ -26,8 +26,28 @@ main <- function() {
     read_delim('../../resources/yeast_domains_resolved.txt')
   )
   
-  # add domain arch data to ptc data
-  ptc_data <- left_join(ptc_data, yeast_domain_archs, by = 'gene')
+  # add domain arch data to ptc data, and add column indicating essentiality
+  # of each domain in yeast
+  ptc_data <- left_join(ptc_data, yeast_domain_archs, by = 'gene') %>%
+    rowwise() %>%
+    mutate(domain_ptc_annotations = annotate_domains_with_ptc_data(ptc_tolerance,
+                                                                   ptc_position,
+                                                                   domain_starts,
+                                                                   domain_ends,
+                                                                   critical_ptc_position))
+  
+  # get aligned ortholog yeast domain architectures to annotate lost domains
+  lost_doms <- read_csv('../../results/aligned_domain_archs.csv') %>%
+    filter(!is.na(lost_doms)) %>%
+    rename(gene = yeast_ortholog) %>%
+    left_join(ptc_data, by = 'gene') %>%
+    rename(yeast_ortholog = gene) %>%
+    filter(!is.na(domain_ptc_annotations)) %>%
+    select(species, is_microsp, yeast_ortholog, species_ortholog, essential,
+           aligned_ortholog_domain_archs, lost_doms,
+           ortholog_short_enough_for_dom_loss, domain_ptc_annotations) %>%
+    mutate(lost_dom_annotations = get_lost_dom_annotations(aligned_ortholog_domain_archs,
+                                                           domain_ptc_annotations))
 }
 
 ################################################################################
@@ -140,10 +160,10 @@ annotate_domains_with_ptc_data <- function(ptc_tolerance, ptc_position,
   }
   
   # convert inputs into right types
-  ptc_tolerance <- as.logical(str_split(ptc_tolerance, ', '))
-  ptc_position <- as.integer(str_split(ptc_position, ', '))
-  domain_starts <- as.integer(str_split(domain_starts, ', '))
-  domain_ends <- as.integer(str_split(domain_ends, ', '))
+  ptc_tolerance <- as.logical(str_split(ptc_tolerance, ', ')[[1]])
+  ptc_position <- as.integer(str_split(ptc_position, ', ')[[1]])
+  domain_starts <- as.integer(str_split(domain_starts, ', ')[[1]])
+  domain_ends <- as.integer(str_split(domain_ends, ', ')[[1]])
   critical_ptc_position <- as.integer(critical_ptc_position)
   
   return(
@@ -166,36 +186,52 @@ classify_domain <- function(domain_start, domain_end, ptc_tolerance,
                             ptc_position, critical_ptc_position) {
   # ---------------------------------------------------------------------------
   # ---------------------------------------------------------------------------
-  if (any(ptc_position < domain_start & ptc_tolerance)) {
+  if (any(ptc_position <= domain_start & ptc_tolerance)) {
     # Non-lethal PTCs come before the start of the domain, so dispensable
     return('Dispensable')
     
-  } else {
-    # index of first lethal PTC disrupting this domain
-    first_disrupting_ptc <- tail(which(ptc_position < domain_end & !ptc_tolerance),
-                                 n = 1)
-    
-    # Essential domain:
-    # 1) lethal PTC comes before domain end, and all PTCs after the first lethal
-    #    PTC disrupting the domain are tolerated
-    #
-    # OR
-    #
-    # 2) lethal PTC coming before the domain end is the last PTC in the gene
-    #
-    # OR
-    #
-    # 3) lethal PTC coming before the domain end is the second to last PTC in
-    #    the gene
-    if ((first_disrupting_ptc < length(ptc_position) & 
-        all(ptc_tolerance[first_disrupting_ptc : length(ptc_tolerance)])) |
-        (length(ptc_position) == first_disrupting_ptc | length(ptc_position) == first_disrupting_ptc + 1)) {
-          return('Essential')
-    }
-    
+    # All PTCs tolerated in this gene, but none of the PTCs come before the
+    # start of this gene - ambiguous
+  } else if (is.na(critical_ptc_position)) {
     return('Ambiguous')
+    
+    # Essential:
+    # 1) First lethal PTC in the gene comes before the domain end
+    # OR
+    # 2) First lethal PTC in the gene comes right after the domain end
+  } else if (critical_ptc_position <= domain_end |
+             (length(ptc_position[ptc_position > domain_end]) == 1 &&
+              ptc_position[ptc_position > domain_end] == critical_ptc_position)) {
+    return('Essential')
   }
+  
+  return('Ambiguous')
 }
+
+
+get_lost_dom_annotations <- Vectorize(function(aligned_ortholog_domain_archs,
+                                               domain_ptc_annotations) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  # ortholog lost all domains in the yeast ortholog
+  if (is.na(aligned_ortholog_domain_archs)) {
+    return(domain_ptc_annotations)
+  }
+  
+  domain_ptc_annotations <- str_split(domain_ptc_annotations, ', ')[[1]]
+  
+  aligned_ortholog_domain_archs <- lapply(
+    as.list(str_split(aligned_ortholog_domain_archs, '; ')[[1]]),
+    function(s) {str_split(s, ' -> ')[[1]]}
+  )
+  
+  return(
+    str_c(domain_ptc_annotations[
+      which(aligned_ortholog_domain_archs[[1]] == '*')
+      ],
+        collapse = ', ')
+  )
+}, vectorize.args = c('aligned_ortholog_domain_archs', 'domain_ptc_annotations'))
 
 ################################################################################
 

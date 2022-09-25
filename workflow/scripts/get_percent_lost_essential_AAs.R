@@ -121,7 +121,7 @@ annotate_essential_lost_residues <- function(orthogroups, ptc_data,
              num_lost_essential = as.integer(num_lost_essential),
              num_lost_dispensable = as.integer(num_lost_dispensable),
              num_lost_unclassified = as.integer(num_lost_unclassified)) %>%
-      filter(species_len < yeast_len, !is.na(species_lost_re))
+      filter(species_len < yeast_len, !is.na(species_lost_residues))
   )
 }
 
@@ -216,7 +216,7 @@ plot_percent_lost_residues <- function(orthogroups, out) {
   # ---------------------------------------------------------------------------
   microsp_orthogroups <- filter(orthogroups, is_microsp, species != 'R_allo')
   outgroup_orthogroups <- filter(orthogroups, !is_microsp)
-  
+
   table_to_plot <- data.frame(group = c('Microsporidia', 'Outgroups'),
                               essential = c(sum(microsp_orthogroups$num_lost_essential) / sum(microsp_orthogroups$num_lost),
                                                     sum(outgroup_orthogroups$num_lost_essential) / sum(outgroup_orthogroups$num_lost)),
@@ -227,7 +227,7 @@ plot_percent_lost_residues <- function(orthogroups, out) {
     pivot_longer(cols = c('essential', 'dispensible', 'unclassified'),
                  names_to = 'type',
                  values_to = 'percent')
-  
+
   ggplot(table_to_plot, aes(x = group, y = percent, fill = type)) +
     geom_bar(stat = 'identity') +
     labs(y = '% Lost amino acids in orthologs to yeast') +
@@ -236,6 +236,32 @@ plot_percent_lost_residues <- function(orthogroups, out) {
           legend.title = element_blank(),
           axis.title.y = element_text(size = 18),
           axis.text = element_text(size = 18, color = 'black'),
+          legend.text = element_text(size = 18))
+}
+
+plot_percent_lost_residues_2 <- function(orthogroups, out) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  table_to_plot <- orthogroups %>%
+    group_by(species) %>%
+    mutate(essential = sum(num_lost_essential) / sum(num_lost),
+           dispensable = sum(num_lost_dispensable) / sum(num_lost),
+           unclassified = sum(num_lost_unclassified) / sum(num_lost)) %>%
+    distinct(species, .keep_all = T) %>%
+    select(species, essential, dispensable, unclassified) %>%
+    pivot_longer(cols = c('essential', 'dispensable', 'unclassified'),
+                 names_to = 'type',
+                 values_to = 'percent')
+  
+  ggplot(table_to_plot, aes(x = species, y = percent, fill = type)) +
+    geom_bar(stat = 'identity') +
+    labs(y = '% Lost amino acids in orthologs to yeast') +
+    coord_flip() +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+          legend.title = element_blank(),
+          axis.title.y = element_text(size = 18),
+          axis.text = element_text(size = 10, color = 'black'),
           legend.text = element_text(size = 18))
 }
 
