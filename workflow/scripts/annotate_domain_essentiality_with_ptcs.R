@@ -15,6 +15,18 @@ library(readxl)
 
 ################################################################################
 
+# Ordering of microsporidia/outgroup species
+SP_ORDER <- c('A_alge', 'A_locu', 'E_aedi', 'E_bien', 'E_brev', 'E_canc',
+              'E_cuni', 'E_hell', 'E_hepa', 'E_inte', 'E_roma', 'H_erio',
+              'N_ausu', 'N_cera', 'N_cide', 'N_disp', 'N_ferr', 'N_gran',
+              'N_homo', 'N_iron', 'N_majo', 'N_mino', 'N_okwa', 'N_pari',
+              'O_coll', 'P_epip', 'P_phil', 'S_loph', 'T_cont', 'T_homi',
+              'T_rati', 'V_corn', 'V_culi', 'A_sp.', 'M_incu', 'M_daph',
+              'P_sacc', 'R_allo', 'C_eleg', 'D_disc', 'D_mela', 'D_reri',
+              'H_sapi', 'S_pomb')
+
+################################################################################
+
 main <- function() {
   # ---------------------------------------------------------------------------
   # ---------------------------------------------------------------------------
@@ -37,17 +49,22 @@ main <- function() {
                                                                    critical_ptc_position))
   
   # get aligned ortholog yeast domain architectures to annotate lost domains
-  lost_doms <- read_csv('../../results/aligned_domain_archs.csv') %>%
+  aligned_domain_archs <- read_csv('../../results/aligned_domain_archs.csv')
+  
+  lost_doms <- aligned_domain_archs %>%
     filter(!is.na(lost_doms)) %>%
     rename(gene = yeast_ortholog) %>%
     left_join(ptc_data, by = 'gene') %>%
     rename(yeast_ortholog = gene) %>%
     filter(!is.na(domain_ptc_annotations)) %>%
-    select(species, is_microsp, yeast_ortholog, species_ortholog, essential,
-           aligned_ortholog_domain_archs, lost_doms,
-           ortholog_short_enough_for_dom_loss, domain_ptc_annotations) %>%
     mutate(lost_dom_annotations = get_lost_dom_annotations(aligned_ortholog_domain_archs,
-                                                           domain_ptc_annotations))
+                                                           domain_ptc_annotations)) %>%
+    separate_rows(lost_dom_annotations, sep = ', ')
+  
+  # note to self: show absolute COUNTS of lost domain types instead per species
+  # show that despite Microsporidia sharing less (?) orthogroups on average to
+  # yeast than outgroup species, they still lose more of every domain
+  plot_lost_dom_types(lost_doms, aligned_domain_archs)
 }
 
 ################################################################################
@@ -233,6 +250,40 @@ get_lost_dom_annotations <- Vectorize(function(aligned_ortholog_domain_archs,
   )
 }, vectorize.args = c('aligned_ortholog_domain_archs', 'domain_ptc_annotations'))
 
+
+plot_lost_dom_types <- function(lost_doms, aligned_domain_archs) {
+  # ---------------------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  ggplot(filter(lost_doms, ortholog_short_enough_for_dom_loss), aes(x = species)) +
+    geom_bar(aes(fill = lost_dom_annotations)) +
+    coord_flip() +
+    theme_bw() +
+    labs(y = 'Number of lost domains in orthologs to yeast') +
+    scale_fill_manual('Lost domain classification',
+                      values = c('black', '#008080', '#DC143C')) +
+    scale_x_discrete(limits = rev(SP_ORDER)) +
+    theme(axis.title.y = element_blank(),
+          axis.text.y = element_text(color = 'black', size = 14),
+          axis.title.x = element_text(color = 'black', size = 18),
+          axis.text.x = element_text(color = 'black', size = 14),
+          legend.text = element_text(size = 18),
+          legend.title = element_text(size = 18))
+  
+  filter(aligned_domain_archs, !is.na(species_domain_arch) | !is.na(yeast_domain_arch)) %>%
+    group_by(species) %>%
+    summarise(n = n()) %>%
+    ggplot(aes(x = species, y = n)) +
+    geom_bar(stat = 'identity', fill = 'black') +
+    coord_flip() +
+    theme_bw() +
+    labs(y = 'Single-copy orthologs to yeast\n(with domain assignments)') +
+    scale_x_discrete(limits = rev(SP_ORDER)) +
+    theme(axis.title.y = element_blank(),
+          axis.text.y = element_text(color = 'black', size = 14),
+          axis.title.x = element_text(color = 'black', size = 14),
+          axis.text.x = element_text(color = 'black', size = 14))
+}
+
 ################################################################################
 
-main()
+# main()
